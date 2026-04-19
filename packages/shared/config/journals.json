@@ -1,0 +1,283 @@
+[
+  {
+    "journal_id": "cell",
+    "slug": "cell",
+    "journal_name": "Cell",
+    "publisher": "Cell Press",
+    "adapter_key": "cell_press",
+    "issn_print": "0092-8674",
+    "issn_online": null,
+    "rss_current_issue_url": "https://www.cell.com/cell/current.rss",
+    "rss_online_first_url": "https://www.cell.com/cell/inpress.rss",
+    "crossref_filters": {
+      "issn": "0092-8674"
+    },
+    "homepage_url": "https://www.cell.com/cell/home",
+    "enabled": true,
+    "update_priority": 10,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "neuron",
+    "slug": "neuron",
+    "journal_name": "Neuron",
+    "publisher": "Cell Press",
+    "adapter_key": "cell_press",
+    "issn_print": "0896-6273",
+    "issn_online": null,
+    "rss_current_issue_url": "https://www.cell.com/neuron/current.rss",
+    "rss_online_first_url": "https://www.cell.com/neuron/inpress.rss",
+    "crossref_filters": {
+      "issn": "0896-6273"
+    },
+    "homepage_url": "https://www.cell.com/neuron/home",
+    "enabled": true,
+    "update_priority": 10,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "nature",
+    "slug": "nature",
+    "journal_name": "Nature",
+    "publisher": "Springer Nature",
+    "adapter_key": "nature",
+    "issn_print": "0028-0836",
+    "issn_online": "1476-4687",
+    "rss_current_issue_url": "https://www.nature.com/nature/current-issue.rss",
+    "rss_online_first_url": "https://www.nature.com/nature.rss",
+    "crossref_filters": {
+      "issn": "1476-4687"
+    },
+    "homepage_url": "https://www.nature.com/nature/",
+    "enabled": true,
+    "update_priority": 9,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "science",
+    "slug": "science",
+    "journal_name": "Science",
+    "publisher": "AAAS",
+    "adapter_key": "crossref_only",
+    "issn_print": "0036-8075",
+    "issn_online": "1095-9203",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "1095-9203"
+    },
+    "homepage_url": "https://www.science.org/journal/science",
+    "enabled": true,
+    "update_priority": 8,
+    "polling_strategy": "crossref_only",
+    "primary_source": "crossref",
+    "fallback_source": null
+  },
+  {
+    "journal_id": "nature-neuroscience",
+    "slug": "nature-neuroscience",
+    "journal_name": "Nature Neuroscience",
+    "publisher": "Springer Nature",
+    "adapter_key": "nature",
+    "issn_print": "1097-6256",
+    "issn_online": "1546-1726",
+    "rss_current_issue_url": "https://www.nature.com/neuro/current-issue.rss",
+    "rss_online_first_url": "https://www.nature.com/neuro.rss",
+    "crossref_filters": {
+      "issn": "1546-1726"
+    },
+    "homepage_url": "https://www.nature.com/neuro/",
+    "enabled": true,
+    "update_priority": 9,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "nature-reviews-neuroscience",
+    "slug": "nature-reviews-neuroscience",
+    "journal_name": "Nature Reviews Neuroscience",
+    "publisher": "Springer Nature",
+    "adapter_key": "nature",
+    "issn_print": "1471-003X",
+    "issn_online": "1471-0048",
+    "rss_current_issue_url": "https://www.nature.com/nrn/current-issue.rss",
+    "rss_online_first_url": "https://www.nature.com/nrn.rss",
+    "crossref_filters": {
+      "issn": "1471-0048"
+    },
+    "homepage_url": "https://www.nature.com/nrn/",
+    "enabled": true,
+    "update_priority": 9,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "nature-human-behaviour",
+    "slug": "nature-human-behaviour",
+    "journal_name": "Nature Human Behaviour",
+    "publisher": "Springer Nature",
+    "adapter_key": "nature",
+    "issn_print": null,
+    "issn_online": "2397-3374",
+    "rss_current_issue_url": "https://www.nature.com/nathumbehav/current-issue.rss",
+    "rss_online_first_url": "https://www.nature.com/nathumbehav.rss",
+    "crossref_filters": {
+      "issn": "2397-3374"
+    },
+    "homepage_url": "https://www.nature.com/nathumbehav/",
+    "enabled": true,
+    "update_priority": 9,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "nature-machine-intelligence",
+    "slug": "nature-machine-intelligence",
+    "journal_name": "Nature Machine Intelligence",
+    "publisher": "Springer Nature",
+    "adapter_key": "nature",
+    "issn_print": null,
+    "issn_online": "2522-5839",
+    "rss_current_issue_url": "https://www.nature.com/natmachintell/current-issue.rss",
+    "rss_online_first_url": "https://www.nature.com/natmachintell.rss",
+    "crossref_filters": {
+      "issn": "2522-5839"
+    },
+    "homepage_url": "https://www.nature.com/natmachintell/",
+    "enabled": true,
+    "update_priority": 9,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "trends-in-cognitive-sciences",
+    "slug": "trends-in-cognitive-sciences",
+    "journal_name": "Trends in Cognitive Sciences",
+    "publisher": "Cell Press",
+    "adapter_key": "cell_press",
+    "issn_print": "1364-6613",
+    "issn_online": null,
+    "rss_current_issue_url": "https://www.cell.com/trends/cognitive-sciences/current.rss",
+    "rss_online_first_url": "https://www.cell.com/trends/cognitive-sciences/inpress.rss",
+    "crossref_filters": {
+      "issn": "1364-6613"
+    },
+    "homepage_url": "https://www.cell.com/trends/cognitive-sciences/home",
+    "enabled": true,
+    "update_priority": 10,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "trends-in-neurosciences",
+    "slug": "trends-in-neurosciences",
+    "journal_name": "Trends in Neurosciences",
+    "publisher": "Cell Press",
+    "adapter_key": "cell_press",
+    "issn_print": "0166-2236",
+    "issn_online": null,
+    "rss_current_issue_url": "https://www.cell.com/trends/neurosciences/current.rss",
+    "rss_online_first_url": "https://www.cell.com/trends/neurosciences/inpress.rss",
+    "crossref_filters": {
+      "issn": "0166-2236"
+    },
+    "homepage_url": "https://www.cell.com/trends/neurosciences/home",
+    "enabled": true,
+    "update_priority": 10,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "the-lancet-neurology",
+    "slug": "the-lancet-neurology",
+    "journal_name": "The Lancet Neurology",
+    "publisher": "Elsevier",
+    "adapter_key": "crossref_only",
+    "issn_print": null,
+    "issn_online": "1474-4422",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "1474-4422"
+    },
+    "homepage_url": "https://www.thelancet.com/journals/laneur/home",
+    "enabled": true,
+    "update_priority": 8,
+    "polling_strategy": "crossref_only",
+    "primary_source": "crossref",
+    "fallback_source": null
+  },
+  {
+    "journal_id": "brain",
+    "slug": "brain",
+    "journal_name": "Brain",
+    "publisher": "Oxford Academic",
+    "adapter_key": "crossref_only",
+    "issn_print": "0006-8950",
+    "issn_online": "1460-2156",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "1460-2156"
+    },
+    "homepage_url": "https://academic.oup.com/brain",
+    "enabled": true,
+    "update_priority": 8,
+    "polling_strategy": "crossref_only",
+    "primary_source": "crossref",
+    "fallback_source": null
+  },
+  {
+    "journal_id": "artificial-intelligence-review",
+    "slug": "artificial-intelligence-review",
+    "journal_name": "Artificial Intelligence Review",
+    "publisher": "Springer",
+    "adapter_key": "springer_rss",
+    "issn_print": "0269-2821",
+    "issn_online": "1573-7462",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://link.springer.com/search.rss?facet-content-type=%22Article%22&facet-journal-id=10462",
+    "crossref_filters": {
+      "issn": "1573-7462"
+    },
+    "homepage_url": "https://link.springer.com/journal/10462",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "brain-informatics",
+    "slug": "brain-informatics",
+    "journal_name": "Brain Informatics",
+    "publisher": "SpringerOpen",
+    "adapter_key": "springer_rss",
+    "issn_print": "2198-4018",
+    "issn_online": "2198-4026",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://link.springer.com/search.rss?facet-content-type=%22Article%22&facet-journal-id=40708",
+    "crossref_filters": {
+      "issn": "2198-4026"
+    },
+    "homepage_url": "https://braininformatics.springeropen.com/",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  }
+]
+

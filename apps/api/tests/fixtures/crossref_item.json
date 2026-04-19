@@ -1,0 +1,22 @@
+{
+  "title": ["A Crossref article"],
+  "URL": "https://doi.org/10.1000/example-crossref",
+  "DOI": "10.1000/example-crossref",
+  "abstract": "<jats:p>Structured abstract.</jats:p>",
+  "author": [
+    {
+      "given": "Jane",
+      "family": "Doe"
+    }
+  ],
+  "type": "journal-article",
+  "volume": "10",
+  "issue": "4",
+  "page": "10-20",
+  "issued": {
+    "date-parts": [[2026, 4, 18]]
+  },
+  "published-online": {
+    "date-parts": [[2026, 4, 18]]
+  }
+}

@@ -1,0 +1,74 @@
+name: Daily Pages Sync
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: sqlite:///./data/pages.db
+      VITE_APP_MODE: static
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+          npm install
+
+      - name: Prepare database and seed
+        run: |
+          mkdir -p data
+          python scripts/run_alembic.py upgrade head
+          python -m app.cli seed-journals
+
+      - name: Run synchronization
+        run: python -m app.cli sync --all --triggered-by github-pages
+
+      - name: Export static data
+        run: python -m app.cli export-static --output apps/web/public/data
+
+      - name: Build static site
+        env:
+          VITE_GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
+          VITE_STATIC_DATA_BASE: /${{ github.event.repository.name }}/data
+        run: npm --workspace apps/web run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/web/dist
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

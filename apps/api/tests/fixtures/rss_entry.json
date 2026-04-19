@@ -1,0 +1,15 @@
+{
+  "title": "A feed-based article",
+  "link": "https://example.com/article",
+  "summary": "<p>Brief abstract from feed.</p>",
+  "authors": [
+    {
+      "name": "Jane Doe"
+    }
+  ],
+  "prism_doi": "10.1000/example",
+  "prism_volume": "1",
+  "prism_number": "2",
+  "published": "2026-04-18T12:00:00Z"
+}
+
