@@ -50,7 +50,16 @@ jobs:
       - name: Prepare database and seed
         run: |
           mkdir -p data
-          python scripts/run_alembic.py upgrade head
+          python - <<'PY'
+          from pathlib import Path
+          from alembic import command
+          from alembic.config import Config
+
+          root = Path.cwd()
+          config = Config(str(root / "apps/api/alembic.ini"))
+          config.set_main_option("script_location", str(root / "apps/api/alembic"))
+          command.upgrade(config, "head")
+          PY
           python -m app.cli seed-journals
 
       - name: Run synchronization
