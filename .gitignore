@@ -20,6 +20,7 @@ apps/web/dist/
 apps/web/public/data/
 .DS_Store
 Thumbs.db
-alembic.ini
+/*.ini
+!apps/api/alembic.ini
 data/
 logs/
