@@ -5,17 +5,22 @@ from datetime import UTC, datetime, timedelta
 from app.models.article import Article
 from app.models.journal import Journal
 from app.models.sync import SyncRun
-from sqlalchemy import desc, func, select
+from app.services.content_policy import ContentPolicyService
+from sqlalchemy import desc, func, or_, select
 from sqlalchemy.orm import Session, joinedload
 
 
 class DashboardService:
+    def __init__(self) -> None:
+        self.content_policy = ContentPolicyService()
+
     def get_dashboard(self, db: Session) -> dict:
         today = datetime.now(tz=UTC).date()
         today_count = (
             db.scalar(
                 select(func.count())
                 .select_from(Article)
+                .where(self.content_policy.article_visibility_clause(Article))
                 .where(func.date(Article.created_at) == today)
             )
             or 0
@@ -27,6 +32,7 @@ class DashboardService:
                 db.scalar(
                     select(func.count())
                     .select_from(Article)
+                    .where(self.content_policy.article_visibility_clause(Article))
                     .where(func.date(Article.created_at) == point_date)
                 )
                 or 0
@@ -35,6 +41,7 @@ class DashboardService:
         journal_rows = db.execute(
             select(Journal.slug, Journal.journal_name, func.count(Article.id))
             .join(Article, Article.journal_id == Journal.id)
+            .where(self.content_policy.article_visibility_clause(Article))
             .group_by(Journal.slug, Journal.journal_name)
             .order_by(desc(func.count(Article.id)))
         ).all()
@@ -42,8 +49,10 @@ class DashboardService:
             db.scalars(
                 select(Article)
                 .options(joinedload(Article.journal), joinedload(Article.authors))
+                .where(self.content_policy.article_visibility_clause(Article))
+                .where(or_(Article.abstract.is_not(None), Article.snippet.is_not(None)))
                 .order_by(desc(Article.published_at), desc(Article.created_at))
-                .limit(10)
+                .limit(20)
             )
             .unique()
             .all()

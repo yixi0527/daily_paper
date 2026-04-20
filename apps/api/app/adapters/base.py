@@ -9,10 +9,13 @@ from app.core.logging import get_logger
 from app.core.settings import Settings, get_settings
 from app.models.article import Article, ArticleAuthor, ArticlePayload
 from app.models.journal import Journal, SourceState
+from app.services.content_policy import ContentPolicyService
 from app.services.crossref import CrossrefClientService
 from app.services.dedup import DedupService
 from app.services.http import HTTPClientService
+from app.services.metadata_enrichment import MetadataEnrichmentService
 from app.services.normalizer import ArticleNormalizer
+from app.services.pubmed import PubMedClientService
 from app.services.rss_parser import RSSParserService
 from app.services.types import FetchResult, NormalizedArticle, SourceSpec
 from app.utils.text import payload_checksum, slugify
@@ -40,6 +43,13 @@ class PublisherAdapter(ABC):
         self.crossref = crossref or CrossrefClientService(self.http, self.settings)
         self.normalizer = normalizer or ArticleNormalizer()
         self.dedup = dedup or DedupService()
+        self.content_policy = ContentPolicyService()
+        self.metadata_enricher = MetadataEnrichmentService(
+            http=self.http,
+            crossref=self.crossref,
+            normalizer=self.normalizer,
+            pubmed=PubMedClientService(self.http),
+        )
 
     def fetch_current_issue(self, db: Session, journal: Journal) -> FetchResult:
         return self._fetch_category(db, journal, "current_issue")
@@ -154,14 +164,14 @@ class PublisherAdapter(ABC):
             existing.title_slug = slugify(item.title)
             existing.doi = doi or existing.doi
             existing.url = item.url
-            existing.abstract = item.abstract
-            existing.snippet = item.snippet
+            existing.abstract = item.abstract or existing.abstract
+            existing.snippet = item.snippet or existing.snippet
             existing.source_category = item.source_category
-            existing.article_type = item.article_type
-            existing.volume = item.volume
-            existing.issue = item.issue
-            existing.pages = item.pages
-            existing.article_number = item.article_number
+            existing.article_type = item.article_type or existing.article_type
+            existing.volume = item.volume or existing.volume
+            existing.issue = item.issue or existing.issue
+            existing.pages = item.pages or existing.pages
+            existing.article_number = item.article_number or existing.article_number
             existing.published_at = item.published_at or existing.published_at
             existing.online_published_at = item.online_published_at or existing.online_published_at
             existing.print_published_at = item.print_published_at or existing.print_published_at
@@ -175,22 +185,23 @@ class PublisherAdapter(ABC):
             existing.raw_payload_checksum = checksum
             existing.extra_metadata = item.extra_metadata
             existing.last_seen_at = datetime.now(tz=UTC)
-            db.query(ArticleAuthor).filter(ArticleAuthor.article_id == existing.id).delete(
-                synchronize_session=False
-            )
-            db.flush()
-            existing.authors.extend(
-                [
-                    ArticleAuthor(
-                        position=index,
-                        given_name=author.given_name,
-                        family_name=author.family_name,
-                        full_name=author.full_name,
-                        affiliation=author.affiliation,
-                    )
-                    for index, author in enumerate(item.authors)
-                ]
-            )
+            if item.authors:
+                db.query(ArticleAuthor).filter(ArticleAuthor.article_id == existing.id).delete(
+                    synchronize_session=False
+                )
+                db.flush()
+                existing.authors.extend(
+                    [
+                        ArticleAuthor(
+                            position=index,
+                            given_name=author.given_name,
+                            family_name=author.family_name,
+                            full_name=author.full_name,
+                            affiliation=author.affiliation,
+                        )
+                        for index, author in enumerate(item.authors)
+                    ]
+                )
             if not existing.payloads or existing.payloads[-1].payload_checksum != checksum:
                 existing.payloads.append(
                     ArticlePayload(
@@ -203,8 +214,8 @@ class PublisherAdapter(ABC):
                         if isinstance(item.raw_payload, dict)
                         else str(item.raw_payload),
                         payload_checksum=checksum,
+                    )
                 )
-            )
             updated += 1
         try:
             db.commit()
@@ -248,6 +259,12 @@ class PublisherAdapter(ABC):
                         source_kind=source.kind,
                     )
                     if article:
+                        article = self.metadata_enricher.enrich(
+                            journal,
+                            article,
+                            source_kind=source.kind,
+                        )
+                    if article and self.content_policy.is_substantive(article):
                         normalized.append(article)
                 counts = self.upsert_articles(db, journal, normalized)
                 self._mark_state_success(db, state, result, normalized)

@@ -15,6 +15,7 @@ export function ArticlesPage() {
       page,
       pageSize: 20,
       journal: searchParams.get('journal') ?? undefined,
+      author: searchParams.get('author') ?? undefined,
       dateFrom: searchParams.get('dateFrom') ?? undefined,
       dateTo: searchParams.get('dateTo') ?? undefined,
       sourceCategory: searchParams.get('sourceCategory') ?? undefined,
@@ -51,7 +52,9 @@ export function ArticlesPage() {
           <p className="eyebrow">Browse</p>
           <h2>Article inventory</h2>
         </div>
-        <p className="muted">Filter by journal, date, source category, article type, and metadata completeness.</p>
+        <p className="muted">
+          Filter by journal, author, date, source category, article type, and metadata completeness.
+        </p>
       </section>
 
       <section className="filter-grid">
@@ -63,6 +66,12 @@ export function ArticlesPage() {
             </option>
           ))}
         </select>
+        <input
+          type="text"
+          placeholder="Author name"
+          value={filters.author ?? ''}
+          onChange={(event) => updateFilter('author', event.target.value)}
+        />
         <select
           value={filters.sourceCategory ?? ''}
           onChange={(event) => updateFilter('sourceCategory', event.target.value)}
@@ -98,7 +107,7 @@ export function ArticlesPage() {
         <div className="section-header">
           <div>
             <p className="eyebrow">Results</p>
-            <h2>{articlesQuery.data.meta.total} tracked items</h2>
+            <h2>{articlesQuery.data.meta.total} matching items</h2>
           </div>
         </div>
 

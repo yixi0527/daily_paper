@@ -67,17 +67,17 @@
     "adapter_key": "crossref_only",
     "issn_print": "0036-8075",
     "issn_online": "1095-9203",
-    "rss_current_issue_url": null,
-    "rss_online_first_url": null,
+    "rss_current_issue_url": "https://www.science.org/action/showFeed?type=etoc&jc=science",
+    "rss_online_first_url": "https://www.science.org/action/showFeed?type=axatoc&jc=science",
     "crossref_filters": {
       "issn": "1095-9203"
     },
     "homepage_url": "https://www.science.org/journal/science",
     "enabled": true,
     "update_priority": 8,
-    "polling_strategy": "crossref_only",
-    "primary_source": "crossref",
-    "fallback_source": null
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
   },
   {
     "journal_id": "nature-neuroscience",
@@ -207,17 +207,17 @@
     "adapter_key": "crossref_only",
     "issn_print": null,
     "issn_online": "1474-4422",
-    "rss_current_issue_url": null,
-    "rss_online_first_url": null,
+    "rss_current_issue_url": "https://www.thelancet.com/rssfeed/laneur_current.xml",
+    "rss_online_first_url": "https://www.thelancet.com/rssfeed/laneur_online.xml",
     "crossref_filters": {
       "issn": "1474-4422"
     },
     "homepage_url": "https://www.thelancet.com/journals/laneur/home",
     "enabled": true,
     "update_priority": 8,
-    "polling_strategy": "crossref_only",
-    "primary_source": "crossref",
-    "fallback_source": null
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
   },
   {
     "journal_id": "brain",
@@ -227,17 +227,17 @@
     "adapter_key": "crossref_only",
     "issn_print": "0006-8950",
     "issn_online": "1460-2156",
-    "rss_current_issue_url": null,
-    "rss_online_first_url": null,
+    "rss_current_issue_url": "https://academic.oup.com/rss/site_5367/3228.xml",
+    "rss_online_first_url": "https://academic.oup.com/rss/site_5367/advanceAccess_3228.xml",
     "crossref_filters": {
       "issn": "1460-2156"
     },
     "homepage_url": "https://academic.oup.com/brain",
     "enabled": true,
     "update_priority": 8,
-    "polling_strategy": "crossref_only",
-    "primary_source": "crossref",
-    "fallback_source": null
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
   },
   {
     "journal_id": "artificial-intelligence-review",
@@ -280,4 +280,3 @@
     "fallback_source": "crossref"
   }
 ]
-

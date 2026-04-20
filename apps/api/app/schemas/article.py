@@ -20,6 +20,7 @@ class ArticleListItemOut(ORMModel):
     title: str
     doi: str | None
     url: str
+    abstract: str | None
     snippet: str | None
     source_category: str
     article_type: str | None
@@ -30,17 +31,16 @@ class ArticleListItemOut(ORMModel):
     print_published_at: datetime | None
     first_author: str | None
     authors_text: str | None
+    authors: list[AuthorOut] = Field(default_factory=list)
     journal: JournalOut
 
 
 class ArticleDetailOut(ArticleListItemOut):
-    abstract: str | None
     pages: str | None
     article_number: str | None
     source_name: str
     source_uid: str | None
     extra_metadata: dict | None
-    authors: list[AuthorOut] = Field(default_factory=list)
     raw_payload: dict | None = None
 
 

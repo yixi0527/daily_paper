@@ -90,6 +90,7 @@ export async function listArticles(params: ArticleFilterParams): Promise<Article
       page: params.page ?? 1,
       page_size: params.pageSize ?? 20,
       journal: params.journal,
+      author: params.author,
       date_from: params.dateFrom,
       date_to: params.dateTo,
       source_category: params.sourceCategory,
@@ -154,4 +155,3 @@ export async function runSync(categories: string[] = ['current_issue', 'online_f
 export async function runJournalSync(slug: string, categories: string[] = ['current_issue', 'online_first']): Promise<SyncRun> {
   return apiPost<SyncRun>(`/sync/run/${slug}`, { categories, triggered_by: 'web' });
 }
-

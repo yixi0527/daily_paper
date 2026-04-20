@@ -39,6 +39,7 @@ export interface ArticleListItem {
   title: string;
   doi: string | null;
   url: string;
+  abstract: string | null;
   snippet: string | null;
   source_category: string;
   article_type: string | null;
@@ -49,17 +50,16 @@ export interface ArticleListItem {
   print_published_at: string | null;
   first_author: string | null;
   authors_text: string | null;
+  authors: Author[];
   journal: Journal;
 }
 
 export interface ArticleDetail extends ArticleListItem {
-  abstract: string | null;
   pages: string | null;
   article_number: string | null;
   source_name: string;
   source_uid: string | null;
   extra_metadata: Record<string, unknown> | null;
-  authors: Author[];
   raw_payload: Record<string, unknown> | null;
 }
 
@@ -142,4 +142,3 @@ export interface SiteDataBundle {
   dashboard: DashboardData;
   sync_runs: SyncRun[];
 }
-

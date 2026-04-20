@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
 import { getArticle } from '../api/client';
+import { AuthorList } from '../components/AuthorList';
 import { CopyButton } from '../components/CopyButton';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 import { formatDate } from '../lib/utils';
@@ -39,7 +40,11 @@ export function ArticleDetailPage() {
           <div className="detail-list">
             <div>
               <span>Authors</span>
-              <strong>{article.authors_text ?? 'Unknown'}</strong>
+              <AuthorList
+                authors={article.authors}
+                authorsText={article.authors_text}
+                className="detail-authors"
+              />
             </div>
             <div>
               <span>Published</span>

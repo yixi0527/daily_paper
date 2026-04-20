@@ -2,6 +2,7 @@ import { startTransition, useDeferredValue, useMemo, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
 import { getJournals, searchArticles } from '../api/client';
+import { AuthorList } from '../components/AuthorList';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 import { Pagination } from '../components/Pagination';
 import { useRecentSearches } from '../hooks/useRecentSearches';
@@ -146,11 +147,25 @@ export function SearchPage() {
                     <span>{hit.article.journal.journal_name}</span>
                     <span>Score {hit.score}</span>
                   </div>
-                  <h3 dangerouslySetInnerHTML={{ __html: hit.highlights.title || hit.article.title }} />
-                  <p dangerouslySetInnerHTML={{ __html: hit.highlights.author || hit.article.authors_text || '' }} />
+                  <h3>
+                    <a
+                      href={hit.article.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="article-title-link"
+                      dangerouslySetInnerHTML={{ __html: hit.highlights.title || hit.article.title }}
+                    />
+                  </h3>
+                  <AuthorList
+                    authors={hit.article.authors}
+                    authorsText={hit.article.authors_text}
+                    className="article-authors"
+                  />
                   <p
                     className="article-snippet"
-                    dangerouslySetInnerHTML={{ __html: hit.highlights.abstract || hit.article.snippet || '' }}
+                    dangerouslySetInnerHTML={{
+                      __html: hit.highlights.abstract || hit.article.abstract || hit.article.snippet || '',
+                    }}
                   />
                 </article>
               ))

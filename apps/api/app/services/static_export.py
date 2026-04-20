@@ -6,6 +6,7 @@ from pathlib import Path
 from app.models.article import Article
 from app.models.journal import Journal
 from app.models.sync import SyncRun
+from app.services.content_policy import ContentPolicyService
 from app.schemas.article import ArticleDetailOut, AuthorOut
 from app.schemas.dashboard import DashboardOut
 from app.schemas.journal import JournalDetailOut
@@ -19,6 +20,7 @@ from sqlalchemy.orm import Session, joinedload
 class StaticExportService:
     def __init__(self) -> None:
         self.dashboard_service = DashboardService()
+        self.content_policy = ContentPolicyService()
 
     def export(self, db: Session, output: Path) -> Path:
         output.mkdir(parents=True, exist_ok=True)
@@ -44,6 +46,14 @@ class StaticExportService:
             .unique()
             .all()
         )
+        visible_articles = [
+            item
+            for item in articles
+            if self.content_policy.is_substantive_fields(
+                title=item.title,
+                article_type=item.article_type,
+            )
+        ]
         sync_runs = (
             db.scalars(
                 select(SyncRun)
@@ -66,6 +76,7 @@ class StaticExportService:
                         title=item.title,
                         doi=item.doi,
                         url=item.url,
+                        abstract=item.abstract,
                         snippet=item.snippet,
                         source_category=item.source_category,
                         article_type=item.article_type,
@@ -76,18 +87,17 @@ class StaticExportService:
                         print_published_at=item.print_published_at,
                         first_author=item.first_author,
                         authors_text=item.authors_text,
+                        authors=[AuthorOut.model_validate(author) for author in item.authors],
                         journal=JournalDetailOut.model_validate(item.journal),
-                        abstract=item.abstract,
                         pages=item.pages,
                         article_number=item.article_number,
                         source_name=item.source_name,
                         source_uid=item.source_uid,
                         extra_metadata=item.extra_metadata,
-                        authors=[AuthorOut.model_validate(author) for author in item.authors],
                         raw_payload=item.payloads[-1].payload_json if item.payloads else None,
                     )
                 )
-                for item in articles
+                for item in visible_articles
             ],
             "dashboard": jsonable_encoder(DashboardOut(**self.dashboard_service.get_dashboard(db))),
             "sync_runs": [jsonable_encoder(SyncRunOut.model_validate(item)) for item in sync_runs],
@@ -103,7 +113,7 @@ class StaticExportService:
                     "generated_at": str(
                         max((run.finished_at for run in sync_runs if run.finished_at), default=None)
                     ),
-                    "article_count": len(articles),
+                    "article_count": len(payload["articles"]),
                     "journal_count": len(journals),
                 },
                 ensure_ascii=False,

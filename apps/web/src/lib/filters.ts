@@ -4,6 +4,7 @@ export interface ArticleFilterParams {
   page?: number;
   pageSize?: number;
   journal?: string;
+  author?: string;
   dateFrom?: string;
   dateTo?: string;
   sourceCategory?: string;
@@ -26,6 +27,15 @@ export interface SearchParams {
 export function filterArticles(items: ArticleDetail[], params: ArticleFilterParams): ArticleDetail[] {
   return items.filter((item) => {
     if (params.journal && item.journal.slug !== params.journal) return false;
+    if (
+      params.author &&
+      !item.authors.some((author) =>
+        author.full_name.toLowerCase().includes(params.author!.toLowerCase()),
+      ) &&
+      !(item.authors_text ?? '').toLowerCase().includes(params.author.toLowerCase())
+    ) {
+      return false;
+    }
     if (params.sourceCategory && item.source_category !== params.sourceCategory) return false;
     if (params.articleType && item.article_type !== params.articleType) return false;
     if (params.hasDoi === 'true' && !item.doi) return false;

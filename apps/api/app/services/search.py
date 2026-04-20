@@ -4,18 +4,23 @@ import math
 import re
 from datetime import UTC, datetime
 
-from app.models.article import Article
+from app.models.article import Article, ArticleAuthor
 from app.models.journal import Journal
+from app.services.content_policy import ContentPolicyService
 from rapidfuzz import fuzz
 from sqlalchemy import Select, desc, func, select
 from sqlalchemy.orm import Session, joinedload
 
 
 class SearchService:
+    def __init__(self) -> None:
+        self.content_policy = ContentPolicyService()
+
     def build_article_query(
         self,
         *,
         journal_slugs: list[str] | None = None,
+        author_contains: str | None = None,
         date_from: datetime | None = None,
         date_to: datetime | None = None,
         source_category: str | None = None,
@@ -23,9 +28,18 @@ class SearchService:
         has_doi: bool | None = None,
         has_abstract: bool | None = None,
     ) -> Select[tuple[Article]]:
-        query = select(Article).options(joinedload(Article.journal), joinedload(Article.authors))
+        query = (
+            select(Article)
+            .options(joinedload(Article.journal), joinedload(Article.authors))
+            .where(self.content_policy.article_visibility_clause(Article))
+        )
         if journal_slugs:
             query = query.join(Article.journal).where(Journal.slug.in_(journal_slugs))
+        if author_contains:
+            author_pattern = f"%{author_contains.lower()}%"
+            query = query.where(
+                Article.authors.any(func.lower(ArticleAuthor.full_name).like(author_pattern))
+            )
         if date_from:
             query = query.where(Article.published_at >= date_from.astimezone(UTC))
         if date_to:
@@ -51,6 +65,7 @@ class SearchService:
         page: int,
         page_size: int,
         journal_slugs: list[str] | None = None,
+        author_contains: str | None = None,
         date_from: datetime | None = None,
         date_to: datetime | None = None,
         source_category: str | None = None,
@@ -60,6 +75,7 @@ class SearchService:
     ) -> tuple[list[Article], int]:
         query = self.build_article_query(
             journal_slugs=journal_slugs,
+            author_contains=author_contains,
             date_from=date_from,
             date_to=date_to,
             source_category=source_category,

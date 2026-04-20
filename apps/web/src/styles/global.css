@@ -157,6 +157,10 @@ button {
   border-radius: 32px;
 }
 
+.hero-panel-compact h2 {
+  max-width: 18ch;
+}
+
 .hero-panel h2,
 .page-header h2 {
   margin: 0.35rem 0 0;
@@ -289,14 +293,42 @@ button {
   line-height: 1.2;
 }
 
+.article-title-link {
+  text-decoration: underline;
+  text-decoration-color: rgba(213, 92, 63, 0.38);
+  text-underline-offset: 0.2rem;
+}
+
+.article-title-link:hover {
+  text-decoration-color: var(--accent);
+}
+
+.author-list,
 .article-authors {
   margin: 0.5rem 0 0;
   font-weight: 500;
 }
 
+.author-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(18, 50, 74, 0.16);
+  text-underline-offset: 0.16rem;
+}
+
+.author-link:hover {
+  text-decoration-color: var(--accent);
+}
+
+.author-ellipsis,
+.author-separator {
+  color: var(--muted);
+}
+
 .article-snippet {
   margin: 0.45rem 0 0;
   color: var(--muted);
+  line-height: 1.65;
 }
 
 .article-footer {
@@ -371,6 +403,10 @@ button {
 .detail-list strong {
   display: block;
   margin-top: 0.2rem;
+}
+
+.detail-authors {
+  margin: 0.2rem 0 0;
 }
 
 .detail-abstract {

@@ -5,7 +5,7 @@ from typing import Any
 from app.models.journal import Journal
 from app.services.types import NormalizedArticle, NormalizedAuthor
 from app.utils.dates import parse_crossref_date_parts, parse_datetime
-from app.utils.text import compact_text, strip_html
+from app.utils.text import compact_text, first_meaningful_text, split_author_names, strip_html
 
 
 class ArticleNormalizer:
@@ -22,9 +22,7 @@ class ArticleNormalizer:
         if not title or not link:
             return None
         authors = self._normalize_rss_authors(payload)
-        abstract = strip_html(
-            payload.get("summary") or payload.get("content", [{}])[0].get("value")
-        )
+        abstract = self._extract_rss_abstract(payload)
         doi = self._extract_rss_doi(payload)
         start_page = payload.get("prism_startingpage")
         end_page = payload.get("prism_endingpage")
@@ -44,12 +42,23 @@ class ArticleNormalizer:
             url=link,
             doi=doi,
             abstract=abstract,
-            snippet=compact_text(abstract or strip_html(payload.get("description"))),
+            snippet=compact_text(
+                abstract
+                or first_meaningful_text(
+                    [
+                        payload.get("description"),
+                        payload.get("summary"),
+                        payload.get("summary_detail", {}).get("value"),
+                        payload.get("content", [{}])[0].get("value"),
+                    ]
+                )
+            ),
             source_category=category,
             source_name=source_name,
             source_uid=str(payload.get("id") or payload.get("guid") or link),
             authors=authors,
             article_type=payload.get("prism_section")
+            or payload.get("dc_type")
             or payload.get("category")
             or self._first_tag(payload),
             volume=str(payload.get("prism_volume") or "") or None,
@@ -124,19 +133,41 @@ class ArticleNormalizer:
             name = raw.get("name") if isinstance(raw, dict) else str(raw)
             if not name:
                 continue
-            authors.append(NormalizedAuthor(full_name=name.strip()))
+            for parsed_name in split_author_names(name):
+                authors.append(NormalizedAuthor(full_name=parsed_name.strip()))
         if authors:
             return authors
         creator = payload.get("author") or payload.get("dc_creator")
         if isinstance(creator, list):
-            return [
-                NormalizedAuthor(full_name=str(item).strip())
-                for item in creator
-                if str(item).strip()
-            ]
+            normalized_authors: list[NormalizedAuthor] = []
+            for item in creator:
+                for parsed_name in split_author_names(str(item)):
+                    if parsed_name:
+                        normalized_authors.append(NormalizedAuthor(full_name=parsed_name))
+            return normalized_authors
         if creator:
-            return [NormalizedAuthor(full_name=str(creator).strip())]
+            return [
+                NormalizedAuthor(full_name=parsed_name)
+                for parsed_name in split_author_names(str(creator))
+            ]
         return []
+
+    def _extract_rss_abstract(self, payload: dict[str, Any]) -> str | None:
+        content_values = []
+        for item in payload.get("content", []) or []:
+            if isinstance(item, dict):
+                content_values.append(item.get("value"))
+
+        return first_meaningful_text(
+            [
+                payload.get("summary"),
+                payload.get("summary_detail", {}).get("value"),
+                payload.get("description"),
+                *content_values,
+                payload.get("content:encoded"),
+                payload.get("dc_description"),
+            ]
+        )
 
     def _normalize_crossref_authors(
         self, raw_authors: list[dict[str, Any]]

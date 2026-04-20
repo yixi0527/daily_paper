@@ -6,6 +6,7 @@ from pathlib import Path
 from app.core.logging import setup_logging
 from app.core.settings import get_settings
 from app.db.session import SessionLocal
+from app.services.metadata_refresh import MetadataRefreshService
 from app.services.scheduler import SchedulerService
 from app.services.seed import SeedService
 from app.services.static_export import StaticExportService
@@ -31,6 +32,15 @@ def build_parser() -> argparse.ArgumentParser:
 
     export_parser = subparsers.add_parser("export-static", help="Export data for GitHub Pages")
     export_parser.add_argument("--output", type=str, default=str(get_settings().static_export_path))
+
+    refresh_parser = subparsers.add_parser(
+        "refresh-metadata", help="Reprocess stored payloads and refill missing metadata"
+    )
+    refresh_parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Refresh all articles instead of only records missing abstracts/snippets",
+    )
 
     subparsers.add_parser("scheduler", help="Start the blocking scheduler")
     return parser
@@ -59,6 +69,13 @@ def main() -> None:
             target = Path(args.output)
             StaticExportService().export(db, target)
             print(f"Static data exported to {target}")
+            return
+        if args.command == "refresh-metadata":
+            result = MetadataRefreshService().refresh(db, missing_only=not args.all)
+            print(
+                "Metadata refresh completed: "
+                f"scanned={result['scanned']} updated={result['updated']} skipped={result['skipped']}"
+            )
             return
         if args.command == "scheduler":
             SchedulerService(blocking=True, settings=settings).start()

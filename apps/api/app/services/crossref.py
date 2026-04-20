@@ -42,3 +42,14 @@ class CrossrefClientService:
             "headers": dict(response.headers),
             "request_url": str(response.url),
         }
+
+    def fetch_work(self, doi: str) -> dict[str, Any] | None:
+        response = self.http.get(
+            f"{self.BASE_URL}/{doi}",
+            params={"mailto": self.settings.crossref_mailto},
+            headers={"Accept": "application/json"},
+        )
+        if response.status_code != 200:
+            return None
+        data = response.json()
+        return data.get("message")
