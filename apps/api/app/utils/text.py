@@ -17,6 +17,18 @@ ISSUE_CITATION_RE = re.compile(
     r"^(volume|issue|page|ahead of print)\b",
     re.IGNORECASE,
 )
+ABSTRACT_PREFIX_RE = re.compile(
+    r"^(?P<prefix>"
+    r"(?:[A-Z][\w&'./-]*(?:\s+[A-Z][\w&'./-]*){0,8})"
+    r",\s*"
+    r"(?:published\s+online|published\s+ahead\s+of\s+print|advance\s+online\s+publication|online\s+first)"
+    r"\s*:\s*"
+    r"[^;]+"
+    r";\s*"
+    r"(?:doi\s*:?\s*10\.\S+|https?://doi\.org/\S+)"
+    r")\s*",
+    re.IGNORECASE,
+)
 
 
 def strip_html(value: str | None) -> str | None:
@@ -30,7 +42,7 @@ def strip_html(value: str | None) -> str | None:
 def compact_text(value: str | None, limit: int = 420) -> str | None:
     if not value:
         return None
-    clean = normalize_space(value)
+    clean = sanitize_abstract_text(normalize_space(value))
     if len(clean) <= limit:
         return clean
     return clean[: limit - 1].rstrip() + "…"
@@ -40,6 +52,15 @@ def normalize_space(value: str | None) -> str:
     if not value:
         return ""
     return SPACE_RE.sub(" ", value).strip()
+
+
+def sanitize_abstract_text(value: str | None) -> str:
+    clean = normalize_space(value)
+    if not clean:
+        return ""
+
+    stripped = ABSTRACT_PREFIX_RE.sub("", clean, count=1).lstrip(" .;:-")
+    return normalize_space(stripped or clean)
 
 
 def slugify(value: str, limit: int = 220) -> str:
@@ -76,7 +97,7 @@ def looks_like_citation_text(value: str | None) -> bool:
 
 def first_meaningful_text(values: Iterable[str | None]) -> str | None:
     for value in values:
-        clean = normalize_space(strip_html(value))
+        clean = sanitize_abstract_text(strip_html(value))
         if not clean or looks_like_citation_text(clean):
             continue
         return clean
