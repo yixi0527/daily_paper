@@ -47,16 +47,6 @@ export function ArticlesPage() {
 
   return (
     <div className="page-stack">
-      <section className="page-header">
-        <div>
-          <p className="eyebrow">Browse</p>
-          <h2>Article inventory</h2>
-        </div>
-        <p className="muted">
-          Filter by journal, author, date, source category, article type, and metadata completeness.
-        </p>
-      </section>
-
       <section className="filter-grid">
         <select value={filters.journal ?? ''} onChange={(event) => updateFilter('journal', event.target.value)}>
           <option value="">All journals</option>
@@ -106,7 +96,7 @@ export function ArticlesPage() {
       <section className="panel">
         <div className="section-header">
           <div>
-            <p className="eyebrow">Results</p>
+            <p className="eyebrow">Articles</p>
             <h2>{articlesQuery.data.meta.total} matching items</h2>
           </div>
         </div>

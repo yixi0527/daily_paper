@@ -3,7 +3,6 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { ArticlesPage } from './pages/ArticlesPage';
-import { DashboardPage } from './pages/DashboardPage';
 import { JournalsPage } from './pages/JournalsPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { SearchPage } from './pages/SearchPage';
@@ -16,7 +15,7 @@ const router = createHashRouter([
     path: '/',
     element: <AppShell />,
     children: [
-      { index: true, element: <DashboardPage /> },
+      { index: true, element: <ArticlesPage /> },
       { path: 'articles', element: <ArticlesPage /> },
       { path: 'articles/:articleId', element: <ArticleDetailPage /> },
       { path: 'search', element: <SearchPage /> },
@@ -34,4 +33,3 @@ export function App() {
     </QueryClientProvider>
   );
 }
-

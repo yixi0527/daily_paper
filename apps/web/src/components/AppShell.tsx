@@ -3,8 +3,7 @@ import { classNames } from '../lib/utils';
 import { appMode } from '../lib/env';
 
 const NAV_ITEMS = [
-  { to: '/', label: 'Dashboard' },
-  { to: '/articles', label: 'Articles' },
+  { to: '/', label: 'Articles' },
   { to: '/search', label: 'Search' },
   { to: '/journals', label: 'Journals' },
   { to: '/sync-runs', label: 'Sync Runs' },
@@ -15,10 +14,10 @@ export function AppShell() {
     <div className="app-shell">
       <aside className="sidebar">
         <div className="brand-block">
-          <p className="eyebrow">Daily surveillance</p>
+          <p className="eyebrow">Beijing 22:00 sync</p>
           <h1>Daily Paper Tracker</h1>
           <p className="brand-copy">
-            RSS-first monitoring for neuroscience, AI, and flagship multidisciplinary journals.
+            RSS-first monitoring for neuroscience, AI, and flagship multidisciplinary journals, with all displayed times shown in Beijing time.
           </p>
         </div>
 
@@ -46,4 +45,3 @@ export function AppShell() {
     </div>
   );
 }
-

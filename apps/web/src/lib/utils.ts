@@ -1,9 +1,12 @@
+const DISPLAY_TIMEZONE = 'Asia/Shanghai';
+
 export function formatDate(value: string | null | undefined): string {
   if (!value) return 'Unknown date';
   return new Intl.DateTimeFormat('en-US', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
+    timeZone: DISPLAY_TIMEZONE,
   }).format(new Date(value));
 }
 
@@ -15,6 +18,8 @@ export function formatDateTime(value: string | null | undefined): string {
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
+    hour12: false,
+    timeZone: DISPLAY_TIMEZONE,
   }).format(new Date(value));
 }
 
@@ -31,4 +36,3 @@ export function buildQuery(params: Record<string, string | number | boolean | un
   const query = searchParams.toString();
   return query ? `?${query}` : '';
 }
-
