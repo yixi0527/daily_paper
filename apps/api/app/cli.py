@@ -6,6 +6,7 @@ from pathlib import Path
 from app.core.logging import setup_logging
 from app.core.settings import get_settings
 from app.db.session import SessionLocal
+from app.services.article_analysis import ArticleAnalysisService
 from app.services.metadata_refresh import MetadataRefreshService
 from app.services.scheduler import SchedulerService
 from app.services.seed import SeedService
@@ -42,6 +43,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="Refresh all articles instead of only records missing abstracts/snippets",
     )
 
+    analysis_parser = subparsers.add_parser(
+        "analyze-articles", help="Generate Chinese translations and linked heuristic thoughts"
+    )
+    analysis_parser.add_argument("--limit", type=int, default=20)
+    analysis_parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Regenerate analysis for articles that already have it",
+    )
+
     subparsers.add_parser("scheduler", help="Start the blocking scheduler")
     return parser
 
@@ -75,6 +86,15 @@ def main() -> None:
             print(
                 "Metadata refresh completed: "
                 f"scanned={result['scanned']} updated={result['updated']} skipped={result['skipped']}"
+            )
+            return
+        if args.command == "analyze-articles":
+            result = ArticleAnalysisService().analyze_missing(
+                db, limit=args.limit, force=args.force
+            )
+            print(
+                "Article analysis completed: "
+                f"scanned={result['scanned']} updated={result['updated']}"
             )
             return
         if args.command == "scheduler":

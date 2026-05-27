@@ -15,6 +15,8 @@ def test_articles_endpoint_returns_seeded_article(client) -> None:
     payload = response.json()
     assert payload["meta"]["total"] == 1
     assert payload["items"][0]["title"] == "Circuit mechanisms of memory consolidation"
+    assert payload["items"][0]["title_zh"] == "记忆巩固的环路机制"
+    assert payload["items"][0]["analysis_generated_at"] is not None
 
 
 def test_search_endpoint_filters_by_author(client) -> None:

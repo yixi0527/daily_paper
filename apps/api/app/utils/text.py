@@ -3,8 +3,8 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from collections.abc import Iterable
 from html import unescape
-from typing import Iterable
 
 TAG_RE = re.compile(r"<[^>]+>")
 SPACE_RE = re.compile(r"\s+")

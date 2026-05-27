@@ -109,6 +109,10 @@ export async function getArticle(articleId: string): Promise<ArticleDetail | und
   return apiGet<ArticleDetail>(`/articles/${articleId}`);
 }
 
+export async function generateArticleAnalysis(articleId: string): Promise<ArticleDetail> {
+  return apiPost<ArticleDetail>(`/articles/${articleId}/analysis`, { force: true });
+}
+
 export async function searchArticles(params: SearchParams): Promise<SearchResponse> {
   if (isStaticMode) {
     const bundle = await loadSiteData();

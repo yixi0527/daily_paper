@@ -127,8 +127,9 @@ class SearchService:
     def _score_article(
         self, article: Article, *, title: str | None, author: str | None, abstract: str | None
     ) -> dict | None:
+        title_text = " ".join(item for item in [article.title, article.title_zh] if item)
         title_score = (
-            100.0 if not title else fuzz.partial_ratio(title.lower(), article.title.lower())
+            100.0 if not title else fuzz.partial_ratio(title.lower(), title_text.lower())
         )
         author_score = 100.0
         if author:
@@ -140,10 +141,17 @@ class SearchService:
                 default=0.0,
             )
         abstract_score = 100.0
+        abstract_text = ""
         if abstract:
-            abstract_text = (article.abstract or article.snippet or "").lower()
+            abstract_text = " ".join(
+                item
+                for item in [article.abstract, article.abstract_zh, article.snippet]
+                if item
+            )
             abstract_score = (
-                fuzz.partial_ratio(abstract.lower(), abstract_text) if abstract_text else 0.0
+                fuzz.partial_ratio(abstract.lower(), abstract_text.lower())
+                if abstract_text
+                else 0.0
             )
         if title and title_score < 55:
             return None
@@ -154,12 +162,13 @@ class SearchService:
         score = round((title_score * 0.45) + (author_score * 0.35) + (abstract_score * 0.20), 2)
         highlights = {}
         if title:
-            highlights["title"] = self._highlight(article.title, title)
+            highlights["title"] = self._highlight(title_text, title)
         if author:
             highlights["author"] = self._highlight(article.authors_text or "", author)
         if abstract:
             highlights["abstract"] = self._highlight(
-                article.abstract or article.snippet or "", abstract
+                abstract_text or article.abstract or article.abstract_zh or article.snippet or "",
+                abstract,
             )
         return {"article": article, "score": score, "highlights": highlights}
 

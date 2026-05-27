@@ -4,7 +4,7 @@ Daily Paper Tracker is a monorepo web application for monitoring newly published
 
 1. Official RSS / official feeds whenever available.
 2. Crossref REST API as the metadata-safe fallback.
-3. No full-text scraping, no translation, and no routine browser automation.
+3. No full-text scraping and no routine browser automation.
 
 The system tracks both:
 
@@ -25,6 +25,7 @@ This project intentionally avoids aggressive publisher-page crawling because tha
 - rate-limiting outbound requests per host
 - storing raw source payloads instead of fetching article detail pages repeatedly
 - not crawling full-text pages just to enrich metadata
+- generating optional Chinese translations and library-linked heuristic notes from stored metadata
 
 ## Covered journals
 
@@ -66,6 +67,7 @@ Core backend services:
 - `ArticleNormalizer`
 - `DedupService`
 - `SearchService`
+- `ArticleAnalysisService`
 - `SchedulerService`
 - `SyncOrchestrationService`
 
@@ -138,6 +140,7 @@ Important guarantees:
 - unique DOI constraint
 - fallback dedup hash on `title + first_author + published_date`
 - raw payload persistence for each source item
+- optional Chinese title/abstract translation and library-linked heuristic notes per article
 - per-source state for `etag`, `last_modified`, `cursor`, last success time, and failure streak
 - sync run isolation so one journal failure does not stop the global job
 
@@ -168,6 +171,12 @@ Update at least:
 - `DATABASE_URL`
 - `CROSSREF_MAILTO`
 - `HTTP_USER_AGENT`
+
+For Chinese translation and heuristic notes, also set:
+
+- `LLM_API_KEY` or `OPENAI_API_KEY`
+- `LLM_BASE_URL`
+- `LLM_MODEL`
 
 ### 3. Initialize database
 
@@ -216,6 +225,12 @@ Run single-journal sync:
 
 ```bash
 python -m app.cli sync --journal nature-neuroscience --category current_issue --category online_first
+```
+
+Generate Chinese translations and linked heuristic notes:
+
+```bash
+python -m app.cli analyze-articles --limit 100
 ```
 
 Export static data for GitHub Pages:
@@ -276,9 +291,10 @@ What it does:
 2. Initializes a SQLite database inside the workflow
 3. Seeds the 14 journals
 4. Executes the synchronization job
-5. Exports static JSON into `apps/web/public/data`
-6. Builds the React app in `static` mode
-7. Deploys the built site to GitHub Pages
+5. Generates Chinese analysis when repository secret `LLM_API_KEY` is configured
+6. Exports static JSON into `apps/web/public/data`
+7. Builds the React app in `static` mode
+8. Deploys the built site to GitHub Pages
 
 After enabling GitHub Pages in repository settings, the public link will be:
 
@@ -287,6 +303,11 @@ https://<OWNER>.github.io/<REPO>/
 ```
 
 That pages build is a static mirror of the latest synchronized metadata, while the FastAPI service remains the full live API deployment path.
+
+For GitHub Pages Chinese analysis, add repository secret `LLM_API_KEY`. The workflow uses ChatAnywhere-compatible settings by default:
+
+- `LLM_BASE_URL=https://api.chatanywhere.tech/v1`
+- `LLM_MODEL=gpt-4o-mini`
 
 ## REST API
 
@@ -298,6 +319,8 @@ Required endpoints implemented:
 - `GET /api/search`
 - `POST /api/sync/run`
 - `POST /api/sync/run/{journal_slug}`
+- `POST /api/articles/{id}/analysis`
+- `POST /api/articles/analysis/run`
 - `GET /api/sync/runs`
 - `GET /api/health`
 
@@ -341,6 +364,14 @@ curl -X POST http://localhost:8000/api/sync/run/nature-neuroscience \
   -d '{"categories":["online_first"],"triggered_by":"manual"}'
 ```
 
+Generate Chinese analysis for one article:
+
+```bash
+curl -X POST http://localhost:8000/api/articles/{id}/analysis \
+  -H "Content-Type: application/json" \
+  -d '{"force":true}'
+```
+
 ## Testing
 
 ```bash
@@ -367,6 +398,7 @@ Features implemented:
 - responsive dashboard
 - article listing with pagination and filters
 - article detail view
+- Chinese translation, library links, and heuristic notes when generated
 - author/title/abstract search
 - URL-synced filter state
 - DOI copy button

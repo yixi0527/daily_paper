@@ -18,10 +18,13 @@ class AuthorOut(ORMModel):
 class ArticleListItemOut(ORMModel):
     id: str
     title: str
+    title_zh: str | None
     doi: str | None
     url: str
     abstract: str | None
+    abstract_zh: str | None
     snippet: str | None
+    analysis_generated_at: datetime | None
     source_category: str
     article_type: str | None
     volume: str | None
@@ -40,8 +43,26 @@ class ArticleDetailOut(ArticleListItemOut):
     article_number: str | None
     source_name: str
     source_uid: str | None
+    related_literature: list[dict] | None
+    related_literature_notes_zh: list[str] | None
+    heuristic_thoughts_zh: list[str] | None
+    analysis_model: str | None
     extra_metadata: dict | None
     raw_payload: dict | None = None
+
+
+class ArticleAnalysisRequest(BaseModel):
+    force: bool = False
+
+
+class ArticleAnalysisRunRequest(BaseModel):
+    limit: int = Field(default=20, ge=1, le=200)
+    force: bool = False
+
+
+class ArticleAnalysisRunOut(BaseModel):
+    scanned: int
+    updated: int
 
 
 class ArticleListResponse(BaseModel):

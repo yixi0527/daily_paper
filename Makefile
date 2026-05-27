@@ -2,7 +2,7 @@ PYTHON ?= python
 PIP ?= $(PYTHON) -m pip
 NPM ?= npm
 
-.PHONY: install install-web install-api migrate seed sync export-static api-dev web-dev scheduler test lint format docker-up docker-down
+.PHONY: install install-web install-api migrate seed sync analyze-articles export-static api-dev web-dev scheduler test lint format docker-up docker-down
 
 install: install-api install-web
 
@@ -21,6 +21,9 @@ seed:
 
 sync:
 	$(PYTHON) -m app.cli sync --all
+
+analyze-articles:
+	$(PYTHON) -m app.cli analyze-articles --limit 100
 
 export-static:
 	$(PYTHON) -m app.cli export-static --output apps/web/public/data
@@ -50,4 +53,3 @@ docker-up:
 
 docker-down:
 	docker compose down -v
-

@@ -6,11 +6,11 @@ from pathlib import Path
 from app.models.article import Article
 from app.models.journal import Journal
 from app.models.sync import SyncRun
-from app.services.content_policy import ContentPolicyService
 from app.schemas.article import ArticleDetailOut, AuthorOut
 from app.schemas.dashboard import DashboardOut
 from app.schemas.journal import JournalDetailOut
 from app.schemas.sync import SyncRunOut
+from app.services.content_policy import ContentPolicyService
 from app.services.dashboard import DashboardService
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy import desc, select
@@ -74,10 +74,13 @@ class StaticExportService:
                     ArticleDetailOut(
                         id=item.id,
                         title=item.title,
+                        title_zh=item.title_zh,
                         doi=item.doi,
                         url=item.url,
                         abstract=item.abstract,
+                        abstract_zh=item.abstract_zh,
                         snippet=item.snippet,
+                        analysis_generated_at=item.analysis_generated_at,
                         source_category=item.source_category,
                         article_type=item.article_type,
                         volume=item.volume,
@@ -93,6 +96,10 @@ class StaticExportService:
                         article_number=item.article_number,
                         source_name=item.source_name,
                         source_uid=item.source_uid,
+                        related_literature=item.related_literature,
+                        related_literature_notes_zh=item.related_literature_notes_zh,
+                        heuristic_thoughts_zh=item.heuristic_thoughts_zh,
+                        analysis_model=item.analysis_model,
                         extra_metadata=item.extra_metadata,
                         raw_payload=item.payloads[-1].payload_json if item.payloads else None,
                     )

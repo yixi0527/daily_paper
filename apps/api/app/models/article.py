@@ -37,6 +37,15 @@ class Article(Base):
     url: Mapped[str] = mapped_column(Text)
     abstract: Mapped[str | None] = mapped_column(Text, nullable=True)
     snippet: Mapped[str | None] = mapped_column(Text, nullable=True)
+    title_zh: Mapped[str | None] = mapped_column(Text, nullable=True)
+    abstract_zh: Mapped[str | None] = mapped_column(Text, nullable=True)
+    related_literature: Mapped[list[dict] | None] = mapped_column(JSON, nullable=True)
+    related_literature_notes_zh: Mapped[list[str] | None] = mapped_column(JSON, nullable=True)
+    heuristic_thoughts_zh: Mapped[list[str] | None] = mapped_column(JSON, nullable=True)
+    analysis_model: Mapped[str | None] = mapped_column(String(120), nullable=True)
+    analysis_generated_at: Mapped[datetime | None] = mapped_column(
+        DateTime(timezone=True), nullable=True
+    )
     source_category: Mapped[str] = mapped_column(String(50), index=True)
     article_type: Mapped[str | None] = mapped_column(String(100), nullable=True)
     volume: Mapped[str | None] = mapped_column(String(50), nullable=True)

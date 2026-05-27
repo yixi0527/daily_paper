@@ -71,9 +71,11 @@ export function searchArticlesLocally(items: ArticleDetail[], params: SearchPara
       if (params.dateTo && item.published_at && new Date(item.published_at) > new Date(params.dateTo)) {
         return false;
       }
-      if (queryTitle && !item.title.toLowerCase().includes(queryTitle)) return false;
+      const titleText = [item.title, item.title_zh].filter(Boolean).join(' ');
+      if (queryTitle && !titleText.toLowerCase().includes(queryTitle)) return false;
       if (queryAuthor && !(item.authors_text ?? '').toLowerCase().includes(queryAuthor)) return false;
-      if (queryAbstract && !((item.abstract ?? item.snippet ?? '').toLowerCase().includes(queryAbstract))) {
+      const abstractText = [item.abstract, item.abstract_zh, item.snippet].filter(Boolean).join(' ');
+      if (queryAbstract && !abstractText.toLowerCase().includes(queryAbstract)) {
         return false;
       }
       return Boolean(queryTitle || queryAuthor || queryAbstract);
@@ -82,11 +84,11 @@ export function searchArticlesLocally(items: ArticleDetail[], params: SearchPara
       article: item,
       score: 100,
       highlights: {
-        title: queryTitle ? highlight(item.title, queryTitle) : item.title,
+        title: queryTitle ? highlight([item.title, item.title_zh].filter(Boolean).join(' '), queryTitle) : item.title,
         author: queryAuthor ? highlight(item.authors_text ?? '', queryAuthor) : item.authors_text ?? '',
         abstract: queryAbstract
-          ? highlight(item.abstract ?? item.snippet ?? '', queryAbstract)
-          : item.abstract ?? item.snippet ?? '',
+          ? highlight([item.abstract, item.abstract_zh, item.snippet].filter(Boolean).join(' '), queryAbstract)
+          : item.abstract ?? item.abstract_zh ?? item.snippet ?? '',
       },
     }));
 }

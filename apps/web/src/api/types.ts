@@ -37,10 +37,13 @@ export interface Author {
 export interface ArticleListItem {
   id: string;
   title: string;
+  title_zh: string | null;
   doi: string | null;
   url: string;
   abstract: string | null;
+  abstract_zh: string | null;
   snippet: string | null;
+  analysis_generated_at: string | null;
   source_category: string;
   article_type: string | null;
   volume: string | null;
@@ -54,11 +57,26 @@ export interface ArticleListItem {
   journal: Journal;
 }
 
+export interface RelatedLiterature {
+  article_id: string;
+  title: string;
+  journal_name: string;
+  published_at: string | null;
+  doi: string | null;
+  relevance_score: number;
+  shared_terms: string[];
+  abstract_excerpt: string | null;
+}
+
 export interface ArticleDetail extends ArticleListItem {
   pages: string | null;
   article_number: string | null;
   source_name: string;
   source_uid: string | null;
+  related_literature: RelatedLiterature[] | null;
+  related_literature_notes_zh: string[] | null;
+  heuristic_thoughts_zh: string[] | null;
+  analysis_model: string | null;
   extra_metadata: Record<string, unknown> | null;
   raw_payload: Record<string, unknown> | null;
 }

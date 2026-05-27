@@ -16,17 +16,22 @@ export function ArticleCard({ article }: { article: ArticleListItem }) {
           {article.title}
         </a>
       </h3>
+      {article.title_zh ? <p className="article-title-zh">{article.title_zh}</p> : null}
       <AuthorList
         authors={article.authors}
         authorsText={article.authors_text}
         className="article-authors"
       />
+      {article.abstract_zh ? (
+        <p className="article-snippet article-snippet-zh">{article.abstract_zh}</p>
+      ) : null}
       {article.abstract || article.snippet ? (
         <p className="article-snippet">{article.abstract ?? article.snippet}</p>
       ) : null}
       <div className="article-footer">
         {article.doi ? <span className="pill">DOI</span> : <span className="pill muted-pill">No DOI</span>}
         {article.article_type ? <span className="pill">{article.article_type}</span> : null}
+        {article.analysis_generated_at ? <span className="pill">中文解读</span> : null}
         <Link to={`/articles/${article.id}`} className="pill muted-pill">
           Metadata
         </Link>

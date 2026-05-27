@@ -303,6 +303,12 @@ button {
   text-decoration-color: var(--accent);
 }
 
+.article-title-zh {
+  margin: 0.45rem 0 0;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
 .author-list,
 .article-authors {
   margin: 0.5rem 0 0;
@@ -329,6 +335,10 @@ button {
   margin: 0.45rem 0 0;
   color: var(--muted);
   line-height: 1.65;
+}
+
+.article-snippet-zh {
+  color: var(--text);
 }
 
 .article-footer {
@@ -414,6 +424,51 @@ button {
   line-height: 1.7;
 }
 
+.analysis-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.translation-block {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.85rem;
+}
+
+.translation-block h3,
+.translation-block p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.thought-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.85rem 0 0;
+  padding-left: 1.25rem;
+  line-height: 1.65;
+}
+
+.related-list {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.related-item {
+  display: grid;
+  gap: 0.28rem;
+  padding-top: 0.8rem;
+}
+
+.related-item span,
+.related-item em {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .code-block {
   overflow: auto;
   max-height: 420px;
@@ -467,6 +522,7 @@ mark {
   .stats-grid,
   .split-section,
   .detail-grid,
+  .analysis-grid,
   .filter-grid,
   .search-grid {
     grid-template-columns: 1fr;
