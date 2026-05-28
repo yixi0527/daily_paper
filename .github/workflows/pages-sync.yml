@@ -24,10 +24,12 @@ jobs:
     env:
       DATABASE_URL: sqlite:///./data/pages.db
       VITE_APP_MODE: static
+      APP_DEBUG: "false"
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
       LLM_BASE_URL: https://api.chatanywhere.tech/v1
       LLM_MODEL: gpt-4o-mini
-      LLM_TIMEOUT: 60
+      LLM_TIMEOUT: 180
+      ANALYSIS_CONTEXT_LIMIT: 3
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -72,7 +74,7 @@ jobs:
 
       - name: Generate Chinese analysis
         if: ${{ env.LLM_API_KEY != '' }}
-        run: python -m app.cli analyze-articles --limit 100
+        run: python -m app.cli analyze-articles --limit 20
 
       - name: Export static data
         run: python -m app.cli export-static --output apps/web/public/data
