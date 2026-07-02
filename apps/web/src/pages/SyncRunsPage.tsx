@@ -1,4 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { RefreshCw } from 'lucide-react';
 import { getSyncRuns, runSync } from '../api/client';
 import { isStaticMode } from '../lib/env';
 import { formatDateTime } from '../lib/utils';
@@ -17,7 +18,8 @@ export function SyncRunsPage() {
   });
 
   if (syncRunsQuery.isLoading) return <LoadingState label="Loading sync history…" />;
-  if (syncRunsQuery.isError || !syncRunsQuery.data) return <ErrorState label="Sync history could not be loaded." />;
+  if (syncRunsQuery.isError || !syncRunsQuery.data)
+    return <ErrorState label="Sync history could not be loaded." />;
 
   return (
     <div className="page-stack">
@@ -27,7 +29,12 @@ export function SyncRunsPage() {
           <h2>Synchronization runs</h2>
         </div>
         {!isStaticMode ? (
-          <button className="primary-button" onClick={() => syncMutation.mutate()} disabled={syncMutation.isPending}>
+          <button
+            className="primary-button"
+            onClick={() => syncMutation.mutate()}
+            disabled={syncMutation.isPending}
+          >
+            <RefreshCw size={16} strokeWidth={2.2} aria-hidden="true" />
             {syncMutation.isPending ? 'Running sync…' : 'Run full sync now'}
           </button>
         ) : null}
@@ -42,7 +49,8 @@ export function SyncRunsPage() {
                   <p className="eyebrow">{run.status}</p>
                   <h3>{run.scope}</h3>
                   <p className="muted">
-                    Started {formatDateTime(run.started_at)} · Inserted {run.total_inserted} · Updated {run.total_updated}
+                    Started {formatDateTime(run.started_at)} · Inserted {run.total_inserted} ·
+                    Updated {run.total_updated}
                     {' · '}Failed {run.total_failed}
                   </p>
                 </div>
@@ -60,4 +68,3 @@ export function SyncRunsPage() {
     </div>
   );
 }
-

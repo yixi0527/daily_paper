@@ -1,24 +1,27 @@
 import { NavLink, Outlet } from 'react-router-dom';
+import { BookOpen, Database, Newspaper, RefreshCw, Search, type LucideIcon } from 'lucide-react';
 import { classNames } from '../lib/utils';
 import { appMode } from '../lib/env';
 
 const NAV_ITEMS = [
-  { to: '/', label: 'Articles' },
-  { to: '/search', label: 'Search' },
-  { to: '/journals', label: 'Journals' },
-  { to: '/sync-runs', label: 'Sync Runs' },
-];
+  { to: '/', label: 'Articles', icon: Newspaper },
+  { to: '/search', label: 'Search', icon: Search },
+  { to: '/journals', label: 'Journals', icon: BookOpen },
+  { to: '/sync-runs', label: 'Sync', icon: RefreshCw },
+] satisfies Array<{ to: string; label: string; icon: LucideIcon }>;
 
 export function AppShell() {
   return (
     <div className="app-shell">
-      <aside className="sidebar">
-        <div className="brand-block">
-          <p className="eyebrow">Beijing 22:00 sync</p>
-          <h1>Daily Paper Tracker</h1>
-          <p className="brand-copy">
-            RSS-first monitoring for neuroscience, AI, and flagship multidisciplinary journals, with all displayed times shown in Beijing time.
-          </p>
+      <header className="topbar">
+        <div className="brand-lockup" aria-label="Daily Paper Tracker">
+          <div className="brand-mark" aria-hidden="true">
+            <Newspaper size={20} strokeWidth={2.2} />
+          </div>
+          <div>
+            <p className="eyebrow">Beijing 22:00 sync</p>
+            <h1>Daily Paper Tracker</h1>
+          </div>
         </div>
 
         <nav className="nav-list">
@@ -28,16 +31,17 @@ export function AppShell() {
               to={item.to}
               className={({ isActive }) => classNames('nav-link', isActive && 'active')}
             >
+              <item.icon size={17} strokeWidth={2.1} aria-hidden="true" />
               {item.label}
             </NavLink>
           ))}
         </nav>
 
-        <div className="sidebar-footer">
-          <p className="eyebrow">Mode</p>
-          <div className="mode-pill">{appMode === 'static' ? 'GitHub Pages mirror' : 'Live API'}</div>
+        <div className="mode-pill">
+          <Database size={15} strokeWidth={2.1} aria-hidden="true" />
+          {appMode === 'static' ? 'GitHub Pages mirror' : 'Live API'}
         </div>
-      </aside>
+      </header>
 
       <main className="content-shell">
         <Outlet />

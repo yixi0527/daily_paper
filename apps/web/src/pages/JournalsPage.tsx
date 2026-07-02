@@ -1,5 +1,6 @@
 import { formatDateTime } from '../lib/utils';
 import { useQuery } from '@tanstack/react-query';
+import { ExternalLink } from 'lucide-react';
 import { getJournals } from '../api/client';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 
@@ -7,7 +8,8 @@ export function JournalsPage() {
   const journalsQuery = useQuery({ queryKey: ['journals'], queryFn: getJournals });
 
   if (journalsQuery.isLoading) return <LoadingState label="Loading journal configuration…" />;
-  if (journalsQuery.isError || !journalsQuery.data) return <ErrorState label="Journal configuration could not be loaded." />;
+  if (journalsQuery.isError || !journalsQuery.data)
+    return <ErrorState label="Journal configuration could not be loaded." />;
 
   return (
     <div className="page-stack">
@@ -16,7 +18,9 @@ export function JournalsPage() {
           <p className="eyebrow">Sources</p>
           <h2>Configured journals</h2>
         </div>
-        <p className="muted">Each journal is driven by a dedicated adapter with RSS-first fallback strategy.</p>
+        <p className="muted">
+          Each journal is driven by a dedicated adapter with RSS-first fallback strategy.
+        </p>
       </section>
 
       <section className="panel">
@@ -28,20 +32,27 @@ export function JournalsPage() {
                   <p className="eyebrow">{journal.publisher}</p>
                   <h3>{journal.journal_name}</h3>
                   <p className="muted">
-                    Strategy: {journal.polling_strategy} · Primary {journal.primary_source ?? 'n/a'} · Fallback{' '}
-                    {journal.fallback_source ?? 'n/a'}
+                    Strategy: {journal.polling_strategy} · Primary {journal.primary_source ?? 'n/a'}{' '}
+                    · Fallback {journal.fallback_source ?? 'n/a'}
                   </p>
                   {journal.source_states?.length ? (
                     <div className="article-footer">
                       {journal.source_states.map((state) => (
                         <span className="pill" key={`${journal.slug}-${state.source_category}`}>
-                          {state.source_category}: {state.last_success_at ? formatDateTime(state.last_success_at) : 'never'}
+                          {state.source_category}:{' '}
+                          {state.last_success_at ? formatDateTime(state.last_success_at) : 'never'}
                         </span>
                       ))}
                     </div>
                   ) : null}
                 </div>
-                <a href={journal.homepage_url} target="_blank" rel="noreferrer" className="ghost-button">
+                <a
+                  href={journal.homepage_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="ghost-button"
+                >
+                  <ExternalLink size={16} strokeWidth={2.2} aria-hidden="true" />
                   Open journal
                 </a>
               </article>

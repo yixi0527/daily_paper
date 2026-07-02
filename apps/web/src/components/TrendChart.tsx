@@ -1,3 +1,5 @@
+import { Activity } from 'lucide-react';
+
 export function TrendChart({ points }: { points: Array<{ date: string; count: number }> }) {
   if (!points.length) return null;
   const maxValue = Math.max(...points.map((point) => point.count), 1);
@@ -14,7 +16,10 @@ export function TrendChart({ points }: { points: Array<{ date: string; count: nu
       <div className="section-header">
         <div>
           <p className="eyebrow">Last 7 days</p>
-          <h2>Ingestion trend</h2>
+          <h2>
+            <Activity size={20} strokeWidth={2.2} aria-hidden="true" />
+            Ingestion trend
+          </h2>
         </div>
       </div>
       <svg viewBox="0 0 100 100" className="trend-chart" preserveAspectRatio="none">
@@ -31,4 +36,3 @@ export function TrendChart({ points }: { points: Array<{ date: string; count: nu
     </section>
   );
 }
-

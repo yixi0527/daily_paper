@@ -1,6 +1,7 @@
 import { startTransition, useDeferredValue, useMemo, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
+import { Search } from 'lucide-react';
 import { getJournals, searchArticles } from '../api/client';
 import { AuthorList } from '../components/AuthorList';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
@@ -61,7 +62,8 @@ export function SearchPage() {
   };
 
   if (journalsQuery.isLoading) return <LoadingState label="Loading search workspace…" />;
-  if (journalsQuery.isError || !journalsQuery.data) return <ErrorState label="Search workspace could not be loaded." />;
+  if (journalsQuery.isError || !journalsQuery.data)
+    return <ErrorState label="Search workspace could not be loaded." />;
 
   return (
     <div className="page-stack">
@@ -70,41 +72,76 @@ export function SearchPage() {
           <p className="eyebrow">Search</p>
           <h2>Field-aware paper search</h2>
         </div>
-        <p className="muted">Combine author, title, abstract, journal, and date filters. Recent queries stay local in this browser.</p>
+        <p className="muted">
+          Combine author, title, abstract, journal, and date filters. Recent queries stay local in
+          this browser.
+        </p>
       </section>
 
-      <section className="search-grid">
-        <input
-          type="text"
-          placeholder="Title keywords"
-          value={draftTitle}
-          onChange={(event) => setDraftTitle(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Author name"
-          value={draftAuthor}
-          onChange={(event) => setDraftAuthor(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Abstract keywords"
-          value={draftAbstract}
-          onChange={(event) => setDraftAbstract(event.target.value)}
-        />
-        <select defaultValue={params.journal ?? ''} onChange={(event) => updateParam('journal', event.target.value)}>
-          <option value="">All journals</option>
-          {journalsQuery.data.map((journal) => (
-            <option key={journal.slug} value={journal.slug}>
-              {journal.journal_name}
-            </option>
-          ))}
-        </select>
-        <input type="date" defaultValue={params.dateFrom ?? ''} onBlur={(event) => updateParam('dateFrom', event.target.value)} />
-        <input type="date" defaultValue={params.dateTo ?? ''} onBlur={(event) => updateParam('dateTo', event.target.value)} />
-        <button className="primary-button" onClick={submitSearch}>
-          Search
-        </button>
+      <section className="filter-panel">
+        <div className="search-grid">
+          <label className="field field-wide">
+            <span>Title</span>
+            <input
+              type="text"
+              placeholder="Title keywords"
+              value={draftTitle}
+              onChange={(event) => setDraftTitle(event.target.value)}
+            />
+          </label>
+          <label className="field">
+            <span>Author</span>
+            <input
+              type="text"
+              placeholder="Author name"
+              value={draftAuthor}
+              onChange={(event) => setDraftAuthor(event.target.value)}
+            />
+          </label>
+          <label className="field field-wide">
+            <span>Abstract</span>
+            <input
+              type="text"
+              placeholder="Abstract keywords"
+              value={draftAbstract}
+              onChange={(event) => setDraftAbstract(event.target.value)}
+            />
+          </label>
+          <label className="field">
+            <span>Journal</span>
+            <select
+              defaultValue={params.journal ?? ''}
+              onChange={(event) => updateParam('journal', event.target.value)}
+            >
+              <option value="">All journals</option>
+              {journalsQuery.data.map((journal) => (
+                <option key={journal.slug} value={journal.slug}>
+                  {journal.journal_name}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="field">
+            <span>Published after</span>
+            <input
+              type="date"
+              defaultValue={params.dateFrom ?? ''}
+              onBlur={(event) => updateParam('dateFrom', event.target.value)}
+            />
+          </label>
+          <label className="field">
+            <span>Published before</span>
+            <input
+              type="date"
+              defaultValue={params.dateTo ?? ''}
+              onBlur={(event) => updateParam('dateTo', event.target.value)}
+            />
+          </label>
+          <button type="button" className="primary-button search-submit" onClick={submitSearch}>
+            <Search size={17} strokeWidth={2.2} aria-hidden="true" />
+            Search
+          </button>
+        </div>
       </section>
 
       {recent.length ? (
@@ -144,8 +181,8 @@ export function SearchPage() {
               searchQuery.data.items.map((hit) => (
                 <article className="article-row" key={hit.article.id}>
                   <div className="article-meta">
-                    <span>{hit.article.journal.journal_name}</span>
-                    <span>Score {hit.score}</span>
+                    <span className="meta-chip strong">{hit.article.journal.journal_name}</span>
+                    <span className="meta-chip">Score {hit.score}</span>
                   </div>
                   <h3>
                     <a
@@ -153,7 +190,9 @@ export function SearchPage() {
                       target="_blank"
                       rel="noreferrer"
                       className="article-title-link"
-                      dangerouslySetInnerHTML={{ __html: hit.highlights.title || hit.article.title }}
+                      dangerouslySetInnerHTML={{
+                        __html: hit.highlights.title || hit.article.title,
+                      }}
                     />
                   </h3>
                   <AuthorList
@@ -164,7 +203,11 @@ export function SearchPage() {
                   <p
                     className="article-snippet"
                     dangerouslySetInnerHTML={{
-                      __html: hit.highlights.abstract || hit.article.abstract || hit.article.snippet || '',
+                      __html:
+                        hit.highlights.abstract ||
+                        hit.article.abstract ||
+                        hit.article.snippet ||
+                        '',
                     }}
                   />
                 </article>

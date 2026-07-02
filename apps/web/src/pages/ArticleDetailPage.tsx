@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
+import { ExternalLink, Sparkles } from 'lucide-react';
 import { generateArticleAnalysis, getArticle } from '../api/client';
 import { AuthorList } from '../components/AuthorList';
 import { CopyButton } from '../components/CopyButton';
@@ -30,9 +31,9 @@ export function ArticleDetailPage() {
   const article = articleQuery.data;
   const hasChineseAnalysis = Boolean(
     article.title_zh ||
-      article.abstract_zh ||
-      article.related_literature_notes_zh?.length ||
-      article.heuristic_thoughts_zh?.length,
+    article.abstract_zh ||
+    article.related_literature_notes_zh?.length ||
+    article.heuristic_thoughts_zh?.length,
   );
 
   return (
@@ -51,16 +52,20 @@ export function ArticleDetailPage() {
               disabled={analysisMutation.isPending}
               onClick={() => analysisMutation.mutate()}
             >
+              <Sparkles size={16} strokeWidth={2.2} aria-hidden="true" />
               {analysisMutation.isPending ? '生成中…' : '生成中文解读'}
             </button>
           ) : null}
           <a href={article.url} target="_blank" rel="noreferrer" className="primary-link">
+            <ExternalLink size={16} strokeWidth={2.2} aria-hidden="true" />
             Open publisher page
           </a>
         </div>
       </section>
       {analysisMutation.isError ? (
-        <section className="state-panel error">中文解读生成失败，请检查 LLM 配置和文献库上下文。</section>
+        <section className="state-panel error">
+          中文解读生成失败，请检查 LLM 配置和文献库上下文。
+        </section>
       ) : null}
 
       <section className="detail-grid">
@@ -106,7 +111,9 @@ export function ArticleDetailPage() {
               <h2>Summary metadata</h2>
             </div>
           </div>
-          <p className="detail-abstract">{article.abstract ?? article.snippet ?? 'No abstract available from source metadata.'}</p>
+          <p className="detail-abstract">
+            {article.abstract ?? article.snippet ?? 'No abstract available from source metadata.'}
+          </p>
         </div>
       </section>
 
@@ -169,7 +176,9 @@ export function ArticleDetailPage() {
               <p className="eyebrow">启发式思考</p>
               <h2>Heuristics</h2>
             </div>
-            {article.analysis_model ? <span className="pill muted-pill">{article.analysis_model}</span> : null}
+            {article.analysis_model ? (
+              <span className="pill muted-pill">{article.analysis_model}</span>
+            ) : null}
           </div>
           {article.heuristic_thoughts_zh?.length ? (
             <ul className="thought-list">
