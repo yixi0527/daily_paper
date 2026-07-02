@@ -278,5 +278,205 @@
     "polling_strategy": "rss_then_crossref",
     "primary_source": "rss",
     "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "nature-reviews-neurology",
+    "slug": "nature-reviews-neurology",
+    "journal_name": "Nature Reviews Neurology",
+    "publisher": "Springer Nature",
+    "adapter_key": "nature",
+    "issn_print": "1759-4758",
+    "issn_online": "1759-4766",
+    "rss_current_issue_url": "https://www.nature.com/nrneurol/current-issue.rss",
+    "rss_online_first_url": "https://www.nature.com/nrneurol.rss",
+    "crossref_filters": {
+      "issn": "1759-4766"
+    },
+    "homepage_url": "https://www.nature.com/nrneurol/",
+    "enabled": true,
+    "update_priority": 9,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "molecular-psychiatry",
+    "slug": "molecular-psychiatry",
+    "journal_name": "Molecular Psychiatry",
+    "publisher": "Springer Nature",
+    "adapter_key": "nature",
+    "issn_print": "1359-4184",
+    "issn_online": "1476-5578",
+    "rss_current_issue_url": "https://www.nature.com/mp/current-issue.rss",
+    "rss_online_first_url": "https://www.nature.com/mp.rss",
+    "crossref_filters": {
+      "issn": "1476-5578"
+    },
+    "homepage_url": "https://www.nature.com/mp/",
+    "enabled": true,
+    "update_priority": 8,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "molecular-neurodegeneration",
+    "slug": "molecular-neurodegeneration",
+    "journal_name": "Molecular Neurodegeneration",
+    "publisher": "Springer Nature",
+    "adapter_key": "springer_rss",
+    "issn_print": null,
+    "issn_online": "1750-1326",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://link.springer.com/search.rss?facet-content-type=%22Article%22&facet-journal-id=13024",
+    "crossref_filters": {
+      "issn": "1750-1326"
+    },
+    "homepage_url": "https://link.springer.com/journal/13024",
+    "enabled": true,
+    "update_priority": 9,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "translational-neurodegeneration",
+    "slug": "translational-neurodegeneration",
+    "journal_name": "Translational Neurodegeneration",
+    "publisher": "Springer Nature",
+    "adapter_key": "springer_rss",
+    "issn_print": "2096-6466",
+    "issn_online": "2047-9158",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://link.springer.com/search.rss?facet-content-type=%22Article%22&facet-journal-id=40035",
+    "crossref_filters": {
+      "issn": "2047-9158"
+    },
+    "homepage_url": "https://link.springer.com/journal/40035",
+    "enabled": true,
+    "update_priority": 9,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "journal-of-neuroinflammation",
+    "slug": "journal-of-neuroinflammation",
+    "journal_name": "Journal of Neuroinflammation",
+    "publisher": "Springer Nature",
+    "adapter_key": "springer_rss",
+    "issn_print": null,
+    "issn_online": "1742-2094",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://link.springer.com/search.rss?facet-content-type=%22Article%22&facet-journal-id=12974",
+    "crossref_filters": {
+      "issn": "1742-2094"
+    },
+    "homepage_url": "https://link.springer.com/journal/12974",
+    "enabled": true,
+    "update_priority": 8,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "acta-neuropathologica",
+    "slug": "acta-neuropathologica",
+    "journal_name": "Acta Neuropathologica",
+    "publisher": "Springer Nature",
+    "adapter_key": "springer_rss",
+    "issn_print": "0001-6322",
+    "issn_online": "1432-0533",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://link.springer.com/search.rss?facet-content-type=%22Article%22&facet-journal-id=401",
+    "crossref_filters": {
+      "issn": "1432-0533"
+    },
+    "homepage_url": "https://link.springer.com/journal/401",
+    "enabled": true,
+    "update_priority": 8,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "annual-review-of-neuroscience",
+    "slug": "annual-review-of-neuroscience",
+    "journal_name": "Annual Review of Neuroscience",
+    "publisher": "Annual Reviews",
+    "adapter_key": "crossref_only",
+    "issn_print": "0147-006X",
+    "issn_online": "1545-4126",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "1545-4126"
+    },
+    "homepage_url": "https://www.annualreviews.org/content/journals/neuro",
+    "enabled": true,
+    "update_priority": 8,
+    "polling_strategy": "crossref",
+    "primary_source": "crossref",
+    "fallback_source": null
+  },
+  {
+    "journal_id": "jama-neurology",
+    "slug": "jama-neurology",
+    "journal_name": "JAMA Neurology",
+    "publisher": "American Medical Association",
+    "adapter_key": "crossref_only",
+    "issn_print": "2168-6149",
+    "issn_online": "2168-6157",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "2168-6157"
+    },
+    "homepage_url": "https://jamanetwork.com/journals/jamaneurology",
+    "enabled": true,
+    "update_priority": 8,
+    "polling_strategy": "crossref",
+    "primary_source": "crossref",
+    "fallback_source": null
+  },
+  {
+    "journal_id": "alzheimers-and-dementia",
+    "slug": "alzheimers-and-dementia",
+    "journal_name": "Alzheimer's & Dementia",
+    "publisher": "Wiley",
+    "adapter_key": "crossref_only",
+    "issn_print": "1552-5260",
+    "issn_online": "1552-5279",
+    "rss_current_issue_url": "https://alz-journals.onlinelibrary.wiley.com/action/showFeed?type=etoc&feed=rss&jc=15525279",
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "1552-5279"
+    },
+    "homepage_url": "https://alz-journals.onlinelibrary.wiley.com/journal/15525279",
+    "enabled": true,
+    "update_priority": 8,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "sleep-medicine-reviews",
+    "slug": "sleep-medicine-reviews",
+    "journal_name": "Sleep Medicine Reviews",
+    "publisher": "Elsevier",
+    "adapter_key": "crossref_only",
+    "issn_print": "1087-0792",
+    "issn_online": "1532-2955",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "1532-2955"
+    },
+    "homepage_url": "https://www.sciencedirect.com/journal/sleep-medicine-reviews",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "crossref",
+    "primary_source": "crossref",
+    "fallback_source": null
   }
 ]
