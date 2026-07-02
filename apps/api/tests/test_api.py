@@ -1,5 +1,8 @@
+import json
+
 from app.models.article import Article, ArticleAuthor
 from app.models.journal import Journal
+from app.services.static_export import StaticExportService
 
 
 def test_health_endpoint(client) -> None:
@@ -109,3 +112,75 @@ def test_articles_endpoint_excludes_editorials(client, db_session) -> None:
     payload = response.json()
     titles = [item["title"] for item in payload["items"]]
     assert "Editorial: Looking ahead" not in titles
+
+
+def test_articles_endpoint_excludes_blocked_lifeline_article(client, db_session) -> None:
+    journal = db_session.query(Journal).first()
+    article = Article(
+        journal_id=journal.id,
+        title="Lifeline",
+        title_slug="lifeline",
+        doi="10.1016/s1474-4422(26)00210-3",
+        url="https://doi.org/10.1016/s1474-4422(26)00210-3",
+        abstract="A blocked non-research item.",
+        snippet="A blocked non-research item.",
+        source_category="online_first",
+        article_type="Article",
+        volume="25",
+        issue="7",
+        pages="1-2",
+        article_number="TLN",
+        first_author="The Lancet Neurology",
+        authors_text="The Lancet Neurology",
+        source_name="lancet_rss",
+        source_uid="10.1016/s1474-4422(26)00210-3",
+        dedup_hash="hash-lifeline",
+    )
+    article.authors = [
+        ArticleAuthor(
+            position=0,
+            full_name="The Lancet Neurology",
+        ),
+    ]
+    db_session.add(article)
+    db_session.commit()
+
+    list_response = client.get("/api/articles")
+    assert list_response.status_code == 200
+    list_payload = list_response.json()
+    list_titles = [item["title"] for item in list_payload["items"]]
+    assert "Lifeline" not in list_titles
+
+    search_response = client.get("/api/search", params={"title": "Lifeline"})
+    assert search_response.status_code == 200
+    search_payload = search_response.json()
+    assert search_payload["meta"]["total"] == 0
+
+    detail_response = client.get(f"/api/articles/{article.id}")
+    assert detail_response.status_code == 404
+
+
+def test_static_export_excludes_blocked_lifeline_article(db_session, tmp_path) -> None:
+    journal = db_session.query(Journal).first()
+    article = Article(
+        journal_id=journal.id,
+        title="Lifeline",
+        title_slug="lifeline",
+        doi="10.1016/s1474-4422(26)00210-3",
+        url="https://doi.org/10.1016/s1474-4422(26)00210-3",
+        abstract="A blocked non-research item.",
+        snippet="A blocked non-research item.",
+        source_category="online_first",
+        article_type="Article",
+        source_name="lancet_rss",
+        source_uid="10.1016/s1474-4422(26)00210-3",
+        dedup_hash="hash-lifeline-export",
+    )
+    db_session.add(article)
+    db_session.commit()
+
+    StaticExportService().export(db_session, tmp_path)
+
+    payload = json.loads((tmp_path / "site-data.json").read_text(encoding="utf-8"))
+    titles = [item["title"] for item in payload["articles"]]
+    assert "Lifeline" not in titles

@@ -6,6 +6,12 @@ from sqlalchemy.sql.elements import ColumnElement
 
 
 class ContentPolicyService:
+    EXCLUDED_ARTICLE_DOIS = {
+        "10.1016/s1474-4422(26)00210-3",
+    }
+    EXCLUDED_TITLE_WITHOUT_DOI = {
+        "lifeline",
+    }
     EXCLUDED_ARTICLE_TYPES = {
         "book review",
         "books et al.",
@@ -72,12 +78,27 @@ class ContentPolicyService:
     )
 
     def is_substantive(self, article: NormalizedArticle) -> bool:
-        return self.is_substantive_fields(title=article.title, article_type=article.article_type)
+        return self.is_substantive_fields(
+            title=article.title,
+            article_type=article.article_type,
+            doi=article.doi,
+        )
 
-    def is_substantive_fields(self, *, title: str | None, article_type: str | None) -> bool:
+    def is_substantive_fields(
+        self,
+        *,
+        title: str | None,
+        article_type: str | None,
+        doi: str | None = None,
+    ) -> bool:
         article_type = (article_type or "").strip().lower()
         title = (title or "").strip().lower()
+        doi = self._normalize_doi(doi)
 
+        if doi in self.EXCLUDED_ARTICLE_DOIS:
+            return False
+        if not doi and title in self.EXCLUDED_TITLE_WITHOUT_DOI:
+            return False
         if article_type in self.EXCLUDED_ARTICLE_TYPES:
             return False
         if any(pattern in article_type for pattern in self.EXCLUDED_ARTICLE_TYPE_PATTERNS):
@@ -88,9 +109,21 @@ class ContentPolicyService:
 
     def article_visibility_clause(self, article_model) -> ColumnElement[bool]:
         article_type = func.lower(func.coalesce(article_model.article_type, ""))
-        title = func.lower(func.coalesce(article_model.title, ""))
+        title = func.lower(func.trim(func.coalesce(article_model.title, "")))
+        doi = func.replace(
+            func.replace(func.lower(func.coalesce(article_model.doi, "")), "https://doi.org/", ""),
+            "doi:",
+            "",
+        )
 
         clause = true()
+        if self.EXCLUDED_ARTICLE_DOIS:
+            clause = and_(clause, not_(doi.in_(sorted(self.EXCLUDED_ARTICLE_DOIS))))
+        if self.EXCLUDED_TITLE_WITHOUT_DOI:
+            clause = and_(
+                clause,
+                not_(and_(doi == "", title.in_(sorted(self.EXCLUDED_TITLE_WITHOUT_DOI)))),
+            )
         if self.EXCLUDED_ARTICLE_TYPES:
             clause = and_(clause, not_(article_type.in_(sorted(self.EXCLUDED_ARTICLE_TYPES))))
         if self.EXCLUDED_ARTICLE_TYPE_PATTERNS:
@@ -108,3 +141,10 @@ class ContentPolicyService:
         for pattern in self.EXCLUDED_TITLE_PATTERNS:
             clause = and_(clause, not_(title.like(f"%{pattern}%")))
         return clause
+
+    def _normalize_doi(self, doi: str | None) -> str | None:
+        if not doi:
+            return None
+        normalized = doi.strip().lower()
+        normalized = normalized.replace("https://doi.org/", "").replace("doi:", "")
+        return normalized or None

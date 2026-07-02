@@ -82,6 +82,7 @@ def get_article(article_id: str, db: Session = Depends(get_db)) -> ArticleDetail
             joinedload(Article.journal), joinedload(Article.authors), joinedload(Article.payloads)
         )
         .where(Article.id == article_id)
+        .where(service.content_policy.article_visibility_clause(Article))
     )
     if article is None:
         raise HTTPException(status_code=404, detail="Article not found")
@@ -104,6 +105,7 @@ def analyze_article(
             joinedload(Article.journal), joinedload(Article.authors), joinedload(Article.payloads)
         )
         .where(Article.id == article_id)
+        .where(service.content_policy.article_visibility_clause(Article))
     )
     if article is None:
         raise HTTPException(status_code=404, detail="Article not found")

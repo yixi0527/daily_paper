@@ -52,6 +52,7 @@ class StaticExportService:
             if self.content_policy.is_substantive_fields(
                 title=item.title,
                 article_type=item.article_type,
+                doi=item.doi,
             )
         ]
         sync_runs = (
