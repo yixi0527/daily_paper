@@ -7,9 +7,10 @@ from sqlalchemy.sql.elements import ColumnElement
 
 class ContentPolicyService:
     EXCLUDED_ARTICLE_DOIS = {
+        "10.1016/s1474-4422(26)00175-4",
         "10.1016/s1474-4422(26)00210-3",
     }
-    EXCLUDED_TITLE_WITHOUT_DOI = {
+    EXCLUDED_EXACT_TITLES = {
         "lifeline",
     }
     EXCLUDED_ARTICLE_TYPES = {
@@ -97,7 +98,7 @@ class ContentPolicyService:
 
         if doi in self.EXCLUDED_ARTICLE_DOIS:
             return False
-        if not doi and title in self.EXCLUDED_TITLE_WITHOUT_DOI:
+        if title in self.EXCLUDED_EXACT_TITLES:
             return False
         if article_type in self.EXCLUDED_ARTICLE_TYPES:
             return False
@@ -119,10 +120,10 @@ class ContentPolicyService:
         clause = true()
         if self.EXCLUDED_ARTICLE_DOIS:
             clause = and_(clause, not_(doi.in_(sorted(self.EXCLUDED_ARTICLE_DOIS))))
-        if self.EXCLUDED_TITLE_WITHOUT_DOI:
+        if self.EXCLUDED_EXACT_TITLES:
             clause = and_(
                 clause,
-                not_(and_(doi == "", title.in_(sorted(self.EXCLUDED_TITLE_WITHOUT_DOI)))),
+                not_(title.in_(sorted(self.EXCLUDED_EXACT_TITLES))),
             )
         if self.EXCLUDED_ARTICLE_TYPES:
             clause = and_(clause, not_(article_type.in_(sorted(self.EXCLUDED_ARTICLE_TYPES))))

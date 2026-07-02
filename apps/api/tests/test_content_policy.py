@@ -36,11 +36,21 @@ def test_content_policy_excludes_blocked_lifeline_article() -> None:
         doi="https://doi.org/10.1016/S1474-4422(26)00210-3",
     )
     assert not service.is_substantive_fields(
+        title="The Lancet Neurology profile",
+        article_type="Article",
+        doi="10.1016/s1474-4422(26)00175-4",
+    )
+    assert not service.is_substantive_fields(
         title="Lifeline",
         article_type="Article",
     )
-    assert service.is_substantive_fields(
+    assert not service.is_substantive_fields(
         title="Lifeline",
+        article_type="Article",
+        doi="10.1016/example-other",
+    )
+    assert service.is_substantive_fields(
+        title="Lifeline biomarkers in stroke recovery",
         article_type="Article",
         doi="10.1016/example-other",
     )
