@@ -19,8 +19,14 @@ def test_seed_service_loads_all_configured_journals(db_session) -> None:
     assert "alzheimers-and-dementia" not in slugs
     assert "brain-stimulation" in slugs
     assert "neuroscience-and-biobehavioral-reviews" in slugs
-    assert "cognition" in slugs
-    assert "cognitive-science" in slugs
+    assert "psychological-review" in slugs
+    assert "cognition" not in slugs
+    assert "cognitive-psychology" not in slugs
+    assert "journal-of-memory-and-language" not in slugs
+    assert "cognitive-science" not in slugs
+    assert "wires-cognitive-science" not in slugs
+    assert "journal-of-experimental-psychology-general" not in slugs
+    assert "cognitive-affective-and-behavioral-neuroscience" not in slugs
     assert "molecular-neurodegeneration" in slugs
     assert "nature-reviews-neurology" in slugs
     assert "jama-neurology" in slugs
