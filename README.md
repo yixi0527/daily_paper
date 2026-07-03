@@ -302,7 +302,7 @@ This repository includes `.github/workflows/pages-sync.yml`.
 
 What it does:
 
-1. Runs every day at `14:00 UTC` which is `22:00 Asia/Shanghai`
+1. Runs every day at `22:00 UTC` which is `06:00 Asia/Shanghai`
 2. Initializes a SQLite database inside the workflow
 3. Seeds the 26 journals
 4. Executes the synchronization job
