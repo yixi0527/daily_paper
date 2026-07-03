@@ -440,19 +440,199 @@
     "fallback_source": null
   },
   {
-    "journal_id": "alzheimers-and-dementia",
-    "slug": "alzheimers-and-dementia",
-    "journal_name": "Alzheimer's & Dementia",
+    "journal_id": "brain-stimulation",
+    "slug": "brain-stimulation",
+    "journal_name": "Brain Stimulation",
+    "publisher": "Elsevier",
+    "adapter_key": "crossref_only",
+    "issn_print": "1935-861X",
+    "issn_online": "1876-4754",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://rss.sciencedirect.com/publication/science/1935861X",
+    "crossref_filters": {
+      "issn": "1935-861X"
+    },
+    "homepage_url": "https://www.sciencedirect.com/journal/brain-stimulation",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "neuroscience-and-biobehavioral-reviews",
+    "slug": "neuroscience-and-biobehavioral-reviews",
+    "journal_name": "Neuroscience & Biobehavioral Reviews",
+    "publisher": "Elsevier",
+    "adapter_key": "crossref_only",
+    "issn_print": "0149-7634",
+    "issn_online": "1873-7528",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://rss.sciencedirect.com/publication/science/01497634",
+    "crossref_filters": {
+      "issn": "0149-7634"
+    },
+    "homepage_url": "https://www.sciencedirect.com/journal/neuroscience-and-biobehavioral-reviews",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "cognition",
+    "slug": "cognition",
+    "journal_name": "Cognition",
+    "publisher": "Elsevier",
+    "adapter_key": "crossref_only",
+    "issn_print": "0010-0277",
+    "issn_online": "1873-7838",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://rss.sciencedirect.com/publication/science/00100277",
+    "crossref_filters": {
+      "issn": "0010-0277"
+    },
+    "homepage_url": "https://www.sciencedirect.com/journal/cognition",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "cognitive-psychology",
+    "slug": "cognitive-psychology",
+    "journal_name": "Cognitive Psychology",
+    "publisher": "Elsevier",
+    "adapter_key": "crossref_only",
+    "issn_print": "0010-0285",
+    "issn_online": "1095-5623",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://rss.sciencedirect.com/publication/science/00100285",
+    "crossref_filters": {
+      "issn": "1095-5623"
+    },
+    "homepage_url": "https://www.sciencedirect.com/journal/cognitive-psychology",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "journal-of-memory-and-language",
+    "slug": "journal-of-memory-and-language",
+    "journal_name": "Journal of Memory and Language",
+    "publisher": "Elsevier",
+    "adapter_key": "crossref_only",
+    "issn_print": "0749-596X",
+    "issn_online": "1096-0821",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://rss.sciencedirect.com/publication/science/0749596X",
+    "crossref_filters": {
+      "issn": "1096-0821"
+    },
+    "homepage_url": "https://www.sciencedirect.com/journal/journal-of-memory-and-language",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "cognitive-science",
+    "slug": "cognitive-science",
+    "journal_name": "Cognitive Science",
     "publisher": "Wiley",
     "adapter_key": "crossref_only",
-    "issn_print": "1552-5260",
-    "issn_online": "1552-5279",
-    "rss_current_issue_url": "https://alz-journals.onlinelibrary.wiley.com/action/showFeed?type=etoc&feed=rss&jc=15525279",
+    "issn_print": "0364-0213",
+    "issn_online": "1551-6709",
+    "rss_current_issue_url": "https://onlinelibrary.wiley.com/action/showFeed?type=etoc&feed=rss&jc=15516709",
     "rss_online_first_url": null,
     "crossref_filters": {
-      "issn": "1552-5279"
+      "issn": "1551-6709"
     },
-    "homepage_url": "https://alz-journals.onlinelibrary.wiley.com/journal/15525279",
+    "homepage_url": "https://onlinelibrary.wiley.com/journal/15516709",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "wires-cognitive-science",
+    "slug": "wires-cognitive-science",
+    "journal_name": "WIREs Cognitive Science",
+    "publisher": "Wiley",
+    "adapter_key": "crossref_only",
+    "issn_print": "1939-5078",
+    "issn_online": "1939-5086",
+    "rss_current_issue_url": "https://wires.onlinelibrary.wiley.com/action/showFeed?type=etoc&feed=rss&jc=19395086",
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "1939-5086"
+    },
+    "homepage_url": "https://wires.onlinelibrary.wiley.com/journal/19395086",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "rss_then_crossref",
+    "primary_source": "rss",
+    "fallback_source": "crossref"
+  },
+  {
+    "journal_id": "psychological-review",
+    "slug": "psychological-review",
+    "journal_name": "Psychological Review",
+    "publisher": "American Psychological Association",
+    "adapter_key": "crossref_only",
+    "issn_print": "0033-295X",
+    "issn_online": "1939-1471",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "1939-1471"
+    },
+    "homepage_url": "https://www.apa.org/pubs/journals/rev",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "crossref",
+    "primary_source": "crossref",
+    "fallback_source": null
+  },
+  {
+    "journal_id": "journal-of-experimental-psychology-general",
+    "slug": "journal-of-experimental-psychology-general",
+    "journal_name": "Journal of Experimental Psychology: General",
+    "publisher": "American Psychological Association",
+    "adapter_key": "crossref_only",
+    "issn_print": "0096-3445",
+    "issn_online": "1939-2222",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": null,
+    "crossref_filters": {
+      "issn": "1939-2222"
+    },
+    "homepage_url": "https://www.apa.org/pubs/journals/xge",
+    "enabled": true,
+    "update_priority": 7,
+    "polling_strategy": "crossref",
+    "primary_source": "crossref",
+    "fallback_source": null
+  },
+  {
+    "journal_id": "cognitive-affective-and-behavioral-neuroscience",
+    "slug": "cognitive-affective-and-behavioral-neuroscience",
+    "journal_name": "Cognitive, Affective, & Behavioral Neuroscience",
+    "publisher": "Springer Nature",
+    "adapter_key": "springer_rss",
+    "issn_print": "1530-7026",
+    "issn_online": "1531-135X",
+    "rss_current_issue_url": null,
+    "rss_online_first_url": "https://link.springer.com/search.rss?facet-content-type=%22Article%22&facet-journal-id=13415",
+    "crossref_filters": {
+      "issn": "1531-135X"
+    },
+    "homepage_url": "https://link.springer.com/journal/13415",
     "enabled": true,
     "update_priority": 8,
     "polling_strategy": "rss_then_crossref",

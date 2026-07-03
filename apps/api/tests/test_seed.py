@@ -16,6 +16,11 @@ def test_seed_service_loads_all_configured_journals(db_session) -> None:
 
     assert total == expected_total
     assert count == expected_total
+    assert "alzheimers-and-dementia" not in slugs
+    assert "brain-stimulation" in slugs
+    assert "neuroscience-and-biobehavioral-reviews" in slugs
+    assert "cognition" in slugs
+    assert "cognitive-science" in slugs
     assert "molecular-neurodegeneration" in slugs
     assert "nature-reviews-neurology" in slugs
     assert "jama-neurology" in slugs

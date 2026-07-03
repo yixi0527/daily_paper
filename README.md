@@ -51,7 +51,16 @@ This project intentionally avoids aggressive publisher-page crawling because tha
 - Acta Neuropathologica
 - Annual Review of Neuroscience
 - JAMA Neurology
-- Alzheimer's & Dementia
+- Brain Stimulation
+- Neuroscience & Biobehavioral Reviews
+- Cognition
+- Cognitive Psychology
+- Journal of Memory and Language
+- Cognitive Science
+- WIREs Cognitive Science
+- Psychological Review
+- Journal of Experimental Psychology: General
+- Cognitive, Affective, & Behavioral Neuroscience
 - Sleep Medicine Reviews
 
 ## Source strategy summary
@@ -60,10 +69,11 @@ This project intentionally avoids aggressive publisher-page crawling because tha
 - Nature family journals: official `current-issue.rss` plus journal RSS, with Crossref fallback
 - Springer Nature journal pages: Springer RSS search feeds where stable, with Crossref metadata coverage by ISSN
 - Wiley journal pages: official eTOC RSS where stable, with Crossref metadata coverage by ISSN
+- ScienceDirect journals: official publication RSS feeds where stable, with Crossref metadata coverage by ISSN
 - Science: Crossref-first because official pages are more strongly gated in unattended environments
 - The Lancet Neurology: Crossref-first for reliability and anti-bot safety
 - Brain: Crossref-first for reliability and anti-bot safety
-- Annual Reviews / JAMA / Elsevier review journals: Crossref-first by ISSN when public RSS is unavailable or blocked in unattended environments
+- Annual Reviews / JAMA / APA journals: Crossref-first by ISSN when public RSS is unavailable or blocked in unattended environments
 - Artificial Intelligence Review / Brain Informatics: Springer RSS where stable, then Crossref fallback
 
 ## Architecture
@@ -302,7 +312,7 @@ What it does:
 
 1. Runs every day at `14:00 UTC` which is `22:00 Asia/Shanghai`
 2. Initializes a SQLite database inside the workflow
-3. Seeds the 24 journals
+3. Seeds the 33 journals
 4. Executes the synchronization job
 5. Generates Chinese analysis when repository secret `LLM_API_KEY` is configured
 6. Exports static JSON into `apps/web/public/data`
