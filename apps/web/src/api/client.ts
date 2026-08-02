@@ -2,6 +2,7 @@ import { buildQuery } from '../lib/utils';
 import { apiBaseUrl, isStaticMode, staticDataBase } from '../lib/env';
 import {
   type ArticleDetail,
+  type ArticleListItem,
   type ArticleListResponse,
   type DashboardData,
   type Journal,
@@ -9,7 +10,13 @@ import {
   type SiteDataBundle,
   type SyncRun,
 } from './types';
-import { filterArticles, paginate, searchArticlesLocally, type ArticleFilterParams, type SearchParams } from '../lib/filters';
+import {
+  filterArticles,
+  paginate,
+  searchArticlesLocally,
+  type ArticleFilterParams,
+  type SearchParams,
+} from '../lib/filters';
 
 let siteDataPromise: Promise<SiteDataBundle> | null = null;
 
@@ -70,7 +77,7 @@ export async function listArticles(params: ArticleFilterParams): Promise<Article
   if (isStaticMode) {
     const bundle = await loadSiteData();
     const filtered = filterArticles(bundle.articles, params).sort((a, b) => {
-      return new Date(b.published_at ?? 0).getTime() - new Date(a.published_at ?? 0).getTime();
+      return new Date(b.display_date).getTime() - new Date(a.display_date).getTime();
     });
     const page = params.page ?? 1;
     const pageSize = params.pageSize ?? 20;
@@ -109,10 +116,6 @@ export async function getArticle(articleId: string): Promise<ArticleDetail | und
   return apiGet<ArticleDetail>(`/articles/${articleId}`);
 }
 
-export async function generateArticleAnalysis(articleId: string): Promise<ArticleDetail> {
-  return apiPost<ArticleDetail>(`/articles/${articleId}/analysis`, { force: true });
-}
-
 export async function searchArticles(params: SearchParams): Promise<SearchResponse> {
   if (isStaticMode) {
     const bundle = await loadSiteData();
@@ -144,6 +147,29 @@ export async function searchArticles(params: SearchParams): Promise<SearchRespon
   );
 }
 
+export async function getFavoriteArticles(articleKeys: string[]): Promise<ArticleListItem[]> {
+  if (!articleKeys.length) return [];
+  const requestedKeys = new Set(articleKeys);
+  if (isStaticMode) {
+    const bundle = await loadSiteData();
+    return bundle.articles
+      .filter((article) => requestedKeys.has(article.article_key))
+      .sort((a, b) => new Date(b.display_date).getTime() - new Date(a.display_date).getTime());
+  }
+
+  const firstPage = await listArticles({ page: 1, pageSize: 100 });
+  const remainingPages = Array.from(
+    { length: Math.max(0, firstPage.meta.total_pages - 1) },
+    (_, index) => index + 2,
+  );
+  const remainingResponses = await Promise.all(
+    remainingPages.map((page) => listArticles({ page, pageSize: 100 })),
+  );
+  return [firstPage, ...remainingResponses]
+    .flatMap((response) => response.items)
+    .filter((article) => requestedKeys.has(article.article_key));
+}
+
 export async function getSyncRuns(): Promise<SyncRun[]> {
   if (isStaticMode) {
     const bundle = await loadSiteData();
@@ -152,10 +178,15 @@ export async function getSyncRuns(): Promise<SyncRun[]> {
   return apiGet<SyncRun[]>('/sync/runs');
 }
 
-export async function runSync(categories: string[] = ['current_issue', 'online_first']): Promise<SyncRun> {
+export async function runSync(
+  categories: string[] = ['current_issue', 'online_first'],
+): Promise<SyncRun> {
   return apiPost<SyncRun>('/sync/run', { categories, triggered_by: 'web' });
 }
 
-export async function runJournalSync(slug: string, categories: string[] = ['current_issue', 'online_first']): Promise<SyncRun> {
+export async function runJournalSync(
+  slug: string,
+  categories: string[] = ['current_issue', 'online_first'],
+): Promise<SyncRun> {
   return apiPost<SyncRun>(`/sync/run/${slug}`, { categories, triggered_by: 'web' });
 }

@@ -24,4 +24,6 @@ Thumbs.db
 /*.ini
 !apps/api/alembic.ini
 data/
+!packages/shared/data/
+!packages/shared/data/article_registry.json
 logs/

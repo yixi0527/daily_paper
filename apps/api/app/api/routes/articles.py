@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime
 
-from fastapi import APIRouter, Body, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session, joinedload
 
@@ -11,19 +11,14 @@ from app.core.settings import get_settings
 from app.db.session import get_db
 from app.models.article import Article
 from app.schemas.article import (
-    ArticleAnalysisRequest,
-    ArticleAnalysisRunOut,
-    ArticleAnalysisRunRequest,
     ArticleDetailOut,
     ArticleListResponse,
 )
 from app.schemas.common import PaginationMeta
-from app.services.article_analysis import ArticleAnalysisService
 from app.services.search import SearchService, pagination_meta
 
 router = APIRouter()
 service = SearchService()
-analysis_service = ArticleAnalysisService()
 
 
 def _split_csv(value: str | None) -> list[str] | None:
@@ -65,15 +60,6 @@ def list_articles(
     )
 
 
-@router.post("/analysis/run", response_model=ArticleAnalysisRunOut, summary="Analyze articles")
-def analyze_articles(
-    request: ArticleAnalysisRunRequest = Body(default_factory=ArticleAnalysisRunRequest),
-    db: Session = Depends(get_db),
-) -> ArticleAnalysisRunOut:
-    result = analysis_service.analyze_missing(db, limit=request.limit, force=request.force)
-    return ArticleAnalysisRunOut(**result)
-
-
 @router.get("/{article_id}", response_model=ArticleDetailOut, summary="Get article detail")
 def get_article(article_id: str, db: Session = Depends(get_db)) -> ArticleDetailOut:
     article = db.scalar(
@@ -87,27 +73,3 @@ def get_article(article_id: str, db: Session = Depends(get_db)) -> ArticleDetail
     if article is None:
         raise HTTPException(status_code=404, detail="Article not found")
     return serialize_article_detail(article, include_raw=get_settings().app_debug)
-
-
-@router.post(
-    "/{article_id}/analysis",
-    response_model=ArticleDetailOut,
-    summary="Generate Chinese translation and linked analysis",
-)
-def analyze_article(
-    article_id: str,
-    request: ArticleAnalysisRequest = Body(default_factory=ArticleAnalysisRequest),
-    db: Session = Depends(get_db),
-) -> ArticleDetailOut:
-    article = db.scalar(
-        select(Article)
-        .options(
-            joinedload(Article.journal), joinedload(Article.authors), joinedload(Article.payloads)
-        )
-        .where(Article.id == article_id)
-        .where(service.content_policy.article_visibility_clause(Article))
-    )
-    if article is None:
-        raise HTTPException(status_code=404, detail="Article not found")
-    analyzed = analysis_service.analyze_article(db, article, force=request.force)
-    return serialize_article_detail(analyzed, include_raw=get_settings().app_debug)

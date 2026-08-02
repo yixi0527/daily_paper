@@ -7,24 +7,21 @@ import { getJournals, listArticles } from '../api/client';
 import { ArticleCard } from '../components/ArticleCard';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 import { Pagination } from '../components/Pagination';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 export function ArticlesPage() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const isMobile = useMediaQuery('(max-width: 680px)');
   const page = Number(searchParams.get('page') ?? '1');
+  const pageSize = isMobile ? 1 : 20;
   const filters = useMemo(
     () => ({
       page,
-      pageSize: 20,
+      pageSize,
       journal: searchParams.get('journal') ?? undefined,
       author: searchParams.get('author') ?? undefined,
-      dateFrom: searchParams.get('dateFrom') ?? undefined,
-      dateTo: searchParams.get('dateTo') ?? undefined,
-      sourceCategory: searchParams.get('sourceCategory') ?? undefined,
-      articleType: searchParams.get('articleType') ?? undefined,
-      hasDoi: searchParams.get('hasDoi') ?? undefined,
-      hasAbstract: searchParams.get('hasAbstract') ?? undefined,
     }),
-    [page, searchParams],
+    [page, pageSize, searchParams],
   );
 
   const articlesQuery = useQuery({
@@ -39,22 +36,14 @@ export function ArticlesPage() {
     else next.set(key, value);
     if (key !== 'page') next.set('page', '1');
     startTransition(() => setSearchParams(next));
+    if (key === 'page') window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const clearFilters = () => {
     startTransition(() => setSearchParams(new URLSearchParams()));
   };
 
-  const activeFilterCount = [
-    filters.journal,
-    filters.author,
-    filters.dateFrom,
-    filters.dateTo,
-    filters.sourceCategory,
-    filters.articleType,
-    filters.hasDoi,
-    filters.hasAbstract,
-  ].filter(Boolean).length;
+  const activeFilterCount = [filters.journal, filters.author].filter(Boolean).length;
 
   if (articlesQuery.isLoading || journalsQuery.isLoading)
     return <LoadingState label="Loading article index…" />;
@@ -69,7 +58,7 @@ export function ArticlesPage() {
 
   return (
     <div className="page-stack">
-      <section className="page-header">
+      <section className="page-header compact-page-header">
         <div>
           <p className="eyebrow">Article index</p>
           <h2>{articlesQuery.data.meta.total} matching papers</h2>
@@ -113,69 +102,11 @@ export function ArticlesPage() {
               onChange={(event) => updateFilter('author', event.target.value)}
             />
           </label>
-          <label className="field">
-            <span>Source</span>
-            <select
-              value={filters.sourceCategory ?? ''}
-              onChange={(event) => updateFilter('sourceCategory', event.target.value)}
-            >
-              <option value="">All sources</option>
-              <option value="current_issue">Current issue</option>
-              <option value="online_first">Online first</option>
-            </select>
-          </label>
-          <label className="field">
-            <span>Article type</span>
-            <input
-              type="text"
-              placeholder="Review, Article..."
-              value={filters.articleType ?? ''}
-              onChange={(event) => updateFilter('articleType', event.target.value)}
-            />
-          </label>
-          <label className="field">
-            <span>Published after</span>
-            <input
-              type="date"
-              value={filters.dateFrom ?? ''}
-              onChange={(event) => updateFilter('dateFrom', event.target.value)}
-            />
-          </label>
-          <label className="field">
-            <span>Published before</span>
-            <input
-              type="date"
-              value={filters.dateTo ?? ''}
-              onChange={(event) => updateFilter('dateTo', event.target.value)}
-            />
-          </label>
-          <label className="field">
-            <span>DOI</span>
-            <select
-              value={filters.hasDoi ?? ''}
-              onChange={(event) => updateFilter('hasDoi', event.target.value)}
-            >
-              <option value="">Any</option>
-              <option value="true">With DOI</option>
-              <option value="false">Without DOI</option>
-            </select>
-          </label>
-          <label className="field">
-            <span>Abstract</span>
-            <select
-              value={filters.hasAbstract ?? ''}
-              onChange={(event) => updateFilter('hasAbstract', event.target.value)}
-            >
-              <option value="">Any</option>
-              <option value="true">With abstract</option>
-              <option value="false">Without abstract</option>
-            </select>
-          </label>
         </div>
       </section>
 
-      <section className="panel">
-        <div className="list-stack">
+      <section className="panel article-feed-panel">
+        <div className="list-stack focused-list">
           {articlesQuery.data.items.length ? (
             articlesQuery.data.items.map((article) => (
               <ArticleCard key={article.id} article={article} />

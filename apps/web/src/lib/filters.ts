@@ -24,7 +24,10 @@ export interface SearchParams {
   pageSize?: number;
 }
 
-export function filterArticles(items: ArticleDetail[], params: ArticleFilterParams): ArticleDetail[] {
+export function filterArticles(
+  items: ArticleDetail[],
+  params: ArticleFilterParams,
+): ArticleDetail[] {
   return items.filter((item) => {
     if (params.journal && item.journal.slug !== params.journal) return false;
     if (
@@ -42,10 +45,10 @@ export function filterArticles(items: ArticleDetail[], params: ArticleFilterPara
     if (params.hasDoi === 'false' && item.doi) return false;
     if (params.hasAbstract === 'true' && !item.abstract) return false;
     if (params.hasAbstract === 'false' && item.abstract) return false;
-    if (params.dateFrom && item.published_at && new Date(item.published_at) < new Date(params.dateFrom)) {
+    if (params.dateFrom && new Date(item.display_date) < new Date(params.dateFrom)) {
       return false;
     }
-    if (params.dateTo && item.published_at && new Date(item.published_at) > new Date(params.dateTo)) {
+    if (params.dateTo && new Date(item.display_date) > new Date(params.dateTo)) {
       return false;
     }
     return true;
@@ -65,16 +68,19 @@ export function searchArticlesLocally(items: ArticleDetail[], params: SearchPara
   return items
     .filter((item) => {
       if (params.journal && item.journal.slug !== params.journal) return false;
-      if (params.dateFrom && item.published_at && new Date(item.published_at) < new Date(params.dateFrom)) {
+      if (params.dateFrom && new Date(item.display_date) < new Date(params.dateFrom)) {
         return false;
       }
-      if (params.dateTo && item.published_at && new Date(item.published_at) > new Date(params.dateTo)) {
+      if (params.dateTo && new Date(item.display_date) > new Date(params.dateTo)) {
         return false;
       }
       const titleText = [item.title, item.title_zh].filter(Boolean).join(' ');
       if (queryTitle && !titleText.toLowerCase().includes(queryTitle)) return false;
-      if (queryAuthor && !(item.authors_text ?? '').toLowerCase().includes(queryAuthor)) return false;
-      const abstractText = [item.abstract, item.abstract_zh, item.snippet].filter(Boolean).join(' ');
+      if (queryAuthor && !(item.authors_text ?? '').toLowerCase().includes(queryAuthor))
+        return false;
+      const abstractText = [item.abstract, item.abstract_zh, item.snippet]
+        .filter(Boolean)
+        .join(' ');
       if (queryAbstract && !abstractText.toLowerCase().includes(queryAbstract)) {
         return false;
       }
@@ -84,13 +90,24 @@ export function searchArticlesLocally(items: ArticleDetail[], params: SearchPara
       article: item,
       score: 100,
       highlights: {
-        title: queryTitle ? highlight([item.title, item.title_zh].filter(Boolean).join(' '), queryTitle) : item.title,
-        author: queryAuthor ? highlight(item.authors_text ?? '', queryAuthor) : item.authors_text ?? '',
+        title: queryTitle
+          ? highlight([item.title, item.title_zh].filter(Boolean).join(' '), queryTitle)
+          : item.title,
+        author: queryAuthor
+          ? highlight(item.authors_text ?? '', queryAuthor)
+          : (item.authors_text ?? ''),
         abstract: queryAbstract
-          ? highlight([item.abstract, item.abstract_zh, item.snippet].filter(Boolean).join(' '), queryAbstract)
-          : item.abstract ?? item.abstract_zh ?? item.snippet ?? '',
+          ? highlight(
+              [item.abstract, item.abstract_zh, item.snippet].filter(Boolean).join(' '),
+              queryAbstract,
+            )
+          : (item.abstract ?? item.abstract_zh ?? item.snippet ?? ''),
       },
-    }));
+    }))
+    .sort(
+      (a, b) =>
+        new Date(b.article.display_date).getTime() - new Date(a.article.display_date).getTime(),
+    );
 }
 
 export function paginate<T>(items: T[], page = 1, pageSize = 20): { items: T[]; total: number } {

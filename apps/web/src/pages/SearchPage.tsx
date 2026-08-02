@@ -3,40 +3,37 @@ import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
 import { Search } from 'lucide-react';
 import { getJournals, searchArticles } from '../api/client';
-import { AuthorList } from '../components/AuthorList';
+import { ArticleCard } from '../components/ArticleCard';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 import { Pagination } from '../components/Pagination';
 import { useRecentSearches } from '../hooks/useRecentSearches';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 export function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const title = searchParams.get('title') ?? '';
   const author = searchParams.get('author') ?? '';
-  const abstract = searchParams.get('abstract') ?? '';
   const [draftTitle, setDraftTitle] = useState(title);
   const [draftAuthor, setDraftAuthor] = useState(author);
-  const [draftAbstract, setDraftAbstract] = useState(abstract);
   const deferredTitle = useDeferredValue(draftTitle);
+  const isMobile = useMediaQuery('(max-width: 680px)');
   const { recent, remember } = useRecentSearches();
 
   const params = useMemo(
     () => ({
       title: searchParams.get('title') ?? undefined,
       author: searchParams.get('author') ?? undefined,
-      abstract: searchParams.get('abstract') ?? undefined,
       journal: searchParams.get('journal') ?? undefined,
-      dateFrom: searchParams.get('dateFrom') ?? undefined,
-      dateTo: searchParams.get('dateTo') ?? undefined,
       page: Number(searchParams.get('page') ?? '1'),
-      pageSize: 20,
+      pageSize: isMobile ? 1 : 20,
     }),
-    [searchParams],
+    [isMobile, searchParams],
   );
 
   const searchQuery = useQuery({
     queryKey: ['search', params],
     queryFn: () => searchArticles(params),
-    enabled: Boolean(params.title || params.author || params.abstract),
+    enabled: Boolean(params.title || params.author),
   });
   const journalsQuery = useQuery({ queryKey: ['journals'], queryFn: getJournals });
 
@@ -46,6 +43,7 @@ export function SearchPage() {
     else next.set(key, value);
     if (key !== 'page') next.set('page', '1');
     startTransition(() => setSearchParams(next));
+    if (key === 'page') window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const submitSearch = () => {
@@ -54,11 +52,12 @@ export function SearchPage() {
     else next.delete('title');
     if (draftAuthor) next.set('author', draftAuthor);
     else next.delete('author');
-    if (draftAbstract) next.set('abstract', draftAbstract);
-    else next.delete('abstract');
+    next.delete('abstract');
+    next.delete('dateFrom');
+    next.delete('dateTo');
     next.set('page', '1');
     startTransition(() => setSearchParams(next));
-    remember([deferredTitle, draftAuthor, draftAbstract].filter(Boolean).join(' | '));
+    remember([deferredTitle, draftAuthor].filter(Boolean).join(' | '));
   };
 
   if (journalsQuery.isLoading) return <LoadingState label="Loading search workspace…" />;
@@ -67,14 +66,13 @@ export function SearchPage() {
 
   return (
     <div className="page-stack">
-      <section className="page-header">
+      <section className="page-header compact-page-header">
         <div>
           <p className="eyebrow">Search</p>
           <h2>Field-aware paper search</h2>
         </div>
         <p className="muted">
-          Combine author, title, abstract, journal, and date filters. Recent queries stay local in
-          this browser.
+          Search by title, author, or journal. Recent queries stay local in this browser.
         </p>
       </section>
 
@@ -98,15 +96,6 @@ export function SearchPage() {
               onChange={(event) => setDraftAuthor(event.target.value)}
             />
           </label>
-          <label className="field field-wide">
-            <span>Abstract</span>
-            <input
-              type="text"
-              placeholder="Abstract keywords"
-              value={draftAbstract}
-              onChange={(event) => setDraftAbstract(event.target.value)}
-            />
-          </label>
           <label className="field">
             <span>Journal</span>
             <select
@@ -120,22 +109,6 @@ export function SearchPage() {
                 </option>
               ))}
             </select>
-          </label>
-          <label className="field">
-            <span>Published after</span>
-            <input
-              type="date"
-              defaultValue={params.dateFrom ?? ''}
-              onBlur={(event) => updateParam('dateFrom', event.target.value)}
-            />
-          </label>
-          <label className="field">
-            <span>Published before</span>
-            <input
-              type="date"
-              defaultValue={params.dateTo ?? ''}
-              onBlur={(event) => updateParam('dateTo', event.target.value)}
-            />
           </label>
           <button type="button" className="primary-button search-submit" onClick={submitSearch}>
             <Search size={17} strokeWidth={2.2} aria-hidden="true" />
@@ -162,55 +135,24 @@ export function SearchPage() {
         </section>
       ) : null}
 
-      {!params.title && !params.author && !params.abstract ? (
+      {!params.title && !params.author ? (
         <EmptyState label="Enter at least one field to search." />
       ) : searchQuery.isLoading ? (
         <LoadingState label="Running search…" />
       ) : searchQuery.isError || !searchQuery.data ? (
         <ErrorState label="Search failed." />
       ) : (
-        <section className="panel">
+        <section className="panel article-feed-panel">
           <div className="section-header">
             <div>
               <p className="eyebrow">Results</p>
               <h2>{searchQuery.data.meta.total} matching papers</h2>
             </div>
           </div>
-          <div className="list-stack">
+          <div className="list-stack focused-list">
             {searchQuery.data.items.length ? (
               searchQuery.data.items.map((hit) => (
-                <article className="article-row" key={hit.article.id}>
-                  <div className="article-meta">
-                    <span className="meta-chip strong">{hit.article.journal.journal_name}</span>
-                    <span className="meta-chip">Score {hit.score}</span>
-                  </div>
-                  <h3>
-                    <a
-                      href={hit.article.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="article-title-link"
-                      dangerouslySetInnerHTML={{
-                        __html: hit.highlights.title || hit.article.title,
-                      }}
-                    />
-                  </h3>
-                  <AuthorList
-                    authors={hit.article.authors}
-                    authorsText={hit.article.authors_text}
-                    className="article-authors"
-                  />
-                  <p
-                    className="article-snippet"
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        hit.highlights.abstract ||
-                        hit.article.abstract ||
-                        hit.article.snippet ||
-                        '',
-                    }}
-                  />
-                </article>
+                <ArticleCard key={hit.article.article_key} article={hit.article} />
               ))
             ) : (
               <EmptyState label="No matches found." />

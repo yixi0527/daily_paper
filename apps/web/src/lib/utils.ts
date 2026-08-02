@@ -27,7 +27,9 @@ export function classNames(...values: Array<string | false | null | undefined>):
   return values.filter(Boolean).join(' ');
 }
 
-export function buildQuery(params: Record<string, string | number | boolean | undefined | null>): string {
+export function buildQuery(
+  params: Record<string, string | number | boolean | undefined | null>,
+): string {
   const searchParams = new URLSearchParams();
   Object.entries(params).forEach(([key, value]) => {
     if (value === undefined || value === null || value === '') return;

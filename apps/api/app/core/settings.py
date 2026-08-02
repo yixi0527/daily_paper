@@ -4,7 +4,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
-from pydantic import AliasChoices, Field
+from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT_DIR = Path(__file__).resolve().parents[4]
@@ -53,15 +53,10 @@ class Settings(BaseSettings):
         default="apps/web/public/data",
         alias="EXPORT_STATIC_DATA_DIR",
     )
-    llm_api_key: str | None = Field(
-        default=None,
-        validation_alias=AliasChoices("LLM_API_KEY", "OPENAI_API_KEY"),
+    article_registry_file: str = Field(
+        default="packages/shared/data/article_registry.json",
+        alias="ARTICLE_REGISTRY_FILE",
     )
-    llm_base_url: str = Field(default="https://api.openai.com/v1", alias="LLM_BASE_URL")
-    llm_model: str = Field(default="gpt-4o-mini", alias="LLM_MODEL")
-    llm_timeout: int = Field(default=60, alias="LLM_TIMEOUT")
-    analysis_context_limit: int = Field(default=5, alias="ANALYSIS_CONTEXT_LIMIT")
-    analysis_candidate_limit: int = Field(default=500, alias="ANALYSIS_CANDIDATE_LIMIT")
 
     @property
     def cors_origins(self) -> list[str]:
@@ -76,6 +71,10 @@ class Settings(BaseSettings):
     @property
     def static_export_path(self) -> Path:
         return ROOT_DIR / self.export_static_data_dir
+
+    @property
+    def article_registry_path(self) -> Path:
+        return ROOT_DIR / self.article_registry_file
 
 
 @lru_cache(maxsize=1)

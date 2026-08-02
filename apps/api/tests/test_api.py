@@ -1,4 +1,5 @@
 import json
+from datetime import UTC, datetime
 
 from app.models.article import Article, ArticleAuthor
 from app.models.journal import Journal
@@ -18,8 +19,10 @@ def test_articles_endpoint_returns_seeded_article(client) -> None:
     payload = response.json()
     assert payload["meta"]["total"] == 1
     assert payload["items"][0]["title"] == "Circuit mechanisms of memory consolidation"
-    assert payload["items"][0]["title_zh"] == "记忆巩固的环路机制"
-    assert payload["items"][0]["analysis_generated_at"] is not None
+    assert payload["items"][0]["article_key"] == "doi:10.1038/example-doi"
+    assert payload["items"][0]["title_zh"] is None
+    assert payload["items"][0]["translated_at"] is None
+    assert payload["items"][0]["display_date_source"] == "acquired"
 
 
 def test_search_endpoint_filters_by_author(client) -> None:
@@ -74,6 +77,50 @@ def test_articles_endpoint_filters_by_author(client, db_session) -> None:
     payload = response.json()
     assert payload["meta"]["total"] == 1
     assert payload["items"][0]["title"] == "Adaptive planning in embodied agents"
+
+
+def test_articles_endpoint_sorts_post_cutoff_articles_by_acquisition(client, db_session) -> None:
+    journal = db_session.query(Journal).first()
+    earlier_acquired = Article(
+        journal_id=journal.id,
+        title="Future metadata date",
+        title_slug="future-metadata-date",
+        doi="10.1038/future-metadata-date",
+        url="https://doi.org/10.1038/future-metadata-date",
+        abstract="Earlier acquisition.",
+        snippet="Earlier acquisition.",
+        source_category="online_first",
+        article_type="Article",
+        published_at=datetime(2026, 12, 1, tzinfo=UTC),
+        first_seen_at=datetime(2026, 7, 2, tzinfo=UTC),
+        source_name="crossref",
+        source_uid="10.1038/future-metadata-date",
+        dedup_hash="hash-future-metadata-date",
+    )
+    later_acquired = Article(
+        journal_id=journal.id,
+        title="Later acquisition",
+        title_slug="later-acquisition",
+        doi="10.1038/later-acquisition",
+        url="https://doi.org/10.1038/later-acquisition",
+        abstract="Later acquisition.",
+        snippet="Later acquisition.",
+        source_category="online_first",
+        article_type="Article",
+        published_at=datetime(2026, 7, 15, tzinfo=UTC),
+        first_seen_at=datetime(2026, 7, 3, tzinfo=UTC),
+        source_name="crossref",
+        source_uid="10.1038/later-acquisition",
+        dedup_hash="hash-later-acquisition",
+    )
+    db_session.add_all([earlier_acquired, later_acquired])
+    db_session.commit()
+
+    response = client.get("/api/articles")
+
+    assert response.status_code == 200
+    titles = [item["title"] for item in response.json()["items"]]
+    assert titles.index("Later acquisition") < titles.index("Future metadata date")
 
 
 def test_articles_endpoint_excludes_editorials(client, db_session) -> None:

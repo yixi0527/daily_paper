@@ -32,9 +32,7 @@ export function AuthorList({
   return (
     <p className={classNames('author-list', className)}>
       {displayAuthors.map((item, index) => (
-        <Fragment
-          key={item === 'ellipsis' ? `ellipsis-${index}` : `${item.full_name}-${index}`}
-        >
+        <Fragment key={item === 'ellipsis' ? `ellipsis-${index}` : `${item.full_name}-${index}`}>
           {index > 0 ? <span className="author-separator">, </span> : null}
           {item === 'ellipsis' ? (
             <span className="author-ellipsis">…</span>

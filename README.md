@@ -25,7 +25,7 @@ This project intentionally avoids aggressive publisher-page crawling because tha
 - rate-limiting outbound requests per host
 - storing raw source payloads instead of fetching article detail pages repeatedly
 - not crawling full-text pages just to enrich metadata
-- generating optional Chinese translations and library-linked heuristic notes from stored metadata
+- loading persistent Chinese title and abstract translations from the tracked article registry
 
 ## Covered journals
 
@@ -155,7 +155,8 @@ Important guarantees:
 - unique DOI constraint
 - fallback dedup hash on `title + first_author + published_date`
 - raw payload persistence for each source item
-- optional Chinese title/abstract translation and library-linked heuristic notes per article
+- stable acquisition dates and Codex Spark title/abstract translations in `packages/shared/data/article_registry.json`
+- display dates after `2026-07-01` use the first acquisition timestamp and default ordering follows that display date
 - per-source state for `etag`, `last_modified`, `cursor`, last success time, and failure streak
 - sync run isolation so one journal failure does not stop the global job
 
@@ -187,11 +188,8 @@ Update at least:
 - `CROSSREF_MAILTO`
 - `HTTP_USER_AGENT`
 
-For Chinese translation and heuristic notes, also set:
-
-- `LLM_API_KEY` or `OPENAI_API_KEY`
-- `LLM_BASE_URL`
-- `LLM_MODEL`
+`ARTICLE_REGISTRY_FILE` can override the tracked registry path. The default is
+`packages/shared/data/article_registry.json`.
 
 ### 3. Initialize database
 
@@ -242,11 +240,17 @@ Run single-journal sync:
 python -m app.cli sync --journal nature-neuroscience --category current_issue --category online_first
 ```
 
-Generate Chinese translations and linked heuristic notes:
+Prepare translation batches from an exported site bundle:
 
 ```bash
-python -m app.cli analyze-articles --limit 100
+python scripts/article_registry.py prepare \
+  --site-data apps/web/public/data/site-data.json \
+  --registry packages/shared/data/article_registry.json \
+  --work-dir data/translation-work/<run-id>
 ```
+
+The translations are produced by the scheduled `gpt-5.3-codex-spark` task and merged back into
+the registry with the same script. The API contains no interactive translation endpoint.
 
 Export static data for GitHub Pages:
 
@@ -306,10 +310,9 @@ What it does:
 2. Initializes a SQLite database inside the workflow
 3. Seeds the 26 journals
 4. Executes the synchronization job
-5. Generates Chinese analysis when repository secret `LLM_API_KEY` is configured
+5. Merges acquisition dates and persisted Spark translations from the tracked registry
 6. Exports static JSON into `apps/web/public/data`
-7. Builds the React app in `static` mode
-8. Deploys the built site to GitHub Pages
+7. Builds and deploys the React app to GitHub Pages
 
 After enabling GitHub Pages in repository settings, the public link will be:
 
@@ -319,10 +322,9 @@ https://<OWNER>.github.io/<REPO>/
 
 That pages build is a static mirror of the latest synchronized metadata, while the FastAPI service remains the full live API deployment path.
 
-For GitHub Pages Chinese analysis, add repository secret `LLM_API_KEY`. The workflow uses ChatAnywhere-compatible settings by default:
-
-- `LLM_BASE_URL=https://api.chatanywhere.tech/v1`
-- `LLM_MODEL=gpt-4o-mini`
+The GitHub Pages workflow performs no model calls. A local Codex scheduled task runs
+`gpt-5.3-codex-spark` after the daily Pages sync, translates only new or changed papers, commits
+the registry, and triggers the normal Pages rebuild.
 
 ## REST API
 
@@ -334,8 +336,6 @@ Required endpoints implemented:
 - `GET /api/search`
 - `POST /api/sync/run`
 - `POST /api/sync/run/{journal_slug}`
-- `POST /api/articles/{id}/analysis`
-- `POST /api/articles/analysis/run`
 - `GET /api/sync/runs`
 - `GET /api/health`
 
@@ -379,14 +379,6 @@ curl -X POST http://localhost:8000/api/sync/run/nature-neuroscience \
   -d '{"categories":["online_first"],"triggered_by":"manual"}'
 ```
 
-Generate Chinese analysis for one article:
-
-```bash
-curl -X POST http://localhost:8000/api/articles/{id}/analysis \
-  -H "Content-Type: application/json" \
-  -d '{"force":true}'
-```
-
 ## Testing
 
 ```bash
@@ -410,12 +402,14 @@ The frontend supports two modes:
 
 Features implemented:
 
-- responsive dashboard
-- article listing with pagination and filters
+- responsive article feed with one paper per page on mobile
+- article listing with journal and author filters
 - article detail view
-- Chinese translation, library links, and heuristic notes when generated
-- author/title/abstract search
+- persistent Codex Spark title and abstract translations
+- author/title/journal search
 - URL-synced filter state
+- collapsible primary navigation
+- browser-persistent favorites keyed by stable article identity
 - DOI copy button
 - external publisher links
 - recent searches in `localStorage`

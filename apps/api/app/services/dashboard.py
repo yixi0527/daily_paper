@@ -6,6 +6,7 @@ from app.models.article import Article
 from app.models.journal import Journal
 from app.models.sync import SyncRun
 from app.services.content_policy import ContentPolicyService
+from app.services.search import SearchService
 from sqlalchemy import desc, func, or_, select
 from sqlalchemy.orm import Session, joinedload
 
@@ -13,6 +14,7 @@ from sqlalchemy.orm import Session, joinedload
 class DashboardService:
     def __init__(self) -> None:
         self.content_policy = ContentPolicyService()
+        self.search_service = SearchService()
 
     def get_dashboard(self, db: Session) -> dict:
         today = datetime.now(tz=UTC).date()
@@ -51,7 +53,10 @@ class DashboardService:
                 .options(joinedload(Article.journal), joinedload(Article.authors))
                 .where(self.content_policy.article_visibility_clause(Article))
                 .where(or_(Article.abstract.is_not(None), Article.snippet.is_not(None)))
-                .order_by(desc(Article.published_at), desc(Article.created_at))
+                .order_by(
+                    desc(self.search_service.display_date_expression()),
+                    desc(Article.created_at),
+                )
                 .limit(20)
             )
             .unique()

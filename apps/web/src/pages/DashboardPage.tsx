@@ -42,7 +42,9 @@ export function DashboardPage() {
         </div>
         <div className="list-stack">
           {data.latest_articles.length ? (
-            data.latest_articles.map((article) => <ArticleCard key={article.id} article={article} />)
+            data.latest_articles.map((article) => (
+              <ArticleCard key={article.id} article={article} />
+            ))
           ) : (
             <EmptyState
               label="No articles synced yet."

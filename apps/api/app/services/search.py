@@ -6,9 +6,10 @@ from datetime import UTC, datetime
 
 from app.models.article import Article, ArticleAuthor
 from app.models.journal import Journal
+from app.services.article_registry import DISPLAY_DATE_CUTOFF, display_date
 from app.services.content_policy import ContentPolicyService
 from rapidfuzz import fuzz
-from sqlalchemy import Select, desc, func, select
+from sqlalchemy import Select, case, desc, func, select
 from sqlalchemy.orm import Session, joinedload
 
 
@@ -40,10 +41,11 @@ class SearchService:
             query = query.where(
                 Article.authors.any(func.lower(ArticleAuthor.full_name).like(author_pattern))
             )
+        date_expression = self.display_date_expression()
         if date_from:
-            query = query.where(Article.published_at >= date_from.astimezone(UTC))
+            query = query.where(date_expression >= date_from.astimezone(UTC))
         if date_to:
-            query = query.where(Article.published_at <= date_to.astimezone(UTC))
+            query = query.where(date_expression <= date_to.astimezone(UTC))
         if source_category:
             query = query.where(Article.source_category == source_category)
         if article_type:
@@ -82,7 +84,7 @@ class SearchService:
             article_type=article_type,
             has_doi=has_doi,
             has_abstract=has_abstract,
-        ).order_by(desc(Article.published_at), desc(Article.created_at))
+        ).order_by(desc(self.display_date_expression()), desc(Article.created_at))
         total = db.scalar(select(func.count()).select_from(query.subquery())) or 0
         offset = (page - 1) * page_size
         items = db.scalars(query.offset(offset).limit(page_size)).unique().all()
@@ -105,7 +107,7 @@ class SearchService:
             journal_slugs=journal_slugs,
             date_from=date_from,
             date_to=date_to,
-        ).order_by(desc(Article.published_at), desc(Article.created_at))
+        ).order_by(desc(self.display_date_expression()), desc(Article.created_at))
         candidate_articles = db.scalars(base_query.limit(500)).unique().all()
         hits = []
         for article_obj in candidate_articles:
@@ -115,7 +117,10 @@ class SearchService:
         hits.sort(
             key=lambda item: (
                 item["score"],
-                item["article"].published_at or datetime.min.replace(tzinfo=UTC),
+                display_date(
+                    published_at=item["article"].published_at,
+                    acquired_at=item["article"].first_seen_at,
+                ),
             ),
             reverse=True,
         )
@@ -171,6 +176,12 @@ class SearchService:
                 abstract,
             )
         return {"article": article, "score": score, "highlights": highlights}
+
+    def display_date_expression(self):
+        return case(
+            (Article.published_at > DISPLAY_DATE_CUTOFF, Article.first_seen_at),
+            else_=func.coalesce(Article.published_at, Article.first_seen_at),
+        )
 
     def _highlight(self, haystack: str, needle: str) -> str:
         if not haystack or not needle:
