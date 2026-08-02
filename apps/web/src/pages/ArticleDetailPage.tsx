@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
 import { ExternalLink } from 'lucide-react';
 import { getArticle } from '../api/client';
+import { ArticleTranslationToggle } from '../components/ArticleTranslationToggle';
 import { AuthorList } from '../components/AuthorList';
 import { CopyButton } from '../components/CopyButton';
 import { FavoriteButton } from '../components/FavoriteButton';
@@ -22,16 +23,15 @@ export function ArticleDetailPage() {
 
   const article = articleQuery.data;
   const dateLabel = article.display_date_source === 'acquired' ? 'Acquired' : 'Published';
+  const sourceAbstract = article.abstract ?? article.snippet;
+  const hasTranslation = Boolean(article.title_zh || article.abstract_zh);
 
   return (
     <div className="page-stack">
       <section className="page-header article-detail-header">
         <div>
           <p className="eyebrow">{article.journal.journal_name}</p>
-          <h2>{article.title_zh || article.title}</h2>
-          {article.title_zh ? (
-            <p className="article-detail-original-title">{article.title}</p>
-          ) : null}
+          <h2>{article.title}</h2>
         </div>
         <div className="detail-actions">
           <FavoriteButton articleKey={article.article_key} />
@@ -75,37 +75,27 @@ export function ArticleDetailPage() {
           </div>
         </div>
 
-        <div className="panel translation-panel">
+        <div className="panel">
           <div className="section-header">
             <div>
-              <p className="eyebrow">中文译文</p>
-              <h2>摘要</h2>
+              <p className="eyebrow">Original abstract</p>
+              <h2>Source text</h2>
             </div>
-            {article.translated_at ? (
-              <span className="pill muted-pill">{formatDate(article.translated_at)}</span>
+            {hasTranslation ? (
+              <span className="pill muted-pill">Translation available</span>
             ) : null}
           </div>
-          {article.abstract_zh ? (
-            <p className="detail-abstract detail-abstract-zh">{article.abstract_zh}</p>
+          {sourceAbstract ? (
+            <p className="detail-abstract">{sourceAbstract}</p>
           ) : (
-            <p className="muted">该文献尚无可显示的中文摘要。</p>
+            <p className="muted">No abstract available from source metadata.</p>
           )}
+          <ArticleTranslationToggle
+            titleZh={article.title_zh}
+            abstractZh={article.abstract_zh}
+            variant="detail"
+          />
         </div>
-      </section>
-
-      <section className="panel">
-        <div className="section-header">
-          <div>
-            <p className="eyebrow">Original abstract</p>
-            <h2>Source text</h2>
-          </div>
-          {article.translation_model ? (
-            <span className="pill muted-pill">{article.translation_model}</span>
-          ) : null}
-        </div>
-        <p className="detail-abstract">
-          {article.abstract ?? article.snippet ?? 'No abstract available from source metadata.'}
-        </p>
       </section>
 
       {(import.meta.env.DEV || isStaticMode) && article.raw_payload ? (

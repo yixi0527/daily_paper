@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CalendarDays, ExternalLink, FileText } from 'lucide-react';
 import type { ArticleListItem } from '../api/types';
 import { formatDate } from '../lib/utils';
+import { ArticleTranslationToggle } from './ArticleTranslationToggle';
 import { AuthorList } from './AuthorList';
 import { FavoriteButton } from './FavoriteButton';
 
 export function ArticleCard({ article }: { article: ArticleListItem }) {
-  const primaryTitle = article.title_zh || article.title;
   const dateLabel = article.display_date_source === 'acquired' ? 'Acquired' : 'Published';
-  const hasTranslation = Boolean(article.title_zh || article.abstract_zh);
+  const sourceAbstract = article.abstract ?? article.snippet;
 
   return (
     <article className="article-card">
@@ -19,35 +19,25 @@ export function ArticleCard({ article }: { article: ArticleListItem }) {
             <CalendarDays size={14} strokeWidth={2} aria-hidden="true" />
             {dateLabel} {formatDate(article.display_date)}
           </span>
-          {hasTranslation ? (
-            <span className="meta-chip translation-chip">中文翻译 · Codex Spark</span>
-          ) : null}
         </div>
 
         <h3>
           <Link to={`/articles/${article.id}`} className="article-title-link">
-            {primaryTitle}
+            {article.title}
           </Link>
         </h3>
 
-        {article.title_zh ? <p className="article-original-title">{article.title}</p> : null}
         <AuthorList
           authors={article.authors}
           authorsText={article.authors_text}
           className="article-authors"
         />
-        {article.abstract_zh ? (
-          <div className="article-translation">
-            <p className="translation-section-label">中文摘要</p>
-            <p className="article-snippet article-snippet-zh">{article.abstract_zh}</p>
-          </div>
-        ) : null}
-        {article.abstract || article.snippet ? (
-          <details className="original-abstract">
-            <summary>Original abstract</summary>
-            <p className="article-snippet">{article.abstract ?? article.snippet}</p>
-          </details>
-        ) : null}
+        {sourceAbstract ? <p className="article-snippet">{sourceAbstract}</p> : null}
+        <ArticleTranslationToggle
+          titleZh={article.title_zh}
+          abstractZh={article.abstract_zh}
+          variant="card"
+        />
       </div>
 
       <div className="article-footer">
