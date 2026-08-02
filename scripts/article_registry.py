@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 import urllib.request
 from datetime import UTC, datetime
@@ -17,6 +18,7 @@ sys.path.insert(0, str(API_ROOT))
 from app.services.article_registry import build_article_key, text_sha256  # noqa: E402
 
 SCHEMA_VERSION = 1
+CJK_RE = re.compile(r"[\u3400-\u9fff]")
 
 
 def read_json(path: Path) -> Any:
@@ -126,7 +128,11 @@ def prepare(args: argparse.Namespace) -> None:
             and existing.get("source_title_sha256") == source_title_sha256
             and existing.get("source_abstract_sha256") == source_abstract_sha256
             and bool(existing.get("title_zh"))
+            and CJK_RE.search(existing["title_zh"]) is not None
             and (abstract is None or bool(existing.get("abstract_zh")))
+            and (
+                abstract is None or CJK_RE.search(existing["abstract_zh"]) is not None
+            )
             and existing.get("translation_model") == args.model
         )
         if not translation_is_current:
@@ -199,11 +205,15 @@ def validate_translation(
         raise ValueError(f"Unexpected translation key: {translation.get('article_key')}")
     if not isinstance(translation.get("title_zh"), str) or not translation["title_zh"].strip():
         raise ValueError(f"Missing title_zh for {expected['article_key']}")
+    if CJK_RE.search(translation["title_zh"]) is None:
+        raise ValueError(f"title_zh contains no Chinese text for {expected['article_key']}")
     abstract_zh = translation.get("abstract_zh")
     if expected["abstract"] is not None and (
         not isinstance(abstract_zh, str) or not abstract_zh.strip()
     ):
         raise ValueError(f"Missing abstract_zh for {expected['article_key']}")
+    if expected["abstract"] is not None and CJK_RE.search(abstract_zh) is None:
+        raise ValueError(f"abstract_zh contains no Chinese text for {expected['article_key']}")
     if expected["abstract"] is None and abstract_zh is not None:
         raise ValueError(f"abstract_zh must be null for {expected['article_key']}")
 
@@ -306,8 +316,12 @@ def verify(args: argparse.Namespace) -> None:
             raise ValueError(f"Abstract hash is stale for {article_key}")
         if not entry["title_zh"]:
             raise ValueError(f"Title translation missing for {article_key}")
+        if CJK_RE.search(entry["title_zh"]) is None:
+            raise ValueError(f"Title translation contains no Chinese text for {article_key}")
         if abstract is not None and not entry["abstract_zh"]:
             raise ValueError(f"Abstract translation missing for {article_key}")
+        if abstract is not None and CJK_RE.search(entry["abstract_zh"]) is None:
+            raise ValueError(f"Abstract translation contains no Chinese text for {article_key}")
         if entry["translation_model"] != args.model:
             raise ValueError(f"Translation model mismatch for {article_key}")
         verified += 1

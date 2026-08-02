@@ -6,6 +6,8 @@ import subprocess
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+from article_registry import validate_translation
+
 MODEL = "gpt-5.3-codex-spark"
 
 
@@ -31,6 +33,9 @@ def validate_output(batch_path: Path, output_path: Path) -> None:
             f"expected={len(expected_keys)} actual={len(actual_keys)} "
             f"missing={missing} extra={extra} output={output_path}"
         )
+    translations_by_key = {item["article_key"]: item for item in translations}
+    for article in batch["articles"]:
+        validate_translation(translations_by_key[article["article_key"]], article)
 
 
 def run_batch(
@@ -52,8 +57,12 @@ def run_batch(
         f"Read {batch_path}. Translate every article title and available abstract into accurate, "
         "natural Simplified Chinese suitable for neuroscience and AI researchers. Preserve technical "
         "terms, abbreviations, section labels, numbers, and study design meaning. Do not summarize or "
-        "add commentary. For an input whose abstract is null, set abstract_zh to null. Return exactly "
-        "one translation for every input article, in the same order, and match the supplied JSON schema."
+        "add commentary. Every non-null title_zh and abstract_zh must contain at least one Chinese Han "
+        "character; add the original proper name in parentheses when a title consists only of a name. "
+        "When an abstract is only a journal-name placeholder, state in Chinese that the source provides "
+        "the journal name but no abstract. For an input whose abstract is null, set abstract_zh to null. "
+        "Return exactly one translation for every input article, in the same order, and match the supplied "
+        "JSON schema."
     )
     command = [
         str(codex_executable),
