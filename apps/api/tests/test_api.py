@@ -3,6 +3,7 @@ from datetime import UTC, datetime
 
 from app.models.article import Article, ArticleAuthor
 from app.models.journal import Journal
+from app.services.article_registry import ArticleRegistryService, build_article_key, text_sha256
 from app.services.static_export import StaticExportService
 
 
@@ -231,3 +232,55 @@ def test_static_export_excludes_blocked_lifeline_article(db_session, tmp_path) -
     payload = json.loads((tmp_path / "site-data.json").read_text(encoding="utf-8"))
     titles = [item["title"] for item in payload["articles"]]
     assert "Lifeline" not in titles
+
+
+def test_static_export_includes_translation_in_homepage_feed(db_session, tmp_path) -> None:
+    article = db_session.query(Article).filter_by(doi="10.1038/example-doi").one()
+    article_key = build_article_key(
+        doi=article.doi,
+        journal_slug=article.journal.slug,
+        title=article.title,
+    )
+    registry_path = tmp_path / "article_registry.json"
+    registry_path.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "updated_at": "2026-08-02T04:00:00+00:00",
+                "articles": {
+                    article_key: {
+                        "doi": article.doi,
+                        "journal_slug": article.journal.slug,
+                        "title": article.title,
+                        "acquired_at": "2026-08-02T01:00:00+00:00",
+                        "source_title_sha256": text_sha256(article.title),
+                        "source_abstract_sha256": text_sha256(article.abstract),
+                        "source_abstract": "abstract",
+                        "title_zh": "记忆巩固的神经环路机制",
+                        "abstract_zh": "一项关于皮层环路中记忆巩固的研究。",
+                        "translation_model": "gpt-5.3-codex-spark",
+                        "translated_at": "2026-08-02T04:00:00+00:00",
+                    }
+                },
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+    export_path = tmp_path / "export"
+    export_service = StaticExportService()
+    export_service.article_registry = ArticleRegistryService(registry_path=registry_path)
+
+    export_service.export(db_session, export_path)
+
+    payload = json.loads((export_path / "site-data.json").read_text(encoding="utf-8"))
+    exported_article = next(
+        item for item in payload["articles"] if item["article_key"] == article_key
+    )
+    homepage_article = next(
+        item for item in payload["dashboard"]["latest_articles"] if item["article_key"] == article_key
+    )
+    for item in (exported_article, homepage_article):
+        assert item["title_zh"] == "记忆巩固的神经环路机制"
+        assert item["abstract_zh"] == "一项关于皮层环路中记忆巩固的研究。"
+        assert item["translation_model"] == "gpt-5.3-codex-spark"

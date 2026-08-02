@@ -472,6 +472,13 @@ select:focus-visible {
   border-color: var(--line-strong);
 }
 
+.meta-chip.translation-chip {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border-color: rgba(37, 99, 235, 0.24);
+  font-weight: 600;
+}
+
 .article-row h3,
 .article-card h3,
 .journal-panel h3 {
@@ -549,6 +556,19 @@ select:focus-visible {
   color: var(--text);
   font-size: 1rem;
   -webkit-line-clamp: 7;
+}
+
+.article-translation {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.translation-section-label {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
 }
 
 .original-abstract {

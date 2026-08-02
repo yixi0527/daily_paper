@@ -8,6 +8,7 @@ import { FavoriteButton } from './FavoriteButton';
 export function ArticleCard({ article }: { article: ArticleListItem }) {
   const primaryTitle = article.title_zh || article.title;
   const dateLabel = article.display_date_source === 'acquired' ? 'Acquired' : 'Published';
+  const hasTranslation = Boolean(article.title_zh || article.abstract_zh);
 
   return (
     <article className="article-card">
@@ -18,6 +19,9 @@ export function ArticleCard({ article }: { article: ArticleListItem }) {
             <CalendarDays size={14} strokeWidth={2} aria-hidden="true" />
             {dateLabel} {formatDate(article.display_date)}
           </span>
+          {hasTranslation ? (
+            <span className="meta-chip translation-chip">中文翻译 · Codex Spark</span>
+          ) : null}
         </div>
 
         <h3>
@@ -33,7 +37,10 @@ export function ArticleCard({ article }: { article: ArticleListItem }) {
           className="article-authors"
         />
         {article.abstract_zh ? (
-          <p className="article-snippet article-snippet-zh">{article.abstract_zh}</p>
+          <div className="article-translation">
+            <p className="translation-section-label">中文摘要</p>
+            <p className="article-snippet article-snippet-zh">{article.abstract_zh}</p>
+          </div>
         ) : null}
         {article.abstract || article.snippet ? (
           <details className="original-abstract">
@@ -45,7 +52,6 @@ export function ArticleCard({ article }: { article: ArticleListItem }) {
 
       <div className="article-footer">
         <FavoriteButton articleKey={article.article_key} />
-        {article.translated_at ? <span className="pill">中文译文</span> : null}
         <a href={article.url} target="_blank" rel="noreferrer" className="publisher-link">
           Publisher
           <ExternalLink size={15} strokeWidth={2} aria-hidden="true" />

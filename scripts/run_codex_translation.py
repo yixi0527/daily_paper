@@ -61,6 +61,7 @@ def run_batch(
         "character; add the original proper name in parentheses when a title consists only of a name. "
         "When an abstract is only a journal-name placeholder, state in Chinese that the source provides "
         "the journal name but no abstract. For an input whose abstract is null, set abstract_zh to null. "
+        "Copy every article_key exactly character for character, including letter case and punctuation. "
         "Return exactly one translation for every input article, in the same order, and match the supplied "
         "JSON schema."
     )
