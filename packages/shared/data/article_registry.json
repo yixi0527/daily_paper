@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-02T04:06:17.316812+00:00",
+  "updated_at": "2026-08-03T10:16:19.7166660+08:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -352,6 +352,19 @@
       "abstract_zh": "来源仅给出期刊名（Acta Neuropathologica），未提供摘要。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:25:56.196430+00:00"
+    },
+    "doi:10.1007/s00401-026-03059-6": {
+      "doi": "10.1007/s00401-026-03059-6",
+      "journal_slug": "acta-neuropathologica",
+      "title": "Mild malformation of cortical development with oligodendroglial hyperplasia in epilepsy (MOGHE): genetics, mechanisms and precision therapy",
+      "acquired_at": "2026-08-02T18:18:28",
+      "source_title_sha256": "4689e4407908f7692fbb3c3ead131105a3a3961933553c2a65e230b0d2d71898",
+      "source_abstract_sha256": "f4f7c3db2b3912ce792558f22df54245a4391cf8825b91f5de421ce31be91539",
+      "source_abstract": "abstract",
+      "title_zh": "癫痫中皮层发育轻度异常伴少突胶质细胞增生（MOGHE）：遗传学、机制与精准治疗",
+      "abstract_zh": "摘要：癫痫中皮层发育轻度异常伴少突胶质细胞增生（MOGHE）是近期定义的一类皮层发育异常，是儿童起病难治性癫痫的重要成因。临床上，与 MOGHE 相关的癫痫表现异质，最常见的表现是婴儿期特发性痉挛综合征（IESS）。在组织病理学上，MOGHE 表现为轻度皮层分层紊乱、白质内异位神经元、低髓鞘化，以及少突胶质细胞密度与簇集程度的特征性增加，这些特征将其与其他皮层发育异常（如局灶性皮层发育不良，FCD）区分开来。最近对 MOGHE 患者切除的致痫组织进行的遗传学分析发现 SLC35A2 的体细胞镶嵌性功能缺失变异。该基因编码高尔基体跨膜 UDP-半乳糖转运体，提示在该疾病中癫痫致病机制的一种独特途径是 N-糖基化障碍。本文综述目前对 MOGHE 的临床、组织病理和分子机制认识，尤其聚焦于近期在 SLC35A2 缺失的啮齿动物和人源细胞模型中获得的新见解。我们将这些发现置于既有 mTORopathy 模型（包括 FCD 2 型）背景下进行诠释，将 MOGHE 放置于更广泛的皮层发育异常谱系中。综合这些证据，我们观察到在 MOGHE 和 mTORopathy（如 FCD 2 型）模型中，尽管其遗传病因不同，神经元活动最终都收敛为动作电位放电减少。最后，我们讨论这些结果如何深化我们对致痫生成（epileptogenesis）的理解，尤其是婴儿期痉挛的出现机制，以及如何推动皮层发育异常范围内未来精准治疗策略的发展。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-03T10:16:19.7166660+08:00"
     },
     "doi:10.1007/s00401-026-03064-9": {
       "doi": "10.1007/s00401-026-03064-9",
@@ -19177,6 +19190,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
     },
+    "title:e124fd3f9608e2c273c80172022f41fc70531338b2fba00290273a80ca551e45": {
+      "doi": null,
+      "journal_slug": "acta-neuropathologica",
+      "title": "Mild malformation of cortical development with oligodendroglial hyperplasia in epilepsy (MOGHE): genetics, mechanisms and precision therapy",
+      "acquired_at": "2026-08-02T18:18:36",
+      "source_title_sha256": "4689e4407908f7692fbb3c3ead131105a3a3961933553c2a65e230b0d2d71898",
+      "source_abstract_sha256": "f581c77da5ca0b16e200ebe428d98a9441ff1fa3c4a674e8d849018d3cb09b22",
+      "source_abstract": "abstract",
+      "title_zh": "癫痫中皮层发育轻度异常伴少突胶质细胞增生（MOGHE）：遗传学、机制与精准治疗",
+      "abstract_zh": "癫痫中皮层发育轻度异常伴少突胶质细胞增生（MOGHE，Mild malformation of cortical development with oligodendroglial hyperplasia in epilepsy）是近期定义的一类皮层发育异常，是儿童起病难治性癫痫的重要成因。临床上，与 MOGHE 相关的癫痫表现异质，最常见的表现是婴儿期特发性痉挛综合征（IESS）。在组织病理学上，MOGHE 表现为轻度皮层分层紊乱、白质内异位神经元、低髓鞘化，以及少突胶质细胞密度与簇集程度的特征性增加，这些特征将其与其他皮层发育异常（如局灶性皮层发育不良，FCD）区分开来。最近对 MOGHE 患者切除的致痫组织进行的遗传学分析发现 SLC35A2 的体细胞镶嵌性功能缺失变异。该基因编码高尔基体跨膜 UDP-半乳糖转运体，提示在该疾病中癫痫致病机制的一种独特途径是 N-糖基化障碍。本文综述目前对 MOGHE 的临床、组织病理和分子机制认识，尤其聚焦于近期在 SLC35A2 缺失的啮齶动物和人源细胞模型中获得的新见解。我们将这些发现置于既有 mTORopathy 模型（包括 FCD 2 型）背景下进行诠释，将 MOGHE 放置于更广泛的皮层发育异常谱系中。综合这些证据，我们观察到在 MOGHE 和 mTORopathy（如 FCD 2 型）模型中，尽管其遗传病因不同，神经元活动最终都收敛为动作电位放电减少。最后，我们讨论这些结果如何深化我们对致痫生成（epileptogenesis）的理解，尤其是婴儿期痉挛的出现机制，以及如何推动皮层发育异常范围内未来精准治疗策略的发展。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-03T10:16:19.7166660+08:00"
+    },
     "title:e320c2cb1a2306529d0b28989b1b7f053b4213410bfd987e1ee8d1d84a677dcc": {
       "doi": null,
       "journal_slug": "journal-of-neuroinflammation",
@@ -19544,15 +19570,15 @@
     "title:ff8d32f5e962db04b48eda32f1ca70675cbb8675071716d569cf4f55575ab7d1": {
       "doi": null,
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "The Critical Role of Microglia in the Stress Response",
+      "title": "The critical role of microglia in the stress response",
       "acquired_at": "2026-08-02T03:29:30",
-      "source_title_sha256": "b30541f9077bbc020aca8768abe4d772490f9e308a8e1137fdd9924a0dcd438c",
-      "source_abstract_sha256": "2285a475517e95619b604aeae3b75429b73da62feea2a395853ccec36d4ce96f",
+      "source_title_sha256": "79a151e97c9bc1352f47389d6011843417a02678debf8c44f1e7ca8afd958d7f",
+      "source_abstract_sha256": "9e181f0888a1311a4594a8ab609bd54f8bd771bdca4b3cf0e8361a3d6f5cebc8",
       "source_abstract": "abstract",
-      "title_zh": "小胶质细胞在应激反应中的关键作用",
-      "abstract_zh": "来源仅给出期刊信息（Neuroscience & Biobehavioral Reviews，线下发布日期：2026-07-31）及作者信息（Ke Chen、Zong-yuan Xuan、Bao-yi Sun、Guan-ning Zhong、Xiao-lei Sun、Jun Yan），未提供摘要。",
+      "title_zh": "应激反应中小胶质细胞的关键作用",
+      "abstract_zh": "来源信息仅提供了期刊与发表信息：2026年10月发表于《Neuroscience & Biobehavioral Reviews》189卷，作者为 Ke Chen、Zong-yuan Xuan、Bao-yi Sun、Guan-ning Zhong、Xiao-lei Sun 和 Jun Yan，未提供可供翻译的结构化摘要。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-02T04:06:17.316812+00:00"
+      "translated_at": "2026-08-03T10:16:19.7166660+08:00"
     }
   }
 }
