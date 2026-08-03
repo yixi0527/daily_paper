@@ -6,7 +6,7 @@ from pathlib import Path
 from app.api.routes.helpers import serialize_article_detail
 from app.models.article import Article
 from app.models.journal import Journal
-from app.models.sync import SyncRun
+from app.models.sync import SyncRun, SyncRunJournal
 from app.schemas.dashboard import DashboardOut
 from app.schemas.journal import JournalDetailOut
 from app.schemas.sync import SyncRunOut
@@ -60,7 +60,7 @@ class StaticExportService:
         sync_runs = (
             db.scalars(
                 select(SyncRun)
-                .options(joinedload(SyncRun.journal_runs))
+                .options(joinedload(SyncRun.journal_runs).joinedload(SyncRunJournal.journal))
                 .order_by(desc(SyncRun.started_at))
                 .limit(20)
             )

@@ -75,3 +75,12 @@ class SyncRunJournal(Base):
     duration_ms: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
     sync_run = relationship("SyncRun", back_populates="journal_runs")
+    journal = relationship("Journal")
+
+    @property
+    def journal_slug(self) -> str:
+        return self.journal.slug
+
+    @property
+    def journal_name(self) -> str:
+        return self.journal.journal_name

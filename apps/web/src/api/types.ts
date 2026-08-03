@@ -110,6 +110,8 @@ export interface DashboardData {
 
 export interface SyncRunJournal {
   journal_id: number;
+  journal_slug: string;
+  journal_name: string;
   source_category: string;
   source_name: string | null;
   status: string;

@@ -13,6 +13,8 @@ class SyncRunRequest(BaseModel):
 
 class SyncRunJournalOut(ORMModel):
     journal_id: int
+    journal_slug: str
+    journal_name: str
     source_category: str
     source_name: str | None
     status: str

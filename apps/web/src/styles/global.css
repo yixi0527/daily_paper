@@ -851,6 +851,62 @@ select:focus-visible {
   color: var(--muted);
 }
 
+.sync-run-panel {
+  align-items: stretch;
+}
+
+.sync-run-content {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.sync-result-groups {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.sync-result-group {
+  border-left: 3px solid var(--line-strong);
+  padding-left: 0.75rem;
+}
+
+.sync-result-group-failed {
+  border-left-color: #d04848;
+}
+
+.sync-result-group h4 {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.sync-result-group ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.45rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sync-result-group li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.sync-result-group li strong {
+  flex: 0 0 auto;
+  color: var(--text);
+}
+
+.sync-result-group li p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
 mark {
   background: var(--accent-soft);
   color: var(--text);

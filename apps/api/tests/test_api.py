@@ -3,6 +3,7 @@ from datetime import UTC, datetime
 
 from app.models.article import Article, ArticleAuthor
 from app.models.journal import Journal
+from app.models.sync import SyncRun, SyncRunJournal
 from app.services.article_registry import ArticleRegistryService, build_article_key, text_sha256
 from app.services.static_export import StaticExportService
 
@@ -12,6 +13,43 @@ def test_health_endpoint(client) -> None:
     assert response.status_code == 200
     payload = response.json()
     assert payload["status"] == "ok"
+
+
+def test_sync_runs_include_journal_identity_and_failure_reason(client, db_session) -> None:
+    journal = db_session.query(Journal).first()
+    run = SyncRun(status="partial_success", scope="all")
+    db_session.add(run)
+    db_session.flush()
+    db_session.add_all(
+        [
+            SyncRunJournal(
+                sync_run_id=run.id,
+                journal_id=journal.id,
+                source_category="online_first",
+                status="success",
+                fetched_count=3,
+            ),
+            SyncRunJournal(
+                sync_run_id=run.id,
+                journal_id=journal.id,
+                source_category="current_issue",
+                status="failed",
+                failed_count=1,
+                error_message="RSS feed returned HTTP 503",
+            ),
+        ]
+    )
+    db_session.commit()
+
+    response = client.get("/api/sync/runs")
+
+    assert response.status_code == 200
+    journal_runs = response.json()[0]["journal_runs"]
+    successful_run = next(item for item in journal_runs if item["status"] == "success")
+    failed_run = next(item for item in journal_runs if item["status"] == "failed")
+    assert successful_run["journal_slug"] == "nature-neuroscience"
+    assert successful_run["journal_name"] == "Nature Neuroscience"
+    assert failed_run["error_message"] == "RSS feed returned HTTP 503"
 
 
 def test_articles_endpoint_returns_seeded_article(client) -> None:

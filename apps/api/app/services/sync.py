@@ -104,7 +104,7 @@ class SyncOrchestrationService:
         return (
             db.scalars(
                 select(SyncRun)
-                .options(joinedload(SyncRun.journal_runs))
+                .options(joinedload(SyncRun.journal_runs).joinedload(SyncRunJournal.journal))
                 .order_by(desc(SyncRun.started_at))
                 .limit(limit)
             )
