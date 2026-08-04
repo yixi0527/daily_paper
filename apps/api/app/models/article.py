@@ -23,7 +23,6 @@ class Article(Base):
     __tablename__ = "articles"
     __table_args__ = (
         UniqueConstraint("doi", name="uq_articles_doi"),
-        UniqueConstraint("dedup_hash", name="uq_articles_dedup_hash"),
         Index("ix_articles_journal_published", "journal_id", "published_at"),
     )
 

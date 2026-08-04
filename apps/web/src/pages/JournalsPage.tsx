@@ -19,7 +19,7 @@ export function JournalsPage() {
           <h2>Configured journals</h2>
         </div>
         <p className="muted">
-          Each journal is driven by a dedicated adapter with RSS-first fallback strategy.
+          Each journal is synchronized from Crossref and indexed by DOI.
         </p>
       </section>
 
@@ -29,22 +29,27 @@ export function JournalsPage() {
             journalsQuery.data.map((journal) => (
               <article className="journal-panel" key={journal.slug}>
                 <div>
+                  {(() => {
+                    const doiState = journal.source_states?.find(
+                      (state) => state.source_category === 'doi',
+                    );
+
+                    return (
+                      <>
                   <p className="eyebrow">{journal.publisher}</p>
                   <h3>{journal.journal_name}</h3>
-                  <p className="muted">
-                    Strategy: {journal.polling_strategy} · Primary {journal.primary_source ?? 'n/a'}{' '}
-                    · Fallback {journal.fallback_source ?? 'n/a'}
-                  </p>
-                  {journal.source_states?.length ? (
+                  <p className="muted">Index: DOI</p>
+                  {doiState ? (
                     <div className="article-footer">
-                      {journal.source_states.map((state) => (
-                        <span className="pill" key={`${journal.slug}-${state.source_category}`}>
-                          {state.source_category}:{' '}
-                          {state.last_success_at ? formatDateTime(state.last_success_at) : 'never'}
-                        </span>
-                      ))}
+                      <span className="pill">
+                        Last successful DOI sync:{' '}
+                        {doiState.last_success_at ? formatDateTime(doiState.last_success_at) : 'never'}
+                      </span>
                     </div>
                   ) : null}
+                      </>
+                    );
+                  })()}
                 </div>
                 <a
                   href={journal.homepage_url}

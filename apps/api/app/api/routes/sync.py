@@ -13,7 +13,7 @@ service = SyncOrchestrationService()
 
 @router.post("/run", response_model=SyncRunOut, summary="Run sync for all journals")
 def run_sync(payload: SyncRunRequest, db: Session = Depends(get_db)) -> SyncRunOut:
-    run = service.run(db, categories=payload.categories, triggered_by=payload.triggered_by)
+    run = service.run(db, triggered_by=payload.triggered_by)
     return SyncRunOut.model_validate(run)
 
 
@@ -28,7 +28,6 @@ def run_single_journal_sync(
     run = service.run(
         db,
         journal_slug=journal_slug,
-        categories=payload.categories,
         triggered_by=payload.triggered_by,
     )
     return SyncRunOut.model_validate(run)

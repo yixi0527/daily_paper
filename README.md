@@ -1,24 +1,18 @@
 # Daily Paper Tracker
 
-Daily Paper Tracker is a monorepo web application for monitoring newly published papers across high-impact neuroscience, AI, and multidisciplinary journals. It is built around a stability-first ingestion strategy:
+Daily Paper Tracker is a monorepo web application for monitoring newly published papers across high-impact neuroscience, AI, and multidisciplinary journals. It is built around DOI-indexed ingestion:
 
-1. Official RSS / official feeds whenever available.
-2. Crossref REST API as the metadata-safe fallback.
-3. No full-text scraping and no routine browser automation.
-
-The system tracks both:
-
-- `current_issue`
-- `online_first` / `advance online` / `articles in press`
+1. Crossref REST API retrieves journal metadata.
+2. DOI is the sole article identity used during synchronization.
+3. Records without a DOI are excluded before database insertion.
 
 It provides a FastAPI backend, a React web app, a daily scheduler, Docker deployment, Alembic migrations, pytest examples, and a GitHub Pages workflow that republishes the latest synchronized content every day.
 
-## Why RSS / API first
+## Why DOI / API first
 
 This project intentionally avoids aggressive publisher-page crawling because that is the fastest way to trigger bot defenses and verification walls. The current design reduces CAPTCHA and anti-bot risk by:
 
-- using official publisher feeds whenever the publisher exposes them
-- using Crossref for stable metadata fallback instead of hitting publisher HTML repeatedly
+- using Crossref for stable DOI-indexed metadata
 - using low-frequency polling
 - sending a reasonable User-Agent
 - honoring `ETag` / `Last-Modified` / conditional requests when the source supports them
@@ -237,7 +231,7 @@ python -m app.cli sync --all --triggered-by cli
 Run single-journal sync:
 
 ```bash
-python -m app.cli sync --journal nature-neuroscience --category current_issue --category online_first
+python -m app.cli sync --journal nature-neuroscience
 ```
 
 Prepare translation batches from an exported site bundle:
@@ -354,7 +348,7 @@ curl http://localhost:8000/api/journals
 List articles:
 
 ```bash
-curl "http://localhost:8000/api/articles?page=1&page_size=20&journal=nature-neuroscience&source_category=online_first"
+curl "http://localhost:8000/api/articles?page=1&page_size=20&journal=nature-neuroscience&source_category=doi"
 ```
 
 Search by author and title:
@@ -368,7 +362,7 @@ Run a manual sync:
 ```bash
 curl -X POST http://localhost:8000/api/sync/run \
   -H "Content-Type: application/json" \
-  -d '{"categories":["current_issue","online_first"],"triggered_by":"manual"}'
+  -d '{"triggered_by":"manual"}'
 ```
 
 Run a single-journal sync:
@@ -376,7 +370,7 @@ Run a single-journal sync:
 ```bash
 curl -X POST http://localhost:8000/api/sync/run/nature-neuroscience \
   -H "Content-Type: application/json" \
-  -d '{"categories":["online_first"],"triggered_by":"manual"}'
+  -d '{"triggered_by":"manual"}'
 ```
 
 ## Testing

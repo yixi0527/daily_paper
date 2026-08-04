@@ -178,15 +178,10 @@ export async function getSyncRuns(): Promise<SyncRun[]> {
   return apiGet<SyncRun[]>('/sync/runs');
 }
 
-export async function runSync(
-  categories: string[] = ['current_issue', 'online_first'],
-): Promise<SyncRun> {
-  return apiPost<SyncRun>('/sync/run', { categories, triggered_by: 'web' });
+export async function runSync(): Promise<SyncRun> {
+  return apiPost<SyncRun>('/sync/run', { triggered_by: 'web' });
 }
 
-export async function runJournalSync(
-  slug: string,
-  categories: string[] = ['current_issue', 'online_first'],
-): Promise<SyncRun> {
-  return apiPost<SyncRun>(`/sync/run/${slug}`, { categories, triggered_by: 'web' });
+export async function runJournalSync(slug: string): Promise<SyncRun> {
+  return apiPost<SyncRun>(`/sync/run/${slug}`, { triggered_by: 'web' });
 }

@@ -1,11 +1,14 @@
 import json
 from datetime import UTC, datetime
 
+from app.adapters.crossref_only import CrossrefOnlyAdapter
 from app.models.article import Article, ArticleAuthor
 from app.models.journal import Journal
 from app.models.sync import SyncRun, SyncRunJournal
 from app.services.article_registry import ArticleRegistryService, build_article_key, text_sha256
 from app.services.static_export import StaticExportService
+from app.services.sync import SyncOrchestrationService
+from app.services.types import NormalizedArticle
 
 
 def test_health_endpoint(client) -> None:
@@ -50,6 +53,59 @@ def test_sync_runs_include_journal_identity_and_failure_reason(client, db_sessio
     assert successful_run["journal_slug"] == "nature-neuroscience"
     assert successful_run["journal_name"] == "Nature Neuroscience"
     assert failed_run["error_message"] == "RSS feed returned HTTP 503"
+
+
+def test_sync_request_rejects_legacy_category_selection(client) -> None:
+    response = client.post("/api/sync/run", json={"categories": ["online_first"]})
+
+    assert response.status_code == 422
+
+
+def test_upsert_articles_skips_records_without_a_doi(db_session) -> None:
+    journal = db_session.query(Journal).first()
+    article = NormalizedArticle(
+        title="Record without a DOI",
+        url="https://example.com/articles/no-doi",
+        source_category="doi",
+        source_name="crossref",
+        source_uid=None,
+        authors=[],
+        doi=None,
+    )
+
+    counts = CrossrefOnlyAdapter().upsert_articles(db_session, journal, [article])
+
+    assert counts == {"inserted": 0, "updated": 0}
+    assert db_session.query(Article).filter_by(title="Record without a DOI").count() == 0
+
+
+def test_sync_records_one_doi_indexed_result_per_journal(db_session) -> None:
+    class DOIAdapter:
+        def sync_journal(self, _db_session, _journal):
+            return {
+                "status": "success",
+                "source_name": "crossref",
+                "fetched": 4,
+                "inserted": 3,
+                "updated": 1,
+                "skipped": 2,
+            }
+
+    class AdapterFactoryStub:
+        def get(self, _journal):
+            return DOIAdapter()
+
+    service = SyncOrchestrationService()
+    service.factory = AdapterFactoryStub()
+
+    run = service.run(db_session, triggered_by="test")
+
+    assert run.requested_category == "doi"
+    assert run.total_journals == 1
+    assert run.total_fetched == 4
+    assert len(run.journal_runs) == 1
+    assert run.journal_runs[0].source_category == "doi"
+    assert run.journal_runs[0].skipped_count == 2
 
 
 def test_articles_endpoint_returns_seeded_article(client) -> None:

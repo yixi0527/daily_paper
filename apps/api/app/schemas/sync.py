@@ -3,11 +3,12 @@ from __future__ import annotations
 from datetime import datetime
 
 from app.schemas.common import ORMModel
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class SyncRunRequest(BaseModel):
-    categories: list[str] | None = Field(default=None, description="current_issue / online_first")
+    model_config = ConfigDict(extra="forbid")
+
     triggered_by: str = "manual"
 
 

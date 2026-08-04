@@ -5,10 +5,6 @@ import { isStaticMode } from '../lib/env';
 import { formatDateTime } from '../lib/utils';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 
-function formatCategory(category: string) {
-  return category.replace(/_/g, ' ');
-}
-
 export function SyncRunsPage() {
   const queryClient = useQueryClient();
   const syncRunsQuery = useQuery({ queryKey: ['sync-runs'], queryFn: getSyncRuns });
@@ -24,6 +20,8 @@ export function SyncRunsPage() {
   if (syncRunsQuery.isLoading) return <LoadingState label="Loading sync history…" />;
   if (syncRunsQuery.isError || !syncRunsQuery.data)
     return <ErrorState label="Sync history could not be loaded." />;
+
+  const latestRun = syncRunsQuery.data[0];
 
   return (
     <div className="page-stack">
@@ -46,24 +44,26 @@ export function SyncRunsPage() {
 
       <section className="panel">
         <div className="list-stack">
-          {syncRunsQuery.data.length ? (
-            syncRunsQuery.data.map((run) => {
-              const fetchedRuns = run.journal_runs.filter((journalRun) => journalRun.status === 'success');
-              const failedRuns = run.journal_runs.filter((journalRun) => journalRun.status === 'failed');
-              const unchangedRuns = run.journal_runs.filter(
+          {latestRun ? (
+            (() => {
+              const fetchedRuns = latestRun.journal_runs.filter(
+                (journalRun) => journalRun.status === 'success',
+              );
+              const failedRuns = latestRun.journal_runs.filter((journalRun) => journalRun.status === 'failed');
+              const unchangedRuns = latestRun.journal_runs.filter(
                 (journalRun) => journalRun.status === 'not_modified' || journalRun.status === 'skipped',
               );
 
               return (
-                <article className="journal-panel sync-run-panel" key={run.id}>
+                <article className="journal-panel sync-run-panel" key={latestRun.id}>
                   <div className="sync-run-content">
                     <div>
-                      <p className="eyebrow">{run.status}</p>
-                      <h3>{run.scope}</h3>
+                      <p className="eyebrow">Latest run · {latestRun.status}</p>
+                      <h3>{latestRun.scope}</h3>
                       <p className="muted">
-                        Started {formatDateTime(run.started_at)} · Inserted {run.total_inserted} ·
-                        Updated {run.total_updated}
-                        {' · '}Failed {run.total_failed}
+                        Started {formatDateTime(latestRun.started_at)} · Indexed {latestRun.total_fetched} ·
+                        Added {latestRun.total_inserted}
+                        {' · '}Updated {latestRun.total_updated} · Failed {latestRun.total_failed}
                       </p>
                     </div>
 
@@ -75,9 +75,9 @@ export function SyncRunsPage() {
                             {fetchedRuns.map((journalRun) => (
                               <li key={`${journalRun.journal_id}-${journalRun.source_category}`}>
                                 <span>
-                                  {journalRun.journal_name} · {formatCategory(journalRun.source_category)}
+                                  {journalRun.journal_name}
                                 </span>
-                                <strong>{journalRun.fetched_count} papers</strong>
+                                <strong>{journalRun.fetched_count} DOI-indexed papers</strong>
                               </li>
                             ))}
                           </ul>
@@ -93,7 +93,7 @@ export function SyncRunsPage() {
                             {failedRuns.map((journalRun) => (
                               <li key={`${journalRun.journal_id}-${journalRun.source_category}`}>
                                 <span>
-                                  {journalRun.journal_name} · {formatCategory(journalRun.source_category)}
+                                  {journalRun.journal_name}
                                 </span>
                                 <p>{journalRun.error_message}</p>
                               </li>
@@ -108,7 +108,7 @@ export function SyncRunsPage() {
                           <ul>
                             {unchangedRuns.map((journalRun) => (
                               <li key={`${journalRun.journal_id}-${journalRun.source_category}`}>
-                                {journalRun.journal_name} · {formatCategory(journalRun.source_category)}
+                                {journalRun.journal_name}
                               </li>
                             ))}
                           </ul>
@@ -117,12 +117,12 @@ export function SyncRunsPage() {
                     </div>
                   </div>
                   <div className="sync-meta">
-                    <strong>{run.id.slice(0, 8)}</strong>
-                    <span>{run.triggered_by}</span>
+                    <strong>{latestRun.id.slice(0, 8)}</strong>
+                    <span>{latestRun.triggered_by}</span>
                   </div>
                 </article>
               );
-            })
+            })()
           ) : (
             <EmptyState label="No sync runs recorded yet." />
           )}

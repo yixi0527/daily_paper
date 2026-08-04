@@ -22,12 +22,6 @@ def build_parser() -> argparse.ArgumentParser:
     sync_parser = subparsers.add_parser("sync", help="Run synchronization")
     sync_parser.add_argument("--all", action="store_true", help="Sync all journals")
     sync_parser.add_argument("--journal", type=str, help="Sync a specific journal slug")
-    sync_parser.add_argument(
-        "--category",
-        choices=["current_issue", "online_first"],
-        action="append",
-        help="Limit sync to one or more categories",
-    )
     sync_parser.add_argument("--triggered-by", default="cli")
 
     export_parser = subparsers.add_parser("export-static", help="Export data for GitHub Pages")
@@ -60,7 +54,6 @@ def main() -> None:
             run = SyncOrchestrationService().run(
                 db,
                 journal_slug=args.journal,
-                categories=args.category,
                 triggered_by=args.triggered_by,
             )
             print(f"Sync run completed: {run.id} [{run.status}]")

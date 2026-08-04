@@ -21,15 +21,13 @@ class SyncOrchestrationService:
         db: Session,
         *,
         journal_slug: str | None = None,
-        categories: list[str] | None = None,
         triggered_by: str = "manual",
     ) -> SyncRun:
-        requested_categories = categories or ["current_issue", "online_first"]
         run = SyncRun(
             triggered_by=triggered_by,
             scope=journal_slug or "all",
             requested_journal_slug=journal_slug,
-            requested_category=",".join(requested_categories),
+            requested_category="doi",
             status="running",
         )
         db.add(run)
@@ -47,52 +45,52 @@ class SyncOrchestrationService:
         if journal_slug:
             query = query.where(Journal.slug == journal_slug)
         journals = db.scalars(query).all()
-        run.total_journals = len(journals) * len(requested_categories)
+        run.total_journals = len(journals)
         db.commit()
 
         for journal in journals:
             adapter = self.factory.get(journal)
             current_journal_slug = journal.slug
-            for category in requested_categories:
-                started_at = datetime.now(tz=UTC)
-                journal_run = SyncRunJournal(
-                    sync_run_id=run.id,
-                    journal_id=journal.id,
-                    source_category=category,
-                    status="running",
-                    attempts=1,
-                    started_at=started_at,
+            started_at = datetime.now(tz=UTC)
+            journal_run = SyncRunJournal(
+                sync_run_id=run.id,
+                journal_id=journal.id,
+                source_category="doi",
+                status="running",
+                attempts=1,
+                started_at=started_at,
+            )
+            db.add(journal_run)
+            db.commit()
+            try:
+                result = adapter.sync_journal(db, journal)
+                journal_run.source_name = result["source_name"]
+                journal_run.status = result["status"]
+                journal_run.fetched_count = result["fetched"]
+                journal_run.inserted_count = result["inserted"]
+                journal_run.updated_count = result["updated"]
+                journal_run.skipped_count = result["skipped"]
+                journal_run.finished_at = datetime.now(tz=UTC)
+                journal_run.duration_ms = int(
+                    (journal_run.finished_at - started_at).total_seconds() * 1000
                 )
-                db.add(journal_run)
+                run.total_processed += 1
+                run.total_fetched += result["fetched"]
+                run.total_inserted += result["inserted"]
+                run.total_updated += result["updated"]
                 db.commit()
-                try:
-                    result = adapter.sync_category(db, journal, category)
-                    journal_run.source_name = result["source_name"]
-                    journal_run.status = result["status"]
-                    journal_run.fetched_count = result["fetched"]
-                    journal_run.inserted_count = result["inserted"]
-                    journal_run.updated_count = result["updated"]
-                    journal_run.finished_at = datetime.now(tz=UTC)
-                    journal_run.duration_ms = int(
-                        (journal_run.finished_at - started_at).total_seconds() * 1000
-                    )
-                    run.total_processed += 1
-                    run.total_fetched += result["fetched"]
-                    run.total_inserted += result["inserted"]
-                    run.total_updated += result["updated"]
-                    db.commit()
-                except Exception as exc:  # noqa: BLE001
-                    db.rollback()
-                    logger.exception("Journal sync failed: %s / %s", current_journal_slug, category)
-                    journal_run.status = "failed"
-                    journal_run.error_message = str(exc)
-                    journal_run.failed_count = 1
-                    journal_run.finished_at = datetime.now(tz=UTC)
-                    journal_run.duration_ms = int(
-                        (journal_run.finished_at - started_at).total_seconds() * 1000
-                    )
-                    run.total_failed += 1
-                    db.commit()
+            except Exception as exc:  # noqa: BLE001
+                db.rollback()
+                logger.exception("Journal sync failed: %s", current_journal_slug)
+                journal_run.status = "failed"
+                journal_run.error_message = str(exc)
+                journal_run.failed_count = 1
+                journal_run.finished_at = datetime.now(tz=UTC)
+                journal_run.duration_ms = int(
+                    (journal_run.finished_at - started_at).total_seconds() * 1000
+                )
+                run.total_failed += 1
+                db.commit()
 
         run.finished_at = datetime.now(tz=UTC)
         run.status = "success" if run.total_failed == 0 else "partial_success"

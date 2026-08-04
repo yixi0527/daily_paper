@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from collections.abc import Iterable
 from datetime import UTC, datetime
 from typing import Any
 
@@ -19,7 +18,7 @@ from app.services.pubmed import PubMedClientService
 from app.services.rss_parser import RSSParserService
 from app.services.types import FetchResult, NormalizedArticle, SourceSpec
 from app.utils.text import payload_checksum, slugify
-from sqlalchemy import or_, select
+from sqlalchemy import select
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
@@ -51,14 +50,8 @@ class PublisherAdapter(ABC):
             pubmed=PubMedClientService(self.http),
         )
 
-    def fetch_current_issue(self, db: Session, journal: Journal) -> FetchResult:
-        return self._fetch_category(db, journal, "current_issue")
-
-    def fetch_online_first(self, db: Session, journal: Journal) -> FetchResult:
-        return self._fetch_category(db, journal, "online_first")
-
     @abstractmethod
-    def build_sources_for_category(self, journal: Journal, category: str) -> list[SourceSpec]:
+    def build_sources(self, journal: Journal) -> list[SourceSpec]:
         raise NotImplementedError
 
     def normalize_article(
@@ -92,16 +85,14 @@ class PublisherAdapter(ABC):
         inserted = 0
         updated = 0
         for item in articles:
-            first_author = item.authors[0].full_name if item.authors else None
             doi = self.dedup.normalize_doi(item.doi)
+            if doi is None:
+                continue
+            first_author = item.authors[0].full_name if item.authors else None
             fallback_hash = self.dedup.build_fallback_hash(
                 item.title, first_author, item.published_at
             )
-            query = select(Article).where(Article.dedup_hash == fallback_hash)
-            if doi:
-                query = select(Article).where(
-                    or_(Article.doi == doi, Article.dedup_hash == fallback_hash)
-                )
+            query = select(Article).where(Article.doi == doi)
             existing = db.scalar(query)
             checksum = payload_checksum(item.raw_payload or {})
 
@@ -224,11 +215,11 @@ class PublisherAdapter(ABC):
             raise
         return {"inserted": inserted, "updated": updated}
 
-    def sync_category(self, db: Session, journal: Journal, category: str) -> dict[str, Any]:
+    def sync_journal(self, db: Session, journal: Journal) -> dict[str, Any]:
         last_error: Exception | None = None
         journal_slug = journal.slug
-        for source in self.build_sources_for_category(journal, category):
-            state = self._get_or_create_state(db, journal, source, category)
+        for source in self.build_sources(journal):
+            state = self._get_or_create_state(db, journal, source)
             try:
                 result = self._fetch_by_source(db, journal, source, state)
                 if result.not_modified:
@@ -239,22 +230,23 @@ class PublisherAdapter(ABC):
                         "fetched": 0,
                         "inserted": 0,
                         "updated": 0,
+                        "skipped": 0,
                     }
                 if not result.items:
                     logger.warning(
-                        "Source %s returned no items for %s [%s], trying fallback if available",
+                        "Source %s returned no items for %s",
                         source.name,
                         journal.slug,
-                        category,
                     )
                     self._mark_state_checked(db, state, status_code=result.status_code)
                     continue
                 normalized = []
-                for raw_item in self._filter_items(journal, result.items, category, source.kind):
+                skipped_without_doi = 0
+                for raw_item in result.items:
                     article = self.normalize_article(
                         journal,
                         raw_item,
-                        category=category,
+                        category="doi",
                         source_name=source.name,
                         source_kind=source.kind,
                     )
@@ -265,22 +257,26 @@ class PublisherAdapter(ABC):
                             source_kind=source.kind,
                         )
                     if article and self.content_policy.is_substantive(article):
+                        article.doi = self.dedup.normalize_doi(article.doi)
+                        if article.doi is None:
+                            skipped_without_doi += 1
+                            continue
                         normalized.append(article)
                 counts = self.upsert_articles(db, journal, normalized)
                 self._mark_state_success(db, state, result, normalized)
                 return {
                     "status": "success",
                     "source_name": source.name,
-                    "fetched": len(result.items),
+                    "fetched": len(normalized),
                     "inserted": counts["inserted"],
                     "updated": counts["updated"],
+                    "skipped": skipped_without_doi,
                 }
             except Exception as exc:  # noqa: BLE001
                 db.rollback()
                 logger.exception(
-                    "Sync failed for %s [%s] via %s",
+                    "Sync failed for %s via %s",
                     journal_slug,
-                    category,
                     source.name,
                 )
                 last_error = exc
@@ -294,21 +290,8 @@ class PublisherAdapter(ABC):
             "fetched": 0,
             "inserted": 0,
             "updated": 0,
+            "skipped": 0,
         }
-
-    def _fetch_category(self, db: Session, journal: Journal, category: str) -> FetchResult:
-        sources = self.build_sources_for_category(journal, category)
-        if not sources:
-            return FetchResult(
-                source_name="none",
-                source_kind="none",
-                source_url=None,
-                items=[],
-                payload_format="none",
-                status_code=None,
-            )
-        state = self._get_or_create_state(db, journal, sources[0], category)
-        return self._fetch_by_source(db, journal, sources[0], state)
 
     def _fetch_by_source(
         self,
@@ -382,36 +365,16 @@ class PublisherAdapter(ABC):
 
         raise ValueError(f"Unknown source kind: {source.kind}")
 
-    def _filter_items(
-        self,
-        journal: Journal,
-        items: Iterable[dict[str, Any]],
-        category: str,
-        source_kind: str,
-    ) -> list[dict[str, Any]]:
-        if source_kind != "crossref":
-            return list(items)
-        filtered = []
-        for item in items:
-            has_issue = bool(item.get("issue") or item.get("volume") or item.get("published-print"))
-            has_online = bool(item.get("published-online") or item.get("published"))
-            if category == "current_issue" and has_issue:
-                filtered.append(item)
-            elif category == "online_first" and has_online and not has_issue:
-                filtered.append(item)
-        return filtered or list(items)
-
     def _get_or_create_state(
         self,
         db: Session,
         journal: Journal,
         source: SourceSpec,
-        category: str,
     ) -> SourceState:
         state = db.scalar(
             select(SourceState).where(
                 SourceState.journal_id == journal.id,
-                SourceState.source_category == category,
+                SourceState.source_category == "doi",
                 SourceState.source_name == source.name,
             )
         )
@@ -419,7 +382,7 @@ class PublisherAdapter(ABC):
             return state
         state = SourceState(
             journal_id=journal.id,
-            source_category=category,
+            source_category="doi",
             source_name=source.name,
             source_url=source.url,
         )
