@@ -46,38 +46,33 @@ export function ArticlesPage() {
   const activeFilterCount = [filters.journal, filters.author].filter(Boolean).length;
 
   if (articlesQuery.isLoading || journalsQuery.isLoading)
-    return <LoadingState label="Loading article index…" />;
+    return <LoadingState label="Loading articles…" />;
   if (
     articlesQuery.isError ||
     journalsQuery.isError ||
     !articlesQuery.data ||
     !journalsQuery.data
   ) {
-    return <ErrorState label="Article index could not be loaded." />;
+    return <ErrorState label="Articles could not be loaded." />;
   }
 
   return (
     <div className="page-stack">
-      <section className="page-header compact-page-header">
-        <div>
-          <p className="eyebrow">Article index</p>
-          <h2>{articlesQuery.data.meta.total} matching papers</h2>
-        </div>
-        <div className="header-actions">
-          <span className="mode-pill">
-            <Filter size={15} strokeWidth={2.1} aria-hidden="true" />
-            {activeFilterCount} active filters
-          </span>
-          {activeFilterCount ? (
-            <button type="button" className="ghost-button" onClick={clearFilters}>
-              <X size={16} strokeWidth={2.2} aria-hidden="true" />
-              Clear
-            </button>
-          ) : null}
-        </div>
-      </section>
-
       <section className="filter-panel">
+        <div className="filter-toolbar">
+          <div className="header-actions">
+            <span className="mode-pill">
+              <Filter size={15} strokeWidth={2.1} aria-hidden="true" />
+              {activeFilterCount} active filters
+            </span>
+            {activeFilterCount ? (
+              <button type="button" className="ghost-button" onClick={clearFilters}>
+                <X size={16} strokeWidth={2.2} aria-hidden="true" />
+                Clear
+              </button>
+            ) : null}
+          </div>
+        </div>
         <div className="filter-grid">
           <label className="field">
             <span>Journal</span>

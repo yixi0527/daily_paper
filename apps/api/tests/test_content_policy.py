@@ -25,6 +25,10 @@ def test_content_policy_excludes_non_substantive_types_and_titles() -> None:
         title="Correction to: Large-scale cortical dynamics during memory retrieval",
         article_type="Article",
     )
+    assert not service.is_substantive_fields(
+        title="Correction: Large-scale cortical dynamics during memory retrieval",
+        article_type="Article",
+    )
 
 
 def test_content_policy_excludes_blocked_lifeline_article() -> None:

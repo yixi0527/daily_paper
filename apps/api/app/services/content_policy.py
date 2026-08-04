@@ -77,6 +77,7 @@ class ContentPolicyService:
         "this week in",
         "[editorial]",
     )
+    EXCLUDED_TITLE_PREFIXES = ("correction:",)
 
     def is_substantive(self, article: NormalizedArticle) -> bool:
         return self.is_substantive_fields(
@@ -99,6 +100,8 @@ class ContentPolicyService:
         if doi in self.EXCLUDED_ARTICLE_DOIS:
             return False
         if title in self.EXCLUDED_EXACT_TITLES:
+            return False
+        if any(title.startswith(prefix) for prefix in self.EXCLUDED_TITLE_PREFIXES):
             return False
         if article_type in self.EXCLUDED_ARTICLE_TYPES:
             return False
@@ -125,6 +128,8 @@ class ContentPolicyService:
                 clause,
                 not_(title.in_(sorted(self.EXCLUDED_EXACT_TITLES))),
             )
+        for prefix in self.EXCLUDED_TITLE_PREFIXES:
+            clause = and_(clause, not_(title.like(f"{prefix}%")))
         if self.EXCLUDED_ARTICLE_TYPES:
             clause = and_(clause, not_(article_type.in_(sorted(self.EXCLUDED_ARTICLE_TYPES))))
         if self.EXCLUDED_ARTICLE_TYPE_PATTERNS:

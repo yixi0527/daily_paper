@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, CalendarDays, ExternalLink, FileText } from 'lucide-react';
+import { CalendarDays, ExternalLink } from 'lucide-react';
 import type { ArticleListItem } from '../api/types';
 import { formatDate } from '../lib/utils';
 import { ArticleTranslationToggle } from './ArticleTranslationToggle';
@@ -46,11 +46,6 @@ export function ArticleCard({ article }: { article: ArticleListItem }) {
           Publisher
           <ExternalLink size={15} strokeWidth={2} aria-hidden="true" />
         </a>
-        <Link to={`/articles/${article.id}`} className="detail-link">
-          <FileText size={15} strokeWidth={2} aria-hidden="true" />
-          Details
-          <ArrowRight size={15} strokeWidth={2} aria-hidden="true" />
-        </Link>
       </div>
     </article>
   );

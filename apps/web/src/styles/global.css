@@ -303,9 +303,15 @@ select:focus-visible {
 
 .filter-panel {
   position: sticky;
-  top: 88px;
+  top: 72px;
   z-index: 8;
   padding: 0.85rem;
+}
+
+.filter-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
 }
 
 .panel,
@@ -933,10 +939,6 @@ mark {
 
   .mode-pill {
     justify-self: start;
-  }
-
-  .filter-panel {
-    position: static;
   }
 
   .stats-grid,
