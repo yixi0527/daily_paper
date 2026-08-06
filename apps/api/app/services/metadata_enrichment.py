@@ -136,14 +136,15 @@ class MetadataEnrichmentService:
             base.print_published_at = fallback.print_published_at
         return base
 
+    @staticmethod
     def _needs_crossref_enrichment(
-        self, article: NormalizedArticle, *, source_kind: str
+        article: NormalizedArticle, *, source_kind: str
     ) -> bool:
-        if source_kind != "crossref" and (
+        if source_kind == "crossref":
+            return False
+        return (
             not article.abstract
             or not article.authors
             or not article.article_type
             or article.article_type.lower() == "journal-article"
-        ):
-            return True
-        return source_kind == "crossref" and not article.abstract
+        )
