@@ -2,8 +2,7 @@ from datetime import date
 from zoneinfo import ZoneInfo
 
 import pytest
-
-from scripts.verify_pages_deployment import validate_metadata
+from app.services.deployment_metadata import validate_metadata
 
 
 def deployment_metadata() -> dict:
