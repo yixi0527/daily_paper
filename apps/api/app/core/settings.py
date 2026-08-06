@@ -41,13 +41,39 @@ class Settings(BaseSettings):
     sync_lookback_days: int = Field(default=60, alias="SYNC_LOOKBACK_DAYS")
     sync_max_pages: int = Field(default=5, alias="SYNC_MAX_PAGES")
     sync_http_timeout: int = Field(default=30, alias="SYNC_HTTP_TIMEOUT")
-    sync_retry_attempts: int = Field(default=4, alias="SYNC_RETRY_ATTEMPTS")
-    sync_min_interval_seconds: float = Field(default=1.5, alias="SYNC_MIN_INTERVAL_SECONDS")
+    sync_retry_attempts: int = Field(default=5, ge=1, alias="SYNC_RETRY_ATTEMPTS")
+    sync_retry_max_backoff_seconds: float = Field(
+        default=10,
+        gt=0,
+        alias="SYNC_RETRY_MAX_BACKOFF_SECONDS",
+    )
+    sync_rate_limit_backoff_seconds: float = Field(
+        default=10,
+        gt=0,
+        alias="SYNC_RATE_LIMIT_BACKOFF_SECONDS",
+    )
+    sync_rate_limit_max_backoff_seconds: float = Field(
+        default=60,
+        gt=0,
+        alias="SYNC_RATE_LIMIT_MAX_BACKOFF_SECONDS",
+    )
+    sync_min_interval_seconds: float = Field(
+        default=1.5,
+        ge=0,
+        alias="SYNC_MIN_INTERVAL_SECONDS",
+    )
     http_user_agent: str = Field(
-        default="DailyPaperTracker/1.0 (+https://github.com/your-org/daily_paper)",
+        default=(
+            "DailyPaperTracker/1.0 "
+            "(+https://github.com/yixi0527/daily_paper; "
+            "mailto:yixi0527@users.noreply.github.com)"
+        ),
         alias="HTTP_USER_AGENT",
     )
-    crossref_mailto: str = Field(default="research@example.com", alias="CROSSREF_MAILTO")
+    crossref_mailto: str = Field(
+        default="yixi0527@users.noreply.github.com",
+        alias="CROSSREF_MAILTO",
+    )
     run_scheduler: bool = Field(default=False, alias="RUN_SCHEDULER")
     export_static_data_dir: str = Field(
         default="apps/web/public/data",
