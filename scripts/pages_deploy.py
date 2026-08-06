@@ -8,29 +8,18 @@ import sys
 import urllib.request
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Literal
+from typing import Any
 from zoneinfo import ZoneInfo
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 API_ROOT = PROJECT_ROOT / "apps" / "api"
-REGISTRY_PATH = "packages/shared/data/article_registry.json"
-ZERO_SHA = "0" * 40
+if not API_ROOT.is_dir():
+    raise FileNotFoundError(API_ROOT)
+sys.path.insert(0, str(API_ROOT))
+
+from app.services.pages_mode import ZERO_SHA, deployment_mode  # noqa: E402
+
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
-
-
-def deployment_mode(
-    *,
-    event_name: str,
-    before_sha: str,
-    changed_paths: list[str],
-) -> Literal["full", "translations"]:
-    if event_name not in {"push", "schedule", "workflow_dispatch"}:
-        raise ValueError(f"Unsupported GitHub event: {event_name}")
-    if event_name != "push" or before_sha == ZERO_SHA:
-        return "full"
-    if not changed_paths:
-        raise ValueError("Push event contains no changed paths")
-    return "translations" if set(changed_paths) == {REGISTRY_PATH} else "full"
 
 
 def determine_mode(args: argparse.Namespace) -> None:
@@ -81,11 +70,8 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
 
 
 def refresh_translations(args: argparse.Namespace) -> None:
-    if not API_ROOT.is_dir():
-        raise FileNotFoundError(API_ROOT)
     if not args.registry.is_file():
         raise FileNotFoundError(args.registry)
-    sys.path.insert(0, str(API_ROOT))
     from app.services.static_translation_refresh import (  # noqa: PLC0415
         refresh_static_translation_payload,
     )

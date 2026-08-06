@@ -5,9 +5,8 @@ from zoneinfo import ZoneInfo
 
 import pytest
 from app.services.article_registry import text_sha256
+from app.services.pages_mode import ZERO_SHA, deployment_mode
 from app.services.static_translation_refresh import refresh_static_translation_payload
-
-from scripts.pages_deploy import ZERO_SHA, deployment_mode
 
 
 def write_registry(path: Path, *, title_hash: str | None = None) -> None:
