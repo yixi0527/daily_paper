@@ -1,12 +1,12 @@
 name: Daily Pages Sync
 
-on:
+"on":
   push:
     branches:
       - main
   schedule:
-    # 17:00 UTC = 01:00 Asia/Shanghai (next day)
-    - cron: "0 17 * * *"
+    # 17:23 UTC = 01:23 Asia/Shanghai (next day). The off-hour minute reduces queue delay.
+    - cron: "23 17 * * *"
   workflow_dispatch:
 
 permissions:
@@ -16,28 +16,32 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     env:
       DATABASE_URL: sqlite:///./data/pages.db
       VITE_APP_MODE: static
       APP_DEBUG: "false"
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "24"
           cache: "npm"
 
       - name: Configure Pages
@@ -45,30 +49,25 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
           python -m pip install -e .
-          npm install
+          npm ci
 
       - name: Prepare database and seed
         run: |
           mkdir -p data
-          python - <<'PY'
-          from pathlib import Path
-          from alembic import command
-          from alembic.config import Config
-
-          root = Path.cwd()
-          config = Config(str(root / "apps/api/alembic.ini"))
-          config.set_main_option("script_location", str(root / "apps/api/alembic"))
-          command.upgrade(config, "head")
-          PY
+          python scripts/run_alembic.py upgrade head
           python -m app.cli seed-journals
 
       - name: Run synchronization
-        run: python -m app.cli sync --all --triggered-by github-pages
+        run: python -m app.cli sync --all --triggered-by github-pages --require-complete
 
       - name: Export static data
-        run: python -m app.cli export-static --output apps/web/public/data
+        run: |
+          python -m app.cli export-static \
+            --output apps/web/public/data \
+            --source-revision "${GITHUB_SHA}" \
+            --source-event "${GITHUB_EVENT_NAME}" \
+            --workflow-run-id "${GITHUB_RUN_ID}"
 
       - name: Build static site
         env:
@@ -82,4 +81,5 @@ jobs:
           path: apps/web/dist
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4

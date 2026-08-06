@@ -16,8 +16,10 @@ depends_on: str | Sequence[str] | None = None
 
 
 def upgrade() -> None:
-    op.drop_constraint("uq_articles_dedup_hash", "articles", type_="unique")
+    with op.batch_alter_table("articles") as batch_op:
+        batch_op.drop_constraint("uq_articles_dedup_hash", type_="unique")
 
 
 def downgrade() -> None:
-    op.create_unique_constraint("uq_articles_dedup_hash", "articles", ["dedup_hash"])
+    with op.batch_alter_table("articles") as batch_op:
+        batch_op.create_unique_constraint("uq_articles_dedup_hash", ["dedup_hash"])

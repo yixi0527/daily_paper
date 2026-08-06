@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from datetime import UTC, datetime
 from pathlib import Path
 
 from app.api.routes.helpers import serialize_article_detail
@@ -13,9 +14,15 @@ from app.schemas.sync import SyncRunOut
 from app.services.article_registry import ArticleRegistryService
 from app.services.content_policy import ContentPolicyService
 from app.services.dashboard import DashboardService
+from app.utils.dates import ensure_utc
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy import desc, select
 from sqlalchemy.orm import Session, joinedload
+
+
+def utc_isoformat(value: datetime | None) -> str | None:
+    normalized = ensure_utc(value)
+    return normalized.isoformat() if normalized is not None else None
 
 
 class StaticExportService:
@@ -24,7 +31,15 @@ class StaticExportService:
         self.content_policy = ContentPolicyService()
         self.article_registry = ArticleRegistryService()
 
-    def export(self, db: Session, output: Path) -> Path:
+    def export(
+        self,
+        db: Session,
+        output: Path,
+        *,
+        source_revision: str | None = None,
+        source_event: str | None = None,
+        workflow_run_id: str | None = None,
+    ) -> Path:
         output.mkdir(parents=True, exist_ok=True)
         journals = (
             db.scalars(
@@ -96,18 +111,36 @@ class StaticExportService:
             json.dumps(payload, ensure_ascii=False, indent=2, default=str),
             encoding="utf-8",
         )
+        latest_sync = sync_runs[0] if sync_runs else None
+        sync_metadata = (
+            {
+                "run_id": latest_sync.id,
+                "status": latest_sync.status,
+                "started_at": utc_isoformat(latest_sync.started_at),
+                "finished_at": utc_isoformat(latest_sync.finished_at),
+                "total_journals": latest_sync.total_journals,
+                "total_processed": latest_sync.total_processed,
+                "total_failed": latest_sync.total_failed,
+            }
+            if latest_sync is not None
+            else None
+        )
         (output / "metadata.json").write_text(
             json.dumps(
                 {
-                    "generated_at": str(
-                        max((run.finished_at for run in sync_runs if run.finished_at), default=None)
-                    ),
+                    "schema_version": 1,
+                    "generated_at": datetime.now(tz=UTC).isoformat(),
                     "article_count": len(payload["articles"]),
                     "journal_count": len(journals),
+                    "sync": sync_metadata,
+                    "deployment": {
+                        "source_revision": source_revision,
+                        "source_event": source_event,
+                        "workflow_run_id": workflow_run_id,
+                    },
                 },
                 ensure_ascii=False,
                 indent=2,
-                default=str,
             ),
             encoding="utf-8",
         )

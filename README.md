@@ -122,8 +122,11 @@ Core backend services:
 │       └── config/
 │           └── journals.json
 ├── scripts/
+│   ├── article_registry.py
 │   ├── bootstrap.ps1
 │   ├── bootstrap.sh
+│   ├── run_codex_translation.py
+│   ├── verify_pages_deployment.py
 │   └── run_alembic.py
 ├── .env.example
 ├── docker-compose.yml
@@ -275,6 +278,10 @@ The scheduler can run either:
 - as a standalone container via `docker-compose`
 - inside the API process if `RUN_SCHEDULER=true`
 
+This scheduler serves a persistent API database. The GitHub Pages mirror and the local Spark
+translation task use the separate sequence documented in
+[`docs/automation-runbook.md`](docs/automation-runbook.md).
+
 ## Docker deployment
 
 ```bash
@@ -300,12 +307,12 @@ This repository includes `.github/workflows/pages-sync.yml`.
 
 What it does:
 
-1. Runs every day at `22:00 UTC` which is `06:00 Asia/Shanghai`
+1. Runs every day at `17:23 UTC` which is `01:23 Asia/Shanghai` on the following calendar day
 2. Initializes a SQLite database inside the workflow
 3. Seeds the 26 journals
-4. Executes the synchronization job
+4. Executes the synchronization job and rejects every partial synchronization
 5. Merges acquisition dates and persisted Spark translations from the tracked registry
-6. Exports static JSON into `apps/web/public/data`
+6. Exports static JSON plus an exact deployment handshake into `apps/web/public/data`
 7. Builds and deploys the React app to GitHub Pages
 
 After enabling GitHub Pages in repository settings, the public link will be:
@@ -316,9 +323,14 @@ https://<OWNER>.github.io/<REPO>/
 
 That pages build is a static mirror of the latest synchronized metadata, while the FastAPI service remains the full live API deployment path.
 
-The GitHub Pages workflow performs no model calls. A local Codex scheduled task runs
-`gpt-5.3-codex-spark` after the daily Pages sync, translates only new or changed papers, commits
-the registry, and triggers the normal Pages rebuild.
+The GitHub Pages workflow performs no model calls. A local Codex scheduled task runs at `06:00`
+Asia/Shanghai with `gpt-5.3-codex-spark`. It requires the exact successful scheduled deployment
+for the current Shanghai date, translates only new or changed papers, validates the registry,
+commits that single file, and pushes it. The push triggers a second Pages run, and the local task
+verifies that the new commit is the exact revision exposed by the deployed metadata.
+
+The schedule uses minute 23 because GitHub documents heavier queue load at the start of each
+hour. The local task starts several hours later so the metadata synchronization has time to finish.
 
 ## REST API
 

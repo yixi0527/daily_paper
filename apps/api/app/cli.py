@@ -6,11 +6,30 @@ from pathlib import Path
 from app.core.logging import setup_logging
 from app.core.settings import get_settings
 from app.db.session import SessionLocal
+from app.models.sync import SyncRun
 from app.services.metadata_refresh import MetadataRefreshService
 from app.services.scheduler import SchedulerService
 from app.services.seed import SeedService
 from app.services.static_export import StaticExportService
 from app.services.sync import SyncOrchestrationService
+
+
+def require_complete_sync(run: SyncRun) -> None:
+    if run.status == "success":
+        return
+    failed_runs = [item for item in run.journal_runs if item.status == "failed"]
+    for failed_run in failed_runs:
+        if not failed_run.error_message:
+            raise ValueError(
+                f"Failed journal sync has no error message: {failed_run.journal_slug}"
+            )
+    failure_details = "; ".join(
+        f"{item.journal_slug}: {item.error_message}" for item in failed_runs
+    )
+    raise RuntimeError(
+        f"Sync run {run.id} finished with status={run.status}, "
+        f"total_failed={run.total_failed}, failures=[{failure_details}]"
+    )
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -23,9 +42,17 @@ def build_parser() -> argparse.ArgumentParser:
     sync_parser.add_argument("--all", action="store_true", help="Sync all journals")
     sync_parser.add_argument("--journal", type=str, help="Sync a specific journal slug")
     sync_parser.add_argument("--triggered-by", default="cli")
+    sync_parser.add_argument(
+        "--require-complete",
+        action="store_true",
+        help="Exit with an error when any requested journal fails",
+    )
 
     export_parser = subparsers.add_parser("export-static", help="Export data for GitHub Pages")
     export_parser.add_argument("--output", type=str, default=str(get_settings().static_export_path))
+    export_parser.add_argument("--source-revision")
+    export_parser.add_argument("--source-event")
+    export_parser.add_argument("--workflow-run-id")
 
     refresh_parser = subparsers.add_parser(
         "refresh-metadata", help="Reprocess stored payloads and refill missing metadata"
@@ -57,10 +84,18 @@ def main() -> None:
                 triggered_by=args.triggered_by,
             )
             print(f"Sync run completed: {run.id} [{run.status}]")
+            if args.require_complete:
+                require_complete_sync(run)
             return
         if args.command == "export-static":
             target = Path(args.output)
-            StaticExportService().export(db, target)
+            StaticExportService().export(
+                db,
+                target,
+                source_revision=args.source_revision,
+                source_event=args.source_event,
+                workflow_run_id=args.workflow_run_id,
+            )
             print(f"Static data exported to {target}")
             return
         if args.command == "refresh-metadata":

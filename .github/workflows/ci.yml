@@ -1,6 +1,6 @@
 name: CI
 
-on:
+"on":
   push:
     branches: ["main", "master"]
   pull_request:
@@ -15,17 +15,17 @@ jobs:
       VITE_GITHUB_PAGES_BASE: /
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "24"
           cache: "npm"
 
       - name: Install Python dependencies
@@ -34,7 +34,7 @@ jobs:
           python -m pip install -e ".[dev]"
 
       - name: Install Node dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run migrations and seed
         run: |

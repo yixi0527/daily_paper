@@ -10,7 +10,10 @@ from sqlalchemy import engine_from_config, pool
 
 config = context.config
 settings = get_settings()
-config.set_main_option("sqlalchemy.url", settings.database_url)
+database_url = config.attributes.get("database_url", settings.database_url)
+if not isinstance(database_url, str) or not database_url:
+    raise ValueError("Alembic database_url must be a non-empty string")
+config.set_main_option("sqlalchemy.url", database_url)
 
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)

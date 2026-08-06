@@ -378,3 +378,44 @@ def test_static_export_includes_translation_in_homepage_feed(db_session, tmp_pat
         assert item["title_zh"] == "记忆巩固的神经环路机制"
         assert item["abstract_zh"] == "一项关于皮层环路中记忆巩固的研究。"
         assert item["translation_model"] == "gpt-5.3-codex-spark"
+
+
+def test_static_export_writes_deployment_handshake(db_session, tmp_path) -> None:
+    sync_run = SyncRun(
+        id="sync-run-id",
+        triggered_by="github-pages",
+        scope="all",
+        status="success",
+        total_journals=26,
+        total_processed=26,
+        total_failed=0,
+        started_at=datetime(2026, 8, 6, 0, 30, tzinfo=UTC),
+        finished_at=datetime(2026, 8, 6, 1, 45, tzinfo=UTC),
+    )
+    db_session.add(sync_run)
+    db_session.commit()
+
+    StaticExportService().export(
+        db_session,
+        tmp_path,
+        source_revision="abc123",
+        source_event="schedule",
+        workflow_run_id="123456",
+    )
+
+    metadata = json.loads((tmp_path / "metadata.json").read_text(encoding="utf-8"))
+    assert metadata["schema_version"] == 1
+    assert metadata["sync"] == {
+        "run_id": "sync-run-id",
+        "status": "success",
+        "started_at": "2026-08-06T00:30:00+00:00",
+        "finished_at": "2026-08-06T01:45:00+00:00",
+        "total_journals": 26,
+        "total_processed": 26,
+        "total_failed": 0,
+    }
+    assert metadata["deployment"] == {
+        "source_revision": "abc123",
+        "source_event": "schedule",
+        "workflow_run_id": "123456",
+    }
