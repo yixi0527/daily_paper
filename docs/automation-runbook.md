@@ -6,7 +6,7 @@
 | --- | --- | --- |
 | 01:23 daily | GitHub Actions | Fetch DOI-indexed metadata, require all journals to succeed, export static data, deploy Pages |
 | 06:00 daily | Local Codex automation | Verify that exact scheduled deployment, translate pending records with `gpt-5.3-codex-spark`, validate and push the registry |
-| After the registry push | GitHub Actions | Rebuild the Pages mirror from the pushed translation revision |
+| After the registry push | GitHub Actions | Refresh translations from the healthy Pages snapshot and deploy the pushed registry revision |
 | End of the local run | Local Codex automation | Verify the exact push-triggered deployment and report the result |
 
 The FastAPI scheduler configured by `SYNC_HOUR` and `SYNC_MINUTE` operates a persistent API
@@ -14,13 +14,27 @@ database. It has no role in the Pages-to-Spark handshake.
 
 ## GitHub synchronization contract
 
-`.github/workflows/pages-sync.yml` performs these stages in order:
+`.github/workflows/pages-sync.yml` first classifies the deployment:
+
+- `schedule`, `workflow_dispatch`, branch creation, and any push containing files beyond the
+  translation registry use `full` mode;
+- a push whose exact diff is only `packages/shared/data/article_registry.json` uses
+  `translations` mode.
+
+Full mode performs these stages in order:
 
 1. Upgrade a fresh SQLite database to the single Alembic head.
 2. Seed the tracked journal configuration.
 3. Run every journal synchronization with `--require-complete`.
 4. Export `site-data.json` and `metadata.json`.
 5. Build and deploy the static site.
+
+Translations mode downloads the currently deployed `site-data.json` and `metadata.json`, requires
+the underlying synchronization to be successful and current for the Shanghai calendar date,
+requires every deployed article to have a current source-hash-matched registry entry, refreshes
+the full article list and dashboard article list, records both the base deployment and translation
+deployment revisions, then builds and deploys. It does not contact journal, publisher, PubMed, or
+Crossref endpoints.
 
 `metadata.json` records:
 
@@ -55,6 +69,7 @@ metadata endpoint with that workflow run ID and revision.
 
 - Migration graph errors stop database preparation.
 - Any failed journal stops the Pages publication.
+- A stale base deployment or stale/missing registry translation stops translation-only publication.
 - A stale, delayed, failed, or mismatched scheduled deployment stops local translation.
 - Invalid or incomplete translation output stops the merge.
 - Test, commit, push, redeploy, or final deployment verification failure stops the local task.

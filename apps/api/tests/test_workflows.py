@@ -33,6 +33,9 @@ def test_pages_workflow_encodes_the_sync_deployment_contract() -> None:
     assert step_by_name(workflow, "build-and-deploy", "Checkout")["uses"] == (
         "actions/checkout@v6"
     )
+    assert step_by_name(workflow, "build-and-deploy", "Checkout")["with"][
+        "fetch-depth"
+    ] == 0
     assert step_by_name(workflow, "build-and-deploy", "Setup Python")["uses"] == (
         "actions/setup-python@v6"
     )
@@ -42,9 +45,15 @@ def test_pages_workflow_encodes_the_sync_deployment_contract() -> None:
     assert "npm ci" in step_by_name(workflow, "build-and-deploy", "Install dependencies")[
         "run"
     ]
+    assert "scripts/pages_deploy.py mode" in step_by_name(
+        workflow, "build-and-deploy", "Determine deployment mode"
+    )["run"]
     assert "scripts/run_alembic.py upgrade head" in step_by_name(
         workflow, "build-and-deploy", "Prepare database and seed"
     )["run"]
+    assert step_by_name(workflow, "build-and-deploy", "Prepare database and seed")[
+        "if"
+    ] == "steps.mode.outputs.mode == 'full'"
     assert "--require-complete" in step_by_name(
         workflow, "build-and-deploy", "Run synchronization"
     )["run"]
@@ -55,6 +64,11 @@ def test_pages_workflow_encodes_the_sync_deployment_contract() -> None:
         "--workflow-run-id",
     ):
         assert required_argument in export_command
+    refresh_step = step_by_name(
+        workflow, "build-and-deploy", "Refresh static translations"
+    )
+    assert refresh_step["if"] == "steps.mode.outputs.mode == 'translations'"
+    assert "refresh-translations" in refresh_step["run"]
 
 
 def test_ci_uses_reproducible_node_install_and_single_head_migration() -> None:
