@@ -1,5 +1,7 @@
 import json
 from datetime import UTC, datetime
+from pathlib import Path
+from runpy import run_path
 
 from app.services.article_registry import (
     ArticleRegistryService,
@@ -7,8 +9,6 @@ from app.services.article_registry import (
     display_date,
     text_sha256,
 )
-
-from scripts.article_registry import build_parser
 
 
 def test_registry_resolves_persisted_translation(tmp_path) -> None:
@@ -109,7 +109,9 @@ def test_display_date_switches_to_acquisition_after_cutoff() -> None:
 
 
 def test_translation_prepare_uses_context_safe_source_limit() -> None:
-    args = build_parser().parse_args(
+    script_path = Path(__file__).resolve().parents[3] / "scripts" / "article_registry.py"
+    script_globals = run_path(str(script_path))
+    args = script_globals["build_parser"]().parse_args(
         [
             "prepare",
             "--site-data",
