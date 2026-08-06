@@ -82,7 +82,7 @@ select:focus-visible {
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: minmax(240px, 1fr) auto auto;
+  grid-template-columns: minmax(220px, 1fr) auto auto minmax(320px, 1.2fr);
   align-items: center;
   gap: 1rem;
   min-height: 72px;
@@ -90,6 +90,28 @@ select:focus-visible {
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(14px);
+}
+
+.topbar-filters {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.9fr) minmax(150px, 1.1fr) auto;
+  align-items: end;
+  gap: 0.5rem;
+}
+
+.topbar-filters .field {
+  gap: 0.2rem;
+}
+
+.topbar-filters .field span {
+  font-size: 0.68rem;
+}
+
+.topbar-filter-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 40px;
 }
 
 .brand-lockup {
@@ -937,6 +959,16 @@ mark {
     padding-bottom: 0.1rem;
   }
 
+  .topbar-filters {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topbar-filter-actions {
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+  }
+
   .mode-pill {
     justify-self: start;
   }
@@ -964,6 +996,15 @@ mark {
 
   .topbar {
     padding-inline: 0.75rem;
+  }
+
+  .topbar-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar-filter-actions {
+    grid-column: auto;
+    justify-content: flex-start;
   }
 
   .nav-list {

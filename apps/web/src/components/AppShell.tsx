@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useSearchParams } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 import {
   BookOpen,
   ChevronDown,
@@ -8,8 +9,11 @@ import {
   Newspaper,
   RefreshCw,
   Search,
+  Filter,
+  X,
   type LucideIcon,
 } from 'lucide-react';
+import { getJournals } from '../api/client';
 import { classNames } from '../lib/utils';
 
 const NAV_ITEMS = [
@@ -24,6 +28,33 @@ export function AppShell() {
   const [navigationOpen, setNavigationOpen] = useState(
     () => !window.matchMedia('(max-width: 680px)').matches,
   );
+  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const isArticlesRoute = location.pathname === '/';
+  const journalsQuery = useQuery({
+    queryKey: ['journals'],
+    queryFn: getJournals,
+    enabled: isArticlesRoute,
+  });
+  const journalFilter = searchParams.get('journal') ?? '';
+  const authorFilter = searchParams.get('author') ?? '';
+  const activeFilterCount = [journalFilter, authorFilter].filter(Boolean).length;
+
+  const updateFilter = (key: 'journal' | 'author', value: string) => {
+    const next = new URLSearchParams(searchParams);
+    if (value) next.set(key, value);
+    else next.delete(key);
+    next.set('page', '1');
+    setSearchParams(next);
+  };
+
+  const clearFilters = () => {
+    const next = new URLSearchParams(searchParams);
+    next.delete('journal');
+    next.delete('author');
+    next.delete('page');
+    setSearchParams(next);
+  };
 
   return (
     <div className="app-shell">
@@ -71,6 +102,46 @@ export function AppShell() {
             </NavLink>
           ))}
         </nav>
+
+        {isArticlesRoute && journalsQuery.data ? (
+          <div className="topbar-filters" aria-label="Article filters">
+            <label className="field">
+              <span>Journal</span>
+              <select
+                value={journalFilter}
+                onChange={(event) => updateFilter('journal', event.target.value)}
+              >
+                <option value="">All journals</option>
+                {journalsQuery.data.map((journal) => (
+                  <option key={journal.slug} value={journal.slug}>
+                    {journal.journal_name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="field">
+              <span>Author</span>
+              <input
+                type="text"
+                placeholder="Author name"
+                value={authorFilter}
+                onChange={(event) => updateFilter('author', event.target.value)}
+              />
+            </label>
+            <div className="topbar-filter-actions">
+              <span className="mode-pill">
+                <Filter size={14} strokeWidth={2.1} aria-hidden="true" />
+                {activeFilterCount}
+              </span>
+              {activeFilterCount ? (
+                <button type="button" className="ghost-button" onClick={clearFilters}>
+                  <X size={15} strokeWidth={2.2} aria-hidden="true" />
+                  Clear
+                </button>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
       </header>
 
       <main className="content-shell">

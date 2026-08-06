@@ -2,7 +2,6 @@ import { startTransition } from 'react';
 import { useMemo } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
-import { Filter, X } from 'lucide-react';
 import { getJournals, listArticles } from '../api/client';
 import { ArticleCard } from '../components/ArticleCard';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
@@ -29,7 +28,6 @@ export function ArticlesPage() {
     queryFn: () => listArticles(filters),
   });
   const journalsQuery = useQuery({ queryKey: ['journals'], queryFn: getJournals });
-
   const updateFilter = (key: string, value: string) => {
     const next = new URLSearchParams(searchParams);
     if (!value) next.delete(key);
@@ -38,12 +36,6 @@ export function ArticlesPage() {
     startTransition(() => setSearchParams(next));
     if (key === 'page') window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  const clearFilters = () => {
-    startTransition(() => setSearchParams(new URLSearchParams()));
-  };
-
-  const activeFilterCount = [filters.journal, filters.author].filter(Boolean).length;
 
   if (articlesQuery.isLoading || journalsQuery.isLoading)
     return <LoadingState label="Loading articles…" />;
@@ -58,48 +50,6 @@ export function ArticlesPage() {
 
   return (
     <div className="page-stack">
-      <section className="filter-panel">
-        <div className="filter-toolbar">
-          <div className="header-actions">
-            <span className="mode-pill">
-              <Filter size={15} strokeWidth={2.1} aria-hidden="true" />
-              {activeFilterCount} active filters
-            </span>
-            {activeFilterCount ? (
-              <button type="button" className="ghost-button" onClick={clearFilters}>
-                <X size={16} strokeWidth={2.2} aria-hidden="true" />
-                Clear
-              </button>
-            ) : null}
-          </div>
-        </div>
-        <div className="filter-grid">
-          <label className="field">
-            <span>Journal</span>
-            <select
-              value={filters.journal ?? ''}
-              onChange={(event) => updateFilter('journal', event.target.value)}
-            >
-              <option value="">All journals</option>
-              {journalsQuery.data.map((journal) => (
-                <option key={journal.slug} value={journal.slug}>
-                  {journal.journal_name}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="field">
-            <span>Author</span>
-            <input
-              type="text"
-              placeholder="Author name"
-              value={filters.author ?? ''}
-              onChange={(event) => updateFilter('author', event.target.value)}
-            />
-          </label>
-        </div>
-      </section>
-
       <section className="panel article-feed-panel">
         <div className="list-stack focused-list">
           {articlesQuery.data.items.length ? (
