@@ -8,6 +8,8 @@ from app.services.article_registry import (
     text_sha256,
 )
 
+from scripts.article_registry import build_parser
+
 
 def test_registry_resolves_persisted_translation(tmp_path) -> None:
     article_key = build_article_key(
@@ -104,3 +106,19 @@ def test_display_date_switches_to_acquisition_after_cutoff() -> None:
     assert display_date(published_at=before_cutoff, acquired_at=acquired_at) == before_cutoff
     assert display_date(published_at=after_cutoff, acquired_at=acquired_at) == acquired_at
     assert display_date(published_at=None, acquired_at=acquired_at) == acquired_at
+
+
+def test_translation_prepare_uses_context_safe_source_limit() -> None:
+    args = build_parser().parse_args(
+        [
+            "prepare",
+            "--site-data",
+            "site-data.json",
+            "--registry",
+            "article-registry.json",
+            "--work-dir",
+            "translation-work",
+        ]
+    )
+
+    assert args.max_source_chars == 9000

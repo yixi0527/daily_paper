@@ -344,7 +344,7 @@ def build_parser() -> argparse.ArgumentParser:
     prepare_parser.add_argument("--work-dir", required=True, type=Path)
     prepare_parser.add_argument("--model", default="gpt-5.3-codex-spark")
     prepare_parser.add_argument("--batch-size", type=int, default=30)
-    prepare_parser.add_argument("--max-source-chars", type=int, default=24000)
+    prepare_parser.add_argument("--max-source-chars", type=int, default=9000)
     prepare_parser.add_argument("--default-acquired-at")
     prepare_parser.set_defaults(handler=prepare)
 
