@@ -5,7 +5,7 @@
 | Time (Asia/Shanghai) | Owner | Responsibility |
 | --- | --- | --- |
 | 01:23 daily | GitHub Actions | Fetch DOI-indexed metadata, require all journals to succeed, export static data, deploy Pages |
-| 06:00 daily | Local Codex automation | Verify that exact scheduled deployment, translate pending records with `gpt-5.3-codex-spark`, validate and push the registry |
+| 06:00 and 12:00 daily | Local Codex automation | Verify that exact scheduled deployment, translate pending records with `gpt-5.3-codex-spark`, validate and push the registry |
 | After the registry push | GitHub Actions | Refresh translations from the healthy Pages snapshot and deploy the pushed registry revision |
 | End of the local run | Local Codex automation | Verify the exact push-triggered deployment and report the result |
 
@@ -27,7 +27,11 @@ Full mode performs these stages in order:
 2. Seed the tracked journal configuration.
 3. Run every journal synchronization with `--require-complete`.
 4. Export `site-data.json` and `metadata.json`.
-5. Build and deploy the static site.
+5. Build and deploy the static site with a workflow-run-specific data URL.
+
+The static export excludes stored upstream raw payloads and uses compact JSON. `metadata.json`
+records `site_data_bytes` plus complete and pending translation counts. These fields make bundle
+regressions and incomplete translation deployments machine-verifiable.
 
 Translations mode downloads the currently deployed `site-data.json` and `metadata.json`, requires
 the underlying synchronization to be successful and current for the Shanghai calendar date,
@@ -63,7 +67,13 @@ and permits only `packages/shared/data/article_registry.json` in the final diff.
 
 After pushing, the task waits for the `push`-triggered Pages workflow whose head revision equals
 the translation commit. It then runs `scripts/verify_pages_deployment.py` against the public
-metadata endpoint with that workflow run ID and revision.
+metadata endpoint with that workflow run ID and revision, requires zero pending translations,
+downloads the exact versioned `site-data.json`, and verifies every live article against the registry.
+
+The deployment verifier uses a unique query key and no-cache request headers. It can wait for one
+exact workflow identity to reach the Pages edge, which handles normal deployment propagation
+without accepting an older run. The 12:00 invocation starts as an independent run and recovers from
+a delayed 06:00 prerequisite after the earlier invocation has already terminated.
 
 ## Failure handling
 
@@ -105,5 +115,12 @@ python scripts/verify_pages_deployment.py \
   --expected-source-revision <commit-sha> \
   --expected-source-event schedule \
   --expected-sync-date <YYYY-MM-DD> \
-  --timezone Asia/Shanghai
+  --timezone Asia/Shanghai \
+  --wait-seconds 1800 \
+  --poll-seconds 30 \
+  --max-site-data-bytes 15000000
 ```
+
+For the final translation deployment, add `--require-complete-translations` and fetch
+`site-data.json` with `scripts/article_registry.py fetch --cache-key <workflow-run-id>` before
+running `scripts/article_registry.py verify`.

@@ -45,6 +45,12 @@ jobs:
       - name: Run tests
         run: pytest
 
+      - name: Run Python lint
+        run: ruff check .
+
+      - name: Run web lint
+        run: npm --workspace apps/web run lint
+
       - name: Build web app
         run: npm --workspace apps/web run build
 

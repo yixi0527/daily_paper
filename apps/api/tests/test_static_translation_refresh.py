@@ -60,6 +60,12 @@ def metadata() -> dict:
         "generated_at": "2026-08-06T04:00:00+00:00",
         "article_count": 1,
         "journal_count": 1,
+        "site_data_bytes": 1000,
+        "translations": {
+            "total_articles": 1,
+            "complete_articles": 0,
+            "pending_articles": 1,
+        },
         "sync": {
             "run_id": "sync-1",
             "status": "success",

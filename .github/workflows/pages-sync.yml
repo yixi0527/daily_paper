@@ -58,7 +58,7 @@ jobs:
           cache: "npm"
 
       - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Install dependencies
         run: |
@@ -102,13 +102,14 @@ jobs:
         env:
           VITE_GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
           VITE_STATIC_DATA_BASE: /${{ github.event.repository.name }}/data
+          VITE_STATIC_DATA_VERSION: ${{ github.run_id }}
         run: npm --workspace apps/web run build
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: apps/web/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

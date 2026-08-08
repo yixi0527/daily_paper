@@ -72,6 +72,10 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
 def refresh_translations(args: argparse.Namespace) -> None:
     if not args.registry.is_file():
         raise FileNotFoundError(args.registry)
+    from app.services.static_export import (  # noqa: PLC0415
+        encode_site_data,
+        summarize_translations,
+    )
     from app.services.static_translation_refresh import (  # noqa: PLC0415
         refresh_static_translation_payload,
     )
@@ -92,7 +96,12 @@ def refresh_translations(args: argparse.Namespace) -> None:
         generated_at=now,
     )
     args.output.mkdir(parents=True, exist_ok=True)
-    write_json(args.output / "site-data.json", refreshed_site_data)
+    site_data_content = encode_site_data(refreshed_site_data)
+    refreshed_metadata["site_data_bytes"] = len(site_data_content)
+    refreshed_metadata["translations"] = summarize_translations(
+        refreshed_site_data["articles"]
+    )
+    (args.output / "site-data.json").write_bytes(site_data_content)
     write_json(args.output / "metadata.json", refreshed_metadata)
     print(
         json.dumps(

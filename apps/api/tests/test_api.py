@@ -2,7 +2,7 @@ import json
 from datetime import UTC, datetime
 
 from app.adapters.crossref_only import CrossrefOnlyAdapter
-from app.models.article import Article, ArticleAuthor
+from app.models.article import Article, ArticleAuthor, ArticlePayload
 from app.models.journal import Journal
 from app.models.sync import SyncRun, SyncRunJournal
 from app.services.article_registry import ArticleRegistryService, build_article_key, text_sha256
@@ -418,4 +418,41 @@ def test_static_export_writes_deployment_handshake(db_session, tmp_path) -> None
         "source_revision": "abc123",
         "source_event": "schedule",
         "workflow_run_id": "123456",
+    }
+
+
+def test_static_export_omits_raw_payload_and_writes_compact_bundle(
+    db_session,
+    tmp_path,
+) -> None:
+    article = db_session.query(Article).filter_by(doi="10.1038/example-doi").one()
+    db_session.add(
+        ArticlePayload(
+            article_id=article.id,
+            journal_id=article.journal_id,
+            source_category="doi",
+            source_name="crossref",
+            payload_format="json",
+            payload_json={"unused_raw_value": "x" * 5000},
+            payload_checksum="payload-checksum",
+        )
+    )
+    db_session.commit()
+
+    StaticExportService().export(db_session, tmp_path)
+
+    site_data_content = (tmp_path / "site-data.json").read_bytes()
+    site_data = json.loads(site_data_content.decode("utf-8"))
+    metadata = json.loads((tmp_path / "metadata.json").read_text(encoding="utf-8"))
+    exported_article = next(
+        item for item in site_data["articles"] if item["doi"] == "10.1038/example-doi"
+    )
+    assert exported_article["raw_payload"] is None
+    assert b"unused_raw_value" not in site_data_content
+    assert b'\n  "' not in site_data_content
+    assert metadata["site_data_bytes"] == len(site_data_content)
+    assert metadata["translations"] == {
+        "total_articles": 1,
+        "complete_articles": 0,
+        "pending_articles": 1,
     }

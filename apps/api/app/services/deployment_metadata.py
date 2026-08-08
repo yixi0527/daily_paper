@@ -34,6 +34,8 @@ def validate_metadata(
     expected_source_event: str,
     expected_sync_date: date,
     timezone: ZoneInfo,
+    require_complete_translations: bool = False,
+    max_site_data_bytes: int | None = None,
 ) -> dict[str, Any]:
     if payload.get("schema_version") != 1:
         raise ValueError("metadata schema_version must be 1")
@@ -84,12 +86,62 @@ def validate_metadata(
             f"expected={expected_sync_date.isoformat()} actual={actual_sync_date.isoformat()}"
         )
 
+    article_count = require_integer(payload.get("article_count"), "article_count")
+    journal_count = require_integer(payload.get("journal_count"), "journal_count")
+    site_data_bytes = require_integer(payload.get("site_data_bytes"), "site_data_bytes")
+    if article_count < 1:
+        raise ValueError("article_count must be positive")
+    if journal_count < 1:
+        raise ValueError("journal_count must be positive")
+    if site_data_bytes < 1:
+        raise ValueError("site_data_bytes must be positive")
+    if max_site_data_bytes is not None and site_data_bytes > max_site_data_bytes:
+        raise ValueError(
+            "site_data_bytes exceeds the allowed maximum: "
+            f"actual={site_data_bytes} maximum={max_site_data_bytes}"
+        )
+
+    translations = require_object(payload.get("translations"), "translations")
+    translation_total = require_integer(
+        translations.get("total_articles"),
+        "translations.total_articles",
+    )
+    translation_complete = require_integer(
+        translations.get("complete_articles"),
+        "translations.complete_articles",
+    )
+    translation_pending = require_integer(
+        translations.get("pending_articles"),
+        "translations.pending_articles",
+    )
+    if min(translation_total, translation_complete, translation_pending) < 0:
+        raise ValueError("translation counts must be non-negative")
+    if translation_total != article_count:
+        raise ValueError(
+            "Translation total does not match article_count: "
+            f"translations={translation_total} articles={article_count}"
+        )
+    if translation_complete + translation_pending != translation_total:
+        raise ValueError(
+            "Translation counts are inconsistent: "
+            f"complete={translation_complete} pending={translation_pending} "
+            f"total={translation_total}"
+        )
+    if require_complete_translations and translation_pending != 0:
+        raise ValueError(
+            "Deployed translations are incomplete: "
+            f"pending_articles={translation_pending}"
+        )
+
     return {
         "workflow_run_id": expected_workflow_run_id,
         "source_revision": expected_source_revision,
         "source_event": expected_source_event,
         "sync_run_id": sync.get("run_id"),
         "sync_finished_at": sync_finished_at.isoformat(),
-        "article_count": require_integer(payload.get("article_count"), "article_count"),
-        "journal_count": require_integer(payload.get("journal_count"), "journal_count"),
+        "article_count": article_count,
+        "journal_count": journal_count,
+        "site_data_bytes": site_data_bytes,
+        "complete_translations": translation_complete,
+        "pending_translations": translation_pending,
     }

@@ -312,7 +312,7 @@ What it does:
 3. Seeds the 26 journals
 4. Executes the synchronization job and rejects every partial synchronization
 5. Merges acquisition dates and persisted Spark translations from the tracked registry
-6. Exports static JSON plus an exact deployment handshake into `apps/web/public/data`
+6. Exports compact static JSON without upstream raw payloads, plus an exact deployment handshake into `apps/web/public/data`
 7. Builds and deploys the React app to GitHub Pages
 
 After enabling GitHub Pages in repository settings, the public link will be:
@@ -324,10 +324,16 @@ https://<OWNER>.github.io/<REPO>/
 That pages build is a static mirror of the latest synchronized metadata, while the FastAPI service remains the full live API deployment path.
 
 The GitHub Pages workflow performs no model calls. A local Codex scheduled task runs at `06:00`
-Asia/Shanghai with `gpt-5.3-codex-spark`. It requires the exact successful scheduled deployment
+and `12:00` Asia/Shanghai with `gpt-5.3-codex-spark`. Each invocation requires the exact successful scheduled deployment
 for the current Shanghai date, translates only new or changed papers, validates the registry,
 commits that single file, and pushes it. The push triggers a second Pages run, and the local task
-verifies that the new commit is the exact revision exposed by the deployed metadata.
+verifies that the new commit is the exact revision exposed by the deployed metadata. The second
+daily invocation provides a fresh recovery opportunity after a delayed Pages deployment while
+every failed invocation still exits immediately with the original error.
+
+Each Pages build injects its workflow run ID into the static-data URL. This prevents a browser from
+reusing a prior day's `site-data.json` when two daily deployments share the same Git revision.
+Deployment metadata records the exact static bundle size and complete/pending translation counts.
 
 The schedule uses minute 23 because GitHub documents heavier queue load at the start of each
 hour. The local task starts several hours later so the metadata synchronization has time to finish.
@@ -412,6 +418,7 @@ Features implemented:
 - article listing with journal and author filters
 - article detail view
 - persistent Codex Spark title and abstract translations
+- deployment-versioned static data with complete translation counts
 - author/title/journal search
 - URL-synced filter state
 - collapsible primary navigation

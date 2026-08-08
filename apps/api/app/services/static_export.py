@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import Any
 
 from app.api.routes.helpers import serialize_article_detail
 from app.models.article import Article
@@ -23,6 +24,38 @@ from sqlalchemy.orm import Session, joinedload
 def utc_isoformat(value: datetime | None) -> str | None:
     normalized = ensure_utc(value)
     return normalized.isoformat() if normalized is not None else None
+
+
+def encode_site_data(payload: dict[str, Any]) -> bytes:
+    return (
+        json.dumps(
+            payload,
+            ensure_ascii=False,
+            separators=(",", ":"),
+            default=str,
+        )
+        + "\n"
+    ).encode("utf-8")
+
+
+def summarize_translations(articles: list[dict[str, Any]]) -> dict[str, int]:
+    complete_articles = 0
+    for article in articles:
+        source_abstract = article["abstract"] or article["snippet"]
+        title_is_complete = isinstance(article["title_zh"], str) and bool(
+            article["title_zh"].strip()
+        )
+        abstract_is_complete = source_abstract is None or (
+            isinstance(article["abstract_zh"], str) and bool(article["abstract_zh"].strip())
+        )
+        if title_is_complete and abstract_is_complete:
+            complete_articles += 1
+    total_articles = len(articles)
+    return {
+        "total_articles": total_articles,
+        "complete_articles": complete_articles,
+        "pending_articles": total_articles - complete_articles,
+    }
 
 
 class StaticExportService:
@@ -97,7 +130,7 @@ class StaticExportService:
                 jsonable_encoder(
                     serialize_article_detail(
                         item,
-                        include_raw=True,
+                        include_raw=False,
                         registry=self.article_registry,
                     )
                 )
@@ -107,10 +140,8 @@ class StaticExportService:
             "sync_runs": [jsonable_encoder(SyncRunOut.model_validate(item)) for item in sync_runs],
         }
 
-        (output / "site-data.json").write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2, default=str),
-            encoding="utf-8",
-        )
+        site_data_content = encode_site_data(payload)
+        (output / "site-data.json").write_bytes(site_data_content)
         latest_sync = sync_runs[0] if sync_runs else None
         sync_metadata = (
             {
@@ -132,6 +163,8 @@ class StaticExportService:
                     "generated_at": datetime.now(tz=UTC).isoformat(),
                     "article_count": len(payload["articles"]),
                     "journal_count": len(journals),
+                    "site_data_bytes": len(site_data_content),
+                    "translations": summarize_translations(payload["articles"]),
                     "sync": sync_metadata,
                     "deployment": {
                         "source_revision": source_revision,

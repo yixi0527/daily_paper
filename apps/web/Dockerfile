@@ -1,4 +1,4 @@
-FROM node:20-alpine AS build
+FROM node:24-alpine AS build
 
 WORKDIR /app
 
@@ -13,6 +13,7 @@ ENV VITE_STATIC_DATA_BASE=${VITE_STATIC_DATA_BASE}
 ENV VITE_GITHUB_PAGES_BASE=${VITE_GITHUB_PAGES_BASE}
 
 COPY package.json ./
+COPY package-lock.json ./
 COPY apps/web/package.json ./apps/web/package.json
 COPY apps/web/tsconfig.json ./apps/web/tsconfig.json
 COPY apps/web/tsconfig.app.json ./apps/web/tsconfig.app.json
@@ -20,9 +21,8 @@ COPY apps/web/vite.config.ts ./apps/web/vite.config.ts
 COPY apps/web/eslint.config.js ./apps/web/eslint.config.js
 COPY apps/web/index.html ./apps/web/index.html
 COPY apps/web/src ./apps/web/src
-COPY apps/web/public ./apps/web/public
 
-RUN npm install && npm --workspace apps/web run build
+RUN npm ci && npm --workspace apps/web run build
 
 FROM nginx:1.27-alpine
 

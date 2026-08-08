@@ -8,6 +8,7 @@ import urllib.request
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 API_ROOT = PROJECT_ROOT / "apps" / "api"
@@ -44,6 +45,23 @@ def load_registry(path: Path) -> dict[str, Any]:
     return payload
 
 
+def cache_busted_url(url: str, cache_key: str | None) -> str:
+    if cache_key is None:
+        return url
+    parts = urlsplit(url)
+    query_items = parse_qsl(parts.query, keep_blank_values=True)
+    query_items.append(("deployment", cache_key))
+    return urlunsplit(
+        (
+            parts.scheme,
+            parts.netloc,
+            parts.path,
+            urlencode(query_items),
+            parts.fragment,
+        )
+    )
+
+
 def source_abstract(article: dict[str, Any]) -> tuple[str | None, str | None]:
     if article.get("abstract"):
         return article["abstract"], "abstract"
@@ -54,8 +72,12 @@ def source_abstract(article: dict[str, Any]) -> tuple[str | None, str | None]:
 
 def fetch_site_data(args: argparse.Namespace) -> None:
     request = urllib.request.Request(
-        args.url,
-        headers={"User-Agent": "DailyPaperRegistry/1.0"},
+        cache_busted_url(args.url, args.cache_key),
+        headers={
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+            "User-Agent": "DailyPaperRegistry/1.0",
+        },
     )
     with urllib.request.urlopen(request, timeout=args.timeout) as response:
         if response.status != 200:
@@ -336,6 +358,7 @@ def build_parser() -> argparse.ArgumentParser:
     fetch_parser.add_argument("--url", required=True)
     fetch_parser.add_argument("--output", required=True, type=Path)
     fetch_parser.add_argument("--timeout", type=int, default=120)
+    fetch_parser.add_argument("--cache-key")
     fetch_parser.set_defaults(handler=fetch_site_data)
 
     prepare_parser = subparsers.add_parser("prepare")

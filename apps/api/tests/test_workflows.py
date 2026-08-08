@@ -42,6 +42,9 @@ def test_pages_workflow_encodes_the_sync_deployment_contract() -> None:
     assert step_by_name(workflow, "build-and-deploy", "Setup Node")["with"][
         "node-version"
     ] == "24"
+    assert step_by_name(workflow, "build-and-deploy", "Configure Pages")["uses"] == (
+        "actions/configure-pages@v6"
+    )
     assert "npm ci" in step_by_name(workflow, "build-and-deploy", "Install dependencies")[
         "run"
     ]
@@ -69,6 +72,15 @@ def test_pages_workflow_encodes_the_sync_deployment_contract() -> None:
     )
     assert refresh_step["if"] == "steps.mode.outputs.mode == 'translations'"
     assert "refresh-translations" in refresh_step["run"]
+    assert step_by_name(workflow, "build-and-deploy", "Upload Pages artifact")[
+        "uses"
+    ] == "actions/upload-pages-artifact@v5"
+    assert step_by_name(workflow, "build-and-deploy", "Deploy to GitHub Pages")[
+        "uses"
+    ] == "actions/deploy-pages@v5"
+    assert step_by_name(workflow, "build-and-deploy", "Build static site")["env"][
+        "VITE_STATIC_DATA_VERSION"
+    ] == "${{ github.run_id }}"
 
 
 def test_ci_uses_reproducible_node_install_and_single_head_migration() -> None:
@@ -89,3 +101,9 @@ def test_ci_uses_reproducible_node_install_and_single_head_migration() -> None:
     assert "scripts/run_alembic.py upgrade head" in step_by_name(
         workflow, "test-and-build", "Run migrations and seed"
     )["run"]
+    assert step_by_name(workflow, "test-and-build", "Run Python lint")["run"] == (
+        "ruff check ."
+    )
+    assert step_by_name(workflow, "test-and-build", "Run web lint")["run"] == (
+        "npm --workspace apps/web run lint"
+    )

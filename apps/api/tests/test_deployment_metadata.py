@@ -11,6 +11,12 @@ def deployment_metadata() -> dict:
         "generated_at": "2026-08-06T02:05:00+00:00",
         "article_count": 42,
         "journal_count": 26,
+        "site_data_bytes": 123456,
+        "translations": {
+            "total_articles": 42,
+            "complete_articles": 42,
+            "pending_articles": 0,
+        },
         "sync": {
             "run_id": "sync-run-id",
             "status": "success",
@@ -68,4 +74,34 @@ def test_validate_metadata_rejects_partial_sync() -> None:
             expected_source_event="schedule",
             expected_sync_date=date(2026, 8, 6),
             timezone=ZoneInfo("Asia/Shanghai"),
+        )
+
+
+def test_validate_metadata_can_require_complete_translations() -> None:
+    payload = deployment_metadata()
+    payload["translations"]["complete_articles"] = 41
+    payload["translations"]["pending_articles"] = 1
+
+    with pytest.raises(ValueError, match="translations are incomplete"):
+        validate_metadata(
+            payload,
+            expected_workflow_run_id="123456",
+            expected_source_revision="abc123",
+            expected_source_event="schedule",
+            expected_sync_date=date(2026, 8, 6),
+            timezone=ZoneInfo("Asia/Shanghai"),
+            require_complete_translations=True,
+        )
+
+
+def test_validate_metadata_can_reject_oversized_static_data() -> None:
+    with pytest.raises(ValueError, match="exceeds the allowed maximum"):
+        validate_metadata(
+            deployment_metadata(),
+            expected_workflow_run_id="123456",
+            expected_source_revision="abc123",
+            expected_source_event="schedule",
+            expected_sync_date=date(2026, 8, 6),
+            timezone=ZoneInfo("Asia/Shanghai"),
+            max_site_data_bytes=100000,
         )

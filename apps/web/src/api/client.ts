@@ -1,5 +1,5 @@
 import { buildQuery } from '../lib/utils';
-import { apiBaseUrl, isStaticMode, staticDataBase } from '../lib/env';
+import { apiBaseUrl, isStaticMode, staticDataUrl } from '../lib/env';
 import {
   type ArticleDetail,
   type ArticleListItem,
@@ -22,7 +22,7 @@ let siteDataPromise: Promise<SiteDataBundle> | null = null;
 
 async function loadSiteData(): Promise<SiteDataBundle> {
   if (!siteDataPromise) {
-    siteDataPromise = fetch(`${staticDataBase}/site-data.json`).then((response) => {
+    siteDataPromise = fetch(staticDataUrl('site-data.json')).then((response) => {
       if (!response.ok) throw new Error('Failed to load static data bundle');
       return response.json() as Promise<SiteDataBundle>;
     });
