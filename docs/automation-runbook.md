@@ -30,8 +30,9 @@ Full mode performs these stages in order:
 5. Build and deploy the static site with a workflow-run-specific data URL.
 
 The static export excludes stored upstream raw payloads and uses compact JSON. `metadata.json`
-records `site_data_bytes` plus complete and pending translation counts. These fields make bundle
-regressions and incomplete translation deployments machine-verifiable.
+records `site_data_bytes`, `site_data_sha256`, plus complete and pending translation counts. These
+fields make mixed-cache responses, bundle regressions, and incomplete translation deployments
+machine-verifiable.
 
 Translations mode downloads the currently deployed `site-data.json` and `metadata.json`, requires
 the underlying synchronization to be successful and current for the Shanghai calendar date,

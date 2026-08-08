@@ -7,8 +7,10 @@ import subprocess
 import sys
 import urllib.request
 from datetime import UTC, datetime
+from hashlib import sha256
 from pathlib import Path
 from typing import Any
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 from zoneinfo import ZoneInfo
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +19,7 @@ if not API_ROOT.is_dir():
     raise FileNotFoundError(API_ROOT)
 sys.path.insert(0, str(API_ROOT))
 
+from app.services.deployment_metadata import validate_site_data_integrity  # noqa: E402
 from app.services.pages_mode import ZERO_SHA, deployment_mode  # noqa: E402
 
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
@@ -48,18 +51,43 @@ def determine_mode(args: argparse.Namespace) -> None:
     print(json.dumps({"mode": mode, "changed_paths": changed_paths}))
 
 
-def fetch_json(url: str, *, timeout: int) -> dict[str, Any]:
+def cache_busted_url(url: str, cache_key: str) -> str:
+    parts = urlsplit(url)
+    query_items = parse_qsl(parts.query, keep_blank_values=True)
+    query_items.append(("deployment_refresh", cache_key))
+    return urlunsplit(
+        (
+            parts.scheme,
+            parts.netloc,
+            parts.path,
+            urlencode(query_items),
+            parts.fragment,
+        )
+    )
+
+
+def fetch_json(
+    url: str,
+    *,
+    timeout: int,
+    cache_key: str,
+) -> tuple[dict[str, Any], bytes]:
     request = urllib.request.Request(
-        url,
-        headers={"User-Agent": "DailyPaperPagesDeploy/1.0"},
+        cache_busted_url(url, cache_key),
+        headers={
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+            "User-Agent": "DailyPaperPagesDeploy/1.0",
+        },
     )
     with urllib.request.urlopen(request, timeout=timeout) as response:
         if response.status != 200:
             raise RuntimeError(f"Public data request failed with HTTP {response.status}: {url}")
-        payload = json.loads(response.read().decode("utf-8"))
+        content = response.read()
+        payload = json.loads(content.decode("utf-8"))
     if not isinstance(payload, dict):
         raise ValueError(f"Public data must be an object: {url}")
-    return payload
+    return payload, content
 
 
 def write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -82,8 +110,17 @@ def refresh_translations(args: argparse.Namespace) -> None:
 
     timezone = ZoneInfo(args.timezone)
     now = datetime.now(tz=UTC)
-    site_data = fetch_json(args.site_data_url, timeout=args.timeout)
-    metadata = fetch_json(args.metadata_url, timeout=args.timeout)
+    site_data, source_site_data_content = fetch_json(
+        args.site_data_url,
+        timeout=args.timeout,
+        cache_key=f"{args.workflow_run_id}-site-data",
+    )
+    metadata, _ = fetch_json(
+        args.metadata_url,
+        timeout=args.timeout,
+        cache_key=f"{args.workflow_run_id}-metadata",
+    )
+    validate_site_data_integrity(metadata, source_site_data_content)
     refreshed_site_data, refreshed_metadata = refresh_static_translation_payload(
         site_data,
         metadata,
@@ -98,6 +135,7 @@ def refresh_translations(args: argparse.Namespace) -> None:
     args.output.mkdir(parents=True, exist_ok=True)
     site_data_content = encode_site_data(refreshed_site_data)
     refreshed_metadata["site_data_bytes"] = len(site_data_content)
+    refreshed_metadata["site_data_sha256"] = sha256(site_data_content).hexdigest()
     refreshed_metadata["translations"] = summarize_translations(
         refreshed_site_data["articles"]
     )

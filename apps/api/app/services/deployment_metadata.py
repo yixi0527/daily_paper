@@ -1,8 +1,12 @@
 from __future__ import annotations
 
+import re
 from datetime import date, datetime
+from hashlib import sha256
 from typing import Any
 from zoneinfo import ZoneInfo
+
+SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 
 
 def require_object(value: Any, field: str) -> dict[str, Any]:
@@ -15,6 +19,39 @@ def require_integer(value: Any, field: str) -> int:
     if not isinstance(value, int) or isinstance(value, bool):
         raise ValueError(f"{field} must be an integer")
     return value
+
+
+def require_sha256(value: Any, field: str) -> str:
+    if not isinstance(value, str) or SHA256_RE.fullmatch(value) is None:
+        raise ValueError(f"{field} must be a lowercase SHA-256 digest")
+    return value
+
+
+def validate_site_data_integrity(
+    metadata: dict[str, Any],
+    content: bytes,
+) -> dict[str, Any]:
+    expected_bytes = require_integer(metadata.get("site_data_bytes"), "site_data_bytes")
+    expected_sha256 = require_sha256(
+        metadata.get("site_data_sha256"),
+        "site_data_sha256",
+    )
+    actual_bytes = len(content)
+    actual_sha256 = sha256(content).hexdigest()
+    if actual_bytes != expected_bytes:
+        raise ValueError(
+            "site-data.json byte count does not match metadata: "
+            f"expected={expected_bytes} actual={actual_bytes}"
+        )
+    if actual_sha256 != expected_sha256:
+        raise ValueError(
+            "site-data.json SHA-256 does not match metadata: "
+            f"expected={expected_sha256} actual={actual_sha256}"
+        )
+    return {
+        "site_data_bytes": actual_bytes,
+        "site_data_sha256": actual_sha256,
+    }
 
 
 def parse_timestamp(value: Any, field: str) -> datetime:
@@ -89,6 +126,10 @@ def validate_metadata(
     article_count = require_integer(payload.get("article_count"), "article_count")
     journal_count = require_integer(payload.get("journal_count"), "journal_count")
     site_data_bytes = require_integer(payload.get("site_data_bytes"), "site_data_bytes")
+    site_data_sha256 = require_sha256(
+        payload.get("site_data_sha256"),
+        "site_data_sha256",
+    )
     if article_count < 1:
         raise ValueError("article_count must be positive")
     if journal_count < 1:
@@ -142,6 +183,7 @@ def validate_metadata(
         "article_count": article_count,
         "journal_count": journal_count,
         "site_data_bytes": site_data_bytes,
+        "site_data_sha256": site_data_sha256,
         "complete_translations": translation_complete,
         "pending_translations": translation_pending,
     }

@@ -61,6 +61,7 @@ def metadata() -> dict:
         "article_count": 1,
         "journal_count": 1,
         "site_data_bytes": 1000,
+        "site_data_sha256": "0" * 64,
         "translations": {
             "total_articles": 1,
             "complete_articles": 0,

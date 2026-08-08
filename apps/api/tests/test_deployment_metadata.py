@@ -1,8 +1,9 @@
 from datetime import date
+from hashlib import sha256
 from zoneinfo import ZoneInfo
 
 import pytest
-from app.services.deployment_metadata import validate_metadata
+from app.services.deployment_metadata import validate_metadata, validate_site_data_integrity
 
 
 def deployment_metadata() -> dict:
@@ -12,6 +13,7 @@ def deployment_metadata() -> dict:
         "article_count": 42,
         "journal_count": 26,
         "site_data_bytes": 123456,
+        "site_data_sha256": "0" * 64,
         "translations": {
             "total_articles": 42,
             "complete_articles": 42,
@@ -105,3 +107,19 @@ def test_validate_metadata_can_reject_oversized_static_data() -> None:
             timezone=ZoneInfo("Asia/Shanghai"),
             max_site_data_bytes=100000,
         )
+
+
+def test_validate_site_data_integrity_rejects_mismatched_content() -> None:
+    content = b'{"articles":[]}\n'
+    payload = deployment_metadata()
+    payload["site_data_bytes"] = len(content)
+    payload["site_data_sha256"] = sha256(content).hexdigest()
+
+    assert validate_site_data_integrity(payload, content) == {
+        "site_data_bytes": len(content),
+        "site_data_sha256": sha256(content).hexdigest(),
+    }
+    tampered_content = content.replace(b"articles", b"articlez")
+    assert len(tampered_content) == len(content)
+    with pytest.raises(ValueError, match="SHA-256 does not match"):
+        validate_site_data_integrity(payload, tampered_content)

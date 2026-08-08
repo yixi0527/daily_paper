@@ -333,7 +333,8 @@ every failed invocation still exits immediately with the original error.
 
 Each Pages build injects its workflow run ID into the static-data URL. This prevents a browser from
 reusing a prior day's `site-data.json` when two daily deployments share the same Git revision.
-Deployment metadata records the exact static bundle size and complete/pending translation counts.
+Deployment metadata records the exact static bundle size, SHA-256 digest, and complete/pending
+translation counts.
 
 The schedule uses minute 23 because GitHub documents heavier queue load at the start of each
 hour. The local task starts several hours later so the metadata synchronization has time to finish.

@@ -1,5 +1,6 @@
 import json
 from datetime import UTC, datetime
+from hashlib import sha256
 
 from app.adapters.crossref_only import CrossrefOnlyAdapter
 from app.models.article import Article, ArticleAuthor, ArticlePayload
@@ -451,6 +452,7 @@ def test_static_export_omits_raw_payload_and_writes_compact_bundle(
     assert b"unused_raw_value" not in site_data_content
     assert b'\n  "' not in site_data_content
     assert metadata["site_data_bytes"] == len(site_data_content)
+    assert metadata["site_data_sha256"] == sha256(site_data_content).hexdigest()
     assert metadata["translations"] == {
         "total_articles": 1,
         "complete_articles": 0,

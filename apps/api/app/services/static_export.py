@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from datetime import UTC, datetime
+from hashlib import sha256
 from pathlib import Path
 from typing import Any
 
@@ -164,6 +165,7 @@ class StaticExportService:
                     "article_count": len(payload["articles"]),
                     "journal_count": len(journals),
                     "site_data_bytes": len(site_data_content),
+                    "site_data_sha256": sha256(site_data_content).hexdigest(),
                     "translations": summarize_translations(payload["articles"]),
                     "sync": sync_metadata,
                     "deployment": {

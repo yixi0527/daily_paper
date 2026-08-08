@@ -8,6 +8,11 @@ def verifier_globals() -> dict:
     return run_path(str(project_root / "scripts" / "verify_pages_deployment.py"))
 
 
+def pages_deploy_globals() -> dict:
+    project_root = Path(__file__).resolve().parents[3]
+    return run_path(str(project_root / "scripts" / "pages_deploy.py"))
+
+
 def test_cache_busted_url_preserves_existing_query() -> None:
     cache_busted_url = verifier_globals()["cache_busted_url"]
 
@@ -23,4 +28,19 @@ def test_cache_busted_url_preserves_existing_query() -> None:
     assert parse_qs(parsed.query) == {
         "existing": ["value"],
         "deployment_check": ["workflow-123-attempt-2"],
+    }
+
+
+def test_translation_refresh_cache_key_preserves_existing_query() -> None:
+    cache_busted_url = pages_deploy_globals()["cache_busted_url"]
+
+    result = cache_busted_url(
+        "https://example.test/data/site-data.json?existing=value",
+        "workflow-456-site-data",
+    )
+
+    parsed = urlsplit(result)
+    assert parse_qs(parsed.query) == {
+        "existing": ["value"],
+        "deployment_refresh": ["workflow-456-site-data"],
     }
