@@ -3,12 +3,33 @@ from datetime import UTC, datetime
 from pathlib import Path
 from runpy import run_path
 
+import pytest
 from app.services.article_registry import (
     ArticleRegistryService,
     build_article_key,
     display_date,
     text_sha256,
 )
+
+
+class StubHttpResponse:
+    def __init__(self, payload: bytes) -> None:
+        self.payload = payload
+        self.status = 200
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback) -> None:
+        return None
+
+    def read(self) -> bytes:
+        return self.payload
+
+
+def load_translation_script() -> dict:
+    script_path = Path(__file__).resolve().parents[3] / "scripts" / "article_registry.py"
+    return run_path(str(script_path))
 
 
 def test_registry_resolves_persisted_translation(tmp_path) -> None:
@@ -109,8 +130,7 @@ def test_display_date_switches_to_acquisition_after_cutoff() -> None:
 
 
 def test_translation_prepare_uses_context_safe_source_limit() -> None:
-    script_path = Path(__file__).resolve().parents[3] / "scripts" / "article_registry.py"
-    script_globals = run_path(str(script_path))
+    script_globals = load_translation_script()
     args = script_globals["build_parser"]().parse_args(
         [
             "prepare",
@@ -124,3 +144,68 @@ def test_translation_prepare_uses_context_safe_source_limit() -> None:
     )
 
     assert args.max_source_chars == 9000
+
+
+def test_translation_fetch_accepts_deployment_metadata(tmp_path, monkeypatch, capsys) -> None:
+    script_globals = load_translation_script()
+    payload = {
+        "schema_version": 1,
+        "translations": {
+            "total_articles": 1515,
+            "complete_articles": 1432,
+            "pending_articles": 83,
+        },
+        "deployment": {
+            "source_revision": "789e4aa65c774dcf0ff53e991e78f73dca031911",
+            "source_event": "push",
+            "workflow_run_id": "31288306148",
+        },
+    }
+    content = json.dumps(payload).encode("utf-8")
+    monkeypatch.setattr(
+        script_globals["urllib"].request,
+        "urlopen",
+        lambda request, timeout: StubHttpResponse(content),
+    )
+    output_path = tmp_path / "metadata.json"
+    args = script_globals["build_parser"]().parse_args(
+        [
+            "fetch",
+            "--url",
+            "https://example.test/data/metadata.json",
+            "--output",
+            str(output_path),
+            "--cache-key",
+            "31270513592-gate",
+        ]
+    )
+
+    args.handler(args)
+
+    assert json.loads(output_path.read_text(encoding="utf-8")) == payload
+    assert json.loads(capsys.readouterr().out) == {"output": str(output_path)}
+
+
+def test_translation_fetch_rejects_invalid_articles(tmp_path, monkeypatch) -> None:
+    script_globals = load_translation_script()
+    content = json.dumps({"articles": {}}).encode("utf-8")
+    monkeypatch.setattr(
+        script_globals["urllib"].request,
+        "urlopen",
+        lambda request, timeout: StubHttpResponse(content),
+    )
+    output_path = tmp_path / "site-data.json"
+    args = script_globals["build_parser"]().parse_args(
+        [
+            "fetch",
+            "--url",
+            "https://example.test/data/site-data.json",
+            "--output",
+            str(output_path),
+        ]
+    )
+
+    with pytest.raises(ValueError, match="articles must be an array"):
+        args.handler(args)
+
+    assert not output_path.exists()

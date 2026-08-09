@@ -70,7 +70,7 @@ def source_abstract(article: dict[str, Any]) -> tuple[str | None, str | None]:
     return None, None
 
 
-def fetch_site_data(args: argparse.Namespace) -> None:
+def fetch_json_document(args: argparse.Namespace) -> None:
     request = urllib.request.Request(
         cache_busted_url(args.url, args.cache_key),
         headers={
@@ -81,14 +81,20 @@ def fetch_site_data(args: argparse.Namespace) -> None:
     )
     with urllib.request.urlopen(request, timeout=args.timeout) as response:
         if response.status != 200:
-            raise RuntimeError(f"Site data request failed with HTTP {response.status}")
+            raise RuntimeError(f"JSON document request failed with HTTP {response.status}")
         content = response.read()
     payload = json.loads(content.decode("utf-8"))
-    if not isinstance(payload.get("articles"), list):
-        raise ValueError("Downloaded site data does not contain an articles array")
+    if not isinstance(payload, dict):
+        raise ValueError("Downloaded JSON document must be an object")
+    articles = payload.get("articles")
+    if articles is not None and not isinstance(articles, list):
+        raise ValueError("Downloaded JSON document articles must be an array")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_bytes(content)
-    print(json.dumps({"article_count": len(payload["articles"]), "output": str(args.output)}))
+    result = {"output": str(args.output)}
+    if articles is not None:
+        result["article_count"] = len(articles)
+    print(json.dumps(result))
 
 
 def prepare(args: argparse.Namespace) -> None:
@@ -359,7 +365,7 @@ def build_parser() -> argparse.ArgumentParser:
     fetch_parser.add_argument("--output", required=True, type=Path)
     fetch_parser.add_argument("--timeout", type=int, default=120)
     fetch_parser.add_argument("--cache-key")
-    fetch_parser.set_defaults(handler=fetch_site_data)
+    fetch_parser.set_defaults(handler=fetch_json_document)
 
     prepare_parser = subparsers.add_parser("prepare")
     prepare_parser.add_argument("--site-data", required=True, type=Path)
