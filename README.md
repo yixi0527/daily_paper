@@ -331,6 +331,10 @@ verifies that the new commit is the exact revision exposed by the deployed metad
 daily invocation provides a fresh recovery opportunity after a delayed Pages deployment while
 every failed invocation still exits immediately with the original error.
 
+The local task delegates GitHub schedule selection and UTC-to-Shanghai conversion to
+`scripts/validate_daily_schedule_run.py`. Its validated JSON output is the only accepted schedule
+identity, which keeps model-generated shell logic out of the date gate.
+
 Each Pages build injects its workflow run ID into the static-data URL. This prevents a browser from
 reusing a prior day's `site-data.json` when two daily deployments share the same Git revision.
 Deployment metadata records the exact static bundle size, SHA-256 digest, and complete/pending

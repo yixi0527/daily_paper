@@ -56,8 +56,10 @@ writing translation output:
 
 1. The local Git worktree is fully clean, including untracked files.
 2. `git pull --ff-only origin main` succeeds.
-3. The latest `pages-sync.yml` run triggered by `schedule` completed successfully on the current
-   Shanghai calendar date.
+3. `scripts/validate_daily_schedule_run.py` queries the latest `pages-sync.yml` run triggered by
+   `schedule`, parses its timezone-aware GitHub timestamp, converts it with `Asia/Shanghai`, and
+   requires `completed`, `success`, and the current Shanghai calendar date. Its JSON output is the
+   sole schedule identity used by the automation.
 4. The deployed `metadata.json` matches that workflow run ID, head revision, event, and sync date.
 5. Every configured journal was processed and the deployed failure count is zero.
 
