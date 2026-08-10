@@ -307,7 +307,7 @@ This repository includes `.github/workflows/pages-sync.yml`.
 
 What it does:
 
-1. Runs every day at `17:23 UTC` which is `01:23 Asia/Shanghai` on the following calendar day
+1. Runs every day at `16:23 UTC` which is `00:23 Asia/Shanghai` on the following calendar day
 2. Initializes a SQLite database inside the workflow
 3. Seeds the 26 journals
 4. Executes the synchronization job and rejects every partial synchronization
@@ -323,17 +323,21 @@ https://<OWNER>.github.io/<REPO>/
 
 That pages build is a static mirror of the latest synchronized metadata, while the FastAPI service remains the full live API deployment path.
 
-The GitHub Pages workflow performs no model calls. A local Codex scheduled task runs at `06:00`
-and `12:00` Asia/Shanghai with `gpt-5.3-codex-spark`. Each invocation requires the exact successful scheduled deployment
+The GitHub Pages workflow performs no model calls. A local Codex scheduled task runs at `03:30`
+and `06:30` Asia/Shanghai with `gpt-5.3-codex-spark`. Each invocation requires the exact successful scheduled deployment
 for the current Shanghai date, translates only new or changed papers, validates the registry,
 commits that single file, and pushes it. The push triggers a second Pages run, and the local task
 verifies that the new commit is the exact revision exposed by the deployed metadata. The second
-daily invocation provides a fresh recovery opportunity after a delayed Pages deployment while
-every failed invocation still exits immediately with the original error.
+daily invocation is an independent execution after a delayed prerequisite while every failed
+invocation still exits immediately with the original error. The operating objective is a fully
+built prior-day site with zero pending translations before `09:00` Asia/Shanghai.
 
 The local task delegates GitHub schedule selection and UTC-to-Shanghai conversion to
 `scripts/validate_daily_schedule_run.py`. Its validated JSON output is the only accepted schedule
 identity, which keeps model-generated shell logic out of the date gate.
+
+`scripts/verify_pages_deployment.py` embeds the canonical public metadata endpoint and uses it when
+`--url` is omitted. Supplying any other metadata URL is rejected before a network request.
 
 Each Pages build injects its workflow run ID into the static-data URL. This prevents a browser from
 reusing a prior day's `site-data.json` when two daily deployments share the same Git revision.

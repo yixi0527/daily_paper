@@ -19,6 +19,19 @@ sys.path.insert(0, str(API_ROOT))
 
 from app.services.deployment_metadata import require_object, validate_metadata  # noqa: E402
 
+CANONICAL_METADATA_URL = (
+    "https://yixi0527.github.io/daily_paper/data/metadata.json"
+)
+
+
+def canonical_metadata_url(value: str) -> str:
+    if value != CANONICAL_METADATA_URL:
+        raise argparse.ArgumentTypeError(
+            "deployment metadata URL must be the canonical endpoint: "
+            f"{CANONICAL_METADATA_URL}"
+        )
+    return value
+
 
 def cache_busted_url(url: str, cache_key: str) -> str:
     parts = urlsplit(url)
@@ -48,6 +61,8 @@ def fetch_json(url: str, timeout: int, cache_key: str) -> tuple[dict[str, Any], 
         if response.status != 200:
             raise RuntimeError(f"Metadata request failed with HTTP {response.status}")
         content = response.read()
+    if not content.strip():
+        raise ValueError(f"Metadata response was empty: url={request.full_url}")
     payload = json.loads(content.decode("utf-8"))
     return require_object(payload, "metadata"), content
 
@@ -88,7 +103,11 @@ def wait_for_expected_deployment(args: argparse.Namespace) -> tuple[dict[str, An
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Verify one exact GitHub Pages deployment")
-    parser.add_argument("--url", required=True)
+    parser.add_argument(
+        "--url",
+        default=CANONICAL_METADATA_URL,
+        type=canonical_metadata_url,
+    )
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--expected-workflow-run-id", required=True)
     parser.add_argument("--expected-source-revision", required=True)

@@ -4,10 +4,14 @@
 
 | Time (Asia/Shanghai) | Owner | Responsibility |
 | --- | --- | --- |
-| 01:23 daily | GitHub Actions | Fetch DOI-indexed metadata, require all journals to succeed, export static data, deploy Pages |
-| 06:00 and 12:00 daily | Local Codex automation | Verify that exact scheduled deployment, translate pending records with `gpt-5.3-codex-spark`, validate and push the registry |
+| 00:23 daily | GitHub Actions | Fetch DOI-indexed metadata, require all journals to succeed, export static data, deploy Pages |
+| 03:30 and 06:30 daily | Local Codex automation | Independently verify the exact scheduled deployment, translate pending records with `gpt-5.3-codex-spark`, validate and push the registry |
 | After the registry push | GitHub Actions | Refresh translations from the healthy Pages snapshot and deploy the pushed registry revision |
 | End of the local run | Local Codex automation | Verify the exact push-triggered deployment and report the result |
+
+The daily service objective is a complete prior-day site with zero pending translations before
+09:00 Asia/Shanghai. The 03:30 run is the primary translation execution, and the 06:30 run starts
+from fresh Git, Actions, and public deployment state as a separate execution.
 
 The FastAPI scheduler configured by `SYNC_HOUR` and `SYNC_MINUTE` operates a persistent API
 database. It has no role in the Pages-to-Spark handshake.
@@ -73,10 +77,12 @@ the translation commit. It then runs `scripts/verify_pages_deployment.py` agains
 metadata endpoint with that workflow run ID and revision, requires zero pending translations,
 downloads the exact versioned `site-data.json`, and verifies every live article against the registry.
 
-The deployment verifier uses a unique query key and no-cache request headers. It can wait for one
+The deployment verifier embeds `https://yixi0527.github.io/daily_paper/data/metadata.json` as its
+canonical endpoint, defaults to it when `--url` is omitted, and rejects any different metadata
+URL before issuing a request. It uses a unique query key and no-cache request headers and can wait for one
 exact workflow identity to reach the Pages edge, which handles normal deployment propagation
-without accepting an older run. The 12:00 invocation starts as an independent run and recovers from
-a delayed 06:00 prerequisite after the earlier invocation has already terminated.
+without accepting an older run. The 06:30 invocation starts as an independent run after a delayed
+03:30 prerequisite when the earlier invocation has already terminated.
 
 ## Failure handling
 

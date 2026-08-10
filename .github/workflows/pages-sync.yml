@@ -5,8 +5,8 @@ name: Daily Pages Sync
     branches:
       - main
   schedule:
-    # 17:23 UTC = 01:23 Asia/Shanghai (next day). The off-hour minute reduces queue delay.
-    - cron: "23 17 * * *"
+    # 16:23 UTC = 00:23 Asia/Shanghai (next day). The off-hour minute reduces queue delay.
+    - cron: "23 16 * * *"
   workflow_dispatch:
 
 permissions:
