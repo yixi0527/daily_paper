@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-09T09:06:13.305222+00:00",
+  "updated_at": "2026-08-10T01:27:12.0108091+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -6293,6 +6293,19 @@
       "abstract_zh": "扩散加权成像（DWI）是一种非侵入性磁共振成像（MRI）采集技术，可提供关于脑微结构的详细信息。该方法历来主要用于白质研究，但近期文献提示扩散MRI也可用于研究灰质微结构变化，包括健康老龄化中的变化。本文是一篇叙述性综述，评估了研究灰质微结构年龄相关差异的扩散MRI文献及其对健康老年人认知功能理解的意义。所综述研究报道了广泛的皮质（尤其是额顶叶）、海马和皮下核微结构随年龄变化，这些变化与行为相关，尤其与学习和记忆等认知领域相关。灰质微结构持续受到痴呆相关病理、身体活动和睡眠健康的影响，但尚需更多研究来阐明生物性别、环境和膳食摄入的作用。未来在健康老龄化背景下的灰质微结构剖面研究应考虑纵向设计，在同一研究中结合不同的扩散MRI建模技术，并定义更具体的认知相关指标（例如处理速度）。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106897": {
+      "doi": "10.1016/j.neubiorev.2026.106897",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Thalamic Reticular Nucleus Dysfunction as a Stage-Dependent Integrative Circuit Mechanism in Psychosis",
+      "acquired_at": "2026-08-09T18:37:15",
+      "source_title_sha256": "18747ab0292df118f2cfef7464738e1a7a38e05b89bc405001991ff261ba6c60",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "丘脑网状核功能障碍：精神病中阶段依赖的整合性神经环路机制",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T01:27:12.0108091+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
