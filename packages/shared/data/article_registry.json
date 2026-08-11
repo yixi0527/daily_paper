@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-10T01:27:12.0108091+00:00",
+  "updated_at": "2026-08-10T19:33:05.131582+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -417,6 +417,19 @@
       "abstract_zh": "路易体病中神经元 α-突触核蛋白病理的组织学分期模型很少同时考察具有直接突触连接的脑区，也难以评估小胶质细胞过程的作用。研究利用海马内部连接明确的回路，检验 α-突触核蛋白病理是否与活化小胶质细胞表型相关。样本包括 62 例经尸检确诊、年龄相关共病较少的路易体病患者，以及 12 例仅有海马 tau 积聚的认知健康对照。研究对连续海马切片进行 α-突触核蛋白、Iba1、HLA-DR 和 CD68 染色，并用数字组织学测量六个海马亚区各标志物所占面积。路易体病患者多数亚区的 HLA-DR 和 CD68 高于对照，所有小胶质标志物均在 CA2 最高。CA2 的 α-突触核蛋白与 HLA-DR、CD68 相关，与 Iba1 无关。病理广泛分布亚型的认知损害更重，CA2 的 HLA-DR 和 CD68 也更高；二者与逆行连接远端亚区的病理相关，与顺行连接亚区无相关。结果提示，CA2 活化小胶质表型与较差临床结局和逆行 α-突触核蛋白传播有关，可用于完善路易体病组织学进展模型。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
+    },
+    "doi:10.1007/s00401-026-03067-6": {
+      "doi": "10.1007/s00401-026-03067-6",
+      "journal_slug": "acta-neuropathologica",
+      "title": "Cerebrospinal fluid cell-free DNA sequencing in pediatric CNS tumors: towards liquid molecular neuropathology",
+      "acquired_at": "2026-08-10T17:33:42",
+      "source_title_sha256": "13f01ff26a8e7e9c40a31816a24254e821db6f6ecb59e220b517290a5fc7c12e",
+      "source_abstract_sha256": "39424a6e7089822a595475d3b618a601e8bf7c37f2fb8e337f0065cac6c459e6",
+      "source_abstract": "abstract",
+      "title_zh": "脑脊液游离DNA测序在儿童中枢神经系统肿瘤中的应用：迈向液体分子神经病理学",
+      "abstract_zh": "《Acta Neuropathologica》- 儿童中枢神经系统肿瘤仍是儿童癌症相关死亡的主要原因之一，而其诊断、风险分层和治疗策略的制定在很大程度上仍依赖侵入性、耗时且资源密集的方法。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
     "doi:10.1007/s10462-026-11548-z": {
       "doi": "10.1007/s10462-026-11548-z",
@@ -3642,6 +3655,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-05T06:42:05.174505+00:00"
     },
+    "doi:10.1016/j.cell.2026.07.027": {
+      "doi": "10.1016/j.cell.2026.07.027",
+      "journal_slug": "cell",
+      "title": "The structural basis for LRRK2’s activation and autoinhibition",
+      "acquired_at": "2026-08-10T17:17:47",
+      "source_title_sha256": "db6305a00b10a192a7ffb0f5868abe34a62cdf918445db92eb5791dbfc58b20d",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "LRRK2激活与自抑制的结构基础",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
     "doi:10.1016/j.cell.2026.07.028": {
       "doi": "10.1016/j.cell.2026.07.028",
       "journal_slug": "cell",
@@ -6300,12 +6326,12 @@
       "title": "Thalamic Reticular Nucleus Dysfunction as a Stage-Dependent Integrative Circuit Mechanism in Psychosis",
       "acquired_at": "2026-08-09T18:37:15",
       "source_title_sha256": "18747ab0292df118f2cfef7464738e1a7a38e05b89bc405001991ff261ba6c60",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "丘脑网状核功能障碍：精神病中阶段依赖的整合性神经环路机制",
-      "abstract_zh": null,
+      "source_abstract_sha256": "da418e0b562061a8727eec132d7c0275dbb832e3e98b512ea0f399e2d2403a87",
+      "source_abstract": "abstract",
+      "title_zh": "丘脑网状核（TRN）功能障碍：精神病分期相关的整合性环路机制",
+      "abstract_zh": "精神病越来越被视为分布性神经回路的障碍，而非局灶性脑部病理，其最稳定的神经生物学特征之一是丘脑皮层连接失调。本文综述提出，TRN（thalamic reticular nucleus，丘脑网状核）功能障碍可解释精神病谱系中细胞异常、睡眠纺锤波缺陷、丘脑皮层连接障碍与临床症状如何相互关联。我们综合了尸检研究、遗传学、睡眠纺锤生理学、神经影像和前临床模型证据，提出TRN 功能障碍可能导致感觉门控受损、丘脑皮层连接改变、睡眠纺锤波紊乱，并引发下游多巴胺能失调。近期对TRN分子和功能上不同亚网路的识别，为解释精神病中观察到的双向连接模式提供了潜在框架：即与背外侧前额叶/联想区耦合下降，同时与躯体感觉运动皮层耦合增强。我们进一步提出分期相关模型：早期TRN功能障碍导致临床高危阶段出现微妙的感觉和认知扰动；首发精神病时不稳定的门控过程促进阳性症状出现；持续性的网络级功能障碍则推动慢性阶段的认知和阴性症状。尽管当前证据主要为间接证据，人类中的因果关系仍需进一步检验，但TRN是一个生物学上合理且临床上尚未充分开发的汇聚点，可用于精神病机制研究、以及未来生物标志物与治疗策略开发。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-10T01:27:12.0108091+00:00"
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -7997,6 +8023,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
     },
+    "doi:10.1016/j.neuron.2026.07.022": {
+      "doi": "10.1016/j.neuron.2026.07.022",
+      "journal_slug": "neuron",
+      "title": "Divergent somatic mutation patterns among human cerebellar neuron types",
+      "acquired_at": "2026-08-10T17:21:32",
+      "source_title_sha256": "eaef0aa88dff955289e0e33518fcdbf43504e830eee1b97699cc16bb61c096a2",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "人类小脑神经元类型间的体细胞突变模式分化",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
     "doi:10.1016/j.tics.2025.09.013": {
       "doi": "10.1016/j.tics.2025.09.013",
       "journal_slug": "trends-in-cognitive-sciences",
@@ -8607,6 +8646,19 @@
       "abstract_zh": "近期研究发现人工神经网络与生物大脑之间存在显著表征对齐，由此有人提出，所有能力足够强的系统都会收敛到现实的普适表征。本文认为这一普适性主张为时尚早，并提出“环境世界表征假说”：表征对齐源于系统发展所受生态约束的重叠，而非趋向单一全局最优解。作者回顾的实证证据显示，不同物种、个体和人工神经网络之间的表征差异具有系统性与适应性，难以由普适性解释。基于该假说，人工神经网络模型比较可用于绘制生态约束空间中的对齐簇，而无需寻找唯一最优的世界模型。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
+    },
+    "doi:10.1016/j.tics.2026.07.006": {
+      "doi": "10.1016/j.tics.2026.07.006",
+      "journal_slug": "trends-in-cognitive-sciences",
+      "title": "Rethinking musicians as a model for plasticity and transfer",
+      "acquired_at": "2026-08-10T17:23:35",
+      "source_title_sha256": "5275a10ddba8149164fcafab42b5101626a8f4adbcaf6a9da04d698984d9a46d",
+      "source_abstract_sha256": "c55161b0ee95e7fdcb413c8742f59d64cd9ab79fa0b677a29f4d27823bef360a",
+      "source_abstract": "abstract",
+      "title_zh": "将音乐家重新定位为可塑性与迁移的研究模型",
+      "abstract_zh": "音乐家与非音乐家的差异通常被归因于训练诱导的可塑性与迁移效应，即便先天因素同样提供了同样合理的解释。我们建议重新定位相关相关性研究：目的不再是推断训练效应，而是约束因果解释、揭示能力的神经认知组织、指导实验研究，并与遗传信息为基础的研究设计整合。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
     "doi:10.1016/j.tins.2026.03.007": {
       "doi": "10.1016/j.tins.2026.03.007",
@@ -10051,6 +10103,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
     },
+    "doi:10.1038/d41586-026-01681-8": {
+      "doi": "10.1038/d41586-026-01681-8",
+      "journal_slug": "nature",
+      "title": "What to do when you have too many PhD projects on the go",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "e46b826f647b38c261d042592cf0bd776f25a019054455d9872960616625710d",
+      "source_abstract_sha256": "4314ca87086595e08bc1a5dad5ba32d14372799cd9924f355baa6a65b5d220de",
+      "source_abstract": "abstract",
+      "title_zh": "当你同时推进过多博士课题时该如何应对",
+      "abstract_zh": "通过无情地缩减优先级，Zachary Sentell 在博士最后一年仍完成了多篇论文发表并按时毕业。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
     "doi:10.1038/d41586-026-01772-6": {
       "doi": "10.1038/d41586-026-01772-6",
       "journal_slug": "nature",
@@ -10505,6 +10570,19 @@
       "abstract_zh": "研究人员正在寻找从地下储集体开采该金属的方法，以减少用水量。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-05T06:42:05.174505+00:00"
+    },
+    "doi:10.1038/d41586-026-02199-9": {
+      "doi": "10.1038/d41586-026-02199-9",
+      "journal_slug": "nature",
+      "title": "Turning the tide: restoring Mozambican mangroves — in photos",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "98efe1c916b33c8635c1d9dae9ec149947f12010cf380db1c804ae4a7c27ceb7",
+      "source_abstract_sha256": "0facd1add10ac862e23ea733b088e0fa24797331cd3782deffe90d5ff4df57da",
+      "source_abstract": "abstract",
+      "title_zh": "扭转局势：在照片中修复莫桑比克红树林",
+      "abstract_zh": "当马普托的城市扩张威胁到红树林林地时，海洋生物学家塞利亚·马卡莫（Célia Macamo）正在研究如何将其拯救。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
     "doi:10.1038/d41586-026-02200-5": {
       "doi": "10.1038/d41586-026-02200-5",
@@ -11051,6 +11129,19 @@
       "abstract_zh": "从智能化船只到日食线索，荷马《奥德赛》揭示了青铜时代希腊人对世界的认识。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
+    },
+    "doi:10.1038/d41586-026-02276-z": {
+      "doi": "10.1038/d41586-026-02276-z",
+      "journal_slug": "nature",
+      "title": "This AI tool claims to pick the top 1% of preprints. Should researchers trust it?",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "e430cdd772369c9500b16980cc81f2249a86adde0dafefcc1e1fd9ec3d250535",
+      "source_abstract_sha256": "f27a37bdbdffcce9c903abd28644c2517f325ffe988b9e26a58aad11d30a5fd9",
+      "source_abstract": "abstract",
+      "title_zh": "这款AI工具声称可筛选前1%的预印本。研究人员应信任它吗？",
+      "abstract_zh": "QED Science表示，其指标体系通过只依据原创性与有效性来评估论文，从而降低偏差。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
     "doi:10.1038/d41586-026-02278-x": {
       "doi": "10.1038/d41586-026-02278-x",
@@ -12105,6 +12196,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-04T01:59:53.657990+00:00"
     },
+    "doi:10.1038/d41586-026-02435-2": {
+      "doi": "10.1038/d41586-026-02435-2",
+      "journal_slug": "nature",
+      "title": "How and when to use artificial intelligence in your science job application",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "e8dd7a63387aa9df155c519b1f053bfa6ddae1f3c38784d1dc2c6da2c528301f",
+      "source_abstract_sha256": "7b555924b6c642862ab83ea06e722b9d8780b28ffb49bac13bcd8d85bb30101e",
+      "source_abstract": "abstract",
+      "title_zh": "科研求职中何时、如何使用人工智能",
+      "abstract_zh": "一场网络研讨会为雇主与求职者提供了相关建议。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
     "doi:10.1038/d41586-026-02436-1": {
       "doi": "10.1038/d41586-026-02436-1",
       "journal_slug": "nature",
@@ -12209,6 +12313,45 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1038/d41586-026-02447-y": {
+      "doi": "10.1038/d41586-026-02447-y",
+      "journal_slug": "nature",
+      "title": "I caught my students using AI to cheat in an exam — here’s what universities must do to stamp this out",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "4a9a7d3182de52e62383f231b0c4671b8388683eaf9e60f5352de966a66c2901",
+      "source_abstract_sha256": "2e00e4b963c2cd379ed694cf42e8d048427b45c630d0e3a8a919e89eca7f6d04",
+      "source_abstract": "abstract",
+      "title_zh": "我在考试中抓到学生使用AI作弊——高校必须做什么才能遏制此事",
+      "abstract_zh": "若缺乏严格标准和智能监督，人工智能有可能侵蚀高等教育的基础。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/d41586-026-02450-3": {
+      "doi": "10.1038/d41586-026-02450-3",
+      "journal_slug": "nature",
+      "title": "Why environmental treaties must also address mental health",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "d8e8b4bf7109a225c79d9413256b9dbcc40f91da9d4117754e30b7cd29dade9d",
+      "source_abstract_sha256": "6bcba0900beffb75922e1c063f281b05a1ccc2b15972481692f39cd97e36fb7e",
+      "source_abstract": "abstract",
+      "title_zh": "为什么环境条约也必须兼顾心理健康",
+      "abstract_zh": "全球公约主要忽视了气候变化、生物多样性丧失与污染的心理与社会影响。以下为改变现状的方法。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/d41586-026-02453-0": {
+      "doi": "10.1038/d41586-026-02453-0",
+      "journal_slug": "nature",
+      "title": "Despite global turmoil, Gen Z researchers are not giving up",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "6000f8ec937663b3768e5c2ab8165c347d0a483f02c12bc64bcb1fc9d8379e1c",
+      "source_abstract_sha256": "0b898d7d63f58b8e5e2ca3ecf1d462ea9fe1ad8197eceaa5f9f3d2d2086b4f1f",
+      "source_abstract": "abstract",
+      "title_zh": "尽管全球局势动荡，Z世代研究者也没有放弃",
+      "abstract_zh": "四位1997年后出生的研究者讲述了他们如何在艰难时期保持动力并培养韧性。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
     "doi:10.1038/d41586-026-02458-9": {
       "doi": "10.1038/d41586-026-02458-9",
       "journal_slug": "nature",
@@ -12260,6 +12403,19 @@
       "abstract_zh": "收听 2026 年 8 月 7 日科学界最重要的新闻。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
+    },
+    "doi:10.1038/d41586-026-02493-6": {
+      "doi": "10.1038/d41586-026-02493-6",
+      "journal_slug": "nature",
+      "title": "Where are you ticklish? Researchers map the sensation across cultures",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "6bc7f5cf6bb83dc02ccc0f36ff116507442ba3151b809486c0ebaf907e3b57dd",
+      "source_abstract_sha256": "e259d5a3c2a519098407f4db53482a236420257bbcb96c66e77623045dc4f9ca",
+      "source_abstract": "abstract",
+      "title_zh": "你的身体哪个部位最容易发痒？研究者跨文化绘制了其分布图",
+      "abstract_zh": "中国、荷兰和希腊文化背景的人群在身体上存在相同的“发痒热点”。且发痒感在较少被触碰的部位更强。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
     "doi:10.1038/s41380-026-03626-z": {
       "doi": "10.1038/s41380-026-03626-z",
@@ -13457,6 +13613,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1038/s41380-026-03763-5": {
+      "doi": "10.1038/s41380-026-03763-5",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Molecular alterations in chondrolectin-containing somatostatin neurons in schizophrenia differ based on circuit context",
+      "acquired_at": "2026-08-10T17:38:30",
+      "source_title_sha256": "ba310843bf64429294bebab3a056091330fe519a88d4510a17e0f6fd51fa87e2",
+      "source_abstract_sha256": "8e7ad86df9cb9cefe6574e1f8dde5474776d71019b521620389e7130d4e00dc5",
+      "source_abstract": "abstract",
+      "title_zh": "精神分裂症中含软骨素蛋白的生长抑素（SST）神经元的分子改变随环路环境而异",
+      "abstract_zh": "皮质内含生长抑素（SST）GABA能中间神经元的改变，是精神分裂症中最稳定、可重复的分子发现之一。至今仍不清楚这些改变主要反映细胞内在易损性、区域环路背景，还是两者交互所致。为回答这一问题，我们在两个环路结构显著不同的脑区考察了转录上有别的SST神经元亚型——选择性表达软骨素蛋白（CHODL）的CHODL-SST神经元：额背外侧前额叶皮层（DLPFC）的深6层及其邻近皮层下白质，以及尾状核。采用多重荧光原位杂交，在18对匹配的精神分裂症与未受累对照尸检样本中，量化了CHODL、SST、神经肽Y（NPY）与一氧化氮合酶1型（NOS1）在两区CHODL-SST神经元内的mRNA水平。于DLPFC中，CHODL-SST神经元在精神分裂症中四个转录本均呈更低表达，效应量为中小效应（–0.29到–0.52）；相比之下，尾状核中的效应量接近名义水平（–0.13到0.03），贝叶斯分析为“无差异”提供了强证据。对于每个转录本，诊断×脑区交互均达到显著（全部p&lt;0.005），突出表明皮层与纹状体CHODL-SST神经元之间存在明显分离。上述结果提示，与精神分裂症相关的CHODL-SST神经元分子改变具有区域选择性，且更倾向于影响皮层群体。该结果支持这样一种模型：改变并非反映统一的细胞内在易损性，而是亚型特异分子特征与区域性环路背景交互后产生的差异性易损性，对理解SST神经元功能障碍及制定环路导向治疗策略具有意义。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
     "doi:10.1038/s41380-026-03764-4": {
       "doi": "10.1038/s41380-026-03764-4",
       "journal_slug": "molecular-psychiatry",
@@ -13990,6 +14159,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1038/s41380-026-03820-z": {
+      "doi": "10.1038/s41380-026-03820-z",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Neuroscience in cancer care: ethical, legal, and societal challenges",
+      "acquired_at": "2026-08-10T17:38:30",
+      "source_title_sha256": "8f99fb21c647c1184955c1d1319e5e20466107ffe0199f5e951e248159981c18",
+      "source_abstract_sha256": "7a8a0f4ea5b0f1b894159a80d74074d2798b34373c7b81e8cf14307242d8363a",
+      "source_abstract": "abstract",
+      "title_zh": "癌症治疗中的神经科学：伦理、法律与社会挑战",
+      "abstract_zh": "来源仅提供期刊名“分子精神病学（Molecular Psychiatry）”；未提供可用摘要。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
     "doi:10.1038/s41562-026-02424-5": {
       "doi": "10.1038/s41562-026-02424-5",
       "journal_slug": "nature-human-behaviour",
@@ -14497,6 +14679,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
     },
+    "doi:10.1038/s41562-026-02526-0": {
+      "doi": "10.1038/s41562-026-02526-0",
+      "journal_slug": "nature-human-behaviour",
+      "title": "Open practices across science, software, education and other domains",
+      "acquired_at": "2026-08-10T17:30:16",
+      "source_title_sha256": "d3ee41806f38fdb1c3e3b4db089673b1706268f215e168f1ae9282b3bbd791ea",
+      "source_abstract_sha256": "3de2a3d014b98aecfaeedf4c5bde276ec6103f20bdb66e2d9278a6f50eb5e447",
+      "source_abstract": "abstract",
+      "title_zh": "开放实践在科学、软件、教育及其他领域的应用",
+      "abstract_zh": "“开放实践”是指人们为提升透明度（谁能查看信息）、包容性（谁能表达观点）和决策权（谁能做决策）而采取的行动。开放实践在多个领域愈加流行，包括开放科学、开源软件与开放教育，期望通过这种方式推动创新并扩大参与。然而，哪些开放实践最能帮助群体与组织实现这些宏大目标、并且原因何在？本研究观点文章提炼了跨域共通的七项成功实践，可帮助群体明确目标、分配权力、共享信息并建立规范。这些实践（如记录权力结构、制定行为准则）有望支持以开放为导向、面向重大挑战的群体与组织。然而，潜力能否实现取决于群体是否能跨领域共享经验、根据实际情境定制实践，并持续支持实践中涉及人员与平台。开放实践在如开放科学与开源软件等领域日益流行，但这些领域长期以来各自为政。Meluso 等提出了共同定义与实施指南，以支持在不同学科中应用开放实践。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
     "doi:10.1038/s41562-026-02527-z": {
       "doi": "10.1038/s41562-026-02527-z",
       "journal_slug": "nature-human-behaviour",
@@ -14561,6 +14756,45 @@
       "abstract_zh": "摘要：人们常会遇到违背预期的意外事件。此类事件会诱发蓝斑核/去甲肾上腺素系统的瞬时活动，并伴随外围唤醒指标升高，如瞳孔扩张和事件相关脑电晚期正向峰值（P300）；但这些信号的功能并不清楚。我们提出，它们反映潜在状态转换，动态调节控制学习与感知的心理情境。我们在受试者进行颜色预测与重现任务时，采用EEG和瞳孔测量，检验并验证了该理论的五项预先注册预测。任务诱发的潜在状态转换引起瞳孔扩张，并增强了事件相关电位，包括P300的P3a成分。这些EEG与瞳孔指标与潜在状态更新的行为特征相关，包括偏差减少及学习的双向调整，这些关系在试次内和个体间均可见。结果支持这样的理论：与蓝斑核/去甲肾上腺素相关的唤醒系统通过发出环境转换信号，促进心理情境快速调整，从而优化行为。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
+    },
+    "doi:10.1038/s41562-026-02534-0": {
+      "doi": "10.1038/s41562-026-02534-0",
+      "journal_slug": "nature-human-behaviour",
+      "title": "Hierarchical resource rationality explains human reading behaviour",
+      "acquired_at": "2026-08-10T17:30:16",
+      "source_title_sha256": "0cae4db2897e7ba703e1ce74e3fba5db05358d710642a125b36c1c31e47252b5",
+      "source_abstract_sha256": "3ba129a5312bbb4e7b8a05e6eb3e4acc0418242398bfb22d35c5df448476d4a6",
+      "source_abstract": "abstract",
+      "title_zh": "分层资源理性解释人类阅读行为",
+      "abstract_zh": "摘要 阅读是现代人类文化的基础性且认知负荷较高的活动。它是一个典型任务类型：眼动需为理解过程进行协调。现有理论要么解释眼动，要么解释阅读理解，但两者之间的关键联系仍不清晰。本文提出资源理性优化（resource-rational optimization）作为统一的控制原则，以解释自适应阅读行为。眼动决策被选择为在最大化预期理解的同时最小化认知与时间成本，并在嵌套时间尺度上分层组织：注视决策支持词识别；句级整合指导跳读和回视；文本级理解目标塑造记忆构建与重读。一个计算实现成功再现了从词汇效应到理解结果的人类阅读前所未有的大范围实证结果。总体而言，这些结果表明资源理性为协调知识密集型人类行为中的知觉、记忆与行动提供了一种通用机制，给出了复杂认知技能如何在有限资源下适应的原则性解释。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/s41562-026-02535-z": {
+      "doi": "10.1038/s41562-026-02535-z",
+      "journal_slug": "nature-human-behaviour",
+      "title": "Human ticklishness is a widespread, culturally shared and bodily organized sensory experience",
+      "acquired_at": "2026-08-10T17:30:16",
+      "source_title_sha256": "e500370d672b163600938b7c6273f0fbd5912e9ec313a0573f868dd57e908c93",
+      "source_abstract_sha256": "92bd8ddbdf2daf36291c7734a0fa533f4114a14f889085e7cfa4a9b5df2338f2",
+      "source_abstract": "abstract",
+      "title_zh": "人类发痒体验是广泛存在、跨文化共享并具有身体定位结构的感觉现象",
+      "abstract_zh": "摘要 人类对“发痒”的研究是最古老却仍未完全解开的科学谜题之一。自亚里士多德和苏格拉底时代起，学者便在探讨其起源与功能，但核心问题仍悬而未决。发痒感是否在不同文化间共享，或具有文化特异性？是否呈现出结构化的身体拓扑分布，以及它与其他身体感觉之间的关系如何？本研究分析了三类文化群体（中国、荷兰和希腊）的数据，发现一致的行为模式与社会动力学。我们提取了高分辨率的全身发痒图谱，结果表明其跨文化和个体具有可推广性，并且与触觉敏感性、疼痛与快感图谱明显不同。当我们将其与五种历史与当代理论预测进行比较时，发现没有单一理论能够完整解释发痒的身体拓扑。虽然发痒在不常被触碰区域更强，支持达尔文假设，但其拓扑依赖的心理生理机制比以往认为的更为复杂。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/s41562-026-02542-0": {
+      "doi": "10.1038/s41562-026-02542-0",
+      "journal_slug": "nature-human-behaviour",
+      "title": "Reassurance through normalization inadvertently suppresses treatment",
+      "acquired_at": "2026-08-10T17:30:16",
+      "source_title_sha256": "f26d378df22bfc36f91f2e19659daf5675e8919c4987c80a3daa48520deb4c63",
+      "source_abstract_sha256": "db99d52b829070b1ab01a51d78c75d533c75f77594e95e8e690150d42dafcf79",
+      "source_abstract": "abstract",
+      "title_zh": "安慰可能无意中抑制治疗",
+      "abstract_zh": "医疗服务提供者常通过告知患者症状“属正常”来传递安慰，无论是针对特定生命周期阶段（如更年期）还是特定健康情境（如术后疼痛）。尽管安慰旨在降低焦虑并增强自我效能，而这些通常有助于行动，但我们的结果显示“正常化”可能出现反向效应，反而降低人们寻求治疗的意愿。共14项研究（n=9,371）系统性记录了这一现象及其发生条件。我们的发现表明，正常化会触发对治疗规范的再评估，使个体推断医务人员的“正常化”意在传达“无需治疗”。鉴于这通常并非医务人员的本意，我们也识别了可用于克服这一错误推断的沟通策略。虽然这些实验在多个样本中显示出一致效应，但应注意实验均在在线环境中进行，而非临床现场。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
     "doi:10.1038/s41582-026-01223-w": {
       "doi": "10.1038/s41582-026-01223-w",
@@ -14834,6 +15068,19 @@
       "abstract_zh": "一项新研究提供了自身抗体与新冠长期症状（long COVID）神经学表现之间因果关系的证据。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
+    },
+    "doi:10.1038/s41582-026-01244-5": {
+      "doi": "10.1038/s41582-026-01244-5",
+      "journal_slug": "nature-reviews-neurology",
+      "title": "Menopause and neurological disorders: a roadmap for research",
+      "acquired_at": "2026-08-10T17:32:52",
+      "source_title_sha256": "f66cdce2a54e79aed64d7d9a16450bd7bcdb0b726a95a6ae3632239ec08c7295",
+      "source_abstract_sha256": "e40cc000f31d9190134ab5a646505257a4cfcb262ae294ff4cf8b8e075601122",
+      "source_abstract": "abstract",
+      "title_zh": "更年期与神经系统障碍：研究路线图",
+      "abstract_zh": "更年期在生物学与社会文化层面对脑健康的影响常被低估，且关于更年期过渡对大脑影响的科学认知仍十分有限。这一知识缺口对正在经历更年期过渡的女性及其既有神经系统疾病患者尤为不利。我们缺乏足够数据来理解既有神经系统疾病女性在围绝经期的体验、绝经后疾病进程变化的相关机制，以及如何以性别特异方式改进疾病管理。此外，大约三分之二的女性在更年期过渡中出现认知方面关注。尽管更早绝经与更高认知下降风险相关，但更年期过渡对后续神经系统疾病风险的影响仍不明确。该路线图中，我们识别了研究空白的关键领域，并强调了阻碍脑健康与更年期关系研究进展的历史与科学挑战。为应对这些挑战，我们结合现有知识提出优先议题和未来研究方向，以推进对更年期与神经健康、神经疾病关系的理解。更年期对脑健康贡献长期被低估，我们缺乏对其与神经系统疾病相互作用的充分认识。在该路线图中，Bove与Dobson指出了研究不足之处，并提出未来研究方向，以进一步加深对更年期与神经健康及疾病关系的认识。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
     "doi:10.1038/s41582-026-01245-4": {
       "doi": "10.1038/s41582-026-01245-4",
@@ -16356,6 +16603,58 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1038/s41586-026-10973-y": {
+      "doi": "10.1038/s41586-026-10973-y",
+      "journal_slug": "nature",
+      "title": "Author Correction: Cooperation conflicts with equality when allocating public goods",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "d7acac2192513e78a151ce619329a18bb601d4a346d90cb1c63b58b29749d88c",
+      "source_abstract_sha256": "8e734b3c193f474aece6e42272ed659bc2a9150657689e7b3ca96a27ff8bcf12",
+      "source_abstract": "abstract",
+      "title_zh": "作者更正：当分配公共物品时，合作与平等目标存在冲突",
+      "abstract_zh": "来源仅提供期刊名称“Nature”，未提供摘要。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/s41586-026-10978-7": {
+      "doi": "10.1038/s41586-026-10978-7",
+      "journal_slug": "nature",
+      "title": "Author Correction: Nucleolar URB1 ensures 3′ ETS rRNA removal to prevent exosome surveillance",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "903df426c19eb3760c6d93abefbb59c753dfe05181a14c43287772b1f25da7fc",
+      "source_abstract_sha256": "16209c4b527afd7b4b778617f4ef017ec9a2f9c58c6d4fb1f5177c51173372ec",
+      "source_abstract": "abstract",
+      "title_zh": "作者更正：核仁URB1保证3′ETS rRNA去除以防止核糖核酸外切体监控",
+      "abstract_zh": "来源仅提供期刊名称“Nature”，未提供摘要。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/s41586-026-10984-9": {
+      "doi": "10.1038/s41586-026-10984-9",
+      "journal_slug": "nature",
+      "title": "Author Correction: Durable all-inorganic perovskite tandem photovoltaics",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "feb1f7bee0f0479231d4cb580b42311e2b72d97024713928ef0c3af72faf03e7",
+      "source_abstract_sha256": "054d4016fc79ca54f94a4736b07161f60bcf491c50477b1080dc0f82dd782c1f",
+      "source_abstract": "abstract",
+      "title_zh": "作者更正：高耐久全无机钙钛矿串联光伏电池",
+      "abstract_zh": "来源仅提供期刊名称“Nature”，未提供摘要。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/s41586-026-10989-4": {
+      "doi": "10.1038/s41586-026-10989-4",
+      "journal_slug": "nature",
+      "title": "Learning millisecond protein dynamics from what is missing in NMR spectra",
+      "acquired_at": "2026-08-10T17:29:25",
+      "source_title_sha256": "8357e210a1c3aaeb8e714f3a87d8397c3612a29d7e8261ebc17c666f61183287",
+      "source_abstract_sha256": "52067ef4adfc230fe2edc50d600463864821aa99c36b7a20c215f9eb73661a08",
+      "source_abstract": "abstract",
+      "title_zh": "从核磁共振谱中缺失的信息学习毫秒级蛋白质动力学",
+      "abstract_zh": "许多蛋白质的生物学功能依赖于发生在微秒到毫秒（µs–ms）时间尺度上的多构象互变。缺乏标准化的大规模实验数据阻碍了对这些运动进行更具预测性的理解。在整理了超过100个核磁共振（NMR）弛豫数据集后，我们意识到一种反映 µs–ms 动力学的可观测指标可能就隐藏在显而易见之处。毫秒级动力学会使NMR信号展宽至检测下限之外，导致部分残基在约10,000个存于生物磁共振数据银行（BMRB）的化学位移数据集中未被归一。我们大胆假设缺失的残基归属是由于 µs–ms 动力导致的交换展宽，并训练了多种深度学习模型来预测这些缺失归属。令人瞩目的是，这些模型也能预测通过NMR弛豫实验测得的交换现象，即µs–ms动力学信号。表现最佳的模型命名为Dyna-1，它利用了多模态语言模型ESM-32的中间层。值得注意的是，与生物学功能直接相关的动力学（包括酶催化和配体结合）被Dyna-1预测得尤其准确，这与我们发现µs–ms交换参与的残基更为保守的结果一致。我们预期本文提出的数据集与模型将有助于推动“动力学—功能”共性规律的破解。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
     "doi:10.1038/s41593-026-02264-6": {
       "doi": "10.1038/s41593-026-02264-6",
       "journal_slug": "nature-neuroscience",
@@ -17668,6 +17967,19 @@
       "abstract_zh": "大型语言模型（LLM）与人类高级认知底层神经机制之间的对应关系尚未被充分刻画。鉴于语言与推理在大脑中似乎可分离，一个问题是LLM是否与与推理相关脑区的神经信号对齐，以及这些信号能否改进模型。我们在演绎推理任务中发现，LLM内部表征不仅与任务态功能性磁共振成像活动部分对齐，而且可直接由这些信号增强。基于神经可预测性指标，我们发现LLM能在聚合水平上解释推理相关脑区可解释方差的相当比例，但在特定推理类型内的可预测性较低，表明存在对齐与偏离并存。基于此，我们提出脑引导框架：在推断时施加干预并在训练时微调，沿由模型与大脑表征共同结构诱导的方向引导模型表征。我们证明任务诱发的脑信号可直接增强LLM推理，在10个LLM（1.5B–72B 参数）中带来提升，这种提升与仅语言监督正交，并在不同推理类型间可迁移，最高达到13%绝对准确率提升。我们的结果将LLM与脑对应关系从相关提升到引导，建立了一条以脑信号驱动、实现更稳健且与认知更一致人工智能的路径。Xiao 等人显示，LLM在演绎推理任务中与人类脑活动部分对齐；他们进一步表明脑信号可直接指导并提高模型性能，并在不同推理类型间迁移。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
+    },
+    "doi:10.1038/s42256-026-01280-2": {
+      "doi": "10.1038/s42256-026-01280-2",
+      "journal_slug": "nature-machine-intelligence",
+      "title": "Impact-resistant, autonomous robots inspired by tensegrity architecture",
+      "acquired_at": "2026-08-10T17:30:54",
+      "source_title_sha256": "6ab7bcb4a5b89b026662b77204b34e58cbaa72a86c6e3af545a6f6fc82a3383a",
+      "source_abstract_sha256": "5c95fb1b487bdcb9589e58a6011851a6b0a2d55cd331b1200463b12b8f3b32cd",
+      "source_abstract": "abstract",
+      "title_zh": "受高冲击韧性启发的自主机器人：基于张拉完整体（tensegrity）架构",
+      "abstract_zh": "张拉整体（tensegrity）机器人由刚性支杆在弹性索网中悬浮构成，已被提出为下一代行星车和灾害响应平台，其内在的抗冲击特性有望在能够承受空中投放条件下省去独立着陆器。尽管非机器人化的张拉整体结构已显示出显著冲击抗性，但将这一特性整合到自主机器人系统中仍是重大挑战。本文报道了Tribar，一种三杆张拉整体机器人，可在高冲击着陆（至少5.7米）后存活，并在撞击后自主穿越非结构化地形。我们对其运动能力进行了表征，评估了其自主导航能力，与最先进的张拉整体机器人相比进行基准测试，并在成功完成悬崖坠落后证明其运动鲁棒性。Johnson等人展示了一种能够在极端冲击后（包括从5.7米高跌落至沥青）仍保持跨地形鲁棒运动的自主三杆张拉整体机器人。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
     "doi:10.1038/s42256-026-01282-0": {
       "doi": "10.1038/s42256-026-01282-0",
