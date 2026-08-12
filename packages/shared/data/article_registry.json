@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-10T19:33:05.131582+00:00",
+  "updated_at": "2026-08-12T04:45:35.321122+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -1354,6 +1354,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1007/s10462-026-11671-x": {
+      "doi": "10.1007/s10462-026-11671-x",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Spatial intelligence in vision-language models: a comprehensive survey",
+      "acquired_at": "2026-08-11T17:47:41",
+      "source_title_sha256": "87d1e7a1971f064b588bcd0c23cf7a6be9f1d7e36f8ac245de1ad269e93a8077",
+      "source_abstract_sha256": "7847d30318890c0bd38fd01cfb45991a9ed2869069edf138884b5cbadf535a68",
+      "source_abstract": "abstract",
+      "title_zh": "视觉-语言模型中的空间智能：一项综合综述",
+      "abstract_zh": "摘要：视觉-语言模型（Vision-Language Models, VLMs）取得了显著进展，但在空间智能方面仍存在困难，即对物体所在位置、物体之间关系以及视角变化导致的空间变化的理解。这种局限性对具身人工智能、自动驾驶以及空间一致性生成具有重要影响。与此同时，快速发展的空间增强型 VLMs 形成了分散的文献，且术语、方法与评估实践不一致。在本综述中，我们提供了VLMs空间智能的最新进展的全面且统一的概览。我们总结了VLMs空间推理的核心概念，分析了空间失效发生的原因，并将现有解决方案组织为一个清晰框架，涵盖基于提示的方法、模型改进、显式二维线索、三维增强以及数据驱动策略。我们还考察了当前空间能力的评估方式，并报告了对37个模型和9个代表性基准测试的实证研究。我们的分析突出了当前表现最佳的方法，明确了不同策略何时有效或失效，揭示了不同评估数据集之间存在的性能差距，并显示了现有空间理解基准中的潜在设计偏倚。通过整合证据并概述未解问题，本综述为构建更具空间能力的VLMs提供了可操作路线图。我们公开了评估代码，并维护了一个精选论文库，以支持VLMs空间智能相关研究的快速增长。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1007/s10462-026-11674-8": {
       "doi": "10.1007/s10462-026-11674-8",
       "journal_slug": "artificial-intelligence-review",
@@ -1730,6 +1743,45 @@
       "abstract_zh": null,
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-04T01:59:53.657990+00:00"
+    },
+    "doi:10.1016/j.brs.2026.103179": {
+      "doi": "10.1016/j.brs.2026.103179",
+      "journal_slug": "brain-stimulation",
+      "title": "On the degree of overlap between 7-Tesla MRI Tractography-Based and Local Field Potential-Based Electrode Contact Selection in STN-DBS for Parkinson’s Disease",
+      "acquired_at": "2026-08-11T17:50:55",
+      "source_title_sha256": "5221da51be66dccae05d06f3151c2c20920690497f4f191185a628acbc65ff87",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "7T MRI 纤维追踪法与局部场电位法选择STN-DBS电极接触点的重叠程度",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1016/j.brs.2026.103180": {
+      "doi": "10.1016/j.brs.2026.103180",
+      "journal_slug": "brain-stimulation",
+      "title": "Anatomic and physiologic correlates of deep brain stimulation-induced panic attack",
+      "acquired_at": "2026-08-11T17:50:55",
+      "source_title_sha256": "58f24463ebc76a493a234e5af615905c576ac8efbc219c049b0f1aaec09b3c26",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "深部脑刺激诱发恐慌发作的解剖学与生理学相关因素",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1016/j.brs.2026.103181": {
+      "doi": "10.1016/j.brs.2026.103181",
+      "journal_slug": "brain-stimulation",
+      "title": "Multicenter reliability of electric field simulations: Evidence from a traveling-subjects study",
+      "acquired_at": "2026-08-11T17:50:55",
+      "source_title_sha256": "9830deee22b723d72e57b0c51160c60cfc102dd0cb11526089b3636f9f06a7a1",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "电场模拟的多中心可靠性：来自移动受试者研究的证据",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1016/j.cell.2026.02.018": {
       "doi": "10.1016/j.cell.2026.02.018",
@@ -3642,6 +3694,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1016/j.cell.2026.07.024": {
+      "doi": "10.1016/j.cell.2026.07.024",
+      "journal_slug": "cell",
+      "title": "The sex and reproductive plasticity of intestinal muscles instruct gut size",
+      "acquired_at": "2026-08-11T17:21:43",
+      "source_title_sha256": "a04e92abdf8a35ce64c60e174bc92f87761e12ad58d04eb4c3a635aa1e9a50d6",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "肠道平滑肌的性别与生殖可塑性指导肠道大小",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1016/j.cell.2026.07.026": {
       "doi": "10.1016/j.cell.2026.07.026",
       "journal_slug": "cell",
@@ -3661,12 +3726,12 @@
       "title": "The structural basis for LRRK2’s activation and autoinhibition",
       "acquired_at": "2026-08-10T17:17:47",
       "source_title_sha256": "db6305a00b10a192a7ffb0f5868abe34a62cdf918445db92eb5791dbfc58b20d",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "LRRK2激活与自抑制的结构基础",
-      "abstract_zh": null,
+      "source_abstract_sha256": "a6ed0accff25a61642d40ca4c0ad68941bf4a3509e0c1d1e84e9bf3a60fd6dc8",
+      "source_abstract": "abstract",
+      "title_zh": "LRRK2 激活与自抑制的结构基础",
+      "abstract_zh": "亮氨酸富集重复激酶2（LRRK2）突变是常染色体显性帕金森病（Parkinson’s disease, PD）的第二大常见致病原因，而在特发性 PD 中也可见 LRRK2 激酶活性升高，因此 LRRK2 成为重要且可干预的治疗靶点。LRRK2 是一种 286 kDa 的多结构域酶，包含 Ras 样 GTP 酶（ROC）和激酶结构域。我们结合冷冻电镜（cryo-EM）、生物化学重构和细胞实验表明，ROC GTPase 决定了自抑制与活化状态之间的转换：GTP 结合促进激活，而 GDP 结合强化自抑制。两种常见的 PD 相关突变 G2019S 与 R1441C/G/H 通过不同的结构机制激活 LRRK2，揭示了基因型特异的失调途径。这些发现提供了统一框架来理解 LRRK2 的调控，具有广泛治疗意义。稳定鸟苷二磷酸（GDP）结合状态可通过维持自抑制来抑制 LRRK2；而在某些细胞环境（如肺组织）促进鸟苷三磷酸（GTP）结合状态可能更有利，因为该处 LRRK2 激酶活性升高可能具有保护或调控作用。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1016/j.cell.2026.07.028": {
       "doi": "10.1016/j.cell.2026.07.028",
@@ -3680,6 +3745,19 @@
       "abstract_zh": "癌症仍是全球主要的致病和致死原因。尽管经典致幻剂已被用于治疗癌症相关精神疾病，其对肿瘤进展的影响仍不明确。我们在此显示，通过靶向5-羟色胺受体 5-HT2AR，麦角酸二乙胺（LSD）可增强 CD8+ T 细胞介导的抗肿瘤免疫并抑制结直肠癌（CRC）生长。为在避免致幻效应的同时利用这一活性，我们开发了 IHCH-8110，这是一种非脑渗透的 5-HT2AR 激动剂，可选择性作用于外周 5-HT2AR。我们发现，IHCH-8110 通过激活肠神经胶质细胞上的 5-HT2AR 抑制 CRC 进展，从而诱导 CXCL10 和白细胞介素（IL）-18 表达，促进 CD8+ T 细胞在肿瘤微环境中的募集和效应极化。通过将免疫“冷”肿瘤的 CRC 转变为更具免疫反应性的状态，IHCH-8110 提升了 PD-1 阻断疗法的疗效。总体而言，这些结果识别出肠道 5-HT2AR 信号作为抗肿瘤免疫调节因子，支持外周 5-HT2AR 激动剂作为 CRC 免疫治疗策略。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
+    },
+    "doi:10.1016/j.cell.2026.07.029": {
+      "doi": "10.1016/j.cell.2026.07.029",
+      "journal_slug": "cell",
+      "title": "Convergent evolution of metabolic regulation governs redox adaptation in Toxoplasma",
+      "acquired_at": "2026-08-11T17:21:43",
+      "source_title_sha256": "38c79d207a862cd370a19145afee2d75857d1c98d94bfe6eb106e730448eaa50",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "代谢调控的趋同进化支配弓形虫的氧化还原适应",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1016/j.cell.2026.07.030": {
       "doi": "10.1016/j.cell.2026.07.030",
@@ -3706,6 +3784,71 @@
       "abstract_zh": "免疫抑制患者罹患非黑色素瘤皮肤癌后的临床结局更差，但系统性免疫抑制相关的肿瘤免疫微环境仍未得到充分界定。研究对免疫健全和免疫抑制肿瘤整合开展单细胞、空间转录组、多重免疫荧光和空间表观基因组分析。总体免疫细胞组成大致保留，但细胞分布、空间组织和 T 细胞克隆性存在差异。免疫抑制肿瘤内巨噬细胞密度降低，T 细胞克隆多样性下降，抗原呈递细胞与 T 细胞的空间相互作用改变，并形成不同的成纤维细胞和巨噬细胞相关空间生态位。多个队列和互补空间、单细胞平台的验证一致显示，免疫抑制肿瘤的先天—适应性免疫组织发生改变。结果定义了系统性免疫抑制下肿瘤免疫微环境的空间和功能重塑，并为高风险患者的治疗研究提供框架。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
+    },
+    "doi:10.1016/j.cell.2026.07.032": {
+      "doi": "10.1016/j.cell.2026.07.032",
+      "journal_slug": "cell",
+      "title": "Hierarchical and context-dependent encoding of actions in human posterior parietal and motor cortex",
+      "acquired_at": "2026-08-11T17:21:43",
+      "source_title_sha256": "81650a026407c2030887abd616f8776af05ad41cce7d1589a5d106e68d9447d0",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "人类后顶叶和运动皮层中行为的分层与依赖上下文编码",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1016/j.cell.2026.07.034": {
+      "doi": "10.1016/j.cell.2026.07.034",
+      "journal_slug": "cell",
+      "title": "Trans-regulatory gene mapping prioritizes disease drivers in asthma",
+      "acquired_at": "2026-08-11T17:21:43",
+      "source_title_sha256": "3b2798a389b38e72508fe1a240aeccf7584ac3e2f8bbbca87dde166488d06d19",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "反式调控基因图谱突出哮喘中的疾病驱动基因",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1016/j.cell.2026.07.035": {
+      "doi": "10.1016/j.cell.2026.07.035",
+      "journal_slug": "cell",
+      "title": "Pangenome-guided breeding restores high-altitude adaptation and improves yield in Tartary buckwheat",
+      "acquired_at": "2026-08-11T17:21:43",
+      "source_title_sha256": "fa9e742bb4f26d0bfc2bd7b2eac931a877e37ea30695556597cd294096f7ebb7",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "泛基因组引导育种恢复高海拔适应性并提高荞麦（高梁麦）产量",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1016/j.cell.2026.07.046": {
+      "doi": "10.1016/j.cell.2026.07.046",
+      "journal_slug": "cell",
+      "title": "Breathing new life into the rational design of Alzheimer’s therapeutics",
+      "acquired_at": "2026-08-11T17:21:43",
+      "source_title_sha256": "5bddd1263c17465536adb84a8c42ee8e9e9e5649ff96ae4f21812818271f89f6",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "为理性设计阿尔茨海默病治疗带来新生",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1016/j.cell.2026.07.047": {
+      "doi": "10.1016/j.cell.2026.07.047",
+      "journal_slug": "cell",
+      "title": "Reshaping Antibody Diversity",
+      "acquired_at": "2026-08-11T17:21:43",
+      "source_title_sha256": "68dc1bee559e3c60bbad3a3c6ccd30835eb63ed0f03819e774c774ef7dcdd282",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "重塑抗体多样性",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106648": {
       "doi": "10.1016/j.neubiorev.2026.106648",
@@ -6333,6 +6476,32 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.106898": {
+      "doi": "10.1016/j.neubiorev.2026.106898",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Updated Models of Adolescent Substance-related Interference and Problems (A-SIP) and Measurement of Substance-related Interference and Problems Identification Test (SIP-IT)",
+      "acquired_at": "2026-08-11T18:01:03",
+      "source_title_sha256": "deff426540df549519eaa348fb2e8196c5e4c3f93be09872e20fa2693e225d8d",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "青少年物质相关干扰与问题的更新模型（A-SIP）及物质相关干扰与问题识别测试（SIP-IT）",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106908": {
+      "doi": "10.1016/j.neubiorev.2026.106908",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Large-scale neural systems linking bodily self-awareness and valuation in decision-making",
+      "acquired_at": "2026-08-11T18:01:03",
+      "source_title_sha256": "b78382e225334e137b4cd3d4311fb284f816472156b132d9ac340da7d2fe7186",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "决策中连接身体自我意识与价值评估的大规模神经系统",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
       "journal_slug": "neuron",
@@ -8023,18 +8192,31 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
     },
+    "doi:10.1016/j.neuron.2026.07.021": {
+      "doi": "10.1016/j.neuron.2026.07.021",
+      "journal_slug": "neuron",
+      "title": "Senescent microglia with shortened telomeres secrete soluble DLK1 to induce aging-associated hypomyelination and neuronal dysfunction",
+      "acquired_at": "2026-08-11T17:25:31",
+      "source_title_sha256": "ee66786f2a99c1034faadd222505d675d48739d401b4b8a3d95ce4b4e90e4f0d",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "端粒缩短的衰老小胶质细胞分泌可溶性 DLK1，诱导老化相关低髓鞘化和神经功能障碍",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1016/j.neuron.2026.07.022": {
       "doi": "10.1016/j.neuron.2026.07.022",
       "journal_slug": "neuron",
       "title": "Divergent somatic mutation patterns among human cerebellar neuron types",
       "acquired_at": "2026-08-10T17:21:32",
       "source_title_sha256": "eaef0aa88dff955289e0e33518fcdbf43504e830eee1b97699cc16bb61c096a2",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "人类小脑神经元类型间的体细胞突变模式分化",
-      "abstract_zh": null,
+      "source_abstract_sha256": "f45bfdbee7cf82cfb4a8024523b6620ddb81108a574acf8258b5c3891717c166",
+      "source_abstract": "abstract",
+      "title_zh": "人类小脑神经元类型之间存在不同的体细胞突变谱",
+      "abstract_zh": "神经元会随年龄累积体细胞突变，但不同神经元类型间的突变过程差异仍不清楚。阐明这种变异有助于阐释基因组完整性在脑功能与疾病中的作用，并揭示突变率与突变谱的决定因素。我们采用高保真度双链 DNA 测序，在人类小脑浦肯野细胞和颗粒细胞中的整个生命历程中分析了体细胞突变；两者在细胞体积和生理特征上差异显著。意外的是，它们表现出相似的替换率，包括占主导的突变特征 SBS5 的发生率，而该特征机制尚未明确。尽管如此，它们的替换模式以及插入/缺失突变率和模式不同，这种差异与转录相关。在五例小脑性共济失调患者幸存的颗粒细胞中，仅观察到疾病对突变谱有轻微影响。我们的研究表明，不同神经元类型在衰老相关致突变方面可存在差异，区分浦肯野细胞与颗粒细胞的关键特征在这些细胞中似乎并非决定 SBS5 活性的主要因素。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-10T19:33:05.131582+00:00"
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1016/j.tics.2025.09.013": {
       "doi": "10.1016/j.tics.2025.09.013",
@@ -8842,6 +9024,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
     },
+    "doi:10.1016/j.tins.2026.05.001": {
+      "doi": "10.1016/j.tins.2026.05.001",
+      "journal_slug": "trends-in-neurosciences",
+      "title": "Venous origins of choroid plexus vasculature: insights from zebrafish",
+      "acquired_at": "2026-08-11T17:29:02",
+      "source_title_sha256": "1b785563453b656d770dc310116bff48b20cc5220cca9994384c712443ea655b",
+      "source_abstract_sha256": "bc97b1a6daa396445ebbb8ed748ea68948d238f1b83a28dbec5e025cbb7b85ec",
+      "source_abstract": "abstract",
+      "title_zh": "脉络丛血管的静脉来源：来自斑马鱼的见解",
+      "abstract_zh": "脉络丛血管在维持脑脊液稳态中发挥关键作用。近期研究中，Lee 等人发现斑马鱼延髓髓板区脉络丛血管源于两个静脉来源，并证明 VEGF 受体通路对脉络丛血管化是必需的。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1016/j.tins.2026.05.002": {
       "doi": "10.1016/j.tins.2026.05.002",
       "journal_slug": "trends-in-neurosciences",
@@ -9024,6 +9219,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
     },
+    "doi:10.1016/j.tins.2026.07.001": {
+      "doi": "10.1016/j.tins.2026.07.001",
+      "journal_slug": "trends-in-neurosciences",
+      "title": "Fronto-striatal molecular convergence in eating and obsessive-compulsive disorders",
+      "acquired_at": "2026-08-11T17:29:02",
+      "source_title_sha256": "28075566f65f36f37479cc984bf8497872b07a6baf5b466d654dc4d1c33017fe",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "进食障碍与强迫症障碍中的额纹状体分子收敛",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1016/j.tins.2026.07.002": {
       "doi": "10.1016/j.tins.2026.07.002",
       "journal_slug": "trends-in-neurosciences",
@@ -9049,6 +9257,19 @@
       "abstract_zh": "大脑必须学会将感觉经验与延迟出现的生理后果联系起来，才能产生适应性行为。岛叶皮层整合味觉、内脏、免疫、疼痛、情感和代谢信息，适合形成身体状态表征。本文主要基于小鼠和大鼠研究并参照人类证据，综述岛叶回路如何把外部线索与预测的身体状态相联。条件性味觉厌恶和条件性免疫反应是两种互补模型：最初中性的感觉刺激可跨越较长时间延迟，获得诱发学习性行为或生理反应的能力。作者讨论前、后岛叶回路，投射特异性可塑性、抑制性门控和分子机制如何参与这些关联的编码、更新与提取。该框架将岛叶定位为依赖状态的枢纽，可生成并调节对身体未来生理状态和需求的学习性预测。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
+    },
+    "doi:10.1016/j.tins.2026.07.004": {
+      "doi": "10.1016/j.tins.2026.07.004",
+      "journal_slug": "trends-in-neurosciences",
+      "title": "Translation elongation in the nervous system",
+      "acquired_at": "2026-08-11T17:29:02",
+      "source_title_sha256": "78181f074c9fac9a23955995fe1fd74ef26d94144680bb3a81c78299dc8b80dd",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "神经系统中的翻译延伸",
+      "abstract_zh": null,
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1016/s0149-7634(26)00189-2": {
       "doi": "10.1016/s0149-7634(26)00189-2",
@@ -10272,6 +10493,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T04:06:17.316812+00:00"
     },
+    "doi:10.1038/d41586-026-02082-7": {
+      "doi": "10.1038/d41586-026-02082-7",
+      "journal_slug": "nature",
+      "title": "When the best decision is no decision: the rise of randomization in grant funding",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "f43d1eaf90949c9ea7f0a28bc89e4644310a2072867ae9b2f87c025347ee355b",
+      "source_abstract_sha256": "308de8eb8f750d680bdf65444a6c77553f266a37142d50e8346a8984f8f142b4",
+      "source_abstract": "abstract",
+      "title_zh": "当最佳选择是“不选”时：为何基金评审开始转向随机分配",
+      "abstract_zh": "若评审者无法稳定区分最优秀的基金申请书，那么他们又如何假装可以？一股新兴资助浪潮正在转向彩票制，以打破排序僵局。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1038/d41586-026-02083-6": {
       "doi": "10.1038/d41586-026-02083-6",
       "journal_slug": "nature",
@@ -10388,6 +10622,19 @@
       "abstract_zh": "在果蝇肠道中，干细胞通过进行八轮细胞分裂形成吸收细胞，再进行一轮分裂形成分泌细胞，以维持细胞类型的平衡。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T04:06:17.316812+00:00"
+    },
+    "doi:10.1038/d41586-026-02142-y": {
+      "doi": "10.1038/d41586-026-02142-y",
+      "journal_slug": "nature",
+      "title": "Solar eclipse offers rare chance to solve Sun’s magnetic-field mysteries",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "2e3cfa9973e13f2799e481354544c5127787c396b0e6d4989f5c03f2ec4f8672",
+      "source_abstract_sha256": "08c292b9e276c097b3c3fe241d77bbc0b4e95a78b3ccc4ce85819fb1b6cda34e",
+      "source_abstract": "abstract",
+      "title_zh": "日食为破解太阳磁场之谜提供了罕见机会",
+      "abstract_zh": "研究人员将前往西班牙和冰岛，在8月12日的日食期间观测，以期回答关于太阳日冕的关键问题。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1038/d41586-026-02155-7": {
       "doi": "10.1038/d41586-026-02155-7",
@@ -11923,6 +12170,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-04T01:59:53.657990+00:00"
     },
+    "doi:10.1038/d41586-026-02374-y": {
+      "doi": "10.1038/d41586-026-02374-y",
+      "journal_slug": "nature",
+      "title": "HIV vaccines guide rare immune cells to make broadly neutralizing antibodies",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "ae38818d5690bbd82afda8af6111aae6fc3df87bb29eb7b8344e1a7464477888",
+      "source_abstract_sha256": "70679662841bd60d1f4fb0ec0c5222e8cf46112aeb1f1b627217a793c9dccb1a",
+      "source_abstract": "abstract",
+      "title_zh": "HIV 疫苗可引导罕见免疫细胞生成广谱中和抗体",
+      "abstract_zh": "三项非人灵长类动物研究显示，经过策略性设计的疫苗可预先激活一群 B 细胞，从而产生针对 HIV 的有效抗体。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1038/d41586-026-02379-7": {
       "doi": "10.1038/d41586-026-02379-7",
       "journal_slug": "nature",
@@ -11935,6 +12195,19 @@
       "abstract_zh": "《自然》往期新闻片段。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
+    },
+    "doi:10.1038/d41586-026-02380-0": {
+      "doi": "10.1038/d41586-026-02380-0",
+      "journal_slug": "nature",
+      "title": "How escalating costs scuppered a radio telescope at Joddrell Bank",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "55d8cfe1abf87480def3865b4b87d80df5ae1383ce6e467a2b3f84722b07b863",
+      "source_abstract_sha256": "550ed1a5828870a29f2c065822d4db04515d5118daf6ccdc8dc84ce7ae048ecd",
+      "source_abstract": "abstract",
+      "title_zh": "经费持续攀升使约德雷尔·贝尔克（Jodrell Bank）的一台射电望远镜流产",
+      "abstract_zh": "《自然》往期内容节选。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1038/d41586-026-02384-w": {
       "doi": "10.1038/d41586-026-02384-w",
@@ -12326,6 +12599,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
+    "doi:10.1038/d41586-026-02449-w": {
+      "doi": "10.1038/d41586-026-02449-w",
+      "journal_slug": "nature",
+      "title": "A ‘super’ El Niño could transform the Amazon. Is the world’s biggest rainforest doomed?",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "1fd366d36145d03f2b7968d6d31d7b514b6c06b43ca9425905b5ffc7ae61a0c9",
+      "source_abstract_sha256": "45a81d8152f4e741aea31f626fdc25e511bef2e562b781ac97f8dd03d77e8ea4",
+      "source_abstract": "abstract",
+      "title_zh": "“超级”厄尔尼诺可能重塑亚马逊：世界最大的雨林将不被拯救吗？",
+      "abstract_zh": "亚马逊雨林可能比科学界此前认为的更接近临界点。人们担忧，干旱和火灾可能推动其迈向不可逆转的衰退。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1038/d41586-026-02450-3": {
       "doi": "10.1038/d41586-026-02450-3",
       "journal_slug": "nature",
@@ -12339,6 +12625,32 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
+    "doi:10.1038/d41586-026-02451-2": {
+      "doi": "10.1038/d41586-026-02451-2",
+      "journal_slug": "nature",
+      "title": "Why scientists should lead the shift away from AI mega data centres",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "80a5afdecf5644ac48e4ac7c5631de162bcf7b20cc4ce4a257f9f357527b1f49",
+      "source_abstract_sha256": "66db1233a54f8d7bd77281ab9faef58da1b5b70bf353d42ce3e3937ae9be95ea",
+      "source_abstract": "abstract",
+      "title_zh": "为何科学家应引领远离 AI 超大规模数据中心的转向",
+      "abstract_zh": "公开可得的 AI 模型与本地基础设施可降低 AI 的环境足迹，并让研究者更好掌控其所使用的工具。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1038/d41586-026-02452-1": {
+      "doi": "10.1038/d41586-026-02452-1",
+      "journal_slug": "nature",
+      "title": "Seven tips for a graceful lab exit",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "75774bc54fd2c7aa66bb367c367650876a0458222f64edc91633a31e3f8f47e0",
+      "source_abstract_sha256": "5d4091666fa921a728b0774feba50d374d1344f7758b82c780e75975e0c583e4",
+      "source_abstract": "abstract",
+      "title_zh": "从实验室体面离开的七个建议",
+      "abstract_zh": "工作变动往往具有挑战性，但良好的沟通与规划可以提供帮助。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1038/d41586-026-02453-0": {
       "doi": "10.1038/d41586-026-02453-0",
       "journal_slug": "nature",
@@ -12351,6 +12663,19 @@
       "abstract_zh": "四位1997年后出生的研究者讲述了他们如何在艰难时期保持动力并培养韧性。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/d41586-026-02454-z": {
+      "doi": "10.1038/d41586-026-02454-z",
+      "journal_slug": "nature",
+      "title": "The forgotten 20 million: why is the world neglecting Afghanistan’s girls and women?",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "f368cdca443f7268414eb64364a7cd95a34ddc3d4443b643e5689c9fca799f81",
+      "source_abstract_sha256": "7e7eb68f2ce9d7da859bd038793e50c1fb5dc4f421fd3a6e1e595c8b43cfbe75",
+      "source_abstract": "abstract",
+      "title_zh": "被遗忘的两千万：为什么世界忽视阿富汗的女孩与女性？",
+      "abstract_zh": "国际社会持续忽视该国一半人口，令人羞愧。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1038/d41586-026-02458-9": {
       "doi": "10.1038/d41586-026-02458-9",
@@ -12391,6 +12716,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
     },
+    "doi:10.1038/d41586-026-02464-x": {
+      "doi": "10.1038/d41586-026-02464-x",
+      "journal_slug": "nature",
+      "title": "The case for responsible scientific activism",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "dede3c5d8c64d6347b1ba1204e117ed8cf468b589f2274adfa1a5d72407dae84",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "科学家的负责任行动主义应是主流",
+      "abstract_zh": "致编辑来信。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1038/d41586-026-02488-3": {
       "doi": "10.1038/d41586-026-02488-3",
       "journal_slug": "nature",
@@ -12404,6 +12742,58 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
     },
+    "doi:10.1038/d41586-026-02489-2": {
+      "doi": "10.1038/d41586-026-02489-2",
+      "journal_slug": "nature",
+      "title": "NIH limits funding for research on the health effects of public policy",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "c5a46c125a143f1b98a8de8dbdea77f20de3ce0814f7ffd27ab00e04acb70430",
+      "source_abstract_sha256": "b70fca88782e6d4e541c2d943fb54127c57ddb946a8b75bbe42761f9c76e3197",
+      "source_abstract": "abstract",
+      "title_zh": "NIH削减公共政策健康效应研究经费",
+      "abstract_zh": "美国生物医学机构不再将政策制定者视为“与任务相关”，使数十项资助项目处于待决状态。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1038/d41586-026-02490-9": {
+      "doi": "10.1038/d41586-026-02490-9",
+      "journal_slug": "nature",
+      "title": "AI tools speed up analysis, but scientific truths must be grounded in reality",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "5e54fd6eacca15a5434430694151922814fa5bca6b8d623a69189585d9edeea6",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "AI 工具可加速分析，但科学真相必须扎根于现实",
+      "abstract_zh": "致编辑来信。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1038/d41586-026-02491-8": {
+      "doi": "10.1038/d41586-026-02491-8",
+      "journal_slug": "nature",
+      "title": "Will AI make our dreams all look the same?",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "20e66726047961d720c24a1d8fa4b0fcf5408192e4c05458b57419511e7fa8d2",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "AI 会不会让我们的梦都变得同样？",
+      "abstract_zh": "致编辑来信。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1038/d41586-026-02492-7": {
+      "doi": "10.1038/d41586-026-02492-7",
+      "journal_slug": "nature",
+      "title": "Funders should look beyond strict age criteria",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "969eff759f6f55f487ff270b7ffb9dee37642ec2a9c0892cffeaa90625a56554",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "基金方应超越严格年龄标准考量",
+      "abstract_zh": "致编辑来信。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1038/d41586-026-02493-6": {
       "doi": "10.1038/d41586-026-02493-6",
       "journal_slug": "nature",
@@ -12416,6 +12806,19 @@
       "abstract_zh": "中国、荷兰和希腊文化背景的人群在身体上存在相同的“发痒热点”。且发痒感在较少被触碰的部位更强。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/d41586-026-02500-w": {
+      "doi": "10.1038/d41586-026-02500-w",
+      "journal_slug": "nature",
+      "title": "Daily briefing: AI agents sniff out decades-old errors in scientific literature",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "d1bf486e06c84f2dfee49a7451d33ba21d7bf4c4e09612215394612a83c33d4b",
+      "source_abstract_sha256": "d6cf57fdfe392e1850ecc47bf7db0d9bd78ecfb45588af4cb8c92f3fff9a6985",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：AI 智能体发现科学文献中几十年未被识别的错误",
+      "abstract_zh": "AI 能快速发现错误，但研究者认为其应仅用于核对“客观事实”。另外还包括一个能装进食物盒尺寸的磁场探测器，以及 Z 世代研究者关于提升韧性的建议。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1038/s41380-026-03626-z": {
       "doi": "10.1038/s41380-026-03626-z",
@@ -14159,6 +14562,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1038/s41380-026-03816-9": {
+      "doi": "10.1038/s41380-026-03816-9",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Psychedelics and astrocytes: a hypothesis-driven perspective on neuro-glial integration, network plasticity, and neuroimmune reprogramming",
+      "acquired_at": "2026-08-11T17:42:44",
+      "source_title_sha256": "22fc693c2adf66fb4affcbd6c717e076f2208306d4489120b531189df824dc97",
+      "source_abstract_sha256": "52d8c3aea6f6aa9aa22d55af992a8886359a538bceefcd496a20fda63b72664f",
+      "source_abstract": "abstract",
+      "title_zh": "迷幻药与星形胶质细胞：关于神经-胶质整合、网络可塑性与神经免疫重编程的假说驱动视角",
+      "abstract_zh": "摘要：包括裸盖菇素、麦角酸二乙酰胺（LSD）及相关的psychoplastogen在内的迷幻药正重新作为强效神经功能调节剂出现，在多种神经精神类疾病中显示治疗潜力。尽管现有主流机制模型强调神经元5-羟色胺2A受体（5-HT2AR）介导的信号转导，但越来越多的证据表明，星形胶质细胞（曾主要被视为被动支持细胞）可能在塑造迷幻药诱发脑状态中发挥主动且可能核心的作用。星形胶质细胞能够独特地整合神经调质信号、调节突触传递、协调代谢支持，并编排神经免疫反应。我们提出假说，星形胶质细胞作为关键整合节点，将迷幻药诱导的受体激活转化为回路级可塑性变化并导致持久行为改变。在迷幻药作用背景下，我们综合了关于星形胶质细胞钙信号、胶质递质（gliotransmission）、代谢耦合、神经血管调控和免疫闸门机制的最新证据。基于这些观察，我们提出“神经-胶质整体”框架：神经元—星形胶质细胞互作可能构成一个最小功能单元，参与迷幻药诱发的网络重组。该系统水平视角提供了一个可检验的机制假说，将受体药理与大尺度脑动力学和临床结局联系起来。我们最后概述了该假说的关键预测，并提出了严格检验这些预测的实验策略。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1038/s41380-026-03820-z": {
       "doi": "10.1038/s41380-026-03820-z",
       "journal_slug": "molecular-psychiatry",
@@ -15211,6 +15627,58 @@
       "abstract_zh": "阿尔茨海默病中的睡眠障碍长期被视为淀粉样蛋白和 Tau 的下游结果。两项新研究显示，由微胶质细胞和星形胶质细胞水通道蛋白4（aquaporin 4）介导的胶质细胞机制，而非淀粉样斑块负荷，本身可引发睡眠障碍，并可能成为干预 AD 相关睡眠丢失的潜在靶点。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-05T06:42:05.174505+00:00"
+    },
+    "doi:10.1038/s41582-026-01256-1": {
+      "doi": "10.1038/s41582-026-01256-1",
+      "journal_slug": "nature-reviews-neurology",
+      "title": "Complex regional diversity in synucleinopathies",
+      "acquired_at": "2026-08-11T17:37:13",
+      "source_title_sha256": "d60f4876d62a266b61c89c11feb0bb5f0a35897981f1ecdc75708827d9907371",
+      "source_abstract_sha256": "38fc7891f8682b78b3e704efb647ca9123bb9488d45c0ede0844b5ffca27cfcb",
+      "source_abstract": "abstract",
+      "title_zh": "突触/突触蛋白聚集病中的复杂区域异质性",
+      "abstract_zh": "根据新研究，路易体超微结构的区域差异在帕金森病和路易体痴呆之间没有差异，但线粒体形态存在差异。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1038/s41582-026-01257-0": {
+      "doi": "10.1038/s41582-026-01257-0",
+      "journal_slug": "nature-reviews-neurology",
+      "title": "Shared mechanism of mutagenesis in neurodegeneration",
+      "acquired_at": "2026-08-11T17:37:13",
+      "source_title_sha256": "904ea452c160f6c0f5e80aff63988eb9e1b9378d80fe15c884dfe0cdcd209d6e",
+      "source_abstract_sha256": "c7c15103a828777ce313a8d26c6ff876d72b69e4956f88d5ee3ebfc075b17fd7",
+      "source_abstract": "abstract",
+      "title_zh": "神经退行性病变中的共同致突变机制",
+      "abstract_zh": "新研究表明，肌萎缩侧索硬化、额颞叶痴呆和阿尔茨海默病共享一种致突变机制。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1038/s41582-026-01258-z": {
+      "doi": "10.1038/s41582-026-01258-z",
+      "journal_slug": "nature-reviews-neurology",
+      "title": "Brain asymmetry patterns associated with age-related disease",
+      "acquired_at": "2026-08-11T17:37:13",
+      "source_title_sha256": "3e860462aeaff0e7b2d86cac48648b7f001696911deb358acd7200404077b265",
+      "source_abstract_sha256": "ff1cb6f20314d34f0c8a2da457c76d64cf1502631c8285860e4bd8fec0f306e1",
+      "source_abstract": "abstract",
+      "title_zh": "与年龄相关疾病相关的脑结构不对称模式",
+      "abstract_zh": "新研究提示，结构性脑不对称性差异可能与阿尔茨海默病等年龄相关疾病相关。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1038/s41582-026-01259-y": {
+      "doi": "10.1038/s41582-026-01259-y",
+      "journal_slug": "nature-reviews-neurology",
+      "title": "Circular RNAs outperform established Alzheimer disease biomarkers",
+      "acquired_at": "2026-08-11T17:37:13",
+      "source_title_sha256": "9eccfe56b8e8765feb23f2773eedb2412906787532752bef227c38671dfe43f0",
+      "source_abstract_sha256": "4e671dd411a2f9babd2714411901d7591e30308acadf99f8ed9ea0d15b676f43",
+      "source_abstract": "abstract",
+      "title_zh": "环状RNA胜过既有阿尔茨海默病生物标志物",
+      "abstract_zh": "根据新的研究，血液中的环状RNA可作为阿尔茨海默病（AD）的高敏感性生物标志物。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1038/s41583-026-01054-0": {
       "doi": "10.1038/s41583-026-01054-0",
@@ -16538,6 +17006,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1038/s41586-026-10947-0": {
+      "doi": "10.1038/s41586-026-10947-0",
+      "journal_slug": "nature",
+      "title": "Author Correction: Uncovering the role of LINE-1 in the evolution of lung adenocarcinoma",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "0091c395750dd6a96504b1a2d10e03646ceb054f1aecd9256fce4d117b54e92b",
+      "source_abstract_sha256": "2719fe2e389119af1d135bda3762a18569f731639618910e6d2851a4cf48f8db",
+      "source_abstract": "abstract",
+      "title_zh": "作者更正：揭示 LINE-1 在肺腺癌进化中的作用",
+      "abstract_zh": "来源仅给出了期刊与题目信息（Nature），但未提供摘要。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1038/s41586-026-10953-2": {
       "doi": "10.1038/s41586-026-10953-2",
       "journal_slug": "nature",
@@ -16654,6 +17135,19 @@
       "abstract_zh": "许多蛋白质的生物学功能依赖于发生在微秒到毫秒（µs–ms）时间尺度上的多构象互变。缺乏标准化的大规模实验数据阻碍了对这些运动进行更具预测性的理解。在整理了超过100个核磁共振（NMR）弛豫数据集后，我们意识到一种反映 µs–ms 动力学的可观测指标可能就隐藏在显而易见之处。毫秒级动力学会使NMR信号展宽至检测下限之外，导致部分残基在约10,000个存于生物磁共振数据银行（BMRB）的化学位移数据集中未被归一。我们大胆假设缺失的残基归属是由于 µs–ms 动力导致的交换展宽，并训练了多种深度学习模型来预测这些缺失归属。令人瞩目的是，这些模型也能预测通过NMR弛豫实验测得的交换现象，即µs–ms动力学信号。表现最佳的模型命名为Dyna-1，它利用了多模态语言模型ESM-32的中间层。值得注意的是，与生物学功能直接相关的动力学（包括酶催化和配体结合）被Dyna-1预测得尤其准确，这与我们发现µs–ms交换参与的残基更为保守的结果一致。我们预期本文提出的数据集与模型将有助于推动“动力学—功能”共性规律的破解。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1038/s41586-026-10991-w": {
+      "doi": "10.1038/s41586-026-10991-w",
+      "journal_slug": "nature",
+      "title": "Phosphine-mediated azine C–H couplings with water and ammonia",
+      "acquired_at": "2026-08-11T17:33:41",
+      "source_title_sha256": "3c96b7130e6c927e755b1e76730d186b4cd597983effafcfb3f142c030b7454f",
+      "source_abstract_sha256": "31348fd272c5fe057b47f21f7805c6ebb54d522e2d16713a01d4617411d5c519",
+      "source_abstract": "abstract",
+      "title_zh": "膦介导的噁嗪 C–H 偶联与水和氨反应",
+      "abstract_zh": "过渡金属的独特反应性推动了 C–H 官能化化学的发展，使研究者能够在构效关系（structure–activity relationship, SAR）研究中直接改造药物和农药化合物。这些金属在芳烃和芳杂环的 C–H 键转化方面尤为高效，可催化形成 C–C 与 C-杂原子键的反应。然而，在众多可偶联底物中，与水和氨发生（杂）芳烃 C–H 偶联仍然罕见。1–5 尽管二者是地球上最丰富的化学物之一，其反应性却常与过渡金属络合物及 C–O/C–N 键形成相关的基本步骤不相容。6 我们推测位于过渡金属区之外的元素可能更适合促进这些反应。本文显示，简单的三芳基膦可实现选择性地使杂嗪 C–H 与水、氨偶联。该反应遵循一种机制：悬挂的醛和亚胺基团可互变为缩醛和缩氨型构型，并通过实验与计算方法共同研究。此类邻位基团协同参与的非典型例子，有效将水和氨分子递送至 P(V) 配位环境，进而通过配体-偶联反应促进 C–O 与 C–N 键形成。反应兼容广泛的吡啶类化合物，也适用于喹啉与二嗪，且可用于复杂药物和农化品的后期羟基化与胺化修饰。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1038/s41593-026-02264-6": {
       "doi": "10.1038/s41593-026-02264-6",
@@ -17539,6 +18033,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
     },
+    "doi:10.1038/s41593-026-02400-2": {
+      "doi": "10.1038/s41593-026-02400-2",
+      "journal_slug": "nature-neuroscience",
+      "title": "Modeling maternal immune activation in 3D ex vivo human fetal brain cerebroids reveals IL-17A-driven disruption of cortical development",
+      "acquired_at": "2026-08-11T17:36:25",
+      "source_title_sha256": "02d5393ffb65d562b0cdb538fce4b2e1ae0a05012abdfef1781c478c0ebb66f5",
+      "source_abstract_sha256": "59e23ab128d687877fc41f05134e69ad53d169721ed0046624a3f20d34a01aee",
+      "source_abstract": "abstract",
+      "title_zh": "在三维体外人胎脑类脑皮层器官模型中建模母体免疫激活，揭示IL-17A驱动的皮层发育中断",
+      "abstract_zh": "Abstract 母体免疫激活（maternal immune activation, MIA）会扰乱脑发育并增加神经发育障碍风险，但其如何影响人类皮层发育的机制仍未完全阐明。在本研究中，我们建立了一种三维体外培养体系“cerebroids”，来源于人类胎儿大脑背外侧前额叶皮层组织，能够保留发育中人类皮层的关键发育过程、细胞多样性和结构完整性。利用该模型，我们发现MIA相关细胞因子IL-17A可诱发过早皮层褶皱、增加皮层厚度，并加速神经发生和神经元成熟。我们进一步揭示IL-17A显著失调与细胞外基质相关通路，尤其是蛋白聚糖上调。于神经干细胞中，IL-17A直接激活NF-κB信号通路，导致持续的炎症反应并促成这些发育异常；而这些异常可被NF-κB通路抑制剂帕森诺呤（parthenolide）逆转。上述结果描绘了IL-17A扰乱人类皮层发生的机制，并阐明了MIA期间脑发育受损的作用路径。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
     "doi:10.1038/s41593-026-02405-x": {
       "doi": "10.1038/s41593-026-02405-x",
       "journal_slug": "nature-neuroscience",
@@ -17590,6 +18097,19 @@
       "abstract_zh": "该文献仅提供期刊名“Nature Neuroscience”，未提供摘要。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
+    },
+    "doi:10.1038/s41593-026-02416-8": {
+      "doi": "10.1038/s41593-026-02416-8",
+      "journal_slug": "nature-neuroscience",
+      "title": "Susumu Tonegawa (1939–2026)",
+      "acquired_at": "2026-08-11T17:36:25",
+      "source_title_sha256": "e9e2438c30c1301ba88aa22c68042881086ababc71862d7870108f21cc6f5e7b",
+      "source_abstract_sha256": "91c0e573ec2f5a9949dc19f938a121eef23ac42ceb639bcaccf4361eb501ca7e",
+      "source_abstract": "abstract",
+      "title_zh": "利根川进（Susumu Tonegawa，1939–2026）",
+      "abstract_zh": "2026年7月11日，神经科学失去了一位最具远见的科学家——86岁的利根川进（Susumu Tonegawa）去世。Tonegawa在跨越五十余年的非凡科学生涯中，以不懈的好奇心和坚定的信念持续追问生物学的核心奥秘，激励了几代科学家持续提出最困难的问题。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1038/s41593-026-02425-7": {
       "doi": "10.1038/s41593-026-02425-7",
@@ -19670,6 +20190,19 @@
       "abstract_zh": "从致病性自身免疫到宿主防御受损的免疫功能异常，是神经自身免疫病、炎症性疾病和机会性感染的共同机制。尽管免疫调节和抗感染治疗已有进展，仍有许多患者对传统药物无反应。过继性 T 细胞作为可在体内扩增、适应并持续存在的“活药物”，已在神经系统炎症和感染性疾病中迅速进入初步报告与临床试验。本文提出以疾病为中心的概念框架，将 T 细胞疗法置于神经科实践中考察。框架以两条主要免疫病理轴组织疾病：诱发机会性感染的免疫缺陷，以及驱动自身免疫的免疫失调。自身免疫疾病进一步划分为抗体介导型、B/T 细胞混合驱动型和炎症—神经退行性交界型。基于这一分类，作者讨论嵌合抗原受体 T 细胞、病毒特异性 T 细胞和调节性 T 细胞如何分别匹配不同疾病机制，从而将机制认识转化为临床策略。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-09T09:06:13.305222+00:00"
+    },
+    "doi:10.1093/brain/awag276": {
+      "doi": "10.1093/brain/awag276",
+      "journal_slug": "brain",
+      "title": "Mechanochemical endothelial-astrocyte signalling via Piezo1-Epac1 drives neurovascular injury after stroke",
+      "acquired_at": "2026-08-11T17:38:56",
+      "source_title_sha256": "5700f31643737e3b04af15562c1e18fee92d251f46cd8497bc51d1a3208027e2",
+      "source_abstract_sha256": "e42fd3a49a218425f508ec63d4496ebe5b8064a19c9a6945e8c1c68973265fca",
+      "source_abstract": "abstract",
+      "title_zh": "缺血再灌注后卒中中经由Piezo1-Epac1驱动的机械-化学内皮-星形胶质细胞信号导致神经血管损伤",
+      "abstract_zh": "Abstract 在缺血再灌注损伤中，尤其是缺血性卒中，能够保留组织功能的治疗手段有限，静脉溶栓仍是主要但风险较高的选择。卒中再灌注期间，机械力（包括血流剪切力和组织刚度）会迅速变化。然而，神经血管内皮如何感知并响应这些物理线索以驱动病理性损伤仍不清楚。我们在短暂大脑中动脉阻断与再灌注小鼠模型中，使用近红外Ⅱ成像和原子力显微镜绘制了急性剪切应力与刚度重塑。结合体内光纤光度测定、单细胞转录组、电子显微镜、生化检测及细胞类型特异性条件性敲除小鼠，解码了Piezo1依赖的机械-化学信号通路。再灌注引起的血流紊乱和异常组织硬化显著过度激活血管内皮细胞中的机械敏感通道Piezo1。尽管Piezo1在胶质细胞中广泛存在，但仅在内皮细胞中遗传去除Piezo1（而非在星形胶质细胞或小胶质细胞中）可显著减小梗死体积并改善神经功能缺损。机制上，内皮细胞Piezo1过度激活诱导腺苷酸环化酶1，驱动细胞内cAMP（环磷酸腺苷）激增。随后装配并释放富含cAMP的细胞外微囊泡，这些微囊泡优先在毗邻的血管周围星形胶质细胞内积聚。囊泡携带的cAMP负载进一步激活下游效应分子Epac1，触发星形胶质细胞局灶性凋亡波。与之一致，星形胶质细胞特异性去除Epac1重现了神经保护表型，显著减轻缺血性脑损伤。上述结果刻画了神经血管界面的致病机械-化学级联反应，表明内皮Piezo1将卒中后机械应力转换为通过微囊泡介导的cAMP-Epac1信号的凋亡化学信号。靶向上游内皮Piezo1机械敏感器或下游星形胶质细胞Epac1效应器可能是再灌注后维持神经血管单元完整性的有前景治疗策略。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-12T04:45:35.321122+00:00"
     },
     "doi:10.1126/science.adp4440": {
       "doi": "10.1126/science.adp4440",
