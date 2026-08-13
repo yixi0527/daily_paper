@@ -1,5 +1,4 @@
 {
-  "$comment": "Final script-owned batch output. Spark output uses spark-translation-output.schema.json and never contains article_key.",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "additionalProperties": false,
@@ -10,9 +9,8 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["article_key", "title_zh", "abstract_zh"],
+        "required": ["title_zh", "abstract_zh"],
         "properties": {
-          "article_key": { "type": "string", "minLength": 1 },
           "title_zh": { "type": "string", "minLength": 1 },
           "abstract_zh": {
             "anyOf": [
