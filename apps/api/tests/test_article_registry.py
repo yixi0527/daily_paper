@@ -143,6 +143,7 @@ def test_translation_prepare_uses_context_safe_source_limit() -> None:
         ]
     )
 
+    assert args.batch_size == 1
     assert args.max_source_chars == 9000
 
 

@@ -11,6 +11,11 @@ from contextlib import contextmanager
 from pathlib import Path
 from typing import Any
 
+if os.name == "nt":
+    import msvcrt
+else:
+    import fcntl
+
 from article_registry import validate_translation
 
 MODEL = "gpt-5.3-codex-spark"
@@ -63,17 +68,21 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
 
 @contextmanager
 def exclusive_lock(lock_path: Path) -> Iterator[None]:
-    lock_descriptor = os.open(
-        lock_path,
-        os.O_CREAT | os.O_EXCL | os.O_WRONLY,
-        0o600,
-    )
-    os.write(lock_descriptor, f"{os.getpid()}\n".encode())
-    os.close(lock_descriptor)
+    lock_file = lock_path.open("a+b")
     try:
+        lock_file.seek(0)
+        if os.name == "nt":
+            msvcrt.locking(lock_file.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            fcntl.flock(lock_file.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        lock_file.seek(0)
+        lock_file.truncate()
+        lock_file.write(f"{os.getpid()}\n".encode())
+        lock_file.flush()
+        os.fsync(lock_file.fileno())
         yield
     finally:
-        lock_path.unlink()
+        lock_file.close()
 
 
 def load_batch(batch_path: Path) -> list[dict[str, Any]]:
@@ -81,6 +90,10 @@ def load_batch(batch_path: Path) -> list[dict[str, Any]]:
     articles = batch.get("articles")
     if not isinstance(articles, list) or not articles:
         raise ValueError(f"Batch articles must be a non-empty array: {batch_path}")
+    if len(articles) != 1:
+        raise ValueError(
+            f"Each Spark batch must contain exactly one article: {batch_path}"
+        )
     seen_keys: set[str] = set()
     for index, article in enumerate(articles):
         if not isinstance(article, dict):

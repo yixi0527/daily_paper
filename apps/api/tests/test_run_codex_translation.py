@@ -26,12 +26,7 @@ def articles() -> list[dict[str, str | None]]:
             "article_key": "doi:10.1000/first",
             "title": "First neuroscience title",
             "abstract": "First neuroscience abstract.",
-        },
-        {
-            "article_key": "doi:10.1000/second",
-            "title": "Second AI title",
-            "abstract": None,
-        },
+        }
     ]
 
 
@@ -52,7 +47,7 @@ def prepare_runner_paths(
     return batch_path, codex_executable, spark_schema_path
 
 
-def test_run_batch_sends_only_source_text_and_binds_keys_in_order(
+def test_run_batch_sends_only_source_text_and_binds_article_key(
     tmp_path,
     monkeypatch,
     translation_runner,
@@ -63,8 +58,7 @@ def test_run_batch_sends_only_source_text_and_binds_keys_in_order(
         articles,
     )
     raw_translations = [
-        {"title_zh": "第一篇神经科学标题", "abstract_zh": "第一篇神经科学摘要。"},
-        {"title_zh": "第二篇人工智能标题", "abstract_zh": None},
+        {"title_zh": "神经科学标题", "abstract_zh": "神经科学摘要。"},
     ]
     captured: dict[str, object] = {}
 
@@ -93,8 +87,7 @@ def test_run_batch_sends_only_source_text_and_binds_keys_in_order(
             {
                 "title": "First neuroscience title",
                 "abstract": "First neuroscience abstract.",
-            },
-            {"title": "Second AI title", "abstract": None},
+            }
         ]
     }
     assert "article_key" not in captured["input"]
@@ -115,65 +108,56 @@ def test_run_batch_sends_only_source_text_and_binds_keys_in_order(
         "translations": [
             {
                 "article_key": "doi:10.1000/first",
-                "title_zh": "第一篇神经科学标题",
-                "abstract_zh": "第一篇神经科学摘要。",
-            },
-            {
-                "article_key": "doi:10.1000/second",
-                "title_zh": "第二篇人工智能标题",
-                "abstract_zh": None,
+                "title_zh": "神经科学标题",
+                "abstract_zh": "神经科学摘要。",
             },
         ]
     }
 
 
 @pytest.mark.parametrize(
-    ("raw_translations", "error_match"),
+    ("source_abstract", "raw_translations", "error_match"),
     [
         (
-            [
-                {
-                    "title_zh": "第一篇神经科学标题",
-                    "abstract_zh": "第一篇神经科学摘要。",
-                }
-            ],
+            "First neuroscience abstract.",
+            [],
             "count does not match",
         ),
         (
+            "First neuroscience abstract.",
             [
                 {
                     "article_key": "doi:10.1000/first",
-                    "title_zh": "第一篇神经科学标题",
-                    "abstract_zh": "第一篇神经科学摘要。",
+                    "title_zh": "神经科学标题",
+                    "abstract_zh": "神经科学摘要。",
                 },
-                {"title_zh": "第二篇人工智能标题", "abstract_zh": None},
             ],
             "must contain only Chinese fields",
         ),
         (
+            "First neuroscience abstract.",
             [
                 {
                     "title_zh": "First neuroscience title",
-                    "abstract_zh": "第一篇神经科学摘要。",
+                    "abstract_zh": "神经科学摘要。",
                 },
-                {"title_zh": "第二篇人工智能标题", "abstract_zh": None},
             ],
             "contains no Chinese text",
         ),
         (
+            "First neuroscience abstract.",
             [
-                {"title_zh": "第一篇神经科学标题", "abstract_zh": None},
-                {"title_zh": "第二篇人工智能标题", "abstract_zh": None},
+                {"title_zh": "神经科学标题", "abstract_zh": None},
             ],
             "Missing abstract_zh",
         ),
         (
+            None,
             [
                 {
-                    "title_zh": "第一篇神经科学标题",
-                    "abstract_zh": "第一篇神经科学摘要。",
+                    "title_zh": "神经科学标题",
+                    "abstract_zh": "不应生成摘要。",
                 },
-                {"title_zh": "第二篇人工智能标题", "abstract_zh": "不应生成摘要。"},
             ],
             "abstract_zh must be null",
         ),
@@ -191,12 +175,14 @@ def test_invalid_spark_output_does_not_publish_final_output(
     monkeypatch,
     translation_runner,
     articles,
+    source_abstract,
     raw_translations,
     error_match,
 ) -> None:
+    test_articles = [{**articles[0], "abstract": source_abstract}]
     batch_path, codex_executable, spark_schema_path = prepare_runner_paths(
         tmp_path,
-        articles,
+        test_articles,
     )
 
     def fake_run(command, **kwargs):
@@ -217,33 +203,80 @@ def test_invalid_spark_output_does_not_publish_final_output(
     assert not batch_path.with_suffix(".output.json").exists()
 
 
-def test_validate_output_rejects_translations_in_the_wrong_order(
+def test_multi_article_batch_is_rejected_before_spark_runs(
     tmp_path,
+    monkeypatch,
     translation_runner,
     articles,
 ) -> None:
-    batch_path, _, _ = prepare_runner_paths(tmp_path, articles)
-    output_path = batch_path.with_suffix(".output.json")
-    write_json(
-        output_path,
+    multi_article_batch = [
+        articles[0],
         {
-            "translations": [
-                {
-                    "article_key": "doi:10.1000/second",
-                    "title_zh": "第二篇人工智能标题",
-                    "abstract_zh": None,
-                },
-                {
-                    "article_key": "doi:10.1000/first",
-                    "title_zh": "第一篇神经科学标题",
-                    "abstract_zh": "第一篇神经科学摘要。",
-                },
-            ]
+            "article_key": "doi:10.1000/second",
+            "title": "Second AI title",
+            "abstract": None,
         },
+    ]
+    batch_path, codex_executable, spark_schema_path = prepare_runner_paths(
+        tmp_path,
+        multi_article_batch,
     )
 
-    with pytest.raises(ValueError, match="order or keys do not match"):
-        translation_runner.validate_output(batch_path, output_path)
+    def unexpected_run(*args, **kwargs):
+        raise AssertionError("Spark must not run for a multi-article batch")
+
+    monkeypatch.setattr(translation_runner.subprocess, "run", unexpected_run)
+
+    with pytest.raises(ValueError, match="exactly one article"):
+        translation_runner.run_batch(
+            codex_executable=codex_executable,
+            spark_schema_path=spark_schema_path,
+            batch_path=batch_path,
+            resume=False,
+        )
+
+    assert not batch_path.with_suffix(".output.json").exists()
+
+
+def test_preexisting_unlocked_lock_file_does_not_block_translation(
+    tmp_path,
+    monkeypatch,
+    translation_runner,
+    articles,
+) -> None:
+    batch_path, codex_executable, spark_schema_path = prepare_runner_paths(
+        tmp_path,
+        articles,
+    )
+    lock_path = batch_path.with_suffix(".translation.lock")
+    lock_path.write_text("stale lock metadata\n", encoding="utf-8")
+
+    def fake_run(command, **kwargs):
+        raw_output_index = command.index("--output-last-message") + 1
+        raw_output_path = Path(command[raw_output_index])
+        write_json(
+            raw_output_path,
+            {
+                "translations": [
+                    {"title_zh": "神经科学标题", "abstract_zh": "神经科学摘要。"}
+                ]
+            },
+        )
+
+    monkeypatch.setattr(translation_runner.subprocess, "run", fake_run)
+
+    translation_runner.run_batch(
+        codex_executable=codex_executable,
+        spark_schema_path=spark_schema_path,
+        batch_path=batch_path,
+        resume=False,
+    )
+
+    translation_runner.validate_output(
+        batch_path,
+        batch_path.with_suffix(".output.json"),
+    )
+    assert lock_path.is_file()
 
 
 def test_resume_with_valid_final_output_skips_spark(
@@ -262,13 +295,8 @@ def test_resume_with_valid_final_output_skips_spark(
             "translations": [
                 {
                     "article_key": "doi:10.1000/first",
-                    "title_zh": "第一篇神经科学标题",
-                    "abstract_zh": "第一篇神经科学摘要。",
-                },
-                {
-                    "article_key": "doi:10.1000/second",
-                    "title_zh": "第二篇人工智能标题",
-                    "abstract_zh": None,
+                    "title_zh": "神经科学标题",
+                    "abstract_zh": "神经科学摘要。",
                 },
             ]
         },
