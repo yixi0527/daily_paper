@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-14T19:34:11.648985+00:00",
+  "updated_at": "2026-08-15T19:34:34.134509+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -430,6 +430,19 @@
       "abstract_zh": "《Acta Neuropathologica》- 儿童中枢神经系统肿瘤仍是儿童癌症相关死亡的主要原因之一，而其诊断、风险分层和治疗策略的制定在很大程度上仍依赖侵入性、耗时且资源密集的方法。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-10T19:33:05.131582+00:00"
+    },
+    "doi:10.1007/s00401-026-03068-5": {
+      "doi": "10.1007/s00401-026-03068-5",
+      "journal_slug": "acta-neuropathologica",
+      "title": "Distinct alpha-synuclein seeding in post-mortem skin of Lewy body disease and multiple system atrophy",
+      "acquired_at": "2026-08-15T17:06:28",
+      "source_title_sha256": "c9c1e05611547dfc41a830b4d7886bcf8aa05240511c02ae4fabc395a396d4b2",
+      "source_abstract_sha256": "78f56c546b552ace7145505c63fa0bb472ccea7258bdb373bc0df8b41b548bb1",
+      "source_abstract": "abstract",
+      "title_zh": "路易体疾病与多系统萎缩死后皮肤中α-突触核蛋白种子化的差异",
+      "abstract_zh": "来源仅提供期刊名称“Acta Neuropathologica”，未提供摘要内容。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1007/s10462-026-11548-z": {
       "doi": "10.1007/s10462-026-11548-z",
@@ -1880,12 +1893,12 @@
       "title": "Reduced Left vmPFC-STN-Related White Matter Integrity Is Associated with Pre-Surgical Apathy in Parkinson’s Disease.",
       "acquired_at": "2026-08-14T17:51:36",
       "source_title_sha256": "ed21662dd0f50f0db5b2a3f6f6ad296782d15e4b1d1f3eea19ddc506017954cc",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "左侧vmPFC-STN相关白质完整性降低与帕金森病术前冷漠相关",
-      "abstract_zh": null,
+      "source_abstract_sha256": "0313dcf79d9c4efe85716731c7891a2a52b55a8c18f480cf3ca5d6912b658722",
+      "source_abstract": "abstract",
+      "title_zh": "左侧 vmPFC–STN 相关白质完整性降低与帕金森病（Parkinson’s disease）术前无动机症相关",
+      "abstract_zh": "引言：无动机症是帕金森病（PD）中常见且致残的非运动症状，可削弱丘脑下核深部脑刺激（STN-DBS）的治疗获益。我们先前证明，在接受 STN-DBS 的 PD 患者中，联合刺激左侧腹内侧前额叶皮层（vmPFC）可减轻停用左旋多巴后出现的无动机症。基于该发现，我们进一步研究了 vmPFC-STN 通路的术前白质完整性是否构成临床显著无动机症的结构相关指标。方法：分析了 119 例接受 STN-DBS 的 PD 患者术前 T1 加权MRI和弥散MRI数据。根据 Starkstein Apathy Scale（SAS）评分，将患者分为无动机组（SAS ≥ 14，n = 67）和非无动机组（n = 52）。采用 FSL 的 Tract-Based Spatial Statistics（TBSS）流程处理分数各向异性（FA）图。采用阈值自由簇增强（TFCE，5,000 次置换）进行体素水平组间比较，限制在先前发表队列中基于概率性纤维追踪得到的双侧 vmPFC-STN 掩模内。结果：在左侧 vmPFC-STN 感兴趣区（ROI）内观察到一个显著簇（74 个体素），无动机组 FA 降低（TFCE 校正后 p = 0.0294）。事后分析显示无动机组平均弥散度升高（p = 0.0206）且径向弥散度升高（p = 0.001），而轴向弥散度无显著差异。探索性亚组分析提示，基线 vmPFC-STN 完整性可能影响无动机症对 vmPFC DBS 的反应。结论：PD 患者在 STN-DBS 前出现的临床显著无动机症与左侧内囊内白质完整性降低相关，涉及更广泛的左侧 vmPFC 投射系统。识别这一结构基础可能有助于未来优化 STN-DBS 的无动机症管理。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-14T19:34:11.648985+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.brs.2026.103184": {
       "doi": "10.1016/j.brs.2026.103184",
@@ -1942,15 +1955,15 @@
     "doi:10.1016/j.brs.2026.103188": {
       "doi": "10.1016/j.brs.2026.103188",
       "journal_slug": "brain-stimulation",
-      "title": "Minimal Reservoir Computing Generates Hippocampal-Inspired Stimulation for Open-Loop Modulation of Cortical Networks In Vitro",
+      "title": "Minimal reservoir computing generates hippocampal-inspired stimulation for open-loop modulation of cortical networks in vitro",
       "acquired_at": "2026-08-13T17:53:01",
-      "source_title_sha256": "07d50a36ca712edd4bb5e3830e7f86e64c36974a9e410620964ba92c78f5676b",
+      "source_title_sha256": "df5a7df596550e7bcf039984b5a499d8cdbabc5a4b173ef293160afd4fa5a858",
       "source_abstract_sha256": "9ec78e05a5de90f52d87e78baec38ce1f6fc338afa58474e4a58e3822f633b73",
       "source_abstract": "abstract",
-      "title_zh": "最小化储备计算生成基于海马结构的刺激用于皮层网络体外开环调控",
-      "abstract_zh": "背景：高频深部脑刺激可降低癫痫负担，但会对组织施加大量刺激负荷，其效应依赖于频率和时序模式。我们检验了一个紧凑型储备模型能否生成一种仿海马体的事件时程，并评估该时程在体外条件下是否能够在较少名义脉冲数量下（少于50 Hz 刺激）调控神经元活动。方法：一个包含10个单元的泄漏储备网络结合一维仿射岭回归读出，将皮层输入记录转换为 CA3 启发的输出。回顾性计算验证使用了成对的皮层–CA3 记录，采用仅训练阶段缩放、去除每条生成轨迹前至少10秒、按日期分组的留出评估、多个谱和时域指标、目标函数消融以及替代信号等步骤。随后在离线状态下生成一个生物仿生时程，并以开环方式传递到初级大鼠皮层培养物的多电极阵列中，与0.16 Hz 和 50 Hz 周期刺激进行比较。结果：19 对成对记录中有 17 组通过预设的瞬态诊断标准。在 11 个可评分的按日期分组留出记录中，储备模型的中位数对数功率谱密度均方根误差（log-PSD RMSE）和自相关误差均略低于线性基线与滞后岭基线。在初级皮层培养物中，对全部 11 个生物仿生刺激 MEA 的主要合并分析显示，平均发放率斜率为 0.7655（相对于空值 1；平均斜率95%置信区间 0.491–1.040；p = 0.0865）。在 11 个生物仿生刺激 MEA 的独立 MEA 水平倍数变化分析中，归一化发放率为 0.8458，归一化爆发率为 0.7792，均较基线显著降低。事后探索性分类在 11 个 MEA 中识别出 4 个 MEA 的发放率斜率降低。结论：这些结果在体外提供了开环的概念验证，表明低事件、非规则刺激时程可与皮层网络活动的异质性调控相关。相同名义平均事件率下的周期性刺激在所测试条件下未产生统计学显著调控。该非规则时程可能包含与时间相关的属性，促成观察到的反应，但 ESN 产生的时间顺序的具体贡献仍未解决。未来工作应测试合适的时间对照，并在闭环及癫痫模型实验中评估该方法。",
+      "title_zh": "最小化储备池计算用于生成海马样刺激以实现体外皮层网络开环调制",
+      "abstract_zh": "背景：高频深部脑刺激可降低癫痫负担，但会对组织施加较大的刺激负荷，其效果受刺激频率和时间模式共同影响。我们检验了一个紧凑的储备模型是否能够生成海马样事件调度，并且该调度是否能在脉冲数低于50 Hz刺激时对体外神经元活动产生调制。方法：采用一个10单元泄漏式储备网络（reservoir）和一维仿射岭回归读出层，将皮层输入记录转换为CA3样输出。回顾性计算验证采用了配对皮层-CA3记录，训练后缩放（training-only scaling）、去除每条生成轨迹前至少10秒的瞬态、按日期分组的留出评估、多个光谱与时间域指标、目标函数消融及替代信号。随后将一套离线生物仿生调度以开环方式递送至多电极阵列上的大鼠原代皮层培养物，并与0.16 Hz周期性刺激和50 Hz周期性刺激进行比较。结果：19对配对记录中有17对通过预先指定的瞬态诊断指标。在11个可评分的按日期分组留出记录中，与线性基线和时滞岭回归基线相比，储备模型的中位数log-PSD RMSE和自相关误差均稍低。将该方案应用于原代皮层培养物时，11个接受生物仿生刺激的MEA总体合并分析显示相对于空值1的平均发放率斜率为0.7655（均值斜率95%置信区间0.491–1.040；p=0.0865）。在11个生物仿生刺激MEA的单独MEA水平折叠变化分析中，归一化发放率为0.8458，归一化爆发率为0.7792，均较基线显著下降。事后探索性分类发现11个MEA中有4个显示发放率斜率下降。结论：这些结果提供了体外开环概念验证，表明低事件、非规则刺激节律可与皮层网络活动的异质性调制相关。在相同名义平均事件率下，周期性刺激在所测试条件下未产生统计学显著调制。该非规则节律可能包含与时间相关的特征，从而贡献于观察到的反应，但ESN导出的时间序列排序的具体作用尚未明确。未来研究应检验合适的时间对照，并在闭环及癫痫模型实验中评估该方法。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-14T19:34:11.648985+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.cell.2026.02.018": {
       "doi": "10.1016/j.cell.2026.02.018",
@@ -3492,12 +3505,12 @@
       "title": "Skin-innervating glutamatergic neurons modulate aging",
       "acquired_at": "2026-07-24T07:59:52.398348+08:00",
       "source_title_sha256": "4089ee9747d697bfc89909df7aab9811b45406e4f544ae73555f4c407c8e2bf3",
-      "source_abstract_sha256": "d43034603e6707615354a827ab5c06e489432307507eb9fa44fd075b063440ce",
-      "source_abstract": "abstract",
-      "title_zh": "支配皮肤的谷氨酸能神经元调节衰老",
-      "abstract_zh": "外周神经通过递质分泌调节皮肤稳态，但其在皮肤衰老中的作用尚不完全清楚。我们发现，皮肤去神经支配会加速衰老，表现为胶原蛋白减少。重神经丝重链（Nefh）在老化皮肤中降低，且主要表达于囊泡性谷氨酸转运体2（Vglut2+）的皮肤神经支配谷氨酸能神经元。值得注意的是，真皮成纤维细胞（主要的胶原蛋白生成者）与 Nefh+ 神经纤维常有接触。此外，在 Vglut2+ 谷氨酸能神经元中删除 Nefh 会诱导皮肤成纤维细胞衰老并导致胶原流失，而补充谷氨酸可改善皮肤衰老表型。机制上，细胞周期依赖激酶5（Cdk5）与 Nefh 与 Vglut2 均相互作用，并维持谷氨酸释放与胶原稳态。并且在皮肤成纤维细胞中，溶质转运载体家族1成员3（Slc1a3）介导谷氨酸的促胶原和抗衰老功能。总体而言，这些发现揭示了 Nefh 介导的谷氨酸能神经调制在皮肤衰老中的作用，并提供了衰老相关皮肤疾病的治疗靶点。",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "皮肤支配谷氨酸能神经元调控衰老",
+      "abstract_zh": null,
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-02T02:20:31.700900+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.cell.2026.06.033": {
       "doi": "10.1016/j.cell.2026.06.033",
@@ -4012,12 +4025,12 @@
       "title": "Polyamines buffer labile iron to suppress ferroptosis",
       "acquired_at": "2026-08-14T17:20:38",
       "source_title_sha256": "cdc3fa774647d075aee4fc7f18e0669e4a794a056ec0bb4c0cb927429ef06b9c",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "多胺缓冲可变铁以抑制铁死亡",
-      "abstract_zh": null,
+      "source_abstract_sha256": "c73d6c4fad712d7a261992589b15ad4e0509f9e7898cb5079ebbbafd923ec974",
+      "source_abstract": "abstract",
+      "title_zh": "多胺缓冲可游离铁以抑制铁死亡",
+      "abstract_zh": "多胺是哺乳动物细胞中以毫摩尔浓度存在的必需且在进化上保守的代谢物。细胞通过复杂的反馈机制严格调控多胺稳态，但驱动这种调控所需的精确功能尚不清楚。在本研究中，我们发现多胺有助于内源性缓冲氧化还原活性铁，从而建立了多胺代谢与铁死亡（ferroptosis）之间的分子联系。利用全基因组CRISPR筛选，我们鉴定出多胺耗竭与铁死亡关键抑制因子谷胱甘肽过氧化物酶4（GPX4）之间的合成致死依赖关系。机制上，我们发现多胺缺乏会触发细胞内铁的重新分布，增加可游离铁池并上调铁蛋白（ferritin）。为在活细胞中直接可视化这种铁缓冲作用，我们开发了一个用于氧化还原活性铁的基因编码荧光报告系统。活细胞分析显示，在单细胞分辨率下，细胞内多胺水平与氧化还原活性铁之间存在显著的负相关。这些结果将多胺重新定位为铁稳态的关键调节因子，对与铁死亡相关的疾病状态和细胞氧化还原平衡具有重要意义。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-14T19:34:11.648985+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.cell.2026.07.043": {
       "doi": "10.1016/j.cell.2026.07.043",
@@ -4025,12 +4038,12 @@
       "title": "Brain perivascular macrophages regulate endothelial cell function via a cMAF-dependent transcriptional program in mouse and human",
       "acquired_at": "2026-08-14T17:20:38",
       "source_title_sha256": "cc00f0ad6bf707a0e0844edbc7b8af3bec7f904943b4f4b45a9ccd428ca593f0",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "脑内血管周围巨噬细胞通过cMAF依赖的转录程序调控小鼠与人类内皮细胞功能",
-      "abstract_zh": null,
+      "source_abstract_sha256": "ba97dd83fe815761a5ca14ed425ef3dbb0c6e2e511c6801fe9cc06d98117ff61",
+      "source_abstract": "abstract",
+      "title_zh": "cMAF 依赖的转录程序使小鼠与人脑周围血管巨噬细胞调控内皮细胞功能",
+      "abstract_zh": "脑周围巨噬细胞维持脑部生理功能，但其在健康与疾病状态下的转录调控因子及作用尚不清晰。我们结合单细胞多组学与功能实验，鉴定出细胞肌腱样纤维肉瘤基因（cMAF）为脑周围巨噬细胞的关键转录因子，条件性缺失cMAF会在体内扰乱其表型。功能上，cMAF在脑周围巨噬细胞中驱动胰岛素样生长因子-1（IGF1）表达，从而促进其与内皮细胞的通信。与此一致，cMAF在脑周围巨噬细胞中的缺失可引起大脑动脉转录组改变并影响血管功能。值得注意的是，cMAF在人体脑周围巨噬细胞中成为主要转录因子，提示该转录模块具有跨物种的保守性。阿尔茨海默病（AD）期间，人脑周围巨噬细胞上调cMAF和IGF1以增强与血管细胞的通讯，而该反应在APOE4携带者中减弱。最后，我们探索了一个此前未表征的cMAF多态性，提供了cMAF程序在AD中具有保护作用的证据。针对脑周围巨噬细胞中的cMAF可能为神经退行性和脑血管疾病提供新的治疗策略。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-14T19:34:11.648985+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.cell.2026.07.044": {
       "doi": "10.1016/j.cell.2026.07.044",
@@ -4038,12 +4051,12 @@
       "title": "Ancient genomes reveal distinct human dispersals and social stratification in the settlement history of western Remote Oceania",
       "acquired_at": "2026-08-14T17:20:38",
       "source_title_sha256": "e78433d7b91c22b4adef148852a63bc1b2cba962cbe21f0d7257d291cc3e9e0b",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "古代基因组揭示了遥远大洋洲西部定居历史中的不同人类迁徙与社会分层",
-      "abstract_zh": null,
+      "source_abstract_sha256": "2f795ce6f0535b72b795bd8b435981249bb1523ecf728e188900088d8c99a3e0",
+      "source_abstract": "abstract",
+      "title_zh": "古基因组揭示西部远洋太平洋人类定居史中的独特迁徙与社会分层",
+      "abstract_zh": "西部远洋太平洋的定居过程涉及了彼此深度分化人群之间的相互作用。约3000年前，受到Lapita文化关联、与东南亚相关的群体最先定居，随后是与巴布亚人相关的扩张，以及后续来自波利尼西亚的海上航行。我们呈现了来自所罗门群岛东部、瓦努阿图、斐济和汤加过去三千年的全基因组数据。我们发现，与早期的Lapita相关扩张相比，巴布亚相关扩张速度更慢，并且它到达斐济时至少经历了两次彼此独立的人类扩散，时间上早于先前的推测。我们还提供了约1000年前与波利尼西亚相关基因流的直接证据，这一事件促成了瓦努阿图南部的“波利尼西亚离群群体”(Polynesian Outlier communities) 的形成。最后，我们分析了一个早期斐济社区，揭示了其社会实践如何在一个具有较高东南亚相关祖源的生物亲缘群体内部维持财富/地位。我们的发现细化了西部远洋太平洋的定居模式，并突出了历史迁徙与社区结构之间的复杂互作。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-14T19:34:11.648985+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.cell.2026.07.046": {
       "doi": "10.1016/j.cell.2026.07.046",
@@ -6742,12 +6755,12 @@
       "title": "Subacute and long-term changes in cognitive functioning after administration of classic psychedelics, MDMA and ketamine: A systematic review of clinical and preclinical evidence",
       "acquired_at": "2026-08-14T18:01:42",
       "source_title_sha256": "e7eb2c9a6067db8408523f99e17f5488e74cfa359cb3adc663dec0479a2a2391",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "经典致幻剂、MDMA与氯胺酮给药后认知功能的亚急性与长期变化：临床与前临床证据的系统综述",
-      "abstract_zh": null,
+      "source_abstract_sha256": "c462950b435ee3514498ba08c5931e6e0b3454b62cbc191be7da1c3608dc3859",
+      "source_abstract": "abstract",
+      "title_zh": "经典致幻剂、MDMA 与氯胺酮给药后认知功能的亚急性与长期变化：临床与前临床证据的系统综述",
+      "abstract_zh": "致幻剂可诱导一段高神经可塑性窗口，其持续时间超出急性中毒期，在此期间神经回路更易发生可塑性重塑。该阶段可能有助于促进与精神类疾病治疗相关的认知改变。本系统综述整合了经典致幻剂与非经典致幻剂对认知的亚急性及长期（≥1 天）效应的临床与前临床证据。研究通过检索 MEDLINE、EMBASE、APA PsycInfo 和 Web of Science，纳入了在人类和动物中研究致幻剂与认知（执行功能、注意力、决策）关系的文献。共有67篇研究符合纳入标准（临床47篇，前临床20篇）。结果显示，裸盖菇素在亚急性及更长期认知改善方面证据最为一致，尤其在认知灵活性和注意力方面。氯胺酮在多个认知领域均表现出增强效应，但结果异质性较大。LSD 与 DMT 未见一致的亚急性变化，而 MDMA 与短暂的认知损害相关，该损害在数日内消退。偏倚风险评估提示存在选择性结果报告、缺失数据报告不充分及方法学细节不足，限制了证据的可信度。现有证据初步支持部分致幻剂给药后出现认知亚急性变化。认知改善在精神病理群体中出现得更频繁，而非在健康受试者中，可能反映的是对既存认知缺陷的修复而非超过正常水平的增强。需要具有足够统计效能、对照严谨且对认知结局采用标准化报告的研究，以确定致幻剂相关认知变化的效应大小、持续性及临床意义。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-14T19:34:11.648985+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106912": {
       "doi": "10.1016/j.neubiorev.2026.106912",
@@ -6755,12 +6768,12 @@
       "title": "Cortical Oscillatory Dynamics Through the Lens of Affordance Competition– a Novel Perspective on ‘Selection for Action’",
       "acquired_at": "2026-08-14T18:01:42",
       "source_title_sha256": "0b10f2066dfa329de48757c3b6147aa25f3e81351c05a5a63fe92d30d2f57556",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "从“可供性竞争”视角看皮层振荡动力学：关于“行动选择”的新视角",
-      "abstract_zh": null,
+      "source_abstract_sha256": "dd83b606387bd3549b65ea69473ad7d6ac76dd6b9ee707c765ecfbe63e9de27b",
+      "source_abstract": "abstract",
+      "title_zh": "从“可供性竞争”视角审视皮层振荡动态：关于“行动选择”的一种新观点",
+      "abstract_zh": "本文从“可供性竞争”(Affordance Competition, AC)假设的视角，对注意、记忆、运动认知与认知控制领域的电生理发现进行了重新评估与解释。该假设认为，多种行为在早期加工层级就可能被预先表征，并在最终行为被选定之前彼此竞争。该观点意味着抑制机制具有关键作用，因为已表征的行为之间的竞争必须被解决。我们提出，这种抑制可表现为δ、θ、α和β频段振荡，从而对这些振荡相关的传统电生理解释提出挑战。基于既往研究中在广泛实验范式下于不同焦点与时间特征下观察到的上述频段效应，我们得出结论：抑制或抑制控制并非单一单元，而是在从初始感觉处理到最终反应执行的整个过程范围内持续存在。AC假设预言，注意竞争主要由行动相关因素而非感知或感觉局限主导。因此，在双侧阵列中对干扰刺激的抑制应依赖于其行动历史。已有少数研究已证实该预测。最后，我们探讨了AC假设与其他理论框架（如行动控制中的绑定与检索模型，Binding and Retrieval in Action Control）的关系。该探讨进一步强调，传统的“感知-思考-行动”模型无法充分解释大量行为学与电生理学发现。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-14T19:34:11.648985+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106913": {
       "doi": "10.1016/j.neubiorev.2026.106913",
@@ -6781,12 +6794,12 @@
       "title": "Balancing the animal affective scales - Can the methodology of human affect balance be translated to other sentient species?",
       "acquired_at": "2026-08-14T18:01:42",
       "source_title_sha256": "232a306321ae5ae00134b11d2acfe058f2a8ffd7007d968dffd9804e2acba2fe",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "平衡动物的情绪量表：人类情绪平衡的方法论能否被转用于其他有感知能力的物种？",
-      "abstract_zh": null,
+      "source_abstract_sha256": "2252f2a6d0c68c9a1b42a0c0aaddb26333c13de55ff91c60ba2c8833c11387e4",
+      "source_abstract": "abstract",
+      "title_zh": "平衡动物情感尺度：人类情感平衡方法能否被翻译到其他有感知能力物种？",
+      "abstract_zh": "评估非人类有感知能力动物的福祉是一项多维且复杂的科学工作。基于“一个体大部分时间的感受状态由积极情绪和消极情绪两个独立维度的平衡决定”这一思想，情感平衡在人类心理学中被认为是可应用于动物的一种有前景的方法。情感平衡在人类心理与躯体健康及福祉方面已显示出深层关联。该综述性文章旨在评估情感平衡方法是否可为动物福利中的情感/快感（hedonic）组成部分提供一个有用的整合性测量，并概述其潜在应用所需的关键考虑。由于人类情感平衡方法本身存在多样性，任何向其他物种的迁移都首先需要提炼其核心原则。我们提炼出四个核心原则，其中前三个与随时间估计积极和消极情绪的出现频率有关，第四个则涉及将积极与消极情绪整合为一个情感平衡评分或类别。随后我们讨论了情感平衡方法背后的理论如何可转化为对其他物种的应用，以及在开发和验证潜在评估方法时的理论与实践考量。总体而言，我们认为该路径对动物福利科学具有巨大潜力，并鼓励围绕这一主题开展实证研究。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-14T19:34:11.648985+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106915": {
       "doi": "10.1016/j.neubiorev.2026.106915",
@@ -8549,12 +8562,12 @@
       "title": "Unifying the structures of language in a neural population code",
       "acquired_at": "2026-08-14T17:24:38",
       "source_title_sha256": "1bc60d84ba6263e82e34182ccf52327bf90c3fd4b8c2a61a34807981149eac93",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "神经群体编码中的语言结构统一",
-      "abstract_zh": null,
+      "source_abstract_sha256": "77f596aa974377c03e64e4bdcded65ed0fd3ac9426b078323f1934549e95729f",
+      "source_abstract": "abstract",
+      "title_zh": "在神经群体编码中统一语言结构",
+      "abstract_zh": "大型语言模型（LLM）以前所未有的方式掌握了人类语言。虽然基于规则的符号系统在受限且定义明确的问题上足够用，但无法处理自然语言的上下文敏感表达能力。LLM 改用统计学习，将语言结构的多样性编码到统一的高维嵌入空间中。值得注意的是，这种由上下文驱动的分布式表征与神经群体编码高度相似，提示人类语言系统可能已收敛到类似的计算策略。基于日益增长的人工智能与认知神经科学交叉研究，我们展示了 LLM 可以作为支持人类大脑语言功能的神经计算的认知上可行模型。我们得出的结论是：要解释语言如何在生物系统与人工系统中从神经群体编码中涌现，不能依赖代数-符号理论的逐步细化，而需要新的理论范式。",
       "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-14T19:34:11.648985+00:00"
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1016/j.neuron.2026.07.025": {
       "doi": "10.1016/j.neuron.2026.07.025",
@@ -18631,6 +18644,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-14T19:34:11.648985+00:00"
     },
+    "doi:10.1038/s41586-026-11023-3": {
+      "doi": "10.1038/s41586-026-11023-3",
+      "journal_slug": "nature",
+      "title": "Author Correction: Cell intrinsic immunity spreads to bystander cells via the intercellular transfer of cGAMP",
+      "acquired_at": "2026-08-15T17:02:12",
+      "source_title_sha256": "4ee803dbe0ee2b53f5605886d41bcad009ad904e6c44529f8c0bebbad93cf3b5",
+      "source_abstract_sha256": "e1dd411fe4e2e8ec9f591fb05cbfc28590072a3f3c958bb777d03a210014f575",
+      "source_abstract": "abstract",
+      "title_zh": "作者更正：细胞内源性免疫可通过cGAMP的细胞间转移扩散至旁观者细胞",
+      "abstract_zh": "来源仅给出了期刊名称（Nature - Author Correction），未提供摘要。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
+    },
     "doi:10.1038/s41593-026-02264-6": {
       "doi": "10.1038/s41593-026-02264-6",
       "journal_slug": "nature-neuroscience",
@@ -25274,6 +25300,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-14T19:34:11.648985+00:00"
     },
+    "doi:10.1126/science.ael5176": {
+      "doi": "10.1126/science.ael5176",
+      "journal_slug": "science",
+      "title": "New Products",
+      "acquired_at": "2026-08-15T17:12:30",
+      "source_title_sha256": "ba31518b4c75d26e50884c2855d671157928d6c9d6e18b78dd19422fe1e22bde",
+      "source_abstract_sha256": "63fbd2ec77d277e68af629dae15b614219aba3a4a7300fc5ad08b5bce1b06d7c",
+      "source_abstract": "abstract",
+      "title_zh": "新产品（New Products）",
+      "abstract_zh": "每周汇总了研究人员可能感兴趣的新上市仪器、装置与实验室材料信息。",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
+    },
     "doi:10.1146/annurev-neuro-082225-083950": {
       "doi": "10.1146/annurev-neuro-082225-083950",
       "journal_slug": "annual-review-of-neuroscience",
@@ -26846,6 +26885,19 @@
       "abstract_zh": "摘要 背景：慢性化脓性中耳炎（CSOM）可导致感音神经性听力损失（SNHL），但其机制尚未完全阐明。本研究旨在研究慢性化脓性中耳炎常见致病菌假单胞菌（Pseudomonas aeruginosa，P. aeruginosa）来源的外膜囊泡（OMVs）是否可通过激活NLRP3炎性小体诱导耳毒性。方法：通过鼓膜内注射P. aeruginosa来源的OMVs在C57BL/6小鼠建立CSOM模型。使用模型小鼠耳蜗组织，结合器官培养类模型（内耳科特器官来源HEI-OC1细胞和出生后第4天小鼠耳蜗离体），通过病理染色、免疫检测和RNA测序评估中耳和内耳病理变化及NLRP3炎性小体通路激活。另对NLRP3抑制剂MCC950的保护作用进行了评估。结果：P. aeruginosa OMVs在HEI-OC1细胞中引起剂量和时间依赖性的代谢活性降低，并在P4耳蜗离体中导致耳蜗毛细胞损伤和NLRP3炎性小体激活。体内实验中，OMV接种在14天内诱导CSOM和内耳损伤，并伴有显著毛细胞丢失。CSOM小鼠耳蜗RNA测序共发现2583个差异表达基因，主要富集于炎症通路，且NLRP3、Pycard、Casp1、GSDMD和IL-1β显著上调。MCC950处理显著减轻内耳炎症、保留耳蜗形态、减少毛细胞损伤并抑制NLRP3、ASC、caspase-1和GSDMD表达。结论：这些发现支持P. aeruginosa OMVs可在体内外共同促进CSOM相关耳蜗损伤，且该过程与内耳内NLRP3炎性小体激活相关。虽然因果关系不能完全确立，但抑制NLRP3信号的MCC950可减轻内耳损伤并抑制焦亡相关效应分子，提示其可能成为CSOM相关SNHL的新型治疗策略。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
+    },
+    "doi:10.1186/s12974-026-03991-0": {
+      "doi": "10.1186/s12974-026-03991-0",
+      "journal_slug": "journal-of-neuroinflammation",
+      "title": "EMMPRIN-mediated metabolism of monocytes promotes disease progression in a mouse model of multiple sclerosis",
+      "acquired_at": "2026-08-15T17:09:00",
+      "source_title_sha256": "b34c28b18485a37163a874e692bcd54e22a8c6e1e25bc731f933c53b0f38002d",
+      "source_abstract_sha256": "16557822eb0b472edae48e746657b9e4b6801f4f355b031e5a471a42b026510e",
+      "source_abstract": "abstract",
+      "title_zh": "EMMPRIN介导的单核细胞代谢促进小鼠多发性硬化模型中的疾病进展",
+      "abstract_zh": "Journal of Neuroinflammation — 单核细胞及单核细胞来源的巨噬细胞被越来越多地认为是炎症状态发生和进展的重要参与者，部分原因在于……",
+      "translation_model": "gpt-5.3-codex-spark",
+      "translated_at": "2026-08-15T19:34:34.134509+00:00"
     },
     "doi:10.1186/s12974-026-03992-z": {
       "doi": "10.1186/s12974-026-03992-z",
