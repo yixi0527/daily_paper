@@ -22,8 +22,6 @@ class CrossrefClientService:
         filter_parts.append(f"from-pub-date:{start_date.isoformat()}")
         params = {
             "filter": ",".join(filter_parts),
-            "sort": "published",
-            "order": "desc",
             "rows": 100,
             "cursor": cursor or "*",
             "mailto": self.settings.crossref_mailto,
