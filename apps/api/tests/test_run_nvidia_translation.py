@@ -49,6 +49,10 @@ def write_json(path: Path, payload: object) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
 
 
+def test_default_timeout_allows_slow_model_responses(translation_runner) -> None:
+    assert translation_runner.DEFAULT_TIMEOUT == 300
+
+
 def prepare_batch(
     tmp_path: Path,
     articles: list[dict[str, str | None]],

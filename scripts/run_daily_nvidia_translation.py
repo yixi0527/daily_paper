@@ -28,6 +28,7 @@ METADATA_URL = "https://yixi0527.github.io/daily_paper/data/metadata.json"
 SITE_DATA_URL = "https://yixi0527.github.io/daily_paper/data/site-data.json"
 REGISTRY_RELATIVE_PATH = Path("packages/shared/data/article_registry.json")
 COMMIT_MESSAGE = "data: translate daily papers with NVIDIA API"
+DEFAULT_TRANSLATION_TIMEOUT = 300
 
 
 class CommandFailed(RuntimeError):
@@ -457,6 +458,8 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
         raise ValueError("workers must be at least 1")
     if args.batch_size < 1:
         raise ValueError("batch-size must be at least 1")
+    if args.timeout < 1:
+        raise ValueError("timeout must be positive")
     if args.wait_seconds < 1:
         raise ValueError("wait-seconds must be positive")
 
@@ -657,6 +660,8 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
                 model,
                 "--max-tokens",
                 "8192",
+                "--timeout",
+                str(args.timeout),
                 "--workers",
                 str(args.workers),
                 "--resume",
@@ -883,6 +888,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--npm-executable", required=True, type=Path)
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--batch-size", type=int, default=4)
+    parser.add_argument("--timeout", type=int, default=DEFAULT_TRANSLATION_TIMEOUT)
     parser.add_argument("--wait-seconds", type=int, default=1800)
     parser.add_argument(
         "--assume-trigger-time",

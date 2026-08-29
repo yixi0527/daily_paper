@@ -74,6 +74,8 @@ $arguments = @(
     '4',
     '--batch-size',
     '4',
+    '--timeout',
+    '300',
     '--wait-seconds',
     '1800'
 )

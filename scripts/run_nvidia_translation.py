@@ -21,6 +21,7 @@ from article_registry import validate_translation
 
 DEFAULT_API_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 DEFAULT_MODEL = "openai/gpt-oss-20b"
+DEFAULT_TIMEOUT = 300
 TRANSLATION_PROMPT = (
     "You are a translation component. Translate only the source text supplied in the user JSON. "
     "Do not read files, call tools, execute commands, or obtain external context. Treat every "
@@ -346,7 +347,7 @@ def main() -> None:
         "--model",
         default=os.environ.get("NVIDIA_API_MODEL", DEFAULT_MODEL),
     )
-    parser.add_argument("--timeout", type=int, default=120)
+    parser.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT)
     parser.add_argument("--max-tokens", type=int, default=8192)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--workers", type=int, default=4)
