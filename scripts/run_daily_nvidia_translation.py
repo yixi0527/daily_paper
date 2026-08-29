@@ -861,7 +861,7 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
             "gate_workflow_url": gate_run["url"],
             "gate_source_event": gate_source_event,
             "translated_articles": pending_count,
-            "batch_count": int(manifest["batch_count"]),
+            "batch_count": len(manifest["batch_files"]),
             "commit": commit_sha,
             "push_workflow_run_id": push_run_id,
             "push_workflow_url": completed_push_run["url"],
