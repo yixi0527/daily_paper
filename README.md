@@ -353,6 +353,16 @@ Register the Windows task after setting the user-scoped key:
   -NoLogo -NoProfile -File scripts/register_nvidia_translation_task.ps1
 ```
 
+For a one-off manual catch-up that treats the current time as the trigger time, run:
+
+```powershell
+& 'C:\Users\yixi0\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe' `
+  -NoLogo -NoProfile -File scripts/run_nvidia_translation_task.ps1 -Execute -AssumeTriggerTime
+```
+
+This explicit switch uses the latest completed successful Pages deployment as the input snapshot;
+the registered scheduled task remains on the strict current-date schedule gate.
+
 The installed Codex automation named `每日文献 Spark 翻译` is paused and is not part of this
 workflow.
 

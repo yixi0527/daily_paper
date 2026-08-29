@@ -63,7 +63,9 @@ Each invocation follows this sequence:
    fetched revision. The user's existing local changes are not modified.
 3. Run `scripts/validate_daily_schedule_run.py` with the verified GitHub CLI path. Its JSON output
    is the only accepted schedule identity and supplies the Shanghai date, workflow ID, and source
-   revision.
+   revision. For an explicitly requested one-off catch-up, launch the wrapper with
+   `-AssumeTriggerTime`; that mode selects the latest completed successful Pages deployment and
+   records its actual event/date while leaving the normal scheduled-task gate strict.
 4. Download and validate the canonical
    `https://yixi0527.github.io/daily_paper/data/metadata.json` with
    `scripts/verify_pages_deployment.py`. A successful, complete deployment is required.
@@ -107,6 +109,13 @@ Register or update the task:
 ```powershell
 & 'C:\Users\yixi0\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe' `
   -NoLogo -NoProfile -File scripts/register_nvidia_translation_task.ps1
+```
+
+Run one manual catch-up while treating the current time as the trigger time:
+
+```powershell
+& 'C:\Users\yixi0\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe' `
+  -NoLogo -NoProfile -File scripts/run_nvidia_translation_task.ps1 -Execute -AssumeTriggerTime
 ```
 
 Inspect the real parser contracts before changing automation:

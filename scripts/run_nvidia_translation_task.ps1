@@ -1,5 +1,6 @@
 param(
-    [switch]$Execute
+    [switch]$Execute,
+    [switch]$AssumeTriggerTime
 )
 
 Set-StrictMode -Version 3.0
@@ -76,6 +77,9 @@ $arguments = @(
     '--wait-seconds',
     '1800'
 )
+if ($AssumeTriggerTime) {
+    $arguments += '--assume-trigger-time'
+}
 & $pythonExecutable @arguments
 $exitCode = $LASTEXITCODE
 if ($exitCode -ne 0) {

@@ -11,6 +11,7 @@ from contextlib import contextmanager
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 if os.name == "nt":
     import msvcrt
@@ -256,6 +257,74 @@ def translation_counts(metadata: dict[str, Any]) -> dict[str, int]:
     }
 
 
+def latest_successful_pages_run(
+    runner: CommandRunner,
+    *,
+    gh: Path,
+    cwd: Path,
+) -> dict[str, Any]:
+    result = runner.run(
+        label="gh-list-latest-successful-pages-run",
+        executable=gh,
+        arguments=[
+            "run",
+            "list",
+            "--repo",
+            REPOSITORY,
+            "--workflow",
+            WORKFLOW,
+            "--branch",
+            BRANCH,
+            "--json",
+            "databaseId,status,conclusion,event,createdAt,headSha,url",
+            "--limit",
+            "20",
+        ],
+        cwd=cwd,
+    )
+    runs = parse_json_output(result, "successful Pages run query")
+    if not isinstance(runs, list):
+        raise ValueError("GitHub Pages run query must return an array")
+    timezone = ZoneInfo(TIMEZONE)
+    for run in runs:
+        if not isinstance(run, dict):
+            raise ValueError("GitHub Pages run must be an object")
+        if run.get("status") != "completed" or run.get("conclusion") != "success":
+            continue
+        database_id = run.get("databaseId")
+        created_at_text = run.get("createdAt")
+        head_sha = run.get("headSha")
+        source_event = run.get("event")
+        url = run.get("url")
+        if not isinstance(database_id, int) or database_id < 1:
+            raise ValueError(f"Invalid Pages run databaseId: {database_id}")
+        if not isinstance(created_at_text, str) or not created_at_text:
+            raise ValueError(f"Invalid Pages run createdAt: {created_at_text}")
+        created_at = datetime.fromisoformat(created_at_text)
+        if created_at.tzinfo is None:
+            raise ValueError("Pages run createdAt must include a timezone")
+        if not isinstance(head_sha, str) or not head_sha:
+            raise ValueError(f"Invalid Pages run headSha: {head_sha}")
+        if not isinstance(source_event, str) or not source_event:
+            raise ValueError(f"Invalid Pages run event: {source_event}")
+        if not isinstance(url, str) or not url.startswith("https://github.com/"):
+            raise ValueError(f"Invalid Pages run URL: {url}")
+        return {
+            "database_id": str(database_id),
+            "status": "completed",
+            "conclusion": "success",
+            "event": source_event,
+            "created_at": created_at_text,
+            "created_at_local": created_at.astimezone(timezone).isoformat(),
+            "local_date": created_at.astimezone(timezone).date().isoformat(),
+            "head_sha": head_sha,
+            "url": url,
+            "timezone": TIMEZONE,
+            "assumed_trigger_time": True,
+        }
+    raise ValueError("No completed successful Pages run is available for the one-off run")
+
+
 def wait_for_push_run(
     runner: CommandRunner,
     *,
@@ -430,40 +499,46 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
         for script in (registry_script, schedule_validator, deployment_verifier, translation_runner):
             require_file(script)
 
-        schedule_result = run_python_script(
-            runner,
-            python=python,
-            script=schedule_validator,
-            arguments=[
-                "--gh-executable",
-                str(gh),
-                "--repository",
-                REPOSITORY,
-                "--workflow",
-                WORKFLOW,
-                "--branch",
-                BRANCH,
-                "--timezone",
-                TIMEZONE,
-            ],
-            cwd=worktree,
-            label="validate-schedule",
-        )
-        schedule = parse_json_output(schedule_result, "schedule validation")
-        if not isinstance(schedule, dict):
-            raise ValueError("Schedule validation must return an object")
-        schedule_run_id = str(schedule["database_id"])
-        schedule_revision = str(schedule["head_sha"])
-        sync_date = str(schedule["local_date"])
+        if args.assume_trigger_time:
+            gate_run = latest_successful_pages_run(runner, gh=gh, cwd=worktree)
+        else:
+            schedule_result = run_python_script(
+                runner,
+                python=python,
+                script=schedule_validator,
+                arguments=[
+                    "--gh-executable",
+                    str(gh),
+                    "--repository",
+                    REPOSITORY,
+                    "--workflow",
+                    WORKFLOW,
+                    "--branch",
+                    BRANCH,
+                    "--timezone",
+                    TIMEZONE,
+                ],
+                cwd=worktree,
+                label="validate-schedule",
+            )
+            gate_run = parse_json_output(schedule_result, "schedule validation")
+            if not isinstance(gate_run, dict):
+                raise ValueError("Schedule validation must return an object")
+        gate_run_id = str(gate_run["database_id"])
+        gate_revision = str(gate_run["head_sha"])
+        gate_source_event = gate_run.get("event")
+        if not isinstance(gate_source_event, str) or not gate_source_event:
+            raise ValueError(f"Gate workflow event is invalid: {gate_source_event}")
+        sync_date = str(gate_run["local_date"])
         gate_metadata_path = run_directory / "gate-metadata.json"
         gate_metadata = verify_metadata(
             runner,
             python=python,
             verifier=deployment_verifier,
             output=gate_metadata_path,
-            workflow_run_id=schedule_run_id,
-            source_revision=schedule_revision,
-            source_event="schedule",
+            workflow_run_id=gate_run_id,
+            source_revision=gate_revision,
+            source_event=gate_source_event,
             sync_date=sync_date,
             cwd=worktree,
             label="verify-gate-deployment",
@@ -476,7 +551,7 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
             registry_script=registry_script,
             url=SITE_DATA_URL,
             output=site_data_path,
-            cache_key=schedule_run_id,
+            cache_key=gate_run_id,
             cwd=worktree,
             label="fetch-gate-site-data",
         )
@@ -499,8 +574,9 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
             summary = {
                 "status": "already-complete",
                 "model": os.environ.get("NVIDIA_API_MODEL", DEFAULT_MODEL),
-                "schedule_run_id": schedule_run_id,
-                "schedule_url": schedule["url"],
+                "gate_workflow_run_id": gate_run_id,
+                "gate_workflow_url": gate_run["url"],
+                "gate_source_event": gate_source_event,
                 "article_count": gate_counts["total_articles"],
                 "pending_articles": 0,
                 "registry_verification": parse_json_output(verify_result, "registry verification"),
@@ -556,8 +632,9 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
             summary = {
                 "status": "no-new-translations",
                 "model": model,
-                "schedule_run_id": schedule_run_id,
-                "schedule_url": schedule["url"],
+                "gate_workflow_run_id": gate_run_id,
+                "gate_workflow_url": gate_run["url"],
+                "gate_source_event": gate_source_event,
                 "article_count": gate_counts["total_articles"],
                 "pending_articles": gate_counts["pending_articles"],
                 "registry_verification": parse_json_output(verify_result, "registry verification"),
@@ -771,8 +848,9 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
             "status": "completed",
             "model": model,
             "api_url": api_url,
-            "schedule_run_id": schedule_run_id,
-            "schedule_url": schedule["url"],
+            "gate_workflow_run_id": gate_run_id,
+            "gate_workflow_url": gate_run["url"],
+            "gate_source_event": gate_source_event,
             "translated_articles": pending_count,
             "batch_count": int(manifest["batch_count"]),
             "commit": commit_sha,
@@ -806,6 +884,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--batch-size", type=int, default=4)
     parser.add_argument("--wait-seconds", type=int, default=1800)
+    parser.add_argument(
+        "--assume-trigger-time",
+        action="store_true",
+        help="Use the latest successful Pages deployment for a one-off manual run",
+    )
     return parser
 
 
