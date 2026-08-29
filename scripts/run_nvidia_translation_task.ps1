@@ -46,7 +46,11 @@ foreach ($file in @(
     }
 }
 if ([string]::IsNullOrWhiteSpace($env:NVIDIA_API_KEY)) {
-    throw 'NVIDIA_API_KEY is not available to the scheduled task user.'
+    $userApiKey = [Environment]::GetEnvironmentVariable('NVIDIA_API_KEY', 'User')
+    if ([string]::IsNullOrWhiteSpace($userApiKey)) {
+        throw 'NVIDIA_API_KEY is not available to the scheduled task user.'
+    }
+    $env:NVIDIA_API_KEY = $userApiKey
 }
 
 $env:PATH = '{0};{1};{2};{3}' -f $pythonLibraryBin, $nodeDirectory, (Split-Path -Path $ghExecutable -Parent), $env:PATH
