@@ -29,6 +29,7 @@ SITE_DATA_URL = "https://yixi0527.github.io/daily_paper/data/site-data.json"
 REGISTRY_RELATIVE_PATH = Path("packages/shared/data/article_registry.json")
 COMMIT_MESSAGE = "data: translate daily papers with NVIDIA API"
 DEFAULT_TRANSLATION_TIMEOUT = 300
+DEFAULT_TRANSLATION_BATCH_SIZE = 1
 
 
 class CommandFailed(RuntimeError):
@@ -887,7 +888,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--pytest-executable", required=True, type=Path)
     parser.add_argument("--npm-executable", required=True, type=Path)
     parser.add_argument("--workers", type=int, default=4)
-    parser.add_argument("--batch-size", type=int, default=4)
+    parser.add_argument("--batch-size", type=int, default=DEFAULT_TRANSLATION_BATCH_SIZE)
     parser.add_argument("--timeout", type=int, default=DEFAULT_TRANSLATION_TIMEOUT)
     parser.add_argument("--wait-seconds", type=int, default=1800)
     parser.add_argument(

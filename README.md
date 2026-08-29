@@ -370,8 +370,9 @@ The local task delegates GitHub schedule selection and UTC-to-Shanghai conversio
 `scripts/validate_daily_schedule_run.py`. Its validated JSON output is the only accepted schedule
 identity, which keeps model-generated shell logic out of the date gate.
 
-Each NVIDIA translation request allows up to 300 seconds for the model response because a four-paper
-batch can contain long abstracts and may exceed a shorter socket timeout.
+Each NVIDIA translation request allows up to 300 seconds for the model response. The task uses
+single-article batches because multi-article requests can exhaust the model's output budget before
+the required JSON is complete.
 
 `scripts/verify_pages_deployment.py` embeds the canonical public metadata endpoint and uses it when
 `--url` is omitted. Supplying any other metadata URL is rejected before a network request.

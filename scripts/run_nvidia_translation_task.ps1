@@ -73,7 +73,7 @@ $arguments = @(
     '--workers',
     '4',
     '--batch-size',
-    '4',
+    '1',
     '--timeout',
     '300',
     '--wait-seconds',

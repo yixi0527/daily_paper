@@ -46,7 +46,7 @@ The Windows task invokes `scripts/run_nvidia_translation_task.ps1 -Execute`, whi
 - endpoint: `https://integrate.api.nvidia.com/v1/chat/completions`;
 - default model: `openai/gpt-oss-20b`;
 - secret: user-scoped `NVIDIA_API_KEY` environment variable;
-- four concurrent API requests, with up to four articles per batch;
+- four concurrent API requests, with one article per batch;
 - 300-second response timeout per API request;
 - JSON-mode Chat Completions responses, followed by script-owned schema, order, Chinese-text, and
   null-abstract validation.
@@ -71,7 +71,7 @@ Each invocation follows this sequence:
    `https://yixi0527.github.io/daily_paper/data/metadata.json` with
    `scripts/verify_pages_deployment.py`. A successful, complete deployment is required.
 5. Download the matching canonical `site-data.json` and run `article_registry.py prepare` against
-   the detached worktree registry. The preparation uses source hashes and produces four-article
+   the detached worktree registry. The preparation uses source hashes and produces one-article
    batches with a 9,000-character source limit.
 6. Run `run_nvidia_translation.py`. It sends only title/abstract source text to the API, binds
    article keys locally, writes outputs atomically, and leaves raw API responses in the ignored run
