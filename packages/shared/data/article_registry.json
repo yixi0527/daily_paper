@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-29T17:38:52.2266672Z",
+  "updated_at": "2026-08-29T17:44:26.566175+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -508,6 +508,19 @@
       "abstract_zh": "《Acta Neuropathologica》—鞍区神经细胞瘤（SELN）是一种罕见的肿瘤，其与中枢神经系统（CNS）内其他神经细胞瘤的关系一直不清楚。既往报道已经...",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-18T19:34:53.295339+00:00"
+    },
+    "doi:10.1007/s00401-026-03074-7": {
+      "doi": "10.1007/s00401-026-03074-7",
+      "journal_slug": "acta-neuropathologica",
+      "title": "High levels of cell-free hemoglobin and iron in cerebral thrombi of pre-Omicron COVID-19 stroke patients: novel drivers of SARS-CoV-2–induced prothrombotic state",
+      "acquired_at": "2026-08-29T17:13:08",
+      "source_title_sha256": "0118224a8fb6a5a22ef84aa2f6ba6391df00477f71b76439571f7ad0b1597d50",
+      "source_abstract_sha256": "bac00f0d0c215ee288ce70d8c40da033ad4f0816791feae67d23fc42f5b72b32",
+      "source_abstract": "abstract",
+      "title_zh": "高水平细胞外血红蛋白和铁在前Omicron COVID-19卒中患者的大脑血栓中的存在：SARS-CoV-2诱导的促血栓状态的新驱动因素",
+      "abstract_zh": "Acta Neuropathologica - 与COVID-19相关的高凝状态和血栓事件的病理生理机制尚未完全理解。为探究……",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1007/s10462-026-11548-z": {
       "doi": "10.1007/s10462-026-11548-z",
@@ -1691,6 +1704,19 @@
       "abstract_zh": "摘要：人工通用智能（AGI）的出现有望彻底改变情感计算。然而，当前研究缺乏一个系统的框架，无法充分考虑人类情感的跨空间本质——生理状态（物理空间）、文化规范（社会空间）、认知过程（思维空间）与数字数据（网络空间）持续相互作用并相互塑造。为填补这一空白，本文首先将情感计算重新定位于网络物理社会思维（CPST）空间理论中，将其视为一种跨空间转换的动态过程，而非孤立的功能。AGI在感知、学习、推理、记忆、泛化和生成方面的能力充当实现这些跨空间转换的计算引擎。随后，本文系统地将AGI技术（如因果建模、链式思维、扩散模型）映射到具体的情感计算任务，展示每种技术如何支持其实现。通过将CPST作为理论支柱、AGI作为赋能技术，本文为下一代情感计算提供了系统化的路线图，并讨论了潜在应用与未来方向，强调该框架如何推动人类级情感智能迈向真正的共情与情境感知。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1007/s10462-026-11694-4": {
+      "doi": "10.1007/s10462-026-11694-4",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Deep learning pipelines for white blood cell classification: a comprehensive literature review",
+      "acquired_at": "2026-08-29T17:24:54",
+      "source_title_sha256": "e29dec2d7ac613f00fa12e4613afd9058508e6d706f10ceb2fe30a542cd38003",
+      "source_abstract_sha256": "319d55ef6e69452b4d41f3961d78b455ab84ddd2e2ec647be01b4ba941e4c6ce",
+      "source_abstract": "abstract",
+      "title_zh": "深度学习管线在白细胞分类中的应用：一项综合文献综述（Deep learning pipelines for white blood cell classification: a comprehensive literature review）",
+      "abstract_zh": "摘要 本研究旨在提供关于深度学习（DL）框架如何用于白细胞（WBC）图像识别与分类的全面且结构化概述。综述围绕三个主要研究问题展开：（1）DL模型在WBC分类中的主导趋势是什么？（2）图像预处理与分割技术如何影响性能？（3）该领域目前的局限性与前景如何？本研究依据《系统评价与荟萃分析优选报告项目》（PRISMA）指南进行系统文献综述。根据相关性、方法学严谨性和对领域的贡献对研究进行筛选与分析。采用包含18个技术维度的分析框架评估所使用的DL管线。卷积神经网络（CNN）在所评审研究中占主导地位，使用率为81.6%。在这些研究中，ResNet、视觉几何组（VGG）和EfficientNet是最常用的架构，分别占32.9%、18.4%和14.5%。混合方法（CNN-支持向量机、CNN-长短期记忆等）占文献的11.2%。68%的研究采用了直方图均衡化、归一化和对比度增强等预处理技术，54%使用了分割方法（U-Net、分水岭等）。在BCCD数据集上，使用EfficientNet获得的最高分类准确率（ACC）为99.83%。本综述提出了一个结构化的分析框架，用于基准化现有研究，并指导更稳健、可解释且可临床部署的基于DL的血液成像诊断工具的开发。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1016/j.brs.2026.103117": {
       "doi": "10.1016/j.brs.2026.103117",
@@ -4545,12 +4571,12 @@
       "title": "Human nuclear ribomes reveal DNA-embedded ribonucleotides as epigenetic modulators of transcription-associated DNA supercoiling",
       "acquired_at": "2026-08-29T00:42:16",
       "source_title_sha256": "90b8693d5938b0c241785c0865fd58008b7c083e8f4484086760dd579a91b6d7",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "人类核糖体组揭示嵌入 DNA 的核糖核苷酸作为转录相关 DNA 超螺旋的表观遗传调节因子",
-      "abstract_zh": null,
+      "source_abstract_sha256": "4eb0bc7b5ba4d56ebc15799adcc47c2d03f4943761eb0174196738c3ae3c6930",
+      "source_abstract": "abstract",
+      "title_zh": "人类核内核糖组揭示嵌入DNA的核糖核苷酸作为转录相关DNA超螺旋的表观遗传调节因子",
+      "abstract_zh": "核糖核苷酸单磷酸（rNMPs）是DNA中最丰富的非典型核苷酸，但其在人体核基因组中的分布和功能仍不清楚。我们提供了跨多种人类细胞的高分辨率地图，显示每个基因组约一百万个rNMPs，揭示了非随机的核“核糖组”，即嵌入rNMPs的全基因组景观，富集于GC含量高的区域、调控元件和端粒。核糖核苷酸富集区（REZs）聚集在转录起始位点（TSSs）附近，与CpG岛、R-loop和G4结构重叠，并随基因表达水平扩展。RNase H2缺失导致rGMP水平升高，并与Top1依赖、链偏向的rNMP富集在TSS附近相关，而Top1缺失进一步增强rGMP积累。RNase H2介导的在rNMP处的切口改变了体外DNA超螺旋，RNH2A缺陷细胞在rNMP富集的TSS处显示出改变的超螺旋。我们的研究表明，嵌入的rNMPs是与DNA序列和转录相关的DNA超螺旋的表观遗传调节因子，揭示了核糖核苷酸处理与人类细胞转录相关DNA拓扑之间的联系。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-08-29T17:38:52.2266672Z"
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1016/j.cell.2026.07.054": {
       "doi": "10.1016/j.cell.2026.07.054",
@@ -4584,12 +4610,12 @@
       "title": "Genome-scale perturb-seq in primary human CD4+ T cells maps context-specific regulators of T cell programs and human immune traits",
       "acquired_at": "2026-08-29T00:42:16",
       "source_title_sha256": "8d14be184f24025283e6ad2e7091f35dbcecec10ba3dc1f83adf3815cb276ddc",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "全基因组规模的扰动测序在原代人类CD4+ T细胞中绘制了上下文特异性调控因子，揭示T细胞程序和人类免疫特征的调控网络",
-      "abstract_zh": null,
+      "source_abstract_sha256": "797878847becc7200e4256c4b71dc51dec778427b84f036ce154699601db6a4a",
+      "source_abstract": "abstract",
+      "title_zh": "基因组规模的扰动测序在原代人类CD4+ T细胞中绘制了上下文特异性调控因子，揭示T细胞程序和人类免疫特征的调控网络",
+      "abstract_zh": "基因调控网络编码了细胞功能的基本逻辑，但系统化的网络映射仍然具有挑战性，尤其是在与人类生物学和疾病相关的细胞状态中。我们在来自四个供体的2200万原代人类CD4+ T细胞中扰动了所有表达基因，并开发了一种基于探针的扰动测序平台，以测量静息状态和刺激后细胞的转录组效应。这些数据使我们能够绘制调控免疫通路的基因图谱，包括先前未被表征的细胞因子产生调控因子。重要的是，活跃调控因子及其控制的基因程序在不同刺激条件下发生了显著变化。扰动特征使我们能够模拟在群体规模转录组图谱中观察到的T细胞状态，提出了T细胞极化和与年龄相关表型的调控因子。最后，我们利用扰动测序将上下文特异性的基因调控通路与自身免疫疾病风险联系起来。我们的研究提供了一个基础资源和新的方法，用于解码T细胞功能和人类免疫特征。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-08-29T17:38:52.2266672Z"
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1016/j.cell.2026.08.004": {
       "doi": "10.1016/j.cell.2026.08.004",
@@ -7548,12 +7574,12 @@
       "title": "The pathophysiology of depression in Huntington’s disease",
       "acquired_at": "2026-08-29T01:34:41",
       "source_title_sha256": "0fe92ca2433b465fac37031ef9dc4b17793e604b76249784adb3696b0ac58dfb",
-      "source_abstract_sha256": "dc2a9ce2228123e13848c3f3cc28bf0ee4204a6e77594dc84974f4bf9d56ce7e",
+      "source_abstract_sha256": "dcc436d8107448c2e7af9bfa5569d1c53efd809e4721959496d9c0c3e7fe6d59",
       "source_abstract": "abstract",
-      "title_zh": "亨廷顿病抑郁症的病理生理学",
-      "abstract_zh": "抑郁症在亨廷顿病（HD）基因扩增携带者中的发生率高达普通人群的四倍，然而其神经生物学基础尚未得到充分理解，可能导致症状持续存在和治疗效果不佳，尽管常用干预措施已被采用。对病理生理机制的理解受限于碎片化的单层面方法，无法捕捉生物系统之间的相互作用。本文提出了一个多层次、相互作用的病理生理框架，整合了脑网络（宏观）、神经递质（中观）以及分子和系统（微观）层面的证据，阐明了亨廷顿病中抑郁易感性的机制。我们强调了现有证据，表明HD相关的神经生物学改变可能促成抑郁。HD中GABA能中间棘突神经元的优先易感性可能导致皮质-基底节-丘脑回路的功能障碍，并与细胞、分子和系统过程相互作用。在宏观层面，神经回路的改变表现为脑网络的结构变化和功能失联；中观层面代表细胞和神经递质的改变，包括谷氨酸能、5-羟色胺能和多巴胺能失调；微观层面则包括神经内分泌、免疫、神经营养因子和肠道微生物-脑轴等分子和系统改变。我们讨论了该相互框架如何为生成关于亨廷顿病抑郁机制的可检验假设提供基础，并强调了未来研究优先方向，包括改进精神病学表型、纵向多模态研究设计、跨物种行为协调以及行为、回路层面、分子和系统测量的整合。",
+      "title_zh": "亨廷顿病抑郁症的病理生理学（Huntington’s disease）",
+      "abstract_zh": "抑郁症在亨廷顿病（HD）基因扩增携带者中的发生率高达普通人群的四倍，然而其神经生物学基础尚未得到充分理解，可能导致症状持续存在和治疗效果不佳，尽管常用干预措施已被采用。对病理生理机制的理解受限于碎片化、单层面的方法，无法捕捉生物系统之间的相互作用。本文提出了一个多层次、相互作用的病理生理框架，整合了脑网络（宏观）、神经递质（中观）以及分子和系统（微观）层面的证据，阐明了HD中抑郁易感性的机制。我们强调了现有证据，表明HD相关的神经生物学改变可能促成抑郁。HD中GABA能中间棘状神经元的优先易感性可能导致皮质-基底节-丘脑回路的功能障碍，并与细胞、分子和系统过程相互作用。在宏观层面，神经回路的改变表现为结构变化和跨脑网络的功能失联；中观层面代表细胞和神经递质的改变，包括谷氨酸能、5-羟色胺能和多巴胺能失调；微观层面则包括神经内分泌、免疫、神经营养因子以及肠道微生物-脑轴等分子和系统改变。我们讨论了该相互框架如何为生成可检验的抑郁机制假设提供基础，并强调了未来研究的优先方向，包括改进精神病理表型、纵向多模态研究设计、跨物种行为协调以及行为、回路、分子和系统测量的整合。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-08-29T17:38:52.2266672Z"
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106934": {
       "doi": "10.1016/j.neubiorev.2026.106934",
@@ -9537,12 +9563,12 @@
       "title": "A bifunctional optical reporter for tracking estrogen response dynamics in neurons",
       "acquired_at": "2026-08-29T00:47:10",
       "source_title_sha256": "883fc1e754ecdec121fe5821689037b54db9a17546591143c112775428cd8f6e",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "双功能光学报告器用于追踪神经元雌激素反应动力学",
-      "abstract_zh": null,
+      "source_abstract_sha256": "c1621a1ad5d9a5852044c872a299daa46561c0a60224cd54ead247dfc8cce074",
+      "source_abstract": "abstract",
+      "title_zh": "用于追踪神经元雌激素反应动力学的双功能光学报告器（Neuro-SeeER）",
+      "abstract_zh": "目前用于追踪雌激素作用动力学的方法有限且缺乏组织特异性；这些特性使得难以直接将激素变化与生理、行为和神经变量关联。为解决此问题，我们开发了荧光双功能报告器 neuro-seeER（\"see estrogen response\"）可用于追踪体外和体内雌激素动力学变化，包括在行为动物中的纵向追踪。我们证明该活性需要雌激素受体表达，特异性针对雌二醇，并在体内对外源雌激素作出动态响应。利用“快照”光度计纵向追踪动力学，我们检测到多种下丘脑部位的外源雌激素协调响应。最后，我们展示该工具能够捕捉体内雌激素在发情周期时间尺度上的内源性反应动力学，从而揭示个体在响应时序上的差异。综上，这些发现揭示了雌激素响应的细胞和时间异质性，并证明了在追踪激素响应的同时结合神经或行为测量的可行性。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-08-29T17:38:52.2266672Z"
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1016/j.neuron.2026.08.001": {
       "doi": "10.1016/j.neuron.2026.08.001",
@@ -10752,6 +10778,19 @@
       "abstract_zh": "内分泌信号正日益被认为是人脑发育的重要调控因子。在一项最新研究中，Matassa 等人建立了神经类器官中七个主要内分泌通路扰动的多组学图谱，揭示了共享与各异的分子、细胞和代谢反应。该资源为理解激素与环境因素如何塑造神经发育提供了一个框架。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-18T19:34:53.295339+00:00"
+    },
+    "doi:10.1016/j.tins.2026.08.001": {
+      "doi": "10.1016/j.tins.2026.08.001",
+      "journal_slug": "trends-in-neurosciences",
+      "title": "Amygdala excitability across development: mechanisms, environmental influences, and behavioral outcomes",
+      "acquired_at": "2026-08-29T16:57:15",
+      "source_title_sha256": "9219867ecf4397254b03af20d493d44baad1b7a6279db8f4278ef46e6bdbfb77",
+      "source_abstract_sha256": "59b4c20db94f6a81ebb19b0527386c358b1a452fcbd8e4b116f4a8ad339f1feb",
+      "source_abstract": "abstract",
+      "title_zh": "杏仁核兴奋性在发育过程中的变化：机制、环境影响与行为结果",
+      "abstract_zh": "最近在啮齿动物模型中的研究为我们提供了关于基底外侧杏仁核（BLA）主神经元兴奋性如何动态调节以促进情绪显著记忆的编码与检索的机制性见解。在本综述中，我们讨论了调控BLA兴奋性的生理机制，并强调其对招募特定BLA集群以编码不同行为状态的影响。此外，我们总结了当前对这些机制在发育过程中如何建立的理解，并提出这可能遵循不同的发育阶段。最后，我们概述了关于早期逆境或遗传风险因素如何急性扰乱发育轨迹并可能导致BLA回路功能的持久变化的最新发现，并讨论其对神经发育障碍的意义。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1016/j.tins.2026.08.003": {
       "doi": "10.1016/j.tins.2026.08.003",
@@ -18760,6 +18799,19 @@
       "abstract_zh": "尽管拷贝数变异（CNVs）已被确认为精神分裂症（SCZ）的重要遗传因素，但其在双相情感障碍（BD）中的作用，尤其是在非欧洲人群中，尚未得到充分探讨。我们在3915例汉族BD患者和7820例族群匹配对照中评估了罕见CNV（包括缺失和重复）的全基因组负荷。结果显示，BD患者中罕见缺失的比例显著高于对照组，受影响基因在神经信号传导和剂量依赖网络中富集，提示神经发育位点的单等位基因缺失可能是BD的核心病因通路之一。在欧洲队列中报道的12个CNV位点中，只有3q29和15q11.2的缺失在汉族个体中与BD易感性呈现稳健关联。通过全基因组、基因中心的CNV关联检验，我们发现了新的BD相关位点，包括16p13.3的GLIS2和PAM16缺失、7p22.1的GRID2IP缺失以及2q33.1的CFLAR缺失，同时在19p13.2出现了ZNF878和ZNF844的重复。受影响的基因主要与神经元成熟、突触调节和线粒体动力学相关。本研究提供了迄今为止最全面的汉族BD相关CNV描述，强调了包含不同族群研究的重要性，以全面揭示精神疾病基因组学，并为BD病因学提供了新的机制视角。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1038/s41380-026-03854-3": {
+      "doi": "10.1038/s41380-026-03854-3",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Iron dyshomeostasis and its neurobiological mechanisms in psychiatric disorders",
+      "acquired_at": "2026-08-29T17:17:35",
+      "source_title_sha256": "666f93c13d7d3468a1a7c19e41966208beaf62629cc892f9707e2727414a76fa",
+      "source_abstract_sha256": "93fb03867d3473583d50e8cf85d4e86b4f1bc65b9f83cd2ed11cb5e13656f425",
+      "source_abstract": "abstract",
+      "title_zh": "铁代谢失衡及其在精神疾病中的神经生物学机制",
+      "abstract_zh": "脑铁稳态对于维持中枢神经系统发育、神经回路稳定以及包括神经递质传递、线粒体能量代谢和突触可塑性在内的核心神经生物学过程至关重要。大量临床与前临床证据已确立，铁代谢失衡是多种精神疾病的普遍且共通的病理驱动因素，涵盖焦虑、抑郁、精神分裂症以及神经发育和情感谱系疾病。然而，目前文献仍以疾病特异性研究为主，关于疾病发病机制中区域性铁缺乏与铁过载的相互关系仍存在未解决的矛盾。此外，细胞类型与回路特异性机制将铁失衡与精神表型联系起来的研究缺乏系统整合，阻碍了机制共识与转化进展。在本综述中，我们综合了人类神经影像、尸检组织分析、临床队列以及前临床动物研究的多模态证据，以阐明外周与脑内铁代谢的不同调控逻辑。我们系统性剖析了铁稳态失衡如何触发一系列神经生物学损伤，包括氧化应激、铁死亡、神经炎症、髓鞘形成缺陷、神经递质功能障碍以及突触重塑失调。基于这些发现，我们构建了一个统一的机制框架，说明遗传易感性、慢性社会心理压力、神经炎症刺激以及发育影响等多种病因因素如何汇聚，导致区域性和细胞特异性的铁扰动及随后的回路功能障碍。我们还总结了现有铁靶向干预策略的转化潜力与固有局限。总体而言，本综述将脑铁代谢失衡定位为精神疾病病理网络中的核心共通节点，桥接基础铁神经生物学与转化神经科学，并为生物标志物发现、机制剖析及下一代精神病治疗开发提供了概念框架和实践路线图。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1038/s41562-026-02424-5": {
       "doi": "10.1038/s41562-026-02424-5",
@@ -32957,6 +33009,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1186/s12974-026-04019-3": {
+      "doi": "10.1186/s12974-026-04019-3",
+      "journal_slug": "journal-of-neuroinflammation",
+      "title": "Galectin-3 worsens microglia-mediated synaptic engulfment and neuroinflammatory responses after traumatic brain injury",
+      "acquired_at": "2026-08-29T17:15:33",
+      "source_title_sha256": "2d23f82ee05aa413ccaf288181251648c03deb461f27be74853a9b5b65e19eff",
+      "source_abstract_sha256": "85597c4091bbfdf75e77060c499aad829ff91c5cce191cabc6d9853f46431b5a",
+      "source_abstract": "abstract",
+      "title_zh": "Galectin-3加剧创伤性脑损伤后微胶质细胞介导的突触吞噬和神经炎症反应",
+      "abstract_zh": "《神经炎症杂志》- 激活的微胶质细胞介导的异常突触吞噬是创伤性脑损伤（TBI）后神经功能缺损的重要贡献者。Galectin-3…",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
+    },
     "doi:10.1186/s12974-026-04020-w": {
       "doi": "10.1186/s12974-026-04020-w",
       "journal_slug": "journal-of-neuroinflammation",
@@ -32982,6 +33047,32 @@
       "abstract_zh": "摘要 背景：慢性阻塞性肺疾病（COPD）患者常出现COPD相关神经认知障碍（COPD‑NCDs），严重影响生活质量。神经炎症是关键病理机制，但有效治疗手段仍缺乏。人类脐带间充质干细胞来源的外泌体（hUCMSC‑Exos）在其他神经疾病中具有抗炎和神经保护作用。然而，它们在COPD‑NCDs中的疗效及机制尚不清楚。方法：雌性BALB/c小鼠分为正常对照（NC）、COPD‑NCDs（模型）、COPD‑NCDs + PBS（载体）和COPD‑NCDs + Exos（治疗）组。COPD‑NCDs通过24周吸烟暴露诱导，hUCMSC‑Exos在第20–23周通过尾静脉给药。评估肺功能、认知功能、肺部和海马病理、小胶质细胞激活、炎症细胞因子、星形胶质细胞A1/A2表型以及脑RNA‑seq。结果：hUCMSC‑Exos显著改善COPD‑NCDs小鼠的肺功能，缓解肺部炎症、肺气肿、胶原沉积和系统性炎症。更重要的是，hUCMSC‑Exos也改善了COPD‑NCDs小鼠的认知障碍，减轻海马神经元损伤（Nissl阳性神经元和NeuN表达增加），抑制小胶质细胞激活，并降低脑组织中炎症细胞因子水平。此外，hUCMSC‑Exos下调了海马中A1型神经毒性星形胶质细胞标志物C3，上调了A2型神经保护星形胶质细胞标志物S100A10。RNA‑seq提示调节MAPK、Wnt、cAMP和PI3K‑Akt信号通路。结论：hUCMSC‑Exos改善了COPD‑NCDs小鼠的认知障碍，可能与抑制小胶质细胞激活和星形胶质细胞表型从A1向A2转变相关。这些发现突显了hUCMSC‑Exos作为COPD‑NCDs治疗策略的潜力，尽管表型转变与认知改善之间的因果关系仍需进一步机制验证。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1186/s12974-026-04023-7": {
+      "doi": "10.1186/s12974-026-04023-7",
+      "journal_slug": "journal-of-neuroinflammation",
+      "title": "Context-dependent localization and expression of glutamate and GABA and their machinery in microglia",
+      "acquired_at": "2026-08-29T17:15:33",
+      "source_title_sha256": "b222e2ea5c3caadafce04fd2f75b945c0b502d71211dbc9ef805e68ed0fe5618",
+      "source_abstract_sha256": "ece21313f65d0e725529ef7a593319887ea4e08b8c7fc7dffa0bcf345c442206",
+      "source_abstract": "abstract",
+      "title_zh": "上下文相关的谷氨酸与GABA及其相关机制在小胶质细胞中的定位与表达",
+      "abstract_zh": "《神经炎症杂志》- 小胶质细胞是大脑稳态和突触结构的核心调节者，但它们是否像星形胶质细胞一样，充当谷氨酸和GABA的储存库和处理者，尚不清楚……",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
+    },
+    "doi:10.1186/s12974-026-04025-5": {
+      "doi": "10.1186/s12974-026-04025-5",
+      "journal_slug": "journal-of-neuroinflammation",
+      "title": "Targeted microglial ROS-scavenging alleviates neuroinflammation and cognitive deficits via restoration of the 2-AG/CB2R signaling axis in schizophrenia",
+      "acquired_at": "2026-08-29T17:15:33",
+      "source_title_sha256": "0227370ed2087323f3636d6f9b41083b301bcc5eb68beb90b187ecc49259d8c1",
+      "source_abstract_sha256": "9db9e281b87fdbbbcce824cd2d61ccfca6ef279cbc50b2a40452d1b879ccf1a6",
+      "source_abstract": "abstract",
+      "title_zh": "靶向微胶质细胞ROS清除通过恢复2-AG/CB2R信号轴缓解精神分裂症中的神经炎症和认知缺陷",
+      "abstract_zh": "《神经炎症杂志》- 精神分裂症的认知障碍治疗不足。氧化应激与神经炎症在其病理生理学中的分子联系仍不清楚……",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1186/s13024-026-00949-x": {
       "doi": "10.1186/s13024-026-00949-x",
@@ -33372,6 +33463,19 @@
       "abstract_zh": "摘要：在包括阿尔茨海默病、帕金森病和多发性硬化等神经疾病中，铁过载是氧化应激和局部损伤的主要贡献者。铁还可通过非氧化应激机制造成损害，例如蛋白质聚集和异常鞘磷脂代谢。铁稳态失调可能在全身或特定组织内发生，导致缺乏、过载或细胞内错误定位。这些改变破坏细胞功能并促成疾病病理。铁接受和捐赠电子的能力对氧气运输、能量产生和 DNA 合成至关重要，但同样的反应性也使其潜在有毒，过量铁会促进细胞损伤，包括铁死亡。尽管对铁在生理条件下的功能及其失调时的毒性已进行广泛研究，但仍有关键问题未解答：为何铁稳态在大脑中被破坏？驱动此失调的潜在机制是什么，如何减轻或逆转由此产生的损伤？这些问题在脱髓鞘和神经退行性疾病背景下尤为重要，因为铁积聚是常见的病理特征。在本综述中，我们全面概述了铁生物学，强调其化学特性、细胞功能以及维持铁稳态的严格调控机制。随后讨论了铁失调在多发性硬化中的病理后果以及已开发的针对铁毒性的治疗策略。虽然本综述的重点疾病是多发性硬化，但我们也提及在阿尔茨海默病和帕金森病中对抗铁的做法，以突出减轻铁神经毒性的途径。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1186/s13024-026-00990-w": {
+      "doi": "10.1186/s13024-026-00990-w",
+      "journal_slug": "molecular-neurodegeneration",
+      "title": "Lipid-driven membrane remodeling engages a lysosome-dependent adaptive repair program during retinal aging",
+      "acquired_at": "2026-08-29T16:57:17",
+      "source_title_sha256": "1e43bf877cfa93187f44625f20a5ff6fb488f231fab46b02b43b39718dd3e076",
+      "source_abstract_sha256": "9ff974bd5805afd6d5d6c0d8c73f5a9c5f14ed254f4e98b104777b8c0b63daea",
+      "source_abstract": "abstract",
+      "title_zh": "脂质驱动的膜重塑在视网膜衰老期间激活依赖溶酶体的适应性修复程序",
+      "abstract_zh": "摘要：与年龄相关的膜脂质组成重塑已被认为与细胞功能障碍相关，但将脂质变化与膜完整性和疾病联系起来的机制尚不清楚。在视网膜色素上皮（RPE）中，脂质失调与衰老和年龄相关性黄斑变性（AMD）——一种中枢神经系统的神经退行性疾病——高度相关，但因果通路仍不明确。我们在此发现脂质延长酶ELOVL2活性降低是年龄相关膜重塑的核心驱动因素。ELOVL2依赖的多不饱和脂肪酸（PUFA）延长缺失导致质膜脂质组成改变，进而改变膜的生物物理特性并削弱膜完整性。为应对这种压力，RPE细胞并未发生凋亡，而是激活了依赖溶酶体的质膜修复程序，在代谢挑战下保持屏障功能。然而，这种适应性反应驱动了空间极化的溶酶体胞吐，促进了细胞外重塑和与衰老及AMD相关的RPE下沉积物的积累。恢复ELOVL2衍生的脂质产物可逆转膜异常并抑制溶酶体介导的重塑表型，证明了代谢对膜稳态的直接调控。综上所述，这些发现定义了一个ELOVL2依赖的脂质–溶酶体轴，将PUFA延长与质膜完整性联系起来，并揭示了补偿性修复机制如何促成衰老上皮组织的重塑和疾病进展。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-29T17:44:26.566175+00:00"
     },
     "doi:10.1186/s40035-026-00553-5": {
       "doi": "10.1186/s40035-026-00553-5",
