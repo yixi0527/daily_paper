@@ -5,131 +5,128 @@
 | Time (Asia/Shanghai) | Owner | Responsibility |
 | --- | --- | --- |
 | 00:23 daily | GitHub Actions | Fetch DOI-indexed metadata, require all journals to succeed, export static data, deploy Pages |
-| 03:30 and 06:30 daily | Local Codex automation | Independently verify the exact scheduled deployment, translate pending records with `gpt-5.3-codex-spark`, validate and push the registry |
+| 03:30 and 06:30 daily | Windows Task Scheduler | Verify the Pages snapshot, translate pending records through NVIDIA, validate and push the registry |
 | After the registry push | GitHub Actions | Refresh translations from the healthy Pages snapshot and deploy the pushed registry revision |
-| End of the local run | Local Codex automation | Verify the exact push-triggered deployment and report the result |
+| End of the local run | Windows Task Scheduler | Verify the exact push-triggered deployment and retain the run report |
 
-The daily service objective is a complete prior-day site with zero pending translations before
-09:00 Asia/Shanghai. The 03:30 run is the primary translation execution, and the 06:30 run starts
-from fresh Git, Actions, and public deployment state as a separate execution.
+The task is registered as `Daily Paper NVIDIA Translation`. It runs the repository scripts directly;
+it does not start Codex or depend on a Codex automation. The old `每日文献 Spark 翻译` Codex
+automation is paused and must remain paused to prevent duplicate runs.
 
 The FastAPI scheduler configured by `SYNC_HOUR` and `SYNC_MINUTE` operates a persistent API
-database. It has no role in the Pages-to-Spark handshake.
+database. It has no role in the Pages-to-NVIDIA handshake.
 
 ## GitHub synchronization contract
 
 `.github/workflows/pages-sync.yml` first classifies the deployment:
 
-- `schedule`, `workflow_dispatch`, branch creation, and any push containing files beyond the
+- `schedule`, `workflow_dispatch`, branch creation, and a push containing files beyond the
   translation registry use `full` mode;
-- a push whose exact diff is only `packages/shared/data/article_registry.json` uses
-  `translations` mode.
+- a push whose exact diff is only `packages/shared/data/article_registry.json` uses `translations`
+  mode.
 
-Full mode performs these stages in order:
+Full mode upgrades a fresh SQLite database, seeds the tracked journals, requires every journal
+synchronization to succeed, exports `site-data.json` and `metadata.json`, and deploys the static
+site with a workflow-run-specific data URL.
 
-1. Upgrade a fresh SQLite database to the single Alembic head.
-2. Seed the tracked journal configuration.
-3. Run every journal synchronization with `--require-complete`.
-4. Export `site-data.json` and `metadata.json`.
-5. Build and deploy the static site with a workflow-run-specific data URL.
+Translations mode downloads the currently deployed `site-data.json` and `metadata.json`, checks
+the source bundle integrity and synchronization metadata, refreshes the article and dashboard
+translations from the registry, and deploys again. It does not contact journal, publisher, PubMed,
+or Crossref endpoints.
 
-The static export excludes stored upstream raw payloads and uses compact JSON. `metadata.json`
-records `site_data_bytes`, `site_data_sha256`, plus complete and pending translation counts. These
-fields make mixed-cache responses, bundle regressions, and incomplete translation deployments
-machine-verifiable.
+The deployment metadata records the synchronization run, Git revision, GitHub event, workflow run
+ID, static bundle size and SHA-256 digest, and complete/pending translation counts. A partial sync
+or an incomplete bundle cannot pass the local gate.
 
-Translations mode downloads the currently deployed `site-data.json` and `metadata.json`, requires
-the underlying synchronization to be successful and current for the Shanghai calendar date,
-requires every deployed article to have a current source-hash-matched registry entry, refreshes
-the full article list and dashboard article list, records both the base deployment and translation
-deployment revisions, then builds and deploys. It does not contact journal, publisher, PubMed, or
-Crossref endpoints.
+## Local NVIDIA translation contract
 
-`metadata.json` records:
+The Windows task invokes `scripts/run_nvidia_translation_task.ps1 -Execute`, which starts
+`scripts/run_daily_nvidia_translation.py`. The runner uses:
 
-- the synchronization run ID, status, timestamps, processed journal count, and failure count;
-- the Git revision, GitHub event, and workflow run ID that produced the deployment;
-- the export time and article/journal counts.
+- endpoint: `https://integrate.api.nvidia.com/v1/chat/completions`;
+- default model: `openai/gpt-oss-20b`;
+- secret: user-scoped `NVIDIA_API_KEY` environment variable;
+- four concurrent API requests, with up to four articles per batch;
+- JSON-mode Chat Completions responses, followed by script-owned schema, order, Chinese-text, and
+  null-abstract validation.
 
-A partial run exits nonzero before export, preserving the previously healthy Pages deployment.
+The API key is never placed in a batch, command argument, log, registry entry, or Git commit.
+Hash-matched historical translations retain their original `translation_model` value. Changing the
+translation engine therefore does not falsely relabel old records or trigger a full retranslation;
+new and source-changed records are written with the NVIDIA model name.
 
-## Local Spark translation contract
+Each invocation follows this sequence:
 
-The active Codex automation is named `每日文献 Spark 翻译`. It must complete these checks before
-writing translation output:
+1. Acquire the cross-trigger lock at `data/translation-work/.nvidia-automation.lock` and create a
+   unique run directory under `data/translation-work/`.
+2. Record the main worktree status, fetch `origin/main`, and create a detached worktree from the
+   fetched revision. The user's existing local changes are not modified.
+3. Run `scripts/validate_daily_schedule_run.py` with the verified GitHub CLI path. Its JSON output
+   is the only accepted schedule identity and supplies the Shanghai date, workflow ID, and source
+   revision.
+4. Download and validate the canonical
+   `https://yixi0527.github.io/daily_paper/data/metadata.json` with
+   `scripts/verify_pages_deployment.py`. A successful, complete deployment is required.
+5. Download the matching canonical `site-data.json` and run `article_registry.py prepare` against
+   the detached worktree registry. The preparation uses source hashes and produces four-article
+   batches with a 9,000-character source limit.
+6. Run `run_nvidia_translation.py`. It sends only title/abstract source text to the API, binds
+   article keys locally, writes outputs atomically, and leaves raw API responses in the ignored run
+   directory for diagnosis.
+7. Run `article_registry.py merge` and `article_registry.py verify`.
+8. Run Ruff, the complete pytest suite, the web lint, and the production web build.
+9. Confirm that the detached worktree diff contains only
+   `packages/shared/data/article_registry.json`. Re-fetch `origin/main`, reject a remote race,
+   create a single-file commit, verify its file list, and push `HEAD:main`.
+10. Locate the push-triggered `pages-sync.yml` run by its exact commit, wait for completed/success,
+    validate the exact final metadata with `--require-complete-translations`, download the exact
+    final site data, and run registry verification again.
 
-1. The local Git worktree is fully clean, including untracked files.
-2. `git pull --ff-only origin main` succeeds.
-3. `scripts/validate_daily_schedule_run.py` queries the latest `pages-sync.yml` run triggered by
-   `schedule`, parses its timezone-aware GitHub timestamp, converts it with `Asia/Shanghai`, and
-   requires `completed`, `success`, and the current Shanghai calendar date. Its JSON output is the
-   sole schedule identity used by the automation.
-4. The deployed `metadata.json` matches that workflow run ID, head revision, event, and sync date.
-5. Every configured journal was processed and the deployed failure count is zero.
-
-Translation work stays under ignored `data/translation-work/<run-id>/`. The registry preparation
-uses source hashes, so unchanged translations stay untouched. The task writes and validates every
-batch, merges the outputs, verifies the complete site bundle, runs backend and frontend checks,
-and permits only `packages/shared/data/article_registry.json` in the final diff.
-
-After pushing, the task waits for the `push`-triggered Pages workflow whose head revision equals
-the translation commit. It then runs `scripts/verify_pages_deployment.py` against the public
-metadata endpoint with that workflow run ID and revision, requires zero pending translations,
-downloads the exact versioned `site-data.json`, and verifies every live article against the registry.
-
-The deployment verifier embeds `https://yixi0527.github.io/daily_paper/data/metadata.json` as its
-canonical endpoint, defaults to it when `--url` is omitted, and rejects any different metadata
-URL before issuing a request. It uses a unique query key and no-cache request headers and can wait for one
-exact workflow identity to reach the Pages edge, which handles normal deployment propagation
-without accepting an older run. The 06:30 invocation starts as an independent run after a delayed
-03:30 prerequisite when the earlier invocation has already terminated.
+The task never creates an empty commit, force-pushes, edits project files outside the registry
+during a run, or falls back to another model after an API failure.
 
 ## Failure handling
 
-- Migration graph errors stop database preparation.
-- Any failed journal stops the Pages publication.
-- A stale base deployment or stale/missing registry translation stops translation-only publication.
-- A stale, delayed, failed, or mismatched scheduled deployment stops local translation.
-- Invalid or incomplete translation output stops the merge.
-- Test, commit, push, redeploy, or final deployment verification failure stops the local task.
-- Work products and logs remain in the ignored run directory for diagnosis.
+Every command is recorded under the run directory with its exact argument list, exit code, stdout,
+and stderr. API attempts also retain the raw response and a small response log. A failed command
+leaves the run directory and detached worktree in place for diagnosis; it does not merge partial
+translations or push a partial registry. Rerun the same validated workflow only after correcting
+the reported root cause. Failures are surfaced for follow-up and any available deployment status is
+retained before the invocation ends; no error is silently skipped or replaced by a fallback result.
 
-Every failure report should include the command, exit code, workflow URL when applicable, affected
-file or journal, and the original error text.
+## Installation and manual checks
 
-## Manual checks
+Set the API key once for the Windows user that owns the scheduled task:
 
-Inspect migration heads:
-
-```bash
-python scripts/run_alembic.py heads
+```powershell
+[Environment]::SetEnvironmentVariable('NVIDIA_API_KEY', '<your-key>', 'User')
 ```
 
-Run the complete local verification suite:
+Register or update the task:
 
-```bash
+```powershell
+& 'C:\Users\yixi0\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe' `
+  -NoLogo -NoProfile -File scripts/register_nvidia_translation_task.ps1
+```
+
+Inspect the real parser contracts before changing automation:
+
+```powershell
+python scripts/run_nvidia_translation.py --help
+python scripts/run_daily_nvidia_translation.py --help
+python scripts/article_registry.py fetch --help
+python scripts/article_registry.py prepare --help
+python scripts/article_registry.py merge --help
+python scripts/article_registry.py verify --help
+python scripts/validate_daily_schedule_run.py --help
+python scripts/verify_pages_deployment.py --help
+```
+
+For a complete local quality check:
+
+```powershell
 ruff check .
 pytest
 npm run lint:web
 npm run build:web
 ```
-
-Verify a downloaded deployment metadata file through the same validator used by automation:
-
-```bash
-python scripts/verify_pages_deployment.py \
-  --url https://yixi0527.github.io/daily_paper/data/metadata.json \
-  --output data/translation-work/manual/metadata.json \
-  --expected-workflow-run-id <run-id> \
-  --expected-source-revision <commit-sha> \
-  --expected-source-event schedule \
-  --expected-sync-date <YYYY-MM-DD> \
-  --timezone Asia/Shanghai \
-  --wait-seconds 1800 \
-  --poll-seconds 30 \
-  --max-site-data-bytes 15000000
-```
-
-For the final translation deployment, add `--require-complete-translations` and fetch
-`site-data.json` with `scripts/article_registry.py fetch --cache-key <workflow-run-id>` before
-running `scripts/article_registry.py verify`.

@@ -1,5 +1,5 @@
 {
-  "$comment": "Final script-owned batch output. Spark output uses spark-translation-output.schema.json and never contains article_key.",
+  "$comment": "Final script-owned batch output. The NVIDIA runner binds article_key after validating the API response.",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "additionalProperties": false,

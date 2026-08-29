@@ -125,7 +125,10 @@ Core backend services:
 │   ├── article_registry.py
 │   ├── bootstrap.ps1
 │   ├── bootstrap.sh
-│   ├── run_codex_translation.py
+│   ├── run_nvidia_translation.py
+│   ├── run_daily_nvidia_translation.py
+│   ├── run_nvidia_translation_task.ps1
+│   ├── register_nvidia_translation_task.ps1
 │   ├── verify_pages_deployment.py
 │   └── run_alembic.py
 ├── .env.example
@@ -152,7 +155,7 @@ Important guarantees:
 - unique DOI constraint
 - fallback dedup hash on `title + first_author + published_date`
 - raw payload persistence for each source item
-- stable acquisition dates and Codex Spark title/abstract translations in `packages/shared/data/article_registry.json`
+- stable acquisition dates and provider-tagged Chinese title/abstract translations in `packages/shared/data/article_registry.json`
 - display dates after `2026-07-01` use the first acquisition timestamp and default ordering follows that display date
 - per-source state for `etag`, `last_modified`, `cursor`, last success time, and failure streak
 - sync run isolation so one journal failure does not stop the global job
@@ -184,9 +187,15 @@ Update at least:
 - `DATABASE_URL`
 - `CROSSREF_MAILTO`
 - `HTTP_USER_AGENT`
+- `NVIDIA_API_KEY` as a user-scoped Windows environment variable (never commit it)
 
 `ARTICLE_REGISTRY_FILE` can override the tracked registry path. The default is
 `packages/shared/data/article_registry.json`.
+
+The default translation model is `openai/gpt-oss-20b` through
+`https://integrate.api.nvidia.com/v1/chat/completions`. Override it with the
+`NVIDIA_API_MODEL` user environment variable only after verifying that the model is available
+from the NVIDIA `/v1/models` endpoint.
 
 ### 3. Initialize database
 
@@ -246,8 +255,11 @@ python scripts/article_registry.py prepare \
   --work-dir data/translation-work/<run-id>
 ```
 
-The translations are produced by the scheduled `gpt-5.3-codex-spark` task and merged back into
-the registry with the same script. The API contains no interactive translation endpoint.
+The translations are produced by `scripts/run_nvidia_translation.py` and merged back into the
+registry with the same script. The runner uses the NVIDIA OpenAI-compatible Chat Completions API,
+validates JSON and Chinese output, and never writes the API key to a batch, log, or registry.
+Hash-matched historical translations keep their original `translation_model` provenance; only new
+or source-changed records are sent to the NVIDIA API.
 
 Export static data for GitHub Pages:
 
@@ -278,7 +290,7 @@ The scheduler can run either:
 - as a standalone container via `docker-compose`
 - inside the API process if `RUN_SCHEDULER=true`
 
-This scheduler serves a persistent API database. The GitHub Pages mirror and the local Spark
+This scheduler serves a persistent API database. The GitHub Pages mirror and the Windows NVIDIA
 translation task use the separate sequence documented in
 [`docs/automation-runbook.md`](docs/automation-runbook.md).
 
@@ -311,7 +323,7 @@ What it does:
 2. Initializes a SQLite database inside the workflow
 3. Seeds the 26 journals
 4. Executes the synchronization job and rejects every partial synchronization
-5. Merges acquisition dates and persisted Spark translations from the tracked registry
+5. Merges acquisition dates and persisted translations from the tracked registry
 6. Exports compact static JSON without upstream raw payloads, plus an exact deployment handshake into `apps/web/public/data`
 7. Builds and deploys the React app to GitHub Pages
 
@@ -323,14 +335,26 @@ https://<OWNER>.github.io/<REPO>/
 
 That pages build is a static mirror of the latest synchronized metadata, while the FastAPI service remains the full live API deployment path.
 
-The GitHub Pages workflow performs no model calls. A local Codex scheduled task runs at `03:30`
-and `06:30` Asia/Shanghai with `gpt-5.3-codex-spark`. Each invocation requires the exact successful scheduled deployment
-for the current Shanghai date, translates only new or changed papers, validates the registry,
-commits that single file, and pushes it. The push triggers a second Pages run, and the local task
-verifies that the new commit is the exact revision exposed by the deployed metadata. The second
-daily invocation is an independent execution after a delayed prerequisite while every failed
-invocation still exits immediately with the original error. The operating objective is a fully
-built prior-day site with zero pending translations before `09:00` Asia/Shanghai.
+The GitHub Pages workflow performs no model calls. Windows Task Scheduler runs
+`Daily Paper NVIDIA Translation` at `03:30` and `06:30` Asia/Shanghai. Each invocation verifies
+the exact successful scheduled deployment for the current Shanghai date, translates only new or
+source-changed papers through NVIDIA, validates the registry, commits only that registry file, and
+pushes it. The push triggers a second Pages run, and the task verifies that the new commit is the
+exact revision exposed by the deployed metadata. The two daily triggers share a global lock, so a
+long first run cannot overlap the second. The operating objective is a fully built prior-day site
+with zero pending translations before `09:00` Asia/Shanghai. Failed invocations are recorded and
+reported for follow-up, while the two scheduled invocations remain independent.
+
+Register the Windows task after setting the user-scoped key:
+
+```powershell
+[Environment]::SetEnvironmentVariable('NVIDIA_API_KEY', '<your-key>', 'User')
+& 'C:\Users\yixi0\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe' `
+  -NoLogo -NoProfile -File scripts/register_nvidia_translation_task.ps1
+```
+
+The installed Codex automation named `每日文献 Spark 翻译` is paused and is not part of this
+workflow.
 
 The local task delegates GitHub schedule selection and UTC-to-Shanghai conversion to
 `scripts/validate_daily_schedule_run.py`. Its validated JSON output is the only accepted schedule
@@ -426,7 +450,7 @@ Features implemented:
 - responsive article feed with one paper per page on mobile
 - article listing with journal and author filters
 - article detail view
-- persistent Codex Spark title and abstract translations
+- persistent title and abstract translations with model provenance
 - deployment-versioned static data with complete translation counts
 - author/title/journal search
 - URL-synced filter state

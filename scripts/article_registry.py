@@ -19,6 +19,7 @@ sys.path.insert(0, str(API_ROOT))
 from app.services.article_registry import build_article_key, text_sha256  # noqa: E402
 
 SCHEMA_VERSION = 1
+DEFAULT_TRANSLATION_MODEL = "openai/gpt-oss-20b"
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
 
 
@@ -161,7 +162,8 @@ def prepare(args: argparse.Namespace) -> None:
             and (
                 abstract is None or CJK_RE.search(existing["abstract_zh"]) is not None
             )
-            and existing.get("translation_model") == args.model
+            and isinstance(existing.get("translation_model"), str)
+            and bool(existing["translation_model"].strip())
         )
         if not translation_is_current:
             pending.append(
@@ -296,6 +298,13 @@ def merge(args: argparse.Namespace) -> None:
             )
         else:
             abstract_zh = existing.get("abstract_zh") if existing else None
+        translation_model = (
+            args.model
+            if translated is not None
+            else existing.get("translation_model")
+            if existing
+            else None
+        )
         registry_articles[article_key] = {
             "doi": manifest_item["doi"],
             "journal_slug": manifest_item["journal_slug"],
@@ -306,7 +315,7 @@ def merge(args: argparse.Namespace) -> None:
             "source_abstract": manifest_item["abstract_source"],
             "title_zh": title_zh,
             "abstract_zh": abstract_zh,
-            "translation_model": args.model,
+            "translation_model": translation_model,
             "translated_at": translated_at if translated else existing["translated_at"],
         }
 
@@ -350,7 +359,10 @@ def verify(args: argparse.Namespace) -> None:
             raise ValueError(f"Abstract translation missing for {article_key}")
         if abstract is not None and CJK_RE.search(entry["abstract_zh"]) is None:
             raise ValueError(f"Abstract translation contains no Chinese text for {article_key}")
-        if entry["translation_model"] != args.model:
+        translation_model = entry.get("translation_model")
+        if not isinstance(translation_model, str) or not translation_model.strip():
+            raise ValueError(f"Translation model missing for {article_key}")
+        if args.model is not None and translation_model != args.model:
             raise ValueError(f"Translation model mismatch for {article_key}")
         verified += 1
     print(json.dumps({"verified_count": verified, "model": args.model}))
@@ -371,7 +383,7 @@ def build_parser() -> argparse.ArgumentParser:
     prepare_parser.add_argument("--site-data", required=True, type=Path)
     prepare_parser.add_argument("--registry", required=True, type=Path)
     prepare_parser.add_argument("--work-dir", required=True, type=Path)
-    prepare_parser.add_argument("--model", default="gpt-5.3-codex-spark")
+    prepare_parser.add_argument("--model", default=DEFAULT_TRANSLATION_MODEL)
     prepare_parser.add_argument("--batch-size", type=int, default=1)
     prepare_parser.add_argument("--max-source-chars", type=int, default=9000)
     prepare_parser.add_argument("--default-acquired-at")
@@ -380,14 +392,17 @@ def build_parser() -> argparse.ArgumentParser:
     merge_parser = subparsers.add_parser("merge")
     merge_parser.add_argument("--manifest", required=True, type=Path)
     merge_parser.add_argument("--registry", required=True, type=Path)
-    merge_parser.add_argument("--model", default="gpt-5.3-codex-spark")
+    merge_parser.add_argument("--model", default=DEFAULT_TRANSLATION_MODEL)
     merge_parser.add_argument("--translated-at")
     merge_parser.set_defaults(handler=merge)
 
     verify_parser = subparsers.add_parser("verify")
     verify_parser.add_argument("--site-data", required=True, type=Path)
     verify_parser.add_argument("--registry", required=True, type=Path)
-    verify_parser.add_argument("--model", default="gpt-5.3-codex-spark")
+    verify_parser.add_argument(
+        "--model",
+        help="Optionally require every verified translation to use one model",
+    )
     verify_parser.set_defaults(handler=verify)
     return parser
 

@@ -143,8 +143,73 @@ def test_translation_prepare_uses_context_safe_source_limit() -> None:
         ]
     )
 
+    assert args.model == "openai/gpt-oss-20b"
     assert args.batch_size == 1
     assert args.max_source_chars == 9000
+
+
+def test_translation_merge_preserves_historical_model_for_unchanged_article(tmp_path) -> None:
+    script_globals = load_translation_script()
+    registry_path = tmp_path / "article-registry.json"
+    manifest_path = tmp_path / "manifest.json"
+    article = {
+        "article_key": "doi:10.1000/historical",
+        "doi": "10.1000/historical",
+        "journal_slug": "test-journal",
+        "title": "A historical article",
+        "abstract": "A historical abstract.",
+        "abstract_source": "abstract",
+        "acquired_at": "2026-08-06T01:00:00+00:00",
+        "source_title_sha256": text_sha256("A historical article"),
+        "source_abstract_sha256": text_sha256("A historical abstract."),
+    }
+    registry_path.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "updated_at": "2026-08-06T05:00:00+00:00",
+                "articles": {
+                    article["article_key"]: {
+                        **article,
+                        "title_zh": "历史文章",
+                        "abstract_zh": "历史摘要。",
+                        "translation_model": "gpt-5.3-codex-spark",
+                        "translated_at": "2026-08-06T05:00:00+00:00",
+                    }
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    manifest_path.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "model": "openai/gpt-oss-20b",
+                "pending_count": 0,
+                "batch_files": [],
+                "articles": [article],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    args = script_globals["build_parser"]().parse_args(
+        [
+            "merge",
+            "--manifest",
+            str(manifest_path),
+            "--registry",
+            str(registry_path),
+        ]
+    )
+    args.handler(args)
+
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    assert (
+        registry["articles"][article["article_key"]]["translation_model"]
+        == "gpt-5.3-codex-spark"
+    )
 
 
 def test_translation_fetch_accepts_deployment_metadata(tmp_path, monkeypatch, capsys) -> None:
