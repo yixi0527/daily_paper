@@ -76,6 +76,8 @@ $arguments = @(
     '1',
     '--timeout',
     '300',
+    '--max-tokens',
+    '4096',
     '--wait-seconds',
     '1800'
 )

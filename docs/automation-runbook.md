@@ -47,6 +47,7 @@ The Windows task invokes `scripts/run_nvidia_translation_task.ps1 -Execute`, whi
 - default model: `openai/gpt-oss-20b`;
 - secret: user-scoped `NVIDIA_API_KEY` environment variable;
 - four concurrent API requests, with one article per batch;
+- low reasoning effort and a 4096-token output cap;
 - 300-second response timeout per API request;
 - JSON-mode Chat Completions responses, followed by script-owned schema, order, Chinese-text, and
   null-abstract validation.

@@ -51,6 +51,7 @@ def write_json(path: Path, payload: object) -> None:
 
 def test_default_timeout_allows_slow_model_responses(translation_runner) -> None:
     assert translation_runner.DEFAULT_TIMEOUT == 300
+    assert translation_runner.DEFAULT_MAX_TOKENS == 4096
 
 
 def prepare_batch(
@@ -120,6 +121,7 @@ def test_run_batch_posts_only_source_text_and_binds_article_key(
     assert body["model"] == translation_runner.DEFAULT_MODEL
     assert body["response_format"] == {"type": "json_object"}
     assert body["temperature"] == 0
+    assert body["reasoning_effort"] == "low"
     assert json.loads(body["messages"][1]["content"]) == {
         "source_texts": [
             {

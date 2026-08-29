@@ -30,6 +30,7 @@ REGISTRY_RELATIVE_PATH = Path("packages/shared/data/article_registry.json")
 COMMIT_MESSAGE = "data: translate daily papers with NVIDIA API"
 DEFAULT_TRANSLATION_TIMEOUT = 300
 DEFAULT_TRANSLATION_BATCH_SIZE = 1
+DEFAULT_TRANSLATION_MAX_TOKENS = 4096
 
 
 class CommandFailed(RuntimeError):
@@ -461,6 +462,8 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
         raise ValueError("batch-size must be at least 1")
     if args.timeout < 1:
         raise ValueError("timeout must be positive")
+    if args.max_tokens < 1:
+        raise ValueError("max-tokens must be positive")
     if args.wait_seconds < 1:
         raise ValueError("wait-seconds must be positive")
 
@@ -660,7 +663,7 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
                 "--model",
                 model,
                 "--max-tokens",
-                "8192",
+                str(args.max_tokens),
                 "--timeout",
                 str(args.timeout),
                 "--workers",
@@ -889,6 +892,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--npm-executable", required=True, type=Path)
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--batch-size", type=int, default=DEFAULT_TRANSLATION_BATCH_SIZE)
+    parser.add_argument("--max-tokens", type=int, default=DEFAULT_TRANSLATION_MAX_TOKENS)
     parser.add_argument("--timeout", type=int, default=DEFAULT_TRANSLATION_TIMEOUT)
     parser.add_argument("--wait-seconds", type=int, default=1800)
     parser.add_argument(
