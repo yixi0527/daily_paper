@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-30T22:30:33.130573+00:00",
+  "updated_at": "2026-08-31T22:30:30.659944+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -2267,15 +2267,15 @@
     "doi:10.1016/j.brs.2026.103193": {
       "doi": "10.1016/j.brs.2026.103193",
       "journal_slug": "brain-stimulation",
-      "title": "A modular system for multichannel Transcranial Magnetic Stimulation: physical and physiological characterization of electric field profiles",
+      "title": "A modular system for multichannel transcranial magnetic stimulation: physical and physiological characterization of electric field profiles",
       "acquired_at": "2026-08-29T01:22:46",
-      "source_title_sha256": "6775469dbe50e704ba95f00db8d62702c2e2ac291e8d5400cb6ef950c6729c30",
+      "source_title_sha256": "fc7a3c650349c60a856ccc2da47adc51e0b58f5c530bac72a33006288c887d1a",
       "source_abstract_sha256": "7fdd988730ee5df809308167cc54e00caa851dda2463ec7590a47c6260f3d345",
       "source_abstract": "abstract",
-      "title_zh": "一种多通道经颅磁刺激的模块化系统：电场分布的物理与生理特征化",
-      "abstract_zh": "背景：经颅磁刺激（TMS）是一种成熟的非侵入性神经调节技术，越来越多的证据表明，针对多个相互连接的节点可能实现更具选择性的网络层面控制。然而，多点刺激仍受限于传统线圈的固定场几何形状和有限的聚焦性。目标：引入并表征一种模块化多通道经颅磁刺激（mTMS）阵列，能够通过电子方式引导诱导电场（E‑field）而无需机械移动线圈。方法：该阵列由两组定制的三轴TMS线圈组成，略微倾斜以近似头部曲率，提升刺激深度和效率。模块化架构允许灵活调整线圈间距和方向。计算模拟与体内实验表明，独立驱动的线圈元件可组合成不同的“虚拟线圈”，实现对E‑field热点的电子控制位移。结果：采用物理与电子热点位移范式并反复测定静息运动阈值（rMT），我们发现电子E‑field位移±1 cm产生的效应与物理移动线圈相当。计算建模分析确认，电子合成的虚拟线圈配置在前额叶皮层诱导的E‑field位移与每个物理线圈阵列位置测得的rMT空间一致。系统实现的功能分辨率与已知TMS空间精度相符，变异性在神经导航和校准误差的预期范围内。结论：这些发现证明了使用模块化线圈阵列进行电子控制E‑field引导的可行性和生理相关性，为支持分布式脑网络多焦点刺激的下一代mTMS系统提供了可扩展的基础。",
+      "title_zh": "一种多通道经颅磁刺激的模块化系统：电场分布的物理与生理特征",
+      "abstract_zh": "背景：经颅磁刺激（TMS）是一种成熟的非侵入性神经调节技术，越来越多的证据表明，针对多个相互连接的节点可能实现更具选择性的网络层级控制。然而，多点刺激仍受限于传统线圈的固定场几何形状和有限的聚焦性。目标：引入并表征一种模块化多通道经颅磁刺激（mTMS）阵列，该阵列能够通过电子方式引导诱导电场（E‑场），而无需机械移动线圈。方法：该阵列由两组定制的三轴TMS线圈组成，略微倾斜以近似头部曲率，提升刺激深度和效率。模块化架构允许灵活调整线圈间距和方向。计算模拟与体内实验表明，独立驱动的线圈元件可组合成不同的“虚拟线圈”，实现对E‑场热点的电子控制位移。结果：采用物理与电子热点位移范式并反复估计静息运动阈值（rMT），我们发现电子E‑场位移±1 cm的效果与物理移动线圈相当。计算模型分析确认，电子合成的虚拟线圈配置在前额叶皮层诱导的E‑场位移与每个物理线圈阵列位置测得的rMT空间一致。系统实现的功能分辨率与已知TMS空间精度相符，变异性在神经导航和校准误差的预期范围内。结论：这些发现证明了使用模块化线圈阵列进行电子控制E‑场引导的可行性和生理相关性，为支持分布式脑网络多焦点刺激的下一代mTMS系统提供了可扩展的基础。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-08-29T17:38:52.2266672Z"
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
     },
     "doi:10.1016/j.brs.2026.103197": {
       "doi": "10.1016/j.brs.2026.103197",
@@ -4565,6 +4565,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1016/j.cell.2026.07.052": {
+      "doi": "10.1016/j.cell.2026.07.052",
+      "journal_slug": "cell",
+      "title": "Predicting cellular responses to perturbation across diverse contexts with State",
+      "acquired_at": "2026-08-31T21:33:49",
+      "source_title_sha256": "1078b012b79ecf82adba01753a338838ab56873d129d9a906e04a54816833ad0",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "利用State预测不同背景下细胞对扰动的响应",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
+    },
     "doi:10.1016/j.cell.2026.07.053": {
       "doi": "10.1016/j.cell.2026.07.053",
       "journal_slug": "cell",
@@ -4603,6 +4616,19 @@
       "abstract_zh": "肠道细菌影响宿主生理，但其机制尚未完全阐明。我们发现一种途径，肠道微生物将无机硝酸盐和非血红素铁转化为可移动的生物活性二硝基铁复合物（DNICs），并在全身分布，影响宿主代谢。电子顺磁共振检测到常规小鼠组织中存在DNICs，而无菌小鼠则不存在。小鼠和人类粪便以及大肠杆菌在硝酸盐和柠檬酸铁的存在下产生DNICs，而缺失硝酸盐还原酶的突变体则不产生。通过饮食补充硝酸盐+柠檬酸铁或合成DNICs可提高组织中的DNIC水平，并改善西方饮食小鼠的心血管代谢功能。进一步地，在HepG2细胞和人类肝细胞球体中，DNIC降低了脂肪酸诱导的脂肪变性。DNIC的生物活性由Fe(NO)2实体介导，而非自由一氧化氮（NO），并涉及可溶性鸟苷酸环化酶（sGC）的激活、亮氨酸摄取的抑制以及mTORC1信号通路的正常化。通过调节肠道菌群的DNIC形成，可能成为支持心血管代谢健康的策略。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1016/j.cell.2026.07.058": {
+      "doi": "10.1016/j.cell.2026.07.058",
+      "journal_slug": "cell",
+      "title": "Endogenous opioid dynamics in the dorsal striatum sculpt neural activity to promote goal-directed action",
+      "acquired_at": "2026-08-31T21:33:49",
+      "source_title_sha256": "94e484a3b7e1213510892ddc3e762b8362fc9992f52d1c6ecc4e01252c6dfff8",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "内源性阿片动力学在背侧纹状体中塑造神经活动以促进目标导向行为",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
     },
     "doi:10.1016/j.cell.2026.08.002": {
       "doi": "10.1016/j.cell.2026.08.002",
@@ -7619,6 +7645,32 @@
       "abstract_zh": "随着该领域更积极地认识到青少年神经、社会和行为发展的独特方面，显而易见，成人成瘾模型与发育中大脑、青少年物质使用行为以及青少年物质使用治疗的行为结果不相符。本综述强调发展转化神经科学如何通过为青少年制定和实施更有效、针对神经发育的治疗方案提供信息和指导，从而填补这一空白。以青少年发展适宜健康促进疗法（ADAPT）为例，ADAPT是一种基于发展转化（整合人类大脑与行为）实证研究的新型物质使用治疗。最终，本综述旨在为直接护理环境中与青少年物质使用相关的临床医生提供关于发展转化神经科学在临床背景中的相关性及其为何重要的当代视角，并提供一个具体示例，说明发展转化神经科学如何为这一高需求且服务不足的年龄群体的物质使用治疗提供信息。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1016/j.neubiorev.2026.106937": {
+      "doi": "10.1016/j.neubiorev.2026.106937",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Mapping the functional neurocognitive correlates of loss aversion: A Coordinate-Based Meta-Analysis",
+      "acquired_at": "2026-08-31T22:15:20",
+      "source_title_sha256": "a44567c5692f09905735c7eb25b11f95bc5c9f33bf76f3cafc74f38502b5ea33",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "绘制损失厌恶的功能神经认知相关性：基于坐标的荟萃分析",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106940": {
+      "doi": "10.1016/j.neubiorev.2026.106940",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "From Metabolism to Reproduction: The Emerging Roles of Adipokines in Neuroendocrine Regulation, Gonadal Function, and Sexual Behavior",
+      "acquired_at": "2026-08-31T22:15:20",
+      "source_title_sha256": "97e871fbceead44bc27ee21788acda7b6a1abe5ca2155a8b269f9da9109bb68d",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "从代谢到生殖：脂肪素在神经内分泌调节、性腺功能与性行为中的新兴作用",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -12065,6 +12117,19 @@
       "abstract_zh": null,
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
+    },
+    "doi:10.1037/rev0000646": {
+      "doi": "10.1037/rev0000646",
+      "journal_slug": "psychological-review",
+      "title": "Modular serial-parallel network for hierarchical facial representations.",
+      "acquired_at": "2026-08-31T22:16:08",
+      "source_title_sha256": "b83d98e9aa8039255af43aba8025434918a47332a473da4c025fb89883b2207a",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "用于层级面部表征的模块化串行-并行网络",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
     },
     "doi:10.1037/rev0000650": {
       "doi": "10.1037/rev0000650",
@@ -18826,6 +18891,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1038/s41380-026-03850-7": {
+      "doi": "10.1038/s41380-026-03850-7",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Organoid intelligence: a promising paradigm for autism spectrum disorder research",
+      "acquired_at": "2026-08-31T21:58:05",
+      "source_title_sha256": "53761a028bba2df7b7ba70efdce99ea93377d3aaab16456d57cf7e0c3bf63082",
+      "source_abstract_sha256": "0bb5eae209a6d213653ece7319c1db87cd3435775e7497651ff1524e9f40ca40",
+      "source_abstract": "abstract",
+      "title_zh": "类器官智能：自闭症谱系障碍研究的有前景范式",
+      "abstract_zh": "自闭症谱系障碍（ASD）是一种多因素神经发育疾病，临床表现高度异质性，给诊断和治疗带来复杂性。尽管已有进展，但ASD的分子机制仍大多不明。近年来，两个独立但极具前景的技术领域取得了显著进展：类器官和人工智能（AI）。脑类器官能够在生理和病理状态下模拟人类神经发育的关键过程，为揭示ASD机制和潜在治疗手段提供了前所未有的窗口。与此同时，AI在处理和分析大规模、高维生物医学数据方面表现出强大能力，并已有效应用于ASD影像分析、基因组学研究和行为数据解释。然而，这两个领域主要是并行发展，未能充分挖掘跨学科整合在ASD研究中的潜力。本综述旨在通过回顾两领域在ASD背景下的现状与局限，填补这一空白，并阐明一种将AI与脑类器官相结合的有前景研究范式——“类器官智能”，以提升我们对预测模型的理解，揭示ASD发病机制，并开发更有效、个性化的治疗方案。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
+    },
     "doi:10.1038/s41380-026-03853-4": {
       "doi": "10.1038/s41380-026-03853-4",
       "journal_slug": "molecular-psychiatry",
@@ -19749,6 +19827,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1038/s41562-026-02559-5": {
+      "doi": "10.1038/s41562-026-02559-5",
+      "journal_slug": "nature-human-behaviour",
+      "title": "Anatomical white matter tracts span the cortical hierarchy to support cognitive diversity",
+      "acquired_at": "2026-08-31T21:50:47",
+      "source_title_sha256": "504c9ce4f615f97a8278d47be907935aef65404664b08588df96c718af000e01",
+      "source_abstract_sha256": "14222033747dbd508ae2207b434b31914668876ebb274d20d364ceb8b676a559",
+      "source_abstract": "abstract",
+      "title_zh": "白质通路在皮层层级中跨越，支持认知多样性",
+      "abstract_zh": "长程白质（WM）通路通过促进远距离皮层区域之间的通信来支持认知，这些区域按从感知运动到联想（S–A）轴定义的层级组织。然而，WM通路在皮层层级中的定位如何支持认知仍不清楚。本文显示，WM通路在皮层层级中以不同方式定位，以支持特定的认知功能，并且跨越层级的通路连接具有更大认知多样性的区域。此外，位于同一层级的通路连接生物学相似的区域，而跨越层级的通路则桥接不同的生物学环境，以支持多样的认知功能。通路在皮层层级中的位置也反映了通路微结构的发育变化和个体认知差异。综上所述，这些发现提供了一个框架，超越传统的联想或投射通路类别，将WM通路解剖与皮层组织、认知功能、皮层神经生物学和神经发育联系起来。我们预期，这一以皮层为锚的框架有助于解释与发育和行为相关的WM结构个体差异。Bagautdinova 等人研究了白质通路如何沿大脑层级组织，以及它们如何连接多样的生物学环境以支持复杂的人类认知和神经发育。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
+    },
     "doi:10.1038/s41562-026-02562-w": {
       "doi": "10.1038/s41562-026-02562-w",
       "journal_slug": "nature-human-behaviour",
@@ -19787,6 +19878,19 @@
       "abstract_zh": "在五波面板数据（N = 1,966名美国成年人）中，我们考察了生活满意度与十种常见社交技术自我报告使用之间的关联，这些技术每3个月测量一次，使用频率采用从‘我没有使用’到‘每天多次’的六点量表。在此测量水平和时间尺度下，贝叶斯和频率学派的随机截距交叉滞后面板模型显示，几乎没有可信证据表明任何社交技术使用能预测随后的生活满意度。相反，生活满意度的提升仅在特定人群中预测了（视频）通话频率的轻微增加。在比较不同人群的分析中，短信发送频率与更高的生活满意度相关，而YouTube和TikTok的使用频率与更低的生活满意度相关。尽管由于响应的时间稳定性导致难以检测个体内变化，但缺乏交叉滞后效应提供了信息：几乎没有证据表明社交技术使用与随后的生活满意度之间存在有意义的关系。生活满意度与社交技术使用之间的关系是什么？这正是当前研究的核心问题。通过对自我报告的十种常见社交技术使用和生活满意度的五波面板数据进行分析，作者仅发现了关于社交技术使用与随后的生活满意度之间存在有意义关系的稀缺证据。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1038/s41562-026-02574-6": {
+      "doi": "10.1038/s41562-026-02574-6",
+      "journal_slug": "nature-human-behaviour",
+      "title": "The future of AI-assisted science is both fast and slow",
+      "acquired_at": "2026-08-31T21:50:47",
+      "source_title_sha256": "ce8d1f88b807ce249abda7f1fda95d899709ef9b5b38b2a15ca737834a179ac3",
+      "source_abstract_sha256": "d3971945f4237b7f51880c537478056698cb87b37f48161882f1f209ed405c04",
+      "source_abstract": "abstract",
+      "title_zh": "AI辅助科学的未来既快又慢",
+      "abstract_zh": "在行为科学领域，人工智能（AI）将加速那些数字化可访问、可扩展且往往属于西方、受教育、工业化、富裕和民主（WEIRD）范畴的研究。然而，人类行为的证据并不总能被放大。我们需要将快速、自动化的工作与在真实环境中进行的较慢研究相结合。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
     },
     "doi:10.1038/s41582-026-01223-w": {
       "doi": "10.1038/s41582-026-01223-w",
@@ -24350,6 +24454,19 @@
       "abstract_zh": "2026年7月11日，神经科学失去了一位最具远见的科学家——86岁的利根川进（Susumu Tonegawa）去世。Tonegawa在跨越五十余年的非凡科学生涯中，以不懈的好奇心和坚定的信念持续追问生物学的核心奥秘，激励了几代科学家持续提出最困难的问题。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1038/s41593-026-02420-y": {
+      "doi": "10.1038/s41593-026-02420-y",
+      "journal_slug": "nature-neuroscience",
+      "title": "Spatial mapping of RNA turnover kinetics in the mouse brain",
+      "acquired_at": "2026-08-31T21:52:26",
+      "source_title_sha256": "69d8c04886540899e8ca4f60164463c99f1e2db3288d83a721050fd1b093e959",
+      "source_abstract_sha256": "d444e6b36374888edfa6ddad96bf669e3aa040f2b5b11305bff20cf41ec51656",
+      "source_abstract": "abstract",
+      "title_zh": "小鼠大脑RNA周转动力学的空间映射",
+      "abstract_zh": "基因调控需要对RNA合成与降解进行协调控制，但在完整组织中测量RNA周转仍然具有挑战性。本文提出了空间NT‑seq方法，该方法结合无转基因代谢RNA标记与空间转录组平台上的原位化学重编码，能够同时绘制新合成RNA与既有RNA的空间分布。将空间NT‑seq应用于小鼠大脑，发现RNA周转存在显著的区域异质性，并将齿状回定位为RNA合成与降解同步上调的空间热点。此外，空间NT‑seq揭示了电休克刺激对不同脑区的快速转录与转录后响应，这一临床上用于难治性抑郁的治疗方法。最后，作者利用计算建模识别了影响全转录组mRNA稳定性的序列特征与转录后调控因子，涵盖空间与细胞层面的差异。综上所述，这一“体内时间视角”框架提供了RNA周转动力学的空间分辨视图，并揭示了小鼠大脑中RNA稳定性的调控结构。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
     },
     "doi:10.1038/s41593-026-02425-7": {
       "doi": "10.1038/s41593-026-02425-7",
@@ -33736,6 +33853,19 @@
       "abstract_zh": "摘要：神经退行性疾病与全身代谢功能紊乱的关联不断强化，大脑胰岛素抵抗（BIR）被置于关键中介位置。然而，将这一认识转化为有效治疗仍异常困难。本文综述提出，BIR 驱动的神经退行应从两个相关但独立层面理解：第一，BIR 对脑稳态的细胞类型特异性破坏；第二，BIR 在驱动 Alzheimer 病与 Parkinson 病特征性蛋白质病中的直接机械作用。我们首先显示 BIR 在神经元、星形胶质细胞、微胶质细胞和少突胶质细胞中导致不同功能缺陷，损害突触可塑性、代谢耦联、免疫代谢稳态和髓鞘形成，形成有利于蛋白质病形成的细胞环境。随后我们绘制了 BIR 直接干扰淀粉样蛋白 β（Aβ）、tau 与 α-突触核蛋白代谢的分子通路。进一步分析了胰岛淀粉样多肽对脑淀粉样病理的交叉起始（cross-seeding）作用，提示 BIR 的外周驱动因素与蛋白聚集之间存在直接分子互作。在该框架下，BIR 并非被动风险因子，而是蛋白稳态崩溃的主动上游驱动者。细胞功能障碍与蛋白稳态失败共同界定了治疗靶向空间。我们据此评估相关干预措施，区分主要恢复细胞功能、增强蛋白清除以及兼具两者的策略，并对每种策略的转化证据进行评估，批判性审视限制临床成功的因素，包括患者异质性、狭窄治疗窗口及 CNS 递送不足。通过将细胞类型特异生物学与蛋白稳态机制及临床导向治疗框架整合，本文旨在为从机制根源层面干预 BIR–神经退行性轴提供多靶点策略。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-04T01:59:53.657990+00:00"
+    },
+    "doi:10.1186/s40035-026-00575-z": {
+      "doi": "10.1186/s40035-026-00575-z",
+      "journal_slug": "translational-neurodegeneration",
+      "title": "Phase separation in neurodegenerative disorders: a metabolic perspective on protein aggregation and therapeutic targeting",
+      "acquired_at": "2026-08-31T21:53:26",
+      "source_title_sha256": "26a6041ea50864c0283ea6d4d3207cb27dbbfbaeea5232ba1c83444c298515f6",
+      "source_abstract_sha256": "9da200a0e96709c057542f52379415f14c5036a356119fd2bc12d0571eb61dfe",
+      "source_abstract": "abstract",
+      "title_zh": "神经退行性疾病中的相分离：蛋白聚集与治疗靶向的代谢视角",
+      "abstract_zh": "摘要：通过液-液相分离（LLPS）形成的生物分子凝聚体，正日益被视为细胞内生化过程的动态组织者，尤其在神经元中，空间受限的信号传导、RNA代谢和蛋白稳态至关重要。与疾病相关蛋白（包括TDP-43、FUS、tau和α-突触核蛋白）的异常相转变促成蛋白聚集和神经退行性病理。除蛋白自身序列特征外，代谢状态已被发现是调控凝聚体组装、材料特性以及液体到固体成熟的重要情境调节因子。代谢线索——如ATP可用性、NAD⁺/NADH平衡、氧化还原状态、脂质组成、酶介导的翻译后修饰以及细胞应激反应——可影响生化、细胞和疾病模型系统中的相行为。然而，在神经元、动物模型和人类神经退行性疾病中的直接因果证据仍不均衡且蛋白特异性。本文从代谢视角回顾神经退行性疾病中的LLPS，区分已确立的机制与尚未完全验证的可行关联。我们讨论病理性凝聚体如何损害RNA代谢、突触功能、蛋白稳态和认知，并批判性评估旨在调节异常相行为的新兴治疗策略。因此，本综述提供了一个谨慎的框架，将代谢失调视为潜在的上游促因，而非已确立的主调控者。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-08-31T22:30:30.659944+00:00"
     },
     "doi:10.1186/s40035-026-00578-w": {
       "doi": "10.1186/s40035-026-00578-w",
