@@ -21,7 +21,7 @@ This project intentionally avoids aggressive publisher-page crawling because tha
 - not crawling full-text pages just to enrich metadata
 - loading persistent Chinese title and abstract translations from the tracked article registry
 
-## Covered journals
+## Configured journals
 
 - Cell
 - Neuron
@@ -49,6 +49,10 @@ This project intentionally avoids aggressive publisher-page crawling because tha
 - Neuroscience & Biobehavioral Reviews
 - Psychological Review
 - Sleep Medicine Reviews
+
+Collection is disabled for The Lancet Neurology, Molecular Neurodegeneration, Journal of
+Neuroinflammation, Acta Neuropathologica, JAMA Neurology, and Sleep Medicine Reviews. Their
+existing records remain available for historical display, but future synchronization skips them.
 
 ## Source strategy summary
 
@@ -321,7 +325,7 @@ What it does:
 
 1. Runs every day at `16:23 UTC` which is `00:23 Asia/Shanghai` on the following calendar day
 2. Initializes a SQLite database inside the workflow
-3. Seeds the 26 journals
+3. Seeds all configured journal records; only enabled journals are synchronized
 4. Executes the synchronization job and rejects every partial synchronization
 5. Merges acquisition dates and persisted translations from the tracked registry
 6. Exports compact static JSON without upstream raw payloads, plus an exact deployment handshake into `apps/web/public/data`

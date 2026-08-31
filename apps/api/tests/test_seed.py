@@ -13,9 +13,26 @@ def test_seed_service_loads_all_configured_journals(db_session) -> None:
     count = len(journals)
     expected_total = len(load_journal_configs())
     slugs = {journal.slug for journal in journals}
+    journals_by_slug = {journal.slug: journal for journal in journals}
+    disabled_slugs = {
+        "the-lancet-neurology",
+        "molecular-neurodegeneration",
+        "journal-of-neuroinflammation",
+        "acta-neuropathologica",
+        "jama-neurology",
+        "sleep-medicine-reviews",
+    }
 
     assert total == expected_total
     assert count == expected_total
+    assert {slug for slug, journal in journals_by_slug.items() if not journal.enabled} == (
+        disabled_slugs
+    )
+    assert all(
+        journal.enabled
+        for slug, journal in journals_by_slug.items()
+        if slug not in disabled_slugs
+    )
     assert "alzheimers-and-dementia" not in slugs
     assert "brain-stimulation" in slugs
     assert "neuroscience-and-biobehavioral-reviews" in slugs

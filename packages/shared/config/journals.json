@@ -213,7 +213,7 @@
       "issn": "1474-4422"
     },
     "homepage_url": "https://www.thelancet.com/journals/laneur/home",
-    "enabled": true,
+    "enabled": false,
     "update_priority": 8,
     "polling_strategy": "rss_then_crossref",
     "primary_source": "rss",
@@ -333,7 +333,7 @@
       "issn": "1750-1326"
     },
     "homepage_url": "https://link.springer.com/journal/13024",
-    "enabled": true,
+    "enabled": false,
     "update_priority": 9,
     "polling_strategy": "rss_then_crossref",
     "primary_source": "rss",
@@ -373,7 +373,7 @@
       "issn": "1742-2094"
     },
     "homepage_url": "https://link.springer.com/journal/12974",
-    "enabled": true,
+    "enabled": false,
     "update_priority": 8,
     "polling_strategy": "rss_then_crossref",
     "primary_source": "rss",
@@ -393,7 +393,7 @@
       "issn": "1432-0533"
     },
     "homepage_url": "https://link.springer.com/journal/401",
-    "enabled": true,
+    "enabled": false,
     "update_priority": 8,
     "polling_strategy": "rss_then_crossref",
     "primary_source": "rss",
@@ -433,7 +433,7 @@
       "issn": "2168-6157"
     },
     "homepage_url": "https://jamanetwork.com/journals/jamaneurology",
-    "enabled": true,
+    "enabled": false,
     "update_priority": 8,
     "polling_strategy": "crossref",
     "primary_source": "crossref",
@@ -513,7 +513,7 @@
       "issn": "1532-2955"
     },
     "homepage_url": "https://www.sciencedirect.com/journal/sleep-medicine-reviews",
-    "enabled": true,
+    "enabled": false,
     "update_priority": 7,
     "polling_strategy": "crossref",
     "primary_source": "crossref",
