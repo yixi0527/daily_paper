@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-04T22:31:37.870685+00:00",
+  "updated_at": "2026-09-05T19:31:47.130595+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -2367,6 +2367,19 @@
       "abstract_zh": "引言：药物成瘾是一个重要的公共卫生问题，严重病例中持续的药物寻求行为仍然难以控制。虽然已探索侵入性干预以抑制这些行为，但其使用受程序复杂性的限制，凸显了有效非侵入性神经调节方法的需求。经颅聚焦超声（tFUS）提供了一种非侵入性深脑神经调节方法，但其通过靶向外侧抑制核（elPBN）产生持久行为效应的能力尚不清楚。方法：小鼠被训练使用操作杠杆按压范式自给自足地摄取可卡因。在可卡因自给自足稳定后，主动杠杆按压触发响应相关的tFUS刺激，而非可卡因递送。刺激通过完整颅骨传递，连续四天靶向elPBN。结果：对elPBN的tFUS刺激诱发了与先前使用光遗传刺激该区域所报告的相一致的惩罚性相关行为反应。在操作任务中，tFUS刺激显著降低了主动杠杆按压率，与对照组相比。综上所述，这些结果表明，响应相关的惩罚性信号在elPBN中的激活抑制了先前由可卡因强化的操作行为。这种行为抑制在两周戒断期后仍然持续，表明该效应超出了刺激阶段。结论：针对elPBN的非侵入性tFUS产生了对先前由可卡因强化的操作行为的持久抑制。用响应相关的惩罚性脑干区域刺激替代可卡因递送产生了对奖励相关行为的持久改变。这些发现支持进一步研究深脑tFUS作为一种非侵入性神经调节方法，以改变不良药物相关行为。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1016/j.brs.2026.103199": {
+      "doi": "10.1016/j.brs.2026.103199",
+      "journal_slug": "brain-stimulation",
+      "title": "Parameter-Dependent Effects of Transcranial Ultrasound Stimulation on Corticospinal Excitability and Inhibitory Control",
+      "acquired_at": "2026-09-05T19:02:02",
+      "source_title_sha256": "5be46cb47844d05cd3bec6eb6e144d06b3f5f0bd965df443b25c073875c45297",
+      "source_abstract_sha256": "381f27abe9f9597c5978d06f9b156e1a437a7367e979e1228c65f4c3f3fa4b31",
+      "source_abstract": "abstract",
+      "title_zh": "经颅超声刺激对皮质脊髓兴奋性与抑制控制的参数依赖效应",
+      "abstract_zh": "背景：经颅超声刺激（TUS）在不同参数下可调节皮质兴奋性，但其对兴奋性和行为的神经调节效应在独立实验室间未能一致复制，亦未在受试者内进行比较。目的：评估四种TUS方案相较于安慰剂对运动皮质兴奋性和抑制控制的神经调节效应。方法：招募26名健康成年人完成最多五次实验（四种活性TUS方案和一次安慰剂）；24人完成全部五次，实验间隔至少一周。记录运动诱发电位（MEP）于刺激前20分钟、0分钟以及刺激后0、20、40分钟。使用停止信号任务（SST）评估刺激前后表现，并在SST期间同步记录EEG以提取事件相关电位（ERP）。采用线性混合效应模型并进行假发现率校正进行统计分析。结果：间歇性和连续性theta爆发TUS方案（iTBUS/cTBUS），源自动物实验方案，分别产生与iTBS和cTBS模式TMS常见的兴奋性和抑制性MEP效应方向一致的生理效应；但这种生理相似性并未转化为预期的行为结果。两种TUS方案对运动皮质的兴奋性效应得到复制，然而MEP和ERP的变化与SST结果呈分歧。ERP分析显示cTBUS显著降低P3振幅，而其他方案未出现显著的组水平ERP变化。结论：本研究观察到的双向iTBUS/cTBUS效应为人类提供了初步证据，部分与动物模型观察一致，尽管机制等价性和跨物种的完整转化有效性仍需进一步验证。两种先前描述的TUS方案所观察到的兴奋性效应在方向上与早期报告一致。然而，TUS诱导的MEP促进并不必然提升SST中的抑制控制，强调需要针对任务的多模态框架以推进TUS作为精准神经调节技术的发展。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
     },
     "doi:10.1016/j.cell.2026.02.018": {
       "doi": "10.1016/j.cell.2026.02.018",
@@ -7600,12 +7613,12 @@
       "title": "Large-scale neural systems linking bodily self-awareness and valuation in decision-making",
       "acquired_at": "2026-08-11T18:01:03",
       "source_title_sha256": "b78382e225334e137b4cd3d4311fb284f816472156b132d9ac340da7d2fe7186",
-      "source_abstract_sha256": "12c9a0515eb61c2d8494eabe9c8871ab1072e7d219ae62fe97f91a53fbe40c3f",
+      "source_abstract_sha256": "1b90467d364fbcec7cfbdefb614ca4509001a399d7271dcbfbaf94f82b8770af",
       "source_abstract": "abstract",
-      "title_zh": "连接躯体自我意识与决策价值评估的大规模神经系统",
-      "abstract_zh": "自适应决策依赖于奖励价值评估与内在身体信号及行动相关信号的整合；然而，这种更广泛的神经架构尚未被以奖励为中心的模型充分解释。新兴证据表明，躯体自我意识——包括内感受（interoception）和行为主观能动感（sense of agency）——可能塑造奖励驱动行为，但其大规模神经组织及临床相关性仍不清楚。本文整合了既有证据，探讨支持躯体自我意识与参与奖励价值评估的神经回路之间的系统层级关系。我们结合了三项功能性神经影像研究的坐标基元分析（coordinate-based meta-analysis）：内感受、行动主观能动感，以及认知性冲动性，另外还对既往发布并公开可得的静息态数据集在健康个体与可卡因使用障碍（cocaine use disorder）受试者中进行了定向再分析。跨元分析结果显示，内感受与能动感在岛叶和显著性网络（salience network）区域内收敛，而认知性冲动性则招募了不同的额叶-纹状体（fronto-striatal）和默认模式网络（default mode network）区域。在网络层面，这些系统表现出相反的功能连接特征，与躯体自我意识与价值评估相关过程之间的相对功能分化相一致。关键在于，该组织结构在可卡因使用障碍中发生了改变：尾状核与内感受及能动感相关网络的整合减少，而与认知性冲动性相关环路的耦合增强。这些发现界定了连接躯体自我意识与价值系统的大规模神经架构，并提示可卡因使用障碍与这些系统之间的整合异常有关。",
-      "translation_model": "gpt-5.3-codex-spark",
-      "translated_at": "2026-08-13T19:37:36.502412+00:00"
+      "title_zh": "大型神经系统连接身体自我意识与决策中的价值评估",
+      "abstract_zh": "适应性决策依赖于奖励价值评估与内部身体及行动相关信号的整合；然而，这一更广泛的神经架构并未被以奖励为中心的模型完全捕捉。新兴证据表明，身体自我意识——包括内感知和行动感——可能塑造基于奖励的行为，但其大规模神经组织和临床相关性仍不清楚。本文整合现有证据，探讨支持身体自我意识的神经回路与参与奖励价值评估的回路之间的系统层面关系。我们结合了三项针对内感知、行动感和认知冲动性的功能神经影像研究的坐标基础荟萃分析，并对先前发表及公开可获取的健康个体和可卡因使用障碍患者的静息态数据集进行针对性再分析。在荟萃分析和静息态连接性分析中，内感知与行动感在岛叶和显著网络区域内聚合，而认知冲动性则激活不同的额-纹状体和默认模式网络区域。这些系统表现出相反的功能连接特征，符合身体自我意识与价值评估相关过程之间相对功能分化的假设。关键的是，这种组织在可卡因使用障碍中被改变：尾状核与内感知及行动感相关网络的整合降低，与认知冲动性相关回路的耦合增加。这些发现识别了连接身体自我意识与价值评估系统的大规模神经架构，并提示可卡因使用障碍与这些系统之间的整合发生改变。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106909": {
       "doi": "10.1016/j.neubiorev.2026.106909",
@@ -7805,15 +7818,15 @@
     "doi:10.1016/j.neubiorev.2026.106926": {
       "doi": "10.1016/j.neubiorev.2026.106926",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "Psychological traits and their explanation: a 20-year perspective from Reinforcement Sensitivity Theory",
+      "title": "Psychological traits and their explanation: A 20-year perspective from Reinforcement Sensitivity Theory",
       "acquired_at": "2026-08-29T01:34:41",
-      "source_title_sha256": "c548781595d3b685f550c916511beadcc58f43d872a50b8f64486a981f1c7051",
+      "source_title_sha256": "5d91e2684367a8a4f4a9e557b2ec22985fef12ca829aab9559f25d046f7c2f62",
       "source_abstract_sha256": "a6c6e51e3b2c293766e922e11696cc29ef479cdb7b4473029ee729a4ad0ae87b",
       "source_abstract": "abstract",
-      "title_zh": "心理特质及其解释：基于强化敏感性理论的20年视角（Reinforcement Sensitivity Theory）",
-      "abstract_zh": "强化敏感性理论（Reinforcement Sensitivity Theory，RST）将某些人格特质归因于基于长期神经心理学的状态控制的神经系统敏感性。（第一版书籍，1982年，第三版，2024年）。然而，对于特质系统敏感性，系统内部细节可以大体忽略。本文为人格研究者提供了系统概览，并扩展了神经心理学中未充分发展的个性方面。在扩展过程中，我们发现了人格理论整体（以及其中科学解释的作用）存在的各种空白，这促使我们以对人格解释层级的详细阐述、出现性在此类解释中的作用以及（我们认为）不同人格研究学派（词汇、理性、神经）之间的解决方案作为论文开端。[128/250]",
+      "title_zh": "心理特质及其解释：基于强化敏感性理论的20年视角",
+      "abstract_zh": "强化敏感性理论（RST）将某些人格特质归因于基于长期神经心理学的状态控制的神经系统敏感性。（第一本书长版，1982年，第三版，2024年）。然而，对于特质系统敏感性，系统内部细节可以大幅忽略。本文为人格研究者提供了系统概览，并扩展了神经心理学中未充分发展的个性方面。在扩展过程中，我们发现了人格理论整体（以及其中科学解释的作用）存在的各种空白，这促使我们在论文开头详细阐述了层级解释在人格中的应用、出现性在此类解释中的作用，并（我们认为）在不同人格研究学派（词汇、理性、神经）之间达成了调和。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-08-29T17:38:52.2266672Z"
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106927": {
       "doi": "10.1016/j.neubiorev.2026.106927",
@@ -7961,15 +7974,15 @@
     "doi:10.1016/j.neubiorev.2026.106940": {
       "doi": "10.1016/j.neubiorev.2026.106940",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "From Metabolism to Reproduction: The Emerging Roles of Adipokines in Neuroendocrine Regulation, Gonadal Function, and Sexual Behavior",
+      "title": "From metabolism to reproduction: The emerging roles of adipokines in neuroendocrine regulation, gonadal function, and sexual behavior",
       "acquired_at": "2026-08-31T22:15:20",
-      "source_title_sha256": "97e871fbceead44bc27ee21788acda7b6a1abe5ca2155a8b269f9da9109bb68d",
+      "source_title_sha256": "4c63b9971cfc2336506968cf1a74bc465f09d5f8b8ce549b05c2b8f0d882b8f6",
       "source_abstract_sha256": "d03737583f258deb255fd0dcdbc3ff42b09c0ee764267dec1707c4420a6ebe12",
       "source_abstract": "abstract",
-      "title_zh": "从代谢到生殖：脂肪素在神经内分泌调节、性腺功能与性行为中的新兴作用",
-      "abstract_zh": "脂肪素是由多种组织（主要是脂肪组织）合成并分泌的蛋白质，调节多种生理功能。传统上，它们主要与能量稳态调节相关，包括葡萄糖代谢和体重控制。然而，过去十年的累积证据表明，脂肪素的作用远超代谢过程。脂肪素现已被视为多效激素介质，在多器官系统中发挥全身性影响，尤其在中枢神经系统中调节神经内分泌回路，进而影响复杂的生理功能。了解调控生殖功能的机制对于阐明生殖生理学并改善与生育相关的临床结果至关重要。本文综述了脂肪素功能中一个被忽视的方面：它们作为生殖与性行为调节因子的作用。最新研究表明，几种脂肪素（包括瘦素和apelin-13）可调节下丘脑-垂体-性腺轴功能以及参与生殖生理和性行为的神经回路。外周生殖作用，包括对类固醇生成和配子发生的影响，也被讨论为与中枢神经内分泌调节相互作用的补充机制。此外，脂肪素信号通路失调已与多种生殖障碍和男女生育能力下降相关联。这些发现强调了在更广阔的生殖生理学背景下考虑脂肪素的重要性。",
+      "title_zh": "从代谢到生殖：脂联素在神经内分泌调节、性腺功能与性行为中的新兴作用",
+      "abstract_zh": "脂联素是由多种组织（主要是脂肪组织）合成并分泌的蛋白质，调节多种生理功能。传统上，它们主要与能量稳态调节相关，包括葡萄糖代谢和体重控制。然而，过去十年的累积证据表明，它们的作用远远超出了代谢过程。脂联素现已被视为多效性激素介质，在多器官系统中发挥全身性影响，其中包括中枢神经系统，在那里它们调节对复杂生理功能至关重要的神经内分泌回路。了解调节生殖功能的机制对于阐明生殖生理学并改善与生育相关的临床结果至关重要。本文综述聚焦于脂联素功能中一个尚未充分探讨的方面：它们作为生殖和性行为调节因子的作用。最新数据表明，几种脂联素，包括瘦素和apelin‑13，调节下丘脑-垂体-性腺轴功能以及涉及生殖生理学和性行为的神经回路。外周生殖作用，包括对类固醇生成和配子发生的影响，被讨论为与中枢神经内分泌调节相互作用的补充机制。此外，脂联素信号通路的失调已与男性和女性的多种生殖障碍和生育功能障碍相关联。这些发现强调了在更广阔的生殖生理学背景下考虑脂联素的重要性。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-01T22:32:33.579062+00:00"
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106941": {
       "doi": "10.1016/j.neubiorev.2026.106941",
@@ -7987,15 +8000,15 @@
     "doi:10.1016/j.neubiorev.2026.106942": {
       "doi": "10.1016/j.neubiorev.2026.106942",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "Criminal Legal System Contact and Markers of Biological Aging: A Systematic Review",
+      "title": "Criminal legal system contact and markers of biological aging: A systematic review",
       "acquired_at": "2026-09-03T20:08:19",
-      "source_title_sha256": "3a37151523bf141fca2869710f9a3e3448cc7b3b5b76ae447df44c2bf9f72253",
-      "source_abstract_sha256": "479bdfdb07ec1e4f726b14f6610c674342bca28b4718ee5169a82640ed455de4",
+      "source_title_sha256": "e14526c2df745f54a6728e679d84e96256f8c56cee797a9645f08b525377c505",
+      "source_abstract_sha256": "03201ae0bf8116c9f8de32e8ed8c9f1e36f3f750894e8b648003a6c81fe5e933",
       "source_abstract": "abstract",
       "title_zh": "刑事法律系统接触与生物衰老标志：系统综述",
-      "abstract_zh": "背景：在美国，接触刑事法律系统（CLS）是一种普遍且社会模式化的暴露，已被充分记录其健康后果。日益增长的研究表明，CLS接触可能与生物衰老相关，但在生物标志物领域、暴露形式和研究设计方面的证据仍不一致。本系统综述综合了关于CLS接触与美国生物衰老相关生物标志物的文献。方法：我们系统检索了七个电子数据库和Google Scholar。符合条件的研究考察了直接或间接CLS接触与至少一种与生物衰老相关的生物标志物领域（包括表观遗传测量、端粒长度、炎症标志物或全稳态负荷）的关系。检索到的参考文献被导入Covidence进行去重和筛选。使用标准化表格提取数据，并采用改编的纽卡斯尔-渥太华量表评估证据质量。结果：共有22项研究符合纳入标准。16项研究（72.7%）报告了与CLS接触相关的加速生物衰老发现。最一致的证据出现在表观遗传结果上，七项研究均报告了与CLS接触相关的显著加速表观遗传衰老。炎症标志物、全稳态负荷和端粒长度的证据不太一致，尽管有若干研究将CLS接触与炎症升高、多系统生理失调和端粒长度缩短联系起来。关联因CLS接触形式、时间和情境而异，包括监禁期间的暴力和种族化的警务暴露。结论：CLS接触可能与多种与生物衰老相关的生物系统相关。需要进一步研究以阐明时间性、异质性和潜在机制。",
+      "abstract_zh": "背景：在美国，接触刑事法律系统（CLS）是一种普遍且社会分层的暴露，已被充分记录其健康后果。越来越多的研究表明，CLS接触可能与生物衰老相关，但在生物标志物领域、暴露形式和研究设计方面的证据仍不一致。本系统综述综合了关于美国CLS接触与与生物衰老相关的生物标志物（包括表观遗传测量、端粒长度、炎症标志物或全身负荷）的文献。方法：我们系统检索了七个电子数据库和Google Scholar。符合条件的研究考察了直接或间接CLS接触与至少一种与生物衰老相关的生物标志物领域之间的关系，包括表观遗传测量、端粒长度、炎症标志物或全身负荷。检索到的参考文献被导入Covidence进行去重和筛选。使用标准化表格提取数据，并采用改编的纽卡斯尔-渥太华量表评估证据质量。结果：共有22项研究符合纳入标准。16项研究（72.7%）报告了与CLS接触相关的加速生物衰老发现。最一致的证据出现在表观遗传结果上，七项研究均报告了与CLS接触相关的显著加速表观遗传衰老。炎症标志物、全身负荷和端粒长度的证据不太一致，尽管有几项研究将CLS接触与炎症升高、多系统生理失调和端粒长度缩短联系起来。关联因CLS接触形式、时间和情境而异，包括监禁期间的暴力和种族化的警务暴露。结论：CLS接触可能与多种与生物衰老相关的生物系统相关。需要更多研究来阐明时间性、异质性和潜在机制。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-04T22:31:37.870685+00:00"
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -11468,6 +11481,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1016/j.tins.2026.08.005": {
+      "doi": "10.1016/j.tins.2026.08.005",
+      "journal_slug": "trends-in-neurosciences",
+      "title": "Spatial navigation and the basal forebrain in Alzheimer’s disease and other neurodegenerative diseases",
+      "acquired_at": "2026-09-05T18:33:43",
+      "source_title_sha256": "d57d1b79a6c14384ac5480f4bf4373efc0d6eb68ff5e905fdda6d1f5bc8dfea8",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "空间导航与基底前脑在阿尔茨海默病及其他神经退行性疾病中的作用",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
+    },
     "doi:10.1016/s0149-7634(26)00189-2": {
       "doi": "10.1016/s0149-7634(26)00189-2",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
@@ -13508,6 +13534,19 @@
       "abstract_zh": "在南极检测到的一个粒子诞生于宇宙年轻时星系大量产生恒星的星系中。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1038/d41586-026-02037-y": {
+      "doi": "10.1038/d41586-026-02037-y",
+      "journal_slug": "nature",
+      "title": "Twenty-two easy ways to power up your lab meetings",
+      "acquired_at": "2026-09-05T18:45:19",
+      "source_title_sha256": "b7c34b40826a6d95c6614ec13be33487e6de770450fd357adbfcea78dcc9295e",
+      "source_abstract_sha256": "06da3271e268e2ec9705e31fa0befbdf30eea38a556467782455fb20208a742f",
+      "source_abstract": "abstract",
+      "title_zh": "二十二种轻松提升实验室会议活力的方法",
+      "abstract_zh": "科学家分享他们如何让研究讨论顺畅进行的帮助与建议。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
     },
     "doi:10.1038/d41586-026-02038-x": {
       "doi": "10.1038/d41586-026-02038-x",
@@ -17161,6 +17200,19 @@
       "abstract_zh": "机器人外骨骼最初是为临床治疗而设计的，但研究人员如今正在开发更便宜、更小型的设备，面向所有人群——从膝盖老化的人群到想要攀登高峰的20多岁人群。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-18T19:34:53.295339+00:00"
+    },
+    "doi:10.1038/d41586-026-02528-y": {
+      "doi": "10.1038/d41586-026-02528-y",
+      "journal_slug": "nature",
+      "title": "Screening babies’ genomes could save lives. Here’s how it would work",
+      "acquired_at": "2026-09-05T18:45:19",
+      "source_title_sha256": "e51787c78a995fe6ebd893f6e1b02f0242a5146ab9fe33c774521b68a17e0d5c",
+      "source_abstract_sha256": "d06369f71b5bcb2b83f92ac3247b1526df0ca2ac2ee0d98272b1816c0f0c59af",
+      "source_abstract": "abstract",
+      "title_zh": "筛查婴儿基因组可能挽救生命——其工作原理",
+      "abstract_zh": "全球正在开展大规模新生儿基因组筛查研究，但关于可扩展性、可行性和净收益的疑问仍然存在。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
     },
     "doi:10.1038/d41586-026-02529-x": {
       "doi": "10.1038/d41586-026-02529-x",
@@ -28186,6 +28238,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-01T22:32:33.579062+00:00"
     },
+    "doi:10.1093/brain/awag297": {
+      "doi": "10.1093/brain/awag297",
+      "journal_slug": "brain",
+      "title": "Progress towards a biotypic biomarker profile for amyotrophic lateral sclerosis–frontotemporal spectrum disorders",
+      "acquired_at": "2026-09-05T18:50:22",
+      "source_title_sha256": "7ee494a556f9dbb42efe828a57ce09f1d93d10855f2d334550a2d53e1e1acf42",
+      "source_abstract_sha256": "0f2a80bb29d5ecae29bdd96421e41632d8cd368015614620dc0e0f98313ad58e",
+      "source_abstract": "abstract",
+      "title_zh": "向肌萎缩侧索硬化症–额颞叶谱系障碍的生物型生物标志物谱进展",
+      "abstract_zh": "摘要 确定神经退行性疾病疾病修饰治疗的最佳时机，需要在临床表现出现之前，早期识别潜在病理生物学过程的活跃时点。表型转化，即临床症状的出现，可能在多年甚至数十年无症状的病理生物学活跃期之后才出现，而这只能通过多种生物标志物来映射。ALS和FTD传统上被视为不同的临床综合征，但越来越多的研究表明它们在一个共享遗传风险和共同病理基础的临床谱系上存在。该临床-病理谱系的基础是TAR DNA结合蛋白43（TDP‑43）在细胞质中的聚集，作为共同的神经病理学标志。相反，绝大多数病理学定义的额颞叶皮质变性（FTLD）与TDP‑43代谢（FTLD‑TDP）或微管相关蛋白tau（FTLD‑tau）的改变相关，少数与常染色体显性基因突变或泛素-蛋白酶体系统功能障碍相关。随着神经退行性疾病研究越来越倾向于以病理生物学定义疾病的框架，迫切需要开发能够反映这些疾病多样病理生物学的生物标志物，并确定其在表型转化前检测病理生物学的敏感性。为此，2025年在伦敦、加拿大召集了一次国际研讨会，评估现有或正在发展的生物标志物是否适用于（1）在表型转化前检测ALS或FTD的病理生物学；（2）预测高危个体的表型转化。此类生物标志物可被概念化为“生物型生物标志物”，其能够描述潜在病理生理学，同时对临床表现保持中立。目前尚无单一生物型标志物能够预测ALS、FTD或其交叉的出现，但多模态方法构建生物型生物标志物谱具有检测相关病理生物学过程的潜力。该方法的优势将通过同时解决遗传风险易感性和基因组及细胞衰老的敏感生物标志物等韧性/易感性问题得到增强。通过纳入这些非传统疾病标志物，可以获得更完整的退行性过程图景，以及可能减缓或增强疾病发生概率的因素。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
+    },
     "doi:10.1126/science.adp4440": {
       "doi": "10.1126/science.adp4440",
       "journal_slug": "science",
@@ -34920,6 +34985,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-03T22:33:34.689027+00:00"
     },
+    "doi:10.1186/s12974-026-04034-4": {
+      "doi": "10.1186/s12974-026-04034-4",
+      "journal_slug": "journal-of-neuroinflammation",
+      "title": "The kallikrein-kinin system modulates CD4+ T cell function and contributes to T cell migration into the brain after stroke",
+      "acquired_at": "2026-09-05T18:51:48",
+      "source_title_sha256": "8ec214afaae1450b21efab909e6250d5ef901653c50cbf0624a694e35c3c42b0",
+      "source_abstract_sha256": "a88f760d9e5c67724474a16dceb442b209ff9abd66b5b6d15d4d183ab5acc12e",
+      "source_abstract": "abstract",
+      "title_zh": "激肽酶-激肽系统调节CD4+ T细胞功能并促进卒中后T细胞迁移至大脑",
+      "abstract_zh": "摘要：缺血性卒中会引发持续的血栓炎症反应，关键影响二次脑损伤。激肽酶-激肽系统（KKS）已被认定为血管损伤与炎症过程的接口；但其在适应性免疫中的作用尚不清楚。我们发现KKS与致病性CD4+ T细胞激活和迁移相关。在缺血性卒中患者和接受短暂中大脑动脉闭塞（tMCAO）的小鼠中，循环中的CD4+ T细胞表现出保守的、激活的、具迁移能力的表型，特征为黏附/迁移标记物上调，表明系统性适应性免疫反应在转化上保持一致。功能上，使用血浆激肽酶（PK）中和抗体（ɑPK）亚急性处理的卒中小鼠血清可抑制CD4+ T细胞的激活、增殖、黏附/迁移标记物表达及促炎细胞因子产生。PK特异性增强CD4+ T细胞黏附和迁移，而其下游代谢物Des-Arg 9-激肽（Des-Arg 9-BK）诱导显著的促炎、促迁移表型，并在体外放大趋化因子驱动的跨内皮迁移。值得注意的是，体内延迟PK抑制与缺血脑中T细胞积聚减少、循环CD4+ T细胞频率增加相关，提示中枢神经系统（CNS）渗透动力学受损。综上所述，这些发现支持KKS信号在缺血性卒中后塑造神经免疫相互作用中的作用，通过增强内皮黏附性并促进CD4+ T细胞迁移至缺血组织。通过连接血栓炎症与适应性免疫，KKS成为一种有前景的治疗靶点，可选择性调节神经免疫相互作用并可能改善缺血性卒中的功能恢复。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
+    },
     "doi:10.1186/s13024-026-00949-x": {
       "doi": "10.1186/s13024-026-00949-x",
       "journal_slug": "molecular-neurodegeneration",
@@ -35271,6 +35349,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-13T19:37:36.502412+00:00"
     },
+    "doi:10.1186/s13024-026-00986-6": {
+      "doi": "10.1186/s13024-026-00986-6",
+      "journal_slug": "molecular-neurodegeneration",
+      "title": "The YTHDF proteins modulate Alzheimer’s disease-associated brain gene signatures",
+      "acquired_at": "2026-09-05T18:33:45",
+      "source_title_sha256": "d8bca6b7e1a16dbd770d650d2ca387f89078936b371764547c42f6e45205d24e",
+      "source_abstract_sha256": "e3c85317b5bb71ededb7f5d08fc659aed8845a519b9ccfb357fec887f39232a5",
+      "source_abstract": "abstract",
+      "title_zh": "YTHDF蛋白调控阿尔茨海默病相关脑部基因签名",
+      "abstract_zh": "摘要 阿尔茨海默病（AD）脑部基因签名反映了遗传、表观遗传、表观转录组学和转录后调控的复杂相互作用的结果。为挑选可能调节这些签名的候选因子，我们开发了一个机器学习模型，将细胞和分子特征整合以解释AD中差异基因表达。在测试的特征中，YTHDF蛋白——N6-甲基腺苷（m6A）RNA修饰的经典识别因子——是最具影响力的AD基因签名预测因子之一。含有YTHDF的蛋白模块在人体AD脑中下调，且在iPSC衍生的二维和三维神经元模型中敲低或药理抑制YTHDF可重现关键的AD相关基因签名。此外，eCLIP-seq显示AD脑中YTHDF对转录本的结合发生改变，既涉及m6A依赖位点，也涉及m6A非依赖位点。综上所述，这些结果支持YTHDF蛋白在调节人脑中AD相关基因签名方面的重要作用。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
+    },
     "doi:10.1186/s13024-026-00987-5": {
       "doi": "10.1186/s13024-026-00987-5",
       "journal_slug": "molecular-neurodegeneration",
@@ -35322,6 +35413,19 @@
       "abstract_zh": "摘要：与年龄相关的膜脂质组成重塑已被认为与细胞功能障碍相关，但将脂质变化与膜完整性和疾病联系起来的机制尚不清楚。在视网膜色素上皮（RPE）中，脂质失调与衰老和年龄相关性黄斑变性（AMD）——一种中枢神经系统的神经退行性疾病——高度相关，但因果通路仍不明确。我们在此发现脂质延长酶ELOVL2活性降低是年龄相关膜重塑的核心驱动因素。ELOVL2依赖的多不饱和脂肪酸（PUFA）延长缺失导致质膜脂质组成改变，进而改变膜的生物物理特性并削弱膜完整性。为应对这种压力，RPE细胞并未发生凋亡，而是激活了依赖溶酶体的质膜修复程序，在代谢挑战下保持屏障功能。然而，这种适应性反应驱动了空间极化的溶酶体胞吐，促进了细胞外重塑和与衰老及AMD相关的RPE下沉积物的积累。恢复ELOVL2衍生的脂质产物可逆转膜异常并抑制溶酶体介导的重塑表型，证明了代谢对膜稳态的直接调控。综上所述，这些发现定义了一个ELOVL2依赖的脂质–溶酶体轴，将PUFA延长与质膜完整性联系起来，并揭示了补偿性修复机制如何促成衰老上皮组织的重塑和疾病进展。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:44:26.566175+00:00"
+    },
+    "doi:10.1186/s13024-026-00991-9": {
+      "doi": "10.1186/s13024-026-00991-9",
+      "journal_slug": "molecular-neurodegeneration",
+      "title": "Inflammasomes: central mediators of neuroinflammatory neurodegeneration in Alzheimer’s and Parkinson’s disease",
+      "acquired_at": "2026-09-05T18:33:45",
+      "source_title_sha256": "f16f81fd435826904ef49ace3f980a5cdbae9428bd8d71d6889a73e0540cbaa2",
+      "source_abstract_sha256": "4ff6ef82d917b7ee361203580628334470e79aa522962c2e790d277d5b7bba11",
+      "source_abstract": "abstract",
+      "title_zh": "炎性体：阿尔茨海默病与帕金森病中神经炎症性神经退行性疾病的核心介质",
+      "abstract_zh": "摘要 随着全球预期寿命的延长，65岁及以上人口比例预计到2050年将翻倍，这一全球人口结构变化将伴随阿尔茨海默病（AD）和帕金森病（PD）等年龄相关神经退行性疾病的增加。AD是全球认知障碍的主要原因，其特征是与淀粉样β沉积、tau病理、神经元死亡和慢性神经炎症相关的认知功能逐步下降。PD是全球最常见的运动障碍，其特征是与α-突触核蛋白沉积、路易小体和神经突起形成、多巴胺能神经元死亡以及慢性神经炎症相关的运动功能逐步衰退。越来越多的证据表明炎性体——一种调控先天免疫反应的细胞内多蛋白复合物——是AD和PD中神经炎症环境的关键驱动因子。NLRP3炎性体主要由小胶质细胞表达，已被证明可激活半胱天冬酶-1，导致促炎细胞因子IL-1β和IL-18的裂解与释放，并在中枢神经系统内促进焦亡细胞死亡。本综述整合了关于炎性体激活分子机制、其在AD和PD中的病理作用以及支持其作用的遗传基础的最新知识。它还强调了针对调节炎性体活性的创新治疗策略，评估了临床前结果和临床试验进展。了解炎性体动力学为AD和PD的病理生理提供了关键见解，并为未来疾病修饰治疗提供了有前景的靶点。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-05T19:31:47.130595+00:00"
     },
     "doi:10.1186/s40035-026-00553-5": {
       "doi": "10.1186/s40035-026-00553-5",
