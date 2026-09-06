@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-05T19:31:47.130595+00:00",
+  "updated_at": "2026-09-06T19:30:52.072281+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -8010,6 +8010,58 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-05T19:31:47.130595+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.106945": {
+      "doi": "10.1016/j.neubiorev.2026.106945",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Time as a cue for human hunger",
+      "acquired_at": "2026-09-06T19:13:30",
+      "source_title_sha256": "6880eb0ea6c36ff987cc9ca353fbe06e8fac0df445feed5841a667ecb101bf67",
+      "source_abstract_sha256": "11987bd47a727bf04b0784636d84ac17be03949d474c248aadea7be4242e4821",
+      "source_abstract": "abstract",
+      "title_zh": "时间作为人类饥饿的提示",
+      "abstract_zh": "许多人每天在大致相同的时间进食。这可能导致用餐时间成为预测该时间段进食可能带来奖励（即饥饿）的线索。时间作为食物奖励预测因子在动物研究中受到广泛关注，但在人类中关注度较低，尽管许多人围绕早餐、午餐和晚餐安排饮食——这些词暗示了特定的日间时间。在本综述中，我们探讨习惯性用餐时间是否以及如何导致人类饥饿。首先，我们讨论一个基本前提：在现代以时钟为驱动的社会之外，日间时间是否能预测食物可获得性？我们发现有中等到强有力的证据支持这一点。随后，我们转向更难的问题，即是否有证据表明习惯性用餐时间会导致饥饿？在动物研究中，这关注于饥饿的行为和生理相关性，分别提供了从弱到中等和强的支持。在人类研究中，这意味着需要找到控制关键混杂因素的研究，即人们往往在一段时间不进食后才进食。此过程可能产生其他线索（如空腹），这些线索可能导致饥饿，从而产生线索竞争。目前，人类证据支持这一观点，但证据较弱。最后，我们评估动物模型中习惯性用餐时间如何导致饥饿，并批判性地将其应用于人类——指出仍有若干关键问题（如线索竞争）。文中讨论了对人类头部相位（cephalic phase）文献的启示、规律/不规律饮食模式的健康影响、时间如何发展为饥饿提示并导致饥饿，以及其神经基础。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106948": {
+      "doi": "10.1016/j.neubiorev.2026.106948",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "From brain networks to the patient-environment system in clinical neuroimaging",
+      "acquired_at": "2026-09-06T19:13:30",
+      "source_title_sha256": "083a248ffe723cd75f9cc0e645fc0c55a4b7b8409961e7b68465afe888421772",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "从脑网络到临床神经影像中的患者-环境系统",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106950": {
+      "doi": "10.1016/j.neubiorev.2026.106950",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "The Role of Autobiographical Memory in Empathy: A Perspective from Memory Disorders",
+      "acquired_at": "2026-09-06T19:13:30",
+      "source_title_sha256": "64d75a4e910cb6afd9593d780b48c7c772a861a508be7e0316e8e751ee14722c",
+      "source_abstract_sha256": "7af3a7caab05b34d9d9e1c040e837ca42760c16979dc31f1e0ba7c9cf779224c",
+      "source_abstract": "abstract",
+      "title_zh": "自传性记忆在共情中的作用：来自记忆障碍的视角",
+      "abstract_zh": "共情，即理解并分享他人情感的能力，依赖于两种互补的组成部分：认知共情（涉及视角转换和推理理解）和情感共情（基于与他人状态的身体共振）。两者都需要保持自我与他人之间清晰的界限；当界限模糊时，个体可能会经历情绪共鸣，这是一种更简单的情绪参与形式。证据表明，自传性记忆通过让个体通过回忆模拟他人的经历来支持认知共情，而内感知过程则通过提供对内部身体表征的访问，帮助情感共情，这些表征基于先前的亲身经验进行评估和解释。我们提出，记忆与共情通过自我-他人区分的共享机制相互关联，主要由顶后叶及其与海马、前岛叶和扣带皮层的相互作用介导。对这些网络的损伤可能会根据记忆驱动的自我参照过程或身体自我表征是否受损，导致共情组成部分的不同程度受损。我们认为，自我-他人区分的削弱可能是将记忆丧失与共情贫乏联系起来的关键机制。未来研究应通过整合记忆、内感知和自我-他人区分的评估，采用虚拟现实、病变映射和神经调制等方法，明确记忆缺陷如何影响共情。理解这些过程可能有助于调和文献中不一致的发现，并推进跨年龄和疾病的社会认知模型。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106951": {
+      "doi": "10.1016/j.neubiorev.2026.106951",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "The Effect of Psychedelics on Associative Learning: a Systematic Review",
+      "acquired_at": "2026-09-06T19:13:30",
+      "source_title_sha256": "8657f19dbc7034f4a7b608095991b61c479c0253ab96dd8815a6b7a2150fe62d",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "迷幻药对联想学习的影响：系统综述",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
       "journal_slug": "neuron",
@@ -11487,12 +11539,12 @@
       "title": "Spatial navigation and the basal forebrain in Alzheimer’s disease and other neurodegenerative diseases",
       "acquired_at": "2026-09-05T18:33:43",
       "source_title_sha256": "d57d1b79a6c14384ac5480f4bf4373efc0d6eb68ff5e905fdda6d1f5bc8dfea8",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "空间导航与基底前脑在阿尔茨海默病及其他神经退行性疾病中的作用",
-      "abstract_zh": null,
+      "source_abstract_sha256": "23799e4542933f31906731686c26b4c89c2ff95373064358f05b0948600c6e07",
+      "source_abstract": "abstract",
+      "title_zh": "阿尔茨海默病及其他神经退行性疾病中的空间导航与基底前脑",
+      "abstract_zh": "神经退行性疾病如阿尔茨海默病（AD）和路易体病（LBD）常伴有空间导航障碍。然而，在额颞叶痴呆和以边缘系统为主的年龄相关TDP-43脑病中，这些障碍相对不明显。虽然所有这些疾病都出现基底前脑退化，但胆碱能通路的破坏及相关胆碱能缺陷主要在AD和LBD中观察到，在这两种疾病中，基底前脑退化似乎与空间导航缺陷相关。本综述讨论了神经退行性疾病中空间导航障碍的现有认识，特别关注疾病相关的基底前脑变化及其与人类空间导航能力受损的关联。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-05T19:31:47.130595+00:00"
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
     },
     "doi:10.1016/s0149-7634(26)00189-2": {
       "doi": "10.1016/s0149-7634(26)00189-2",
@@ -16265,6 +16317,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-04T01:59:53.657990+00:00"
     },
+    "doi:10.1038/d41586-026-02373-z": {
+      "doi": "10.1038/d41586-026-02373-z",
+      "journal_slug": "nature",
+      "title": "Activity of solar-driven polymer catalysts unleashed to produce a potential green fuel",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "b038ff862490b5b80ae80913cc4214b6db48b315c0012b003a4270246bea7d09",
+      "source_abstract_sha256": "f93d00cf9385d7099313ac47913be749c332e66a70d0ac2c6e9c011ea67d5556",
+      "source_abstract": "abstract",
+      "title_zh": "利用太阳能驱动聚合物催化剂的活性释放潜在绿色燃料",
+      "abstract_zh": "通过工程改造聚合物晶体，显著提升了其作为催化剂的活性，可仅利用阳光将水转化为氢燃料。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
     "doi:10.1038/d41586-026-02374-y": {
       "doi": "10.1038/d41586-026-02374-y",
       "journal_slug": "nature",
@@ -16277,6 +16342,32 @@
       "abstract_zh": "三项非人灵长类动物研究显示，经过策略性设计的疫苗可预先激活一群 B 细胞，从而产生针对 HIV 的有效抗体。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-12T04:45:35.321122+00:00"
+    },
+    "doi:10.1038/d41586-026-02376-w": {
+      "doi": "10.1038/d41586-026-02376-w",
+      "journal_slug": "nature",
+      "title": "The Antarctic ice sheet has gained mass — but probably not for long",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "93c7bdee22af33adee1fb283e828b6d56b7fc762ed599d5324a578e3a42996b9",
+      "source_abstract_sha256": "4be574c6fa42c0a5d9613b03a10912da4d73c681087a88832b93e37ca928e18f",
+      "source_abstract": "abstract",
+      "title_zh": "南极冰盖已增重——但可能不会持续太久",
+      "abstract_zh": "自2020年以来，降雪在很大程度上抵消了南极冰盖的融化。导致这一现象的大气效应已被识别，并且它是暂时的。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
+    "doi:10.1038/d41586-026-02377-9": {
+      "doi": "10.1038/d41586-026-02377-9",
+      "journal_slug": "nature",
+      "title": "Psychedelics tune the brain to the environment",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "b8f8f3413be754f32474054be253a25761b076caddd9c8c585a05a852074c3be",
+      "source_abstract_sha256": "bce6faa4b00d523420f0be4b5b3b54d1369bf28f89e1b6c6b106a27c23575ff9",
+      "source_abstract": "abstract",
+      "title_zh": "迷幻药使大脑与环境相适应",
+      "abstract_zh": "与仅仅扰乱神经活动不同，迷幻药物裸盖菇碱还能重新组织大脑动力学，使其与个体的情境和经验相匹配。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
     },
     "doi:10.1038/d41586-026-02379-7": {
       "doi": "10.1038/d41586-026-02379-7",
@@ -16472,6 +16563,19 @@
       "abstract_zh": "内容位置不当。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-13T19:37:36.502412+00:00"
+    },
+    "doi:10.1038/d41586-026-02410-x": {
+      "doi": "10.1038/d41586-026-02410-x",
+      "journal_slug": "nature",
+      "title": "Delisted",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "c969c035a1614ad455550c16881eac5a569f7d6e7ecdc52256b622818596b37f",
+      "source_abstract_sha256": "d0fad5b12a24c0c476d217b68e96a36df7c4685ed58373d7f7bd7cb66883d799",
+      "source_abstract": "abstract",
+      "title_zh": "已退市",
+      "abstract_zh": "被追究责任",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
     },
     "doi:10.1038/d41586-026-02419-2": {
       "doi": "10.1038/d41586-026-02419-2",
@@ -17032,6 +17136,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-13T19:37:36.502412+00:00"
     },
+    "doi:10.1038/d41586-026-02495-4": {
+      "doi": "10.1038/d41586-026-02495-4",
+      "journal_slug": "nature",
+      "title": "AI tool lets researchers ‘vibe code’ in the quantum realm",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "473ef03486e3728e2b776bc4d5995e2c25c1f72ab7528aedbae897646f84a3bd",
+      "source_abstract_sha256": "7b7d589480dc557d2abfa2729289bd7605cff38026a024ae5f492ad71522287e",
+      "source_abstract": "abstract",
+      "title_zh": "AI 工具让研究者在量子领域‘共振编码’",
+      "abstract_zh": "一款自主 AI 代理能够编写并执行量子计算代码，但有时仍需人工干预。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
     "doi:10.1038/d41586-026-02496-3": {
       "doi": "10.1038/d41586-026-02496-3",
       "journal_slug": "nature",
@@ -17279,6 +17396,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-18T19:34:53.295339+00:00"
     },
+    "doi:10.1038/d41586-026-02537-x": {
+      "doi": "10.1038/d41586-026-02537-x",
+      "journal_slug": "nature",
+      "title": "Virus deploys a ‘loose cannon’ enzyme to overpower bacterial defences",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "d56e9fd8dc3fac6e3a8e2f38ff1dceeb8fcb3570b37ed88b72879944497b0524",
+      "source_abstract_sha256": "cff1437e167e813040a9eebe945bf4c8b32dd6432af076db228feee72db133cd",
+      "source_abstract": "abstract",
+      "title_zh": "病毒利用“松散炮手”酶压制细菌防御",
+      "abstract_zh": "一种病毒酶修改其细菌宿主中所有靶向 DNA 的蛋白质，从而失活宿主免疫。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
     "doi:10.1038/d41586-026-02542-0": {
       "doi": "10.1038/d41586-026-02542-0",
       "journal_slug": "nature",
@@ -17421,6 +17551,19 @@
       "abstract_zh": "约5,600万年前出现的剧烈二氧化碳上升对森林来说具有灾难性影响。此外，基于mRNA的流感疫苗已在美国获批，Anthropic 即将引入 AI 水印。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-18T19:34:53.295339+00:00"
+    },
+    "doi:10.1038/d41586-026-02585-3": {
+      "doi": "10.1038/d41586-026-02585-3",
+      "journal_slug": "nature",
+      "title": "Human organoids that mimic brain development grown for years in lab",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "11ce1c0ac67a552f0e78234ee10dee865012daf5f8bf9a2b32717196cc59ab62",
+      "source_abstract_sha256": "dfc838714d072980869a8263710e0fb42065f51a42a45690bd572071e4f451f6",
+      "source_abstract": "abstract",
+      "title_zh": "在实验室培养多年、模拟大脑发育的人体类器官",
+      "abstract_zh": "对大脑随时间变化的模型有助于研究人员了解疾病如何在后期影响器官。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
     },
     "doi:10.1038/d41586-026-02589-z": {
       "doi": "10.1038/d41586-026-02589-z",
@@ -22583,6 +22726,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1038/s41586-026-10777-0": {
+      "doi": "10.1038/s41586-026-10777-0",
+      "journal_slug": "nature",
+      "title": "Artefacts in single-cell mtDNA analyses misinform phylogenies",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "e4eed33fa6aef3110fa83f02f4c73defa3b2e5ea0f9779973c5ea65d62a99518",
+      "source_abstract_sha256": "f7e7b8a40791cbb0dd714743c7ec0b207680ab53ea4a1aae960c6d15363eb87a",
+      "source_abstract": "abstract",
+      "title_zh": "单细胞mtDNA分析中的伪影误导系统发育树",
+      "abstract_zh": "该来源仅提供期刊名称，未给出摘要。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
     "doi:10.1038/s41586-026-10778-z": {
       "doi": "10.1038/s41586-026-10778-z",
       "journal_slug": "nature",
@@ -23974,6 +24130,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1038/s41586-026-10914-9": {
+      "doi": "10.1038/s41586-026-10914-9",
+      "journal_slug": "nature",
+      "title": "Atomic-scale double-slit interferometry with a focused electron probe",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "4b2995cef60658872c194699fa464ccf5603570659a22a3f064870313304abcc",
+      "source_abstract_sha256": "eac10407bc9a0d3b395407ffeab70d7ef0ac79bf25730f6b68b325788d405de8",
+      "source_abstract": "abstract",
+      "title_zh": "利用聚焦电子探针实现原子尺度双缝干涉",
+      "abstract_zh": "自从杨氏用光进行原始实验以来，双缝干涉实验一直是波粒二象性的典型演示。它们如今支撑着现代电子、中子、原子和分子干涉仪，其条纹可见度和相位编码了关于波和衍射物体的定量信息。将此技术扩展到原子尺度将直接、局部地获取微观结构和动力学，但迄今为止尚未得到探索。本文展示了在晶体内部实现原子尺度双缝干涉的方法。通过扫描透射电子显微镜（STEM），我们演示了使用聚焦电子束在两个相邻的 Si [110] 原子柱（相距 1.36 Å）上产生干涉条纹。在有限温度下，这两个原子“缝隙”会强烈振动，将其运动印刻在条纹上。条纹在 300 K 至 900 K 之间保持存在，表明只有部分声子模式会降低可见度；相邻原子之间的相关热振动保持了相干性，否则独立运动会破坏相干。对保持可见度的定量分析直接提供了两条原子柱之间振动相关性的实验数据。这些相关性映射到特定原子键的各向异性刚度，从而获得影响热传导的低能声子动力学。将晶体重新视为原子尺度干涉仪，使得能够直接可视化局部原子排列及其相关动力学，为在单键层面研究晶格动力学开辟了新途径。原子尺度双缝干涉通过扫描透射电子显微镜实现，提供了聚焦电子束遇到相距 1.36 Å 的硅原子柱时产生干涉条纹的证据。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
     "doi:10.1038/s41586-026-10916-7": {
       "doi": "10.1038/s41586-026-10916-7",
       "journal_slug": "nature",
@@ -24052,6 +24221,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-13T19:37:36.502412+00:00"
     },
+    "doi:10.1038/s41586-026-10926-5": {
+      "doi": "10.1038/s41586-026-10926-5",
+      "journal_slug": "nature",
+      "title": "Family genetic designs in MoBa provide insights into health and functioning",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "d7b300b7b5482fd3cd9900dd0ad965d876d6496d57c445cf43fae63548da2fd0",
+      "source_abstract_sha256": "b5c775051b93b010baef1587eda0c0e3e324c560e19f67a54d3e5b6b2b9a3007",
+      "source_abstract": "abstract",
+      "title_zh": "MoBa 家族遗传设计揭示健康与功能的洞见",
+      "abstract_zh": "摘要：利用大规模、基于人群的无关个体样本进行的全基因组关联研究已发现数千个与健康和疾病相关的遗传关联1。此类研究有助于解释遗传和环境风险。然而，越来越多的证据表明，基于人群的估计虽然精确，却也可能反映出影响其使用和解释的混杂因素。通过使用已基因分型的家族成员数据，例如核三人组（母-父-子）2,3，可以克服这种混杂。然而，已基因分型的家族样本很少4–11。本文通过挪威母亲、父亲和子女队列研究（MoBa）来说明家族数据的一些优势。MoBa 是一项基于人群的父母和子女队列，拥有广泛的基因分型数据（约 230,000 名样本）3，并对健康和功能进行广泛且纵向的表型测量。我们概述了 MoBa 并描述了针对这一高度相关样本的基因分型数据质量控制。随后，我们利用三人组数据展示了基于家族的基因组设计如何识别遗传影响的直接和间接来源以及结构性混杂。以儿童身高、教育成就、抑郁症状和睡眠时长为例进行分析。这些示例突显了 MoBa 作为一个广泛有价值的资源，可推进跨生命周期和跨代际的健康与功能理解。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
+    },
     "doi:10.1038/s41586-026-10929-2": {
       "doi": "10.1038/s41586-026-10929-2",
       "journal_slug": "nature",
@@ -24090,6 +24272,19 @@
       "abstract_zh": "迁移是基本的化学转化。除了科学好奇心和机理探究之外，迁移反应还为远程或其他难以接近的反应位点提供了方法，补充了传统合成方法1。虽然单位点迁移已被广泛研究并实现了高度的位点选择性控制，但在碳链上同时调控两个远程位点的迁移仍 largely 未被探索2,3。这主要是因为在两个迁移中心同时控制化学选择性、位点选择性和对映选择性所带来的复杂性呈指数级增加。本文提出了一种纠缠双位点迁移的概念验证策略，该策略通过我们称之为硼氢重排（borinane rearrangement）的过程实现——即硼氢环沿碳骨架的领跑与跟随运动。该硼环重排可跨越多达八个碳原子，能够精确控制两个迁移位置的位点选择性和对映选择性。此外，硼环产物可作为多功能合成的多样合成基团，用于（杂）环的发散合成和ε-多功能化（一个引入的官能团与另一个相距四个碳），显著扩展了（杂）环构建和多位点修饰的化学空间，尤其是在碳链的中心区域。纠缠双位点迁移通过硼氢重排实现——硼氢环沿碳骨架的领跑与跟随运动。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
+    },
+    "doi:10.1038/s41586-026-10938-1": {
+      "doi": "10.1038/s41586-026-10938-1",
+      "journal_slug": "nature",
+      "title": "A global atmospheric methane record from a tropical ice core",
+      "acquired_at": "2026-09-06T18:46:29",
+      "source_title_sha256": "2ac72ec7562b7268f2a32c69a1de13ff666fa884be9751ca2380c2f04381f6c5",
+      "source_abstract_sha256": "5d7e7623bcc6cf94d54b99a2e85f357ef2aed53d7aa647773a2a62ce9d8e5e15",
+      "source_abstract": "abstract",
+      "title_zh": "来自热带冰芯的全球大气甲烷记录",
+      "abstract_zh": "摘要 热带湿地被广泛认为是大气甲烷（CH₄）最大的自然来源1–4。然而，关于湿地范围和CH₄产生的未知导致模型化的CH₄排放趋势存在较大差异2,3。大多数历史重建依赖于极地冰芯数据，无法充分解析热带对CH₄预算的贡献5,6。本文提供了来自南峰（Nevado Huascarán）南峰顶（SCA）6,768米高的冰芯的2000年大气CH₄浓度记录（-9.122°S，-77.605°W）。我们发现该记录的趋势和幅度与极地记录7大体一致。我们的δ¹³C-CH₄测量（约1530年到1999年）与8中所示的同位素值相符，表明热带CH₄来源占主导。将本记录整合到大气四盒模型中，表明过去两千年热带地区的CH₄源强度持续占优势。研究结果表明，热带CH₄排放高于仅基于极地冰芯数据的先前估计，支持低纬度CH₄排放在工业化前（PI）时期主导CH₄变异的长期假设5,6。此结果强调了热带冰芯在重建CH₄变异和纬度分布中的重要性。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-06T19:30:52.072281+00:00"
     },
     "doi:10.1038/s41586-026-10939-0": {
       "doi": "10.1038/s41586-026-10939-0",
