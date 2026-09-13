@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-12T19:31:38.627688+00:00",
+  "updated_at": "2026-09-13T22:30:36.695036+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -1887,6 +1887,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-09T22:35:34.612034+00:00"
     },
+    "doi:10.1007/s10462-026-11699-z": {
+      "doi": "10.1007/s10462-026-11699-z",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Towards human-centered and efficient video synthesis: a survey of multimodal diffusion models",
+      "acquired_at": "2026-09-13T19:29:47",
+      "source_title_sha256": "05b80780a6b0b57ea015b342f2b9dd75ce312347f9562cab152a9a425f8bab63",
+      "source_abstract_sha256": "1832901ba260eb0f2b8f4cc13ed5da55be45bb54ca229ebf70985bfbaa320e5e",
+      "source_abstract": "abstract",
+      "title_zh": "面向人类中心与高效视频合成的多模态扩散模型综述",
+      "abstract_zh": "摘要：多模态视频扩散模型已成为控制视频合成的变革性工具，融合文本、图像、音频和姿态序列以生成语义上有意义的内容。尽管取得了显著进展，但在时间一致性、多模态对齐和人类中心运动生成方面仍存在关键缺口。现有综述未能清晰阐述这些组件之间的复杂相互作用，尤其是生理约束和身份保留在人体运动合成中的作用。本综述通过统一的架构框架提供全面分析，考察空间-时间表示和多模态条件机制。我们首次系统评估人类中心运动建模，解决生理可行性和身份一致性挑战。分析揭示计算效率与生成质量之间的根本权衡，报告的专用技术如时间块剪枝在特定基线下可实现高达523倍的计算节省，同时质量损失最小（参见第6.3节的可比性注意事项）。关键发现表明，当前方法在无缝多模态集成方面存在困难，人类中心应用在物理约束过于严格时会出现“怪异谷”效应，身份保留与运动动力学相冲突。我们提出MIME-Vid（多模态集成与运动增强视频生成）作为概念参考框架，落实我们分析中识别的统一原则（参考灵活性、物理感知不对称性和层级解耦）；MIME-Vid的实证验证将留待后续工作。此外，我们提出了新颖的评估范式，并确定了推进多模态视频生成的未来研究方向。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
     "doi:10.1007/s10462-026-11701-8": {
       "doi": "10.1007/s10462-026-11701-8",
       "journal_slug": "artificial-intelligence-review",
@@ -1912,6 +1925,19 @@
       "abstract_zh": "摘要：多组学整合已成为精准医学的核心，但在真实临床队列中，完整的多层次剖面很少实现。成本、检测失败和研究设计的演变常导致块状模态缺失，即某些患者缺少完整的组学层。此情形为预测建模和生物标志物发现提出了独特挑战，因为传统的整合方法往往假设完全配对数据，或依赖完整案例过滤或逐点插补，导致信息损失或推断偏倚。为此，越来越多的方法被开发出来，通过缺失感知融合、子集条件推断的共享潜在表示以及模态补全框架，从部分观测的多组学数据中学习。本综述呈现了针对异质模态可用性下结果建模的系统方法分类，主要聚焦于患者级别的批量数据和临床预测任务，并讨论了为单细胞或无监督场景开发的表示学习框架，其缺失模态处理机制在架构上可迁移至监督临床预测。我们对比了设计理念、推断机制和鲁棒性特征，并考察了单细胞马赛克整合方法在队列级建模中的可迁移性。通过阐明缺失模态策略的假设、鲁棒性和经验行为，我们旨在为在真实临床环境中处理部分观测多组学数据的模型选择与开发提供一个原则性框架。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-11T22:32:10.370792+00:00"
+    },
+    "doi:10.1007/s10462-026-11705-4": {
+      "doi": "10.1007/s10462-026-11705-4",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Artificial intelligence for dual-arm robotic multi-peg-in-hole assembly: a review",
+      "acquired_at": "2026-09-13T19:29:47",
+      "source_title_sha256": "f743df70c8ca9cd0427dae2f874a4fca705c0a392c72c15641956f9aaf64c164",
+      "source_abstract_sha256": "8393c7efb1355f1007143edd48e980b88cb6c2885fcfea23ef1c64b0c921234a",
+      "source_abstract": "abstract",
+      "title_zh": "双臂机器人多孔插入装配的人工智能综述",
+      "abstract_zh": "人工智能综述——双臂机器人多孔插入装配（DA-MPiH）是一项涉及多点接触耦合、双手闭链约束等的高接触操作任务，...",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
     },
     "doi:10.1016/j.brs.2026.103117": {
       "doi": "10.1016/j.brs.2026.103117",
@@ -2582,12 +2608,12 @@
       "title": "TMS-EEG Correlate of Suicidal Ideation in Individuals with Depression: A Multi-Site Synthesis",
       "acquired_at": "2026-09-12T19:10:13",
       "source_title_sha256": "4357d0e678fe11e193cff662179e5cdc004e55b3e5a7ed67c0305a4d478c9e0b",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "抑郁患者中TMS-EEG与自杀念头的相关性：多中心综合研究",
-      "abstract_zh": null,
+      "source_abstract_sha256": "8f5c5950101f28547d0487925d439bc351a9281dc249f254b1c19cf3b543a805",
+      "source_abstract": "abstract",
+      "title_zh": "多中心研究：TMS-EEG 与抑郁症患者自杀意念的相关性",
+      "abstract_zh": "背景：自杀意念（SI）是导致自杀死亡的主要风险因素，在精神病人群中终身患病率为35-40%。然而，SI 的神经生物学机制尚不清楚。初步研究表明，SI 与经颅磁刺激结合脑电图（TMS‑EEG）得到的神经生理指标存在关联。方法：本研究旨在检验 SI 与两项 TMS‑EEG 指标的关联：100 ms 负峰（N100）和全局平均场幅度（GMFA）的曲线下面积（AUC）。在多中心数据综合中，收集了299名患有重性抑郁障碍且至少经历过一次无效抗抑郁药治疗的成年参与者的横断面 TMS‑EEG 数据，数据来自五家学术医疗中心。单脉冲 TMS 以左侧背外侧前额叶皮层（DLPFC）为刺激点，同时记录 EEG。结果：为每位参与者提取了80–130 ms 期间的 N100 峰幅值以及55–275 ms 期间的 AUC‑GMFA。序数回归分析显示，左侧 DLPFC 的 N100 峰幅值越负，SI 的严重程度越高（OR = 1.52，p = 0.002，95% CI [1.17;1.98]），与年龄、性别、抑郁严重程度和研究地点无关。GMFA 与 SI 之间无显著关联。结论：左侧 DLPFC 的 N100 峰幅值是 SI 的神经生理学相关指标，可能反映 GABA 能性抑制失调与 SI 病理生理学之间的神经生理学联系。需要进一步研究，通过安慰剂 TMS‑EEG 验证结果，并随后评估左侧 DLPFC N100 作为 SI 生物标志物和潜在治疗靶点的实用性。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-12T19:31:38.627688+00:00"
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
     },
     "doi:10.1016/j.brs.2026.103208": {
       "doi": "10.1016/j.brs.2026.103208",
@@ -8588,12 +8614,38 @@
       "title": "RORα as a Context-Dependent Transcriptional Stabilizer in the Nervous System",
       "acquired_at": "2026-09-12T19:20:59",
       "source_title_sha256": "9193554acd35312f1af845e88cc620f18205b3466627f8abfed7ca4c93bd79c4",
+      "source_abstract_sha256": "9e3e11df8d6c2df3e393182ef99494f611ba2ebd60b6c71160397616407d34d4",
+      "source_abstract": "abstract",
+      "title_zh": "RORα 作为神经系统中情境依赖的转录稳态调节因子",
+      "abstract_zh": "RORα 已被认为与神经发育、昼夜节律调控、神经免疫信号传导和神经保护相关，然而这些功能往往被单独讨论。在本综述中，我们提出这些多样化的角色可以通过将 RORα 视为一种在情境中维持转录程序的调节因子来更连贯地理解。RORα 并非单一通路的开关，而是帮助维持可适应的基因表达程序。我们首先概述 RORα 功能的分子基础，然后探讨其如何参与神经发育、炎症稳态、昼夜节律调控以及在代谢、缺血和退行性压力下的细胞韧性。总体而言，这一视角为解释 RORα 在神经系统中多样功能提供了更为整合的框架，并可能指导未来关于神经韧性和疾病易感性的研究。通过将 RORα 定位为核受体网络中的调节枢纽，该框架还为理解复杂神经疾病的发病机制以及开发结合昼夜节律调节与神经保护的治疗方案提供了独特且具有转化意义的视角。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106971": {
+      "doi": "10.1016/j.neubiorev.2026.106971",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Evidence-based Measurement of Gambling Disorder: A Review of Instruments for Different Purposes",
+      "acquired_at": "2026-09-13T19:43:07",
+      "source_title_sha256": "06cd65a7a37219ebafdab6a6ac4aafb35de463ec32a22033fa824e2662e9531d",
       "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "source_abstract": null,
-      "title_zh": "RORα 作为神经系统中情境依赖的转录稳定因子",
+      "title_zh": "基于证据的赌博障碍测量：不同目的工具综述",
       "abstract_zh": null,
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-12T19:31:38.627688+00:00"
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106972": {
+      "doi": "10.1016/j.neubiorev.2026.106972",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "The Interacting Language Network: A Framework for Neuromodulation and Clinical Translation",
+      "acquired_at": "2026-09-13T19:43:07",
+      "source_title_sha256": "c8a3b5159d680aa19739888f84800314f595164e4b25fc84bcc66521afac2b46",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "交互语言网络：神经调制与临床转化的框架",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -17500,6 +17552,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-06T19:30:52.072281+00:00"
     },
+    "doi:10.1038/d41586-026-02412-9": {
+      "doi": "10.1038/d41586-026-02412-9",
+      "journal_slug": "nature",
+      "title": "Like coffee and ice cream: an interview with Sam and Eli Morten",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "aff23544fa72511fe2386174df19804a037c87176aae5ddfacb414decb7ea010",
+      "source_abstract_sha256": "23495862b125e2cfda6946acdcbec477729fb55e5d9c586ec3fe0b6c93f7c595",
+      "source_abstract": "abstract",
+      "title_zh": "像咖啡与冰淇淋：与萨姆·和伊利·莫滕的访谈",
+      "abstract_zh": "联合行动。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
     "doi:10.1038/d41586-026-02419-2": {
       "doi": "10.1038/d41586-026-02419-2",
       "journal_slug": "nature",
@@ -18176,6 +18241,110 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-14T19:34:11.648985+00:00"
     },
+    "doi:10.1038/d41586-026-02505-5": {
+      "doi": "10.1038/d41586-026-02505-5",
+      "journal_slug": "nature",
+      "title": "Harnessing nuclear power for a clean-energy future",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "61a890ab9db94e69275f4cd661b80e4bbaa72a2bd91884ff43e6944991268d89",
+      "source_abstract_sha256": "5553fa6b0082ea526279f6564d41f14873bcebd5a7a0975a75f460a866f4c960",
+      "source_abstract": "abstract",
+      "title_zh": "利用核能实现清洁能源的未来",
+      "abstract_zh": "利用裂变产生电力有着复杂的历史。新方法，如更小型的反应堆，可能将该技术转变为更灵活、持续、无碳排放的能源来源。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1038/d41586-026-02506-4": {
+      "doi": "10.1038/d41586-026-02506-4",
+      "journal_slug": "nature",
+      "title": "Smaller reactors bring nuclear power closer to fulfilling its promise",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "b9e8273ebe760158d51830d74691cf6c6a5ab0ea615ec8540deec11fefab5511",
+      "source_abstract_sha256": "d1cfbd825002832ed0fdc59b05534bb129a9241b324e2ddbad5338c7a12c432f",
+      "source_abstract": "abstract",
+      "title_zh": "更小型反应堆让核能更接近实现其潜力",
+      "abstract_zh": "受过去灾难阴影的影响，核工程师正在研发不同类型的反应堆、燃料、冷却剂和材料，以期使核裂变成为首选的零碳能源技术。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1038/d41586-026-02508-2": {
+      "doi": "10.1038/d41586-026-02508-2",
+      "journal_slug": "nature",
+      "title": "The best-managed industrial waste in history",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "edad6459cf98a47b441d3f23400a5489151f6a4a2110a28900ca419f6ff46f89",
+      "source_abstract_sha256": "f111fc61f572ab88887ec97e0035c58e2595f0944a9d44763802e95a834a121c",
+      "source_abstract": "abstract",
+      "title_zh": "历史上管理最优的工业废弃物",
+      "abstract_zh": "扩大核能使用将即使在缺乏新型废物处置方案的情况下也能保护环境。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1038/d41586-026-02510-8": {
+      "doi": "10.1038/d41586-026-02510-8",
+      "journal_slug": "nature",
+      "title": "Can nuclear reactors hit the road?",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "3597a78cd13850d58dc39424eb804fe4a926f3b9517f653540f80b538159a7e5",
+      "source_abstract_sha256": "2b5a289daf5308df48ac62ae60419ae56c05a4e43f9aeb3ccd7ee6ca453fe423",
+      "source_abstract": "abstract",
+      "title_zh": "核反应堆能上路吗？",
+      "abstract_zh": "能够装进卡车的裂变设施可能为需要的地方提供便携式电力——但有人质疑其成本、安保妥协以及将核武器原料送入社区的风险是否值得。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1038/d41586-026-02511-7": {
+      "doi": "10.1038/d41586-026-02511-7",
+      "journal_slug": "nature",
+      "title": "A raft of start-up firms is betting on nuclear fusion",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "04b34146f0b3d92f7905a144978f68e8a7dffe45b93b9a5c63b94172fb181aaa",
+      "source_abstract_sha256": "90abe128d3e22547323870cb3acc24d097a54b8ab4b402be92e79c8de4bee667",
+      "source_abstract": "abstract",
+      "title_zh": "一批初创公司正押注核聚变",
+      "abstract_zh": "使恒星发光并使氢弹爆炸的现象尚未被可靠地控制用于能源生产，但这并未阻止企业尝试。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1038/d41586-026-02512-6": {
+      "doi": "10.1038/d41586-026-02512-6",
+      "journal_slug": "nature",
+      "title": "Five highlights from nuclear-power research",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "33c8b8d47f890dab8271c83704ce7b7c4a7d2358549a49cd8b7371ca27aec488",
+      "source_abstract_sha256": "b2c619a4f4063fc9f39ed02eb2a056c0cd93940289a68ed30c6d3e6a2c9b8efb",
+      "source_abstract": "abstract",
+      "title_zh": "核能研究的五大亮点",
+      "abstract_zh": "先进材料、癌症风险分析及近期研究的其他进展。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1038/d41586-026-02513-5": {
+      "doi": "10.1038/d41586-026-02513-5",
+      "journal_slug": "nature",
+      "title": "The 46 companies scrambling to commercialize fusion for energy",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "349a4c1346697c433e19c9b34bde0a913f436850d0ae4163de843ab64d0f7201",
+      "source_abstract_sha256": "323863b689de7e9b99b670aa6b98f702cc6f0f37d5d326d9220570e334b8e10d",
+      "source_abstract": "abstract",
+      "title_zh": "46家企业争相将聚变能源商业化",
+      "abstract_zh": "尚不清楚数十亿美元的投资是否能带来无穷无尽的清洁电力来源。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1038/d41586-026-02514-4": {
+      "doi": "10.1038/d41586-026-02514-4",
+      "journal_slug": "nature",
+      "title": "Using nuclear waste to power space missions",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "1f3c95c0aa68bad3e8c497de57646c00a7b8d2401764a997097b66ea6cec06c1",
+      "source_abstract_sha256": "7fc25e86d32eda8def9cb927820688cc92424f8a8a2bb9bc8d20fae5e2f40a55",
+      "source_abstract": "abstract",
+      "title_zh": "利用核废料为太空任务供能",
+      "abstract_zh": "研究人员计划使用放射性同位素为未来的火星车系统供能。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
     "doi:10.1038/d41586-026-02515-3": {
       "doi": "10.1038/d41586-026-02515-3",
       "journal_slug": "nature",
@@ -18566,6 +18735,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-12T19:31:38.627688+00:00"
     },
+    "doi:10.1038/d41586-026-02568-4": {
+      "doi": "10.1038/d41586-026-02568-4",
+      "journal_slug": "nature",
+      "title": "South Africa’s ‘registration law’ for scientists could be a template for the world — if the nation gets it right",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "e88f03995a7cd1261427a102c77b49ad36f1dba535ecef5ecfa08b1e32ce226a",
+      "source_abstract_sha256": "4533bc453cf702826c3769d86ccaba41f3fc6789652f2737154c2af9bccdf0b9",
+      "source_abstract": "abstract",
+      "title_zh": "南非“注册法”或成为全球范例——若能完善实施",
+      "abstract_zh": "强制部分科学家向专业机构注册的计划可能有助于保护公众和环境，但目前的版本缺乏明确性。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
     "doi:10.1038/d41586-026-02569-3": {
       "doi": "10.1038/d41586-026-02569-3",
       "journal_slug": "nature",
@@ -18578,6 +18760,19 @@
       "abstract_zh": "科学家和出版商正在测试一种新型软件，声称在识别AI生成文本方面具有令人印象深刻的准确性。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-12T19:31:38.627688+00:00"
+    },
+    "doi:10.1038/d41586-026-02570-w": {
+      "doi": "10.1038/d41586-026-02570-w",
+      "journal_slug": "nature",
+      "title": "The baffling science of SSRIs: how do they really work?",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "c9d87c1b7f294291a01cfcfa5613fe5b52b64c5700c18aa74d0b673fc4d01078",
+      "source_abstract_sha256": "c522fa525955ec55d10a55a63ea7dd07c94454da59699b931ea5177eca8bfc70",
+      "source_abstract": "abstract",
+      "title_zh": "SSRI的迷惑科学：它们究竟如何发挥作用？",
+      "abstract_zh": "全球最受欢迎的抗抑郁药正受到质疑。但它们真的比海洛因更难戒断吗？",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
     },
     "doi:10.1038/d41586-026-02571-9": {
       "doi": "10.1038/d41586-026-02571-9",
@@ -18800,6 +18995,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-07T22:33:21.314064+00:00"
     },
+    "doi:10.1038/d41586-026-02611-4": {
+      "doi": "10.1038/d41586-026-02611-4",
+      "journal_slug": "nature",
+      "title": "Asthma in some boys stops at puberty: mouse results hint at why",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "aa6a3240a26cd010c49f4cbd640b0fbd5f6e7bab21e1bcdb52ec413c5cc6fee2",
+      "source_abstract_sha256": "57331bfc9c43e1ee308e91d8e33bc57a5c560af274d68d781c722e28f4759959",
+      "source_abstract": "abstract",
+      "title_zh": "部分男孩哮喘在青春期停止：小鼠实验提示原因",
+      "abstract_zh": "研究表明，雄性激素对肺部神经末梢有影响。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
     "doi:10.1038/d41586-026-02612-3": {
       "doi": "10.1038/d41586-026-02612-3",
       "journal_slug": "nature",
@@ -18943,6 +19151,32 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-09T22:35:34.612034+00:00"
     },
+    "doi:10.1038/d41586-026-02635-w": {
+      "doi": "10.1038/d41586-026-02635-w",
+      "journal_slug": "nature",
+      "title": "More than 18,000 questionable images found in antibody catalogues of 15 companies",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "453f607d01d4c057b667f38bd1f6e5a940ec75c57fd3fa996c46b8efeb02c851",
+      "source_abstract_sha256": "e6beac83eac82565e89918f0edee3a02f139fba7765c07e2a54fe165d90a96f6",
+      "source_abstract": "abstract",
+      "title_zh": "在15家公司抗体目录中发现超过18,000张可疑图像",
+      "abstract_zh": "科学侦探的发现引发了研究人员在提升商业抗体可靠性方面的疑问。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1038/d41586-026-02638-7": {
+      "doi": "10.1038/d41586-026-02638-7",
+      "journal_slug": "nature",
+      "title": "Daily briefing: Personalized mRNA vaccine shows promise for cancer",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "889ec9c50e9a4bda6ad1f370c5471029a1bacef598c467d51eb547d9455251b9",
+      "source_abstract_sha256": "0e4d04b683a03ff381e6547823fbf7af2139412f265d0d37612222ffc4918355",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：个性化mRNA疫苗显示出抗癌前景",
+      "abstract_zh": "来自一项针对黑色素瘤的疫苗试验的好消息。此外，美国国家科学基金会（NSF）即将公布40年来最低的新资助数量，另外还有一层活跃的土壤层在保护和产生沙漠土壤。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
     "doi:10.1038/d41586-026-02641-y": {
       "doi": "10.1038/d41586-026-02641-y",
       "journal_slug": "nature",
@@ -18955,6 +19189,32 @@
       "abstract_zh": "帮助人们行走、奔跑和跳跃的技术正迅速从实验室走向户外徒步路径。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-09T22:35:34.612034+00:00"
+    },
+    "doi:10.1038/d41586-026-02661-8": {
+      "doi": "10.1038/d41586-026-02661-8",
+      "journal_slug": "nature",
+      "title": "The brain struggles to make new neurons in people with depression",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "998bf689af3b857a064f4125eb1978aa581e2fb13e4ecafc81cf81babebad0c0",
+      "source_abstract_sha256": "6f5cb9e3b5ad29de0f261482cdbc76a69778fdf16ef25e9ee2126b2161ae38cb",
+      "source_abstract": "abstract",
+      "title_zh": "抑郁症患者大脑难以生成新神经元",
+      "abstract_zh": "高分辨率、广覆盖的海马体地图揭示了潜在的治疗途径。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
+    },
+    "doi:10.1038/d41586-026-02665-4": {
+      "doi": "10.1038/d41586-026-02665-4",
+      "journal_slug": "nature",
+      "title": "Daily briefing: How ‘thunderquakes’ probe underground geology",
+      "acquired_at": "2026-09-13T19:13:47",
+      "source_title_sha256": "b49dbdbc289b450525067ed39f02ef4fc0805aa2d434f349fa333e3514e9c4d4",
+      "source_abstract_sha256": "d8264c02cf4bb3a75931b61cefae4b81309ea8b662c5f10b50a2f7e5371f616d",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：‘雷震’如何探测地下地质",
+      "abstract_zh": "雷声产生声波，可帮助科学家探测地球；有人将自身线粒体注入眼内以恢复视力；经济学家呼吁‘亲工’型人工智能。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
     },
     "doi:10.1038/s41380-026-03626-z": {
       "doi": "10.1038/s41380-026-03626-z",
@@ -21360,6 +21620,19 @@
       "abstract_zh": "该来源仅提供期刊名称，未提供摘要。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-07T22:33:21.314064+00:00"
+    },
+    "doi:10.1038/s41380-026-03868-x": {
+      "doi": "10.1038/s41380-026-03868-x",
+      "journal_slug": "molecular-psychiatry",
+      "title": "PQBP1-dependent alternative RNA splicing underlies high calorie diet-induced cognitive impairment",
+      "acquired_at": "2026-09-13T19:22:42",
+      "source_title_sha256": "cba6aeeffe5d963fce80830c2b193bd0fa5af911cb3f78556c0737f528d93262",
+      "source_abstract_sha256": "ecbf558a95355a0881f7ab84e20f9dd2d9986774be1b3b7dc29512880ddb1918",
+      "source_abstract": "abstract",
+      "title_zh": "PQBP1依赖的可变剪接导致高热量饮食诱导的认知障碍",
+      "abstract_zh": "高热量高脂饮食（HFD）已被认为是脑疾病（包括神经退行性痴呆）的一种病理修饰因子，但其详细分子机制仍 largely 未知。我们报告，HFD 抑制 PPARγ 介导的 PQBP1 转录表达，PQBP1 是一种与人类智力障碍和阿尔茨海默病相关的 RNA 剪接因子。利用 RNAseq 对 HFD 饲养 1 周或 6 周的老鼠以及 PQBP1 条件敲除（cKO）老鼠的可变剪接（AS）进行全面分析，发现它们的共同变化主要影响与突触相关的基因。通过基于介数的核心分子提取，识别出 CASK、Cacnb1 和 Cyfip2 为网络中的关键分子。CASK 与 Cacnb1 通过直接相互作用调控 STXBP1，STXBP1 是导致婴儿癫痫综合征的致病基因，也是突触囊泡释放的必需因子。此外，我们的分析表明 Syt1 在 HFD 1 周时具有特异性作用。HFD 诱导的 CASK、Cacnb1、Cyfip2 和 Syt1 的 AS 异构体损害了原突触囊泡的释放。AAV-PQBP1、AAV-CASK、AAV-Cacnb1、AAV-Cyfip2 或 AAV-Syt1 能在 HFD 老鼠中恢复突触和/或认知功能，进一步支持 PQBP1-原突触轴在 HFD 中的病理作用。免疫组化实验还提示该病理轴不仅在兴奋性神经元中发挥作用，也在抑制性神经元中发挥作用。综上所述，我们的结果揭示了高热量饮食暴露下导致脑功能障碍的全新分子机制。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-13T22:30:36.695036+00:00"
     },
     "doi:10.1038/s41380-026-03870-3": {
       "doi": "10.1038/s41380-026-03870-3",
