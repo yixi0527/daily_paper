@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-09-19T22:32:33.478089+00:00",
+  "updated_at": "2026-09-20T22:31:41.882467+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -1796,6 +1796,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1007/s10462-026-11677-5": {
+      "doi": "10.1007/s10462-026-11677-5",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Partial differential equations in the age of machine learning: a critical synthesis of classical, machine learning, and hybrid methods",
+      "acquired_at": "2026-09-20T19:34:40",
+      "source_title_sha256": "03ddccd1c0c72e0447eeadf6ba9eaaf17520a7d46cc96477805647b0d2f38cb1",
+      "source_abstract_sha256": "58f46df8ed56f2516d0483ada82f69ebd90d7db8d9ac8164d8a93122f297da54",
+      "source_abstract": "abstract",
+      "title_zh": "在机器学习时代的偏微分方程：经典、机器学习与混合方法的批判性综述",
+      "abstract_zh": "摘要：偏微分方程（PDEs）支配着从宏观到微观的所有科学现象，但其计算求解仍是现代科学的核心挑战之一。本综述通过统一的评估框架，聚焦六大基本计算难题——高维性、非线性、几何复杂性、断层、多尺度现象与多物理耦合——对两种成熟但本体论上截然不同的求解范式进行评估：经典数值方法与机器学习方法。经典方法（有限差分、有限元、有限体积、谱离散化等）在结构保持、严格收敛理论和可扩展求解器设计方面被评估，并详细阐述其在高维和几何复杂环境中的持续局限。机器学习方法（物理信息神经网络、神经算子、图网络、变压器、生成模型及混合框架等）按物理知识融入程度进行分类，并以同样的批判性标准进行评估。核心发现是：经典方法是演绎型——误差可由PDE结构和离散化参数推导得到；机器学习方法是归纳型——精度取决于训练分布的统计接近度。这一区别决定了各自能证明什么，而非哪种范式更优。我们识别了三种真正的互补性，并提出混合设计原则，包括结构继承问题框架和误差预算分解，将离散化误差、神经近似误差与耦合误差分离。进一步评估了新兴前沿技术，如科学计算基础模型、可微分编程用于逆向设计、量子算法和万亿级协同设计，并将其与决定当前障碍是否根本或取决于工程进展的结构约束进行对照。结论并非某一范式取代另一种，而是两者在其互补优势基础上的原则性整合，为解决单一范式无法独立攻克的最重要开放问题提供了最可信的路径。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
     "doi:10.1007/s10462-026-11678-4": {
       "doi": "10.1007/s10462-026-11678-4",
       "journal_slug": "artificial-intelligence-review",
@@ -2068,6 +2081,19 @@
       "abstract_zh": "人工智能评论 - 强化学习（RL）已成为升级推荐系统的有前景方法，尤其是在动态和不断演变的用户环境中。传统的……",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-19T22:32:33.478089+00:00"
+    },
+    "doi:10.1007/s10462-026-11709-0": {
+      "doi": "10.1007/s10462-026-11709-0",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "A survey of threats against voice authentication and anti-spoofing systems",
+      "acquired_at": "2026-09-20T19:34:40",
+      "source_title_sha256": "354dab10eb16202047875184b8f37b1a3d54c970e88ff74e66eba20d2085e9e2",
+      "source_abstract_sha256": "e56e2fa545af4cabcc144ad6967b0285156d92851e09834ccb0891705b1f7b71",
+      "source_abstract": "abstract",
+      "title_zh": "语音身份验证与反欺骗系统威胁调查",
+      "abstract_zh": "摘要 语音身份验证已从基于手工设计声学特征的传统系统发展为直接从音频中学习说话人表示的深度学习模型。这一进展提升了准确性，但也打开了新的攻击面。以往的综述将这些威胁孤立讨论；本文则提供了对语音身份验证四大主要攻击向量的统一分析：数据投毒、对抗扰动、音频深度伪造和对抗性欺骗。我们从攻击者所知、攻击方式以及跨说话人和输入的泛化范围三条轴线对其进行组织。比较这些向量揭示了威胁成熟度的明显差距。对抗扰动在攻击者拥有完整模型访问时有效，但在音频通过空中播放后往往失效。相反，深度伪造易于扩展，且无需模型访问即可成功，并且经常欺骗机器和人类听众。现有的反欺骗对策（CMs）大多是被动的，且可被自适应攻击绕过。我们以映射未解决挑战并主张采用标准化威胁模型和主动、实时防御来结束本文。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1007/s10462-026-11714-3": {
       "doi": "10.1007/s10462-026-11714-3",
@@ -8991,12 +9017,12 @@
       "title": "The attentional switching framework: A dual process account of how the brain switches when attention switches",
       "acquired_at": "2026-09-09T20:09:56",
       "source_title_sha256": "f2b8e94f6840abc5368bfae2d715751d844074fa5a37c64f4cedd94eac00f43c",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "注意力切换框架：大脑在注意力切换时的双重过程解释",
-      "abstract_zh": null,
+      "source_abstract_sha256": "2b8d51e0348d74894d5c0926c9b265c7ed9c222d5057cf4580de9b525bf85c2d",
+      "source_abstract": "abstract",
+      "title_zh": "注意力切换框架：大脑在外部与内部注意力切换时的双重过程解释",
+      "abstract_zh": "灵活地在外部事件与内部事件之间切换注意力的能力对日常任务至关重要，但关于这一切换在认知和神经层面如何运作的研究仍在发展中。本文探讨了以下问题：当注意力在外部与内部状态之间切换时，大脑如何实现这一过程？我们提出了注意力切换框架（Attentional Switching Framework），该框架认为在外部与内部注意力状态之间的切换涉及两种看似相反的机制，并由不同的神经基础支撑。首先，基于我们的资源依赖账户（Resource Dependent Account），注意力切换的调节涉及一个领域通用机制，该机制决定何时以及如何将注意力焦点从外部状态转移到内部状态。该机制主要招募相似的一组大脑区域和通路，无论切换到哪种注意力状态，表明存在一个共同的神经机制来启动注意力切换。其次，依据我们的资源独立账户（Resource Independent Account），外部与内部注意力状态的维持涉及领域特定的表征。这些表征主要招募不同的大脑区域和通路，表明维持每种注意力状态的神经机制在很大程度上是可分离的。综上所述，我们认为当注意力切换时，大脑会调动一个双重过程系统：一个共同机制支持切换的调节，另一个可分离机制支持注意力状态的表征。在强调不同大脑区域和通路在注意力切换中所发挥的独特作用的同时，我们的框架调和了关于外部与内部注意力切换是否涉及共同或不同机制的表面矛盾，并提出了重要的现实应用和临床意义。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-19T22:32:33.478089+00:00"
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106967": {
       "doi": "10.1016/j.neubiorev.2026.106967",
@@ -9066,15 +9092,15 @@
     "doi:10.1016/j.neubiorev.2026.106972": {
       "doi": "10.1016/j.neubiorev.2026.106972",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "The Interacting Language Network: A Framework for Neuromodulation and Clinical Translation",
+      "title": "The interacting language network: A framework for neuromodulation and clinical translation",
       "acquired_at": "2026-09-13T19:43:07",
-      "source_title_sha256": "c8a3b5159d680aa19739888f84800314f595164e4b25fc84bcc66521afac2b46",
-      "source_abstract_sha256": "5e946af2382cdc21f157f48779888e404807fdc5acba85ac9e741e88ac522b32",
+      "source_title_sha256": "902fbf4168615757f637fcbd727851ce5247257800de70641a3cab835c2da1e0",
+      "source_abstract_sha256": "27da1ae34ccdffb494e1a75efe484dc8b982cc935b9af0f97b9b550ea0044575",
       "source_abstract": "abstract",
       "title_zh": "交互语言网络：神经调制与临床转化的框架",
-      "abstract_zh": "中风、神经退行性疾病或神经发育异常导致的语言障碍显著削弱沟通能力和生活质量。尽管行为和神经调制疗法已取得进展，治疗效果仍有限。对单一脑区局部兴奋性的调制尝试收益有限。我们主张将语言神经调制从针对孤立区域的干预转向调控分布式神经网络。为支持这一转变，我们提出交互语言网络（ILN）理论框架，整合局部功能专化与分布式处理的证据。ILN通过形式化感运动与异模态语言回路之间的动态交互，阐释灵活沟通的机制。ILN基于进化学、神经生物学和临床研究，指出复杂语言能力依赖于人类关联皮层和白质通路的非比例扩张，从而实现专门区域之间的长距离通信。来自神经正常与临床人群的汇聚发现表明，尽管特定区域对语言有独特贡献，其功能关键取决于动态交互，尤其是前额叶与颞顶叶区域之间的交互。ILN阐明了语言网络的结构与交互原理的现有认知，指出阻碍进展的重要空白，并概述推进基于网络的语言障碍神经调制的具体路径。最终，针对交互语言网络而非孤立区域的干预有望为语言障碍个体提供更有效、更个性化的治疗。",
+      "abstract_zh": "中风、神经退行性疾病或神经发育异常导致的语言障碍显著削弱沟通能力和生活质量。尽管行为和神经调制疗法已取得进展，治疗效果仍有限。对单一脑区局部兴奋性的调制尝试收益有限。我们主张将语言神经调制从针对孤立区域的干预转向调节分布式神经网络。为支持这一转变，我们提出交互语言网络（ILN）理论框架，整合局部功能专门化与分布式处理的证据。ILN通过形式化感运动与异质语言回路之间的动态交互，阐明其如何实现灵活沟通。ILN基于进化学、神经生物学和临床研究，显示复杂语言能力依赖于人类关联皮层和白质通路的非比例扩张，从而实现专门化区域之间的长距离通信。来自神经正常与临床人群的汇聚发现表明，尽管特定区域对语言有独特贡献，但其功能关键取决于动态交互，尤其是前额叶与颞顶叶区域之间的交互。ILN阐明了语言网络的结构与交互原则，指出阻碍进展的重要空白，并提出具体路径以推进基于网络的语言障碍神经调制。最终，针对交互语言网络而非孤立区域的干预有望为语言障碍个体提供更有效、个性化的治疗。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-14T22:32:02.268010+00:00"
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106973": {
       "doi": "10.1016/j.neubiorev.2026.106973",
@@ -9141,6 +9167,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-19T22:32:33.478089+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.106978": {
+      "doi": "10.1016/j.neubiorev.2026.106978",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "When effort fails: Instances and reasons for effort-performance decoupling",
+      "acquired_at": "2026-09-20T19:49:19",
+      "source_title_sha256": "95fd9d8f0a9e76b1023bebc597a175b343f55b6804dfae48e44f59a8f398de8f",
+      "source_abstract_sha256": "71186744c3a80dc2873f56ba216bdad07692b5444b929ae6534468f861f1b1af",
+      "source_abstract": "abstract",
+      "title_zh": "当努力失败时：努力-表现解耦的实例与原因",
+      "abstract_zh": "在各个领域，努力常被视为支持表现的因素，而表现也常被用来推断努力。然而，观察到的努力-表现关系并不像这些假设所暗示的那样直截了当，凸显了努力与表现可能解耦的条件。本文综述了导致表面解耦的四大类因素：（1）系统极限；（2）低效与噪声；（3）测量不匹配；（4）动机误导。我们展示了这些因素如何在认知领域以及物理领域中导致实时（并发）解耦和随时间推移的前瞻性解耦。通过将这些因素在本体论上归类为结构性、统计性、认知性和心理性解耦源，我们识别了跨研究领域的努力-表现关系的共性。我们强调它们如何解释表面上的非线性，包括努力-表现关系中的权衡与平台化。该视角可作为跨学科研究努力-表现动力学的议程，帮助研究者和从业者更好地描述、报告和理解努力-表现（解）耦合。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
     "doi:10.1016/j.neubiorev.2026.106979": {
       "doi": "10.1016/j.neubiorev.2026.106979",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
@@ -9153,6 +9192,19 @@
       "abstract_zh": "全球肥胖和代谢功能障碍的上升引发了对其与抑郁、认知障碍以及阿尔茨海默病（AD）相关病理之间联系的关注。高脂饮食（HFD）暴露、过度脂肪堆积和代谢功能障碍可能各自促成这些结果，但它们代表了生物学上不同的状态，不能视为可互换。流行病学证据表明这些条件之间存在关联，然而连接它们的分子通路仍未得到充分阐明。本系统综述整合了当前关于HFD暴露、过度脂肪堆积和代谢功能障碍如何参与与抑郁相关结果、认知障碍和AD相关病理的重叠机制的证据。我们提出了一个综合的生物力学模型，说明HFD暴露如何通过部分重叠的机制促成抑郁相关结果、认知障碍和AD相关病理。该模型以经典的应激-易感性视角的分子表述呈现，强调饮食暴露如何与既有的遗传、表观遗传和环境易感因素相互作用，削弱大脑对各种压力源的适应能力。最后，我们讨论了转化意义，识别了针对饮食、药物和生活方式干预的潜在靶点，这些干预与抑郁相关和认知结果的共享机制相关，同时指出了理解中的关键空白——如性别特异效应、发育时机和人类转化证据——需要进一步研究。人类证据主要是观察性的，尚未证明这些机制在临床诊断的抑郁或AD中同样运作。未来需要纵向研究整合饮食暴露、代谢和炎症生物标志物、神经影像学、认知评估和临床诊断，以更好地定义人类易感性，并提供针对性的预防和干预策略。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-19T22:32:33.478089+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106980": {
+      "doi": "10.1016/j.neubiorev.2026.106980",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Fatigue relief through neuroimaging-informed neuromodulation: a Perspective from the Italian Society of Neuromodulation and Neurotechnologies",
+      "acquired_at": "2026-09-20T19:49:19",
+      "source_title_sha256": "a2850c9e3819fc0cfe9de8dc07c1ea801c3cd0033f5deb81b1e8dcf514411daa",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "通过神经影像信息指导的神经调制缓解疲劳：意大利神经调制与神经技术学会的视角",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106981": {
       "doi": "10.1016/j.neubiorev.2026.106981",
@@ -9251,12 +9303,38 @@
       "title": "Central Nervous System Effects of GLP-1 Receptor Agonists: A Systematic Review of Human Neuroimaging Studies",
       "acquired_at": "2026-09-19T19:35:51",
       "source_title_sha256": "e039dbc51353a7ea4ff075c488ddd6e10cf33e6fd45c1b64b8eb3c0705764636",
+      "source_abstract_sha256": "dec72d75feb2698e798e75cf2ccde0b0720900f1dbd33f3d1f1b55e2d4425313",
+      "source_abstract": "abstract",
+      "title_zh": "GLP-1受体激动剂对中枢神经系统的影响：人类神经影像学研究的系统综述",
+      "abstract_zh": "对胰高血糖素样肽-1受体激动剂（GLP-1RAs）的兴趣已从肥胖和糖尿病扩展到精神疾病和神经退行性疾病，越来越多的前临床和临床证据支持其潜在应用。然而，GLP-1RAs在中枢神经系统（CNS）中激活的机制尚未得到充分阐明，限制了优化其治疗潜力的能力。本系统综述整合了关于GLP-1RA相关CNS效应的文献，重点关注治疗相关的神经反应性、时间动力学以及CNS反应的调节因子。对PubMed和Embase进行系统检索，时间范围从创刊至2026年1月，纳入了结构磁共振成像（MRI）、任务相关和静息态功能MRI、分子影像学以及神经生理学方法的人类研究。共有37项研究符合纳入标准。综述证据表明，GLP-1RAs激活了分布式的皮质和皮质下脑系统。急性GLP-1RA给药后奖励相关反应性的减弱是最为一致的发现之一。值得注意的是，证据表明GLP-1RAs在奖励相关过程中的调节是差异化的，而非均匀地抑制奖励功能，且神经效应还会根据代谢状态和潜在表型而变化。多项研究还指出，CNS效应在治疗过程中会发生演变，短期治疗期间神经调节更为显著，而长期暴露后效应则减弱或改变。然而，当前的神经影像学文献受限于样本量小和方法学异质性，限制了跨研究的直接比较，并强调了更大程度标准化的必要性。本综述提供了GLP-1RAs激活的神经生物学机制的洞见，识别了潜在的CNS反应新模式，并对未来神经影像学研究的关键机制考虑和优先事项提出了建议。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106991": {
+      "doi": "10.1016/j.neubiorev.2026.106991",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Personalized Brain Stimulation based on Brain Oscillations: A Systematic Review of MEG- and EEG-informed Transcranial Alternating Current Stimulation (tACS)",
+      "acquired_at": "2026-09-20T19:49:19",
+      "source_title_sha256": "d34e1ff4adb02bab693f30c58d3969b227a66dea37ebde5dbd7caa417587ac8c",
       "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "source_abstract": null,
-      "title_zh": "GLP-1受体激动剂对中枢神经系统的影响：人类神经影像学研究的系统综述",
+      "title_zh": "基于脑振荡的个性化脑刺激：MEG 与 EEG 信息指导的经颅交流电刺激（tACS）系统综述",
       "abstract_zh": null,
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-19T22:32:33.478089+00:00"
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.106992": {
+      "doi": "10.1016/j.neubiorev.2026.106992",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "A Topological Architecture of Neurodivergence: Transdiagnostic Reframing of Autism, ADHD, Dyslexia, DCD, and High-Ability Profiles within the High Processing Cost Phenotypes (HPCPh) Framework.",
+      "acquired_at": "2026-09-20T19:49:19",
+      "source_title_sha256": "d05a9e98a887872675f9507c2c685eeddaa53dde9ec012cebe38028cc610e27e",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "神经多样性的拓扑架构：在高处理成本表型（HPCPh）框架下对自闭症、注意缺陷多动障碍、阅读障碍、运动协调障碍及高能力谱系的跨诊断重构",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106993": {
       "doi": "10.1016/j.neubiorev.2026.106993",
@@ -9264,12 +9342,12 @@
       "title": "Translational dysregulation as a mechanistic driver of cognitive, behavioral, and affective phenotypes in FXS and TSC",
       "acquired_at": "2026-09-19T19:35:51",
       "source_title_sha256": "b020efa15e7ec6d68b87fd3485a4d10746cf44acc8f5830fec099f3d8cd8e279",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "转化失调作为FXS和TSC认知、行为与情感表型的机制驱动因素",
-      "abstract_zh": null,
+      "source_abstract_sha256": "af31ad788b7f41e95a3b7369bf757cbf90e16e10bf492f4614e46c367cc4187f",
+      "source_abstract": "abstract",
+      "title_zh": "翻译失调作为FXS和TSC认知、行为与情感表型的机制驱动因素",
+      "abstract_zh": "神经发育障碍（NDDs）表现为认知、行为和情感方面的多样病理，反映了神经回路发育的潜在紊乱。新兴证据表明突触蛋白的翻译失调是这些异常表型的核心机制驱动因素。翻译失调涉及启动、延伸和mRNA靶向的异常机制，导致蛋白合成失衡。在NDDs中，突触蛋白的翻译在发育中的神经元中被扰乱。结节性硬化综合征（TSC）和脆性X综合征（FXS）是突出的单基因NDDs，其中调控基因（TSC中的Tsc1/Tsc2，FXS中的Fmr1）的突变破坏了与mTORC1、PERK和ERK/MAPK蛋白相交的信号通路，导致关键突触蛋白的过度或不足翻译。这些翻译失衡最终破坏突触形成、树突棘成熟和神经网络连通性，导致学习、记忆、社会行为和情绪调节的缺陷。本文综述了异常蛋白合成如何促成TSC和FXS的认知与行为表现的分子机制，并重点讨论了细胞类型特异性的机制，阐明翻译失调如何对不同的神经元和胶质细胞群体产生差异性影响，从而塑造行为和认知结果。了解翻译调控与神经发育结果之间的联系，为这些疾病的发病机制提供了关键见解，并为开发旨在恢复突触蛋白稳态的靶向治疗干预提供了依据。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-19T22:32:33.478089+00:00"
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -15303,6 +15381,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1038/d41586-026-01985-9": {
+      "doi": "10.1038/d41586-026-01985-9",
+      "journal_slug": "nature",
+      "title": "Is this the first glimpse of dark matter? Data point excites physicists",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "f33d8643fb2a63d75d8e0bd7a923f25b486f8911f1f147ba01e5921983302fc1",
+      "source_abstract_sha256": "dd8d0704c5f93897c68e60f5ea885fe7d8202c94ac3a6cec01d6b3760f410f9a",
+      "source_abstract": "abstract",
+      "title_zh": "这是否是暗物质的首次窥见？数据点激发物理学家",
+      "abstract_zh": "一项实验观察到与长期追寻的弱相互作用大质量粒子（WIMP）相似的能量闪光。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
     "doi:10.1038/d41586-026-01988-6": {
       "doi": "10.1038/d41586-026-01988-6",
       "journal_slug": "nature",
@@ -18007,6 +18098,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T04:06:17.316812+00:00"
     },
+    "doi:10.1038/d41586-026-02342-6": {
+      "doi": "10.1038/d41586-026-02342-6",
+      "journal_slug": "nature",
+      "title": "A guide to emotional intelligence in the lab",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "633626a1bea4f57cfeb72aa8deb69fbd052d9edb1b84f635fc699954a78f76a7",
+      "source_abstract_sha256": "ed34a8ea1ad8c6fb91c7669e52fb34ee3f9f84c23baf858725155ea666107939",
+      "source_abstract": "abstract",
+      "title_zh": "实验室情商指南",
+      "abstract_zh": "学习如何管理情绪可以帮助你在工作中应对一些棘手的情境，组织心理学家表示。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
     "doi:10.1038/d41586-026-02345-3": {
       "doi": "10.1038/d41586-026-02345-3",
       "journal_slug": "nature",
@@ -18994,6 +19098,19 @@
       "abstract_zh": "在被诊断出某种疾病后研究该病既有回报，也带来伦理和心理挑战。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-07T22:33:21.314064+00:00"
+    },
+    "doi:10.1038/d41586-026-02456-x": {
+      "doi": "10.1038/d41586-026-02456-x",
+      "journal_slug": "nature",
+      "title": "A call to celebrate your achievements — from dissertations to tenure",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "917e74aa00726a545d928630da1753cd234b73cafdcc63b093d69dcb935e011d",
+      "source_abstract_sha256": "9376915750c90b9626a73b0bb6a4d24eb345a439783ab9592ff8036062e76ec2",
+      "source_abstract": "abstract",
+      "title_zh": "庆祝成就的号召——从论文答辩到终身教职",
+      "abstract_zh": "学术界的节奏很少放慢，因此研究人员应抽出时间来庆祝重要的职业里程碑。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1038/d41586-026-02458-9": {
       "doi": "10.1038/d41586-026-02458-9",
@@ -20113,6 +20230,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-09T22:35:34.612034+00:00"
     },
+    "doi:10.1038/d41586-026-02597-z": {
+      "doi": "10.1038/d41586-026-02597-z",
+      "journal_slug": "nature",
+      "title": "Say hello to the next generation of lobsters — August’s best science images",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "ec28ce15485b642edf2c97c00813579d66abeef4050e2a9c74463af2d964bd46",
+      "source_abstract_sha256": "75b8fe04ecaa975b0db488fc57d08f5994bae00647f107bb66a3a85284a4abfc",
+      "source_abstract": "abstract",
+      "title_zh": "向下一代龙虾说你好——八月最佳科学影像",
+      "abstract_zh": "本月最锐利的科学照片，由《自然》杂志摄影团队挑选。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
     "doi:10.1038/d41586-026-02600-7": {
       "doi": "10.1038/d41586-026-02600-7",
       "journal_slug": "nature",
@@ -20138,6 +20268,19 @@
       "abstract_zh": "该来源仅提供期刊名称，未给出摘要。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-07T22:33:21.314064+00:00"
+    },
+    "doi:10.1038/d41586-026-02609-y": {
+      "doi": "10.1038/d41586-026-02609-y",
+      "journal_slug": "nature",
+      "title": "Mutating every DNA letter of a genome shows surprising effects — and the limits of AI",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "299a881fcd5e13964d033a02048fc816fa88ff66e2f59584abe5e9b91e8f2052",
+      "source_abstract_sha256": "2a8bfdc9928bbe822513e1abfca3db16b1961c2083b7ae8e7e4274657e44504b",
+      "source_abstract": "abstract",
+      "title_zh": "对基因组中每个 DNA 字母进行突变显示出惊人效果——以及人工智能的局限性",
+      "abstract_zh": "顶尖人工智能模型未能预测重写病毒完整 DNA 代码的生物学后果。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1038/d41586-026-02611-4": {
       "doi": "10.1038/d41586-026-02611-4",
@@ -20542,6 +20685,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-19T22:32:33.478089+00:00"
     },
+    "doi:10.1038/d41586-026-02683-2": {
+      "doi": "10.1038/d41586-026-02683-2",
+      "journal_slug": "nature",
+      "title": "When do infections lead to long COVID? Scientists close in on triggers and treatments for post-viral syndromes",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "36b07d461d0b096cc484033b6fd3e54cf47f270ccfed3ead13d0b9767a359e04",
+      "source_abstract_sha256": "45a0c48c3ad98a07656ba8824e0e74e0bd465f686f6da58b6edcd4f5bc7b03f5",
+      "source_abstract": "abstract",
+      "title_zh": "感染何时导致长期新冠？科学家正在逼近后病毒综合征的触发因素与治疗方法",
+      "abstract_zh": "数亿人因感染而出现长期疾病。研究人员正在研究如何帮助他们。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
     "doi:10.1038/d41586-026-02684-1": {
       "doi": "10.1038/d41586-026-02684-1",
       "journal_slug": "nature",
@@ -20698,6 +20854,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-15T22:31:49.880893+00:00"
     },
+    "doi:10.1038/d41586-026-02734-8": {
+      "doi": "10.1038/d41586-026-02734-8",
+      "journal_slug": "nature",
+      "title": "These greenhouse-gas sources have trotters and snouts",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "e3a3d9af735a0a2d7e9184a4f8e29a7a5ce4919fb7bc9baa3e70addd7c67d573",
+      "source_abstract_sha256": "5e0d7b411a96504028151188f09b9e7dd8a7fb7e625557905365459bfda12393",
+      "source_abstract": "abstract",
+      "title_zh": "这些温室气体来源拥有蹄子和鼻子",
+      "abstract_zh": "与全球变暖相关的排放在野猪扰动土壤的地点更高。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
     "doi:10.1038/d41586-026-02735-7": {
       "doi": "10.1038/d41586-026-02735-7",
       "journal_slug": "nature",
@@ -20749,6 +20918,45 @@
       "abstract_zh": "致编辑的来信",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-17T22:37:26.988197+00:00"
+    },
+    "doi:10.1038/d41586-026-02743-7": {
+      "doi": "10.1038/d41586-026-02743-7",
+      "journal_slug": "nature",
+      "title": "Canada recruits dozens of US scholars — including several science stars",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "678e27b6a9878f39dc6d4d77599ae33fcefd592b837ced85e84dcb9fc117cd15",
+      "source_abstract_sha256": "67f8a5912bfadada9ef89bc1013a028232b26cdc86009a2fbc67cb3d1cc1406f",
+      "source_abstract": "abstract",
+      "title_zh": "加拿大招募数十名美国学者——包括多位科学明星",
+      "abstract_zh": "美国资金不确定性是多位前往加拿大的研究人员的关键因素。观察者预测将有更多人跟随。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
+    "doi:10.1038/d41586-026-02746-4": {
+      "doi": "10.1038/d41586-026-02746-4",
+      "journal_slug": "nature",
+      "title": "Satellite images before Nepal disaster showed warning signs",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "2379bbd08ef041b3c27ee3730222564bee1f3d7145fd5ccda6b34d45f1c9a51f",
+      "source_abstract_sha256": "4216b19ef1fd5197f5431de2771af429af6d414c63a42b177cc2bd1e2ecda76c",
+      "source_abstract": "abstract",
+      "title_zh": "尼泊尔灾难前的卫星图像显示预警信号",
+      "abstract_zh": "图像显示在冰川岩石块体崩塌并引发致命山洪前几天，其运动加速了。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
+    },
+    "doi:10.1038/d41586-026-02753-5": {
+      "doi": "10.1038/d41586-026-02753-5",
+      "journal_slug": "nature",
+      "title": "UN finally admits global warming will shoot past 1.5 ºC climate limit",
+      "acquired_at": "2026-09-20T19:18:20",
+      "source_title_sha256": "249ad0b0db3bc6af5658767de234489968fa578386cb30f1bfa64d35648a6eec",
+      "source_abstract_sha256": "83fbbfdbd9ce46f049432d73952f912f34f7754aec973839afb6247ffb214251",
+      "source_abstract": "abstract",
+      "title_zh": "联合国终于承认全球变暖将突破1.5°C气候阈值",
+      "abstract_zh": "报告称，地球将在本十年末之前突破长期目标。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1038/s41380-026-03626-z": {
       "doi": "10.1038/s41380-026-03626-z",
@@ -42290,6 +42498,19 @@
       "abstract_zh": "摘要：长期以来，脑被视为免疫特权器官，缺乏淋巴引流，部分原因是缺少实质性淋巴血管。最近在中枢淋巴血管生物学方面的进展挑战了这一长期观念。中枢引流网络由脑淋巴系统、脑膜淋巴血管和颅神经周围引流通道组成，在清除代谢脑废物和维持脑内稳态方面发挥关键作用。此外，脑膜和脑周围血管空间富含免疫细胞，通过分泌细胞因子调节神经元活动和多种行为。中枢淋巴网络功能障碍在自然衰老和神经退行性疾病中广泛观察到，其特征包括星形胶质细胞足部水通道蛋白-4（AQP4）定位异常、淋巴瓣膜完整性受损以及脑膜免疫细胞比例和表型的改变。本文综述了该系统的解剖基础、分子调控机制和生理功能，并总结了中枢淋巴网络在神经退行性疾病中的病理作用，讨论了基于多模态成像和液体生物标志物的临床评估框架。我们还强调了有前景的治疗策略，如恢复脑膜淋巴功能、靶向脑淋巴排泄和调节脑膜免疫微环境。阐明中枢淋巴网络的动态将重塑我们对脑内稳态的理解，为神经退行性疾病的诊断和治疗提供新思路。未来研究应聚焦于将基础发现转化为临床应用，加速从基础研究到临床实践的转变。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-01T22:32:33.579062+00:00"
+    },
+    "doi:10.1186/s40035-026-00580-2": {
+      "doi": "10.1186/s40035-026-00580-2",
+      "journal_slug": "translational-neurodegeneration",
+      "title": "What can we learn on ALS pathophysiology from iPSC-derived motor neurons harbouring TARBDP mutations: a systematic review",
+      "acquired_at": "2026-09-20T19:22:33",
+      "source_title_sha256": "e8e157922687f9533b2444d0b2f3968c258b9907a7c0477c3b413c72c85e3fdb",
+      "source_abstract_sha256": "58e06732f24cd13f32c1b2f932aca7de36a7c5905e2d0a36a09536aeece91700",
+      "source_abstract": "abstract",
+      "title_zh": "从携带TARDBP突变的iPSC来源运动神经元中我们能学到ALS病理生理的哪些信息：系统综述",
+      "abstract_zh": "翻译神经退行性疾病——肌萎缩侧索硬化症（ALS）患者的退化性运动神经元以细胞质聚集物的积累为特征，尤其是...",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-09-20T22:31:41.882467+00:00"
     },
     "doi:10.1186/s40035-026-00581-1": {
       "doi": "10.1186/s40035-026-00581-1",
