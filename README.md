@@ -340,7 +340,7 @@ https://<OWNER>.github.io/<REPO>/
 That pages build is a static mirror of the latest synchronized metadata, while the FastAPI service remains the full live API deployment path.
 
 The GitHub Pages workflow performs no model calls. Windows Task Scheduler runs
-`Daily Paper NVIDIA Translation` at `03:30` and `06:30` Asia/Shanghai. Each invocation verifies
+`Daily Paper NVIDIA Translation` at `07:30` and `09:30` Asia/Shanghai. Each invocation verifies
 the exact successful scheduled deployment for the current Shanghai date, translates only new or
 source-changed papers through NVIDIA, validates the registry, commits only that registry file, and
 pushes it. The push triggers a second Pages run, and the task verifies that the new commit is the
