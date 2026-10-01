@@ -29,12 +29,12 @@ if ([string]::IsNullOrWhiteSpace($userApiKey)) {
 $actionArguments = '-NoLogo -NoProfile -NonInteractive -File "{0}" -Execute' -f $taskScript
 $action = New-ScheduledTaskAction -Execute $pwshExecutable -Argument $actionArguments -WorkingDirectory $projectRoot
 $today = [DateTime]::Today
-$trigger0330 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(3).AddMinutes(30)
-$trigger0630 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(6).AddMinutes(30)
+$trigger0730 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(7).AddMinutes(30)
+$trigger0930 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(9).AddMinutes(30)
 $settings = New-ScheduledTaskSettingsSet -MultipleInstances IgnoreNew -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours 4)
 $principal = New-ScheduledTaskPrincipal -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) -LogonType Interactive -RunLevel Limited
 
-Register-ScheduledTask -TaskName $taskName -TaskPath $taskPath -Action $action -Trigger @($trigger0330, $trigger0630) -Settings $settings -Principal $principal -Description 'Translate Daily Paper pending articles through the NVIDIA OpenAI-compatible API.' -Force | Out-Null
+Register-ScheduledTask -TaskName $taskName -TaskPath $taskPath -Action $action -Trigger @($trigger0730, $trigger0930) -Settings $settings -Principal $principal -Description 'Translate Daily Paper pending articles through the NVIDIA OpenAI-compatible API.' -Force | Out-Null
 
 $registered = Get-ScheduledTask -TaskName $taskName -TaskPath $taskPath
 $registeredAction = @($registered.Actions)

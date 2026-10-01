@@ -4,8 +4,8 @@
 
 | Time (Asia/Shanghai) | Owner | Responsibility |
 | --- | --- | --- |
-| 00:23 daily | GitHub Actions | Fetch DOI-indexed metadata, require all journals to succeed, export static data, deploy Pages |
-| 03:30 and 06:30 daily | Windows Task Scheduler | Verify the Pages snapshot, translate pending records through NVIDIA, validate and push the registry |
+| 00:00 daily | GitHub Actions | Fetch DOI-indexed metadata, require all journals to succeed, export static data, deploy Pages |
+| 07:30 and 09:30 daily | Windows Task Scheduler | Verify the Pages snapshot, translate pending records through NVIDIA, validate and push the registry |
 | After the registry push | GitHub Actions | Refresh translations from the healthy Pages snapshot and deploy the pushed registry revision |
 | End of the local run | Windows Task Scheduler | Verify the exact push-triggered deployment and retain the run report |
 
