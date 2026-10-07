@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-06T23:32:57.719385+00:00",
+  "updated_at": "2026-10-07T23:32:39.490153+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -691,6 +691,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-19T22:32:33.478089+00:00"
     },
+    "doi:10.1007/s00401-026-03088-1": {
+      "doi": "10.1007/s00401-026-03088-1",
+      "journal_slug": "acta-neuropathologica",
+      "title": "Neurogenic muscular atrophy in NHP2-related dyskeratosis congenita in a family: pathological and molecular insights",
+      "acquired_at": "2026-10-07T21:24:21",
+      "source_title_sha256": "e18b2300d91e1fd2ea9a7861746270dc78030d92235314e2559c0272192f2e20",
+      "source_abstract_sha256": "78f56c546b552ace7145505c63fa0bb472ccea7258bdb373bc0df8b41b548bb1",
+      "source_abstract": "abstract",
+      "title_zh": "NHP2相关先天性黏液性角化症家族中的神经源性肌肉萎缩：病理与分子洞察",
+      "abstract_zh": "该来源仅提供期刊名称（Acta Neuropathologica），未提供摘要内容。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1007/s00401-026-03089-0": {
       "doi": "10.1007/s00401-026-03089-0",
       "journal_slug": "acta-neuropathologica",
@@ -729,6 +742,32 @@
       "abstract_zh": "摘要 基因组学和基于DNA甲基化的分析通过实现稳健的分子诊断和亚分类，彻底改变了中枢神经系统（CNS）肿瘤的分类。然而，这些方法主要定义肿瘤身份，未能直接捕捉细胞内信号网络的功能状态。蛋白组学和磷酸化蛋白组学分析通过测量蛋白丰度和位点特异性磷酸化，提供了互补的分子层面。最近的方法进展使得对福尔马林固定石蜡包埋（FFPE）组织进行全面分析变得越来越可行，从而提出了一个问题：功能蛋白组学信息如何补充已建立的分子诊断。我们在十例经过全面表征的胶质母细胞瘤（其中五例为EGFR扩增，五例为非扩增）上应用了适用于FFPE的蛋白组学和磷酸化蛋白组学工作流程。质谱技术在所有病例中产生了稳健的蛋白组学和磷酸化蛋白组学覆盖。全局蛋白组学分析揭示了与组别相关的蛋白丰度和通路差异，包括EGFR扩增肿瘤中EGFR丰度的增加，同时显示出显著的肿瘤间重叠。蛋白丰度校正后的磷酸化蛋白组学数据同样显示出部分组别水平的分离，但肿瘤间重叠仍然很大。对蛋白丰度校正后的磷酸化蛋白组学数据进行差异分析，基于预定义的探索性统计标准识别出443个磷酸化位点。激酶-底物富集进一步揭示了与EGFR和SRC家族相关的协调信号通路，并在个体肿瘤中表现出显著的变异性。这些发现表明，常规FFPE组织在蛋白丰度和磷酸化信号水平上保留了生物学上连贯的功能信息，可与基因组和表观基因组数据一起解释。因此，磷酸化蛋白组学代表了一种正交的功能层面，可能补充已建立的CNS肿瘤分子表征。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-26T22:35:39.352583+00:00"
+    },
+    "doi:10.1007/s00401-026-03094-3": {
+      "doi": "10.1007/s00401-026-03094-3",
+      "journal_slug": "acta-neuropathologica",
+      "title": "From a prion seed to a tree of discoveries: Byron Caughey’s RT-QuIC legacy in protein misfolding research",
+      "acquired_at": "2026-10-07T21:24:21",
+      "source_title_sha256": "a741949e1248ec657dd15d7a1f8e4abb5c1099e2a563cf00742c9760cb632325",
+      "source_abstract_sha256": "d5e99771c5880f4d42baa0ff350f5f00c733219b9cdce9018bf26d2ae625f2c6",
+      "source_abstract": "abstract",
+      "title_zh": "从朊病毒种子到发现之树：拜伦·考吉的RT-QuIC遗产在蛋白质错误折叠研究中的影响",
+      "abstract_zh": "Acta Neuropathologica - 早期且准确地检测朊病毒对于有效的疾病管理和潜在的治疗干预至关重要。类似的挑战也延伸到其他蛋白质……",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
+    "doi:10.1007/s00401-026-03096-1": {
+      "doi": "10.1007/s00401-026-03096-1",
+      "journal_slug": "acta-neuropathologica",
+      "title": "Amyloid-β plaque diversity across brain regions in Alzheimer’s disease and its relation to major clinicopathological traits",
+      "acquired_at": "2026-10-07T21:24:21",
+      "source_title_sha256": "02d8d1df9cf0ec70d93b9294e0df590befc3a23c8f05539ab15096b6f669e7c4",
+      "source_abstract_sha256": "0c3d231a9a5e949c0e28b0ec86a5a0dd7e070957fd982e5aa2328397061297b1",
+      "source_abstract": "abstract",
+      "title_zh": "阿尔茨海默病中不同脑区淀粉样β斑块多样性及其与主要临床病理特征的关系",
+      "abstract_zh": "摘要：淀粉样β（Aβ）沉积和tau聚集是阿尔茨海默病（AD）的神经病理学标志。虽然Aβ沉积呈现多种形态，但关于AD中Aβ斑块组成的跨区域综合概览及其与临床病理特征的关联尚缺失。本研究系统记录了84例晚期AD病例中多达23个脑区的Aβ斑块丰度和形态多样性。使用4G8二氨基联苯胺染色的随机森林像素分类器对沉积物进行分割，并通过卷积神经网络将其分为六类（核心型、弥漫轻型、弥漫致密型、紧密型、小致密斑块、脑血管淀粉样病变CAA）。利用Pearson相关系数将各类斑块计数与不同脑区、tau负荷进行相关分析。进一步检验斑块密度与共病、性别、ApoE、家族性与散发性病例、临床发病年龄、疾病持续时间及死亡年龄之间的关联。我们的分类模型在测试集上实现了81.5%的召回率和82.4%的精确率。皮质脑区显示最高的Aβ斑块负荷，主要由弥漫轻型和小致密斑块组成。斑块密度在海马及皮质区域内外均呈相关。弥漫致密型、小致密斑块和紧密斑块的丰度相互正相关，而核心型斑块和CAA的密度与其他斑块类无相关。仅核心型斑块与内嗅皮质tau负荷呈正相关，其余斑块类（CAA除外）则呈负相关。值得注意的是，女性与更多弥漫斑块相关，ApoE4与弥漫致密型和小致密斑块相关。发病和死亡年龄越早，弥漫轻型斑块密度越高。总体而言，关联在不同脑区和斑块类之间存在差异。核心型斑块和CAA在统计上与其他Aβ沉积物显著区分，提示其在疾病进程中具有独特的关联模式。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1007/s10462-026-11548-z": {
       "doi": "10.1007/s10462-026-11548-z",
@@ -6378,12 +6417,12 @@
       "title": "Cancer competition for vitamin B2 creates metabolic checkpoint for T cell ferroptosis",
       "acquired_at": "2026-10-06T20:47:26",
       "source_title_sha256": "7b22814a6018e8a13730458abb7990ded0330889eef4089395bfd8eb630c56ce",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "癌细胞竞争维生素B2形成T细胞铁死亡的代谢检查点",
-      "abstract_zh": null,
+      "source_abstract_sha256": "a890e5ea12e3cbd22d341577ae488202a2442d68e5de0b70e70238657e567ff1",
+      "source_abstract": "abstract",
+      "title_zh": "肿瘤竞争维生素B2形成T细胞铁死亡的代谢检查点",
+      "abstract_zh": "代谢竞争是肿瘤与T细胞逃避免疫的关键机制，但相关转运蛋白和机制尚不清楚。我们构建了CareSLCs平台，发现SLC52A3介导的维生素B2（VB2）摄取对T细胞抗肿瘤免疫至关重要。机制上，VB2缺乏导致线粒体呼吸受损和谷胱甘肽再生受阻，进而诱发线粒体自噬、游离铁积累和脂质过氧化，最终触发T细胞铁死亡。令人意外的是，肿瘤更倾向于使用SLC52A2而非SLC52A3来获取VB2，从而抢占T细胞。敲除肿瘤SLC52A2可增强免疫健全宿主中的T细胞功能，而对肿瘤自身生长影响不大。临床上，肿瘤中高表达SLC52A2与T细胞功能障碍和较差生存率相关，而膳食VB2摄入则与降低癌症风险相关。因此，VB2补充或SLC52A3过表达可增强CAR‑T细胞的抗肿瘤效能。我们的研究表明，肿瘤对VB2的竞争形成了驱动T细胞铁死亡的代谢检查点，提升VB2摄取可重新激活T细胞，从而改善癌症免疫治疗。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-06T23:32:57.719385+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.cell.2026.09.021": {
       "doi": "10.1016/j.cell.2026.09.021",
@@ -6391,12 +6430,12 @@
       "title": "SPARCS enables scalable recovery of complex image-based phenotypes for genetic screening",
       "acquired_at": "2026-10-06T20:47:26",
       "source_title_sha256": "8381c99c55f6a7fd8f33240a42cda294c609124a87e17cf778143267f6e729cb",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "SPARCS 使基因筛选中复杂图像表型的可扩展恢复成为可能",
-      "abstract_zh": null,
+      "source_abstract_sha256": "608b6100a895df26355e02693505c7725f24dee7d458dd67a6965d4e4d478c83",
+      "source_abstract": "abstract",
+      "title_zh": "SPARCS：一种可扩展的空间分辨CRISPR筛选平台，用于复杂图像表型的遗传筛选",
+      "abstract_zh": "正向遗传筛选通过引入随机基因扰动并识别改变表型的突变，来关联基因型与表型。虽然在培养细胞中对简单表型进行基因组规模的筛选已成为常规，但将其扩展到复杂的图像表型仍然具有挑战性。本文提出了空间分辨CRISPR筛选（SPARCS），一种基于显微镜的单细胞图像正向遗传筛选平台。SPARCS通过自动激光微切割在原位物理隔离突变体，使得在前所未有的规模下进行基于图像的筛选，并实现多模态命中表型分析。我们在70万细胞中对自噬体形成和免疫传感器STING激活进行全基因组CRISPR敲除筛选，展示了SPARCS的应用。通过基于机器学习的图像分析，SPARCS恢复了大多数宏自噬基因，并识别出GPHR为pH依赖性STING调节因子。对分离出的命中细胞进行基于质谱的蛋白组学分析，揭示了内质网（ER）/高尔基体的破坏，并通过计算机模拟扰动模型进一步筛选出其他STING调节因子。这些结果确立了SPARCS作为一种可扩展的平台，用于对复杂细胞表型进行基因组规模的遗传筛选，并提供蛋白组水平的读数。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-06T23:32:57.719385+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.cell.2026.09.022": {
       "doi": "10.1016/j.cell.2026.09.022",
@@ -6417,12 +6456,12 @@
       "title": "A spatiotemporal lifecycle atlas decodes spatial coordination in rice",
       "acquired_at": "2026-10-06T20:47:26",
       "source_title_sha256": "8a1cf60037e8289bf9f0fd17d92fdd3f3861dcff5a866574cb4f29d0f4de517b",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
+      "source_abstract_sha256": "3da9ca32d1121df6cca2d453d40f320fbd6433f9d8106d47945e2f04d2e814a2",
+      "source_abstract": "abstract",
       "title_zh": "一份时空生命周期图谱揭示水稻空间协调机制",
-      "abstract_zh": null,
+      "abstract_zh": "关于基因表达程序如何在空间和时间上协调以构建完整植物的机制尚不清楚。本文结合高分辨率空间转录组学、单核RNA测序以及无缺口参考基因组，构建了覆盖10个器官、61个阶段（从种子到种子）的水稻3D时空图谱。数据集共分析了851,725个细胞核和347,640个空间区块，定义了119种细胞类型和133种亚型。通过多模态整合，我们重建了一个推断的发育轨迹图，连接了从原胚到成熟器官的细胞状态，并识别了与轨迹相关的调控因子。进一步发现多效性调控因子OsARF1在不同发育背景下参与不同空间基因程序。我们还揭示了广泛的轴向转录不对称性，包括背腹胚乳程序在淀粉和蛋白质积累上的分区。总体而言，这份高分辨率图谱为理解水稻发育提供了时空框架，并为未来作物改良提供指导。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-06T23:32:57.719385+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.cell.2026.09.024": {
       "doi": "10.1016/j.cell.2026.09.024",
@@ -6430,12 +6469,12 @@
       "title": "A non-canonical function of glutathione to suppress ferroptosis via FSP1",
       "acquired_at": "2026-10-06T20:47:26",
       "source_title_sha256": "64a1ed67fc0f8393184c79254e95b03be815a7af7a9581de2d7c56164953bbfa",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "谷胱甘肽的非经典功能：通过FSP1抑制铁死亡",
-      "abstract_zh": null,
+      "source_abstract_sha256": "7c3e0dedeab61e4d658a8021b67ce5e38010ac0325fbfc951ee4a33adedf89db",
+      "source_abstract": "abstract",
+      "title_zh": "谷胱甘肽通过FSP1抑制铁死亡的非经典功能",
+      "abstract_zh": "已知谷胱甘肽（GSH）主要由谷胱甘肽过氧化物酶4（GPX4）利用，以降低过氧化磷脂并抵御铁死亡。然而，我们发现GSH能强力保护多种GPX4敲除（KO）细胞免受铁死亡，表明存在一种替代途径使GSH抑制铁死亡。通过全基因组CRISPR‑Cas9筛选，我们确定铁死亡抑制蛋白1（FSP1）是介导GSH的GPX4无关保护效应的关键因子。机制上，FSP1利用GSH生成还原型泛醌，清除氧化脂质并抑制铁死亡。抑制FSP1可在体内外消除这种GSH依赖的铁死亡保护。与NAD(P)H介导的泛醌还原不同，GSH刺激的FSP1介导的还原型泛醌生成不依赖黄素腺嘌呤二核苷酸（FAD）。综上，我们的工作阐明了GSH介导铁死亡抑制的新机制，突显了靶向GSH代谢在无论是否与GPX4相关的铁死亡相关疾病中的潜在益处。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-06T23:32:57.719385+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.cell.2026.09.031": {
       "doi": "10.1016/j.cell.2026.09.031",
@@ -6443,12 +6482,12 @@
       "title": "STING reprogramming by estrogen promotes neutrophil extracellular trap formation and sex-biased resistance to ADC therapy",
       "acquired_at": "2026-10-06T20:47:26",
       "source_title_sha256": "b82dd71f36f794f7342b2d56b15f3d70250e44e2e9f6d0593e187756ca5c3586",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "雌激素通过STING重编程促进中性粒细胞胞外网格形成及性别差异化对ADC治疗的抵抗",
-      "abstract_zh": null,
+      "source_abstract_sha256": "a43784fbb1ca0e6960a0da082805acec004704a9eb1e1410a9a9c8c813ba6e4c",
+      "source_abstract": "abstract",
+      "title_zh": "雌激素通过STING重编程促进中性粒细胞胞外网格形成及性别差异的ADC治疗耐受性",
+      "abstract_zh": "关于癌症治疗中性别差异的机制尚不清楚。我们在55例CLDN18.2+胰腺癌患者来源的异种移植模型中进行“类似二期临床前试验”，发现尽管抗原表达相同，女性对CLDN18.2靶向抗体药物偶联物（ADC）治疗表现出明显的耐受性。机制上，雌激素通过GPER1信号通路上调TRAF6，重新引导肿瘤内在的STING信号从IRF3介导的干扰素产生转向核因子κB（NF‑κB）激活。此过程驱动CXCL1分泌、中性粒细胞募集以及中性粒细胞胞外网格（NET）形成。NET形成带电的胞外网络，限制抗体对肿瘤细胞表面抗原的接触——我们称之为功能性抗原遮蔽——从而在不依赖抗原表达的情况下降低ADC的细胞毒性。NET负荷与三组临床队列中曲妥珠单抗、赛妥昔单抗和恩福妥单抗的疗效差异相关。使用西维乐特（sivelestat）药理学破坏NET后，恢复了雌性小鼠对ADC的疗效。这些发现揭示了一种雌激素驱动的耐受机制，对抗体基因癌症治疗具有广泛意义。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-06T23:32:57.719385+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.cell.2026.09.047": {
       "doi": "10.1016/j.cell.2026.09.047",
@@ -10220,6 +10259,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-04T23:35:54.215679+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.107004": {
+      "doi": "10.1016/j.neubiorev.2026.107004",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "From pathogenesis to non-medical therapy: A review of exploring sensory and multi-sensory stimulation as a non-invasive treatment approach for Alzheimer’s disease",
+      "acquired_at": "2026-10-07T21:47:51",
+      "source_title_sha256": "b5ae4c6ca85a5c3bdea55516f8c30bb28be191053278a2ee8b3b07c81017a499",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "从发病机制到非医疗疗法：综述探索感官及多感官刺激作为阿尔茨海默病非侵入性治疗方法",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1016/j.neubiorev.2026.107005": {
       "doi": "10.1016/j.neubiorev.2026.107005",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
@@ -10288,15 +10340,15 @@
     "doi:10.1016/j.neubiorev.2026.107010": {
       "doi": "10.1016/j.neubiorev.2026.107010",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "Sensory Processing and Executive Functioning Interaction in Neurodevelopmental Disorders and At-Risk Conditions: A Systematic Review and Meta-analysis",
+      "title": "Sensory processing and executive functioning interaction in neurodevelopmental disorders and at-risk conditions: A systematic review and meta-analysis",
       "acquired_at": "2026-10-04T19:45:51",
-      "source_title_sha256": "4ca9f3ceb25058eebf8bf769043640b90956e23e90fa4cdcaacf960e9c02ca0a",
-      "source_abstract_sha256": "da3fae34b76913cd5259e88e068155b7dc8df394c38a208e1af20e8e6a5625ab",
+      "source_title_sha256": "40e2ed47822b8b439ee04ca519a8fb35b7deb49ca4a42e734aa448ba5e58e9c0",
+      "source_abstract_sha256": "ffe767627703d984f15d0a23e1f546e71a6b8566db8dbc0f25a678d3c39ba4d9",
       "source_abstract": "abstract",
-      "title_zh": "神经发育障碍与高危人群中感官处理与执行功能的相互作用：系统综述与荟萃分析",
-      "abstract_zh": "本系统综述与荟萃分析研究了0-18岁患有神经发育障碍（NDDs）或高危状况（如早产和遗传综合征）的儿童和青少年中感官处理（SP）与执行功能（EF）之间的关系。遵循PRISMA指南，对30项同行评议研究的结果进行了定性和定量分析，以评估这些关联的强度和性质。结果显示，SP与EF之间存在一致且显著的相关性，相关系数（r）范围从0.19到0.77。荟萃分析确认中等效应量（d = 0.58）。尽管观察到显著异质性（I² = 82.9%），但该异质性并未受到特定NDD诊断、年龄、EF组成部分或相关性调整状态的调节。值得注意的是，评估方式是一个显著的调节变量：基于表现的测量显示出更高的关联强度和更低的异质性，而基于问卷或组合评估则相对较低。回归模型表明，SP测量在统计上解释了EF方差的相当大部分（28-71%），而比较分析显示典型与非典型感官特征之间的EF表现存在中等至大差异（η² = 0.10-0.34）。此外，调解分析提示在感官处理与适应性及功能性结果之间的关系中，EF（尤其是情绪调节和抑制控制）存在显著的间接关联。证据强调了感官处理与执行功能在临床和高危儿科人群中的强烈相互依赖性。这些发现突显了在评估和干预规划中同时考虑感官和执行领域的潜在重要性。",
+      "title_zh": "神经发育障碍与高危条件下感官处理与执行功能的相互作用：系统综述与荟萃分析",
+      "abstract_zh": "本系统综述与荟萃分析研究了感官处理（SP）与执行功能（EF）在患有神经发育障碍（NDDs）或高危条件（如早产和遗传综合征）的儿童与青少年（0-18岁）中的关系。遵循PRISMA指南，对30项同行评议研究的结果进行了定性和定量分析，以评估这些关联的强度和性质。结果显示，SP与EF之间存在一致且显著的相关性，相关系数（r）范围从0.19到0.77。荟萃分析确认中等效应量（d = 0.58）。尽管观察到显著异质性（I² = 82.9%），但该异质性并未受到NDDs具体诊断、年龄、EF组成部分或相关性调整状态的调节。值得注意的是，评估方式是一个显著的调节变量：基于表现的测量显示出更高的关联强度和更低的异质性，而基于问卷或组合评估则相对较低。回归模型表明，SP测量在统计上解释了EF方差的相当大部分（28-71%），而比较分析显示典型与非典型感官特征之间的EF表现存在中等至大差异（η² = 0.10-0.34）。此外，调解分析提示在感官处理与适应性及功能性结果之间的关系中，EF（尤其是情绪调节和抑制控制）存在显著的间接关联。证据强调了感官处理与执行功能在临床和高危儿童人群中的强烈相互依赖性。这些发现突显了在评估和干预规划中同时考虑感官与执行领域的潜在重要性。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-04T23:35:54.215679+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107011": {
       "doi": "10.1016/j.neubiorev.2026.107011",
@@ -10317,12 +10369,12 @@
       "title": "Post-mortem human brain evidence for presynaptic dopaminergic dysregulation in cocaine use disorder: A systematic review",
       "acquired_at": "2026-10-06T21:32:58",
       "source_title_sha256": "bd46f6f1b58c3069fb5a55da67a97a13883d8ddaf21ac8a8402c9402b54156b5",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "人类脑组织尸检证据显示可卡因使用障碍中突触前多巴胺能失调：系统综述",
-      "abstract_zh": null,
+      "source_abstract_sha256": "de914c654563737ca936295c1f60fcd86126d47f85271436d26ec2e72d6db1a1",
+      "source_abstract": "abstract",
+      "title_zh": "人类尸检脑研究显示可卡因使用障碍中突触前多巴胺能失调的证据：系统综述",
+      "abstract_zh": "可卡因使用障碍（CUD）与多巴胺能异常相关，但尸检证据尚未阐明分子变化是否更偏向突触前多巴胺调控而非更广泛的单胺能改变。我们依据PRISMA 2020标准，对比CUD患者与对照组的尸检病例对照研究进行系统综述，量化多巴胺能、血清素能或去甲肾上腺素能标记物，采用分子、转录或配体结合测量。检索范围包括PubMed、Scopus和Web of Science，截止至2026年8月31日。共有17项研究符合纳入标准，涉及887个脑样本（CUD 533例；对照 354例）。在所有研究中，最一致的模式是突触前多巴胺能失调。多巴胺转运蛋白（DAT/SLC6A3）测量经常出现异常，报告显示纹状体结合/免疫反应与腹侧中脑DAT mRNA表达降低之间存在不一致。数项研究报告纹状体中囊泡单胺转运蛋白2（VMAT2/SLC18A2）测量降低。中脑中多巴胺维持与身份调控因子表达在部分研究中降低，包括NR4A2（NURR1）、酪氨酸羟化酶（TH）和FOXA2。两项研究报告α-突触核蛋白（SNCA）在多巴胺能区域升高。血清素能和去甲肾上腺素能研究数量少于多巴胺能研究，且未显示一致信号。发现分布于纹状体、伏隔核、前额叶皮层和中脑区域，包括腹侧被盖区和黑质。解释受限于测定方法/区域异质性、尸检间隔、毒理学/死亡原因以及女性样本不足。总体而言，尸检证据显示CUD中突触前多巴胺能标记物的关联性改变，包括DAT测量异质、VMAT2测量降低、NR4A2/NURR1、TH和FOXA2表达降低，以及α-突触核蛋白表达升高；但无法从横断面尸检证据中确立因果关系。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-06T23:32:57.719385+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107014": {
       "doi": "10.1016/j.neubiorev.2026.107014",
@@ -10353,15 +10405,15 @@
     "doi:10.1016/j.neubiorev.2026.107016": {
       "doi": "10.1016/j.neubiorev.2026.107016",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "The impact of social isolation on the development of alcohol use and alcohol addiction-related processes in animals: a systematic review",
+      "title": "The impact of social isolation on the development of alcohol use and alcohol addiction-related processes in animals: A systematic review",
       "acquired_at": "2026-10-04T19:45:51",
-      "source_title_sha256": "00bb350a97d5f3996d1514051362a86bcfdc40c76dbe6011b489232eb3dc2ad9",
+      "source_title_sha256": "32ae19b2040cd6e0ba067385bcaeaab4f6159333636b10a7d933f1fbaf8c3497",
       "source_abstract_sha256": "8c65703043fd3d4a96c9d8442433de5c2a996bfdb3e36dd1bdca4e3047e7dc1a",
       "source_abstract": "abstract",
       "title_zh": "社会隔离对动物酒精使用与酒精成瘾相关过程发展的影响：系统综述",
-      "abstract_zh": "社会隔离显著影响饮酒行为，既是风险因素也是保护因素。动物模型提供了受控的因果检验，探讨社会隔离如何塑造酒精相关行为及其潜在机制。本系统综述评估了从酒精无经验基线开始，社会隔离如何影响哺乳动物酒精摄入和成瘾相关过程的发展，并评估性别和隔离起始年龄的调节作用。对Embase、PubMed和PsycInfo截至2026年4月的系统检索共识别66项研究，比较了隔离组与社会饲养组在酒精摄入或成瘾相关过程上的差异。结果显示，社会隔离与更高的酒精摄入和更强的动机相关，且这些效应高度依赖于隔离起始年龄及其他调节因素。断奶期隔离产生的效应比成年期隔离更强。关于性别是否为调节因素的证据不一致。十四项神经生物学结果研究中，最明显的模式是隔离动物在酒精暴露后，尤其是高剂量下，多巴胺能和去甲肾上腺素能信号升高，而GABA能、阿片能和血清素能系统表现出更具区域和亚单位特异性的效应。综上所述，社会隔离以高度依赖调节因素的方式塑造酒精摄入，并伴随奖励处理和应激反应的相应改变，这些可能是行为模式的基础。隔离起始年龄成为一致的调节因素。这些发现为社会隔离如何影响酒精使用和酒精使用障碍的发展提供了初步的机制解释，并强调了前临床成瘾研究中方法学决策如何影响结果。",
+      "abstract_zh": "社会隔离显著影响饮酒行为，既是风险因素也是保护因素。动物模型提供了受控的因果检验，探讨社会隔离如何塑造酒精相关行为及其潜在机制。本系统综述评估了从酒精无经验基线开始，社会隔离如何影响哺乳动物酒精摄入和成瘾相关过程的发展，并考察性别和隔离开始年龄的调节作用。对Embase、PubMed和PsycInfo截至2026年4月的系统检索共识别出66项研究，比较了隔离组与社会饲养组在酒精摄入或成瘾相关过程上的差异。社会隔离与更高的酒精摄入和更强的动机相关，且这些效应高度依赖于隔离开始年龄及其他调节因素。断奶期的隔离产生的效应比成年期隔离更强。关于性别作为调节因素的证据仍不一致。十四项神经生物学结果研究显示，隔离动物在酒精暴露后，尤其在高剂量下，多巴胺能和去甲肾上腺素能信号显著升高，而GABA能、阿片能和血清素能系统则表现出更具区域和亚单位特异性的效应。综上所述，社会隔离以高度依赖调节因素的方式塑造酒精摄入，并伴随奖励处理和应激反应的相应改变，这些可能是行为模式的基础。隔离开始年龄成为一致的调节因素。这些发现为社会隔离如何影响酒精使用和酒精使用障碍的发展提供了初步的机制解释，并强调了前临床成瘾研究中的方法学决策如何影响结果。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-05T23:31:51.636001+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107017": {
       "doi": "10.1016/j.neubiorev.2026.107017",
@@ -10395,12 +10447,12 @@
       "title": "Title: Maternal circulating cytokine and chemokine levels during pregnancy and risk of autism spectrum disorder in offspring: a systematic review and meta-analysis",
       "acquired_at": "2026-10-06T21:32:58",
       "source_title_sha256": "93437994906eae7f2df387dfdd3848eba53796f07e1ee5c04151572d8f836495",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
+      "source_abstract_sha256": "45d6aab412907d91b5b8fd719c660e01f7c64b498c03afc2fc381e26a29ace47",
+      "source_abstract": "abstract",
       "title_zh": "孕期母体循环细胞因子与趋化因子水平与子代自闭症谱系障碍风险的系统综述与荟萃分析",
-      "abstract_zh": null,
+      "abstract_zh": "背景：孕期母体免疫激活（MIA）已被认为与子代神经发育相关，但将孕期母体免疫介质与自闭症谱系障碍（ASD）联系起来的证据仍不一致。本系统综述与荟萃分析评估了孕期母体循环细胞因子和趋化因子水平是否与子代自闭症相关。方法：检索了五个数据库，纳入了测量孕期母体血液细胞因子或趋化因子并报告子代自闭症结果的人类观察性研究。符合条件的研究包括使用母体血清或血浆样本进行自闭症与对照组比较。采用随机效应模型进行荟萃分析，主要效应量为比值比（OR）。若有组水平浓度数据，也分析标准化均值差（SMD）。使用I²统计量评估异质性，并在可估计时通过Egger检验探讨小样本效应。结果：共有七项研究符合纳入标准。在基于OR的分析中，IL-10（OR 1.34，95% CI 1.06-1.69）、CXCL10（OR 1.62，95% CI 1.24-2.11）、IL-1α（OR 1.42，95% CI 1.23-1.65）、IL-5（OR 1.49，95% CI 1.18-1.89）与自闭症呈显著正相关，而IL-17A（OR 0.81，95% CI 0.70-0.94）呈负相关。CCL4显示边缘性关联。支持性的SMD分析显示自闭症相关妊娠中IL-6水平升高、IL-1β水平降低。不同分析物的异质性差异显著，IL-10和CCL4的异质性尤为显著。结论：孕期母体免疫谱可能在后续与自闭症相关的妊娠中存在差异，但目前证据尚未支持单一稳健的细胞因子生物标志物。进一步进展需要更大规模的前瞻性队列，重复采样，标准化检测方法，通路层面分析，以及整合胎盘-胎儿神经发育表型。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-06T23:32:57.719385+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107022": {
       "doi": "10.1016/j.neubiorev.2026.107022",
@@ -10428,18 +10480,44 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-06T23:32:57.719385+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.107025": {
+      "doi": "10.1016/j.neubiorev.2026.107025",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Evolutionary conservation of MECP2 and its relevance to neuronal stability and behavioral adaptation",
+      "acquired_at": "2026-10-07T21:47:51",
+      "source_title_sha256": "9c23aec35c9e7a77c3045c8a3a0818a990149b24343a461f27f5bbf0235e4358",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "MECP2 的进化保守性及其对神经元稳定性和行为适应的意义",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1016/j.neubiorev.2026.107026": {
       "doi": "10.1016/j.neubiorev.2026.107026",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
       "title": "Task Structure and Construct Validity in the Neurobiology of Trust: A Systematic Structural Synthesis",
       "acquired_at": "2026-10-06T21:32:58",
       "source_title_sha256": "325f5e2a59f00fa508ac68da5e69bb0bcce32c77b3a7924c6d110e508f28661a",
+      "source_abstract_sha256": "b04c8add6c3256e02ff0acd8fb5a275b93596f0077a43ae38c809ee6bcfb1440",
+      "source_abstract": "abstract",
+      "title_zh": "神经生物学中信任的任务结构与构念效度：系统结构综述",
+      "abstract_zh": "人际信任的神经科学已扩展至功能磁共振成像、脑电图、功能近红外光谱、药理学、遗传学、生理学和脑刺激等多种技术。虽然这些文献涉及分布式的奖赏、显著性、心理化和执行控制系统，但由于名义上相似的信任游戏范式在任务架构和信任的分析定义上存在差异，结果往往难以直接比较。本文提供了一份基于PRISMA的系统结构综述，涵盖198项实证研究，共200个实验。我们未进行效应量或坐标基础的荟萃分析，而是对范式架构、经济结构、时间动态、受托人信息、对照条件、参与者人群、测量方式和分析策略进行了编码，以描述与神经生物学解释相关的条件。综述显示，信任神经科学主要由标准和二元信任游戏变体、模拟伙伴、有限的显式对照以及决策期和结果期分析所主导。探索性条件分析揭示了任务架构、测量方法和分析操作化之间的关联，但未检验神经生物学效应。这些特征可能强调不同的信任相关过程，包括对预期互惠的价值评估、在脆弱状态下的背叛厌恶、对伙伴意图的社会推理、执行调节以及基于反馈的更新。因此，我们提出了一个结构-计算对齐框架，在该框架中，神经生物学发现可以相对于其观察到的任务特征和分析对比进行解释。该框架将信任神经科学中的异质性重新定义为构念效度问题，而非简单的理论碎片化。任务设计、推断计算、分析选择和神经生物学测量之间的明确对齐，可能支持对人际信任的连贯机制性解释。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107028": {
+      "doi": "10.1016/j.neubiorev.2026.107028",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Toward Mechanism-Informed Phenotyping in Neuropathic Pain: Implications for Translational Research and Neuromodulation",
+      "acquired_at": "2026-10-07T21:47:51",
+      "source_title_sha256": "f04101747c56b6abf94f5b7c3b9ba0e0d75020106fd615ae4fd49442c21a8a1b",
       "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "source_abstract": null,
-      "title_zh": "任务结构与构念效度在信任神经生物学中的系统结构综合",
+      "title_zh": "面向机制驱动的神经性疼痛表型研究：对转化研究与神经调制的启示",
       "abstract_zh": null,
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-06T23:32:57.719385+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -11390,6 +11468,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-17T22:37:26.988197+00:00"
     },
+    "doi:10.1016/j.neuron.2026.04.018": {
+      "doi": "10.1016/j.neuron.2026.04.018",
+      "journal_slug": "neuron",
+      "title": "Behavioral phenotypes and neuronal biomarkers in F1 mutant macaque model of SHANK3-associated autism spectrum disorders",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "5eecdce93eeb8b6de2757243913da296cdef564b5c1d7626be08b8c2f0894d22",
+      "source_abstract_sha256": "98df83ff4f92575fe99d84f43f25d046ac20c77ff1467a17bcd0dc84d2ee0879",
+      "source_abstract": "abstract",
+      "title_zh": "SHANK3相关自闭症谱系障碍F1突变猕猴模型的行为表型与神经生物标志物",
+      "abstract_zh": "SHANK3基因的单倍体缺失是Phelan-McDermid综合征（PMS）的主要致病原因，PMS是一种严重的神经发育障碍，伴有智力障碍和自闭症谱系障碍。我们此前报告了创始SHANK3猕猴表现出类似PMS某些方面的行为。然而，由于样本量小且存在嵌合现象，对行为、体征和认知变化的洞察有限。为此，我们生成了更大规模的F1代SHANK3+/-异质猕猴，以开展更系统的研究。结果显示，SHANK3+/-猕猴存在睡眠障碍、探索行为减少、社会互动异常、刻板行为以及大脑功能连接性改变。脑电图记录显示对听觉刺激的反应显著减弱。在认知方面，SHANK3+/-猴子在工作记忆测试中未表现出主要缺陷，但在学习和执行配对关联记忆任务时表现出能力受损。我们进一步开发了多任务阵列，系统评估自闭症相关表型，揭示了表型的异质性，并为药物疗效测试建立了潜在的生物标志物。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1016/j.neuron.2026.04.020": {
       "doi": "10.1016/j.neuron.2026.04.020",
       "journal_slug": "neuron",
@@ -11454,6 +11545,32 @@
       "abstract_zh": "人类超高场（UHF，≥7特斯拉）扫描仪提供更高的空间分辨率，使功能磁共振成像（fMRI）研究迈向亚毫米级别，并实现对皮层层级、柱状结构及其他小型结构的fMRI成像。这为非侵入性研究人类大脑内皮层回路和处理机制提供了可能。在本综述中，我们回顾了7T的应用、数据采集与处理挑战以及当前未解的问题。我们强调UHF fMRI所蕴含的丰富信息如何挑战传统分析工具和高分辨率fMRI数据的解释。由于fMRI响应是血流动力学信号且是神经活动的间接测量，在解释fMRI数据时，尤其是高分辨率下，仔细考虑神经血管耦合至关重要。我们讨论了分辨率提升对fMRI数据采集、处理和解释的影响，并重点关注皮层层级。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-02T22:32:02.788764+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.04.027": {
+      "doi": "10.1016/j.neuron.2026.04.027",
+      "journal_slug": "neuron",
+      "title": "Hepatic expression of APOE3 Christchurch mitigates APOE4-related Alzheimer’s disease pathologies in mice",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "434f4b35667639866aa99ab87c96e0de4ffdd1e3b41bf4ab9b1feef291faa049",
+      "source_abstract_sha256": "088de5ec56741ca45f8dc55118dbc58087293678dcaa69bf96522718efd89bf6",
+      "source_abstract": "abstract",
+      "title_zh": "肝脏表达APOE3克里斯托弗变异可减轻APOE4相关阿尔茨海默病病理在小鼠中的表现",
+      "abstract_zh": "ε4等位基因的载脂蛋白E（APOE4）是散发性阿尔茨海默病（AD）的最强遗传风险因素，并加剧AD相关病理。寻找减轻APOE4致病效应的策略仍是AD研究中的关键挑战。罕见的APOE3克里斯托弗（APOE3Ch）变异被认为可能对AD具有保护作用。我们的研究探讨了肝脏表达APOE3Ch是否能减轻APOE4相关的AD病理。我们通过腺相关病毒在表达人类APOE4的APP/PS1小鼠肝脏中成功递送APOE3Ch或APOE3。结果显示，肝脏递送APOE3Ch可降低大脑中β-淀粉样蛋白（Aβ）的负荷。肝脏表达APOE3Ch减轻了神经炎症、神经退行性变和认知障碍。机制上，APOE3Ch表达增强了单核细胞和肝细胞清除Aβ的能力。我们的发现表明，肝脏表达APOE3Ch可减轻APOE4表达的APP/PS1小鼠中的AD型病理，强调以肝脏为靶点的APOE3Ch基因转移是针对APOE4相关AD的有前景的治疗策略。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.04.028": {
+      "doi": "10.1016/j.neuron.2026.04.028",
+      "journal_slug": "neuron",
+      "title": "Synaptic plasticity of prefrontal long-range inhibition regulates cognitive flexibility",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "40d51c9005913a33543bd545a4e9073d49c47331eb02f6d4b1f40b567a4abef3",
+      "source_abstract_sha256": "c76be2f57bfaed77da33db81e9ca72e88dd73291f8b0e562b16bc9aebdee797b",
+      "source_abstract": "abstract",
+      "title_zh": "前额叶长距离抑制突触可塑性调控认知灵活性",
+      "abstract_zh": "虽然谷氨酸能突触可塑性被认为是学习的基本机制，但皮层GABA能突触可塑性的行为意义尚不充分了解。更重要的是，尽管最近发现了新皮层GABA能神经元的长距离投射，但它们的功能细节仍然稀缺。在本研究中，我们结合行为光遗传学与膜片钳电生理，探讨长距离GABA能突触可塑性与高级认知功能的关联。具体而言，学习跨维度规则转移会增强前额叶钙调素蛋白（PV）神经元向皮层-丘脑神经元的胼胝体GABA能突触的兴奋性。通过在规则转移期间抑制胼胝体PV终端来破坏这种增强，可诱发固执行为；而随后用γ频率刺激胼胝体PV终端恢复该增强，则可恢复灵活行为。这表明一种新的可塑性位点如何调控正常认知及病理状态下的脑回路。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.neuron.2026.04.029": {
       "doi": "10.1016/j.neuron.2026.04.029",
@@ -11546,6 +11663,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
     },
+    "doi:10.1016/j.neuron.2026.04.037": {
+      "doi": "10.1016/j.neuron.2026.04.037",
+      "journal_slug": "neuron",
+      "title": "Hyperexcitable VTA-mPFC dopaminergic circuit disrupts sleep spindle and mediates sleep fragmentation after chronic social defeat stress",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "28c54e082670568b7806f6ea4fe801b95873d119fd971d859ec0952a78eb1f1a",
+      "source_abstract_sha256": "d2343ccc0200dde61a629a291892591965912ef467db42ff28fb2f440cd3874f",
+      "source_abstract": "abstract",
+      "title_zh": "慢性社会失败压力下，超兴奋的VTA-mPFC多巴胺能回路破坏睡眠棘波并导致睡眠碎片化",
+      "abstract_zh": "慢性压力会破坏睡眠维持，但其神经基础尚不清楚。我们在此证明，接受慢性社会失败压力的老鼠表现出非快速眼动睡眠（NREM）碎片化，并伴随睡眠棘波密度和质量下降。慢性压力增强腹侧被盖区多巴胺能（VTADA）神经元的放电和突发活动，导致中前额叶皮层（mPFC）多巴胺过度释放。这种多巴胺激增破坏脑电图（EEG）棘波的连续性，从而扰乱NREM的稳定性。在压力暴露期间阻断VTA-mPFC通路的多巴胺信号，或在慢性压力后药理抑制VTA神经元的超极化激活环核苷酸门控（HCN）通道介导的Ih电流，可减轻睡眠碎片化并恢复正常棘波指标。我们的研究确定了异常VTADA突发放电作为压力诱导睡眠障碍的关键回路层面贡献，并提出了一个潜在的机制入口，用于解析多巴胺依赖的NREM稳定性调控。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1016/j.neuron.2026.04.038": {
       "doi": "10.1016/j.neuron.2026.04.038",
       "journal_slug": "neuron",
@@ -11572,6 +11702,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
     },
+    "doi:10.1016/j.neuron.2026.04.041": {
+      "doi": "10.1016/j.neuron.2026.04.041",
+      "journal_slug": "neuron",
+      "title": "Slow-wave sleep engages brainstem circuitry to prevent stress-induced anxiety",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "59f305d1778408e6fc7b3c00f826bbf1321bb8e60d7f070038cb94e72f06ba64",
+      "source_abstract_sha256": "d91613020c9289d511e95127623d70878bdd396047a785c446f55684da80712d",
+      "source_abstract": "abstract",
+      "title_zh": "慢波睡眠激活脑干回路以防止压力诱发的焦虑",
+      "abstract_zh": "睡眠对焦虑的益处已被证实，但其机制尚不清楚。我们发现一条从旁侧区（PZ）到侧脑桥核（LPB）神经元的GABA能回路，该回路投射至弓形终末束床核（ovBNST），是慢波睡眠（SWS）介导的抗焦虑的关键节点。光遗传激活PZ GABA能神经元在社会屈服压力后可诱导时间锁定的SWS并抑制焦虑。多区Ca2+ 记录显示，在自然和PZ启动的SWS期间，LPB和ovBNST的活动被抑制。LPB-ovBNST通路对于驱动清醒和焦虑是必需的，而LPB-基底前脑通路则促进觉醒而不影响焦虑。PZ神经元抑制LPB中促觉醒和焦虑的降钙素基因相关肽（CGRP）表达神经元，这些神经元通过ovBNST促进觉醒和焦虑。该效应特异性需要LPB向ovBNST促肾上腺皮质激素释放激素（Crh）神经元的输入。因此，我们定义了一条PZVgat-LPBCGRP-ovBNSTCrh回路，对睡眠相关的抗焦虑至关重要，为焦虑障碍提供了潜在的治疗靶点。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1016/j.neuron.2026.04.042": {
       "doi": "10.1016/j.neuron.2026.04.042",
       "journal_slug": "neuron",
@@ -11584,6 +11727,45 @@
       "abstract_zh": "在本次Neuron采访中，丹尼洛·布兹多克认为，人工智能与大数据正在为神经科学带来范式转变。依托大语言模型，研究者可克服传统的、直觉驱动的分类体系，打通学科孤岛，并将当今碎片化的知识整合为关于脑功能的统一视角。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-02T02:20:31.700900+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.04.043": {
+      "doi": "10.1016/j.neuron.2026.04.043",
+      "journal_slug": "neuron",
+      "title": "Maternal-fetal type I interferon signaling drives TREM2 dysregulation and synaptic dysfunction in neurodevelopmental disorders",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "305b8a010f0c39ec6c37f2a2c42871b7afe6e731c8640f35298627441606c80e",
+      "source_abstract_sha256": "e866bf0734cc0614842620114dddb1befd876031a2cba611323e61a6aa737707",
+      "source_abstract": "abstract",
+      "title_zh": "母体-胎儿Ⅰ型干扰素信号驱动TREM2失调与神经发育障碍中的突触功能障碍",
+      "abstract_zh": "孕期母体感染会扰乱神经免疫相互作用，增加后代神经发育障碍的风险。我们利用聚腺苷酸-聚胞苷酸（poly(I:C)）的母体免疫激活模型，研究母体感染如何重塑后代海马的景观。poly(I:C)导致母体Ⅰ型干扰素（IFN-I）升高，破坏神经元转录轨迹和幼年后代的兴奋性突触稳态。poly(I:C)后代的微胶质细胞表现出触发受体表达在髓系细胞2（TREM2）表达下降，TREM2是突触消除和大脑发育的关键调节因子，同时伴随吞噬功能受损和IFN-I响应亚状态抑制。与此一致，精神分裂症患者的尸检组织中观察到IFN-I信号减弱。TREM2缺失与异常的母体IFN-I以及poly(I:C)后代的神经元和微胶质细胞特征改变相关，突显其在神经发育病理中的调控作用。阻断母体IFN-I信号可恢复突触缺陷和TREM2功能，提示在孕期监测IFN-I反应并针对新生儿的IFN-I通路缺陷可能是缓解神经发育功能障碍的可行治疗策略。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.04.044": {
+      "doi": "10.1016/j.neuron.2026.04.044",
+      "journal_slug": "neuron",
+      "title": "Slow breathing impacts inter-organ dynamics modulating brain function and risk behavior",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "f3ba8f6f103a2661b59e007f5d4771395f63f8b63ec2741258b14f6953c423df",
+      "source_abstract_sha256": "46fc5232ad3678b03572f6528fa472486b1319d09ec1a3958dd0a390acecbaf7",
+      "source_abstract": "abstract",
+      "title_zh": "慢呼吸影响器官间动力学，调节大脑功能与风险行为",
+      "abstract_zh": "成功的决策需要将外部信息解释为身体状态的上下文。在身体-大脑相互作用框架下，刻意改变自主神经状态可以塑造我们评估世界的方式，最终影响选择。然而，尚不清楚有意的自主调节是否以及如何影响人类决策。本研究测试了使用延长呼气的指令性慢呼吸技术，该技术旨在在风险决策期间提升副交感神经活动。参与者在做出风险选择时遵循不同的呼吸方案，并通过功能磁共振成像（fMRI）和多通道监测记录神经和生理活动。延长呼气通过增强奖励敏感性和提升心脏副交感神经活动，增加了风险选择。值得注意的是，副交感神经上调更明显的个体在腹内侧前额叶皮层和顶后叶的奖励相关反应也更强。我们的工作揭示了基于呼吸的干预的变革性作用，证明通过呼吸进行自主调节可以通过神经-心脏通路塑造基于价值的决策。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.04.045": {
+      "doi": "10.1016/j.neuron.2026.04.045",
+      "journal_slug": "neuron",
+      "title": "Control of representation updating by higher-order thalamus enables history-based decision-making",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "3cb81f7884ac5542b0a1126633249e1f2259a705543f556586c06287c0f58a54",
+      "source_abstract_sha256": "1255c6a1a8635448e0e9badcfc3f8f1a0a658d92109f64d18d41974de8134015",
+      "source_abstract": "abstract",
+      "title_zh": "高阶丘脑对表征更新的控制使基于历史的决策成为可能",
+      "abstract_zh": "当感官信息模糊时，我们必须基于从以往经验构建的表征来解释当前输入。虽然适当地更新这一内部表征以跟踪环境变化对行为至关重要，但这种动态整合的神经基础仍不清楚。通过在小鼠中结合多区单细胞记录和光遗传技术，在行为和被动条件下进行研究，我们发现后顶叶皮层（PPC）与其高阶丘脑对应结构——丘脑外侧核（PUL）之间的相互作用对于稳定维持基于感官历史的决策表征是必要的。我们还识别出一种机制，即最近感官经验中统计模式的变化通过丘脑网状核（TRN）对PUL的抑制控制来促进已编码感官历史的更新。我们的结果建立了一个框架，在该框架中丘脑与皮层的互补操作协同工作，使内部表征能够适应性地跟踪变化的条件。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.neuron.2026.04.046": {
       "doi": "10.1016/j.neuron.2026.04.046",
@@ -12943,12 +13125,12 @@
       "title": "Have grand theories of consciousness earned their keep?",
       "acquired_at": "2026-10-06T20:50:34",
       "source_title_sha256": "310f7f5d01b758b0bab86b8fa266d9e821fea71cc1049b5de86b83703007d913",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "意识宏观理论是否值得其声誉？",
-      "abstract_zh": null,
+      "source_abstract_sha256": "8a44b07370771ce0a1e4e5a6b48360a470011ce9c4a93b0af700e2d76029defc",
+      "source_abstract": "abstract",
+      "title_zh": "意识大理论真的值得吗？",
+      "abstract_zh": "近期关于意识理论的争议促使人们对其科学价值进行更根本的重新评估。我们认为，该领域最具变革性的进展是由严谨的实证研究推动的，而非宏观的理论框架；未来的进步可能取决于回归这一传统。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-06T23:32:57.719385+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.neuron.2026.08.021": {
       "doi": "10.1016/j.neuron.2026.08.021",
@@ -13106,6 +13288,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-04T23:35:54.215679+00:00"
     },
+    "doi:10.1016/j.neuron.2026.09.003": {
+      "doi": "10.1016/j.neuron.2026.09.003",
+      "journal_slug": "neuron",
+      "title": "How private foundations and governments helped build theoretical neuroscience",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "3b27572bfaf4a36b98e120dc2126c2bcdbfc032e3a0822aec6e549e4e298bfb8",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "私立基金会与政府如何助力理论神经科学的建设",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1016/j.neuron.2026.09.005": {
       "doi": "10.1016/j.neuron.2026.09.005",
       "journal_slug": "neuron",
@@ -13170,6 +13365,32 @@
       "abstract_zh": "精神病症状，包括幻觉、妄想和思维紊乱，出现在多种精神和神经疾病中，但其潜在机制在不同尺度上尚未得到充分整合。本文提出一种跨诊断框架，认为多巴胺、谷氨酸、GABA、血清素和乙酰胆碱的失调会改变神经元增益和突触效能，破坏对感官证据、预测误差和内部生成表征的精度加权。这些局部失调通过皮质-纹状体-丘脑-皮质回路和大规模功能网络传播，导致异常的整合-分离动力学和不稳定的吸引子状态。该多层模型将分子和细胞层面的扰动与电路功能障碍、网络不稳定和症状表现联系起来，同时允许不同的生物通路汇聚到共享的计算脆弱性。新兴的神经影像学、动力系统和人工智能方法可能使这些机制的个体化检测成为可能，并支持更精准、基于电路的精神病症状干预。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-04T23:35:54.215679+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.09.012": {
+      "doi": "10.1016/j.neuron.2026.09.012",
+      "journal_slug": "neuron",
+      "title": "Toward an automated science of the mind",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "78ed17612910f766e7e37e3eb7b84bb4c4ce698a500f06d93b9eb234dd38d6bb",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "迈向自动化的心智科学",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.09.020": {
+      "doi": "10.1016/j.neuron.2026.09.020",
+      "journal_slug": "neuron",
+      "title": "Neuroscience and AI: Emerging synergies",
+      "acquired_at": "2026-10-07T21:05:01",
+      "source_title_sha256": "cb5ef322ecfd468207a105fe94eb7a6085c8e4f13b6de6de94bac2e589456a06",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "神经科学与人工智能：新兴协同",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/j.tics.2025.09.013": {
       "doi": "10.1016/j.tics.2025.09.013",
@@ -14120,6 +14341,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-04T23:35:54.215679+00:00"
     },
+    "doi:10.1016/j.tics.2026.09.006": {
+      "doi": "10.1016/j.tics.2026.09.006",
+      "journal_slug": "trends-in-cognitive-sciences",
+      "title": "Every (slow) breath you take, every choice you make",
+      "acquired_at": "2026-10-07T21:07:00",
+      "source_title_sha256": "93261ffaeb1af366e8544acc84817af088b7ff9f62baee1876b72dd6c33d7e27",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "你每一次（缓慢的）呼吸，每一次选择",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1016/j.tics.2026.09.009": {
       "doi": "10.1016/j.tics.2026.09.009",
       "journal_slug": "trends-in-cognitive-sciences",
@@ -14808,6 +15042,19 @@
       "abstract_zh": null,
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-26T22:35:39.352583+00:00"
+    },
+    "doi:10.1016/j.tins.2026.09.006": {
+      "doi": "10.1016/j.tins.2026.09.006",
+      "journal_slug": "trends-in-neurosciences",
+      "title": "Interpersonal neural synchrony: one label, many phenomena",
+      "acquired_at": "2026-10-07T21:08:09",
+      "source_title_sha256": "be94e4d1dc66327a10b6de87a0d080bddaac52839f13b90e71d1148dd99c7430",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "人际神经同步：一个标签，众多现象",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1016/s0149-7634(26)00189-2": {
       "doi": "10.1016/s0149-7634(26)00189-2",
@@ -24442,6 +24689,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-05T23:31:51.636001+00:00"
     },
+    "doi:10.1038/d41586-026-02928-0": {
+      "doi": "10.1038/d41586-026-02928-0",
+      "journal_slug": "nature",
+      "title": "Losing your way of life to climate change matters — and we need a way to measure it",
+      "acquired_at": "2026-10-07T21:19:25",
+      "source_title_sha256": "b634e02ca081070a835ca7c1e53e7a5f6675d890808442a3cf027ffc74631d87",
+      "source_abstract_sha256": "8e050884269f3283b10edcc177af7ee01a4aac97261a460014db20b7e33cfb51",
+      "source_abstract": "abstract",
+      "title_zh": "气候变化导致生活方式丧失——我们需要一种衡量方法",
+      "abstract_zh": "气候损失不仅限于财产和收入。决策者需要方法来评估人们重视、体验以及最终可能失去的事物。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1038/d41586-026-02931-5": {
       "doi": "10.1038/d41586-026-02931-5",
       "journal_slug": "nature",
@@ -24532,6 +24792,19 @@
       "abstract_zh": "聆听科学界的重大故事 | 2026年9月18日",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-06T23:32:57.719385+00:00"
+    },
+    "doi:10.1038/d41586-026-02994-4": {
+      "doi": "10.1038/d41586-026-02994-4",
+      "journal_slug": "nature",
+      "title": "Daily briefing: How to turn a paper into an AI agent",
+      "acquired_at": "2026-10-07T21:19:25",
+      "source_title_sha256": "28f68879c071298c15c935c9c2fd7277714ce1d529f8a93e524b8c8fe5fa391b",
+      "source_abstract_sha256": "fc7fb7b4fad3cf3a96f1737381e8280c0b758079f97d1442650d85c74add9a78",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：如何将论文转化为 AI 代理",
+      "abstract_zh": "一款新工具旨在帮助研究人员与已发表论文进行交互。此外，关于 RNA 基础治疗 ALS 的有前景消息，以及精神活性药物可能如何塑造印加前文化的讨论。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1038/s41380-026-03626-z": {
       "doi": "10.1038/s41380-026-03626-z",
@@ -27575,6 +27848,32 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-19T22:32:33.478089+00:00"
     },
+    "doi:10.1038/s41380-026-03914-8": {
+      "doi": "10.1038/s41380-026-03914-8",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Prenatal stress reprograms placental signaling and opposes maternal immune activation effects in the fetal brain",
+      "acquired_at": "2026-10-07T21:28:18",
+      "source_title_sha256": "5579c296e5d6876b4c1cb803347f9c93f60000c290c92bec23454c0417650790",
+      "source_abstract_sha256": "b8fd5d1784299e6588c9067a3a5f857fa21e381bd952c50c24d8936dba1595be",
+      "source_abstract": "abstract",
+      "title_zh": "产前压力重塑胎盘信号并抵消母体免疫激活对胎儿大脑的影响",
+      "abstract_zh": "摘要 产前心理社会压力和母体免疫激活（MIA）会增加后代精神疾病的风险，但它们是否通过共享或不同机制影响胎儿神经发育尚不清楚。胎盘位于母体与胎儿生理的交界处，在调节胎儿大脑发育中起关键作用。本文结合小鼠胎盘单细胞RNA测序、匹配胎盘与胎儿大脑的转录组学、母体细胞因子谱分析以及人类胎盘RNA测序，解析了这一轴线。在小鼠中，慢性压力抑制了胎盘免疫细胞的干扰素信号，并下调了滋养层细胞的氧化磷酸化通路表达。受压母鼠对poly(I:C)的I型干扰素反应减弱，导致胎盘抗病毒信号减弱。对胎儿大脑的加权基因共表达分析显示，产前压力和MIA在DNA修复、突触和翻译网络上调节相同的通路，但方向相反：压力促进早熟成熟的特征，而MIA驱动复制压力。在人类胎盘中，感知压力水平升高与染色质调控、RNA代谢和细胞外基质模块相关，这些模块与小鼠压力特征相似。这些发现识别了一个保守的胎盘压力相关转录程序，并提示压力和MIA以相反方向影响共享的神经发育通路。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
+    "doi:10.1038/s41380-026-03916-6": {
+      "doi": "10.1038/s41380-026-03916-6",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Executive functions as a transdiagnostic endophenotype in developmental psychopathology",
+      "acquired_at": "2026-10-07T21:28:18",
+      "source_title_sha256": "f2f56b8d1164f277c845dbe37c1be42199174f1ab9b675e18b8d9d47590f9b08",
+      "source_abstract_sha256": "ac71bd74f2d08165baa8d7f2457d1b270738001426a44efea76070595f5d44c9",
+      "source_abstract": "abstract",
+      "title_zh": "执行功能作为发展性精神病理学的跨诊断内在表型",
+      "abstract_zh": "摘要：大多数精神健康问题在成年前出现，尤其在儿童和青少年期间患病率上升。加之不同疾病之间高度共病，迫切需要识别支撑发展性精神病理学风险与韧性的跨诊断机制。本文提出执行功能（EFs）——一组与目标导向思维与行为控制相关的认知过程——作为此类机制的有前景候选。我们综述了EF发展受遗传与环境因素共同塑造，并依赖于前额-顶叶和扣带-口腔系统等神经网络的长期成熟。对这些系统的破坏与内化和外化障碍的风险升高相关。因此，我们将EFs视为发展性精神病理学的认知内在表型——可遗传、可测量，并位于基因到疾病的路径上。我们还回顾了证据表明EF受损是多种精神疾病的共同特征，并能预测未来症状，支持其跨诊断相关性。我们提出对EF构念的机制性细化，超越基于容量的解释，提出EF表现反映动态且受情境影响的成本-收益计算。奖励与努力处理的失调——表现为快感缺失和冷漠——在多种精神健康状况中普遍存在，可能通过改变这些计算来削弱EF表现。此整合视角有助于解释传统EF训练干预在改善精神健康症状方面的有限效果，并强调动机与情境因素的重要性。我们以未来研究议程作结，聚焦于阐明EF所依赖的具体子过程及其与发展性精神病理学的机制性联系。将EF视为受理性控制过程支配的跨诊断认知内在表型，为青少年精神健康提供精准、发展导向且针对性的干预新途径。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1038/s41380-026-03917-5": {
       "doi": "10.1038/s41380-026-03917-5",
       "journal_slug": "molecular-psychiatry",
@@ -30149,6 +30448,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-26T22:35:39.352583+00:00"
     },
+    "doi:10.1038/s41583-026-01084-8": {
+      "doi": "10.1038/s41583-026-01084-8",
+      "journal_slug": "nature-reviews-neuroscience",
+      "title": "Sensing the skeleton: sensorineural regulation in bone",
+      "acquired_at": "2026-10-07T21:23:49",
+      "source_title_sha256": "2f82e3099357e353c5f28c81d29e62fb8bbf6459e35ad291d7b322bcbb060d0f",
+      "source_abstract_sha256": "efb00cd95f433175217c7bb29bb10bfa1cdc68be4c42c2fe875a1ef7016254e8",
+      "source_abstract": "abstract",
+      "title_zh": "骨骼感知：骨骼的神经调控",
+      "abstract_zh": "传统上将骨组织视为惰性机械支架的观点已被彻底修正。尤其在新兴的‘骨骼神经科学’领域中，这一点尤为明显，该领域揭示骨骼是一种高度神经支配的器官，能够感知并整合机械、免疫和代谢刺激。本文综述了躯体感觉神经元与骨微环境之间双向互作的最新证据，并强调了全组织透明化、遗传追踪和单细胞转录组学等技术如何以分子精度绘制骨-神经相互作用。神经生长因子（NGF）–TrkA 信号在骨骼发育和修复过程中协调躯体感觉神经的生长与存活，但同一路径也可驱动病理性神经枝化、骨骼疼痛以及从骨关节炎到异位骨化和骨恶性肿瘤等骨骼疾病的进展。我们进一步讨论了神经-免疫-骨骼相互作用、骨骼中保守的神经调控机制以及新兴的神经调节策略。最后，我们确定了未来研究的主题，包括年龄相关神经衰退对骨骼的影响、性别差异在骨骼神经支配和骨痛中的作用，以及在啮齿动物与人类生物学之间的转化差距，这些可能指导精准医学干预的设计。骨骼由神经元神经支配，传递感官信息至中枢神经系统，并释放神经调节肽以影响骨微环境。James 等人描述了骨骼骨骼骨的感官神经调控机制，神经-骨骼耦合对骨骼生长和修复的贡献，以及该轴在各种骨骼疾病中的失调。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1038/s41583-026-01086-6": {
       "doi": "10.1038/s41583-026-01086-6",
       "journal_slug": "nature-reviews-neuroscience",
@@ -30187,6 +30499,19 @@
       "abstract_zh": "将人类皮层类器官移植到‘无皮层’小鼠中，可促进其整合，并为研究人类皮层发育与疾病提供机会。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-06T23:32:57.719385+00:00"
+    },
+    "doi:10.1038/s41583-026-01091-9": {
+      "doi": "10.1038/s41583-026-01091-9",
+      "journal_slug": "nature-reviews-neuroscience",
+      "title": "In situ capture of combinatorial neuromodulatory codes",
+      "acquired_at": "2026-10-07T21:23:49",
+      "source_title_sha256": "560da0b59cddb2f1c945f7593ce234ce7fd3472022cbf1cbafbc7536913dd5dc",
+      "source_abstract_sha256": "910bf175d9a1e3448ab50b430886844d8f24aa34c6a8a032312f32ccf929d627",
+      "source_abstract": "abstract",
+      "title_zh": "原位捕获组合性神经调节编码",
+      "abstract_zh": "在这篇《Tools of the Trade》文章中，Peter Kalugin 讨论了多路光学记录传感器在微型内窥镜（MORSE）上的开发，以跟踪与神经活动的空间和时间尺度相匹配的组合激素、神经递质和神经调节信号。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1038/s41586-026-10424-8": {
       "doi": "10.1038/s41586-026-10424-8",
@@ -34263,12 +34588,12 @@
       "title": "Ketone homologation via palladium-catalysed decarboxylative rearrangement",
       "acquired_at": "2026-09-22T20:13:07",
       "source_title_sha256": "7f5d525ca41c68b975693113ad4c07a4f5e682b0ffd5f174f59bad704d3c4b9c",
-      "source_abstract_sha256": "86b4ad97165cc59eea8b70b38ccfce239ef78003e5896ea8522ddbb5aee066d9",
+      "source_abstract_sha256": "146479f0bb679f936644bbc50cb626aba6d07d2983efbf0fd0be774ac69146ba",
       "source_abstract": "abstract",
-      "title_zh": "通过钯催化脱羧重排实现酮的同系体化",
-      "abstract_zh": "β-羟基羧酸在电化学氧化条件下的脱羧半-皮纳科尔重排首次于1960年报道。然而，由于其逐步的自由基和碳正离子途径会诱发副反应并导致α-碳的立体信息丢失，进一步发展受限。本文展示了该转化可通过Pd(II)/Pd(IV)催化的协同机制实现。反应通过形成六元Pd(IV)夹合物进行，随后发生裂解伴随β-至-α碳迁移和二氧化碳排放，Pd(IV)充当氧化还原中心。该闭壳途径实现精确的立体控制：迁移碳保持其绝对构型，而α-立体中心发生反转。对于非对称酮，反应显示出明显高于经典的Tiffeneau–Demjanov和Büchner–Curtius–Schlotterbeck反应的迁移基团选择性。该方法广泛适用于环状和非环状酮及醛，且避免了危险的二氮化合物。其应用通过简短的(+)-rupestine D全合成得到说明，其中重排作为关键的碳骨架编辑步骤。",
+      "title_zh": "钯催化脱羧重排实现酮的同系化",
+      "abstract_zh": "摘要 1960 年首次报道了在电化学氧化条件下 β-羟基羧酸的脱羧半皮纳科重排（参见文献 1）。然而，由于其逐步的自由基和碳正离子途径会引发副反应并导致 α-碳的立体化学信息丢失，进一步发展受到限制。本文展示了该转化可通过 Pd(II)/Pd(IV) 催化的协同机制实现。反应通过形成六元 Pd(IV) 络合物进行，随后发生裂解伴随 β-至 α-碳迁移和二氧化碳排放，Pd(IV) 充当氧化还原中心。该闭壳层路径实现了精确的立体化学控制：迁移碳保持其绝对构型，而 α-立体中心发生反转。对于非对称酮，反应表现出明显高于经典的 Tiffeneau–Demjanov 2 和 Büchner–Curtius–Schlotterbeck 3 反应的迁移基选择性。该方法广泛适用于环状和非环状酮及醛，且避免了危险的二氮化合物。其应用示例为 (+)-rupestine D 的简洁总合成，其中重排作为关键的碳骨架编辑步骤。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-09-22T22:38:28.286486+00:00"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1038/s41586-026-11094-2": {
       "doi": "10.1038/s41586-026-11094-2",
@@ -36116,6 +36441,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-04T22:31:37.870685+00:00"
     },
+    "doi:10.1038/s41593-026-02464-0": {
+      "doi": "10.1038/s41593-026-02464-0",
+      "journal_slug": "nature-neuroscience",
+      "title": "Astrocytes regulate axonal mitochondrial transport deficits in C9ORF72 amyotrophic lateral sclerosis motor neurons",
+      "acquired_at": "2026-10-07T21:22:58",
+      "source_title_sha256": "56d9f08ada395b5600decbb8588f52b3808c56eb362d9cf36e5435d0a2790b47",
+      "source_abstract_sha256": "15ebb76940fdf24bab6624e44e0c9e68455b63225900fffddcdeaeff2c11827f",
+      "source_abstract": "abstract",
+      "title_zh": "星形胶质细胞调节C9ORF72肌萎缩侧索硬化症运动神经元轴突线粒体运输缺陷",
+      "abstract_zh": "摘要：轴突运输障碍和星形胶质细胞功能失调与肌萎缩侧索硬化症（ALS）相关。本研究表明这两种过程相互关联——携带C9ORF72突变的人类诱导多能干细胞来源的星形胶质细胞会破坏共培养运动神经元（MNs）的轴突线粒体运输和线粒体功能。相反，等位基因基因修正的星形胶质细胞或增强星形胶质细胞线粒体能量代谢可恢复C9ORF72 MNs的轴突线粒体运输缺陷。我们的结果阐明了星形胶质细胞在ALS模型中调节轴突线粒体运输的非细胞自体作用。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1038/s41593-026-02467-x": {
       "doi": "10.1038/s41593-026-02467-x",
       "journal_slug": "nature-neuroscience",
@@ -36219,6 +36557,19 @@
       "abstract_zh": "来源提供期刊名称，但未提供摘要。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-04T23:35:54.215679+00:00"
+    },
+    "doi:10.1038/s41593-026-02480-0": {
+      "doi": "10.1038/s41593-026-02480-0",
+      "journal_slug": "nature-neuroscience",
+      "title": "Modality-specific reactive and predictive responses in the human superior colliculus",
+      "acquired_at": "2026-10-07T21:22:58",
+      "source_title_sha256": "f04dad39d6ed2d184451c2ffc7a09b91294037ccac6530dc06c91f698fd7207a",
+      "source_abstract_sha256": "a3584477be402be3430de0ec7e6666259337a4ca37084b3897b6f8b188505334",
+      "source_abstract": "abstract",
+      "title_zh": "人类上丘在不同感官模式下的反应性与预测性反应",
+      "abstract_zh": "受近期强调预测性神经处理的理论工作的启发，我们测试了多模态感官整合的中脑结构——上丘——是否会对视觉和体感刺激产生预测性反应。多阶段实验设计使我们能够在7特斯拉功能磁共振成像（fMRI）下检测人类上丘的预测性活动，并映射其在上丘层中的感官响应（N = 80）。与非人类动物研究的预期一致，视觉和体感刺激诱发了不同的深度依赖性反应。我们还观察到预测性反应：在直接刺激前的任务期间，出现了相同的模式特异性和深度依赖性效应，此时视觉与体感条件下的感官运动输入相同。进一步分析排除了跨试次的残留效应，并在丘脑感官核中显示了相应的效应。我们的结果证实，在人类中，上丘对视觉和体感输入均敏感，并且它携带了对即将到来的感官事件的预测信号。Chen 等人使用7特斯拉 fMRI 显示，人类上丘在视觉或体感事件之前具有模式特异性、深度依赖性的活动，类似于其对实际刺激的响应。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1038/s41593-026-02483-x": {
       "doi": "10.1038/s41593-026-02483-x",
@@ -36935,6 +37286,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-01T22:32:33.579062+00:00"
     },
+    "doi:10.1038/s42256-026-01303-y": {
+      "doi": "10.1038/s42256-026-01303-y",
+      "journal_slug": "nature-machine-intelligence",
+      "title": "Characterizing the role of reasoning tokens in large language models as state over tokens",
+      "acquired_at": "2026-10-07T21:21:34",
+      "source_title_sha256": "62a3b1829799bc1eacaf8de5aba0e6d913e4bf9b4676206ee2b7e87562f9ab01",
+      "source_abstract_sha256": "90555274ce476abb0215019556f7e4e603189dc8a8162f4fe8706a6028022511",
+      "source_abstract": "abstract",
+      "title_zh": "将推理标记视为跨标记状态的概念框架：对大型语言模型中推理标记作用的研究",
+      "abstract_zh": "大型语言模型越来越依赖生成推理标记，这些标记似乎描述了模型为得到答案所执行的推理过程。然而，实证证据表明，当将这些标记视为文本时，它们并不能真实反映模型的实际推理过程。为弥补外观与功能之间的差距，我们提出了跨标记状态（State over Tokens，SoT）概念框架。SoT将推理标记重新定义为一种外部化的计算状态——在不同生成周期之间保持计算的机制，而非语言叙事。该框架解释了为何这些标记能够驱动正确推理，却在文本阅读时并不构成可信解释，并揭示了此前被忽视的研究问题。我们讨论了它如何消除两种常见误解：一是文本记录了完整过程；二是模型使用的词语具有读者赋予的意义。我们认为，这一框架为理解这些标记提供了一种既准确又简洁直观的思路，并为研究开辟了新方向。为更好地理解大型语言模型的推理机制，研究应超越将标记视为文本，而应关注将其解码为状态。当大型语言模型“推理”一个问题时，它们可能以与推理记录所示不同的方式解决问题。在本观点文章中，Levy 等人描述了如何开始探究这些推理标记的作用。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1038/s42256-026-01304-x": {
       "doi": "10.1038/s42256-026-01304-x",
       "journal_slug": "nature-machine-intelligence",
@@ -37051,6 +37415,19 @@
       "abstract_zh": "《自然机器智能》- 出版社更正：具有隐式二次框架和表达优势的量子神经算子",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-14T22:32:02.268010+00:00"
+    },
+    "doi:10.1038/s42256-026-01315-8": {
+      "doi": "10.1038/s42256-026-01315-8",
+      "journal_slug": "nature-machine-intelligence",
+      "title": "Emotional optimization by newsroom AI needs behavioural evaluation",
+      "acquired_at": "2026-10-07T21:21:34",
+      "source_title_sha256": "46740fa83a485c5fc43e5a1e94f3b57c4c23ec69a1351075d574c6d65ae60eac",
+      "source_abstract_sha256": "cad3c1ed53d2811ae24ae991a255b410a529ee3f4bb556c673369d7dfd694746",
+      "source_abstract": "abstract",
+      "title_zh": "新闻编辑室人工智能的情感优化需进行行为评估",
+      "abstract_zh": "当新闻编辑室人工智能（AI）进行情感包装时，它会改变故事的感受，影响人们是否接近、信任和分享。随着这些系统的设计与部署，AI 与行为研究者应共同测试情感包装是否能帮助准确信息传达给读者，以及是否加剧分裂。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1093/brain/awaf414": {
       "doi": "10.1093/brain/awaf414",
@@ -38326,6 +38703,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1093/brain/awag238": {
+      "doi": "10.1093/brain/awag238",
+      "journal_slug": "brain",
+      "title": "Nerve growth factor metabolic dysfunction in Down’s syndrome brains",
+      "acquired_at": "2026-10-07T21:25:01",
+      "source_title_sha256": "dcdecf170c3cf495a6871c26160803fc33e1386476a8234ed8ec4911bfc4fc88",
+      "source_abstract_sha256": "0f414312486d194df4a74066556c6600a15f0bc102c6e20067d6217113330f11",
+      "source_abstract": "abstract",
+      "title_zh": "唐氏综合征大脑中神经生长因子代谢功能障碍",
+      "abstract_zh": "摘要 基底前脑胆碱能神经元在认知中起关键作用。该神经系统高度依赖神经生长因子（NGF）维持突触完整性和细胞体的表型。基底前脑胆碱能神经元在阿尔茨海默病和唐氏综合征中逐渐退化，其萎缩导致痴呆的出现。矛盾的是，在阿尔茨海默病大脑中，NGF 的合成并未受影响，且前体 NGF（proNGF）丰度很高。我们已证明，这一现象是由于 NGF 的细胞外代谢缺陷，导致 proNGF 成熟受阻并加剧其随后的降解。我们假设唐氏综合征中也存在类似的不平衡。通过定量逆转录聚合酶链式反应（qRT‑PCR）、酶联免疫吸附测定（ELISA）、西方印迹和酶活性测定（zymography），我们研究了唐氏综合征患者与年龄匹配对照（31–68 岁）在颞叶（n=14）、额叶（n=34）和顶叶（n=20）皮层的尸检大脑中 NGF 代谢功能障碍的迹象。我们还检验了人类胎儿唐氏综合征皮层（妊娠 17–21 周）的原代培养物。结果显示，唐氏综合征大脑中 proNGF 水平显著升高，同时纤溶酶原和组织纤溶酶原激活酶（tPA）mRNA 水平下降，神经丝蛋白（neuroserpin）表达增加；这些酶参与 proNGF 成熟。唐氏综合征大脑还表现出 MMP9 的酶促活性升高，MMP9 是主要的 NGF 降解酶。我们的结果表明，唐氏综合征大脑中 proNGF 成熟失败，NGF 的蛋白水解降解可能增强，这些变化可能削弱基底前脑胆碱能神经元的营养支持。proNGF 和 MMP9 的改变也出现在唐氏综合征胎儿皮层培养物中；提示这种营养受损可能在痴呆明显出现前得到修复。我们的研究为阿尔茨海默病和唐氏综合征的胆碱能神经保护提供了新范式。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1093/brain/awag239": {
       "doi": "10.1093/brain/awag239",
       "journal_slug": "brain",
@@ -38969,12 +39359,12 @@
       "title": "Could\n                    <i>NQO1</i>\n                    genotypes impact the results of clinical trials with idebenone?",
       "acquired_at": "2026-08-29T01:07:54",
       "source_title_sha256": "82b80fbf29efe0bed1fd62819a4ab73c569512ec0f7308c520e5081674487434",
-      "source_abstract_sha256": "e9876378b7341acd4134c3d04340f0ae49f1a44a12ef0b267a3df61d4398457a",
+      "source_abstract_sha256": "3f8f0406b90e6c1372ef1dc28644a8fa508a63081b6efc436f9c9a664312c102",
       "source_abstract": "abstract",
-      "title_zh": "NQO1基因型是否会影响使用idebenone的临床试验结果？（Carelli等）",
-      "abstract_zh": "Carelli等人认为，关于NQO1如何影响idebenone反应的新见解，值得重新评估之前的临床试验结果，包括在弗里德里希共济失调症和杜氏肌营养不良症中的试验，使用NQO1基因型进行患者分层。",
+      "title_zh": "NQO1基因型是否会影响使用idebenone的临床试验结果？",
+      "abstract_zh": "Carelli等人认为，对NQO1如何影响idebenone反应的新见解，值得重新评估先前临床试验的结果，包括在弗里德里希共济失调和杜氏肌营养不良症中的试验，并按NQO1基因型对患者进行分层。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-08-29T17:38:52.2266672Z"
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1093/brain/awag292": {
       "doi": "10.1093/brain/awag292",
@@ -39586,6 +39976,19 @@
       "abstract_zh": null,
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-06T23:32:57.719385+00:00"
+    },
+    "doi:10.1093/brain/awag348": {
+      "doi": "10.1093/brain/awag348",
+      "journal_slug": "brain",
+      "title": "Mitochondrial DNA damage elicits PINK1 upregulation in pontine cholinergic neurons in Parkinson’s disease",
+      "acquired_at": "2026-10-07T21:25:01",
+      "source_title_sha256": "29c919766f5abd4084cfaeeb3d37b11cce3aba9081767bb882acf7490c7b875b",
+      "source_abstract_sha256": "ba12ddee6e9c3fd9f7e5dfd41fb9ab66e738b34d016b2403b2f919d5a5db3a43",
+      "source_abstract": "abstract",
+      "title_zh": "帕金森病中脑桥胆碱能神经元的线粒体DNA损伤诱导PINK1上调",
+      "abstract_zh": "在帕金森病中，位于上脑桥的脑桥胆碱能神经元经历广泛退化，导致严重的运动减缓和非运动症状。我们此前证明，这些神经元的丧失与线粒体功能障碍相关，主要由高水平的线粒体DNA缺失负荷驱动。与此相反，这些神经元中观察到线粒体DNA复制增加，而先前报道的帕金森病幸存的黑质多巴胺能神经元中线粒体DNA拷贝数减少。本文采用超深度全基因组测序结合严格的质量控制，对来自帕金森病患者和神经学正常的尸检样本中单个脑桥胆碱能神经元的线粒体DNA改变进行表征。分析包括线粒体DNA缺失谱、缺失大小分布、基因组位置、异质性水平、断点分类和点突变频率。热力学建模用于探讨线粒体DNA缺失断点周围二级结构的稳定性是否能揭示帕金森病中线粒体DNA缺失形成机制。与此同时，使用定制的单细胞多重靶点基因表达测定评估核编码线粒体通路响应，比较帕金森病与对照尸检神经元。帕金森病神经元表现出显著的线粒体DNA损伤，主要是大规模线粒体DNA缺失，集中在线粒体DNA的主弧内。缺失长度约为50–5,500个碱基对，绝大多数超过1,000个碱基对。大规模缺失的克隆扩增，可能源于复制相关错误，构成主要的突变种类。小型缺失（<50 bp）罕见，提示自由基诱导的链断裂并非体细胞线粒体DNA损伤的主要驱动因素。帕金森病与对照神经元的点突变频率相似，但在帕金森病神经元中对电子传递链I复合物亚基的功能影响更大。热力学建模显示，帕金森病尸检神经元中线粒体DNA缺失断点两侧的二级结构稳定性降低，平均下降约2 kJ/mol，涵盖两种主要线粒体DNA缺失形成模型。线粒体DNA损伤的增加伴随核编码自噬调节因子PINK1的显著上调，尤其在存活时间较长的帕金森病患者中，提示激活了补偿性的细胞保护反应。综上所述，这些发现提供了对帕金森病脑桥胆碱能神经元线粒体基因组改变的单细胞分辨率全景图，显示大规模缺失主导的线粒体DNA结构破坏。我们的结果进一步表明，上调与自噬相关的通路可能是缓解线粒体基因组不稳定性并维持神经元能量稳态的适应机制。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1126/science.adp3564": {
       "doi": "10.1126/science.adp3564",
@@ -48791,6 +49194,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-26T22:35:39.352583+00:00"
     },
+    "doi:10.1186/s12974-026-04067-9": {
+      "doi": "10.1186/s12974-026-04067-9",
+      "journal_slug": "journal-of-neuroinflammation",
+      "title": "Thy1-Neuron p38α knockdown protects against neurological consequences following repetitive mild traumatic brain injury",
+      "acquired_at": "2026-10-07T21:26:26",
+      "source_title_sha256": "f11265dd0a59b8c71bde7f040747e4c4887ccb59ee696f1129702ff4b737e181",
+      "source_abstract_sha256": "57af5a118a9ae6d27bbd5d9810611cd1cbf312867e0c80c3e19791743956f56f",
+      "source_abstract": "abstract",
+      "title_zh": "Thy1-神经元p38α敲低可防止重复轻度创伤性脑损伤后的神经后果",
+      "abstract_zh": "《神经炎症杂志》- 轻度创伤性脑损伤（mTBI）可显著影响生活质量，而重复轻度创伤性脑损伤（rmTBI）相比单次损伤会放大损伤效应……",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
+    },
     "doi:10.1186/s12974-026-04068-8": {
       "doi": "10.1186/s12974-026-04068-8",
       "journal_slug": "journal-of-neuroinflammation",
@@ -49401,6 +49817,19 @@
       "abstract_zh": "摘要 背景：阿尔茨海默病（AD）及临床上重叠的神经退行性疾病通过A/T/N分类系统进行分子级别的分类。除体液生物标志物和结构性MRI外，A/T/N评估还包括β-淀粉样蛋白PET（A）、tau蛋白PET（T）和[18F]FDG-PET（N）。本研究评估动态[18F]PI-2620 tau-PET特征是否能预测β-淀粉样蛋白阳性，并在单次成像中同时分期tau蛋白与神经退行性变。 方法：我们研究了129名tau蛋白病患者，其中47名为β-淀粉样蛋白阳性的3/4重复tau蛋白病患者，82名为β-淀粉样蛋白阴性的原发性4重复tau蛋白病患者，以及17名健康对照。受试者接受60分钟动态[18F]PI-2620 tau-PET扫描。动力学建模同时提供了示踪剂外流速率（K2a）作为β-淀粉样蛋白状态的预测因子、分布体积比（DVR）用于评估区域tau负荷，以及相对灌注（R1）作为神经退行性变的标志。通过受试者工作特征曲线和相关分析以及视觉评估，将这些参数与β-淀粉样蛋白PET、[18F]FDG-PET、体积MRI和脑脊液生物标志物进行验证。还在一个独立的、临床异质的验证队列（97人）中测试了[18F]PI-2620 K2a对β-淀粉样蛋白阳性的预测。 结果：[18F]PI-2620 K2a区分了tau蛋白亚型组成，尽管临床表现和tau-PET模式重叠，但在3/4重复tau蛋白病中显示皮质示踪剂清除率降低。即使在视觉上为阴性或低[18F]PI-2620 DVR信号的个体中，[18F]PI-2620 K2a仍保持敏感，并优于tau负荷和灌注预测β-淀粉样蛋白状态，AUC为0.99，阳性预测值91.5%，阴性预测值95.1%。在独立验证队列中，性能保持稳健，AUC为0.98，阳性预测值87.9%，阴性预测值95.3%。[18F]PI-2620 DVR量化了区域tau模式，3/4重复tau蛋白病中皮质占主导，4重复tau蛋白病中亚皮质受累。[18F]PI-2620 R1与已建立的神经退行性变标志物在定量和视觉上均表现出强关联。将K2a、DVR和R1整合到疾病特异性复合区域中，实现了个体化的三维A/T/N分期。 结论：动态[18F]PI-2620 PET成像可在单次采集期间评估β-淀粉样蛋白状态以及tau蛋白和神经退行性变的区域分期。这一“一站式”方法可降低辐射暴露，简化诊断流程，并促进个性化疾病剖析。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-26T22:35:39.352583+00:00"
+    },
+    "doi:10.1186/s13024-026-00998-2": {
+      "doi": "10.1186/s13024-026-00998-2",
+      "journal_slug": "molecular-neurodegeneration",
+      "title": "AI-assisted discovery of an ABCA1/ABCG1 activator for restoring mitophagy and mitigating Alzheimer’s pathology",
+      "acquired_at": "2026-10-07T21:08:13",
+      "source_title_sha256": "de8eb048884fe48783fb1dcdb042d5c61dd707fb1cda68c6d5b43c6a8a87885f",
+      "source_abstract_sha256": "b30b1c1ae74cf3c15add6981333ab84572727e98822884fd01a5416e67f67643",
+      "source_abstract": "abstract",
+      "title_zh": "AI辅助发现ABCA1/ABCG1激活剂以恢复线粒体自噬并减轻阿尔茨海默病病理",
+      "abstract_zh": "摘要：线粒体自噬缺陷是阿尔茨海默病（AD）的关键病理风险，但目前可恢复线粒体自噬的药物有限，主要由于缺乏用于药物筛选和靶点识别的工具。为解决此问题，我们提出了一个集成平台，包含三种新型人工智能（AI）方法——基于表型的筛选模型‘CellAutoFM’、药物相似性预测器‘ADMET Ranker’以及靶点解卷方法‘PROCAT’。利用该平台并结合实验室验证，发现Crassifolin A（JGX-1）是一种强效的天然产物衍生线粒体自噬诱导剂；在结构上，JGX-1直接与ATP结合盒亚家族A成员1（ABCA1）和亚家族G成员1（ABCG1）结合，触发胆固醇外排增强，从而激活PINK1/Parkin依赖的线粒体自噬。在体外和体内AD实验模型中，JGX-1通过自噬/线粒体自噬依赖的机制降低了淀粉样β和Tau病理，且当关键线粒体自噬基因被敲低时，这些益处显著减弱。综上，我们提供了一个开放获取、可重复的AI辅助平台，用于快速化合物筛选、药物相似性评估和潜在靶点预测，以推动药物发现。通过这一范式，我们揭示了调节ABCA1/ABCG1介导的胆固醇-线粒体自噬通路作为一种有前景的抗AD策略，并确定了新型药物候选物JGX-1。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-07T23:32:39.490153+00:00"
     },
     "doi:10.1186/s13024-026-00999-1": {
       "doi": "10.1186/s13024-026-00999-1",
