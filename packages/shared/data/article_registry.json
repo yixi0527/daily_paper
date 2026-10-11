@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10T23:32:32.853544+00:00",
+  "updated_at": "2026-10-11T23:31:21.986942+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -2354,6 +2354,19 @@
       "abstract_zh": "摘要 图在物理信息驱动的现实世界网络场景（如交通、网络和能源等）中广泛用于描述对象及其相互作用。图神经网络（GNN）是处理图结构数据的最新深度学习模型，已被广泛应用于预测、分类/故障检测和决策等多种任务。然而，基于GNN的任务仍面临两个主要挑战。首先，GNN在学习表达性图表示方面的强大能力依赖于图结构的可用性和质量，而在实际中这些图结构往往噪声大、缺失或根本不可用。其次，各种GNN架构通常以手工启发式方式设计，这不仅需要领域专家的特定知识，而且由于探索不足，往往导致次优性能。为解决上述问题，本综述提出了自动化图神经网络设计的统一视角，将图结构学习与图神经架构搜索（GNAS）整合到一个通用管道中，以服务下游任务。具体而言，我们首先从任务无关的启发式策略和任务感知（端到端）学习策略的角度，系统地对图结构学习范式进行分类。随后，对GNAS步骤从微观与宏观搜索空间、架构嵌入、搜索策略和性能评估方法等方面进行全面综合。对其适用性和局限性进行了深入分析。进一步地，概念性地阐述了图结构学习与GNAS架构搜索之间的交互范式。最后，总结了自动化GNAS中的开放问题。本综述旨在从数据（即图结构）和模型（即自动化GNN架构）两方面为图神经网络的自动化表征学习提供深刻见解。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-26T22:35:39.352583+00:00"
+    },
+    "doi:10.1007/s10462-026-11712-5": {
+      "doi": "10.1007/s10462-026-11712-5",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Population size reduction methods in differential evolution: a comprehensive review and experimental analysis",
+      "acquired_at": "2026-10-11T20:29:02",
+      "source_title_sha256": "8c41ce07901dc79c608b3307167df1cbae5e6d25997a39587030a83da4fc037a",
+      "source_abstract_sha256": "48192ac8c77fed68795886d649e96a8c37836510f6a2ab10c693eed950ba4b72",
+      "source_abstract": "abstract",
+      "title_zh": "差分进化中的种群规模缩减方法：全面综述与实验分析",
+      "abstract_zh": "摘要：优化在现代工程与科学中扮演着关键角色。进化计算技术是人工智能（AI）的一个分支，近年来受到广泛关注。科学家、工程师和从业者需要了解进化计算技术的工作原理，并熟练运用基于 AI 的优化方法解决工程优化问题。差分进化（DE）算法是一种基于种群的进化算法，主要用于解决复杂优化问题。原始 DE 算法采用固定种群规模，而现代 DE 变体则采用先进策略在进化过程中逐步缩减种群规模。本文综述了 204 篇研究，既概述了种群规模缩减方法，也通过将选定方法集成到最先进的算法中，并在 CEC 2024 基准函数以及两个真实世界问题上进行实验，提供了对比分析。基准测试表明，种群规模调整策略的选择会影响优化性能，其有效性取决于问题特性和维度。对 15 种方法应用 Friedman 检验后，10 种非线性种群规模缩减方法在 100 维问题上排名高于线性方法。此外，非线性种群规模缩减方法在两个真实世界优化问题上均获得最高排名。然而，没有单一的种群规模调整策略在所有维度和函数族中始终占据主导地位。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
     "doi:10.1007/s10462-026-11714-3": {
       "doi": "10.1007/s10462-026-11714-3",
@@ -10590,12 +10603,12 @@
       "title": "Maternal circulating cytokine and chemokine levels during pregnancy and risk of autism spectrum disorder in offspring: A systematic review and meta-analysis",
       "acquired_at": "2026-10-06T21:32:58",
       "source_title_sha256": "577ba859b4dabac216861c1525df3322b14726782ed3155e7a3b54745d0c4b50",
-      "source_abstract_sha256": "45d6aab412907d91b5b8fd719c660e01f7c64b498c03afc2fc381e26a29ace47",
+      "source_abstract_sha256": "86da263a3600537935753e005a5d848478e49bd3979edc3a0f494321abd40f45",
       "source_abstract": "abstract",
       "title_zh": "孕期母体循环细胞因子与趋化因子水平与子代自闭症谱系障碍风险的系统综述与荟萃分析",
-      "abstract_zh": "背景：孕期母体免疫激活（MIA）已被认为与子代神经发育相关，但将孕期母体免疫介质与自闭症谱系障碍（ASD）联系起来的证据仍不一致。本系统综述与荟萃分析评估了孕期母体循环细胞因子和趋化因子水平是否与子代自闭症相关。方法：检索五个数据库，纳入人类观察性研究，测量孕期母体血液中的细胞因子或趋化因子，并报告子代自闭症结果。符合条件的研究包括使用母体血清或血浆样本的自闭症与对照组比较。采用随机效应模型进行荟萃分析，主要效应量为比值比（OR）。若有组水平浓度数据，也分析标准化均值差（SMD）。使用I²统计量评估异质性，并在可估计时用Egger检验探讨小样本效应。结果：共纳入七项研究。在OR分析中，IL‑10（OR 1.34，95% CI 1.06–1.69）、CXCL10（OR 1.62，95% CI 1.24–2.11）、IL‑1α（OR 1.42，95% CI 1.23–1.65）、IL‑5（OR 1.49，95% CI 1.18–1.89）与自闭症呈显著正相关，IL‑17A（OR 0.81，95% CI 0.70–0.94）呈负相关。CCL4显示边缘性关联。SMD分析支持IL‑6升高、IL‑1β降低与自闭症相关的妊娠。不同分析物的异质性差异显著，IL‑10和CCL4的异质性较大。结论：孕期母体免疫谱可能在后续出现自闭症的妊娠中有所不同，但目前证据尚未支持单一稳健的细胞因子生物标志物。进一步研究需要更大规模的前瞻性队列，重复采样，统一检测方法，通路层面分析，以及整合胎盘-胎儿神经发育表型。",
+      "abstract_zh": "背景：孕期母体免疫激活（MIA）已被认为与子代神经发育相关，但母体妊娠期免疫介质与自闭症谱系障碍（ASD）之间的关联证据仍不一致。本系统综述与荟萃分析评估了孕期母体循环细胞因子和趋化因子水平是否与子代自闭症相关。方法：检索五个数据库，纳入人类观察性研究，测量孕期母体血液细胞因子或趋化因子并报告子代自闭症结果。符合条件的研究包括使用母体血清或血浆样本的自闭症与对照组比较。采用随机效应模型进行荟萃分析，主要效应量为比值比（OR）。若有组级浓度数据，也分析标准化均值差（SMD）。使用I²统计量评估异质性，并在可估计时使用Egger检验探讨小样本效应。结果：七项研究符合纳入标准。在OR分析中，IL-10（OR 1.34，95% CI 1.06-1.69）、CXCL10（OR 1.62，95% CI 1.24-2.11）、IL-1α（OR 1.42，95% CI 1.23-1.65）、IL-5（OR 1.49，95% CI 1.18-1.89）与自闭症呈显著正相关，IL-17A（OR 0.81，95% CI 0.70-0.94）呈负相关。CCL4显示边缘性关联。SMD分析支持IL-6升高、IL-1β降低与自闭症相关的妊娠。不同分析物的异质性差异显著，IL-10和CCL4的异质性较大。结论：母体妊娠期免疫特征可能在后续与自闭症相关的妊娠中存在差异，但目前证据尚未支持单一稳健的细胞因子生物标志物。未来进展需要更大规模的前瞻性队列，重复采样，统一检测方法，通路层面分析，以及整合胎盘-胎儿神经发育表型。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-10T23:32:32.853544+00:00"
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107022": {
       "doi": "10.1016/j.neubiorev.2026.107022",
@@ -15283,12 +15296,12 @@
       "title": "The mitochondrial epigenome and noncoding genome in aging and brain diseases",
       "acquired_at": "2026-10-10T19:52:56",
       "source_title_sha256": "3dd8e47d2a2f72ea3baa260dec52a9749fbe36dd6953ffbf459cebd417feba80",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "线粒体表观基因组与非编码基因组在衰老与脑疾病中的作用",
-      "abstract_zh": null,
+      "source_abstract_sha256": "11d2b785904f7bbbfd03acd2478898bf1a644daed57b02e79be852c332f0cf9e",
+      "source_abstract": "abstract",
+      "title_zh": "线粒体表观遗传组与非编码基因组在衰老与脑疾病中的作用",
+      "abstract_zh": "线粒体基因组是一个动态的调控平台，其功能远远超出蛋白质编码能力。线粒体DNA（mtDNA）携带表观遗传修饰，并产生多种非编码RNA，影响线粒体功能和细胞稳态。动物模型和人类研究表明，mtDNA甲基化、线粒体编码的非编码RNA以及细胞质中线粒体核酸的释放调控转录、代谢和应激信号。此外，这些机制在衰老、神经退行性疾病和急性脑损伤中发生改变。本综述综合了新兴见解，阐述线粒体表观遗传组和非编码基因组如何塑造线粒体功能，并作为连接细胞应激与神经元易感性的调节接口，影响脑衰老和疾病。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-10T23:32:32.853544+00:00"
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
     "doi:10.1016/s0149-7634(26)00189-2": {
       "doi": "10.1016/s0149-7634(26)00189-2",
@@ -20581,6 +20594,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-06T08:47:09.5630212+00:00"
     },
+    "doi:10.1038/d41586-026-02369-9": {
+      "doi": "10.1038/d41586-026-02369-9",
+      "journal_slug": "nature",
+      "title": "About to give your first lecture? Read this first",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "0b13497b41177f63dab9cee07fc413fca5ec282847898f572a4b3e85e81f1f8e",
+      "source_abstract_sha256": "90f78b58524ff6bf339f4a155bfcd9e5ff0d41487cc00fd435ee2faf0f9361a9",
+      "source_abstract": "abstract",
+      "title_zh": "即将给第一次讲座？先读这篇",
+      "abstract_zh": "十位研究人员和教职员工分享了他们在开始教学时的惊讶之处，以及他们在走进讲堂前希望自己知道的事。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
     "doi:10.1038/d41586-026-02370-2": {
       "doi": "10.1038/d41586-026-02370-2",
       "journal_slug": "nature",
@@ -22387,6 +22413,19 @@
       "abstract_zh": "该来源仅提供“science杂志”式的栏目提示“世界科学的头条故事”（发布日期：2026年8月14日），未提供摘要。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-14T19:34:11.648985+00:00"
+    },
+    "doi:10.1038/d41586-026-02563-9": {
+      "doi": "10.1038/d41586-026-02563-9",
+      "journal_slug": "nature",
+      "title": "How do I rekindle my motivation for earning my PhD?",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "eca7ebc8c9ba405acdf0fec3507e58416efebb24c184ca153576a74a80c97886",
+      "source_abstract_sha256": "3fdc6eccf42da3b8851adc4718d6b608bf8c23d40334978c666702d6103d9db9",
+      "source_abstract": "abstract",
+      "title_zh": "我如何重新点燃攻读博士学位的动力？",
+      "abstract_zh": "一名早期科研人员遇到了瓶颈。以下是他们如何在研究中坚持下去的方法。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
     "doi:10.1038/d41586-026-02566-6": {
       "doi": "10.1038/d41586-026-02566-6",
@@ -24585,6 +24624,58 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-01T04:23:20.028602+00:00"
     },
+    "doi:10.1038/d41586-026-02854-1": {
+      "doi": "10.1038/d41586-026-02854-1",
+      "journal_slug": "nature",
+      "title": "What is needed for regenerative medicine to flourish?",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "4d7b71be31ffa52a590e419f227ea3b5685b65b2ae335230f9faa682d5eb7534",
+      "source_abstract_sha256": "d2cf92ba4548f05ee9beb24fc1e08dae1d6e38e8595da0da1427da9d05d8a672",
+      "source_abstract": "abstract",
+      "title_zh": "再生医学蓬勃发展的关键是什么？",
+      "abstract_zh": "尽管该领域的突破性研究有潜力挽救生命，但它需要更深入、更公平的研究基础。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
+    "doi:10.1038/d41586-026-02855-0": {
+      "doi": "10.1038/d41586-026-02855-0",
+      "journal_slug": "nature",
+      "title": "‘Remarkably encouraging’: stem-cell treatments for autoimmune diseases enter new phase",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "6b28618903e5d04ee553f59d9966fab139569daf6e50af8b382682258e7b2c21",
+      "source_abstract_sha256": "a99efd975731f159dc4343e2439a2a5f49964e752260ee1bad25a236a4790ad0",
+      "source_abstract": "abstract",
+      "title_zh": "‘极具鼓舞性’：干细胞治疗自身免疫疾病进入新阶段",
+      "abstract_zh": "科学家正致力于将人体最具多能性的细胞转化为可行的疗法，但免疫抑制的挑战仍在。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
+    "doi:10.1038/d41586-026-02856-z": {
+      "doi": "10.1038/d41586-026-02856-z",
+      "journal_slug": "nature",
+      "title": "Competition heats up in the regenerative-medicine ranks",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "b46fe30a9ce0a17ce57631cb20ef10a4edcff6ed59ab665416502fd7a98bfb87",
+      "source_abstract_sha256": "d41f3b5a7fb9a4a79f2c65adbc56049143ea6958f1a034cce6d55426e7cfce09",
+      "source_abstract": "abstract",
+      "title_zh": "再生医学领域竞争加剧",
+      "abstract_zh": "美国领先，但中国构成强劲竞争，根据最新Nature Index数据。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
+    "doi:10.1038/d41586-026-02858-x": {
+      "doi": "10.1038/d41586-026-02858-x",
+      "journal_slug": "nature",
+      "title": "A guide to the Nature Index",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "177b77483e80e1555814068903c23406903b635f68445797416634c676dabf4b",
+      "source_abstract_sha256": "e20fe80f510bf5dbc7501a84aae7dc67c44783ad76001c6458a688c47856e4ea",
+      "source_abstract": "abstract",
+      "title_zh": "《Nature Index 指南》",
+      "abstract_zh": "本补充材料描述了所使用的术语和方法学，并提供了可在 natureindex.com 免费在线访问的功能指南。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
     "doi:10.1038/d41586-026-02859-w": {
       "doi": "10.1038/d41586-026-02859-w",
       "journal_slug": "nature",
@@ -24597,6 +24688,19 @@
       "abstract_zh": "失去联系。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-04T23:35:54.215679+00:00"
+    },
+    "doi:10.1038/d41586-026-02861-2": {
+      "doi": "10.1038/d41586-026-02861-2",
+      "journal_slug": "nature",
+      "title": "The courier",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "996b92bf799a00d8ac2e9d123b359707d2e60331df4c55323ef8abb670a4507f",
+      "source_abstract_sha256": "bc5719a5877a189664296a02460610e9525b1fee1a50400317920c0dd7890898",
+      "source_abstract": "abstract",
+      "title_zh": "快递员",
+      "abstract_zh": "一次特殊交付。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
     "doi:10.1038/d41586-026-02866-x": {
       "doi": "10.1038/d41586-026-02866-x",
@@ -25014,6 +25118,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-06T23:32:57.719385+00:00"
     },
+    "doi:10.1038/d41586-026-02920-8": {
+      "doi": "10.1038/d41586-026-02920-8",
+      "journal_slug": "nature",
+      "title": "Watch scientists decipher burned scrolls without unrolling them",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "0a5497f7fd7f3ada17b38473ed8a42648ecaf52dcfe33a38c244404e0fdb2f6d",
+      "source_abstract_sha256": "44e09904303e0f58ece4582c0eac4141a35c48e61771b621814d0a03859c1dec",
+      "source_abstract": "abstract",
+      "title_zh": "科学家破解未展开的烧毁卷轴",
+      "abstract_zh": "通过自制并烧毁纸莎草，研究人员提出了一种可能帮助读取赫库兰尼姆未展开卷轴中发光文字的方法。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
     "doi:10.1038/d41586-026-02922-6": {
       "doi": "10.1038/d41586-026-02922-6",
       "journal_slug": "nature",
@@ -25079,6 +25196,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-10T23:32:32.853544+00:00"
     },
+    "doi:10.1038/d41586-026-02930-6": {
+      "doi": "10.1038/d41586-026-02930-6",
+      "journal_slug": "nature",
+      "title": "How to stay smart in the age of AI: the science of critical thinking",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "f7e6be164b49a0589c35e4bd9b5a4f180c9cbd3548f588ec4edb870ff454e9ca",
+      "source_abstract_sha256": "7385e28b8219088bf963a34bde8956a5c8fa9d26151898085979913b2aec60b6",
+      "source_abstract": "abstract",
+      "title_zh": "如何在人工智能时代保持聪明：批判性思维的科学",
+      "abstract_zh": "人们越来越担心人工智能会削弱记忆和推理能力。但科学提供了保持大脑敏锐的方法。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
     "doi:10.1038/d41586-026-02931-5": {
       "doi": "10.1038/d41586-026-02931-5",
       "journal_slug": "nature",
@@ -25117,6 +25247,32 @@
       "abstract_zh": "从南非到亚马逊，风险不断升级，行动窗口正迅速收窄。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-10T23:32:32.853544+00:00"
+    },
+    "doi:10.1038/d41586-026-02941-3": {
+      "doi": "10.1038/d41586-026-02941-3",
+      "journal_slug": "nature",
+      "title": "Will AI really kill us all? The science behind the hype",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "7423258667050a49b57d38a909184e02377059e8475bf65e6aafd0ac844fb86a",
+      "source_abstract_sha256": "34d6e8b5b449a72de01facc5258cceee69c0fd1936dca0fe5ea17c3715c2ebea",
+      "source_abstract": "abstract",
+      "title_zh": "人工智能真的会灭绝我们吗？背后的科学",
+      "abstract_zh": "《自然》杂志审视技术是否会导致人类灭亡，以及为何 AI 公司呼吁放缓发展。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
+    "doi:10.1038/d41586-026-02942-2": {
+      "doi": "10.1038/d41586-026-02942-2",
+      "journal_slug": "nature",
+      "title": "This super-cold microscope could spur a quantum revolution",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "a6656cdc1bf4fbe0721baf901a4c23254a1f584d0fa635560c4980baff7bf80a",
+      "source_abstract_sha256": "bae4791e92418d63b18a432b9221cdc0c5d0ab76bbc29cf5ebbca1b81ebb7708",
+      "source_abstract": "abstract",
+      "title_zh": "这台超低温显微镜或引发量子革命",
+      "abstract_zh": "该仪器在接近绝对零度的环境下运行数小时，近期将发运至数个实验室。研究人员对此感到兴奋。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
     "doi:10.1038/d41586-026-02943-1": {
       "doi": "10.1038/d41586-026-02943-1",
@@ -25157,6 +25313,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-05T23:31:51.636001+00:00"
     },
+    "doi:10.1038/d41586-026-02949-9": {
+      "doi": "10.1038/d41586-026-02949-9",
+      "journal_slug": "nature",
+      "title": "In praise of human teachers: universities must resist outsourcing everything to AI",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "5189fb9f2d8341628dcf7e4c6496918b0190b04bc0afd11acb8751c19531cf3d",
+      "source_abstract_sha256": "8e5cfe2a2cea80d6cdd22b3e313a9d13ee2cf3c05aab4338d50b37b7b510e328",
+      "source_abstract": "abstract",
+      "title_zh": "赞颂人类教师：大学必须抵制将一切外包给人工智能",
+      "abstract_zh": "人工智能革命正在席卷教育领域。然而，能够传递思考与学习兴奋感的教师是不可替代的。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
     "doi:10.1038/d41586-026-02951-1": {
       "doi": "10.1038/d41586-026-02951-1",
       "journal_slug": "nature",
@@ -25196,6 +25365,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-10T23:32:32.853544+00:00"
     },
+    "doi:10.1038/d41586-026-02979-3": {
+      "doi": "10.1038/d41586-026-02979-3",
+      "journal_slug": "nature",
+      "title": "Dust in the wind is on the decline",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "13a38d58aaf76dae0311f9d7eea257be0adaa2110008565dc859c47835542210",
+      "source_abstract_sha256": "3122ea3ca7ebb81f022be9b5b4e010a8880742f43ed402474e9f97c1d74dc4e0",
+      "source_abstract": "abstract",
+      "title_zh": "风中的尘埃正在减少",
+      "abstract_zh": "全球大气尘埃的减少可能正在影响地球温度。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
     "doi:10.1038/d41586-026-02981-9": {
       "doi": "10.1038/d41586-026-02981-9",
       "journal_slug": "nature",
@@ -25221,6 +25403,19 @@
       "abstract_zh": "聆听科学界的重大故事 | 2026年9月18日",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-06T23:32:57.719385+00:00"
+    },
+    "doi:10.1038/d41586-026-02986-4": {
+      "doi": "10.1038/d41586-026-02986-4",
+      "journal_slug": "nature",
+      "title": "Huge hoard of metal bars hints at vast Iron Age trade",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "8510486d34e1847a1f258977b0bec5fd17e76bbee49c9cdc155d602c8a75a514",
+      "source_abstract_sha256": "e4faa16ae11e91c29d7eb0d903ac22b0d223e935c7ab79d42d4d9c1941086aac",
+      "source_abstract": "abstract",
+      "title_zh": "大量金属条堆藏暗示铁器时代广泛贸易",
+      "abstract_zh": "一吨铁的藏匿是迄今为止最大的，足以制造约500把剑。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
     "doi:10.1038/d41586-026-02987-3": {
       "doi": "10.1038/d41586-026-02987-3",
@@ -25286,6 +25481,58 @@
       "abstract_zh": "致编辑的来信",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-10T23:32:32.853544+00:00"
+    },
+    "doi:10.1038/d41586-026-03000-7": {
+      "doi": "10.1038/d41586-026-03000-7",
+      "journal_slug": "nature",
+      "title": "Nepal floods pose biggest test yet for UN climate loss and damage fund",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "42fb8fff0708e5c7b22be378c4d0c51514898baa7103ab0e1258cf756265d6dc",
+      "source_abstract_sha256": "e57421f58528758047c301a537c4c44d698b9c62e2d3989e54ff7c05378fcd82",
+      "source_abstract": "abstract",
+      "title_zh": "尼泊尔洪水是联合国气候损失与损害基金面临的最大考验",
+      "abstract_zh": "各国不应因应极端天气的即时影响而等待数月才能获得相对小额的拨款。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
+    "doi:10.1038/d41586-026-03008-z": {
+      "doi": "10.1038/d41586-026-03008-z",
+      "journal_slug": "nature",
+      "title": "Daily briefing: The first new cat species described by science in a century",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "76137f625996594f626f35146e4c4f592d3b8d6fe947cda9ee3403b89ce54e81",
+      "source_abstract_sha256": "dc0cbde7dfed2dfd7d0deeeae54ec51d1c0979740896520412261d9bc3a489d1",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：百年首次被科学描述的新猫科物种",
+      "abstract_zh": "Leopardus tilcayo 比家猫更小，身上布满类似豹纹的斑点。此外，脑部可能源自两种前体细胞，并讨论如何在气候危机中维护人类繁荣的基础。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
+    "doi:10.1038/d41586-026-03014-1": {
+      "doi": "10.1038/d41586-026-03014-1",
+      "journal_slug": "nature",
+      "title": "Why AI companies can’t be trusted to self-regulate",
+      "acquired_at": "2026-10-11T20:14:24",
+      "source_title_sha256": "98ce459f2f55081436df34f25db6be50ec4b12801f953a1d0464e0e5ed5f39a3",
+      "source_abstract_sha256": "8330b3c0cbbd46b9fbb2fcf1f4a32e515bfc5010b277cad60287a40662ed3ed0",
+      "source_abstract": "abstract",
+      "title_zh": "为何 AI 公司无法自我监管",
+      "abstract_zh": "从航空到银行，高风险行业受到独立监督和有意义的处罚。AI 公司也不应例外。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
+    "doi:10.1038/s41380-026-03624-1": {
+      "doi": "10.1038/s41380-026-03624-1",
+      "journal_slug": "molecular-psychiatry",
+      "title": "The role of white matter microstructure in the association between childhood maltreatment and adult post-traumatic symptoms",
+      "acquired_at": "2026-10-11T20:23:13",
+      "source_title_sha256": "d99314dcf264d5aa93596d21f74036ff34aa9655ffa3af2a2a301e33af323a8c",
+      "source_abstract_sha256": "91ef19e4f4522d96083fc5a01d7a88ec6616fe1fe748afb36e74129ed70b6ec3",
+      "source_abstract": "abstract",
+      "title_zh": "童年虐待与成人创伤后症状关联中白质微结构的作用",
+      "abstract_zh": "摘要 童年虐待（CM）是成人创伤后症状和白质（WM）改变的风险因素。尚不清楚在两种常见的军事条件——创伤后应激障碍（PTSD）和轻度创伤性脑损伤（mTBI）——中，WM微结构如何受到影响。本文分析了来自伤害与创伤压力（INTRuST）临床联盟的299名参与者（53%男性，平均年龄35.69 ± 12.23岁）的数据。研究包括56名PTSD患者（其中41名伴有mTBI）、107名mTBI患者和136名对照组（无PTSD和/或mTBI）。从扩散磁共振成像中提取了主要白质束的扩散参数（平均扩散率、轴向扩散率和径向扩散率，MD、AD、RD；各向异性分数，FA）。使用童年创伤问卷（CTQ）评估CM。多元回归模型检验CM严重程度与WM扩散之间的关联。调节分析评估PTSD和/或mTBI对这些关联的影响。中介分析探讨WM扩散如何影响CM与PTSD以及脑震荡后症状严重程度之间的关联。更高的CM严重程度与较低的MD和AD相关，且与PTSD和/或mTBI无关。WM扩散，尤其是在胼胝体和上纵束中，介导了CM严重程度与PTSD（MD b ab = 0.022，AD b ab = 0.019–0.034）以及脑震荡后症状（MD b ab = 0.028–0.040，AD b ab = 0.032–0.047）之间的关联。研究结果表明，WM改变与CM本身的关联更强，而非与PTSD和/或mTBI的关联。对感官整合关键区域的中介效应强调了WM微结构作为CM可能使人易患创伤后症状的神经生物学通路的作用。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
     "doi:10.1038/s41380-026-03626-z": {
       "doi": "10.1038/s41380-026-03626-z",
@@ -28419,6 +28666,19 @@
       "abstract_zh": "摘要：精神病表现出显著的神经生物学异质性，而基于症状的诊断并未充分捕捉这一点。尽管先前的研究已识别出若干亚组，但尚不清楚潜在疾病变异如何在大脑的多尺度内在功能组织中体现，以及这些模式是否可用于系统性识别由生物学驱动的精神病亚型。本文旨在识别精神病成像神经亚型（PINs）——仅基于大脑功能的神经生物学特征定义的同质亚组，独立于临床或认知定义，并检验这些亚组是否表现出有意义的表型差异。我们使用2103名B‑SNIP 1&2参与者的静息态fMRI数据计算个体特异性的多尺度功能网络连接（msFNC）。随后，我们推导出一个低维神经生物学子空间，称为潜在网络连接（Latent Network Connectivity），该子空间捕捉了跨三个组件的系统级多尺度信息。将受试者的msFNC投影到该子空间后，通过无监督学习发现了三个PINs，涵盖DSM诊断（精神分裂症、双相情感障碍、精神分裂情感性障碍）。尽管仅基于内在神经生物学定义，PINs仍表现出不同的认知、临床和连接特征。PIN‑1为认知受损最严重的亚组，显示小脑-皮层下和视觉-运动功能的低连接性，同时视觉-皮层下功能呈高连接性。认知保留较好的PIN‑2显示视觉-皮层下、皮层下-运动以及皮层下-高级认知功能的低连接性。PIN‑3呈中等认知水平，表现为小脑-皮层下低连接性以及小脑-运动和皮层下-运动功能的高连接性。尽管对协变量进行调整后未发现PINs之间的显著临床差异，探索性分析仍揭示了YMDR、PANSS和发病年龄的选择性差异。值得注意的是，55%的亲属与其受试者在同一神经亚型上对齐，这一比例显著高于随机对齐以及DSM对齐，提示潜在的遗传性。认知表现与不同的大脑连接模式可靠对应，这些模式在亲属中也可见，支持其构念效度。我们的PINs与先前报道的BSNIP生物型部分重合（如PIN‑1与生物型1对应），但与其他生物型不一致，后者是基于整合的电生理、认知和眼动数据确定的，支持收敛效度，并表明基于静息态fMRI的多尺度连接在划分精神病异质性方面与多模态生物标志物方法略有不同。这些发现强调了DSM分类在捕捉精神病障碍生物学复杂性方面的局限性，并突显了基于成像的神经亚型在深化我们对精神病谱系理解方面的潜力。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-09T23:32:25.157624+00:00"
+    },
+    "doi:10.1038/s41380-026-03922-8": {
+      "doi": "10.1038/s41380-026-03922-8",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Zebrafish behavioral phenomics reveals functional subtypes of autism risk genes",
+      "acquired_at": "2026-10-11T20:23:13",
+      "source_title_sha256": "6d2bc100deffa960d2bc050af4e7fba3fcb1afae4e8b35b5db9bb16351d2e64a",
+      "source_abstract_sha256": "4b237edcfd8754119000ea31e2090f1f49f6d0ba0179943c64c14afe72151c3f",
+      "source_abstract": "abstract",
+      "title_zh": "斑马鱼行为表型组学揭示自闭症风险基因的功能亚型",
+      "abstract_zh": "自闭症谱系障碍（ASD）是一种高度异质性的神经发育疾病，由众多遗传突变引起，每个突变仅提供有限的个体风险。尽管其遗传复杂性和临床负担巨大，但尚无针对核心症状的有效治疗。虽然ASD被诊断为单一疾病，但越来越多的证据表明它由生物学上不同的亚型组成，然而遗传风险如何映射到表型结构仍定义不清。本文利用斑马鱼行为表型组学系统地将ASD风险基因与体内功能行为亚型关联。我们使用基于无监督深度学习的行为分析平台 ZeChat，对11个高置信度ASD风险基因斑马鱼突变体的行为谱进行表征。ZeChat 分析揭示每个突变体具有独特的行为表型，并通过层次聚类将其行为指纹分为三类（Cluster 1–3）。将突变体表型与大型神经活性药物表型组数据库整合后，我们发现亚型特异性与5-羟色胺能、多巴胺能和阿片受体调节化合物相关。通过另一种社会偏好测定方法 Fishbook，我们进一步证明了亚型特异性的药理学恢复社会缺陷，包括对 Cluster 3 突变体 arid1b、adnp、grin2b、pten 以及 Cluster 2 突变体 pogz 和 shank3 的 μ-阿片受体拮抗剂的选择性恢复。综上所述，这些结果展示了一种可扩展的体内框架，用于基于行为表型组学将ASD风险基因分类为功能亚型，并发现针对性恢复策略。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
     "doi:10.1038/s41380-026-03925-5": {
       "doi": "10.1038/s41380-026-03925-5",
