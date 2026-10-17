@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-16T23:34:06.596097+00:00",
+  "updated_at": "2026-10-17T23:31:59.579980+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -2407,6 +2407,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-19T22:32:33.478089+00:00"
     },
+    "doi:10.1007/s10462-026-11708-1": {
+      "doi": "10.1007/s10462-026-11708-1",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Seeing ahead through a state-of-the-art review of visual perception and predictive intelligence for collaborative robots",
+      "acquired_at": "2026-10-17T18:48:19",
+      "source_title_sha256": "c3c606989cb32d9b6ae5061a5a79d9054644f9fa86cccfa0a56dad8c4b6b06c8",
+      "source_abstract_sha256": "16080fc19462565de4074795557bdeeb395afabf041214a7963c3b5a0360169d",
+      "source_abstract": "abstract",
+      "title_zh": "通过前沿综述视觉感知与预测智能，洞察协作机器人的未来",
+      "abstract_zh": "摘要 随着协作机器人（cobots）从孤立的预编程操纵器迅速演变为能够与人类、其他机器人和机器高效协同工作的合作伙伴，其发展速度正加速。计算机视觉的进步使得协作机器人即使在动态且杂乱的环境中，也能检测、识别并评估环境与动作。然而，在动态系统中实现更高的检测精度和实时定位仍是挑战，因为大多数现有方法假设背景无杂乱且场景复杂度有限。弥补这一差距对科研和工业部署都至关重要。本文回顾了协作机器人视觉感知的发展，梳理了新兴的计算机视觉算法，并考察了一个整体感知管线，其中原始视觉信号、视觉语言模型（VLMs）和增强/虚拟现实界面共同驱动统一的感知-思考-执行循环。综述发现，高混合、可重构工厂中的协作机器人面临严峻挑战：视野遮挡、照明波动、背景模糊、少样本或零样本物体场景、高速运动，以及在实时融合异构数据流时的计算问题。协作机器人还需要处理受损物品，这要求视觉算法能够从稀疏线索推断几何并支持自适应抓取。最后，综述提出了三条互补的研究方向，以实现即插即用的协作机器人：（1）信息感知的传感器融合管线，仅传输可信体素以降低带宽同时保持亚毫米级精度；（2）基于语言的规划与控制网络，将普通语言目标映射为平滑、限加速度的轨迹；（3）预训练的少样本奖励头，无需专用指标即可评估任务进展，闭环强化学习（RL）。综合来看，这些进展有望实现仅需少量演示即可投入使用的协作机器人。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
     "doi:10.1007/s10462-026-11709-0": {
       "doi": "10.1007/s10462-026-11709-0",
       "journal_slug": "artificial-intelligence-review",
@@ -2472,6 +2485,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-01T04:23:20.028602+00:00"
     },
+    "doi:10.1007/s10462-026-11716-1": {
+      "doi": "10.1007/s10462-026-11716-1",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "From knowledge retrieval to generation: a comprehensive study of RAG's architectures, evolution, and applications",
+      "acquired_at": "2026-10-17T18:48:19",
+      "source_title_sha256": "c710e7a06559f2256d0f2bd4defabf8a96ef73a813eaa1e31245a6b869502ce3",
+      "source_abstract_sha256": "e7236e76a0f4b9e4abb3280cd1c922edc3859f3917735f185c8c58be7769cbd9",
+      "source_abstract": "abstract",
+      "title_zh": "从知识检索到生成：RAG 架构、演进与应用的全面研究",
+      "abstract_zh": "摘要 大型语言模型（LLMs）在自然语言理解、生成和推理方面表现出强大能力，但其对静态参数化知识的依赖仍导致知识陈旧、幻觉、领域适应性有限、可追溯性弱以及在知识密集场景中的高更新成本。检索增强生成（RAG）通过将外部知识源融入生成过程来解决这些限制，使其成为提升事实基础、知识时效性和证据可追溯性的关键方法。然而，现有 RAG 研究在架构、检索与生成策略、评估方法、应用场景、部署约束和安全风险等方面日益碎片化。为系统化理解该领域，本综述通过结构化且透明的评审协议回顾 RAG 研究。我们围绕三个主要维度组织评审：RAG 的系统栈与范式演进、评估方法与应用证据，以及实际部署与安全挑战。具体而言，我们分析 RAG 系统的核心组件，综合其从 Naive RAG 到 Agentic RAG 的演进，考察评估指标与压力测试协议，总结基准数据集与领域应用，并讨论部署约束与新兴风险，如提示注入、数据中毒、检索劫持、隐私泄露和引用洗白。本综述提供了以分类学为导向、评估为意识、部署为关注的参考，帮助理解 RAG 系统的发展、局限与未来方向。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
     "doi:10.1007/s10462-026-11719-y": {
       "doi": "10.1007/s10462-026-11719-y",
       "journal_slug": "artificial-intelligence-review",
@@ -2510,6 +2536,45 @@
       "abstract_zh": "人工智能综述——随着互联网的广泛应用，各种通信设备之间传输了大量数据。网络安全是一个关键领域……",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-01T04:23:20.028602+00:00"
+    },
+    "doi:10.1007/s10462-026-11726-z": {
+      "doi": "10.1007/s10462-026-11726-z",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Language modeling on tabular data: a survey of foundations, techniques and evolution",
+      "acquired_at": "2026-10-17T18:48:19",
+      "source_title_sha256": "aa72fb6ca1e892f0fb693addcf4891e8d5b553ab7eaf5bcce1d57ad30a25f608",
+      "source_abstract_sha256": "b0e7f3a3fb3d860757ffa2b759647440ddcc07ee72c44b490899f0e35722a196",
+      "source_abstract": "abstract",
+      "title_zh": "基于表格数据的语言建模：基础、技术与演进综述",
+      "abstract_zh": "人工智能综述 - 表格数据是各领域普遍存在的数据类型，由于其异构性和复杂的结构关系，带来了独特的挑战....",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1007/s10462-026-11727-y": {
+      "doi": "10.1007/s10462-026-11727-y",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Towards efficient large language models for scientific data: a review",
+      "acquired_at": "2026-10-17T18:48:19",
+      "source_title_sha256": "5969fb0918a96d694fa23cdd4fe34be0e751d57091adc032e65e9693ba594207",
+      "source_abstract_sha256": "e2f9f7d443d20773570ea390ac946924a89df89e64e7737414922f469c685e16",
+      "source_abstract": "abstract",
+      "title_zh": "面向科学数据的高效大型语言模型：综述",
+      "abstract_zh": "摘要：将大型语言模型（LLMs）应用于科学领域需要高效策略，以降低计算成本并保持性能。本文系统综述了适用于科学应用的LLM效率技术。我们分析了跨七个科学领域（包括生物医学、临床医学、生物学、数学、化学、地球-环境科学和跨域科学研究）的120项研究，概述了34个代表性模型和30个科学数据集。通过考察参数高效微调、知识蒸馏、架构优化和数据中心方法，提出了双轴分类法，将效率技术按方法策略和科学领域进行组织。本文还为在资源受限条件下选择效率策略提供实用指导，并指出多模态集成、灾难性遗忘和自动方法选择等开放挑战。通过整合跨域证据并概述可持续模型发展的方向，本综述支持在资源受限研究环境中采用高效科学LLM，并促进各科学学科更易获取和负责任的部署。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1007/s10462-026-11728-x": {
+      "doi": "10.1007/s10462-026-11728-x",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Toward robust, reproducible, and widely accessible intracranial speech brain-computer interfaces: a comprehensive narrative review of neural mechanisms, hardware, algorithms, evaluation, clinical pathways and future directions",
+      "acquired_at": "2026-10-17T18:48:19",
+      "source_title_sha256": "0fe7e25c66929079ef3739d70e54e200e628f16db1d8f4111a0722eebf3c768c",
+      "source_abstract_sha256": "669ee8bb74d66b7a6e0fdc7091817084ae1ad41bca83d1c55775280e5ccad9a1",
+      "source_abstract": "abstract",
+      "title_zh": "迈向稳健、可重复且广泛可用的颅内语音脑机接口：神经机制、硬件、算法、评估、临床路径与未来方向的综合叙述综述",
+      "abstract_zh": "人工智能综述——颅内语音脑机接口（BCIs）为严重、慢性及其他受限沟通障碍个体提供了一条有前景的恢复沟通途径。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1007/s10462-026-11731-2": {
       "doi": "10.1007/s10462-026-11731-2",
@@ -3394,6 +3459,19 @@
       "abstract_zh": "背景：哥伦比亚大学自传记忆访谈简短版（AMI‑SF）常用于电休克治疗（ECT）研究，但缺乏参考数据来判断ECT后观察到的衰退是否超过预期的再测变化。方法：分析了99名无终身ECT史的抑郁住院患者与218名接受右侧单侧（RUL）或双侧颞叶（BT）ECT的患者的个体数据。可靠衰退是相对于在等间隔内评估的抑郁对照组，使用可靠变化指数和标准化回归方法定义的。结果：在抑郁对照组中，基线自传信息的平均回忆比例为治疗结束时76.9%，3个月时75.1%，6个月时68.4%，12个月时65.5%。治疗结束时，约三分之一的RUL患者和一半的BT患者显示可靠衰退。12个月时，RUL后为十分之一，BT后为十分之三。平均而言，后期随访比例较低并未表明治疗结束时未回忆的记忆得以恢复；ECT组的平均分在长期随访期间基本保持不变，而对照组则进一步下降。结论：ECT后急性期自传记忆衰退超过抑郁对照组预期的情况普遍存在，并在一年随访后BT ECT的发生率仍显著高于RUL ECT。RUL ECT后，九成患者在一年随访时未达到可靠衰退标准。这些心理测量阈值描述了统计学上不寻常的变化，而不一定代表临床上有意义的逆行性健忘。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-16T23:34:06.596097+00:00"
+    },
+    "doi:10.1016/j.brs.2026.103238": {
+      "doi": "10.1016/j.brs.2026.103238",
+      "journal_slug": "brain-stimulation",
+      "title": "A Reproducible Safety Assessment Model for Concurrent Transcranial Magnetic Stimulation with Implanted Intracranial Electroencephalography Electrodes",
+      "acquired_at": "2026-10-17T18:52:15",
+      "source_title_sha256": "b25c703f083431939ead6c55b2da51c8492334e871f5564ad7bc31ed107386e8",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "可复现的安全评估模型：同时使用经颅磁刺激与植入式颅内脑电电极",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1016/j.cell.2026.02.018": {
       "doi": "10.1016/j.cell.2026.02.018",
@@ -11110,12 +11188,12 @@
       "title": "Cannabis Co-use and endocannabinoid system modulation in tobacco use disorder",
       "acquired_at": "2026-10-13T21:49:57",
       "source_title_sha256": "2511ec3851a6d05ef0fa88383541435fe3d38dcf1c922ccaf0023e26f584a1e7",
-      "source_abstract_sha256": "58cc91b6a319a44aebedd87cba6d30bead691857cd329bfbf6cd8c4073690714",
+      "source_abstract_sha256": "d35f75ad4ee89d7d0da8207a030dfa27b7cbcb035d49caace010d1c662d68843",
       "source_abstract": "abstract",
       "title_zh": "大麻共用与烟草使用障碍中内源性大麻素系统调节",
-      "abstract_zh": "烟草使用障碍（TUD）仍是可预防死亡的主要原因，现有药物治疗的12个月戒烟率低于30%。随着大麻合法化的扩大，约18-22%的烟草使用者报告同时使用大麻，但共用对戒烟结果的影响以及内源性大麻素系统（ECS）调节的治疗潜力尚不清楚。我们按照PRISMA 2020指南进行转化系统综述和荟萃分析，检索Ovid MEDLINE、Embase、APA PsycInfo和Web of Science，截止2026年1月（PROSPERO: CRD420250652724）。符合条件的研究分为三类：大麻共用与戒烟结果的观察性研究；大麻素调节剂对尼古丁相关行为的前临床研究；以及针对ECS的干预的人体实验研究。共筛选4,869条记录，52项研究符合纳入标准。对18项观察性研究（N=229,034）的荟萃分析显示，大麻使用与烟草戒烟成功率降低25%相关（OR=0.75；95% CI: 0.67-0.83；p<0.0001；I²=81.1%）。前临床证据（15项研究）表明，CB1受体（CB1R）拮抗剂显著降低尼古丁自给自足和复发，而大麻二酚（CBD）则在不影响食物强化的情况下，抑制尼古丁摄入和戒断。CB1R逆激动剂的临床转化因精神不良反应失败，但CBD通过减少40%的香烟消费、逆转对吸烟线索的注意偏差以及减轻戒断严重程度，显示出潜力。这些发现区分了自然大麻暴露与可能有益的靶向ECS调节，并支持CBD作为适当样本量烟草戒烟试验的有前景候选者。",
+      "abstract_zh": "烟草使用障碍（TUD）仍是可预防死亡的主要原因，现有药物治疗的12个月戒烟率低于30%。随着大麻合法化的扩大，约18-22%的烟草使用者报告同时使用大麻，但共用对戒烟结果的影响以及内源性大麻素系统（ECS）调节的治疗潜力尚不清楚。我们按照PRISMA 2020指南进行转化性系统综述和荟萃分析，检索Ovid MEDLINE、Embase、APA PsycInfo和Web of Science，截止2026年1月（PROSPERO: CRD420250652724）。共有三类研究符合纳入标准：观察性研究探讨大麻共用与戒烟结果；前临床研究评估大麻素调节剂对尼古丁相关行为的影响；以及人类实验研究ECS靶向干预。筛选4869条记录后，52项研究符合纳入条件。对18项观察性研究（N=229,034）的荟萃分析显示，大麻使用与烟草戒烟的可能性降低25%相关（OR=0.75；95% CI: 0.67-0.83；p<0.0001；I²=81.1%）。前临床证据（15项研究）表明，CB1受体（CB1R）拮抗剂显著降低尼古丁自给自足和复发，而大麻二酚（CBD）则在不影响食物强化的情况下，抑制尼古丁摄入和戒断。CB1R逆激动剂的临床转化因精神不良反应失败，但CBD显示出潜力，能将香烟消费减少40%，逆转对吸烟线索的注意偏差，并减轻戒断严重程度。这些发现区分了自然大麻暴露与潜在有益的靶向ECS调节，并支持CBD作为足够样本量的烟草戒烟试验的有前景候选者。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-16T23:34:06.596097+00:00"
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107033": {
       "doi": "10.1016/j.neubiorev.2026.107033",
@@ -11172,15 +11250,15 @@
     "doi:10.1016/j.neubiorev.2026.107037": {
       "doi": "10.1016/j.neubiorev.2026.107037",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "From Gut Microbiome to Aging Brain: Butyrate as a Neurogeroscience Effector",
+      "title": "From gut microbiome to aging brain: Butyrate as a neurogeroscience effector",
       "acquired_at": "2026-10-15T20:33:11",
-      "source_title_sha256": "9078ef7e95453873681bb386334efc95c43e6d914fb84a61b114684d787ecf2e",
+      "source_title_sha256": "0b8a2f053f2d6512c7256fd03ef3ecdfff97db8e51977dbfa499c21fd1d888b1",
       "source_abstract_sha256": "56e6d2ab481d451b3d1d264b1a850955d3636462333257545e9b58a154444543",
       "source_abstract": "abstract",
-      "title_zh": "从肠道微生物组到衰老大脑：丁酸盐作为神经衰老科学效应因子",
-      "abstract_zh": "与衰老相关的认知下降越来越与微生物组-肠道-大脑轴的失调相关，该轴中与年龄相关的失衡逐步降低丁酸盐的产生，丁酸盐是一种短链脂肪酸，也是由细菌发酵膳食纤维产生的中心神经活性代谢物。实验研究表明，丁酸盐可以影响与大脑衰老相关的多种过程，包括组蛋白去乙酰化酶活性、神经炎症信号、小胶质细胞表型、血脑屏障完整性、突触可塑性和神经发生。通过这些机制，丁酸盐可能调节涉及大脑衰老的多种分子和细胞过程，尽管在人类大脑中直接因果效应的证据有限。前临床研究报告了在多种衰老和神经疾病模型中的神经保护作用；然而，在人类中的直接证据仍有限，主要是关联性或间接性。因此，本综述批判性地综合了关于微生物来源的丁酸盐在大脑衰老中的现有证据，涵盖其微生物产生和年龄相关变化、分子和细胞机制、与神经退行性和神经精神疾病的关联，以及用于治疗调节和递送的新兴策略。它考察了新兴的生物技术策略——包括前药设计、纳米颗粒和脂质体递送系统、肠道靶向配方以及微生物组工程——所有这些都旨在克服血脑屏障并恢复衰老大脑中具有治疗意义的丁酸盐浓度。通过将基础微生物组生物学与转化神经科学相结合，本综述将丁酸盐定位为具有机制基础的神经衰老科学效应因子，并勾画了其在促进整个衰老过程中的大脑健康应用路线图。",
+      "title_zh": "从肠道微生物组到衰老大脑：丁酸盐作为神经衰老学效应因子",
+      "abstract_zh": "与年龄相关的认知衰退越来越与微生物组-肠道-大脑轴的失调相关，其中与年龄相关的失衡逐步降低丁酸盐的产生，丁酸盐是一种短链脂肪酸，也是由细菌对膳食纤维发酵产生的中心神经活性代谢物。实验研究表明，丁酸盐可以影响与大脑衰老相关的多种过程，包括组蛋白去乙酰化酶活性、神经炎症信号、小胶质细胞表型、血脑屏障完整性、突触可塑性和神经发生。通过这些机制，丁酸盐可能调节涉及大脑衰老的多种分子和细胞过程，尽管在人脑中直接因果效应的证据仍有限。临床前研究报告了在多种衰老和神经疾病模型中的神经保护作用；然而，在人类中的直接证据仍有限，主要是关联性或间接性。因此，本综述批判性地综合了微生物来源的丁酸盐在大脑衰老中的现有证据，涵盖其微生物产生和年龄相关变化、分子和细胞机制、与神经退行性和神经精神疾病的关联，以及用于治疗调节和递送的创新策略。它考察了新兴的生物技术策略——包括前药设计、纳米粒子和脂质体递送系统、肠道靶向配方以及微生物组工程——所有这些都旨在克服血脑屏障并在衰老大脑中恢复具有治疗意义的丁酸盐浓度。通过将基础微生物组生物学与转化神经科学相结合，本综述将丁酸盐定位为具有机制基础的神经衰老学效应因子，并勾画了其在促进整个衰老过程中的大脑健康应用路线图。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-16T23:34:06.596097+00:00"
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107038": {
       "doi": "10.1016/j.neubiorev.2026.107038",
@@ -11208,6 +11286,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-15T23:33:42.844229+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.107050": {
+      "doi": "10.1016/j.neubiorev.2026.107050",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Stage- and context-dependent modulation of fear memory by oxytocin: neurobiological mechanisms and implications for PTSD",
+      "acquired_at": "2026-10-17T19:03:40",
+      "source_title_sha256": "94798e0abb21fb54a20e0fdacb90bee63ae3ac06fc9344b92547af3d7e7841e0",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "氧化亚氮对恐惧记忆的阶段与情境依赖调节：神经生物学机制及其对创伤后应激障碍的启示",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
     "doi:10.1016/j.neubiorev.2026.107051": {
       "doi": "10.1016/j.neubiorev.2026.107051",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
@@ -11220,6 +11311,19 @@
       "abstract_zh": null,
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-16T23:34:06.596097+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107054": {
+      "doi": "10.1016/j.neubiorev.2026.107054",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Reorienting TMS treatments for fear memories and posttraumatic stress disorder. The emerging potential of the anterior prefrontal cortex",
+      "acquired_at": "2026-10-17T19:03:40",
+      "source_title_sha256": "2ec0c1db51c86e4bffc7408c4a017f398045b6c04545f0c5ed1d98f7ae868dba",
+      "source_abstract_sha256": "8a31b504bbb3fd0c7ed2adebc77fc0a0672046ce8eb735cb0784aabcfee33f8c",
+      "source_abstract": "abstract",
+      "title_zh": "重新定位TMS治疗恐惧记忆与创伤后应激障碍：前额叶前区的崭露潜力",
+      "abstract_zh": "创伤后应激障碍（PTSD）以通过生动且非自愿的侵入性回忆重现创伤、回避可能触发创伤记忆的线索以及情绪和认知的改变为特征。经颅磁刺激（TMS）为调节这些过程所涉及神经回路的活动和功能耦合提供了一种有前景的方法。迄今为止，关于恐惧条件反射和PTSD的TMS研究主要聚焦于背外侧前额叶皮层（dlPFC）和腹内侧前额叶皮层（vmPFC）或更广泛的内侧前额叶（mPFC）目标，取得了令人鼓舞但异质的创伤后症状改善效果。与此同时，新兴证据将前额叶前区（aPFC；布罗德曼区10）与威胁和创伤相关过程联系起来，包括记忆检索、防御反应的高级控制、适应性策略选择和韧性。虽然dlPFC和vmPFC已被纳入恐惧调节的机制模型，但aPFC在恐惧和PTSD的理论框架中受到的关注有限。本文综述了围绕dlPFC、vmPFC连接或mPFC以及aPFC神经解剖目标的TMS研究，整合了实验和临床研究的证据。基于前额叶层级组织模型，我们认为这些区域代表潜在的TMS靶点或电路节点，但可能作用于部分不同的机制。vmPFC主要参与早期自动下调防御反应；dlPFC可能支持认知控制策略，如再评估；而aPFC可能对更高层次的表征和与回避相关的电路产生超越性影响，并灵活选择情绪调节策略。我们得出结论，将aPFC纳入该框架可能指导下一代、基于机制的PTSD TMS治疗。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -14113,12 +14217,12 @@
       "title": "Raphe nuclei in cognition: A network-level framework for behavioral-state control",
       "acquired_at": "2026-10-16T19:21:41",
       "source_title_sha256": "fc44db77a70b0e017662caef8dc741297f0e5ea69e4c622b53aabb88c947fa4f",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "下丘脑核在认知中的作用：行为状态控制的网络层面框架",
-      "abstract_zh": null,
+      "source_abstract_sha256": "974c96fd906c074a4ff2aff7a9ed667385478df8c594c0a5aa490e3a2fc0558f",
+      "source_abstract": "abstract",
+      "title_zh": "认知中的网状体：行为状态控制的网络层面框架",
+      "abstract_zh": "适应性行为要求有机体在环境条件变化时维持、更新并切换行为状态。网状体（RN）以其作为前脑血清素的主要来源而闻名，长期以来与觉醒、抑制、耐心、情感和灵活性相关，但这些功能往往被单独考虑。本文认为，电路追踪、细胞类型特异性操纵、高分辨率神经影像与神经刺激以及计算建模的最新进展支持一种更为整合的视角，即RN嵌入于分布式的皮层-下丘脑和神经调节网络中。跨物种研究表明，RN 活动跟踪环境统计量，如价值、不确定性、威胁和奖励情境，并参与从动机状态到认知状态的转换。我们提出一个网络层面框架，阐述 RN 如何调节行为状态应持续、更新或切换的时机。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-16T23:34:06.596097+00:00"
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1016/j.neuron.2026.09.014": {
       "doi": "10.1016/j.neuron.2026.09.014",
@@ -20646,6 +20750,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-10T19:33:05.131582+00:00"
     },
+    "doi:10.1038/d41586-026-02277-y": {
+      "doi": "10.1038/d41586-026-02277-y",
+      "journal_slug": "nature",
+      "title": "Paid to peer review: firms are paying researchers to assess manuscripts for journals",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "a4f82992b82b5eebae18b03172edb2df6c7fa12ce50a844cab376948adb84e48",
+      "source_abstract_sha256": "de9282f0ed4e44f819f97f96c991eec7f755f2dc374779f4589209ebc280decc",
+      "source_abstract": "abstract",
+      "title_zh": "付费同行评审：公司支付研究人员评估期刊稿件",
+      "abstract_zh": "通过第三方公司进行自由职业同行评审工作引发了实际和伦理问题。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
     "doi:10.1038/d41586-026-02278-x": {
       "doi": "10.1038/d41586-026-02278-x",
       "journal_slug": "nature",
@@ -26379,6 +26496,45 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-10T23:32:32.853544+00:00"
     },
+    "doi:10.1038/d41586-026-02959-7": {
+      "doi": "10.1038/d41586-026-02959-7",
+      "journal_slug": "nature",
+      "title": "Stephen Hawking biography explores an ‘exceptionally clear, uncluttered mind’",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "90e7993d600242ad0aa7b187d9d27250856a6d7c7e91cedcb66071a7c2d68798",
+      "source_abstract_sha256": "529c6d0dce9364119ff3362a7c9b46b191e3d0a0a2039eff086fed6e9e8f7bdd",
+      "source_abstract": "abstract",
+      "title_zh": "史蒂芬·霍金传记：探寻“异常清晰、无杂念的思维”",
+      "abstract_zh": "对这位物理学家非凡人生的优雅叙述，突出了激励他成长的关系与经历。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1038/d41586-026-02962-y": {
+      "doi": "10.1038/d41586-026-02962-y",
+      "journal_slug": "nature",
+      "title": "Vaping in childhood has bigger health risks than we’d thought",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "23e10c44b2ab1de890f32f7d8f621928049b18e47448bfd566dd46a6346cc4fd",
+      "source_abstract_sha256": "0763952884a7503ac8adbbb1dfac3ded683396ef82642ce3dc9141e826480f92",
+      "source_abstract": "abstract",
+      "title_zh": "儿童吸电子烟的健康风险远超预期",
+      "abstract_zh": "使用电子烟会增加青少年出现心理健康障碍和吸烟的可能性。政府必须采取行动。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1038/d41586-026-02964-w": {
+      "doi": "10.1038/d41586-026-02964-w",
+      "journal_slug": "nature",
+      "title": "Bigger than CRISPR? A guide to the latest genome editors",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "cd14547c8b3104216ceb0b559d2ec080a8cfce4bde6b67923079e473d2bcffa2",
+      "source_abstract_sha256": "24d718feac4d208696c56f4e32091bc2cad3d201afc3d9919053f9f90fffe9c9",
+      "source_abstract": "abstract",
+      "title_zh": "超越CRISPR？最新基因编辑工具指南",
+      "abstract_zh": "基因编辑技术或将使研究人员能够替换整个基因并构建复杂的细胞电路——前提是这些系统能够安全地递送到细胞中。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
     "doi:10.1038/d41586-026-02979-3": {
       "doi": "10.1038/d41586-026-02979-3",
       "journal_slug": "nature",
@@ -26391,6 +26547,19 @@
       "abstract_zh": "全球大气尘埃的减少可能正在影响地球温度。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
+    "doi:10.1038/d41586-026-02980-w": {
+      "doi": "10.1038/d41586-026-02980-w",
+      "journal_slug": "nature",
+      "title": "Exclusive: Sham scientific societies are misleading star researchers",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "7a4910c85b6507d38a626cdacaf22ea5a2ac9b3a70799bef769cd071d9df519f",
+      "source_abstract_sha256": "c378b63e679a9817b0fd120931538090050c081a71663777878be4c2941b403b",
+      "source_abstract": "abstract",
+      "title_zh": "独家报道：伪科学学会误导顶尖研究者",
+      "abstract_zh": "《自然》调查揭示了一张由欺骗手段构建成员的组织网络。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1038/d41586-026-02981-9": {
       "doi": "10.1038/d41586-026-02981-9",
@@ -26561,6 +26730,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-13T23:48:50.721961+00:00"
     },
+    "doi:10.1038/d41586-026-03004-3": {
+      "doi": "10.1038/d41586-026-03004-3",
+      "journal_slug": "nature",
+      "title": "China now leads the world in trials for next-gen CAR-T therapies",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "fb04f0a671685defe82dbdffc396d3fe997d9608c688e70b3c8458c7a2488b96",
+      "source_abstract_sha256": "90d0709d8c72843d0a10d1b5e27cd15fda80d03eee19818b9c1fbdf8702a1af9",
+      "source_abstract": "abstract",
+      "title_zh": "中国已成为下一代CAR‑T疗法临床试验的全球领跑者",
+      "abstract_zh": "中国的这些疗法试验速度已超过全球其他地区，但监管变动可能会放慢进展。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
     "doi:10.1038/d41586-026-03005-2": {
       "doi": "10.1038/d41586-026-03005-2",
       "journal_slug": "nature",
@@ -26586,6 +26768,19 @@
       "abstract_zh": "Leopardus tilcayo 比家猫更小，身上布满类似豹纹的斑点。此外，脑部可能源自两种前体细胞，并讨论如何在气候危机中维护人类繁荣的基础。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-11T23:31:21.986942+00:00"
+    },
+    "doi:10.1038/d41586-026-03011-4": {
+      "doi": "10.1038/d41586-026-03011-4",
+      "journal_slug": "nature",
+      "title": "Daily briefing: The mystery of the ‘little red dots’",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "1b2c2dfd4ff64ecef3174f587ec7c7bcba5c4651b99f821d6a938ccfb6eb3110",
+      "source_abstract_sha256": "b2f284e6c0ac303432feaa28c2618066e280e88c1f8136716a049c810bc46085",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：‘小红点’之谜",
+      "abstract_zh": "关于这些神秘空间物体身份的理论层出不穷。此外，认识一下全国最爱的哥特式罗宾，并发现低糖婴儿期的益处。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1038/d41586-026-03014-1": {
       "doi": "10.1038/d41586-026-03014-1",
@@ -26755,6 +26950,45 @@
       "abstract_zh": "Andrew Robinson评述了五本最佳科学书籍。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-13T23:48:50.721961+00:00"
+    },
+    "doi:10.1038/d41586-026-03039-6": {
+      "doi": "10.1038/d41586-026-03039-6",
+      "journal_slug": "nature",
+      "title": "Anthropic’s AI biolab finds ‘CRISPR-like’ DNA in viruses. What’s next?",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "16ed1e9a2acef706212c8c37c2ecb3475453b6e57dbf87c82765c496f7bdc785",
+      "source_abstract_sha256": "f0918c9cacb0f6a75048be3bebdff33d680d58f53caaf0e3124f01113286b3c1",
+      "source_abstract": "abstract",
+      "title_zh": "Anthropic的AI生物实验室发现病毒中的“CRISPR般”DNA。接下来会怎样？",
+      "abstract_zh": "检测工作动用了约950名AI代理，花费超过21小时对DNA序列数据库进行扫描。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1038/d41586-026-03041-y": {
+      "doi": "10.1038/d41586-026-03041-y",
+      "journal_slug": "nature",
+      "title": "Briefing Chat: Why scientists made papyrus scrolls, then burnt them",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "db7472b9229a86d4661a1e78b4314869de85fff82b21b02612d1a63bf90aa2e7",
+      "source_abstract_sha256": "0578993cc72f548cf93ed6d0b86fe8f1697be3fc102c380e300c5e3d387f7268",
+      "source_abstract": "abstract",
+      "title_zh": "简报聊天：科学家为何制作纸莎草卷轴后又烧毁",
+      "abstract_zh": "该来源仅提供期刊名称，未提供摘要。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1038/d41586-026-03043-w": {
+      "doi": "10.1038/d41586-026-03043-w",
+      "journal_slug": "nature",
+      "title": "Old hearts age backwards: transplanted organs adjust to host’s biological age",
+      "acquired_at": "2026-10-17T18:31:05",
+      "source_title_sha256": "96e8669ca45d570824008f1edcc7bd5c9d2a6542d68fdb7331ea6d8a46b77d08",
+      "source_abstract_sha256": "bd97793147af264ceadd3bcd523029c9503a730e269da713d9d22f930c575630",
+      "source_abstract": "abstract",
+      "title_zh": "老心脏逆向衰老：移植器官适应宿主生物年龄",
+      "abstract_zh": "跟踪移植器官的生物年龄表明，扩大捐献者库可提升器官可用性。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1038/s41380-026-03624-1": {
       "doi": "10.1038/s41380-026-03624-1",
@@ -29940,6 +30174,19 @@
       "abstract_zh": "摘要：众所周知，注意缺陷多动障碍（ADHD）与常见精神疾病的风险升高相关；早期识别和治疗ADHD可能有助于降低部分风险。然而，双相情感障碍、精神病和精神分裂症（以下简称精神病性障碍）的显著升高风险往往被忽视（优势比4.7–8.9）。鉴于ADHD的普遍性，越来越多的压力要求初级保健服务更大程度地介入，尤其是针对较为简单的ADHD病例。然而，最有可能转化为精神病性障碍的人群需要优先接受二级护理随访。目前尚不清楚如何根据风险对ADHD进行分层，亦不清楚为何只有部分人会发展为精神病性障碍。本文从关键假设出发，探讨为何仅少数个体会出现转化。一个假设是，提示ADHD的特征可能是精神病性障碍的早期表现，尽管直接证据有限。还考虑了ADHD治疗的潜在作用；现有数据表明，甲基苯丙胺的治疗使用并未与精神病性障碍风险增加相关，而对安非他命的影响仍不确定。讨论了ADHD诱发的环境暴露可能的中介作用，但缺乏中介证据。我们还考察了ADHD与精神病性障碍可能源自共同的神经发育过程的证据。强调了对ADHD个体进行精神病性障碍筛查和监测的关键临床意义，并探讨了可能有助于权衡风险的因素。最后，指出了未来研究的重要证据缺口。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-14T23:31:50.409688+00:00"
+    },
+    "doi:10.1038/s41380-026-03927-3": {
+      "doi": "10.1038/s41380-026-03927-3",
+      "journal_slug": "molecular-psychiatry",
+      "title": "A microglial basis for fragile X syndrome via impairment of FMRP-regulated lysosomal function",
+      "acquired_at": "2026-10-17T18:40:42",
+      "source_title_sha256": "5e3120e35d7bda41e64b5e6b5c5603700da806428bcc12827d7e380836a26e65",
+      "source_abstract_sha256": "55dcd4749fb7cecfb19335db1029fe1e75a635762c7fa7f1735b34f4516625d1",
+      "source_abstract": "abstract",
+      "title_zh": "微胶质细胞基础的脆性X综合征：FMRP调控的溶酶体功能受损",
+      "abstract_zh": "沉默编码FMRP的FMR1基因导致脆性X综合征（FXS），这是最常见的遗传性智力障碍和自闭症。FMRP调节多种神经元功能，但针对神经元的临床试验失败，提示存在未被识别的疾病机制。我们发现，在微胶质细胞中特异性敲除Fmr1的小鼠表现出听觉诱发癫痫（AGS）和巴尔钙蛋白（PV）神经元丢失，重现了FXS（Fmr1−/y）小鼠观察到的两种关键表型。通过结合单细胞核RNA测序（snRNA-Seq）和RNA免疫共沉淀，我们识别出多种溶酶体mRNA为FMRP结合靶点。FMRP促进溶酶体蛋白表达，其缺乏导致微胶质细胞溶酶体功能受损。值得注意的是，FMRP耗竭降低了Grn编码的分泌性前体蛋白（progranulin）并增加了未成熟大脑中PV神经元的凋亡。PV神经元密度在Grn+/−、Fmr1−/y和Grn+/−;Fmr1−/y小鼠中同样下降，且前体蛋白过表达可恢复Fmr1−/y小鼠的AGS和PV神经元丢失。因此，我们的研究确定了微胶质细胞和前体蛋白为FXS发病机制的关键调节因子，并为FXS治疗提供了潜在靶点。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1038/s41562-026-02424-5": {
       "doi": "10.1038/s41562-026-02424-5",
@@ -42115,12 +42362,12 @@
       "title": "The stalled moment: Parkinson’s disease and the timed self",
       "acquired_at": "2026-08-29T01:07:54",
       "source_title_sha256": "9bb776b11e009125bf8bdf3986383c1e9982da43c3c422b23e2b3e169e59c4af",
-      "source_abstract_sha256": "3471bf6e1bae2602b5574b270d17111d4d89a36cd6bde838dd239d6fa73d62da",
+      "source_abstract_sha256": "612d0720f309d748493edb0775821f92a8b1cb120f8bc4439b9c387ab6f97082",
       "source_abstract": "abstract",
       "title_zh": "停滞的时刻：帕金森病与定时自我",
-      "abstract_zh": "Patrick McMullan利用帕金森病探讨自我如何依赖身体的时间、运动和表达，认为运动的改变不仅会改变一个人能做什么，还会改变他们如何居住于世界以及他人如何认知他们。",
+      "abstract_zh": "帕特里克·麦克马兰利用帕金森病探讨自我如何依赖身体的时间、运动和表达，认为运动改变不仅会影响个人的行动能力，还会改变他们如何体验世界以及被他人认知的方式。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-08-29T17:38:52.2266672Z"
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1093/brain/awag291": {
       "doi": "10.1093/brain/awag291",
@@ -42564,6 +42811,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-01T04:23:20.028602+00:00"
     },
+    "doi:10.1093/brain/awag330": {
+      "doi": "10.1093/brain/awag330",
+      "journal_slug": "brain",
+      "title": "Is the entorhinal signal a tau origin or a treatment-relevant vulnerability map?",
+      "acquired_at": "2026-10-17T18:37:18",
+      "source_title_sha256": "a931e55483c4575cb91bbef18642525f79f0079088eac46d2d460331e7cd571a",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "内嗅皮层信号是tau 病理起源还是治疗相关易感性地图？",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
     "doi:10.1093/brain/awag331": {
       "doi": "10.1093/brain/awag331",
       "journal_slug": "brain",
@@ -42875,6 +43135,19 @@
       "abstract_zh": "摘要：精神分裂症的负面症状严重损害功能和生活质量，但对现有治疗反应不佳。本多中心、随机、双盲、安慰剂对照试验旨在评估神经导航双靶点重复经颅磁刺激（rTMS）对早期精神病患者负面症状的改善效果（ClinicalTrials.gov 识别号：NCT04853485）。招募的受试者为首次发作精神分裂症或临床高危精神病患者，来自上海精神卫生中心和苏州广济医院。受试者在MRI引导下随机分为真刺激组或安慰剂组，目标为右侧背外侧前额叶皮层（rDLPFC）以1 Hz、100 %运动阈值（MT）进行刺激，右侧小脑采用间歇性θ波束刺激（iTBS）120 % MT，连续20天。临床评估在基线（T0）、第10次刺激（T1）、第20次刺激（T2）以及干预后一个月（T3）进行。认知和MRI在T0和T2时评估。主要终点为正负症状量表（PANSS）负面子量表得分变化；次要终点包括其他PANSS子量表得分变化和额叶-小脑功能连接。总计75名受试者纳入意向治疗分析（活性组36人，安慰剂组39人）。预设的线性混合效应分析显示PANSS负面子量表得分的组×时间交互作用不显著（F(3,174.6)=1.45，p=0.230）。在4周终点（T2）时，未校正的组间p值为0.049；经Sidak多重比较校正后，校正均值差为-2.48分（95% CI -4.99至0.03，校正p=0.150，Cohen’s d=-0.51）。描述性未校正t检验显示活性组在T1和T2的负面症状减轻更大，4周负面症状响应率（≥50%减轻）在真rTMS组更高（χ²=9.5，p=0.002）。PANSS正面子量表得分出现显著组×时间交互作用（F(3,172.0)=3.26，p=0.023）。两组均表现出显著的组内症状改善。静息态fMRI显示在小脑-颞叶、旁海马、尾状核和顶叶网络内存在组×时间交互作用（FWE校正p<0.05），负面症状变化与小脑-尾状核连接相关（r=0.33，p=0.026）。这些结果表明，基于神经导航的双靶点rTMS（rDLPFC和小脑）可能与早期精神病负面症状的数值改善相关。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-15T23:33:42.844229+00:00"
+    },
+    "doi:10.1093/brain/awag360": {
+      "doi": "10.1093/brain/awag360",
+      "journal_slug": "brain",
+      "title": "A novel TARGET for anti-CD20 antibody therapy in multiple sclerosis",
+      "acquired_at": "2026-10-17T18:37:18",
+      "source_title_sha256": "ca7a0880dca5fed401e5ca4aa50071655c9c1ee85b7bc82bacb0cff9987d19fe",
+      "source_abstract_sha256": "186ef8b64a72609953c67b26b0b416696411eeb8b3c94fb66374acb0b2f1747d",
+      "source_abstract": "abstract",
+      "title_zh": "多发性硬化中抗CD20抗体治疗的新靶点",
+      "abstract_zh": "本文评论了Farooq等人发表的《多模态发现多发性硬化中致病性B细胞依赖性T细胞状态》一文（https://doi.org/10.1093/brain/awag303）。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
     "doi:10.1126/science.adp3564": {
       "doi": "10.1126/science.adp3564",
