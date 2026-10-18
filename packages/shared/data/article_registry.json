@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-17T23:31:59.579980+00:00",
+  "updated_at": "2026-10-18T23:31:22.479294+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -3382,6 +3382,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-13T23:48:50.721961+00:00"
     },
+    "doi:10.1016/j.brs.2026.103226": {
+      "doi": "10.1016/j.brs.2026.103226",
+      "journal_slug": "brain-stimulation",
+      "title": "Transdiagnostic Efficacy, Durability, and Optimal Parameters of rTMS for Cognitive Rehabilitation: A Comprehensive Meta-Analysis",
+      "acquired_at": "2026-10-18T19:09:52",
+      "source_title_sha256": "7e992cec326551e31c33fd20bbc18b37dcd14f807dd168ded3affc21fbade045",
+      "source_abstract_sha256": "aafab9ce015b45ddfaebd9e7ead14baf222fe007238c5593c045d3fba2cf83aa",
+      "source_abstract": "abstract",
+      "title_zh": "跨诊断性重复经颅磁刺激（rTMS）在认知康复中的疗效、持久性与最佳参数：系统综述与荟萃分析",
+      "abstract_zh": "目的：重复经颅磁刺激（rTMS）是一种有前景的非侵入性神经调节技术，用于认知康复。我们评估了rTMS在神经和精神疾病中的认知效应，以确定疗效的调节因素。方法：对截至2025年7月的随机对照试验（RCT）进行荟萃分析，比较真实rTMS与安慰剂rTMS。提取了作为主要或次要结果的客观认知测量，并计算Hedges’ g效应值。采用单变量和多变量三层次荟萃分析估计合并效应值并评估调节因素。结果：共提取了137项研究中的748个测量值（5,972名参与者）。真实rTMS产生了显著的认知提升（g=0.28，p<0.0001，I²=37.3%）。该效应在2–52周随访期间保持持久。所有认知领域均显示疗效（g>0.20，I²=35.8%）。神经退行性疾病（g=0.35）和局灶性疾病（g=0.44）的效应强于精神疾病（g=0.20）。尽管刺激目标总体上未成为显著调节因素，但下额叶回显示最大效应（g=0.45），左、右背外侧前额叶皮层（DLPFC）和左顶叶皮层（g=0.29–0.45）也表现出显著效应，均为前顶网络的节点。1 Hz刺激产生的效应显著大于10 Hz参考（g=0.39 vs g=0.19）；5 Hz、20 Hz和iTBS亦显著正向（g=0.30–0.49）。在多变量模型中，增加10次rTMS会话可改善认知结果（Δg=+0.077），而每次会话脉冲数的增加趋向于降低疗效。所有效应在左背外侧前额叶皮层亚组分析中得到确认。主观认知仅在6%研究中测量。本文还引入了一个多变量预测工具：https://amsali.shinyapps.io/tms_cognition_prediction/。结论：本荟萃分析证明了rTMS在提升认知功能方面的持续疗效，在多种临床人群和刺激方案中均呈现小至中等效应量。然而，关于这些客观神经认知收益是否转化为主观认知或功能结果的显著改善，仍存在显著空白。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
     "doi:10.1016/j.brs.2026.103227": {
       "doi": "10.1016/j.brs.2026.103227",
       "journal_slug": "brain-stimulation",
@@ -3466,12 +3479,12 @@
       "title": "A Reproducible Safety Assessment Model for Concurrent Transcranial Magnetic Stimulation with Implanted Intracranial Electroencephalography Electrodes",
       "acquired_at": "2026-10-17T18:52:15",
       "source_title_sha256": "b25c703f083431939ead6c55b2da51c8492334e871f5564ad7bc31ed107386e8",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "可复现的安全评估模型：同时使用经颅磁刺激与植入式颅内脑电电极",
-      "abstract_zh": null,
+      "source_abstract_sha256": "c83da43375e56053400f9d9fd6d2d9c87acd1deebc839d4aba71f6ca2ec59749",
+      "source_abstract": "abstract",
+      "title_zh": "一种可重复的安全评估模型，用于同时进行经颅磁刺激与植入式颅内脑电图电极的研究",
+      "abstract_zh": "背景：同时进行经颅磁刺激（TMS）和颅内脑电图（sEEG）提供了一种强大的方法，可用高时空分辨率探测人类大脑回路。然而，在存在植入电极的情况下，缺乏标准化的TMS安全测试程序。目标：建立并验证一种可重复的方法框架，用于评估TMS与sEEG硬件的安全性，解决电极位移、加热和二次电流诱导的潜在风险。方法：使用临床级铂制sEEG电极植入导电琼脂水凝胶模型，暴露于单脉冲TMS（0.4 Hz）、重复TMS（1–50 Hz）和间歇性θ波束刺激。通过高速视频和运动跟踪量化电极位移。使用光纤热探针测量刺激电极接触点的温度变化。使用示波器和颅内脑电图硬件记录诱导电压，并从示波器输出和阻抗测量计算二次电流和电荷密度。结果：在所有刺激条件下，sEEG导线位移保持在微米级，最大瞬时位移为10.99 µm，最大1 s平均位移为16.27 µm。温度变化始终低于2 °C的安全阈值；在主要温度系列中，最大升高为0.073 °C。诱导电压和电荷密度均低于既定安全限值，并随与线圈距离的增加呈指数衰减。所有刺激条件，包括超过典型临床范围的情况，均保持在安全边际内。结论：在受控模型环境下的测试条件下，TMS暴露产生了微米级的瞬时和长期位移，温度变化在既定安全阈值内，电荷密度亦在安全阈值内。该验证的方法流程为未来涉及TMS和植入设备的安全实验提供了标准化框架，并支持TMS-sEEG作为研究人类大脑回路和神经调制工具的持续发展。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
     },
     "doi:10.1016/j.cell.2026.02.018": {
       "doi": "10.1016/j.cell.2026.02.018",
@@ -11292,12 +11305,12 @@
       "title": "Stage- and context-dependent modulation of fear memory by oxytocin: neurobiological mechanisms and implications for PTSD",
       "acquired_at": "2026-10-17T19:03:40",
       "source_title_sha256": "94798e0abb21fb54a20e0fdacb90bee63ae3ac06fc9344b92547af3d7e7841e0",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "氧化亚氮对恐惧记忆的阶段与情境依赖调节：神经生物学机制及其对创伤后应激障碍的启示",
-      "abstract_zh": null,
+      "source_abstract_sha256": "cb6610b668e83c05d90ca05ecf06b07c5466cd1be51e65d0af5c4e6bc58ff717",
+      "source_abstract": "abstract",
+      "title_zh": "基于阶段与情境的催产素调节恐惧记忆：神经生物学机制与创伤后应激障碍的启示",
+      "abstract_zh": "创伤后应激障碍（PTSD）是一种多因素精神疾病，表现为重现、回避、过度觉醒、认知与情绪负面改变以及社会情感功能紊乱。在这一更广泛的临床综合征中，持续的创伤记忆和过度恐惧泛化是重要的机制和治疗领域。尽管对其神经生物学基础已有显著进展，但现有治疗仍不理想，疗效有限且易出现高流失率。神经肽催产素（OXT）是社会行为、压力调节和记忆的关键调节因子，已被研究为潜在治疗靶点。越来越多的证据表明，严重创伤会显著破坏内源性OXT信号，而药理学研究提示，外源性OXT可通过区域、剂量、给药途径和情境依赖机制调节恐惧记忆处理。恐惧条件反射的研究显示，在习得、巩固、检索、再巩固和消退等阶段，OXT的作用方向呈异质性，而非统一的抗焦虑和促进消退作用。OXT可能通过调节特定神经回路和神经化学通路影响威胁辨别、恐惧表达、记忆更新和消退。然而，大多数前临床模型仅捕捉PTSD的部分维度，而非完整临床疾病。人类研究进一步表明，鼻喷OXT可调节与PTSD相关的神经、体液和社会认知过程，尽管对一致临床疗效的证据仍有限且异质。本文综述了OXT及其合成类似物在阶段与情境依赖框架下的最新研究结果，以更好地探讨其异质效应，并评估其在PTSD中的潜在相关性与转化限制。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-17T23:31:59.579980+00:00"
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107051": {
       "doi": "10.1016/j.neubiorev.2026.107051",
@@ -11324,6 +11337,19 @@
       "abstract_zh": "创伤后应激障碍（PTSD）以通过生动且非自愿的侵入性回忆重现创伤、回避可能触发创伤记忆的线索以及情绪和认知的改变为特征。经颅磁刺激（TMS）为调节这些过程所涉及神经回路的活动和功能耦合提供了一种有前景的方法。迄今为止，关于恐惧条件反射和PTSD的TMS研究主要聚焦于背外侧前额叶皮层（dlPFC）和腹内侧前额叶皮层（vmPFC）或更广泛的内侧前额叶（mPFC）目标，取得了令人鼓舞但异质的创伤后症状改善效果。与此同时，新兴证据将前额叶前区（aPFC；布罗德曼区10）与威胁和创伤相关过程联系起来，包括记忆检索、防御反应的高级控制、适应性策略选择和韧性。虽然dlPFC和vmPFC已被纳入恐惧调节的机制模型，但aPFC在恐惧和PTSD的理论框架中受到的关注有限。本文综述了围绕dlPFC、vmPFC连接或mPFC以及aPFC神经解剖目标的TMS研究，整合了实验和临床研究的证据。基于前额叶层级组织模型，我们认为这些区域代表潜在的TMS靶点或电路节点，但可能作用于部分不同的机制。vmPFC主要参与早期自动下调防御反应；dlPFC可能支持认知控制策略，如再评估；而aPFC可能对更高层次的表征和与回避相关的电路产生超越性影响，并灵活选择情绪调节策略。我们得出结论，将aPFC纳入该框架可能指导下一代、基于机制的PTSD TMS治疗。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107055": {
+      "doi": "10.1016/j.neubiorev.2026.107055",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Impact of previous acute and chronic stress on negative glucocorticoid feedback in laboratory animal: theoretical background and methodological concerns",
+      "acquired_at": "2026-10-18T19:21:13",
+      "source_title_sha256": "e25fd55a19900b998c82c36f906374f3157d5a727c874b2aaea244b6dbe4a8f1",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "先前急性与慢性压力对实验动物负面糖皮质激素反馈的影响：理论背景与方法学关注",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -24962,6 +24988,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-22T22:38:28.286486+00:00"
     },
+    "doi:10.1038/d41586-026-02759-z": {
+      "doi": "10.1038/d41586-026-02759-z",
+      "journal_slug": "nature",
+      "title": "Chinese-owned science journal created to rival the best",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "79223b24a94cf34b670ed1a4f9532e53192cfb01cf709f0beb24647937b8fe31",
+      "source_abstract_sha256": "94ac5bb006c1cc3709fe21fd469dec212989d94cc162fc55d085b40e3f91ae49",
+      "source_abstract": "abstract",
+      "title_zh": "中国拥有的科学期刊旨在与顶尖竞争",
+      "abstract_zh": "新推出的《Vita》是中国政府更广泛计划的一部分，旨在让中国在何为高质量科学方面拥有更大话语权。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
     "doi:10.1038/d41586-026-02761-5": {
       "doi": "10.1038/d41586-026-02761-5",
       "journal_slug": "nature",
@@ -25091,6 +25130,19 @@
       "abstract_zh": "涉及细胞外基质分子合成的基因变异可能使骨骼适应性得以实现，从而区分人类与其他大型类人猿。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-13T23:48:50.721961+00:00"
+    },
+    "doi:10.1038/d41586-026-02776-y": {
+      "doi": "10.1038/d41586-026-02776-y",
+      "journal_slug": "nature",
+      "title": "A new chapter in targeting kinase enzymes in cancer",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "2cda1da08b8246b3f8127eed3a9ddb6523cd0c9e49cdc3be4179bf57f1b93fde",
+      "source_abstract_sha256": "2bc36c1fc1a35264fc54da8299980a6258fb1f460b50d74f1fa5aa437c103b64",
+      "source_abstract": "abstract",
+      "title_zh": "针对癌症的酪氨酸激酶酶靶向治疗新篇章",
+      "abstract_zh": "酪氨酸激酶酶抑制剂一直是精准癌症治疗的基石。如今，靶向蛋白降解剂可能重塑治疗方案。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
     },
     "doi:10.1038/d41586-026-02781-1": {
       "doi": "10.1038/d41586-026-02781-1",
@@ -26509,6 +26561,32 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-17T23:31:59.579980+00:00"
     },
+    "doi:10.1038/d41586-026-02960-0": {
+      "doi": "10.1038/d41586-026-02960-0",
+      "journal_slug": "nature",
+      "title": "How to put people first in cyberspace",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "495348518531a4a856a4fdec29454c3efdc53479a8e537e9826255ff99db33fd",
+      "source_abstract_sha256": "1ade4690f35c587e05528bd51ae8d0f32b3af8fc693a7c4489d099e16d90c91a",
+      "source_abstract": "abstract",
+      "title_zh": "如何在网络空间以人为本",
+      "abstract_zh": "数字技术日益塑造日常生活。计算机科学家弗朗辛·伯曼（Francine Berman）在《自然》杂志上表示，需要更强有力的保障措施来保护公众利益。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
+    "doi:10.1038/d41586-026-02961-z": {
+      "doi": "10.1038/d41586-026-02961-z",
+      "journal_slug": "nature",
+      "title": "AI can widen science — but only if institutions stop rewarding the already measurable",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "875317946812213531be6bf4331d0d323ee2cc40afcd78e57a2076b0eb7b69b2",
+      "source_abstract_sha256": "3b71925ff6731ce3d39674d8d4088a3b3a4830b3b3e97de05340156900612d3e",
+      "source_abstract": "abstract",
+      "title_zh": "AI 能拓宽科学——但前提是机构停止奖励已可测量的成果",
+      "abstract_zh": "资助者、期刊和大学必须奖励新科学领域的开拓，而非仅仅高效开采已有领域。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
     "doi:10.1038/d41586-026-02962-y": {
       "doi": "10.1038/d41586-026-02962-y",
       "journal_slug": "nature",
@@ -26534,6 +26612,32 @@
       "abstract_zh": "基因编辑技术或将使研究人员能够替换整个基因并构建复杂的细胞电路——前提是这些系统能够安全地递送到细胞中。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1038/d41586-026-02971-x": {
+      "doi": "10.1038/d41586-026-02971-x",
+      "journal_slug": "nature",
+      "title": "The cost of lost labour on a warming planet",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "9a0d4290f7d804457d39e3156961bd8061d62b266701e557da0d31f745f58767",
+      "source_abstract_sha256": "569b8dc19fab1219c213fe2a1534b27ca2eecbea6469de11bd83d82ff84a14c0",
+      "source_abstract": "abstract",
+      "title_zh": "全球变暖导致劳动力损失的成本",
+      "abstract_zh": "研究人员量化了气候变化相关热应激对全球劳动力造成的经济损害。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
+    "doi:10.1038/d41586-026-02972-w": {
+      "doi": "10.1038/d41586-026-02972-w",
+      "journal_slug": "nature",
+      "title": "Strange and beautiful creatures spotted on the Challenger expedition",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "ff74c4fdd14e8b851efc032fa25428c31ef80317c02ba0f6c0f3128b2dc7eeb6",
+      "source_abstract_sha256": "550ed1a5828870a29f2c065822d4db04515d5118daf6ccdc8dc84ce7ae048ecd",
+      "source_abstract": "abstract",
+      "title_zh": "奇异而美丽的生物在挑战者号探险中被发现",
+      "abstract_zh": "来自自然过去的片段。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
     },
     "doi:10.1038/d41586-026-02979-3": {
       "doi": "10.1038/d41586-026-02979-3",
@@ -26989,6 +27093,97 @@
       "abstract_zh": "跟踪移植器官的生物年龄表明，扩大捐献者库可提升器官可用性。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1038/d41586-026-03046-7": {
+      "doi": "10.1038/d41586-026-03046-7",
+      "journal_slug": "nature",
+      "title": "AI-powered medical devices must be tested in real-world settings",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "29d78bcbce3ee74456583d62db0c9f04490f1219267b9e31dd99e752d5809eb0",
+      "source_abstract_sha256": "db5a7af6455b349923685c0072889c1d110894058106456180a25201464b889d",
+      "source_abstract": "abstract",
+      "title_zh": "基于人工智能的医疗设备必须在真实环境中进行测试",
+      "abstract_zh": "用于临床决策的工具需要与批准药物和自动驾驶汽车所采用的流程等效的严格评估。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
+    "doi:10.1038/d41586-026-03050-x": {
+      "doi": "10.1038/d41586-026-03050-x",
+      "journal_slug": "nature",
+      "title": "Daily briefing: Landmark bat study suggests they evolved in Europe",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "e2510cbff487fdc3d6fb0e44a5e6a42750d7842cc86706ee43383407a6dd7e21",
+      "source_abstract_sha256": "71ec19c4b414c3b0e3f41ff0a1a8d88310caeb32c87147f83ee1731ed52ecf69",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：突破性蝙蝠研究表明它们在欧洲进化",
+      "abstract_zh": "一项新计划旨在为所有现存蝙蝠物种生成染色体级基因组。此外，AlphaFold推出了新的大流行预警门户，并讨论了人工智能的安全风险。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
+    "doi:10.1038/d41586-026-03053-8": {
+      "doi": "10.1038/d41586-026-03053-8",
+      "journal_slug": "nature",
+      "title": "PhD training should encourage ethical dissent",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "7c33751e7e127722f3f98d10659cd79534454428d97743818c6eabfac64a443c",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "博士培训应鼓励伦理异议",
+      "abstract_zh": "致编辑的来信",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
+    "doi:10.1038/d41586-026-03054-7": {
+      "doi": "10.1038/d41586-026-03054-7",
+      "journal_slug": "nature",
+      "title": "Patents alone won’t unlock critical-mineral supply chains",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "329ff7a0ed162d966210eabb3167db22eb48db7f6538bc933b33a767c0cad92d",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "单靠专利无法解锁关键矿产供应链",
+      "abstract_zh": "致编辑的来信",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
+    "doi:10.1038/d41586-026-03055-6": {
+      "doi": "10.1038/d41586-026-03055-6",
+      "journal_slug": "nature",
+      "title": "Why AI-authorship debates miss a deeper shift in how scholarly knowledge is produced",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "c0d4496ae31bdf5ee8b3b65e63a8c19fd4b8245a2c9c53cf7b3238a45c06b5b4",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "为何关于 AI 作者身份的争论忽视了学术知识生产方式的更深层变革",
+      "abstract_zh": "致编辑的来信",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
+    "doi:10.1038/d41586-026-03056-5": {
+      "doi": "10.1038/d41586-026-03056-5",
+      "journal_slug": "nature",
+      "title": "Biodiversity protection must include language preservation",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "6f47b001bb3644bdec5d4cfce93e51279ab5d551060e773c7ce494fcdf0f7ec4",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "生物多样性保护必须包含语言保存",
+      "abstract_zh": "致编辑的来信",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
+    },
+    "doi:10.1038/d41586-026-03089-w": {
+      "doi": "10.1038/d41586-026-03089-w",
+      "journal_slug": "nature",
+      "title": "Daily briefing: Old hearts ‘de-age’ in younger people",
+      "acquired_at": "2026-10-18T18:50:00",
+      "source_title_sha256": "789b2c6e7342756f7725a6ceed9ceec344740364bb4d95eacd9f1d23fc7adc28",
+      "source_abstract_sha256": "20ef37c86f82c915bb7f5a2d6f8cf908fe6267e2fee609548ef3208e70c7a48b",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：老年心脏在年轻人中“逆龄”",
+      "abstract_zh": "表观遗传“时钟”表明移植器官会适应宿主的生物年龄。此外，关于斯蒂芬·霍金的新传记以及假社会如何误导顶尖研究者的报道也被提及。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
     },
     "doi:10.1038/s41380-026-03624-1": {
       "doi": "10.1038/s41380-026-03624-1",
@@ -30187,6 +30382,19 @@
       "abstract_zh": "沉默编码FMRP的FMR1基因导致脆性X综合征（FXS），这是最常见的遗传性智力障碍和自闭症。FMRP调节多种神经元功能，但针对神经元的临床试验失败，提示存在未被识别的疾病机制。我们发现，在微胶质细胞中特异性敲除Fmr1的小鼠表现出听觉诱发癫痫（AGS）和巴尔钙蛋白（PV）神经元丢失，重现了FXS（Fmr1−/y）小鼠观察到的两种关键表型。通过结合单细胞核RNA测序（snRNA-Seq）和RNA免疫共沉淀，我们识别出多种溶酶体mRNA为FMRP结合靶点。FMRP促进溶酶体蛋白表达，其缺乏导致微胶质细胞溶酶体功能受损。值得注意的是，FMRP耗竭降低了Grn编码的分泌性前体蛋白（progranulin）并增加了未成熟大脑中PV神经元的凋亡。PV神经元密度在Grn+/−、Fmr1−/y和Grn+/−;Fmr1−/y小鼠中同样下降，且前体蛋白过表达可恢复Fmr1−/y小鼠的AGS和PV神经元丢失。因此，我们的研究确定了微胶质细胞和前体蛋白为FXS发病机制的关键调节因子，并为FXS治疗提供了潜在靶点。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1038/s41380-026-03930-8": {
+      "doi": "10.1038/s41380-026-03930-8",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Repetitive transcranial magnetic stimulation (rTMS) combined with antidepressant pharmacotherapy for depression: state-dependent mechanisms, clinical evidence, and translational challenges",
+      "acquired_at": "2026-10-18T18:59:12",
+      "source_title_sha256": "f06c98fbc8115cb71967cde2f49f3b6312d13959f8b6bf59cea47bd718b77737",
+      "source_abstract_sha256": "5854a82d1e32eebdff8f15b8dcc8699bfd5b1c06d6325d1528fd8b8e495d0fca",
+      "source_abstract": "abstract",
+      "title_zh": "重复经颅磁刺激（rTMS）联合抗抑郁药物治疗抑郁症：状态依赖机制、临床证据与转化挑战",
+      "abstract_zh": "抑郁症是一种高度流行且功能障碍严重的精神疾病。药物治疗仍是主要的治疗手段，但其疗效常受起效延迟、部分患者反应不佳以及复发风险高等因素限制。对传统疗法反应差的治疗抵抗性抑郁症构成了重大的临床挑战，凸显了改进治疗策略的必要性。重复经颅磁刺激（rTMS）作为一种非侵入性神经调节技术，在抑郁症治疗中显示出潜力，尤其是在与抗抑郁药物联合使用时。神经影像学、神经化学和网络神经科学的进展阐明了高频rTMS如何调节皮层兴奋性、单胺递质传递、突触可塑性以及分布式脑网络。临床证据表明，联合治疗可能加速早期改善、提高反应率和缓解率，并降低复发风险；然而，这些益处在不同患者和症状领域中呈异质性，应结合期望效应和安慰剂遮蔽的局限性进行解释。神经影像研究已识别出与治疗相关的功能和结构变化，包括海马体积变化，但分子信号、回路重组、结构发现与症状改善之间的因果关系仍未解决。因此，rTMS与抗抑郁药物的相互作用不应被视为统一的加法或协同效应，而是受药物类别、刺激方案与时机、皮层兴奋性、可塑性以及个体神经生物学背景塑造的状态依赖过程。本综述整合了机制、神经影像和临床证据，并讨论了如何通过生物标志物、状态和症状信息化定位、优化治疗序列以及务实实施策略来提升联合治疗在抑郁症中的精准性和可及性。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-18T23:31:22.479294+00:00"
     },
     "doi:10.1038/s41562-026-02424-5": {
       "doi": "10.1038/s41562-026-02424-5",
