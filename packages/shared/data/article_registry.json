@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-25T02:18:33.046128+00:00",
+  "updated_at": "2026-10-25T23:31:55.740833+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -2679,6 +2679,19 @@
       "abstract_zh": "人工智能综述——颅内语音脑机接口（BCIs）为严重、慢性及其他受限沟通障碍个体提供了一条有前景的恢复沟通途径。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-17T23:31:59.579980+00:00"
+    },
+    "doi:10.1007/s10462-026-11729-w": {
+      "doi": "10.1007/s10462-026-11729-w",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "The intersection of image enhancement, scaling, and metric precision for future AI systems",
+      "acquired_at": "2026-10-25T19:23:05",
+      "source_title_sha256": "e2cda18adaa4560ed92f968230899f37127695a24f073d31dcdc7c4e26d1f9a7",
+      "source_abstract_sha256": "68687925e6e3f11b1497cf1be76174c076b3651ad19f58193886c0ed283557c7",
+      "source_abstract": "abstract",
+      "title_zh": "图像增强、缩放与度量精度在未来人工智能系统中的交汇",
+      "abstract_zh": "人工智能综述 - 数字化与人工智能（AI）正在推动计算机视觉与图像处理领域智能应用的发展。...",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
     },
     "doi:10.1007/s10462-026-11730-3": {
       "doi": "10.1007/s10462-026-11730-3",
@@ -11783,15 +11796,28 @@
     "doi:10.1016/j.neubiorev.2026.107060": {
       "doi": "10.1016/j.neubiorev.2026.107060",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "Redefining chronic pain models: what should we model?",
+      "title": "Redefining chronic pain models: What should we model?",
       "acquired_at": "2026-10-24T19:28:32",
-      "source_title_sha256": "98c083c3c5268b12652e7369618fc1af182b53d88e4f79cc593893ad35d109e2",
+      "source_title_sha256": "6be1f1848c5a6a9d9a0a266fa4007ca46e402cb691de1e9b767cf769f2c580ca",
       "source_abstract_sha256": "a3f2a3ded4b8c52c7eca8ae06fc84f80e5dfd59282021f85f54a7c3fd45dc385",
       "source_abstract": "abstract",
       "title_zh": "重新定义慢性疼痛模型：我们应当模拟什么？",
-      "abstract_zh": "慢性疼痛通常被定义为持续或复发超过三个月的疼痛。然而，其发病机制不能仅通过持续的组织损伤或炎症来完全解释。传统的炎症性和神经性疼痛模型极大地推进了我们对疼痛过敏及其潜在机制的理解。临床上，许多患者在外周病理极小的情况下仍持续疼痛。这些观察强调了需要更能反映疼痛慢化和复发机制的实验模型。关于中枢敏化、痛觉过敏启动和潜在敏化的最新研究进展支持慢性疼痛涉及持续的神经可塑性改变的观点。在某些慢性疼痛状态中，即使初始损伤或炎症已消退，这些改变仍可能持续，提示慢性疼痛可能涉及一种“疼痛记忆”，编码在神经系统内。本文综述了传统疼痛模型的局限性，并聚焦于持续敏化模型，特别是痛觉过敏启动和潜在敏化。将慢性疼痛视为持续神经可塑性改变的表现，我们总结了其实验特征和病理生理意义，并讨论其与仅由持续炎症或神经损伤难以解释的慢性疼痛状态（包括痛感性疼痛相关疾病）的相关性。最后，我们认为未来的慢性疼痛模型应致力于再现驱动疼痛慢化、维持和复发的持续神经状态，而不仅仅是疼痛过敏。这种方法可能有助于弥合临床前与临床疼痛研究之间的转化鸿沟，并促进更有效治疗方法的开发。",
+      "abstract_zh": "慢性疼痛通常被定义为持续或复发超过3个月的疼痛。然而，其发病机制不能仅通过持续的组织损伤或炎症来完全解释。传统的炎症性和神经性疼痛模型极大地推进了我们对疼痛过敏及其潜在机制的理解。临床上，许多患者在外周病理极小的情况下仍持续疼痛。这些观察强调了需要更能反映疼痛慢化和复发机制的实验模型。关于中枢敏化、痛觉过敏启动和潜在敏化的最新研究进展支持慢性疼痛涉及持续的神经可塑性改变的观点。在某些慢性疼痛状态中，即使初始损伤或炎症已消退，这些改变仍可能持续，提示慢性疼痛可能涉及一种编码在神经系统内的“疼痛记忆”。本综述概述了传统疼痛模型的局限性，并聚焦于持续敏化模型，特别是痛觉过敏启动和潜在敏化。将慢性疼痛视为持续神经可塑性改变的表现，我们总结了实验特征和病理生理意义，并讨论了它们与仅由持续炎症或神经损伤难以解释的慢性疼痛状况（包括痛感性疼痛相关条件）的相关性。最后，我们认为未来的慢性疼痛模型应旨在再现驱动疼痛慢化、维持和复发的持续神经状态，而不仅仅是疼痛过敏。这种方法可能有助于弥合临床前与临床疼痛研究之间的转化鸿沟，并促进更有效治疗的开发。",
       "translation_model": "openai/gpt-oss-20b",
-      "translated_at": "2026-10-25T02:18:33.046128+00:00"
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107061": {
+      "doi": "10.1016/j.neubiorev.2026.107061",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Cardiac perception and self-reported interoception in common mental health disorders: A systematic review and meta-analysis",
+      "acquired_at": "2026-10-25T19:38:57",
+      "source_title_sha256": "7ee1f8af1e595501fb448b393b445faac68e0196e73c58575927a33a07cb4796",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "心脏感知与自我报告的内感知在常见心理健康障碍中的系统综述与荟萃分析",
+      "abstract_zh": null,
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -24052,6 +24078,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-11T23:31:21.986942+00:00"
     },
+    "doi:10.1038/d41586-026-02564-8": {
+      "doi": "10.1038/d41586-026-02564-8",
+      "journal_slug": "nature",
+      "title": "Can we have class outside? Seven tips to breeze through outdoor lectures",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "572def67c5495a276b9fddf1c7c2365c62221a7935bf1e8ae9af7b648702b17d",
+      "source_abstract_sha256": "ae97c51c95935480f003affa0ede7d3ee4a3269e282a5338febd568cfe2c72b9",
+      "source_abstract": "abstract",
+      "title_zh": "我们可以在户外上课吗？七个轻松完成户外讲座的技巧",
+      "abstract_zh": "倡导者认为，在户外进行讲座和演示可以激发学生的热情，并为他们提供完整的体验。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
     "doi:10.1038/d41586-026-02566-6": {
       "doi": "10.1038/d41586-026-02566-6",
       "journal_slug": "nature",
@@ -25676,6 +25715,19 @@
       "abstract_zh": "小规模试验结果表明，改造病毒可指导免疫系统消除致病细胞。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-22T22:38:28.286486+00:00"
+    },
+    "doi:10.1038/d41586-026-02769-x": {
+      "doi": "10.1038/d41586-026-02769-x",
+      "journal_slug": "nature",
+      "title": "Prozac use for childhood depression skewed by single flawed medical trial",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "9eb8f351141874694104ba9938a89aba9c66633d17fb764750bc414d9ef87dcd",
+      "source_abstract_sha256": "c746750985869835372ac76d2393f6ef00902cea93a118e966304d7487eb9af3",
+      "source_abstract": "abstract",
+      "title_zh": "普乐安用于儿童抑郁症的研究受单一缺陷医学试验影响",
+      "abstract_zh": "一项在伊朗进行的小规模研究影响了元分析结果，倾向于支持儿童使用抗抑郁药，研究人员表示。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
     },
     "doi:10.1038/d41586-026-02770-4": {
       "doi": "10.1038/d41586-026-02770-4",
@@ -27887,6 +27939,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-25T02:18:33.046128+00:00"
     },
+    "doi:10.1038/d41586-026-03037-8": {
+      "doi": "10.1038/d41586-026-03037-8",
+      "journal_slug": "nature",
+      "title": "Location, location, location: how to edit genes only in the cells you want",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "5a2957b217fb605573828d90e0d3420881a88663df8b0132a23f7661ed542884",
+      "source_abstract_sha256": "63fe43c795b77f6d638103cded4170c84321d78c230609cbf07d63b323800cb3",
+      "source_abstract": "abstract",
+      "title_zh": "定位、定位、定位：如何仅在目标细胞中编辑基因",
+      "abstract_zh": "基因编辑CRISPR酶可被光与声控制，精准靶向感兴趣的组织。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
     "doi:10.1038/d41586-026-03038-7": {
       "doi": "10.1038/d41586-026-03038-7",
       "journal_slug": "nature",
@@ -28069,6 +28134,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-18T23:31:22.479294+00:00"
     },
+    "doi:10.1038/d41586-026-03057-4": {
+      "doi": "10.1038/d41586-026-03057-4",
+      "journal_slug": "nature",
+      "title": "‘Learning about physics changed my life’: author Hernan Diaz on his new novel Ply",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "00b9806e481c6b04d272b750f9c7093e35f9c9ef43693b3ed8ed405063d1b4b1",
+      "source_abstract_sha256": "d0a78a68eb7d378c8c12499d9c6ecda527a42e666e8248f5c3fc5d1ef415c782",
+      "source_abstract": "abstract",
+      "title_zh": "‘学习物理改变了我的人生’：赫尔南·迪亚兹谈其新小说《Ply》",
+      "abstract_zh": "赫尔南·迪亚兹在《Nature》杂志上谈论他的新小说《Ply》",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
     "doi:10.1038/d41586-026-03058-3": {
       "doi": "10.1038/d41586-026-03058-3",
       "journal_slug": "nature",
@@ -28108,6 +28186,32 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-18T23:31:22.479294+00:00"
     },
+    "doi:10.1038/d41586-026-03091-2": {
+      "doi": "10.1038/d41586-026-03091-2",
+      "journal_slug": "nature",
+      "title": "Medicine Nobel awarded for brain ‘switch’ that controls neurons with light",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "10eb28fb04e9dc790ef9d17a5e58e1d2b504c0ec9022546f4c6904e8c29e53f8",
+      "source_abstract_sha256": "95e7923be0d711b36b0105c0f07273dca0fefe76c251dcdd8131404dceff9c52",
+      "source_abstract": "abstract",
+      "title_zh": "医学诺贝尔奖授予控制神经元光学开关的研究",
+      "abstract_zh": "Karl Deisseroth、Peter Hegemann 和 Georg Nagel 因其在光遗传学方面的工作获得 2026 年生理学或医学诺贝尔奖，该研究彻底改变了神经科学领域。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/d41586-026-03094-z": {
+      "doi": "10.1038/d41586-026-03094-z",
+      "journal_slug": "nature",
+      "title": "‘What took them so long?’ This year’s medicine Nobel winner is overdue",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "80a77f4d443da52a4f728c5e68873c6107bbc3d08981005555d4c5171747e690",
+      "source_abstract_sha256": "851cfab83665461a7c04df5d3ddaa394d67ae17c65d2f113bddadfed34b6d2dc",
+      "source_abstract": "abstract",
+      "title_zh": "‘他们为何如此迟缓？’今年医学诺贝尔奖得主已久等",
+      "abstract_zh": "Nature的资深生物学记者Ewen Callaway回顾了今天的光遗传学奖项——科学家们多年来一直期待的成果。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
     "doi:10.1038/d41586-026-03101-3": {
       "doi": "10.1038/d41586-026-03101-3",
       "journal_slug": "nature",
@@ -28120,6 +28224,19 @@
       "abstract_zh": "本月最锐利的科学图像，由《Nature》摄影团队挑选。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-25T02:18:33.046128+00:00"
+    },
+    "doi:10.1038/d41586-026-03105-z": {
+      "doi": "10.1038/d41586-026-03105-z",
+      "journal_slug": "nature",
+      "title": "How digital breakdowns affect supply chains — and endanger the global economy",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "05b9a1dd55626d636a462ee79e409dbfefd2fe19099ea1f26d35bc5ab7c587ab",
+      "source_abstract_sha256": "4fcfb095a2253650f0a92581080d411d008d9d5bf3c0c68b0f2a5b49327c5649",
+      "source_abstract": "abstract",
+      "title_zh": "数字化失效如何影响供应链并危及全球经济",
+      "abstract_zh": "当供应链失效时，往往是由于能源、计算机或数据网络故障。解决这些问题需要一种方法，使相互依赖关系可视化。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
     },
     "doi:10.1038/d41586-026-03106-y": {
       "doi": "10.1038/d41586-026-03106-y",
@@ -28186,6 +28303,45 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-25T02:18:33.046128+00:00"
     },
+    "doi:10.1038/d41586-026-03126-8": {
+      "doi": "10.1038/d41586-026-03126-8",
+      "journal_slug": "nature",
+      "title": "Stunning fossil shows dinosaurs’ distinctive path to flight",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "5a4888c55faec0dd2a5dcdca565c12a7654651a3d1615930952b36772f127cd5",
+      "source_abstract_sha256": "be354c72de3ce4eb71057902f487f7e52cbb2acf6692672093183dcdb74bfab4",
+      "source_abstract": "abstract",
+      "title_zh": "惊艳化石揭示恐龙独特的飞行进化路径",
+      "abstract_zh": "一块来自此前未被发现物种的化石，具有羽毛状四肢，出土于中国，进一步证明恐龙与鸟类的飞行能力是多次独立进化的。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/d41586-026-03133-9": {
+      "doi": "10.1038/d41586-026-03133-9",
+      "journal_slug": "nature",
+      "title": "Can you name the women who have won a science Nobel prize?",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "bec49a8ecd2d2fe9257a80c7d9496e942f8188a12daf37a89498aa614f10d460",
+      "source_abstract_sha256": "bde8a561ae53e2ee5e21d7048bd3e265edda7378e297bbc6b9447b5e64d32378",
+      "source_abstract": "abstract",
+      "title_zh": "你能说出获得科学诺贝尔奖的女性吗？",
+      "abstract_zh": "参加《自然》杂志关于物理、化学或生理学/医学领域女性诺贝尔奖得主的测验。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/d41586-026-03134-8": {
+      "doi": "10.1038/d41586-026-03134-8",
+      "journal_slug": "nature",
+      "title": "How big tech is building a military–industrial complex in the age of AI",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "dbab2f347e7741831f1cc95a0db17100bf281d840708c8d2d928404e6e8598e0",
+      "source_abstract_sha256": "a7f81ec9f8377cbdb6a4050a0306e0dca0f61d9e7d1adf70e3ff7c49fd6b0a5e",
+      "source_abstract": "abstract",
+      "title_zh": "大科技公司如何在人工智能时代构建军工复合体",
+      "abstract_zh": "两本书探讨战争如何被重塑，影响力正从国家转移到科技巨头。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
     "doi:10.1038/d41586-026-03138-4": {
       "doi": "10.1038/d41586-026-03138-4",
       "journal_slug": "nature",
@@ -28198,6 +28354,97 @@
       "abstract_zh": "科学家正努力帮助珊瑚礁在创纪录的海洋温度下存活。此外，还讨论了乌克兰国家科学院遭受致命袭击的后果，以及在社交场合中回避寒暄是否合适。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-25T02:18:33.046128+00:00"
+    },
+    "doi:10.1038/d41586-026-03141-9": {
+      "doi": "10.1038/d41586-026-03141-9",
+      "journal_slug": "nature",
+      "title": "Daily briefing: The sky as you’ve never seen it — the month’s best science images",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "4e0320c2a4c22edf29a2fb7aa7bc295c979c70ae7d4e3c03b60fdd95e72ec9e7",
+      "source_abstract_sha256": "a59aca8655193edec9221a800be30192f694043ea61114f64d564c12dd261dcf",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：全新视角的天空——本月最佳科学图像",
+      "abstract_zh": "彩色条纹横跨天空，蟹被困在水母触手中，都是本月最清晰的科学照片。此外，‘语速计’可测定你的衰老速度，侵入性植物种类正在非洲取代农民的土地。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/d41586-026-03145-5": {
+      "doi": "10.1038/d41586-026-03145-5",
+      "journal_slug": "nature",
+      "title": "Nature has rights — it is time the world recognized them",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "1861339a7d6b70acdbb603a96fa89e21a90207a46aa7d835bd38ad40704662ca",
+      "source_abstract_sha256": "108983e297d94a83d4f141f656962ac21ad28f6844a74a42bc8ecf8bef22e35f",
+      "source_abstract": "abstract",
+      "title_zh": "自然拥有权利——世界该予以承认",
+      "abstract_zh": "现有法律框架未能遏制全球危机。承认自然的权利可能提供另一条道路。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/d41586-026-03157-1": {
+      "doi": "10.1038/d41586-026-03157-1",
+      "journal_slug": "nature",
+      "title": "The top cancer success stories of the past 50 years, by the numbers",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "c34836d452d018be1b8e846e2bb40295cde06c174a5f3d7ba0b44ae903e2b747",
+      "source_abstract_sha256": "e1a3e3b3421933f120fd7ab759d56aad61778d30484db1a1e9c448fe5265264b",
+      "source_abstract": "abstract",
+      "title_zh": "过去50年癌症成功故事的数字概览",
+      "abstract_zh": "在美国，一些疾病的疗效已大幅提升，但其他疾病仍然落后。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/d41586-026-03164-2": {
+      "doi": "10.1038/d41586-026-03164-2",
+      "journal_slug": "nature",
+      "title": "Daily briefing: Can you name every female Nobel laureate?",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "c260979b7f90feea0688f0f7e6bf27b832c2ff8a9515cecb3c4aa451acab6101",
+      "source_abstract_sha256": "43cc46761bff1a581a31fac32f49ee1d976016d0a4a3094da8f65fac75e626f0",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：你能列举所有女性诺贝尔奖得主吗？",
+      "abstract_zh": "测试你对科学诺贝尔奖的了解。此外，蝴蝶纹理如何误导视线，以及如何在不进一步激化仇恨言论的情况下作出回应。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/d41586-026-03174-0": {
+      "doi": "10.1038/d41586-026-03174-0",
+      "journal_slug": "nature",
+      "title": "The Great Barrier Reef requires special attention in the developing super El Niño",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "6c00243ba64a219a46966bb37ceac5e9f33e05e2ccca72e0d20601ccd42d2614",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "大堡礁在正在形成的超级厄尔尼诺期间需要特别关注",
+      "abstract_zh": "致编辑的来信",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/d41586-026-03175-z": {
+      "doi": "10.1038/d41586-026-03175-z",
+      "journal_slug": "nature",
+      "title": "AI could undermine scientific independence in subtle ways",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "f51d0b7c350bcb2880a032c48a706ba11c459951b96af67c0a59810897de37c5",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "人工智能可能以微妙方式削弱科学独立性",
+      "abstract_zh": "致编辑的来信",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/d41586-026-03176-y": {
+      "doi": "10.1038/d41586-026-03176-y",
+      "journal_slug": "nature",
+      "title": "Maintaining global science collaboration during conflict requires fairer rules",
+      "acquired_at": "2026-10-25T19:06:47",
+      "source_title_sha256": "a37a945a7323d834f2e1629c1d8a394a4d1272242fe26dc30699c92190660ca3",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "在冲突期间维持全球科学合作需要更公平的规则",
+      "abstract_zh": "致编辑的来信",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
     },
     "doi:10.1038/s41380-026-03624-1": {
       "doi": "10.1038/s41380-026-03624-1",
@@ -31448,6 +31695,32 @@
       "abstract_zh": "海马功能障碍与创伤后应激障碍（PTSD）相关，尤其是侵入性再体验症状，可能由谷氨酸能兴奋性毒性介导。海马（HPC）中谷氨酸与N‑乙酰天冬氨酸（NAA）比值（Glu/NAA）升高的标志已与再体验症状相关。然而，海马在前后轴上表现出异质性，具有不同的功能连通模式和PTSD症状关联，促使人们研究前后海马（a/pHPC）亚区的谷氨酸代谢。为此，121名有创伤暴露且当前出现再体验症状的受试者完成了磁共振波谱（MRS）和静息态功能磁共振成像（rs‑fMRI），以检验海马Glu/NAA与再体验症状的区域特异性及其与a/pHPC功能连通性的关联。PTSD症状使用DSM‑5版临床评估量表（CAPS‑5）评估。再体验症状严重程度与后部海马（pHPC）的Glu/NAA呈正相关，但与前部海马（aHPC）无关。pHPC的Glu/NAA进一步与pHPC与视觉皮层（VC）之间的功能连通性增强相关，而该连通性又与更严重的再体验症状相关。增强的pHPC‑VC连通性解释了pHPC Glu/NAA与再体验严重程度之间共享的方差，提示后部海马谷氨酸代谢失调可能通过与视觉皮层的功能连通性导致再体验症状。该研究复制了先前将海马Glu/NAA与创伤再体验症状关联的结果，并提供了后部海马而非前部海马与视觉皮层功能连通性介导的这一关联的新证据。此多模态研究支持创伤相关障碍中谷氨酸能功能障碍的转化模型，并突出了药物和神经调制干预的新靶点。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-25T02:18:33.046128+00:00"
+    },
+    "doi:10.1038/s41380-026-03941-5": {
+      "doi": "10.1038/s41380-026-03941-5",
+      "journal_slug": "molecular-psychiatry",
+      "title": "HINT1 in ventral hippocampal GABAergic neurons mediates depressive-like behaviors",
+      "acquired_at": "2026-10-25T19:16:09",
+      "source_title_sha256": "f5bda87c93425604df2f9f4db5ce20a8d24e4b0fdbda82e2894c5dd399ce68ad",
+      "source_abstract_sha256": "4069171ce3ae7d4462ceeed8e8072b50f275e23f138d26fad626a86c571aa7e6",
+      "source_abstract": "abstract",
+      "title_zh": "HINT1在腹侧海马区GABA能神经元中介导抑郁样行为",
+      "abstract_zh": "抑郁症是一种多因素的精神疾病，其潜在分子机制尚未完全阐明。已知组氨酸三聚体核苷酸结合蛋白1（HINT1）与重性抑郁障碍（MDD）相关，但其精确作用及调控机制仍不清楚。本研究探讨了HINT1在抑郁相关表型中的作用。在接受慢性社会压迫（CSDS）的老鼠中，易受压个体在海马和内侧前额叶皮层中显著上调HINT1。针对腹侧海马（vHip）进行HINT1过表达显示，HINT1直接诱导抑郁样行为，而其敲低则产生强烈的抗抑郁效应。使用选择性抑制剂Tryptamine guanosine carbamate（TpGc）抑制vHip中的HINT1也可逆转行为缺陷并恢复CSDS暴露老鼠的神经元活动。细胞类型特异性分析表明，HINT1在vHip GABA能神经元（包括somatostatin阳性（SST+）和parvalbumin阳性（PV+）亚型）中的过表达加剧了抑郁样表型并破坏神经元活动。蛋白质组学分析发现，HINT1在vHip中过表达显著上调了小泛素样修饰酶（SUMO）E3连接酶chromobox 4（CBX4）。进一步在vHip GABA能神经元中过表达CBX4可诱导抑郁样行为。机制上，HINT1与蛋白激酶C-β1（PKCβ1）相互作用并抑制其磷酸化，抑制其下游MEK1/2-ERK1/2信号通路，从而升高CBX4水平。CBX4促进谷氨酸NMDA受体亚基2A（GluN2A）的SUMO化，并影响其磷酸化和转运。以上结果表明HINT1是腹侧海马区GABA能信号的关键调控因子，并突出了其在抑郁治疗中的潜在价值。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
+    },
+    "doi:10.1038/s41380-026-03946-0": {
+      "doi": "10.1038/s41380-026-03946-0",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Genome-wide analysis identifies pleiotropic genes shared between severe mental disorders and biomarkers of cellular aging",
+      "acquired_at": "2026-10-25T19:16:09",
+      "source_title_sha256": "96c9207cfcc4d3f279d92b362e9494dfa4bd1b95e31855f84578d391d83d5e88",
+      "source_abstract_sha256": "afab3087f301204e742227f81f0dfad6e46aa8c51d93cc2d37deec0b8005c49a",
+      "source_abstract": "abstract",
+      "title_zh": "全基因组分析揭示严重精神疾病与细胞衰老生物标志物共享的多效基因",
+      "abstract_zh": "严重精神疾病如双相情感障碍（BD）、重度抑郁障碍（MDD）和精神分裂症（SZ）表现为寿命缩短、早逝和衰老生物标志物的改变，提示它们可能与细胞衰老加速相关。我们利用尖端方法量化了严重精神疾病与一系列衰老生物标志物（包括多变量寿命与健康衰老指数 mvAge、脑龄差距 BAG、白细胞端粒长度 gLTL、线粒体 DNA 复制数和表观遗传年龄加速 gEAA）之间的遗传重叠，并评估其功能富集及作为药物靶点的适用性。所有疾病均与 mvAge 负相关。进一步地，MDD 与 gLTL 负相关，与 gEAA 正相关。我们鉴定了若干多效变异，其中九个基因（AC068490.2、ASIC2、CNNM2、FURIN、GPM6A、HS6ST3、RP5-1043L13.1、SORCS3 和 SP4）在衰老生物标志物与所有疾病之间共享变异。基于汇总数据的孟德尔随机化功能分析显示，前额叶皮层中可药物化基因 CRHR1 的表达升高与 MDD 风险和 BAG 测量的升高相关。我们的发现表明，共享的遗传性可能导致严重精神疾病中寿命和健康衰老的降低，并识别了涉及突触功能和与叶酸、镁等微量营养素相关的代谢过程的多效基因。",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
     },
     "doi:10.1038/s41380-026-03947-z": {
       "doi": "10.1038/s41380-026-03947-z",
@@ -57617,6 +57890,19 @@
       "abstract_zh": "脑信息学——脑电图（EEG）因其固有的神经独特性和对伪造攻击的抵抗力，被视为一种有前景的生理识别方式。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-15T23:33:42.844229+00:00"
+    },
+    "doi:10.1186/s40708-026-00338-6": {
+      "doi": "10.1186/s40708-026-00338-6",
+      "journal_slug": "brain-informatics",
+      "title": "STABLE-BAG: a stability-aware framework for SHAP-based brain age gap decomposition",
+      "acquired_at": "2026-10-25T19:23:17",
+      "source_title_sha256": "041c10ac5ee5cefd44fba8ad4527be0f521044d2016b1c0d7131a0dfb76f949b",
+      "source_abstract_sha256": "6c5883b21353eb9ce21d79a64b71a68caced352468706b74e5ad15f5deac6254",
+      "source_abstract": "abstract",
+      "title_zh": "STABLE-BAG：一种针对 SHAP 的稳定性感知脑龄差分解框架",
+      "abstract_zh": "脑信息学——脑龄建模通过神经影像特征估计个体的实际年龄，预测年龄与实际年龄之间的差距（脑龄差）被用作异常脑功能的标志……",
+      "translation_model": "openai/gpt-oss-20b",
+      "translated_at": "2026-10-25T23:31:55.740833+00:00"
     },
     "doi:10.1186/s40708-026-00339-5": {
       "doi": "10.1186/s40708-026-00339-5",
