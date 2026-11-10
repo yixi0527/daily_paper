@@ -6,11 +6,11 @@ import { ArticleCard } from '../components/ArticleCard';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 import { Pagination } from '../components/Pagination';
 import { useMediaQuery } from '../hooks/useMediaQuery';
-import { useReadingStatus } from '../hooks/useReadingStatus';
+import { useReadingStatus, type ReadingFilter } from '../hooks/useReadingStatus';
 import { ReadingProgress } from '../components/ReadingProgress';
-import { summarizeReadingByAcquiredDate } from '../lib/readingCalendar';
+import { summarizeReadingByOnlineDate } from '../lib/readingCalendar';
 
-export function ArticlesPage({ readOnly = false }: { readOnly?: boolean }) {
+export function ArticlesPage({ readingFilter = 'all' }: { readingFilter?: ReadingFilter }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const isMobile = useMediaQuery('(max-width: 680px)');
   const { isRead } = useReadingStatus();
@@ -36,14 +36,15 @@ export function ArticlesPage({ readOnly = false }: { readOnly?: boolean }) {
   }
 
   const articles = articlesQuery.data;
-  const dailyProgress = summarizeReadingByAcquiredDate(articles, isRead);
+  const { dailyProgress, undatedCount } = summarizeReadingByOnlineDate(articles, isRead);
   const readCount = articles.reduce(
     (count, article) => count + Number(isRead(article.article_key)),
     0,
   );
-  const matchingArticles = readOnly
-    ? articles.filter((article) => isRead(article.article_key))
-    : articles;
+  const matchingArticles =
+    readingFilter === 'all'
+      ? articles
+      : articles.filter((article) => isRead(article.article_key) === (readingFilter === 'read'));
   const totalPages = Math.max(1, Math.ceil(matchingArticles.length / pageSize));
   const page = Math.min(requestedPage, totalPages);
   const visibleArticles = matchingArticles.slice((page - 1) * pageSize, page * pageSize);
@@ -56,13 +57,14 @@ export function ArticlesPage({ readOnly = false }: { readOnly?: boolean }) {
         completed={readCount}
         total={articles.length}
         dailyProgress={dailyProgress}
+        undatedCount={undatedCount}
         filtered={Boolean(journal || author)}
-        readOnly={readOnly}
+        readingFilter={readingFilter}
         search={categoryParams.toString()}
       />
-      {readOnly ? (
+      {readingFilter !== 'all' ? (
         <div className="read-list-heading">
-          <h2>已读文章</h2>
+          <h2>{readingFilter === 'read' ? '已读文章' : '未读文章'}</h2>
           <span>{matchingArticles.length} 篇</span>
         </div>
       ) : null}
@@ -74,8 +76,18 @@ export function ArticlesPage({ readOnly = false }: { readOnly?: boolean }) {
             ))
           ) : (
             <EmptyState
-              label={readOnly ? '还没有已读文章' : 'No articles match the current filters.'}
-              hint={readOnly ? '点击文章卡片上的“标记已读”，即可在这里查看。' : undefined}
+              label={
+                readingFilter === 'read'
+                  ? '还没有已读文章'
+                  : readingFilter === 'unread'
+                    ? '没有未读文章'
+                    : 'No articles match the current filters.'
+              }
+              hint={
+                readingFilter === 'read'
+                  ? '点击文章卡片上的“标记已读”，即可在这里查看。'
+                  : undefined
+              }
             />
           )}
         </div>

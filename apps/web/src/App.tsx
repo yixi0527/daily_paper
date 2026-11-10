@@ -20,7 +20,8 @@ const router = createHashRouter([
     children: [
       { index: true, element: <ArticlesPage /> },
       { path: 'articles', element: <ArticlesPage /> },
-      { path: 'read', element: <ArticlesPage readOnly /> },
+      { path: 'read', element: <ArticlesPage readingFilter="read" /> },
+      { path: 'unread', element: <ArticlesPage readingFilter="unread" /> },
       { path: 'articles/:articleId', element: <ArticleDetailPage /> },
       { path: 'favorites', element: <FavoritesPage /> },
       { path: 'search', element: <SearchPage /> },

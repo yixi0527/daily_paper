@@ -23,7 +23,6 @@ export function ArticleDetailPage() {
   if (!articleQuery.data) return <EmptyState label="Article not found." />;
 
   const article = articleQuery.data;
-  const dateLabel = article.display_date_source === 'acquired' ? 'Acquired' : 'Published';
   const sourceAbstract = article.abstract ?? article.snippet;
   const hasTranslation = Boolean(article.title_zh || article.abstract_zh);
 
@@ -57,8 +56,12 @@ export function ArticleDetailPage() {
               />
             </div>
             <div>
-              <span>{dateLabel}</span>
-              <strong>{formatDate(article.display_date)}</strong>
+              <span>Online</span>
+              <strong>
+                {article.online_published_at === null
+                  ? '日期缺失'
+                  : formatDate(article.online_published_at)}
+              </strong>
             </div>
             <div>
               <span>DOI</span>

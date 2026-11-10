@@ -1,4 +1,5 @@
 import type { ArticleDetail, SearchHit } from '../api/types';
+import { compareOnlineDates, matchesOnlineDateRange } from './readingCalendar';
 
 export interface ArticleFilterParams {
   page?: number;
@@ -45,12 +46,7 @@ export function filterArticles(
     if (params.hasDoi === 'false' && item.doi) return false;
     if (params.hasAbstract === 'true' && !item.abstract) return false;
     if (params.hasAbstract === 'false' && item.abstract) return false;
-    if (params.dateFrom && new Date(item.display_date) < new Date(params.dateFrom)) {
-      return false;
-    }
-    if (params.dateTo && new Date(item.display_date) > new Date(params.dateTo)) {
-      return false;
-    }
+    if (!matchesOnlineDateRange(item, params.dateFrom, params.dateTo)) return false;
     return true;
   });
 }
@@ -68,12 +64,7 @@ export function searchArticlesLocally(items: ArticleDetail[], params: SearchPara
   return items
     .filter((item) => {
       if (params.journal && item.journal.slug !== params.journal) return false;
-      if (params.dateFrom && new Date(item.display_date) < new Date(params.dateFrom)) {
-        return false;
-      }
-      if (params.dateTo && new Date(item.display_date) > new Date(params.dateTo)) {
-        return false;
-      }
+      if (!matchesOnlineDateRange(item, params.dateFrom, params.dateTo)) return false;
       const titleText = [item.title, item.title_zh].filter(Boolean).join(' ');
       if (queryTitle && !titleText.toLowerCase().includes(queryTitle)) return false;
       if (queryAuthor && !(item.authors_text ?? '').toLowerCase().includes(queryAuthor))
@@ -104,10 +95,7 @@ export function searchArticlesLocally(items: ArticleDetail[], params: SearchPara
           : (item.abstract ?? item.abstract_zh ?? item.snippet ?? ''),
       },
     }))
-    .sort(
-      (a, b) =>
-        new Date(b.article.display_date).getTime() - new Date(a.article.display_date).getTime(),
-    );
+    .sort((a, b) => compareOnlineDates(a.article, b.article));
 }
 
 export function paginate<T>(items: T[], page = 1, pageSize = 20): { items: T[]; total: number } {

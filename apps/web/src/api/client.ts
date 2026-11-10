@@ -1,4 +1,5 @@
 import { buildQuery } from '../lib/utils';
+import { compareOnlineDates } from '../lib/readingCalendar';
 import { apiBaseUrl, isStaticMode, staticDataUrl } from '../lib/env';
 import {
   type ArticleDetail,
@@ -76,9 +77,7 @@ export async function getJournal(slug: string): Promise<Journal | undefined> {
 export async function listArticles(params: ArticleFilterParams): Promise<ArticleListResponse> {
   if (isStaticMode) {
     const bundle = await loadSiteData();
-    const filtered = filterArticles(bundle.articles, params).sort((a, b) => {
-      return new Date(b.display_date).getTime() - new Date(a.display_date).getTime();
-    });
+    const filtered = filterArticles(bundle.articles, params).sort(compareOnlineDates);
     const page = params.page ?? 1;
     const pageSize = params.pageSize ?? 20;
     const paged = paginate(filtered, page, pageSize);
@@ -150,9 +149,7 @@ export async function searchArticles(params: SearchParams): Promise<SearchRespon
 export async function getAllArticles(params: ArticleFilterParams = {}): Promise<ArticleListItem[]> {
   if (isStaticMode) {
     const bundle = await loadSiteData();
-    return filterArticles(bundle.articles, params).sort(
-      (a, b) => new Date(b.display_date).getTime() - new Date(a.display_date).getTime(),
-    );
+    return filterArticles(bundle.articles, params).sort(compareOnlineDates);
   }
 
   const firstPage = await listArticles({ ...params, page: 1, pageSize: 100 });
@@ -163,7 +160,9 @@ export async function getAllArticles(params: ArticleFilterParams = {}): Promise<
   const remainingResponses = await Promise.all(
     remainingPages.map((page) => listArticles({ ...params, page, pageSize: 100 })),
   );
-  return [firstPage, ...remainingResponses].flatMap((response) => response.items);
+  return [firstPage, ...remainingResponses]
+    .flatMap((response) => response.items)
+    .sort(compareOnlineDates);
 }
 
 export async function getFavoriteArticles(articleKeys: string[]): Promise<ArticleListItem[]> {
