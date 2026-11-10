@@ -52,6 +52,10 @@ if ([string]::IsNullOrWhiteSpace($env:NVIDIA_API_KEY)) {
     }
     $env:NVIDIA_API_KEY = $userApiKey
 }
+$userModel = [Environment]::GetEnvironmentVariable('NVIDIA_API_MODEL', 'User')
+if (-not [string]::IsNullOrWhiteSpace($userModel)) {
+    $env:NVIDIA_API_MODEL = $userModel
+}
 
 $env:PATH = '{0};{1};{2};{3}' -f $pythonLibraryBin, $nodeDirectory, (Split-Path -Path $ghExecutable -Parent), $env:PATH
 Set-Location -LiteralPath $projectRoot

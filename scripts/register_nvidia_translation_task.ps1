@@ -31,10 +31,11 @@ $action = New-ScheduledTaskAction -Execute $pwshExecutable -Argument $actionArgu
 $today = [DateTime]::Today
 $trigger0730 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(7).AddMinutes(30)
 $trigger0930 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(9).AddMinutes(30)
-$settings = New-ScheduledTaskSettingsSet -MultipleInstances IgnoreNew -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours 4)
+$trigger1230 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(12).AddMinutes(30)
+$settings = New-ScheduledTaskSettingsSet -MultipleInstances IgnoreNew -StartWhenAvailable -WakeToRun -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 15) -ExecutionTimeLimit (New-TimeSpan -Hours 4)
 $principal = New-ScheduledTaskPrincipal -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) -LogonType Interactive -RunLevel Limited
 
-Register-ScheduledTask -TaskName $taskName -TaskPath $taskPath -Action $action -Trigger @($trigger0730, $trigger0930) -Settings $settings -Principal $principal -Description 'Translate Daily Paper pending articles through the NVIDIA OpenAI-compatible API.' -Force | Out-Null
+Register-ScheduledTask -TaskName $taskName -TaskPath $taskPath -Action $action -Trigger @($trigger0730, $trigger0930, $trigger1230) -Settings $settings -Principal $principal -Description 'Translate Daily Paper pending articles through the NVIDIA OpenAI-compatible API.' -Force | Out-Null
 
 $registered = Get-ScheduledTask -TaskName $taskName -TaskPath $taskPath
 $registeredAction = @($registered.Actions)
@@ -45,8 +46,8 @@ if ($registeredAction.Count -ne 1) {
 if ($registeredAction[0].Execute -ne $pwshExecutable) {
     throw ('Registered action executable mismatch: {0}' -f $registeredAction[0].Execute)
 }
-if ($registeredTriggers.Count -ne 2) {
-    throw ('Expected two daily triggers; actual={0}' -f $registeredTriggers.Count)
+if ($registeredTriggers.Count -ne 3) {
+    throw ('Expected three daily triggers; actual={0}' -f $registeredTriggers.Count)
 }
 
 [ordered]@{

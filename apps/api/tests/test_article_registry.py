@@ -143,7 +143,7 @@ def test_translation_prepare_uses_context_safe_source_limit() -> None:
         ]
     )
 
-    assert args.model == "openai/gpt-oss-20b"
+    assert args.model == "nvidia/nemotron-3.5-lightning-30b-a3b"
     assert args.batch_size == 1
     assert args.max_source_chars == 9000
 
@@ -185,7 +185,7 @@ def test_translation_merge_preserves_historical_model_for_unchanged_article(tmp_
         json.dumps(
             {
                 "schema_version": 1,
-                "model": "openai/gpt-oss-20b",
+                "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
                 "pending_count": 0,
                 "batch_files": [],
                 "articles": [article],

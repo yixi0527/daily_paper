@@ -19,7 +19,7 @@ sys.path.insert(0, str(API_ROOT))
 from app.services.article_registry import build_article_key, text_sha256  # noqa: E402
 
 SCHEMA_VERSION = 1
-DEFAULT_TRANSLATION_MODEL = "openai/gpt-oss-20b"
+DEFAULT_TRANSLATION_MODEL = "nvidia/nemotron-3.5-lightning-30b-a3b"
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
 
 

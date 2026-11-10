@@ -5,7 +5,7 @@
 | Time (Asia/Shanghai) | Owner | Responsibility |
 | --- | --- | --- |
 | 00:00 daily | GitHub Actions | Fetch DOI-indexed metadata, require all journals to succeed, export static data, deploy Pages |
-| 07:30 and 09:30 daily | Windows Task Scheduler | Verify the Pages snapshot, translate pending records through NVIDIA, validate and push the registry |
+| 07:30, 09:30, and 12:30 daily | Windows Task Scheduler | Wait for the daily sync, verify the latest Pages snapshot, resume pending translations through NVIDIA, validate and push the registry |
 | After the registry push | GitHub Actions | Refresh translations from the healthy Pages snapshot and deploy the pushed registry revision |
 | End of the local run | Windows Task Scheduler | Verify the exact push-triggered deployment and retain the run report |
 
@@ -44,12 +44,12 @@ The Windows task invokes `scripts/run_nvidia_translation_task.ps1 -Execute`, whi
 `scripts/run_daily_nvidia_translation.py`. The runner uses:
 
 - endpoint: `https://integrate.api.nvidia.com/v1/chat/completions`;
-- default model: `openai/gpt-oss-20b`;
+- default model: `nvidia/nemotron-3.5-lightning-30b-a3b`;
 - secret: user-scoped `NVIDIA_API_KEY` environment variable;
-- four concurrent API requests, with one article per batch;
-- low reasoning effort and a 4096-token output cap;
+- four concurrent API requests, with one article per batch and at least two seconds between starts;
+- thinking disabled and a 4096-token output cap;
 - 300-second response timeout per API request;
-- JSON-mode Chat Completions responses, followed by script-owned schema, order, Chinese-text, and
+- strict JSON Schema Chat Completions responses, followed by script-owned order, Chinese-text, and
   null-abstract validation.
 
 The API key is never placed in a batch, command argument, log, registry entry, or Git commit.
@@ -63,9 +63,11 @@ Each invocation follows this sequence:
    unique run directory under `data/translation-work/`.
 2. Record the main worktree status, fetch `origin/main`, and create a detached worktree from the
    fetched revision. The user's existing local changes are not modified.
-3. Run `scripts/validate_daily_schedule_run.py` with the verified GitHub CLI path. Its JSON output
-   is the only accepted schedule identity and supplies the Shanghai date, workflow ID, and source
-   revision. For an explicitly requested one-off catch-up, launch the wrapper with
+3. Run `scripts/validate_daily_schedule_run.py` with the verified GitHub CLI path. Wait up to two
+   hours for the current Shanghai day's scheduled synchronization to finish successfully. Select
+   the latest successful Pages deployment and require its underlying synchronization to match that
+   validated date. This also supports a later daily invocation after translations were deployed.
+   GitHub CLI and Git inherit the same system proxy used by Python. For a one-off catch-up, use
    `-AssumeTriggerTime`; that mode selects the latest completed successful Pages deployment and
    records its actual event/date while leaving the normal scheduled-task gate strict.
 4. Download and validate the canonical
@@ -75,8 +77,11 @@ Each invocation follows this sequence:
    the detached worktree registry. The preparation uses source hashes and produces one-article
    batches with a 9,000-character source limit.
 6. Run `run_nvidia_translation.py`. It sends only title/abstract source text to the API, binds
-   article keys locally, writes outputs atomically, and leaves raw API responses in the ignored run
-   directory for diagnosis.
+   article keys locally, and writes outputs atomically. Completed articles are saved immediately to
+   `data/translation-work/translation-cache.json` with their exact source and model, and reused by
+   later invocations only when both still match. Transient failures retry the same model up to three
+   times; every attempt retains its raw response or full traceback. Other articles continue, and
+   unresolved failures produce a nonzero exit after preserving successful results.
 7. Run `article_registry.py merge` and `article_registry.py verify`.
 8. Run Ruff, the complete pytest suite, the web lint, and the production web build.
 9. Confirm that the detached worktree diff contains only
@@ -94,7 +99,9 @@ during a run, or falls back to another model after an API failure.
 Every command is recorded under the run directory with its exact argument list, exit code, stdout,
 and stderr. API attempts also retain the raw response and a small response log. A failed command
 leaves the run directory and detached worktree in place for diagnosis; it does not merge partial
-translations or push a partial registry. Rerun the same validated workflow only after correcting
+translations or push a partial registry. Successful translations remain in the shared checkpoint.
+The Windows task wakes the computer and retries failures three times at 15-minute intervals.
+Rerun the same validated workflow only after correcting
 the reported root cause. Failures are surfaced for follow-up and any available deployment status is
 retained before the invocation ends; no error is silently skipped or replaced by a fallback result.
 
