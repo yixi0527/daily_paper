@@ -69,3 +69,34 @@ def test_schedule_gate_requires_exactly_one_run() -> None:
 
     with pytest.raises(ValueError, match="Expected one latest schedule run"):
         parse_run_list("[]")
+
+
+def test_delayed_daily_sync_waits_for_today_then_completion(monkeypatch) -> None:
+    globals_ = schedule_gate_globals()
+    wait = globals_["wait_for_schedule_run"]
+    yesterday = successful_schedule_run()
+    yesterday["createdAt"] = "2026-08-07T17:52:33Z"
+    running = dict(successful_schedule_run(), status="in_progress", conclusion="")
+    runs = iter([yesterday, running, successful_schedule_run()])
+    monkeypatch.setitem(wait.__globals__, "query_latest_schedule_run", lambda **kwargs: next(runs))
+    sleeps = []
+    monkeypatch.setattr(globals_["time"], "sleep", sleeps.append)
+    result = wait(
+        gh_executable=Path("gh"), repository="owner/repo", workflow="pages-sync.yml",
+        branch="main", timezone=ZoneInfo("Asia/Shanghai"), expected_date=date(2026, 8, 9),
+        wait_seconds=10, poll_seconds=1,
+    )
+    assert result["local_date"] == "2026-08-09"
+    assert sleeps == [1, 1]
+
+
+def test_failed_daily_sync_is_reported_without_using_an_old_success(monkeypatch) -> None:
+    globals_ = schedule_gate_globals()
+    wait = globals_["wait_for_schedule_run"]
+    run = dict(successful_schedule_run(), conclusion="failure")
+    monkeypatch.setitem(wait.__globals__, "query_latest_schedule_run", lambda **kwargs: run)
+    with pytest.raises(ValueError, match="conclusion must be success"):
+        wait(
+            gh_executable=Path("gh"), repository="owner/repo", workflow="pages-sync.yml",
+            branch="main", timezone=ZoneInfo("Asia/Shanghai"), expected_date=date(2026, 8, 9),
+        )

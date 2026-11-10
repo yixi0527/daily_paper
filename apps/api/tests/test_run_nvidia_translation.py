@@ -31,6 +31,7 @@ def translation_runner(monkeypatch):
         raise RuntimeError(f"Unable to load translation runner: {script_path}")
     module = module_from_spec(spec)
     spec.loader.exec_module(module)
+    monkeypatch.setattr(module, "REQUEST_INTERVAL_SECONDS", 0)
     return module
 
 
@@ -119,9 +120,13 @@ def test_run_batch_posts_only_source_text_and_binds_article_key(
 
     body = captured["body"]
     assert body["model"] == translation_runner.DEFAULT_MODEL
-    assert body["response_format"] == {"type": "json_object"}
+    assert body["response_format"]["type"] == "json_schema"
+    schema = body["response_format"]["json_schema"]["schema"]
+    assert schema["properties"]["translations"]["items"]["required"] == ["title_zh", "abstract_zh"]
+    assert schema["properties"]["translations"]["items"]["additionalProperties"] is False
     assert body["temperature"] == 0
-    assert body["reasoning_effort"] == "low"
+    assert body["chat_template_kwargs"] == {"enable_thinking": False}
+    assert "reasoning_effort" not in body
     assert json.loads(body["messages"][1]["content"]) == {
         "source_texts": [
             {
@@ -388,3 +393,117 @@ def test_resume_with_valid_final_output_skips_api(
     )
 
     assert list(tmp_path.glob(".batch-0001.nvidia-attempt-*")) == []
+
+
+def test_timeout_is_logged_and_retried_without_switching_model(
+    tmp_path, monkeypatch, translation_runner, articles,
+) -> None:
+    batch_path = prepare_batch(tmp_path, articles)
+    calls = []
+
+    def transient_request(**kwargs):
+        calls.append(kwargs["model"])
+        if len(calls) == 1:
+            raise TimeoutError("upstream timeout")
+        return response_payload([{"title_zh": "神经科学标题", "abstract_zh": "神经科学摘要。"}])
+
+    monkeypatch.setattr(translation_runner, "request_translation", transient_request)
+    monkeypatch.setattr(translation_runner.time, "sleep", lambda seconds: None)
+    translation_runner.run_batch(
+        api_url=translation_runner.DEFAULT_API_URL,
+        api_key="secret-key",
+        model=translation_runner.DEFAULT_MODEL,
+        batch_path=batch_path,
+        timeout=10,
+        max_tokens=512,
+        resume=True,
+    )
+    assert calls == [translation_runner.DEFAULT_MODEL] * 2
+    errors = list(tmp_path.glob(".batch-0001.nvidia-attempt-*/error.txt"))
+    assert len(errors) == 1
+    assert "TimeoutError: upstream timeout" in errors[0].read_text(encoding="utf-8")
+    translation_runner.validate_output(batch_path, batch_path.with_suffix(".output.json"))
+
+
+def test_successful_batches_survive_another_batch_failure_and_a_new_run(
+    tmp_path, monkeypatch, translation_runner,
+) -> None:
+    first = {"article_key": "doi:10.1000/first", "title": "First title", "abstract": None}
+    second = {"article_key": "doi:10.1000/second", "title": "Second title", "abstract": None}
+    original = tmp_path / "original"
+    original.mkdir()
+    first_path = prepare_batch(original, [first])
+    second_path = original / "batch-0002.json"
+    write_json(second_path, {"articles": [second]})
+    cache_path = tmp_path / "translation-cache.json"
+    calls = []
+
+    def partial_request(**kwargs):
+        source = json.loads(kwargs["source_payload"])["source_texts"][0]
+        calls.append(source["title"])
+        if source["title"] == "Second title":
+            raise TimeoutError("upstream timeout")
+        return response_payload([{"title_zh": "第一篇标题", "abstract_zh": None}])
+
+    monkeypatch.setattr(translation_runner, "request_translation", partial_request)
+    monkeypatch.setattr(translation_runner.time, "sleep", lambda seconds: None)
+    arguments = dict(cache_path=cache_path, api_url=translation_runner.DEFAULT_API_URL,
+                     api_key="secret-key", model=translation_runner.DEFAULT_MODEL,
+                     timeout=10, max_tokens=512, workers=2, resume=True)
+    with pytest.raises(ExceptionGroup, match="successful translations are checkpointed"):
+        translation_runner.translate_batches(batch_paths=[first_path, second_path], **arguments)
+    cache = json.loads(cache_path.read_text(encoding="utf-8"))
+    assert list(cache) == [first["article_key"]]
+
+    resumed = tmp_path / "resumed"
+    resumed.mkdir()
+    resumed_first = prepare_batch(resumed, [first])
+    resumed_second = resumed / "batch-0002.json"
+    write_json(resumed_second, {"articles": [second]})
+    calls.clear()
+
+    def successful_request(**kwargs):
+        source = json.loads(kwargs["source_payload"])["source_texts"][0]
+        calls.append(source["title"])
+        return response_payload([{"title_zh": "第二篇标题", "abstract_zh": None}])
+
+    monkeypatch.setattr(translation_runner, "request_translation", successful_request)
+    translation_runner.translate_batches(batch_paths=[resumed_first, resumed_second], **arguments)
+    assert calls == ["Second title"]
+    assert len(json.loads(cache_path.read_text(encoding="utf-8"))) == 2
+    translation_runner.validate_output(resumed_first, resumed_first.with_suffix(".output.json"))
+
+
+def test_changed_source_cannot_reuse_old_translation_cache(
+    tmp_path, monkeypatch, translation_runner, articles,
+) -> None:
+    batch_path = prepare_batch(tmp_path, articles)
+    cache_path = tmp_path / "translation-cache.json"
+    old_source = dict(articles[0], title="An obsolete title")
+    write_json(cache_path, {old_source["article_key"]: {
+        "source": old_source, "model": translation_runner.DEFAULT_MODEL,
+        "translation": {"article_key": old_source["article_key"], "title_zh": "旧标题", "abstract_zh": "旧摘要。"},
+    }})
+    calls = []
+
+    def fresh_request(**kwargs):
+        calls.append(kwargs["source_payload"])
+        return response_payload([{"title_zh": "新标题", "abstract_zh": "新摘要。"}])
+
+    monkeypatch.setattr(translation_runner, "request_translation", fresh_request)
+    translation_runner.translate_batches(
+        batch_paths=[batch_path], cache_path=cache_path,
+        api_url=translation_runner.DEFAULT_API_URL, api_key="secret-key",
+        model=translation_runner.DEFAULT_MODEL, timeout=10, max_tokens=512,
+        workers=1, resume=True,
+    )
+    assert len(calls) == 1
+    output = json.loads(batch_path.with_suffix(".output.json").read_text(encoding="utf-8"))
+    assert output["translations"][0]["title_zh"] == "新标题"
+
+
+def test_token_limit_does_not_accept_apparently_valid_json(translation_runner, articles) -> None:
+    response = response_payload([{"title_zh": "标题", "abstract_zh": "尚未完成的摘要。"}])
+    response["choices"][0]["finish_reason"] = "length"
+    with pytest.raises(ValueError, match="finish_reason=length"):
+        translation_runner.bind_api_output(articles=articles, response=response)

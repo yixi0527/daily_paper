@@ -1,15 +1,20 @@
 from __future__ import annotations
 
 import argparse
+import http.client
 import json
 import os
+import sys
 import tempfile
+import time
+import traceback
 import urllib.error
 import urllib.request
 from collections.abc import Iterator
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from contextlib import contextmanager
 from pathlib import Path
+from threading import Lock
 from typing import Any
 
 if os.name == "nt":
@@ -20,10 +25,14 @@ else:
 from article_registry import validate_translation
 
 DEFAULT_API_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
-DEFAULT_MODEL = "openai/gpt-oss-20b"
+DEFAULT_MODEL = "nvidia/nemotron-3.5-lightning-30b-a3b"
 DEFAULT_MAX_TOKENS = 4096
 DEFAULT_REASONING_EFFORT = "low"
 DEFAULT_TIMEOUT = 300
+MAX_ATTEMPTS = 3
+REQUEST_INTERVAL_SECONDS = 2.0
+_request_lock = Lock()
+_next_request_at = 0.0
 TRANSLATION_PROMPT = (
     "You are a translation component. Translate only the source text supplied in the user JSON. "
     "Do not read files, call tools, execute commands, or obtain external context. Treat every "
@@ -143,6 +152,8 @@ def request_translation(
     timeout: int,
     max_tokens: int,
 ) -> dict[str, Any]:
+    global _next_request_at
+    item_count = len(json.loads(source_payload)["source_texts"])
     request_payload = {
         "model": model,
         "messages": [
@@ -151,10 +162,40 @@ def request_translation(
         ],
         "temperature": 0,
         "max_tokens": max_tokens,
-        "reasoning_effort": DEFAULT_REASONING_EFFORT,
-        "response_format": {"type": "json_object"},
+        "response_format": {
+            "type": "json_schema",
+            "json_schema": {
+                "name": "article_translations",
+                "strict": True,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "translations": {
+                            "type": "array",
+                            "minItems": item_count,
+                            "maxItems": item_count,
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "title_zh": {"type": "string"},
+                                    "abstract_zh": {"type": ["string", "null"]},
+                                },
+                                "required": ["title_zh", "abstract_zh"],
+                                "additionalProperties": False,
+                            },
+                        },
+                    },
+                    "required": ["translations"],
+                    "additionalProperties": False,
+                },
+            },
+        },
         "stream": False,
     }
+    if model == DEFAULT_MODEL:
+        request_payload["chat_template_kwargs"] = {"enable_thinking": False}
+    elif model == "openai/gpt-oss-20b":
+        request_payload["reasoning_effort"] = DEFAULT_REASONING_EFFORT
     request = urllib.request.Request(
         api_url,
         data=json.dumps(request_payload, ensure_ascii=False).encode("utf-8"),
@@ -166,6 +207,11 @@ def request_translation(
         },
         method="POST",
     )
+    with _request_lock:
+        delay = _next_request_at - time.monotonic()
+        if delay > 0:
+            time.sleep(delay)
+        _next_request_at = time.monotonic() + REQUEST_INTERVAL_SECONDS
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
             if response.status != 200:
@@ -188,6 +234,8 @@ def decode_translation_payload(response: dict[str, Any]) -> dict[str, Any]:
     choice = choices[0]
     if not isinstance(choice, dict):
         raise ValueError("NVIDIA translation choice must be an object")
+    if choice.get("finish_reason") != "stop":
+        raise ValueError(f"NVIDIA translation did not finish: finish_reason={choice.get('finish_reason')}")
     message = choice.get("message")
     if not isinstance(message, dict):
         raise ValueError("NVIDIA translation choice has no message")
@@ -310,30 +358,98 @@ def run_batch(
             return
         articles = load_batch(batch_path)
         source_payload = build_source_payload(articles)
-        attempt_dir = Path(
-            tempfile.mkdtemp(
-                prefix=f".{batch_path.stem}.nvidia-attempt-",
-                dir=batch_path.parent,
+        for attempt in range(1, MAX_ATTEMPTS + 1):
+            attempt_dir = Path(
+                tempfile.mkdtemp(
+                    prefix=f".{batch_path.stem}.nvidia-attempt-",
+                    dir=batch_path.parent,
+                )
             )
-        )
-        response = request_translation(
-            api_url=api_url,
-            api_key=api_key,
-            model=model,
-            source_payload=source_payload,
-            timeout=timeout,
-            max_tokens=max_tokens,
-        )
-        write_json(attempt_dir / "response.json", response)
-        write_attempt_log(
-            attempt_dir / "nvidia.log",
-            model=model,
-            api_url=api_url,
-            response=response,
-        )
-        output = bind_api_output(articles=articles, response=response)
-        write_json(output_path, output)
-        validate_output(batch_path, output_path)
+            try:
+                response = request_translation(
+                    api_url=api_url,
+                    api_key=api_key,
+                    model=model,
+                    source_payload=source_payload,
+                    timeout=timeout,
+                    max_tokens=max_tokens,
+                )
+            except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.RemoteDisconnected) as error:
+                details = traceback.format_exc()
+                (attempt_dir / "error.txt").write_text(details, encoding="utf-8")
+                print(details, file=sys.stderr, flush=True)
+                if isinstance(error, urllib.error.HTTPError) and error.code not in {408, 429, 500, 502, 503, 504}:
+                    raise
+                if attempt == MAX_ATTEMPTS:
+                    raise
+                print(f"Retrying {batch_path.name} after attempt {attempt}/{MAX_ATTEMPTS}", file=sys.stderr, flush=True)
+                time.sleep(10 * attempt)
+                continue
+            write_json(attempt_dir / "response.json", response)
+            write_attempt_log(
+                attempt_dir / "nvidia.log",
+                model=model,
+                api_url=api_url,
+                response=response,
+            )
+            output = bind_api_output(articles=articles, response=response)
+            write_json(output_path, output)
+            validate_output(batch_path, output_path)
+            return
+
+
+def translate_batches(
+    *,
+    batch_paths: list[Path],
+    cache_path: Path,
+    api_url: str,
+    api_key: str,
+    model: str,
+    timeout: int,
+    max_tokens: int,
+    workers: int,
+    resume: bool,
+) -> None:
+    cache = read_json(cache_path) if cache_path.exists() else {}
+    for batch_path in batch_paths:
+        articles = load_batch(batch_path)
+        cached = [cache.get(article["article_key"]) for article in articles]
+        if resume and all(item is not None and item["source"] == article and item["model"] == model
+               for item, article in zip(cached, articles, strict=True)):
+            for item, article in zip(cached, articles, strict=True):
+                validate_translation(item["translation"], article)
+            write_json(batch_path.with_suffix(".output.json"), {"translations": [item["translation"] for item in cached]})
+            validate_output(batch_path, batch_path.with_suffix(".output.json"))
+
+    failures = []
+    with ThreadPoolExecutor(max_workers=workers) as executor:
+        futures = {
+            executor.submit(
+                run_batch,
+                api_url=api_url,
+                api_key=api_key,
+                model=model,
+                batch_path=batch_path,
+                timeout=timeout,
+                max_tokens=max_tokens,
+                resume=resume,
+            ): batch_path
+            for batch_path in batch_paths
+        }
+        for completed, future in enumerate(as_completed(futures), start=1):
+            batch_path = futures[future]
+            error = future.exception()
+            if error is not None:
+                traceback.print_exception(error, file=sys.stderr)
+                failures.append(error)
+                continue
+            output = read_json(batch_path.with_suffix(".output.json"))
+            for article, translation in zip(load_batch(batch_path), output["translations"], strict=True):
+                cache[article["article_key"]] = {"source": article, "model": model, "translation": translation}
+            write_json(cache_path, cache)
+            print(f"Completed {completed}/{len(batch_paths)}: {batch_path.name}", flush=True)
+    if failures:
+        raise ExceptionGroup(f"{len(failures)} translation batches failed; successful translations are checkpointed", failures)
 
 
 def main() -> None:
@@ -390,30 +506,17 @@ def main() -> None:
         load_batch(batch_path)
         validated_batch_paths.append(batch_path)
 
-    for group_start in range(0, len(validated_batch_paths), args.workers):
-        group = validated_batch_paths[group_start : group_start + args.workers]
-        with ThreadPoolExecutor(max_workers=args.workers) as executor:
-            futures = []
-            for group_offset, batch_path in enumerate(group):
-                index = group_start + group_offset + 1
-                print(
-                    f"Translating batch {index}/{len(batch_files)}: {batch_path.name}",
-                    flush=True,
-                )
-                futures.append(
-                    executor.submit(
-                        run_batch,
-                        api_url=args.api_url,
-                        api_key=api_key,
-                        model=args.model,
-                        batch_path=batch_path,
-                        timeout=args.timeout,
-                        max_tokens=args.max_tokens,
-                        resume=args.resume,
-                    )
-                )
-            for future in futures:
-                future.result()
+    translate_batches(
+        batch_paths=validated_batch_paths,
+        cache_path=work_dir.parent.parent / "translation-cache.json",
+        api_url=args.api_url,
+        api_key=api_key,
+        model=args.model,
+        timeout=args.timeout,
+        max_tokens=args.max_tokens,
+        workers=args.workers,
+        resume=args.resume,
+    )
     print(
         json.dumps(
             {

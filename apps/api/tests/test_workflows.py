@@ -27,7 +27,7 @@ def step_by_name(workflow: dict, job_name: str, step_name: str) -> dict:
 def test_pages_workflow_encodes_the_sync_deployment_contract() -> None:
     workflow = load_workflow("pages-sync.yml")
 
-    assert workflow["on"]["schedule"] == [{"cron": "23 16 * * *"}]
+    assert workflow["on"]["schedule"] == [{"cron": "0 16 * * *"}]
     assert workflow["concurrency"] == {"group": "pages", "cancel-in-progress": False}
     assert workflow["jobs"]["build-and-deploy"]["timeout-minutes"] == 120
     assert step_by_name(workflow, "build-and-deploy", "Checkout")["uses"] == (

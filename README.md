@@ -196,7 +196,7 @@ Update at least:
 `ARTICLE_REGISTRY_FILE` can override the tracked registry path. The default is
 `packages/shared/data/article_registry.json`.
 
-The default translation model is `openai/gpt-oss-20b` through
+The default translation model is `nvidia/nemotron-3.5-lightning-30b-a3b` through
 `https://integrate.api.nvidia.com/v1/chat/completions`. Override it with the
 `NVIDIA_API_MODEL` user environment variable only after verifying that the model is available
 from the NVIDIA `/v1/models` endpoint.
@@ -323,7 +323,7 @@ This repository includes `.github/workflows/pages-sync.yml`.
 
 What it does:
 
-1. Runs every day at `16:23 UTC` which is `00:23 Asia/Shanghai` on the following calendar day
+1. Runs every day at `16:00 UTC` which is `00:00 Asia/Shanghai` on the following calendar day
 2. Initializes a SQLite database inside the workflow
 3. Seeds all configured journal records; only enabled journals are synchronized
 4. Executes the synchronization job and rejects every partial synchronization
@@ -340,14 +340,16 @@ https://<OWNER>.github.io/<REPO>/
 That pages build is a static mirror of the latest synchronized metadata, while the FastAPI service remains the full live API deployment path.
 
 The GitHub Pages workflow performs no model calls. Windows Task Scheduler runs
-`Daily Paper NVIDIA Translation` at `07:30` and `09:30` Asia/Shanghai. Each invocation verifies
+`Daily Paper NVIDIA Translation` at `07:30`, `09:30`, and `12:30` Asia/Shanghai. Each invocation verifies
 the exact successful scheduled deployment for the current Shanghai date, translates only new or
 source-changed papers through NVIDIA, validates the registry, commits only that registry file, and
 pushes it. The push triggers a second Pages run, and the task verifies that the new commit is the
-exact revision exposed by the deployed metadata. The two daily triggers share a global lock, so a
-long first run cannot overlap the second. The operating objective is a fully built prior-day site
-with zero pending translations before `09:00` Asia/Shanghai. Failed invocations are recorded and
-reported for follow-up, while the two scheduled invocations remain independent.
+exact revision exposed by the deployed metadata. The daily triggers share a global lock. The task
+waits up to two hours for the current day's delayed GitHub synchronization, can wake the computer,
+and restarts up to three times at 15-minute intervals after a failure. Later invocations accept the
+verified current-day translation deployment and exit successfully when nothing remains to translate.
+Successful article outputs are checkpointed across invocations, so a failed request does not discard
+completed work. Failed invocations retain their diagnostics and a nonzero exit code.
 
 Register the Windows task after setting the user-scoped key:
 
@@ -374,9 +376,12 @@ The local task delegates GitHub schedule selection and UTC-to-Shanghai conversio
 `scripts/validate_daily_schedule_run.py`. Its validated JSON output is the only accepted schedule
 identity, which keeps model-generated shell logic out of the date gate.
 
-Each NVIDIA translation request allows up to 300 seconds for the model response, uses low reasoning
-effort, and caps output at 4096 tokens. The task uses single-article batches because multi-article
-requests can exhaust the model's output budget before the required JSON is complete.
+Each NVIDIA translation request allows up to 300 seconds for the model response, disables thinking
+for Nemotron Lightning, and caps output at 4096 tokens. The API receives a strict JSON Schema; local
+validation still checks Chinese text, article order, and null abstracts. Transient network and server
+failures are logged and retried up to three times with the same model. The task uses single-article
+batches, spaces API requests at least two seconds apart, and retains completed translations in
+`data/translation-work/translation-cache.json`.
 
 `scripts/verify_pages_deployment.py` embeds the canonical public metadata endpoint and uses it when
 `--url` is omitted. Supplying any other metadata URL is rejected before a network request.
@@ -386,8 +391,8 @@ reusing a prior day's `site-data.json` when two daily deployments share the same
 Deployment metadata records the exact static bundle size, SHA-256 digest, and complete/pending
 translation counts.
 
-The schedule uses minute 23 because GitHub documents heavier queue load at the start of each
-hour. The local task starts several hours later so the metadata synchronization has time to finish.
+GitHub scheduling can be delayed. The local task starts several hours later and waits for the
+verified current-day synchronization instead of accepting yesterday's snapshot.
 
 ## REST API
 

@@ -6,6 +6,7 @@ import os
 import subprocess
 import sys
 import time
+import urllib.request
 from collections.abc import Iterator
 from contextlib import contextmanager
 from datetime import UTC, datetime
@@ -19,7 +20,7 @@ else:
     import fcntl
 
 DEFAULT_API_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
-DEFAULT_MODEL = "openai/gpt-oss-20b"
+DEFAULT_MODEL = "nvidia/nemotron-3.5-lightning-30b-a3b"
 REPOSITORY = "yixi0527/daily_paper"
 WORKFLOW = "pages-sync.yml"
 BRANCH = "main"
@@ -442,6 +443,10 @@ def remove_worktree(
 
 
 def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
+    # urllib reads the Windows system proxy; GitHub CLI also needs it in its environment.
+    for scheme, proxy in urllib.request.getproxies().items():
+        if scheme in {"http", "https"}:
+            os.environ.setdefault(f"{scheme.upper()}_PROXY", proxy)
     project_root = args.project_root.resolve()
     git = args.git_executable.resolve()
     python = args.python_executable.resolve()
@@ -531,6 +536,11 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
             gate_run = parse_json_output(schedule_result, "schedule validation")
             if not isinstance(gate_run, dict):
                 raise ValueError("Schedule validation must return an object")
+            schedule_date = gate_run["local_date"]
+            # Later daily invocations may see the translation push already deployed.
+            gate_run = latest_successful_pages_run(runner, gh=gh, cwd=worktree)
+            gate_run["local_date"] = schedule_date
+            gate_run["assumed_trigger_time"] = False
         gate_run_id = str(gate_run["database_id"])
         gate_revision = str(gate_run["head_sha"])
         gate_source_event = gate_run.get("event")
@@ -589,6 +599,9 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
                 "registry_verification": parse_json_output(verify_result, "registry verification"),
                 "run_directory": str(run_directory),
             }
+            (run_directory / "summary.json").write_text(
+                json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+            )
             remove_worktree(runner, git=git, project_root=project_root, worktree=worktree)
             return summary
 
@@ -647,6 +660,9 @@ def run_translation_automation(args: argparse.Namespace) -> dict[str, Any]:
                 "registry_verification": parse_json_output(verify_result, "registry verification"),
                 "run_directory": str(run_directory),
             }
+            (run_directory / "summary.json").write_text(
+                json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+            )
             remove_worktree(runner, git=git, project_root=project_root, worktree=worktree)
             return summary
 

@@ -4,6 +4,8 @@ import argparse
 import json
 import re
 import subprocess
+import sys
+import time
 from datetime import date, datetime
 from pathlib import Path
 from typing import Any
@@ -130,6 +132,39 @@ def query_latest_schedule_run(
     return parse_run_list(result.stdout)
 
 
+def wait_for_schedule_run(
+    *,
+    gh_executable: Path,
+    repository: str,
+    workflow: str,
+    branch: str,
+    timezone: ZoneInfo,
+    expected_date: date,
+    wait_seconds: int = 7200,
+    poll_seconds: int = 60,
+) -> dict[str, Any]:
+    deadline = time.monotonic() + wait_seconds
+    while True:
+        run = query_latest_schedule_run(
+            gh_executable=gh_executable,
+            repository=repository,
+            workflow=workflow,
+            branch=branch,
+        )
+        created_date = datetime.fromisoformat(run["createdAt"]).astimezone(timezone).date()
+        if created_date >= expected_date and run["status"] == "completed":
+            return validate_schedule_run(run, timezone=timezone, expected_date=expected_date)
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            raise TimeoutError(f"No completed daily Pages sync for {expected_date} within {wait_seconds} seconds; latest={run}")
+        print(
+            f"Waiting for daily Pages sync: expected_date={expected_date} latest_date={created_date} status={run['status']}",
+            file=sys.stderr,
+            flush=True,
+        )
+        time.sleep(min(poll_seconds, remaining))
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Validate the latest daily Pages schedule run in one IANA timezone"
@@ -150,14 +185,11 @@ def main() -> None:
         raise ValueError(f"Invalid GitHub repository: {args.repository}")
     timezone = ZoneInfo(args.timezone)
     expected_date = datetime.now(timezone).date()
-    run = query_latest_schedule_run(
+    summary = wait_for_schedule_run(
         gh_executable=args.gh_executable,
         repository=args.repository,
         workflow=args.workflow,
         branch=args.branch,
-    )
-    summary = validate_schedule_run(
-        run,
         timezone=timezone,
         expected_date=expected_date,
     )
