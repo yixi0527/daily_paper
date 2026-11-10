@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ElementRef, type KeyboardEvent } from 'react';
 import { CalendarDays, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import type { ReadingFilter } from '../hooks/useReadingStatus';
 import {
   calendarDateKey,
   createReadingCalendar,
@@ -19,15 +20,17 @@ export function ReadingProgress({
   completed,
   total,
   dailyProgress,
+  undatedCount,
   filtered,
-  readOnly,
+  readingFilter,
   search,
 }: {
   completed: number;
   total: number;
   dailyProgress: ReadonlyMap<string, DailyReadingProgress>;
+  undatedCount: number;
   filtered: boolean;
-  readOnly: boolean;
+  readingFilter: ReadingFilter;
   search: string;
 }) {
   const today = calendarDateKey(new Date());
@@ -79,7 +82,7 @@ export function ReadingProgress({
       </div>
 
       <div className="reading-calendar-summary">
-        <span>按接收日期 · 颜色表示当天文章的已读比例</span>
+        <span>按 Online 日期 · 颜色表示当天文章的已读比例</span>
         <span className="reading-calendar-period">
           {calendar.firstDate.replace(/-/g, '.')} — {calendar.lastDate.replace(/-/g, '.')}
         </span>
@@ -109,8 +112,8 @@ export function ReadingProgress({
                   const progress = dailyProgress.get(day.date);
                   const ratio = progress ? progress.completed / progress.total : null;
                   const label = progress
-                    ? `${day.label}：收到 ${progress.total} 篇，已读 ${progress.completed} 篇（${formatPercentage(ratio!)}）`
-                    : `${day.label}：未收到文章`;
+                    ? `${day.label}：Online 发表 ${progress.total} 篇，已读 ${progress.completed} 篇（${formatPercentage(ratio!)}）`
+                    : `${day.label}：暂无 Online 发表的文章`;
                   return (
                     <button
                       key={day.date}
@@ -140,11 +143,11 @@ export function ReadingProgress({
           {selectedDate} ·{' '}
           {selectedProgress
             ? `${selectedProgress.completed} / ${selectedProgress.total} 篇已读（${formatPercentage(selectedProgress.completed / selectedProgress.total)}）`
-            : '未收到文章'}
+            : '暂无 Online 发表的文章'}
         </p>
         <div
           className="reading-calendar-legend"
-          aria-label="颜色从浅到深表示已读比例从0%到100%，灰色表示未收到文章"
+          aria-label="颜色从浅到深表示已读比例从0%到100%，灰色表示暂无Online发表的文章"
         >
           <span className="reading-calendar-swatch reading-calendar-no-articles" />
           <span>无文章</span>
@@ -160,14 +163,29 @@ export function ReadingProgress({
           <span>100%</span>
         </div>
       </div>
+      {undatedCount > 0 ? (
+        <p className="reading-calendar-note">
+          {undatedCount} 篇缺少 Online 日期，保留在文章列表中，未计入日历。
+        </p>
+      ) : null}
       <div className="reading-progress-footer">
         <span>
           {filtered ? '当前筛选范围' : '全部文章'} · {total - completed} 篇未读
         </span>
-        <Link to={{ pathname: readOnly ? '/' : '/read', search }}>
-          {readOnly ? '查看全部' : '查看已读'}
-          <ChevronRight size={15} aria-hidden="true" />
-        </Link>
+        <div className="reading-progress-links">
+          {[
+            { filter: 'all', pathname: '/', label: '查看全部' },
+            { filter: 'unread', pathname: '/unread', label: '查看未读' },
+            { filter: 'read', pathname: '/read', label: '查看已读' },
+          ]
+            .filter((item) => item.filter !== readingFilter)
+            .map((item) => (
+              <Link key={item.filter} to={{ pathname: item.pathname, search }}>
+                {item.label}
+                <ChevronRight size={15} aria-hidden="true" />
+              </Link>
+            ))}
+        </div>
       </div>
     </section>
   );

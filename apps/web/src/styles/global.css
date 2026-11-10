@@ -681,6 +681,18 @@ select:focus-visible {
   min-height: 28px;
 }
 
+.reading-progress-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.reading-calendar-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 .read-list-heading h2 {
   margin: 0;
   font-size: 1.1rem;

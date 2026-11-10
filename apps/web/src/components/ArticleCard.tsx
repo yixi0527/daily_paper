@@ -11,7 +11,6 @@ import { ReadButton } from './ReadButton';
 export function ArticleCard({ article }: { article: ArticleListItem }) {
   const { isRead } = useReadingStatus();
   const read = isRead(article.article_key);
-  const dateLabel = article.display_date_source === 'acquired' ? 'Acquired' : 'Published';
   const sourceAbstract = article.abstract ?? article.snippet;
 
   return (
@@ -21,7 +20,10 @@ export function ArticleCard({ article }: { article: ArticleListItem }) {
           <span className="meta-chip strong">{article.journal.journal_name}</span>
           <span className="meta-chip">
             <CalendarDays size={14} strokeWidth={2} aria-hidden="true" />
-            {dateLabel} {formatDate(article.display_date)}
+            Online{' '}
+            {article.online_published_at === null
+              ? '日期缺失'
+              : formatDate(article.online_published_at)}
           </span>
         </div>
 

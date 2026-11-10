@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import {
   BookOpen,
   Check,
+  Circle,
   ChevronDown,
   Heart,
   Menu,
@@ -19,6 +20,7 @@ import { classNames } from '../lib/utils';
 
 const NAV_ITEMS = [
   { to: '/', label: 'Articles', icon: Newspaper },
+  { to: '/unread', label: '未读', icon: Circle },
   { to: '/read', label: '已读', icon: Check },
   { to: '/favorites', label: 'Favorites', icon: Heart },
   { to: '/search', label: 'Search', icon: Search },
@@ -32,7 +34,7 @@ export function AppShell() {
   );
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
-  const isArticlesRoute = ['/', '/articles', '/read'].includes(location.pathname);
+  const isArticlesRoute = ['/', '/articles', '/read', '/unread'].includes(location.pathname);
   const journalsQuery = useQuery({
     queryKey: ['journals'],
     queryFn: getJournals,

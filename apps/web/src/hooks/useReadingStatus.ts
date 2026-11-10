@@ -2,6 +2,8 @@ import { createContext, useContext } from 'react';
 
 export const READING_STORAGE_KEY = 'daily-paper:read-articles:v1';
 
+export type ReadingFilter = 'all' | 'read' | 'unread';
+
 export interface ReadingStatus {
   isRead: (articleKey: string) => boolean;
   toggleRead: (articleKey: string) => void;
