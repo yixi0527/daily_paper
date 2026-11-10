@@ -7,8 +7,8 @@ $utf8NoBom = [System.Text.UTF8Encoding]::new($false)
 $OutputEncoding = $utf8NoBom
 
 $projectRoot = 'D:\04_yixiPrivate\03_myToolApps\daily_paper'
-$taskScript = Join-Path $projectRoot 'scripts\run_nvidia_translation_task.ps1'
-$pwshExecutable = 'C:\Users\yixi0\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.exe'
+$taskScript = Join-Path $projectRoot 'scripts\run_sites_automation.ps1'
+$pwshExecutable = 'C:\Users\yixi0\.codex\bin\CodexPowerShellGuard.exe'
 $taskName = 'Daily Paper NVIDIA Translation'
 $taskPath = '\'
 
@@ -26,7 +26,7 @@ if ([string]::IsNullOrWhiteSpace($userApiKey)) {
     throw 'Set NVIDIA_API_KEY as a user environment variable before registering the scheduled task.'
 }
 
-$actionArguments = '-NoLogo -NoProfile -NonInteractive -File "{0}" -Execute' -f $taskScript
+$actionArguments = '--run-file "{0}"' -f $taskScript
 $action = New-ScheduledTaskAction -Execute $pwshExecutable -Argument $actionArguments -WorkingDirectory $projectRoot
 $today = [DateTime]::Today
 $trigger0730 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(7).AddMinutes(30)
@@ -35,7 +35,7 @@ $trigger1230 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(12).AddMinute
 $settings = New-ScheduledTaskSettingsSet -MultipleInstances IgnoreNew -StartWhenAvailable -WakeToRun -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 15) -ExecutionTimeLimit (New-TimeSpan -Hours 4)
 $principal = New-ScheduledTaskPrincipal -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) -LogonType Interactive -RunLevel Limited
 
-Register-ScheduledTask -TaskName $taskName -TaskPath $taskPath -Action $action -Trigger @($trigger0730, $trigger0930, $trigger1230) -Settings $settings -Principal $principal -Description 'Translate Daily Paper pending articles through the NVIDIA OpenAI-compatible API.' -Force | Out-Null
+Register-ScheduledTask -TaskName $taskName -TaskPath $taskPath -Action $action -Trigger @($trigger0730, $trigger0930, $trigger1230) -Settings $settings -Principal $principal -Description 'Collect and translate Daily Paper articles locally; Codex publishes verified content to Sites.' -Force | Out-Null
 
 $registered = Get-ScheduledTask -TaskName $taskName -TaskPath $taskPath
 $registeredAction = @($registered.Actions)

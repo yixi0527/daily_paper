@@ -19,7 +19,7 @@ export function CopyButton({ value }: { value: string }) {
       ) : (
         <Copy size={16} strokeWidth={2.2} aria-hidden="true" />
       )}
-      {copied ? 'Copied' : 'Copy DOI'}
+      {copied ? '已复制' : '复制 DOI'}
     </button>
   );
 }

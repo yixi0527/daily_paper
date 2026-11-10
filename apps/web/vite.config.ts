@@ -6,10 +6,10 @@ export default defineConfig(({ mode }) => {
   return {
     base: env.VITE_GITHUB_PAGES_BASE || '/',
     plugins: [react()],
+    build: { outDir: '../../dist', emptyOutDir: true },
     server: {
       port: 5173,
       host: '0.0.0.0',
     },
   };
 });
-

@@ -18,10 +18,10 @@ export function Pagination({
         disabled={page <= 1}
       >
         <ChevronLeft size={16} strokeWidth={2.2} aria-hidden="true" />
-        Previous
+        上一页
       </button>
       <span className="pagination-count">
-        Page {page} / {totalPages}
+        第 {page} / {totalPages} 页
       </span>
       <button
         type="button"
@@ -29,7 +29,7 @@ export function Pagination({
         onClick={() => onPageChange(page + 1)}
         disabled={page >= totalPages}
       >
-        Next
+        下一页
         <ChevronRight size={16} strokeWidth={2.2} aria-hidden="true" />
       </button>
     </div>

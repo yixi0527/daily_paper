@@ -13,6 +13,10 @@ export function FavoritesProvider({ children }: { children: ReactNode }) {
     const favoriteSet = new Set(favoriteKeys);
     return {
       favoriteKeys,
+      replaceFavoriteKeys: (keys) => {
+        window.localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(keys));
+        setFavoriteKeys(keys);
+      },
       isFavorite: (articleKey) => favoriteSet.has(articleKey),
       toggleFavorite: (articleKey) => {
         const next = favoriteSet.has(articleKey)

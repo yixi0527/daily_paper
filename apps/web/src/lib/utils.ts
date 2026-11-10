@@ -1,21 +1,21 @@
 const DISPLAY_TIMEZONE = 'Asia/Shanghai';
 
 export function formatDate(value: string | null | undefined): string {
-  if (!value) return 'Unknown date';
-  return new Intl.DateTimeFormat('en-US', {
+  if (!value) return '日期缺失';
+  return new Intl.DateTimeFormat('zh-CN', {
     year: 'numeric',
-    month: 'short',
-    day: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
     timeZone: DISPLAY_TIMEZONE,
   }).format(new Date(value));
 }
 
 export function formatDateTime(value: string | null | undefined): string {
-  if (!value) return 'Unknown';
-  return new Intl.DateTimeFormat('en-US', {
+  if (!value) return '尚无记录';
+  return new Intl.DateTimeFormat('zh-CN', {
     year: 'numeric',
-    month: 'short',
-    day: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
     hour: '2-digit',
     minute: '2-digit',
     hour12: false,

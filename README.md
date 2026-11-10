@@ -6,7 +6,18 @@ Daily Paper Tracker is a monorepo web application for monitoring newly published
 2. DOI is the sole article identity used during synchronization.
 3. Records without a DOI are excluded before database insertion.
 
-It provides a FastAPI backend, a React web app, a daily scheduler, Docker deployment, Alembic migrations, pytest examples, and a GitHub Pages workflow that republishes the latest synchronized content every day.
+It provides a FastAPI backend, a React reading workspace, Alembic migrations and DOI-indexed daily ingestion. The live reading site is built and published through Codex Sites.
+
+## Current publication workflow
+
+The reading site is hosted at https://daily-paper-reading.yixi0527431441.chatgpt.site with owner-only access. The Site identity is tracked in `.openai/hosting.json`.
+
+- Unread, all, read and favorite views share search and journal filters. Article dates and the reading-ratio calendar use the publisher's Online date; missing dates remain explicit.
+- The reader loads full abstracts on demand. Reading and favorite records stay in the browser and can be exported/imported in Settings. The former GitHub Pages origin retains its own browser records; changing the hostname does not automatically transfer browser storage.
+- Windows collects and translates at 07:30, with 09:30 and 12:30 retry runs (Asia/Shanghai). Codex checks complete batches for publication at 09:00, 11:00 and 14:00. The local computer must be running, online and signed in to Codex.
+- A successful source sync, complete translation validation and successful Sites deployment are required before a batch is marked published. SQLite, translation cache and stage checkpoints live in `data/site-workflow`; credentials remain local.
+
+See [Codex Sites automation](docs/codex-sites-automation.md) for execution and recovery. GitHub Pages and the former GitHub-dependent translation publisher are retired; the older sections below document the previous deployment options.
 
 ## Why DOI / API first
 
@@ -69,7 +80,7 @@ existing records remain available for historical display, but future synchroniza
 ## Architecture
 
 - `apps/api`: FastAPI backend, scheduler, ingestion adapters, Alembic migrations, CLI
-- `apps/web`: Vite + React frontend, supports live API mode and static GitHub Pages mirror mode
+- `apps/web`: Vite + React frontend, supports live API mode and static Codex Sites hosting
 - `packages/shared`: shared journal configuration
 
 Core backend services:

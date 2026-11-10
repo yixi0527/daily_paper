@@ -5,6 +5,14 @@ export const READING_STORAGE_KEY = 'daily-paper:read-articles:v1';
 export type ReadingFilter = 'all' | 'read' | 'unread';
 
 export interface ReadingStatus {
+  readKeys: string[];
+  language: 'zh' | 'en';
+  setLanguage: (language: 'zh' | 'en') => void;
+  setRead: (articleKey: string, read: boolean) => void;
+  replaceReadKeys: (keys: string[]) => void;
+  lastChange: { articleKey: string; previous: boolean; read: boolean } | null;
+  undo: () => void;
+  dismissUndo: () => void;
   isRead: (articleKey: string) => boolean;
   toggleRead: (articleKey: string) => void;
 }

@@ -1,26 +1,25 @@
 import { formatDateTime } from '../lib/utils';
 import { useQuery } from '@tanstack/react-query';
 import { ExternalLink } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { getJournals } from '../api/client';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 
 export function JournalsPage() {
   const journalsQuery = useQuery({ queryKey: ['journals'], queryFn: getJournals });
 
-  if (journalsQuery.isLoading) return <LoadingState label="Loading journal configuration…" />;
+  if (journalsQuery.isLoading) return <LoadingState label="正在读取期刊…" />;
   if (journalsQuery.isError || !journalsQuery.data)
-    return <ErrorState label="Journal configuration could not be loaded." />;
+    return <ErrorState label="期刊配置读取失败，请重新加载。" />;
 
   return (
     <div className="page-stack">
       <section className="page-header">
         <div>
-          <p className="eyebrow">Sources</p>
-          <h2>Configured journals</h2>
+          <p className="eyebrow">文献来源</p>
+          <h2>收录期刊</h2>
         </div>
-        <p className="muted">
-          Each journal is synchronized from Crossref and indexed by DOI.
-        </p>
+        <p className="muted">每天更新已启用的期刊；暂停更新的期刊仍保留历史文章。</p>
       </section>
 
       <section className="panel">
@@ -36,34 +35,43 @@ export function JournalsPage() {
 
                     return (
                       <>
-                  <p className="eyebrow">{journal.publisher}</p>
-                  <h3>{journal.journal_name}</h3>
-                  <p className="muted">Index: DOI</p>
-                  {doiState ? (
-                    <div className="article-footer">
-                      <span className="pill">
-                        Last successful DOI sync:{' '}
-                        {doiState.last_success_at ? formatDateTime(doiState.last_success_at) : 'never'}
-                      </span>
-                    </div>
-                  ) : null}
+                        <p className="eyebrow">{journal.publisher}</p>
+                        <h3>{journal.journal_name}</h3>
+                        <p className="muted">
+                          {journal.enabled ? '自动更新中' : '已暂停更新 · 保留历史文章'}
+                        </p>
+                        {doiState ? (
+                          <div className="article-footer">
+                            <span className="pill">
+                              最近成功同步：
+                              {doiState.last_success_at
+                                ? formatDateTime(doiState.last_success_at)
+                                : '尚无记录'}
+                            </span>
+                          </div>
+                        ) : null}
                       </>
                     );
                   })()}
                 </div>
-                <a
-                  href={journal.homepage_url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="ghost-button"
-                >
-                  <ExternalLink size={16} strokeWidth={2.2} aria-hidden="true" />
-                  Open journal
-                </a>
+                <div className="settings-actions">
+                  <Link className="ghost-button" to={`/articles?journal=${journal.slug}`}>
+                    查看文章
+                  </Link>
+                  <a
+                    href={journal.homepage_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="ghost-button"
+                  >
+                    <ExternalLink size={16} strokeWidth={2.2} aria-hidden="true" />
+                    期刊官网
+                  </a>
+                </div>
               </article>
             ))
           ) : (
-            <EmptyState label="No journals have been seeded yet." />
+            <EmptyState label="暂无收录期刊" />
           )}
         </div>
       </section>

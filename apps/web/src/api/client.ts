@@ -9,6 +9,7 @@ import {
   type Journal,
   type SearchResponse,
   type SiteDataBundle,
+  type SiteMetadata,
   type SyncRun,
 } from './types';
 import {
@@ -20,13 +21,20 @@ import {
 } from '../lib/filters';
 
 let siteDataPromise: Promise<SiteDataBundle> | null = null;
+let siteDataLoadedAt = 0;
 
 async function loadSiteData(): Promise<SiteDataBundle> {
-  if (!siteDataPromise) {
-    siteDataPromise = fetch(staticDataUrl('site-data.json')).then((response) => {
-      if (!response.ok) throw new Error('Failed to load static data bundle');
-      return response.json() as Promise<SiteDataBundle>;
-    });
+  if (!siteDataPromise || Date.now() - siteDataLoadedAt > 60000) {
+    siteDataLoadedAt = Date.now();
+    siteDataPromise = fetch(staticDataUrl('index.json'), { cache: 'no-cache' })
+      .then((response) => {
+        if (!response.ok) throw new Error('Failed to load static data bundle');
+        return response.json() as Promise<SiteDataBundle>;
+      })
+      .catch((error: unknown) => {
+        siteDataPromise = null;
+        throw error;
+      });
   }
   return siteDataPromise;
 }
@@ -109,10 +117,18 @@ export async function listArticles(params: ArticleFilterParams): Promise<Article
 
 export async function getArticle(articleId: string): Promise<ArticleDetail | undefined> {
   if (isStaticMode) {
-    const bundle = await loadSiteData();
-    return bundle.articles.find((item) => item.id === articleId);
+    const response = await fetch(staticDataUrl(`articles/${encodeURIComponent(articleId)}.json`));
+    if (response.status === 404) return undefined;
+    if (!response.ok) throw new Error(`文章加载失败：HTTP ${response.status}`);
+    return response.json() as Promise<ArticleDetail>;
   }
   return apiGet<ArticleDetail>(`/articles/${articleId}`);
+}
+
+export async function getSiteMetadata(): Promise<SiteMetadata> {
+  const response = await fetch(staticDataUrl('metadata.json'), { cache: 'no-cache' });
+  if (!response.ok) throw new Error(`更新状态加载失败：HTTP ${response.status}`);
+  return response.json() as Promise<SiteMetadata>;
 }
 
 export async function searchArticles(params: SearchParams): Promise<SearchResponse> {

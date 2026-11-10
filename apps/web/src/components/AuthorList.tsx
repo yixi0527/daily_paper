@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import type { Author } from '../api/types';
+import type { AuthorPreview } from '../api/types';
 import { classNames } from '../lib/utils';
 
-function collapseAuthors(authors: Author[]): Array<Author | 'ellipsis'> {
+function collapseAuthors(authors: AuthorPreview[]): Array<AuthorPreview | 'ellipsis'> {
   if (authors.length <= 10) {
     return authors;
   }
@@ -15,7 +15,7 @@ export function AuthorList({
   authorsText,
   className,
 }: {
-  authors: Author[];
+  authors: AuthorPreview[];
   authorsText?: string | null;
   className?: string;
 }) {

@@ -6,6 +6,7 @@ export interface FavoritesContextValue {
   favoriteKeys: string[];
   isFavorite: (articleKey: string) => boolean;
   toggleFavorite: (articleKey: string) => void;
+  replaceFavoriteKeys: (keys: string[]) => void;
 }
 
 export const FavoritesContext = createContext<FavoritesContextValue | null>(null);

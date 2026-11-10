@@ -1,4 +1,4 @@
-import type { ArticleDetail, SearchHit } from '../api/types';
+import type { ArticleListItem, SearchHit } from '../api/types';
 import { compareOnlineDates, matchesOnlineDateRange } from './readingCalendar';
 
 export interface ArticleFilterParams {
@@ -26,9 +26,9 @@ export interface SearchParams {
 }
 
 export function filterArticles(
-  items: ArticleDetail[],
+  items: ArticleListItem[],
   params: ArticleFilterParams,
-): ArticleDetail[] {
+): ArticleListItem[] {
   return items.filter((item) => {
     if (params.journal && item.journal.slug !== params.journal) return false;
     if (
@@ -57,7 +57,7 @@ function highlight(text: string, query: string): string {
   return text.replace(pattern, (match) => `<mark>${match}</mark>`);
 }
 
-export function searchArticlesLocally(items: ArticleDetail[], params: SearchParams): SearchHit[] {
+export function searchArticlesLocally(items: ArticleListItem[], params: SearchParams): SearchHit[] {
   const queryTitle = params.title?.trim().toLowerCase();
   const queryAuthor = params.author?.trim().toLowerCase();
   const queryAbstract = params.abstract?.trim().toLowerCase();

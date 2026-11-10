@@ -1,59 +1,81 @@
-import { Link } from 'react-router-dom';
-import { CalendarDays, ExternalLink } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowUpRight, Check, Circle } from 'lucide-react';
 import type { ArticleListItem } from '../api/types';
-import { classNames, formatDate } from '../lib/utils';
+import { formatDate } from '../lib/utils';
 import { useReadingStatus } from '../hooks/useReadingStatus';
-import { ArticleTranslationToggle } from './ArticleTranslationToggle';
-import { AuthorList } from './AuthorList';
 import { FavoriteButton } from './FavoriteButton';
-import { ReadButton } from './ReadButton';
 
 export function ArticleCard({ article }: { article: ArticleListItem }) {
-  const { isRead } = useReadingStatus();
+  const { language, isRead, toggleRead } = useReadingStatus();
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  params.set('article', article.id);
   const read = isRead(article.article_key);
-  const sourceAbstract = article.abstract ?? article.snippet;
-
+  const title = language === 'zh' && article.title_zh ? article.title_zh : article.title;
+  const excerpt = language === 'zh' ? article.abstract_zh : (article.abstract ?? article.snippet);
+  const authorNames = article.authors
+    .slice(0, 3)
+    .map((author) => author.full_name)
+    .join(' · ');
   return (
-    <article className={classNames('article-card', read && 'article-card-read')}>
-      <div className="article-card-main">
-        <div className="article-meta">
-          <span className="meta-chip strong">{article.journal.journal_name}</span>
-          <span className="meta-chip">
-            <CalendarDays size={14} strokeWidth={2} aria-hidden="true" />
-            Online{' '}
+    <article className={`paper-card${read ? ' is-read' : ''}`}>
+      <button
+        type="button"
+        className={`paper-read-toggle${read ? ' active' : ''}`}
+        aria-label={read ? '设为未读' : '标记已读'}
+        title={read ? '设为未读' : '标记已读'}
+        aria-pressed={read}
+        onClick={() => toggleRead(article.article_key)}
+      >
+        {read ? <Check size={20} /> : <Circle size={20} />}
+      </button>
+      <div className="paper-card-body">
+        <div className="paper-meta">
+          <Link
+            to={`/articles?journal=${encodeURIComponent(article.journal.slug)}`}
+            className="journal-label"
+          >
+            {article.journal.journal_name}
+          </Link>
+          <span className="paper-online">
             {article.online_published_at === null
-              ? '日期缺失'
-              : formatDate(article.online_published_at)}
+              ? 'Online 日期缺失'
+              : `Online ${formatDate(article.online_published_at)}`}
           </span>
         </div>
-
         <h3>
-          <Link to={`/articles/${article.id}`} className="article-title-link">
-            {article.title}
+          <Link
+            className="paper-title"
+            to={{ pathname: location.pathname, search: params.toString() }}
+          >
+            {title}
           </Link>
         </h3>
-
-        <AuthorList
-          authors={article.authors}
-          authorsText={article.authors_text}
-          className="article-authors"
-        />
-        {sourceAbstract ? <p className="article-snippet">{sourceAbstract}</p> : null}
-        <ArticleTranslationToggle
-          titleZh={article.title_zh}
-          abstractZh={article.abstract_zh}
-          variant="card"
-        />
+        {language === 'zh' && article.title_zh ? (
+          <p className="paper-original-title">{article.title}</p>
+        ) : null}
+        <p className="paper-authors">
+          {authorNames || article.authors_text || '作者信息未提供'}
+          {article.authors.length > 3 ? ' 等' : ''}
+        </p>
+        {excerpt ? (
+          <p className="paper-excerpt">{excerpt}</p>
+        ) : (
+          <p className="paper-excerpt empty-excerpt">
+            {language === 'zh' && !article.title_zh
+              ? '中文译文尚未提供'
+              : '暂无摘要预览，查看出版页面了解更多。'}
+          </p>
+        )}
+        <div className="paper-card-footer">
+          <span>DOI {article.doi}</span>
+          <a href={article.url} target="_blank" rel="noreferrer">
+            出版页面
+            <ArrowUpRight size={14} />
+          </a>
+        </div>
       </div>
-
-      <div className="article-footer">
-        <ReadButton articleKey={article.article_key} />
-        <FavoriteButton articleKey={article.article_key} />
-        <a href={article.url} target="_blank" rel="noreferrer" className="publisher-link">
-          Publisher
-          <ExternalLink size={15} strokeWidth={2} aria-hidden="true" />
-        </a>
-      </div>
+      <FavoriteButton articleKey={article.article_key} compact />
     </article>
   );
 }

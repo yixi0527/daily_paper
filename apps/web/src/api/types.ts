@@ -34,6 +34,8 @@ export interface Author {
   affiliation: string | null;
 }
 
+export type AuthorPreview = Pick<Author, 'position' | 'full_name'>;
+
 export interface ArticleListItem {
   id: string;
   article_key: string;
@@ -58,17 +60,32 @@ export interface ArticleListItem {
   print_published_at: string | null;
   first_author: string | null;
   authors_text: string | null;
-  authors: Author[];
+  authors: AuthorPreview[];
   journal: Journal;
 }
 
 export interface ArticleDetail extends ArticleListItem {
+  authors: Author[];
   pages: string | null;
   article_number: string | null;
   source_name: string;
   source_uid: string | null;
   extra_metadata: Record<string, unknown> | null;
   raw_payload: Record<string, unknown> | null;
+}
+
+export interface SiteMetadata {
+  generated_at: string;
+  article_count: number;
+  journal_count: number;
+  translations: { total_articles: number; complete_articles: number; pending_articles: number };
+  sync: {
+    status: string;
+    finished_at: string | null;
+    total_journals: number;
+    total_processed: number;
+    total_failed: number;
+  } | null;
 }
 
 export interface PaginationMeta {
@@ -148,7 +165,7 @@ export interface SyncRun {
 
 export interface SiteDataBundle {
   journals: Journal[];
-  articles: ArticleDetail[];
+  articles: ArticleListItem[];
   dashboard: DashboardData;
   sync_runs: SyncRun[];
 }

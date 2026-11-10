@@ -17,7 +17,8 @@ export function FavoriteButton({
       type="button"
       className={classNames('favorite-button', favorite && 'active')}
       aria-pressed={favorite}
-      aria-label={favorite ? 'Remove from favorites' : 'Add to favorites'}
+      aria-label={favorite ? '取消收藏' : '收藏文章'}
+      title={favorite ? '取消收藏' : '收藏文章'}
       onClick={() => toggleFavorite(articleKey)}
     >
       <Heart
@@ -26,7 +27,7 @@ export function FavoriteButton({
         fill={favorite ? 'currentColor' : 'none'}
         aria-hidden="true"
       />
-      {compact ? null : favorite ? 'Saved' : 'Save'}
+      {compact ? null : favorite ? '已收藏' : '收藏'}
     </button>
   );
 }
