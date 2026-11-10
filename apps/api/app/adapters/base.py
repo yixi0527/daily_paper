@@ -250,17 +250,23 @@ class PublisherAdapter(ABC):
                         source_name=source.name,
                         source_kind=source.kind,
                     )
-                    if article:
-                        article = self.metadata_enricher.enrich(
-                            journal,
-                            article,
-                            source_kind=source.kind,
-                        )
-                    if article and self.content_policy.is_substantive(article):
-                        article.doi = self.dedup.normalize_doi(article.doi)
-                        if article.doi is None:
-                            skipped_without_doi += 1
-                            continue
+                    if article is None:
+                        continue
+                    article.doi = self.dedup.normalize_doi(article.doi)
+                    if article.doi is None:
+                        skipped_without_doi += 1
+                        continue
+                    if not article.abstract:
+                        existing = db.scalar(select(Article).where(Article.doi == article.doi))
+                        if existing is not None:
+                            article.abstract = existing.abstract
+                            article.snippet = article.snippet or existing.snippet
+                    article = self.metadata_enricher.enrich(
+                        journal,
+                        article,
+                        source_kind=source.kind,
+                    )
+                    if self.content_policy.is_substantive(article):
                         normalized.append(article)
                 counts = self.upsert_articles(db, journal, normalized)
                 self._mark_state_success(db, state, result, normalized)
