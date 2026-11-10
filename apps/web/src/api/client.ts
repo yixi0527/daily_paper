@@ -147,27 +147,30 @@ export async function searchArticles(params: SearchParams): Promise<SearchRespon
   );
 }
 
-export async function getFavoriteArticles(articleKeys: string[]): Promise<ArticleListItem[]> {
-  if (!articleKeys.length) return [];
-  const requestedKeys = new Set(articleKeys);
+export async function getAllArticles(params: ArticleFilterParams = {}): Promise<ArticleListItem[]> {
   if (isStaticMode) {
     const bundle = await loadSiteData();
-    return bundle.articles
-      .filter((article) => requestedKeys.has(article.article_key))
-      .sort((a, b) => new Date(b.display_date).getTime() - new Date(a.display_date).getTime());
+    return filterArticles(bundle.articles, params).sort(
+      (a, b) => new Date(b.display_date).getTime() - new Date(a.display_date).getTime(),
+    );
   }
 
-  const firstPage = await listArticles({ page: 1, pageSize: 100 });
+  const firstPage = await listArticles({ ...params, page: 1, pageSize: 100 });
   const remainingPages = Array.from(
     { length: Math.max(0, firstPage.meta.total_pages - 1) },
     (_, index) => index + 2,
   );
   const remainingResponses = await Promise.all(
-    remainingPages.map((page) => listArticles({ page, pageSize: 100 })),
+    remainingPages.map((page) => listArticles({ ...params, page, pageSize: 100 })),
   );
-  return [firstPage, ...remainingResponses]
-    .flatMap((response) => response.items)
-    .filter((article) => requestedKeys.has(article.article_key));
+  return [firstPage, ...remainingResponses].flatMap((response) => response.items);
+}
+
+export async function getFavoriteArticles(articleKeys: string[]): Promise<ArticleListItem[]> {
+  if (!articleKeys.length) return [];
+  const requestedKeys = new Set(articleKeys);
+  const articles = await getAllArticles();
+  return articles.filter((article) => requestedKeys.has(article.article_key));
 }
 
 export async function getSyncRuns(): Promise<SyncRun[]> {

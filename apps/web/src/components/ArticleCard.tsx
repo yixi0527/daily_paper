@@ -1,17 +1,21 @@
 import { Link } from 'react-router-dom';
 import { CalendarDays, ExternalLink } from 'lucide-react';
 import type { ArticleListItem } from '../api/types';
-import { formatDate } from '../lib/utils';
+import { classNames, formatDate } from '../lib/utils';
+import { useReadingStatus } from '../hooks/useReadingStatus';
 import { ArticleTranslationToggle } from './ArticleTranslationToggle';
 import { AuthorList } from './AuthorList';
 import { FavoriteButton } from './FavoriteButton';
+import { ReadButton } from './ReadButton';
 
 export function ArticleCard({ article }: { article: ArticleListItem }) {
+  const { isRead } = useReadingStatus();
+  const read = isRead(article.article_key);
   const dateLabel = article.display_date_source === 'acquired' ? 'Acquired' : 'Published';
   const sourceAbstract = article.abstract ?? article.snippet;
 
   return (
-    <article className="article-card">
+    <article className={classNames('article-card', read && 'article-card-read')}>
       <div className="article-card-main">
         <div className="article-meta">
           <span className="meta-chip strong">{article.journal.journal_name}</span>
@@ -41,6 +45,7 @@ export function ArticleCard({ article }: { article: ArticleListItem }) {
       </div>
 
       <div className="article-footer">
+        <ReadButton articleKey={article.article_key} />
         <FavoriteButton articleKey={article.article_key} />
         <a href={article.url} target="_blank" rel="noreferrer" className="publisher-link">
           Publisher

@@ -6,6 +6,7 @@ import { ArticleTranslationToggle } from '../components/ArticleTranslationToggle
 import { AuthorList } from '../components/AuthorList';
 import { CopyButton } from '../components/CopyButton';
 import { FavoriteButton } from '../components/FavoriteButton';
+import { ReadButton } from '../components/ReadButton';
 import { EmptyState, ErrorState, LoadingState } from '../components/States';
 import { formatDate } from '../lib/utils';
 import { isStaticMode } from '../lib/env';
@@ -34,6 +35,7 @@ export function ArticleDetailPage() {
           <h2>{article.title}</h2>
         </div>
         <div className="detail-actions">
+          <ReadButton articleKey={article.article_key} />
           <FavoriteButton articleKey={article.article_key} />
           {article.doi ? <CopyButton value={article.doi} /> : null}
           <a href={article.url} target="_blank" rel="noreferrer" className="primary-link">
@@ -81,9 +83,7 @@ export function ArticleDetailPage() {
               <p className="eyebrow">Original abstract</p>
               <h2>Source text</h2>
             </div>
-            {hasTranslation ? (
-              <span className="pill muted-pill">Translation available</span>
-            ) : null}
+            {hasTranslation ? <span className="pill muted-pill">Translation available</span> : null}
           </div>
           {sourceAbstract ? (
             <p className="detail-abstract">{sourceAbstract}</p>
