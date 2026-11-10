@@ -18,4 +18,7 @@ def deployment_mode(
         return "full"
     if not changed_paths:
         raise ValueError("Push event contains no changed paths")
-    return "translations" if set(changed_paths) == {REGISTRY_PATH} else "full"
+    reuse_snapshot = all(
+        path == REGISTRY_PATH or path.startswith("apps/web/") for path in changed_paths
+    )
+    return "translations" if reuse_snapshot else "full"
