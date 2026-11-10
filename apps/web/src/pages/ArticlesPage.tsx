@@ -8,6 +8,7 @@ import { Pagination } from '../components/Pagination';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 import { useReadingStatus } from '../hooks/useReadingStatus';
 import { ReadingProgress } from '../components/ReadingProgress';
+import { summarizeReadingByAcquiredDate } from '../lib/readingCalendar';
 
 export function ArticlesPage({ readOnly = false }: { readOnly?: boolean }) {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -35,6 +36,7 @@ export function ArticlesPage({ readOnly = false }: { readOnly?: boolean }) {
   }
 
   const articles = articlesQuery.data;
+  const dailyProgress = summarizeReadingByAcquiredDate(articles, isRead);
   const readCount = articles.reduce(
     (count, article) => count + Number(isRead(article.article_key)),
     0,
@@ -53,6 +55,7 @@ export function ArticlesPage({ readOnly = false }: { readOnly?: boolean }) {
       <ReadingProgress
         completed={readCount}
         total={articles.length}
+        dailyProgress={dailyProgress}
         filtered={Boolean(journal || author)}
         readOnly={readOnly}
         search={categoryParams.toString()}
