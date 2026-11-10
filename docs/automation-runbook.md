@@ -20,8 +20,8 @@ database. It has no role in the Pages-to-NVIDIA handshake.
 
 `.github/workflows/pages-sync.yml` first classifies the deployment:
 
-- `schedule`, `workflow_dispatch`, branch creation, and a push containing files beyond the
-  translation registry use `full` mode;
+- `schedule`, `workflow_dispatch`, branch creation, and pushes changing files outside
+  `packages/shared/data/article_registry.json` and `apps/web/` use `full` mode;
 - a push limited to `packages/shared/data/article_registry.json` and/or `apps/web/` uses
   `translations` mode, reusing the healthy current-day synchronization while rebuilding the site.
 
