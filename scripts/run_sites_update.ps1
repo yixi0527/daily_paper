@@ -11,7 +11,7 @@ $git = 'C:\Program Files\Git\cmd\git.exe'
 $gitCommon = & $git -C $projectRoot rev-parse --git-common-dir
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 if (-not [System.IO.Path]::IsPathRooted($gitCommon)) { $gitCommon = Join-Path $projectRoot $gitCommon }
-$projectHome = Split-Path -Path (Get-Item -LiteralPath $gitCommon).FullName -Parent
+$projectHome = Split-Path -Path (Get-Item -LiteralPath $gitCommon -Force).FullName -Parent
 $runtime = Join-Path $projectHome 'data\site-workflow'
 $env:DAILY_PAPER_RUNTIME_DIR = $runtime
 $database = (Join-Path $runtime 'library.sqlite').Replace('\', '/')
