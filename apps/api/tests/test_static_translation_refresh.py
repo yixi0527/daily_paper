@@ -98,12 +98,22 @@ def refresh(registry_path: Path) -> tuple[dict, dict]:
     )
 
 
-def test_translation_only_mode_requires_exact_registry_change() -> None:
+def test_snapshot_refresh_mode_accepts_registry_and_frontend_changes() -> None:
     assert deployment_mode(
         event_name="push",
         before_sha="a" * 40,
         changed_paths=["packages/shared/data/article_registry.json"],
     ) == "translations"
+    assert deployment_mode(
+        event_name="push",
+        before_sha="a" * 40,
+        changed_paths=["apps/web/src/App.tsx", "apps/web/src/styles/global.css"],
+    ) == "translations"
+    assert deployment_mode(
+        event_name="push",
+        before_sha="a" * 40,
+        changed_paths=["apps/web/src/App.tsx", "apps/api/app/services/sync.py"],
+    ) == "full"
     assert deployment_mode(
         event_name="push",
         before_sha="a" * 40,

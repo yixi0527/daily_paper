@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { FavoritesProvider } from './components/FavoritesProvider';
+import { ReadingStatusProvider } from './components/ReadingStatusProvider';
 import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { ArticlesPage } from './pages/ArticlesPage';
 import { FavoritesPage } from './pages/FavoritesPage';
@@ -19,6 +20,7 @@ const router = createHashRouter([
     children: [
       { index: true, element: <ArticlesPage /> },
       { path: 'articles', element: <ArticlesPage /> },
+      { path: 'read', element: <ArticlesPage readOnly /> },
       { path: 'articles/:articleId', element: <ArticleDetailPage /> },
       { path: 'favorites', element: <FavoritesPage /> },
       { path: 'search', element: <SearchPage /> },
@@ -33,7 +35,9 @@ export function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <FavoritesProvider>
-        <RouterProvider router={router} />
+        <ReadingStatusProvider>
+          <RouterProvider router={router} />
+        </ReadingStatusProvider>
       </FavoritesProvider>
     </QueryClientProvider>
   );

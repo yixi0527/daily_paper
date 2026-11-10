@@ -20,10 +20,10 @@ database. It has no role in the Pages-to-NVIDIA handshake.
 
 `.github/workflows/pages-sync.yml` first classifies the deployment:
 
-- `schedule`, `workflow_dispatch`, branch creation, and a push containing files beyond the
-  translation registry use `full` mode;
-- a push whose exact diff is only `packages/shared/data/article_registry.json` uses `translations`
-  mode.
+- `schedule`, `workflow_dispatch`, branch creation, and pushes changing files outside
+  `packages/shared/data/article_registry.json` and `apps/web/` use `full` mode;
+- a push limited to `packages/shared/data/article_registry.json` and/or `apps/web/` uses
+  `translations` mode, reusing the healthy current-day synchronization while rebuilding the site.
 
 Full mode upgrades a fresh SQLite database, seeds the tracked journals, requires every journal
 synchronization to succeed, exports `site-data.json` and `metadata.json`, and deploys the static

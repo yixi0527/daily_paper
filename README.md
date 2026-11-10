@@ -479,6 +479,8 @@ Features implemented:
 - URL-synced filter state
 - collapsible primary navigation
 - browser-persistent favorites keyed by stable article identity
+- a per-card read/unread button and a dedicated read-article category, saved in this browser
+- a reading progress bar and counts across the full journal/author filter results, across pages
 - DOI copy button
 - external publisher links
 - recent searches in `localStorage`

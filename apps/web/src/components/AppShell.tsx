@@ -3,6 +3,7 @@ import { NavLink, Outlet, useLocation, useSearchParams } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query';
 import {
   BookOpen,
+  Check,
   ChevronDown,
   Heart,
   Menu,
@@ -18,6 +19,7 @@ import { classNames } from '../lib/utils';
 
 const NAV_ITEMS = [
   { to: '/', label: 'Articles', icon: Newspaper },
+  { to: '/read', label: '已读', icon: Check },
   { to: '/favorites', label: 'Favorites', icon: Heart },
   { to: '/search', label: 'Search', icon: Search },
   { to: '/journals', label: 'Journals', icon: BookOpen },
@@ -30,7 +32,7 @@ export function AppShell() {
   );
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
-  const isArticlesRoute = location.pathname === '/';
+  const isArticlesRoute = ['/', '/articles', '/read'].includes(location.pathname);
   const journalsQuery = useQuery({
     queryKey: ['journals'],
     queryFn: getJournals,
