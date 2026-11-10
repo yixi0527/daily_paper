@@ -21,6 +21,7 @@ from app.services.web_assets import write_web_assets
 from article_registry import merge, prepare, verify
 from run_nvidia_translation import (
     DEFAULT_API_URL,
+    DEFAULT_MAX_TOKENS,
     DEFAULT_MODEL,
     exclusive_lock,
     translate_batches,
@@ -106,7 +107,7 @@ def update() -> None:
                         api_key=os.environ["NVIDIA_API_KEY"],
                         model=DEFAULT_MODEL,
                         timeout=300,
-                        max_tokens=4096,
+                        max_tokens=DEFAULT_MAX_TOKENS,
                         workers=4,
                         resume=True,
                     )

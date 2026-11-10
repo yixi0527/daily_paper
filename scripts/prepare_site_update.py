@@ -21,14 +21,13 @@ def prepare_checkout() -> dict[str, str]:
             and state["date"] == datetime.now(ZoneInfo("Asia/Shanghai")).date().isoformat()
         ):
             return {"checkout_path": str(ROOT), "status": "published", "runtime_dir": str(RUNTIME)}
-        if state["status"] == "ready":
-            checkout = Path(state["checkout_path"])
-            if checkout.is_dir():
-                return {
-                    "checkout_path": str(checkout),
-                    "status": "ready",
-                    "runtime_dir": str(RUNTIME),
-                }
+        if state["status"] in {"ready", "failed", "running"}:
+            checkout = Path(state["checkout_path"]).resolve(strict=True)
+            return {
+                "checkout_path": str(checkout),
+                "status": state["status"],
+                "runtime_dir": str(RUNTIME),
+            }
     checkout = RUNTIME / "checkouts" / datetime.now(UTC).strftime("%Y%m%d-%H%M%S-%f")
     checkout.parent.mkdir(parents=True, exist_ok=True)
     subprocess.run(

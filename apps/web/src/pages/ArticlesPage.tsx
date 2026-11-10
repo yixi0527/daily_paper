@@ -1,4 +1,4 @@
-import { startTransition, useDeferredValue } from 'react';
+import { useDeferredValue } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useSearchParams } from 'react-router-dom';
 import { CalendarDays, Search, SlidersHorizontal, X } from 'lucide-react';
@@ -35,7 +35,7 @@ export function ArticlesPage({
     else next.delete(key);
     next.delete('page');
     next.delete('article');
-    startTransition(() => setParams(next));
+    setParams(next, { replace: key === 'q' });
   };
   const openReader = (id: string | null) => {
     const next = new URLSearchParams(params);

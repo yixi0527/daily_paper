@@ -25,8 +25,8 @@ else:
 from article_registry import validate_translation
 
 DEFAULT_API_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
-DEFAULT_MODEL = "nvidia/nemotron-3.5-lightning-30b-a3b"
-DEFAULT_MAX_TOKENS = 4096
+DEFAULT_MODEL = "nvidia/nemotron-3.5-super-vl-120b-a12b"
+DEFAULT_MAX_TOKENS = 16384
 DEFAULT_REASONING_EFFORT = "low"
 DEFAULT_TIMEOUT = 300
 MAX_ATTEMPTS = 3
@@ -46,7 +46,13 @@ TRANSLATION_PROMPT = (
     "scientific terms: transcranial=经颅, intracranial=颅内, transcranial alternating current "
     "stimulation=经颅交流电刺激, sham stimulation=假刺激, internalizing/internalising=内化, "
     "externalizing/externalising=外化, "
-    "cuprate=铜氧化物, shot noise=散粒噪声. Keep study-cohort names in their original language "
+    "cuprate=铜氧化物, shot noise=散粒噪声, science stories=科学故事. "
+    "For quantum-materials papers, use molecular spin chains=分子自旋链, parity-dependent=依赖奇偶性的, "
+    "gap=能隙, bound states=束缚态, many-body=多体, qubits=量子比特, "
+    "many-body spin excitations=多体自旋激发, spin qubits=自旋量子比特, "
+    "superconducting gap=超导能隙. "
+    "two-site model=双位点模型, odd-length chains=奇数长度链, even-length chains=偶数长度链, "
+    "hybrid spin-superconductor devices=自旋与超导体混合器件. Keep study-cohort names in their original language "
     "when the established Chinese name is uncertain. Every non-null title_zh and abstract_zh must contain at least one Chinese Han "
     "character. When an abstract is only a "
     "journal-name placeholder, state in Chinese that the source provides the journal name but "
@@ -58,6 +64,10 @@ TRANSLATION_PROMPT = (
 API_TRANSLATION_FIELDS = frozenset({"title_zh", "abstract_zh"})
 FINAL_TRANSLATION_FIELDS = frozenset({"article_key", "title_zh", "abstract_zh"})
 BATCH_FIELDS = frozenset({"article_key", "title", "abstract"})
+
+
+class TruncatedTranslationError(ValueError):
+    pass
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -116,8 +126,7 @@ def load_batch(batch_path: Path) -> list[dict[str, Any]]:
             raise ValueError(f"Batch article {index} must be an object: {batch_path}")
         if set(article) != BATCH_FIELDS:
             raise ValueError(
-                f"Batch article {index} must contain article_key, title, and abstract: "
-                f"{batch_path}"
+                f"Batch article {index} must contain article_key, title, and abstract: {batch_path}"
             )
         article_key = article.get("article_key")
         if not isinstance(article_key, str) or not article_key:
@@ -138,8 +147,7 @@ def load_batch(batch_path: Path) -> list[dict[str, Any]]:
 
 def build_source_payload(articles: list[dict[str, Any]]) -> str:
     source_texts = [
-        {"title": article["title"], "abstract": article["abstract"]}
-        for article in articles
+        {"title": article["title"], "abstract": article["abstract"]} for article in articles
     ]
     return json.dumps(
         {"source_texts": source_texts},
@@ -197,7 +205,9 @@ def request_translation(
         },
         "stream": False,
     }
-    if model == DEFAULT_MODEL:
+    if model in {DEFAULT_MODEL, "nvidia/nemotron-3.5-lightning-30b-a3b"}:
+        request_payload["temperature"] = 1.0
+        request_payload["top_p"] = 0.95
         request_payload["chat_template_kwargs"] = {"enable_thinking": False}
     elif model == "openai/gpt-oss-20b":
         request_payload["reasoning_effort"] = DEFAULT_REASONING_EFFORT
@@ -239,8 +249,12 @@ def decode_translation_payload(response: dict[str, Any]) -> dict[str, Any]:
     choice = choices[0]
     if not isinstance(choice, dict):
         raise ValueError("NVIDIA translation choice must be an object")
+    if choice.get("finish_reason") == "length":
+        raise TruncatedTranslationError("NVIDIA translation did not finish: finish_reason=length")
     if choice.get("finish_reason") != "stop":
-        raise ValueError(f"NVIDIA translation did not finish: finish_reason={choice.get('finish_reason')}")
+        raise ValueError(
+            f"NVIDIA translation did not finish: finish_reason={choice.get('finish_reason')}"
+        )
     message = choice.get("message")
     if not isinstance(message, dict):
         raise ValueError("NVIDIA translation choice has no message")
@@ -274,9 +288,7 @@ def bind_api_output(
         )
 
     bound_translations: list[dict[str, Any]] = []
-    for index, (article, translation) in enumerate(
-        zip(articles, translations, strict=True)
-    ):
+    for index, (article, translation) in enumerate(zip(articles, translations, strict=True)):
         if not isinstance(translation, dict):
             raise ValueError(f"NVIDIA translation {index} must be an object")
         if set(translation) != API_TRANSLATION_FIELDS:
@@ -379,15 +391,31 @@ def run_batch(
                     timeout=timeout,
                     max_tokens=max_tokens,
                 )
-            except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.RemoteDisconnected) as error:
+            except (
+                urllib.error.URLError,
+                TimeoutError,
+                ConnectionError,
+                http.client.RemoteDisconnected,
+            ) as error:
                 details = traceback.format_exc()
                 (attempt_dir / "error.txt").write_text(details, encoding="utf-8")
                 print(details, file=sys.stderr, flush=True)
-                if isinstance(error, urllib.error.HTTPError) and error.code not in {408, 429, 500, 502, 503, 504}:
+                if isinstance(error, urllib.error.HTTPError) and error.code not in {
+                    408,
+                    429,
+                    500,
+                    502,
+                    503,
+                    504,
+                }:
                     raise
                 if attempt == MAX_ATTEMPTS:
                     raise
-                print(f"Retrying {batch_path.name} after attempt {attempt}/{MAX_ATTEMPTS}", file=sys.stderr, flush=True)
+                print(
+                    f"Retrying {batch_path.name} after attempt {attempt}/{MAX_ATTEMPTS}",
+                    file=sys.stderr,
+                    flush=True,
+                )
                 time.sleep(10 * attempt)
                 continue
             write_json(attempt_dir / "response.json", response)
@@ -397,7 +425,20 @@ def run_batch(
                 api_url=api_url,
                 response=response,
             )
-            output = bind_api_output(articles=articles, response=response)
+            try:
+                output = bind_api_output(articles=articles, response=response)
+            except TruncatedTranslationError:
+                details = traceback.format_exc()
+                (attempt_dir / "error.txt").write_text(details, encoding="utf-8")
+                print(details, file=sys.stderr, flush=True)
+                if attempt == MAX_ATTEMPTS:
+                    raise
+                print(
+                    f"Retrying truncated {batch_path.name} after attempt {attempt}/{MAX_ATTEMPTS}",
+                    file=sys.stderr,
+                    flush=True,
+                )
+                continue
             write_json(output_path, output)
             validate_output(batch_path, output_path)
             return
@@ -419,11 +460,16 @@ def translate_batches(
     for batch_path in batch_paths:
         articles = load_batch(batch_path)
         cached = [cache.get(article["article_key"]) for article in articles]
-        if resume and all(item is not None and item["source"] == article and item["model"] == model
-               for item, article in zip(cached, articles, strict=True)):
+        if resume and all(
+            item is not None and item["source"] == article and item["model"] == model
+            for item, article in zip(cached, articles, strict=True)
+        ):
             for item, article in zip(cached, articles, strict=True):
                 validate_translation(item["translation"], article)
-            write_json(batch_path.with_suffix(".output.json"), {"translations": [item["translation"] for item in cached]})
+            write_json(
+                batch_path.with_suffix(".output.json"),
+                {"translations": [item["translation"] for item in cached]},
+            )
             validate_output(batch_path, batch_path.with_suffix(".output.json"))
 
     failures = []
@@ -449,12 +495,21 @@ def translate_batches(
                 failures.append(error)
                 continue
             output = read_json(batch_path.with_suffix(".output.json"))
-            for article, translation in zip(load_batch(batch_path), output["translations"], strict=True):
-                cache[article["article_key"]] = {"source": article, "model": model, "translation": translation}
+            for article, translation in zip(
+                load_batch(batch_path), output["translations"], strict=True
+            ):
+                cache[article["article_key"]] = {
+                    "source": article,
+                    "model": model,
+                    "translation": translation,
+                }
             write_json(cache_path, cache)
             print(f"Completed {completed}/{len(batch_paths)}: {batch_path.name}", flush=True)
     if failures:
-        raise ExceptionGroup(f"{len(failures)} translation batches failed; successful translations are checkpointed", failures)
+        raise ExceptionGroup(
+            f"{len(failures)} translation batches failed; successful translations are checkpointed",
+            failures,
+        )
 
 
 def main() -> None:
@@ -481,9 +536,7 @@ def main() -> None:
 
     api_key = os.environ.get(args.api_key_env)
     if not api_key:
-        raise OSError(
-            f"NVIDIA API key is missing from environment variable {args.api_key_env}"
-        )
+        raise OSError(f"NVIDIA API key is missing from environment variable {args.api_key_env}")
     if args.timeout < 1:
         raise ValueError("timeout must be positive")
     if args.max_tokens < 1:

@@ -89,3 +89,31 @@ def test_translation_failure_resumes_without_repeating_successful_sync(workflow,
     monkeypatch.setattr(module, "prepare", unexpected_sync)
     module.update()
     assert json.loads(state_path.read_text(encoding="utf-8")) == ready
+
+
+def test_failed_update_reuses_its_checkout_and_partial_translation_files(monkeypatch, tmp_path):
+    root = Path(__file__).resolve().parents[3]
+    spec = spec_from_file_location(
+        "prepare_site_update_under_test", root / "scripts/prepare_site_update.py"
+    )
+    module = module_from_spec(spec)
+    spec.loader.exec_module(module)
+    runtime = tmp_path / "runtime"
+    checkout = runtime / "checkouts" / "failed-run"
+    checkout.mkdir(parents=True)
+    partial = checkout / "translation.output.json"
+    partial.write_text('{"completed":1}', encoding="utf-8")
+    (runtime / "state.json").write_text(
+        json.dumps({"status": "failed", "checkout_path": str(checkout)}), encoding="utf-8"
+    )
+    monkeypatch.setattr(module, "RUNTIME", runtime)
+    monkeypatch.setattr(
+        module.subprocess,
+        "run",
+        lambda *args, **kwargs: pytest.fail("The failed checkout must be resumed"),
+    )
+
+    prepared = module.prepare_checkout()
+    assert Path(prepared["checkout_path"]) == checkout
+    assert prepared["status"] == "failed"
+    assert json.loads(partial.read_text(encoding="utf-8")) == {"completed": 1}
