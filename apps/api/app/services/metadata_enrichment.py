@@ -6,7 +6,6 @@ from html import unescape
 from urllib.parse import urljoin
 
 import httpx
-
 from app.core.logging import get_logger
 from app.models.journal import Journal
 from app.services.crossref import CrossrefClientService

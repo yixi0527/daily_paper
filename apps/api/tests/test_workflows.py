@@ -24,67 +24,20 @@ def step_by_name(workflow: dict, job_name: str, step_name: str) -> dict:
     return matching_steps[0]
 
 
-def test_pages_workflow_encodes_the_sync_deployment_contract() -> None:
+def test_pages_workflow_only_deploys_the_prepared_snapshot() -> None:
     workflow = load_workflow("pages-sync.yml")
-
-    assert workflow["on"]["schedule"] == [{"cron": "0 16 * * *"}]
-    assert workflow["concurrency"] == {"group": "pages", "cancel-in-progress": False}
-    assert workflow["jobs"]["build-and-deploy"]["timeout-minutes"] == 120
-    assert step_by_name(workflow, "build-and-deploy", "Checkout")["uses"] == (
-        "actions/checkout@v6"
-    )
-    assert step_by_name(workflow, "build-and-deploy", "Checkout")["with"][
-        "fetch-depth"
-    ] == 0
-    assert step_by_name(workflow, "build-and-deploy", "Setup Python")["uses"] == (
-        "actions/setup-python@v6"
-    )
-    assert step_by_name(workflow, "build-and-deploy", "Setup Node")["with"][
-        "node-version"
-    ] == "24"
-    assert step_by_name(workflow, "build-and-deploy", "Configure Pages")["uses"] == (
-        "actions/configure-pages@v6"
-    )
-    assert "npm ci" in step_by_name(workflow, "build-and-deploy", "Install dependencies")[
-        "run"
-    ]
-    assert "scripts/pages_deploy.py mode" in step_by_name(
-        workflow, "build-and-deploy", "Determine deployment mode"
-    )["run"]
-    assert "scripts/run_alembic.py upgrade head" in step_by_name(
-        workflow, "build-and-deploy", "Prepare database and seed"
-    )["run"]
-    assert step_by_name(workflow, "build-and-deploy", "Prepare database and seed")[
-        "if"
-    ] == "steps.mode.outputs.mode == 'full'"
-    assert "--require-complete" in step_by_name(
-        workflow, "build-and-deploy", "Run synchronization"
-    )["run"]
-    export_command = step_by_name(workflow, "build-and-deploy", "Export static data")["run"]
-    for required_argument in (
-        "--source-revision",
-        "--source-event",
-        "--workflow-run-id",
-    ):
-        assert required_argument in export_command
-    refresh_step = step_by_name(
-        workflow, "build-and-deploy", "Refresh static translations"
-    )
-    assert refresh_step["if"] == "steps.mode.outputs.mode == 'translations'"
-    assert "refresh-translations" in refresh_step["run"]
-    assert (
-        '--metadata-url "https://yixi0527.github.io/daily_paper/data/metadata.json"'
-        in refresh_step["run"]
-    )
-    assert step_by_name(workflow, "build-and-deploy", "Upload Pages artifact")[
-        "uses"
-    ] == "actions/upload-pages-artifact@v5"
-    assert step_by_name(workflow, "build-and-deploy", "Deploy to GitHub Pages")[
-        "uses"
-    ] == "actions/deploy-pages@v5"
-    assert step_by_name(workflow, "build-and-deploy", "Build static site")["env"][
-        "VITE_STATIC_DATA_VERSION"
-    ] == "${{ github.run_id }}"
+    assert "schedule" not in workflow["on"]
+    assert workflow["on"]["push"]["branches"] == ["main"]
+    assert workflow["concurrency"]["cancel-in-progress"] is False
+    steps = workflow["jobs"]["build-and-deploy"]["steps"]
+    commands = "\n".join(step.get("run", "") for step in steps)
+    assert "validate_pages_assets.py stamp" in commands
+    assert "app.cli sync" not in commands
+    assert "refresh-translations" not in commands
+    assert "nvidia" not in commands.lower()
+    assert step_by_name(workflow, "build-and-deploy", "Upload Pages artifact")["with"]["path"] == "dist"
+    assert workflow["permissions"]["pages"] == "write"
+    assert workflow["permissions"]["id-token"] == "write"
 
 
 def test_ci_uses_reproducible_node_install_and_single_head_migration() -> None:

@@ -49,6 +49,6 @@ def write_web_assets(
         for key, value in metadata.items()
         if key not in {"site_data_sha256", "site_data_bytes", "translation_refresh"}
     }
-    published_metadata["deployment"] = {"provider": "codex-sites"}
+    published_metadata["deployment"] = {"provider": "github-pages"}
     write_json(target / "metadata.json", published_metadata)
     return {"article_count": len(previews), "index_bytes": (target / "index.json").stat().st_size}

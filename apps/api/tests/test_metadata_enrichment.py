@@ -6,8 +6,8 @@ import httpx
 import pytest
 from app.models.article import Article
 from app.services.content_policy import ContentPolicyService
-from app.services.metadata_refresh import MetadataRefreshService
 from app.services.metadata_enrichment import MetadataEnrichmentService
+from app.services.metadata_refresh import MetadataRefreshService
 from app.services.types import NormalizedArticle, NormalizedAuthor
 from sqlalchemy import select
 

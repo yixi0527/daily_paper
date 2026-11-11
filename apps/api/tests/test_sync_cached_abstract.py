@@ -1,3 +1,5 @@
+from datetime import UTC, datetime
+
 from app.adapters.crossref_only import CrossrefOnlyAdapter
 from app.models.article import Article
 from app.models.journal import Journal
@@ -48,5 +50,4 @@ def test_sync_reuses_known_abstract_without_extra_publisher_requests(db_session,
         assert existing.extra_metadata["publisher_online_date"]["status"] == "found"
     finally:
         adapter.http.close()
-from datetime import UTC, datetime
 

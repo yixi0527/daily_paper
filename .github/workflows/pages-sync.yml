@@ -1,12 +1,8 @@
-name: Daily Pages Sync
+name: Publish Reading Site
 
 "on":
   push:
-    branches:
-      - main
-  schedule:
-    # 16:00 UTC = 00:00 Asia/Shanghai (next day).
-    - cron: "0 16 * * *"
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -21,95 +17,47 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     env:
-      DATABASE_URL: sqlite:///./data/pages.db
       VITE_APP_MODE: static
-      APP_DEBUG: "false"
+      VITE_GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
+      VITE_STATIC_DATA_BASE: /${{ github.event.repository.name }}/data
+      VITE_STATIC_DATA_VERSION: ${{ github.run_id }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-        with:
-          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
 
-      - name: Determine deployment mode
-        id: mode
-        env:
-          BEFORE_SHA: ${{ github.event.before }}
-        run: |
-          python scripts/pages_deploy.py mode \
-            --event "${GITHUB_EVENT_NAME}" \
-            --before "${BEFORE_SHA}" \
-            --revision "${GITHUB_SHA}" \
-            --github-output "${GITHUB_OUTPUT}"
-
       - name: Setup Node
         uses: actions/setup-node@v6
         with:
           node-version: "24"
-          cache: "npm"
+          cache: npm
+
+      - name: Validate prepared translations
+        run: python scripts/validate_pages_assets.py stamp
 
       - name: Configure Pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: |
-          python -m pip install -e .
-          npm ci
-
-      - name: Prepare database and seed
-        if: steps.mode.outputs.mode == 'full'
-        run: |
-          mkdir -p data
-          python scripts/run_alembic.py upgrade head
-          python -m app.cli seed-journals
-
-      - name: Run synchronization
-        if: steps.mode.outputs.mode == 'full'
-        run: python -m app.cli sync --all --triggered-by github-pages --require-complete
-
-      - name: Export static data
-        if: steps.mode.outputs.mode == 'full'
-        run: |
-          python -m app.cli export-static \
-            --output apps/web/public/data \
-            --source-revision "${GITHUB_SHA}" \
-            --source-event "${GITHUB_EVENT_NAME}" \
-            --workflow-run-id "${GITHUB_RUN_ID}"
-
-      - name: Refresh static translations
-        if: steps.mode.outputs.mode == 'translations'
-        run: |
-          python scripts/pages_deploy.py refresh-translations \
-            --site-data-url "https://yixi0527.github.io/daily_paper/data/site-data.json" \
-            --metadata-url "https://yixi0527.github.io/daily_paper/data/metadata.json" \
-            --registry packages/shared/data/article_registry.json \
-            --output apps/web/public/data \
-            --source-revision "${GITHUB_SHA}" \
-            --source-event "${GITHUB_EVENT_NAME}" \
-            --workflow-run-id "${GITHUB_RUN_ID}" \
-            --timezone Asia/Shanghai
+        run: npm ci
 
       - name: Build static site
-        env:
-          VITE_GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
-          VITE_STATIC_DATA_BASE: /${{ github.event.repository.name }}/data
-          VITE_STATIC_DATA_VERSION: ${{ github.run_id }}
         run: npm --workspace apps/web run build
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: apps/web/dist
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4

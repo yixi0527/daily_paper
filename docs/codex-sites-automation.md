@@ -1,4 +1,10 @@
-# Codex Sites 自动更新
+# 已切换至 GitHub Pages
+
+展示托管已迁回 GitHub Pages，优化后的采集、翻译、页面和阅读记录机制继续沿用。当前执行与恢复流程以 [GitHub Pages 自动发布](github-pages-automation.md) 为准。停止向 Sites 发布，原站保留供阅读记录导出。
+
+以下为历史 Sites 流程记录，不再执行。
+
+## 历史 Codex Sites 自动更新
 
 项目根目录：`D:\04_yixiPrivate\03_myToolApps\daily_paper`。Sites 项目 ID 以 `.openai/hosting.json` 为准。使用当前安装的 Sites 技能和工具；插件缓存版本会更新，不要复用已经失效的 helper 路径。此流程不推送 GitHub，也不触发 GitHub Pages。
 

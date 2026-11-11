@@ -108,8 +108,8 @@ export function SettingsPage() {
           <p>正在读取更新状态…</p>
         )}
         <p className="muted">
-          每天 07:30 自动采集与翻译，09:30、12:30 补跑；检查通过后由 Codex
-          发布。本机需保持开机并联网。
+          每天 07:30 自动采集与翻译，09:30、12:30 补跑；检查通过后发布到 GitHub
+          Pages。本机需保持开机并联网。
         </p>
         <button className="ghost-button" onClick={() => window.location.reload()}>
           <RefreshCw size={16} />

@@ -49,5 +49,5 @@ def test_snapshot_roundtrip_preserves_identity_dates_and_full_reader(db_session,
     assert index["dashboard"]["latest_articles"][0]["article_key"] == detail["article_key"]
     published_metadata = json.loads((target / "metadata.json").read_text(encoding="utf-8"))
     assert published_metadata["translations"] == metadata["translations"]
-    assert published_metadata["deployment"]["provider"] == "codex-sites"
+    assert published_metadata["deployment"]["provider"] == "github-pages"
     engine.dispose()
