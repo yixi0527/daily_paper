@@ -19,8 +19,14 @@ Codex 在上海时间 09:00、11:00、14:00 检查 `data/site-workflow/state.jso
 1. `status=ready` 才可发布，包括先前尚未发布的完整批次。正在运行时保持安静；失败则读取实际日志，报告具体错误，等待已配置的下一次重试。已经发布时不重复发布。
 2. 使用 state 的 `checkout_path`，核对 `.openai/hosting.json`。读取 `get_site` 并取得该 Site 的新 source credential。凭据只保存在内存，通过 stdin 交给当前 Sites `site-workflow.mjs`，不写入文件或命令行。
 3. 按 Sites 技能打开执行目录，再用 `build-site.mjs` 构建和 `site-workflow.mjs` 同步精确源码并打包。归档放到运行目录外、项目 `data/site-workflow` 下。打包前所有翻译必须完整。
-4. 站点保持 owner-private，调用 `save_version_and_deploy_private`；如果已经有对应的保存版本或进行中的 deployment，按 Sites 技能继续该次发布。将准确的版本 ID、deployment ID、commit 和归档路径保存在 `publication.json`，失败后从这一阶段继续，禁止重复翻译。
+4. 保留 `get_site` 返回的当前访问范围，不修改分享设置。确认为 owner-private 时调用 `save_version_and_deploy_private`；其他访问范围调用 `save_site_version` 后调用 `deploy_site_version`。如果已经有对应的保存版本或进行中的 deployment，按 Sites 技能继续该次发布。将准确的版本 ID、deployment ID、commit 和归档路径保存在 `publication.json`，失败后从这一阶段继续，禁止重复翻译。
 5. 仅在原生部署结果 `status=succeeded` 后标记发布成功。使用 main 环境 Python `-X utf8`，将 `PYTHONPATH` 指向主项目的 `apps/api`，将 `DAILY_PAPER_RUNTIME_DIR` 指向主项目的 `data/site-workflow`。向主项目的 `scripts/site_workflow.py publication` 通过 stdin 传入 JSON：`published` 布尔值、`commit_sha`、`url`、`version_id`、`deployment_id` 及可选归档路径。先记录 `published=false` 的发布进度，成功后再传 `published=true`。该操作记录回执并更新 `codex/site-live`，不改写用户的工作分支。
 6. 成功后可清理本次独立 worktree；删除前核对其绝对路径位于本项目的 `data/site-workflow/checkouts` 内，保留数据库、缓存和最新状态。不可删除用户目录或清理无关 worktree。
 
 没有新文章或状态未变化时保持安静。只在有实际新增内容成功发布、执行失败或需要用户处理时通知。阅读记录始终由浏览器保存；发布不包含个人已读与收藏记录。
+
+## Online 日期
+
+Crossref 的 `published-online` 缺失时，独立于摘要补查出版商页面的 `citation_online_date` 或明确的 `Publication History: Published online`。已经核实的官网日期及其来源保存在数据库 `extra_metadata.publisher_online_date`，后续采集保留它们。纸刊日期、DOI 注册日期、PubMed 入库日期及早期版本的 Electronic 日期均不能替代官网 Online 日期。例：`10.1016/j.tins.2026.09.004` 官网为 2026-10-07，纸刊为 2026-11，PubMed Electronic 为 2026-09-22。
+
+`scripts/backfill_online_dates.py` 可补查数据库中尚未获取的 Online 日期；可选首个参数为从官网 DOM 读取的 `{doi, url, html}` JSON 列表。使用与每日任务相同的 `PYTHONPATH` 和 `DATABASE_URL`。HTTP 403 等请求错误保留在日志和文章元数据中，不填入推测日期；这些文章暂不计入日历。日期修正后重新从数据库导出，校验译文完整，再构建发布，无需重新翻译。

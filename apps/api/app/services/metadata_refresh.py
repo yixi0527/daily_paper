@@ -25,7 +25,7 @@ class MetadataRefreshService:
         )
         if missing_only:
             query = query.where(
-                or_(Article.abstract.is_(None), Article.abstract == "", Article.snippet.is_(None))
+                or_(Article.abstract.is_(None), Article.abstract == "", Article.snippet.is_(None), Article.online_published_at.is_(None))
             )
 
         articles = db.scalars(query).unique().all()
@@ -80,6 +80,14 @@ class MetadataRefreshService:
                     payload_format=article.payloads[-1].payload_format if article.payloads else "json",
                 )
 
+            normalized.abstract = normalized.abstract or article.abstract
+            normalized.snippet = normalized.snippet or article.snippet
+            evidence = (article.extra_metadata or {}).get("publisher_online_date")
+            if evidence and evidence["status"] == "found":
+                normalized.online_published_at = article.online_published_at
+            else:
+                normalized.online_published_at = normalized.online_published_at or article.online_published_at
+            normalized.extra_metadata = {**(article.extra_metadata or {}), **(normalized.extra_metadata or {})}
             normalized = adapter.metadata_enricher.enrich(
                 article.journal,
                 normalized,
@@ -91,6 +99,13 @@ class MetadataRefreshService:
                 continue
 
             changed = False
+            if normalized.online_published_at and normalized.online_published_at != article.online_published_at:
+                article.online_published_at = normalized.online_published_at
+                article.published_at = normalized.online_published_at
+                changed = True
+            if normalized.extra_metadata != article.extra_metadata:
+                article.extra_metadata = normalized.extra_metadata
+                changed = True
             if normalized.abstract and normalized.abstract != article.abstract:
                 article.abstract = normalized.abstract
                 changed = True

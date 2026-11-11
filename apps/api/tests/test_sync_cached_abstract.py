@@ -9,6 +9,8 @@ def test_sync_reuses_known_abstract_without_extra_publisher_requests(db_session,
     journal = db_session.scalar(select(Journal))
     existing = db_session.scalar(select(Article))
     original_abstract = existing.abstract
+    existing.online_published_at = datetime(2026, 10, 7, tzinfo=UTC)
+    existing.extra_metadata = {"publisher_online_date": {"status": "found", "date": "2026-10-07T00:00:00+00:00", "url": existing.url}}
     adapter = CrossrefOnlyAdapter()
     incoming = NormalizedArticle(
         doi=existing.doi,
@@ -18,6 +20,7 @@ def test_sync_reuses_known_abstract_without_extra_publisher_requests(db_session,
         source_name="crossref",
         source_uid=existing.doi,
         article_type="Article",
+        online_published_at=datetime(2026, 9, 22, tzinfo=UTC),
         authors=[],
     )
     result = FetchResult(
@@ -41,5 +44,9 @@ def test_sync_reuses_known_abstract_without_extra_publisher_requests(db_session,
         assert counts["inserted"] == 0
         assert existing.abstract == original_abstract
         assert existing.title == incoming.title
+        assert existing.online_published_at == datetime(2026, 10, 7, tzinfo=UTC)
+        assert existing.extra_metadata["publisher_online_date"]["status"] == "found"
     finally:
         adapter.http.close()
+from datetime import UTC, datetime
+

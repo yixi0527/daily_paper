@@ -187,7 +187,7 @@ export function ReadingProgress({
       ) : null}
       {undatedCount > 0 ? (
         <p className="reading-calendar-note">
-          {undatedCount} 篇缺少 Online 日期，未计入日历。
+          {undatedCount} 篇尚未获取 Online 日期，暂未计入日历。
           <button type="button" onClick={onUndatedSelect}>
             查看这些文章
           </button>

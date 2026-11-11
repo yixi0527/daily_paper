@@ -174,7 +174,7 @@ class PublisherAdapter(ABC):
             existing.source_name = item.source_name
             existing.source_uid = item.source_uid or existing.source_uid
             existing.raw_payload_checksum = checksum
-            existing.extra_metadata = item.extra_metadata
+            existing.extra_metadata = {**(existing.extra_metadata or {}), **(item.extra_metadata or {})}
             existing.last_seen_at = datetime.now(tz=UTC)
             if item.authors:
                 db.query(ArticleAuthor).filter(ArticleAuthor.article_id == existing.id).delete(
@@ -256,11 +256,18 @@ class PublisherAdapter(ABC):
                     if article.doi is None:
                         skipped_without_doi += 1
                         continue
-                    if not article.abstract:
-                        existing = db.scalar(select(Article).where(Article.doi == article.doi))
-                        if existing is not None:
-                            article.abstract = existing.abstract
-                            article.snippet = article.snippet or existing.snippet
+                    existing = db.scalar(select(Article).where(Article.doi == article.doi))
+                    if existing is not None:
+                        article.abstract = article.abstract or existing.abstract
+                        article.snippet = article.snippet or existing.snippet
+                        evidence = (existing.extra_metadata or {}).get("publisher_online_date")
+                        if evidence and evidence["status"] == "found":
+                            article.online_published_at = existing.online_published_at
+                        else:
+                            article.online_published_at = article.online_published_at or existing.online_published_at
+                        article.extra_metadata = {**(existing.extra_metadata or {}), **(article.extra_metadata or {})}
+                        if article.online_published_at:
+                            article.published_at = article.online_published_at
                     article = self.metadata_enricher.enrich(
                         journal,
                         article,
