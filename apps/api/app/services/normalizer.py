@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from datetime import UTC, datetime
 from typing import Any
 
 from app.models.journal import Journal
@@ -95,6 +96,22 @@ class ArticleNormalizer:
         online_date = parse_crossref_date_parts(
             payload.get("published-online", {}).get("date-parts")
         )
+        online_evidence = None
+        if online_date is None and journal.journal_name == "Science":
+            publication = next(
+                (item for item in payload.get("assertion", [])
+                 if item.get("group", {}).get("name") == "publication_history"
+                 and item.get("name") == "published"),
+                None,
+            )
+            if publication:
+                online_date = datetime.strptime(publication["value"], "%Y-%m-%d").replace(tzinfo=UTC)
+                online_evidence = {
+                    "status": "found", "date": online_date.isoformat(),
+                    "field": "crossmark.publication_history.published", "value": publication["value"],
+                    "url": payload.get("resource", {}).get("primary", {}).get("URL") or link,
+                    "metadata_url": f"https://api.crossref.org/works/{payload['DOI']}",
+                }
         print_date = parse_crossref_date_parts(payload.get("published-print", {}).get("date-parts"))
         issued_date = parse_crossref_date_parts(payload.get("issued", {}).get("date-parts"))
         published_at = online_date or print_date or issued_date
@@ -121,6 +138,7 @@ class ArticleNormalizer:
                 "container_title": payload.get("container-title"),
                 "publisher": payload.get("publisher"),
                 "relation": payload.get("relation"),
+                **({"publisher_online_date": online_evidence} if online_evidence else {}),
             },
             raw_payload=payload,
             payload_format="json",

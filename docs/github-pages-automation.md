@@ -22,7 +22,7 @@ Codex 仍在上海时间 09:00、11:00、14:00 检查 `state.json`、`automation
 
 ## 日期和阅读记录
 
-Crossref 缺少 `published-online` 时，独立于摘要补查官网 `citation_online_date` 或明确的 `Publication History: Published online`。已核实的官网日期及来源保存在数据库 `extra_metadata.publisher_online_date`，后续同步保留。纸刊、DOI 注册或 PubMed 入库日期不能替代官网 Online 日期。例：`10.1016/j.tins.2026.09.004` 官网为 2026-10-07，纸刊为 2026-11，PubMed Electronic 为 2026-09-22。
+Crossref 缺少 `published-online` 时，Science 使用出版商在 Crossmark 中提交的 `assertion` → `publication_history` → `published`；该字段与纸刊日期分开处理，例：`10.1126/science.ady2660` 为 2026-08-27，纸刊为 2026-10-08。其他期刊仍独立于摘要补查官网 `citation_online_date` 或明确的 `Publication History: Published online`。已核实的日期及来源保存在数据库 `extra_metadata.publisher_online_date`，后续同步保留。纸刊、DOI 注册或 PubMed 入库日期不能替代官网 Online 日期。例：`10.1016/j.tins.2026.09.004` 官网为 2026-10-07，纸刊为 2026-11，PubMed Electronic 为 2026-09-22。
 
 `scripts/backfill_online_dates.py` 保留日期补查能力及失败记录。日期修正后重新导出并发布，无需重译；官网 HTTP 403 等访问失败不填入推测日期。
 
