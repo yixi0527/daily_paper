@@ -26,4 +26,6 @@ Crossref 缺少 `published-online` 时，Science 使用出版商在 Crossmark �
 
 `scripts/backfill_online_dates.py` 保留日期补查能力及失败记录。日期修正后重新导出并发布，无需重译；官网 HTTP 403 等访问失败不填入推测日期。
 
+同一篇 GABAB 示例在 [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0166223626001864) 的 `citation_online_date` 也是 2026/09/22，与 Cell 的 2026-10-07 不同。保留已核实的 Cell 官网日期；补查时逐篇核对 DOI、日期字段与出版商来源，不能混用不同官网的日期或用其他字段覆盖。
+
 阅读与收藏保存在浏览器各自域名下。GitHub Pages 原有记录仍然保留；Sites 域名上的新增记录可在设置中导出，再到 GitHub Pages 设置中导入。导入会合并记录，不覆盖已有已读和收藏。
