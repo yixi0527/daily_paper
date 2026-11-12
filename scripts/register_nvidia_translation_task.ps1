@@ -35,7 +35,7 @@ $trigger1230 = New-ScheduledTaskTrigger -Daily -At $today.AddHours(12).AddMinute
 $settings = New-ScheduledTaskSettingsSet -MultipleInstances IgnoreNew -StartWhenAvailable -WakeToRun -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 15) -ExecutionTimeLimit (New-TimeSpan -Hours 4)
 $principal = New-ScheduledTaskPrincipal -UserId ([System.Security.Principal.WindowsIdentity]::GetCurrent().Name) -LogonType Interactive -RunLevel Limited
 
-Register-ScheduledTask -TaskName $taskName -TaskPath $taskPath -Action $action -Trigger @($trigger0730, $trigger0930, $trigger1230) -Settings $settings -Principal $principal -Description 'Collect and translate Daily Paper articles locally; Codex publishes verified content to GitHub Pages.' -Force | Out-Null
+Register-ScheduledTask -TaskName $taskName -TaskPath $taskPath -Action $action -Trigger @($trigger0730, $trigger0930, $trigger1230) -Settings $settings -Principal $principal -Description 'Collect articles, translate with the configured NVIDIA model, and publish verified batches to GitHub Pages without Codex automation.' -Force | Out-Null
 
 $registered = Get-ScheduledTask -TaskName $taskName -TaskPath $taskPath
 $registeredAction = @($registered.Actions)

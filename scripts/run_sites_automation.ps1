@@ -22,10 +22,16 @@ if ($prepareExit -eq 0) {
     if ($prepared['status'] -eq 'published') {
         $stage = 'already-published'
     } else {
-        $stage = 'update'
+        $stage = 'pipeline'
         $updateScript = Join-Path $prepared['checkout_path'] 'scripts\run_sites_update.ps1'
         & $guard --run-file $updateScript 1> $stdoutPath 2>> $stderrPath
         $taskExit = $LASTEXITCODE
+        $statePath = Join-Path $runtime 'state.json'
+        if (Test-Path -LiteralPath $statePath -PathType Leaf) {
+            $state = Get-Content -LiteralPath $statePath -Raw -Encoding utf8 | ConvertFrom-Json -AsHashtable
+            $stage = $state['stage']
+            if ($state['status'] -eq 'published') { $stage = 'published' }
+        }
     }
 }
 $result = [ordered]@{

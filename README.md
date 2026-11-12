@@ -14,7 +14,7 @@ The reading site is hosted at https://yixi0527.github.io/daily_paper/ . GitHub P
 
 - Unread, all, read and favorite views share search and journal filters. Article dates and the reading-ratio calendar use the publisher's Online date; missing dates remain explicit.
 - The reader loads full abstracts on demand. Reading and favorite records stay in the browser and can be exported/imported in Settings. The former GitHub Pages origin retains its own browser records; changing the hostname does not automatically transfer browser storage.
-- Windows collects and translates at 07:30, with 09:30 and 12:30 retry runs (Asia/Shanghai). Codex checks complete batches for publication at 09:00, 11:00 and 14:00. The local computer must be running, online and signed in to Codex.
+- Windows runs collection, NVIDIA translation and GitHub Pages publication together at 07:30, with 09:30 and 12:30 retry runs (Asia/Shanghai). Codex automation is paused. The local computer must be running, online and signed in to Windows; Codex does not need to be open.
 - A successful source sync, complete translation validation and successful GitHub Pages deployment are required before a batch is marked published. SQLite, translation cache and stage checkpoints live in `data/site-workflow`; credentials remain local. GitHub only builds and hosts the prepared snapshot.
 
 See [GitHub Pages automation](docs/github-pages-automation.md) for execution and recovery. The former cloud synchronization and two-stage translation publisher remain retired; the older sections below document previous deployment options. The old Sites address remains available for exporting browser reading records.

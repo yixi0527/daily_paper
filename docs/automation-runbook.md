@@ -1,6 +1,6 @@
 # Automation runbook
 
-当前流程使用本机优化后的采集、NVIDIA 翻译与完整批次校验，仅将展示托管切换至 GitHub Pages。执行与恢复请遵循 [当前自动发布说明](github-pages-automation.md)。以下为历史云端采集与双阶段翻译流程，不再执行。
+当前 Windows 计划任务直接完成采集、指定 NVIDIA 模型翻译、完整批次校验和 GitHub Pages 发布确认，Codex 发布自动化已停用。执行与恢复请遵循 [当前自动发布说明](github-pages-automation.md)。以下为历史云端采集与双阶段翻译流程，不再执行。
 
 ## Ownership and schedule
 
