@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T18:41:09.947663+00:00",
+  "updated_at": "2026-11-12T03:14:38.222535+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -4071,6 +4071,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1016/j.brs.2026.103251": {
+      "doi": "10.1016/j.brs.2026.103251",
+      "journal_slug": "brain-stimulation",
+      "title": "Bimodal versus unimodal high-definition Transcranial random noise stimulation of auditory cortex for tinnitus: A double-blind, sham-controlled crossover trial",
+      "acquired_at": "2026-11-11T23:47:49",
+      "source_title_sha256": "001758d582483f7f459b4d4fde4aca73fb0ac2ff492317d42111ed31bf75ee98",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "双模式与单模式高清经颅随机噪声刺激听觉皮层用于耳鸣：一项双盲、假刺激对照交叉试验",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
     "doi:10.1016/j.brs.2026.103252": {
       "doi": "10.1016/j.brs.2026.103252",
       "journal_slug": "brain-stimulation",
@@ -8133,12 +8146,12 @@
       "title": "Nicotianamine-driven nickel transport to sink organs underpins maize productivity",
       "acquired_at": "2026-11-10T17:25:21",
       "source_title_sha256": "ae2d998532620d560c359992b3dab17e343df8669bf3ccdb581d8d4c681c4d87",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "烟酰胺驱动的镍转运至块根部件支撑玉米产量",
-      "abstract_zh": null,
-      "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "translated_at": "2026-11-10T18:31:37.270122+00:00"
+      "source_abstract_sha256": "51c4042ef49094629d11422cbd1d7541afaf9e650e2c48c86fc4bfe5880d82f9",
+      "source_abstract": "abstract",
+      "title_zh": "烟草生胺驱动镍输送至储藏器官支撑玉米产量",
+      "abstract_zh": "镍（Ni）是植物中最后被确定的必需微量元素，其稳态的遗传基础及农业意义长期难以捉摸。通过全基因组关联分析，我们鉴定了ZmNAET1，作为控制镍分配至种子的关键转运蛋白。从机制上看，ZmNAET1介导烟草生胺分泌，并实现镍在节部的烟草生胺依赖性韧皮部装载以及随后向储藏器官的镍转运。缺乏ZmNAET1的突变体表现出显著的产量损失、种子萌发速度降低以及种子寿命大幅缩短。镍起着不可替代的作用，补充镍完全挽救了突变体的种子萌发和适当的营养生长。我们表明，NAET1依赖性的镍输送至脲酶对于发育中储藏器官的氨基酸周转至关重要，揭示了镍在禾本科植物产量形成中未被充分认识的作用。本研究揭示了对烟草生胺和镍需求的低估，并为优化谷物作物微量元素供应以提升生产力开辟了新的研究途径。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1016/j.cell.2026.10.036": {
       "doi": "10.1016/j.cell.2026.10.036",
@@ -8146,12 +8159,25 @@
       "title": "COP1 is a temperature-responsive switch in Arabidopsis",
       "acquired_at": "2026-11-10T17:25:21",
       "source_title_sha256": "f02963a41fb4bc0d604a05d9a673a45972dec504483f6b08806b67695c51bb17",
+      "source_abstract_sha256": "a3990a2bd0db7d24300401c312346a5a8092da3ddab6a0d254287546fd9b0143",
+      "source_abstract": "abstract",
+      "title_zh": "COP1 是拟南芥中的温度响应开关",
+      "abstract_zh": "温度是分子运动，但生物体如何感知温度尚不清楚。许多植物反应整合光和温度信号，例如通过光受体和昼夜节律。CONSTITUTIVE PHOTOMORPHOGENESIS 1（COP1）调控光信号，且对温度响应必不可少。我们表明 COP1 是一个温度依赖的开关，由温度诱导的构象变化激活。一个分子内的 Val-Pro（VP）motif 在低温时结合到 COP1 的活性位点，阻止底物结合。在较高温度下，VP motif 脱离，使客户蛋白能够结合并被降解。这一发现解释了植物如何在给定气候范围内获得精确的温度读数。改变 VP motif 的结合足以调整植物响应的温度范围。这有助于我们理解植物如何适应不同气候。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.cell.2026.10.039": {
+      "doi": "10.1016/j.cell.2026.10.039",
+      "journal_slug": "cell",
+      "title": "The blood-brain barrier imports diverse neuroprotective proteins through pathways impaired early in Alzheimer’s disease models",
+      "acquired_at": "2026-11-11T23:33:04",
+      "source_title_sha256": "0f16da35f2c177617706c37e83245ca989ff7ae148fa3c2a5f2dfbd7ef6cda16",
       "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "source_abstract": null,
-      "title_zh": "COP1 是拟南芥的温度响应开关",
+      "title_zh": "血脑屏障通过早期阿尔茨海默病模型中受损的通路导入多种神经保护蛋白质",
       "abstract_zh": null,
-      "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "translated_at": "2026-11-10T18:31:37.270122+00:00"
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106648": {
       "doi": "10.1016/j.neubiorev.2026.106648",
@@ -12797,15 +12823,41 @@
     "doi:10.1016/j.neubiorev.2026.107084": {
       "doi": "10.1016/j.neubiorev.2026.107084",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "When Defense Becomes Compulsion: An Evolutionary and Circuit Framework for Obsessive-Compulsive Disorder",
+      "title": "When defense becomes compulsion: An evolutionary and circuit framework for obsessive-compulsive disorder",
       "acquired_at": "2026-11-10T01:05:54",
-      "source_title_sha256": "0e1abdb8fac4b597d12fe26d1ce9ea2c479a64d6bf4571707cd8a45da9061d0e",
+      "source_title_sha256": "e82b3b4b88979e7c620fa78918044e683ac8bd0e302f2f37cbfe4923941c3aa0",
       "source_abstract_sha256": "721b64450210577b5b4e92997f80da49fb685a8f1d1b7c00781991ab228773d0",
       "source_abstract": "abstract",
-      "title_zh": "防御成为强迫：强迫症的进化与电路框架",
-      "abstract_zh": "强迫症（OCD）的特征是侵入性思维和重复性行为，这些行为常围绕预防潜在危害而组织。尽管现有的神经生物学模型已聚焦于皮质-纹状体-丘脑-皮质回路的异常、习惯形成和认知控制，但它们对为何倾向于以预防性行动形式出现的强迫行为提供的解释不够完整。本文提出一个进化与电路层面的框架，将强迫行为理解为神经系统正常支持适应性防御的病理性失调。整合人类研究与啮齿类研究的电路证据，我们将防御控制组织为三个顺序但相互作用的阶段：威胁评估、防御性行动选择与执行，以及防御后安全评估。在威胁评估阶段，感觉显著性、威胁价值、情境门控和本体感知的异常可能会增加模棱两可线索的显著性或威胁价值。在行动选择与执行阶段，不确定性容忍度受损、行为灵活性受损、皮质-纹状体功能障碍和负向强化可能会倾向于提前且重复的减少威胁行动，这些行动可能越来越习惯化。防御后，结果评估受损和安全状态更新受阻可能阻止成功的行动产生稳定的安全或完成信号，从而允许防御性反应尽管客观上威胁已降低却持续存在。通过根据防御处理何时贡献而非仅仅其中异常位置来组织与OCD相关的电路，本框架将基于威胁、纹状体、习惯和安全学习的各类解释整合为一个过程模型，阐述适应性防御如何转变为持续的强迫行为。该框架可能有助于将阶段特异性功能障碍映射到症状异质性，并指导更具针对性的干预措施。",
-      "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "translated_at": "2026-11-10T03:19:17.154541+00:00"
+      "title_zh": "当防御变成强迫：强迫症的进化与回路框架",
+      "abstract_zh": "强迫症（OCD）以侵入性思维和重复行为为特征，这些行为常围绕预防潜在危害而组织。尽管现有的神经生物学模型主要关注皮层－纹状体－丘脑－皮层回路的异常、习惯形成和认知控制，但对强迫行为为何优先表现为预防性行为的解释尚不完整。本文提出了一种进化和回路水平框架，将强迫行为理解为原本支持适应性防御的神经系统发生病理性失调。整合人类研究与啮齿类动物回路水平研究的证据，我们将防御控制组织为三个按顺序但相互作用的阶段：威胁评估、防御动作的选择与执行，以及防御后的安全评估。在威胁评估阶段，感觉显著性、威胁估值、情境调控和内感受加工的异常可能增加模糊线索的显著性或威胁价值。在动作选择与执行阶段，对不确定性的不耐受、行为灵活性受损、皮质纹状体功能障碍和负强化可能使行为偏向过早且重复的减威胁动作，这些动作可能变得越来越习惯化。防御动作之后，结果评估和安全状态更新受损可能阻止成功动作产生稳定的安全或完成信号，使防御性反应在客观威胁降低后仍持续存在。本框架根据回路在防御处理中的作用时间而非仅依据异常部位来组织与强迫症相关的回路，将基于威胁的解释、皮质纹状体观点、习惯模型和安全学习理论整合为一种过程模型，阐述适应性防御如何转变为持续的强迫行为。该框架有助于将阶段特异性功能障碍与症状异质性相联系，并指导更具针对性的干预。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107088": {
+      "doi": "10.1016/j.neubiorev.2026.107088",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "The active inference framework and social cognitive theory: informing therapeutic approaches for medically unexplained symptoms.",
+      "acquired_at": "2026-11-12T03:11:13",
+      "source_title_sha256": "648c8bf246ebf25579ee38aba66641bb24e961e8f47d62c0f77b97d8aa5b3b8b",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "主动推理框架与社会认知理论：为躯体化症状的治疗方法提供依据",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107089": {
+      "doi": "10.1016/j.neubiorev.2026.107089",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Perioral motor stabilization without classical proprioception: a trigeminofacial force-balance model",
+      "acquired_at": "2026-11-11T23:56:08",
+      "source_title_sha256": "2ee9e6678203ea9c6486e66509a3a90358de24efa48bd47f0a5e3b8dcbe6fad4",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "缺乏经典本体感受时的围口运动稳定：三叉面动力平衡模型",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -15615,6 +15667,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-08T23:34:18.421365+00:00"
     },
+    "doi:10.1016/j.neuron.2026.09.004": {
+      "doi": "10.1016/j.neuron.2026.09.004",
+      "journal_slug": "neuron",
+      "title": "Human stem cell neuroscience",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "5d7e5d8db25af4b274298758e162f16bbcdcb678c8beb888fd06a9eb9fc42485",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "人干细胞神经科学",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
     "doi:10.1016/j.neuron.2026.09.005": {
       "doi": "10.1016/j.neuron.2026.09.005",
       "journal_slug": "neuron",
@@ -15862,6 +15927,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-25T02:18:33.046128+00:00"
     },
+    "doi:10.1016/j.neuron.2026.09.024": {
+      "doi": "10.1016/j.neuron.2026.09.024",
+      "journal_slug": "neuron",
+      "title": "Toward functional oversight of neural organoid research: A report from the 2025 Asilomar Conference",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "4587438d0b0dbbf9e2f37a0462c0410dc647610aa702fdf6f5b105df24a4d5b2",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "迈向神经类器官研究的功能监督：2025年阿西罗马会议报告",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
     "doi:10.1016/j.neuron.2026.09.025": {
       "doi": "10.1016/j.neuron.2026.09.025",
       "journal_slug": "neuron",
@@ -16031,6 +16109,32 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1016/j.neuron.2026.10.004": {
+      "doi": "10.1016/j.neuron.2026.10.004",
+      "journal_slug": "neuron",
+      "title": "Brain organoids: Experimental access to human-specific brain development",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "6c3122a5a39f29ee8b195ac65cf4375ab7ae08527aa20cfe6acaea3ecb745d6f",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "脑类器官：接触人类特异性脑发育的实验窗口",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.005": {
+      "doi": "10.1016/j.neuron.2026.10.005",
+      "journal_slug": "neuron",
+      "title": "Unbundling the ethical and social issues in human neural organoid research",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "5e8b17255ba2f16e19f9a71ac4c5ad8ba8458d565248f33830eb64058f7370ef",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "解构人类神经类器官研究中的伦理与社会问题",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
     "doi:10.1016/j.neuron.2026.10.007": {
       "doi": "10.1016/j.neuron.2026.10.007",
       "journal_slug": "neuron",
@@ -16057,6 +16161,32 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1016/j.neuron.2026.10.009": {
+      "doi": "10.1016/j.neuron.2026.10.009",
+      "journal_slug": "neuron",
+      "title": "Cognitive evaluation of brain organoids and assembloids",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "dda7675a17f45d918ca914f76b0e70922919f73f0f745ff9a3276704c0f304b3",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "脑类器官和组装体的认知评价",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.010": {
+      "doi": "10.1016/j.neuron.2026.10.010",
+      "journal_slug": "neuron",
+      "title": "Dissociable cerebellar pathways for reach correction and learning",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "15a614b01e5b7d222816631deeb3ca1cb871d768fac548d05b9ba4b96aba54b1",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "运动修正与学习的可分离小脑通路",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
     "doi:10.1016/j.neuron.2026.10.011": {
       "doi": "10.1016/j.neuron.2026.10.011",
       "journal_slug": "neuron",
@@ -16069,6 +16199,71 @@
       "abstract_zh": "阿尔茨海默病早期特征是特定突触的丢失，但使突触易受损的上游信号仍不清楚。在淀粉样病理小鼠模型中，我们在广泛斑块形成和明显胶质细胞反应之前，在脆弱脑区出现了一种早期星胶质状态。这些星胶质表现为突触周围过程膨大，富含p62和糖原，自噬流动受损以及钙信号受损，且与突触的星胶质覆盖减少相关。与其表现出突触吞噬增加相反，膨大的星胶质表现为MFG-E8（milk fat globule-epidermal growth factor 8，乳脂球-上皮生长因子8）水平升高，并与局部微胶质突触吞噬增加相关。星胶质特异性增减功能实验表明，星源性MFG-E8对微胶质突触吞噬是必需的，并通过微胶质β3整合素信号通路发挥作用。星胶质Mfge8敲除可减少淀粉样病理模型中的微胶质吞噬和突触丢失，并与淀粉样病理、胶质细胞反应和认知障碍减少相关。这些发现共同定义了一种星胶质-微胶质MFG-E8信号轴，该轴在早期淀粉样病理中导致特定脑区的突触脆弱性。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.012": {
+      "doi": "10.1016/j.neuron.2026.10.012",
+      "journal_slug": "neuron",
+      "title": "Glial progenitor-like state is preferentially co-opted in glioblastoma and sustained by POU3F3",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "6dded4173036d25c3f8427768541df2779d05940d66f16c4c98cd50ac799d770",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "胶质前体样状态在胶质母细胞瘤中被优先利用并由 POU3F3 维持",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.013": {
+      "doi": "10.1016/j.neuron.2026.10.013",
+      "journal_slug": "neuron",
+      "title": "Antisense oligonucleotide silencing rescues neurodevelopmental deficits in AMPA receptor gain-of-function mice",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "c9cfbfe0b05699ad6a4424d3faa857677141f849f6343bc7fc5bb13b2b656be7",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "反义核苷酸寡聚物沉默可挽救AMPA受体功能获得小鼠的神经发育缺陷",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.014": {
+      "doi": "10.1016/j.neuron.2026.10.014",
+      "journal_slug": "neuron",
+      "title": "Advancing brain organoids from disease phenotypes to mechanisms and translation across developmental, infectious, and neurodegenerative diseases",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "bd9aea33f05cfe43a96f0ab25870947330be3b685a1240e63ff2e72b4723ef30",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "推动脑类器官从疾病表型向机制与转化应用的发展，涵盖发育性、感染性和神经退行性疾病",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.020": {
+      "doi": "10.1016/j.neuron.2026.10.020",
+      "journal_slug": "neuron",
+      "title": "Neural organoid models of human brain evolution",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "fc44be80aca9d6d08cd90ce9b118d141295d5d6a5cb255b6f41afe1425300866",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "人脑进化的神经类器官模型",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.022": {
+      "doi": "10.1016/j.neuron.2026.10.022",
+      "journal_slug": "neuron",
+      "title": "Slow-timescale regulation of dopamine release governs recovery of a motivational drive over days",
+      "acquired_at": "2026-11-11T23:37:52",
+      "source_title_sha256": "eec86d95c3b02cd327ddcbe34642d19ec00c9906e4aae64b2cc86a572531f1ae",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "慢时标调控多巴胺释放决定数天内动机驱动力的恢复",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1016/j.tics.2025.09.013": {
       "doi": "10.1016/j.tics.2025.09.013",
@@ -17266,6 +17461,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1016/j.tics.2026.10.009": {
+      "doi": "10.1016/j.tics.2026.10.009",
+      "journal_slug": "trends-in-cognitive-sciences",
+      "title": "Decoupling language and emotion in the bilingual brain",
+      "acquired_at": "2026-11-11T23:40:06",
+      "source_title_sha256": "f31f05f8b30a6aa6472a37fb2e290dfdebcf494d9ac11b610a31bd81b25228eb",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "双语大脑中语言与情感的解耦",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
     "doi:10.1016/j.tics.2026.10.010": {
       "doi": "10.1016/j.tics.2026.10.010",
       "journal_slug": "trends-in-cognitive-sciences",
@@ -17285,12 +17493,12 @@
       "title": "The best-laid plans are not worth it",
       "acquired_at": "2026-11-10T17:30:32",
       "source_title_sha256": "39604e93fc3fa72992ea4e380f8570695d5d7339fc8a6023e2fed1fcab3c45b9",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "最好的计划也没用",
-      "abstract_zh": null,
-      "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "translated_at": "2026-11-10T18:31:37.270122+00:00"
+      "source_abstract_sha256": "1ae52dcdb11958b417b2a678297162140fbc4de946dc3e541d8cd3ae84b15d73",
+      "source_abstract": "abstract",
+      "title_zh": "最完美的计划也不值得一做",
+      "abstract_zh": "规划对于实现长期目标至关重要，但在充满不确定性的世界中充满挑战。及时的一项研究表明，Lei等人发现不确定性降低了人们规划的意愿，并且人们通过将不确定的选择视为确定性选择并更不仔细地规划来减少规划努力。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1016/j.tins.2026.03.007": {
       "doi": "10.1016/j.tins.2026.03.007",
@@ -18084,6 +18292,19 @@
       "abstract_zh": "下行运动通路在发育过程中如何指定，以及它们如何参与运动？在一项最新研究中，Kaiser 等人鉴定出分子上不同的皮层投射神经元，这些神经元在发育早期建立了分离的下行轨迹。他们的研究结果揭示了一个直接的皮层脑干通路，该通路在精细的前肢控制中发挥特定作用，这突显了发育中的分子身份如何塑造下行运动电路的功能组织。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
+    },
+    "doi:10.1016/j.tins.2026.10.004": {
+      "doi": "10.1016/j.tins.2026.10.004",
+      "journal_slug": "trends-in-neurosciences",
+      "title": "Functional brain signatures of successful cognitive aging",
+      "acquired_at": "2026-11-11T23:40:37",
+      "source_title_sha256": "c035beea3d2db3cb139251837cb92e6b29ee955ff55a7f7ca2148919d65a9c7d",
+      "source_abstract_sha256": "6049080a79a3307c773de9cdf9abbc71d44e56296f62b6e5a59eac0ec5bed366",
+      "source_abstract": "abstract",
+      "title_zh": "成功认知老化的功能性大脑特征",
+      "abstract_zh": "认知老化轨迹差异显著。许多老年人在记忆和执行功能方面逐渐下降，而有些人则能保持高水平的认知表现直至高龄。理解这种变异背后的神经机制，对于早期发现不良的老化轨迹以及开发干预措施具有重要意义。本文综述了人类成功认知老化相关的功能性大脑特征，将功能性磁共振成像和脑电图的证据整合在大脑维护与代偿的统一概念框架内。两种模式的证据都越来越表明，成功认知老化与保持年轻人的神经动力学有关，而代偿性神经招募的作用在实证上仍然存在争议，且在方法学上难以确立。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1016/j.tins.2026.10.009": {
       "doi": "10.1016/j.tins.2026.10.009",
@@ -29889,6 +30110,45 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/d41586-026-03063-6": {
+      "doi": "10.1038/d41586-026-03063-6",
+      "journal_slug": "nature",
+      "title": "Can plants defend coasts against storms?",
+      "acquired_at": "2026-11-11T23:41:02",
+      "source_title_sha256": "0c37bd9234c8301ed580b16cb8a253840c4d7703a8da404edb6bf73196e87cdb",
+      "source_abstract_sha256": "c5ce89ffb36d56c24399ad8fad560f3b1878b3eb132cb1b5728ab2f420be83c8",
+      "source_abstract": "abstract",
+      "title_zh": "植物能保护海岸免受风暴侵袭吗？",
+      "abstract_zh": "盐沼植物可以保护内陆地区免受巨浪的冲击，但似乎仅限于一定程度，大风暴会造成渐进性破坏。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1038/d41586-026-03064-5": {
+      "doi": "10.1038/d41586-026-03064-5",
+      "journal_slug": "nature",
+      "title": "Fabric user interface can be worn on your sleeve — and machine-washed",
+      "acquired_at": "2026-11-11T23:41:02",
+      "source_title_sha256": "c964f43be9b5cf2aa1c21414cb9dd2966a06c86e0099d9acba46f79c445abd60",
+      "source_abstract_sha256": "3c6879ec15321b23d8aa028badacdcc78c904f948ab2de5cacf5523bedcb178e",
+      "source_abstract": "abstract",
+      "title_zh": "可穿戴于袖口并可机洗的织物用户界面",
+      "abstract_zh": "触控敏感且能发光的纱线可使日常服装转变为可水洗、可弯曲的用户界面，具有动态图形和多功能计算能力。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1038/d41586-026-03065-4": {
+      "doi": "10.1038/d41586-026-03065-4",
+      "journal_slug": "nature",
+      "title": "Using AI to offer personalized health advice",
+      "acquired_at": "2026-11-11T23:41:02",
+      "source_title_sha256": "c789800209d86c797c6eceb414ec3d337f2e6200376606c12be8d8b3c3fd08d2",
+      "source_abstract_sha256": "5bdb8b51d862a448ed0be15092750bf9bb3ef013ddfaf5c325a738a6acb849b2",
+      "source_abstract": "abstract",
+      "title_zh": "利用人工智能提供个性化健康建议",
+      "abstract_zh": "人工智能工具在医学中的应用越来越广泛。未来可能出现哪些类型的技术？此类健康建议工具应如何进行测试？",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
     "doi:10.1038/d41586-026-03066-3": {
       "doi": "10.1038/d41586-026-03066-3",
       "journal_slug": "nature",
@@ -29940,6 +30200,19 @@
       "abstract_zh": "多个团队使用不同方法分析甲烷受控释放卫星数据，结果大多准确。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/d41586-026-03077-0": {
+      "doi": "10.1038/d41586-026-03077-0",
+      "journal_slug": "nature",
+      "title": "An AI tool improves weather forecasts up to a month ahead",
+      "acquired_at": "2026-11-11T23:41:02",
+      "source_title_sha256": "4bf0dbe0b72a8db933401158ee9b995ddb37bdfece27f5e11e6be425f283b55b",
+      "source_abstract_sha256": "9d6e90a7fc4056a0979020fc5e62ed41d35374e5b63f86d6342571bcc39c7251",
+      "source_abstract": "abstract",
+      "title_zh": "人工智能工具可将天气预报提前至一个月",
+      "abstract_zh": "该工具增强了基于物理和人工智能的预测模型预测典型和极端天气事件的能力。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1038/d41586-026-03081-4": {
       "doi": "10.1038/d41586-026-03081-4",
@@ -31760,6 +32033,19 @@
       "abstract_zh": "证据日益支持‘昼夜节律抑郁’，但仍需更多证据以修改诊断和治疗指南。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/d41586-026-03360-0": {
+      "doi": "10.1038/d41586-026-03360-0",
+      "journal_slug": "nature",
+      "title": "This is what the mysterious Denisovans looked like",
+      "acquired_at": "2026-11-11T23:41:02",
+      "source_title_sha256": "e6d80155343c048fef79d43ff9df985e82205a39a46e03c0cf20a54d96934156",
+      "source_abstract_sha256": "245aef1d4e4f21c1e69428946267d14699a0ca78627a6be5a27a179de34522bd",
+      "source_abstract": "abstract",
+      "title_zh": "神秘丹尼索瓦人的模样",
+      "abstract_zh": "考古学家将中国的头骨碎片鉴定为这一群古人类亲属所归属。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1038/s41380-026-03624-1": {
       "doi": "10.1038/s41380-026-03624-1",
@@ -35297,6 +35583,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1038/s41380-026-03961-1": {
+      "doi": "10.1038/s41380-026-03961-1",
+      "journal_slug": "molecular-psychiatry",
+      "title": "Non-overlapping rather than “opposing” effects of microglial and macrophagic C3ar1 signaling",
+      "acquired_at": "2026-11-11T23:42:24",
+      "source_title_sha256": "d24120d62b9fa539057e28c7ad9fc826f1562a1b35a25e221448a3fc3dde75e4",
+      "source_abstract_sha256": "957adf195bdc1ab7a886c777ba93e1d51c77e703200bae0482ea2f4f3259131f",
+      "source_abstract": "abstract",
+      "title_zh": "小胶质细胞和巨噬细胞 C3ar1 信号传导的非重叠而非“拮抗”作用",
+      "abstract_zh": "本文仅提供期刊名称《分子精神病学》（Molecular Psychiatry），未提供摘要内容。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
     "doi:10.1038/s41562-026-02424-5": {
       "doi": "10.1038/s41562-026-02424-5",
       "journal_slug": "nature-human-behaviour",
@@ -37090,6 +37389,19 @@
       "abstract_zh": "人类行为通过在各种时间尺度上持续适应环境而形成。大量研究利用数百次试验，探究了感知运动适应背后的机制和计算过程。然而，我们大多数的运动技能都经历了数小时的练习。本研究利用数周内数千次训练试验，研究运动记忆的长期发展，并检验适应、保留、双侧迁移、衰减、自发恢复和外推泛化的变化。与以往研究不同，参与者对新动力学表现出近乎完全的补偿，且保留和自发恢复呈长期增加。此外，我们发现角度外推泛化范围的收窄，表明运动记忆持续针对任务进行调整。这展示了在更长时间运动任务训练中发生的广泛变化，突显了它们在感知运动控制、康复和训练研究中的重要性。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
+    },
+    "doi:10.1038/s41562-026-02637-8": {
+      "doi": "10.1038/s41562-026-02637-8",
+      "journal_slug": "nature-human-behaviour",
+      "title": "Long-term training continually fine tunes motor memories",
+      "acquired_at": "2026-11-11T23:41:05",
+      "source_title_sha256": "9a0ad26579f2a19964744a3f684f223559179b392b37beccf5166ec07ceaf2b9",
+      "source_abstract_sha256": "0e3f79560ac4db500fab96838d7f6c0732f511c17942b00b5260d545c908bbb6",
+      "source_abstract": "abstract",
+      "title_zh": "长期训练不断精细调节运动记忆",
+      "abstract_zh": "人类快速适应新动力学是与世界交互的关键能力。本研究将感运动适应研究的控制操控与复杂任务长期学习方法相结合，表明习得的运动记忆不断受到精细调节，且长期训练可提高保持能力。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1038/s41562-026-02639-6": {
       "doi": "10.1038/s41562-026-02639-6",
@@ -43747,6 +44059,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/s41586-026-11132-z": {
+      "doi": "10.1038/s41586-026-11132-z",
+      "journal_slug": "nature",
+      "title": "The proteome of Middle Pleistocene Xujiayao and common Denisovan morphology",
+      "acquired_at": "2026-11-11T23:41:02",
+      "source_title_sha256": "4dcb2c12ed72f7b178171ac683e61e65f24bd8bc0bc190ecdd41f2a740b78a04",
+      "source_abstract_sha256": "f3da1402677d70c18d0fc1e1569e383595a18701eb263d0e29a8a8d6635ac4aa",
+      "source_abstract": "abstract",
+      "title_zh": "中更新世徐家堍及丹尼索瓦人的蛋白质组及常见形态学特征",
+      "abstract_zh": "东亚地区晚期中更新世古人类的分类学和系统发育仍备受争议1。徐家堍作为一处关键的代表性遗址，拥有大量化石和可追溯至约19.9万至13.8万年前的清晰地层，已被广泛研究，但其进化地位仍然不确定。为此，我们通过古蛋白组分析和与其他东亚晚期中更新世古智人的形态比较，对徐家堍材料进行了分析。对两个标本的蛋白质组分析鉴定出18种内源性蛋白，丹尼索瓦特异性COL1A2-996 R＞K突变强烈支持其属于丹尼索瓦人谱系。扩展分析发现，丹尼索瓦人化石（徐家堍和哈尔滨标本）与其他东亚晚期中更新世古智人（如金牛山、大理和华龙洞）之间存在一组共享的形态特征，表明它们都属于丹尼索瓦人谱系。这一分析全面展示了丹尼索瓦人的特征，既显示出直立人的特征（如厚的头盖骨），也呈现出现代人类特征（例如强烈拱起的颞鳞）。他们还与晚期尼安德特人共享一些特征，如颞迷宫结构和颈上凹陷的存在。值得注意的是，丹尼索瓦人具有独特的头骨特征：低颅骨轮廓且两侧壁近乎平行、巨大的眶上隆起、扁平的颧上颌区以及弱的前突。徐家堍及其他东亚遗址的丹尼索瓦人在形态上具有独特性，呈现出低颅骨轮廓且两侧壁近乎平行、巨大的眶上隆起、扁平的颧上颌区以及弱的前突。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
     "doi:10.1038/s41586-026-11134-x": {
       "doi": "10.1038/s41586-026-11134-x",
       "journal_slug": "nature",
@@ -43974,12 +44299,12 @@
       "title": "Chemist-aligned retrosynthesis by ensembling diverse inductive bias models",
       "acquired_at": "2026-10-10T20:04:09",
       "source_title_sha256": "582eaf78c231fe8d4f0c6b93df82b0b55af27b3a36d2ae8ede170f24d96c379d",
-      "source_abstract_sha256": "ed2832b43aee23329caae8280c2422ffb27f937f8b8eb4d013894dd09586aeb0",
+      "source_abstract_sha256": "8ada8bb1b9e2c469b6285e39285ebe62d0efc869d2edfe16d25d9bb5beded3de",
       "source_abstract": "abstract",
-      "title_zh": "化学家偏好的多模型集成合成预测",
-      "abstract_zh": "化学合成仍然是功能小分子发现和制造的关键瓶颈。尽管近年来AI辅助合成规划层出不穷，但尚未实现对其失效模式的详细理解，且模型在预测不太常见但策略上关键的反应方面仍然存在困难，同时也难以预测与化学家预期不符的幻觉性错误预测。在本研究中，我们分析了当前AI模型的失效模式，并提出了RetroChimera：一种前沿合成预测模型，其基于两个新开发的具有互补归纳偏好的组件，并通过一种新颖的基于学习的集成策略将它们整合。通过在数据规模的数个数量级上进行实验，我们展示了RetroChimera在领先基线之上表现出色，表现出在训练数据之外的鲁棒性，以及从每类反应中极少的样本中学习的能力。利用成对和点对两种设置，我们发现有机化学家更倾向于选择RetroChimera的预测结果，而不是已发表的参考反应以及其他AI模型。最后，我们展示了在两家大型制药公司内部数据集上的零样本迁移和微调，展示了在分布偏移下的鲁棒性泛化。我们的研究展示了深度学习在日益挑战性的领域中实现准确合成预测的可行性。",
-      "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "translated_at": "2026-11-10T18:31:37.270122+00:00"
+      "title_zh": "化学家导向的基于多样归纳偏置模型集成的逆合成方法",
+      "abstract_zh": "摘要：化学合成仍然是功能性小分子发现与制造中的瓶颈1–3。尽管近年来人工智能（AI）辅助合成规划迅速普及，但对其失效模式的详细理解尚未实现，且模型仍难以预测较少见却具有战略重要性的反应，以及与化学家预期不符的幻觉性、错误预测4–12。在这里，我们分析了当前AI模型的失效模式，并提出了RetroChimera：一种前沿逆合成模型，构建于两个具有互补归纳偏置的新开发组件之上，通过一种新的基于学习的集成策略整合。通过多个数量级数据规模上的实验，我们表明RetroChimera性能优于领先基线，展示了训练数据之外的鲁棒性，以及从每个反应类极少样本中学习的能力。采用成对和逐点两种设置，我们发现有机化学家更偏好RetroChimera的预测结果，而非公开参考反应和其他AI模型。最后，我们在两家制药公司的内部数据集上展示了零样本迁移和微调，显示在分布转移下具有强大的泛化能力。我们的工作证明了深度学习在日益挑战性的场景下进行准确合成预测的可行性。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1038/s41586-026-11162-7": {
       "doi": "10.1038/s41586-026-11162-7",
@@ -44205,28 +44530,28 @@
     "doi:10.1038/s41586-026-11255-3": {
       "doi": "10.1038/s41586-026-11255-3",
       "journal_slug": "nature",
-      "title": "Selective, Catalytic Oxidation of Polyethylene Surfaces",
+      "title": "Selective catalytic oxidation of polyethylene surfaces",
       "acquired_at": "2026-11-10T00:30:03",
-      "source_title_sha256": "bb9cdf6637f5d9be51aec6f4ca4860564b171311465b5bbdf2514d252290a6bd",
+      "source_title_sha256": "06c8f1757f9402428cc6e2980c1e05923b03837c71dcc6b3937c43fdf73b48b3",
       "source_abstract_sha256": "292496e0589382b68253c99a60ca3dd108c187d00f5a10dfbadaa54fece8eb7d",
       "source_abstract": "abstract",
       "title_zh": "聚乙烯表面的选择性催化氧化",
-      "abstract_zh": "聚乙烯（PE）因其卓越的材料性能和可扩展的生产方式，占据了所有塑料产量的四分之一以上。1 然而，未经处理的PE缺乏粘附等关键性能，这限制了其在许多商业应用中的使用。2 对聚乙烯进行选择性的聚合后功能化可以赋予聚合物原本不具备的性能，但均一介质中的全局功能化会干扰聚合物的整体性能。3–5 本研究展示了在固液界面对固体聚乙烯进行催化功能化。所得材料在保持聚乙烯熔点或抗拉强度等 bulk 性能的同时，表面性能得到增强。该方法仅需0.001摩尔百分比的铁催化剂，低于80°C即可使用廉价氧化剂将亚甲基选择性转化为酮基。与未经处理的聚乙烯相比，在固液界面功能化的聚乙烯对极性表面的粘附强度提高了高达90倍；与在均一介质中功能化且功能化水平相当的聚乙烯相比，其粘附强度提高了高达4倍。我们展示了表面酮基可进一步修饰以增强粘附强度，且在其他非选择性功能化方法后，这些增强的表面性能可持续更长时间。因此，在固液界面进行选择性的C–H键功能化，产生了通过 bulk 功能化方法或传统表面氧化无法获得的材料。",
-      "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "translated_at": "2026-11-10T18:31:37.270122+00:00"
+      "abstract_zh": "聚乙烯（PE）由于其卓越的材料性能和可扩展的生产，占所有塑料产量的四分之一以上。然而，原生PE缺乏许多其他商业应用所需的关键性能，例如粘附性。对PE进行选择性聚后功能化可以赋予原生聚合物所不具备的性能，但在均质介质中进行全局功能化会改变基质性能。在这里，我们证明了在固液界面对固体PE进行催化功能化。所得材料在保持基质性能（如熔点或拉伸强度）的同时，表面性能得到增强。该方法仅使用0.001摩尔%的铁催化剂并在80°C以下，利用廉价氧化剂将亚甲基单元选择性地转化为酮。在固液界面功能化的PE对极性表面的粘附强度是原生PE的高达90倍，也高出与可比功能化水平下在均质介质中功能化的PE的4倍。我们证明，表面酮可以进一步改性以增强粘附强度，并且所增强的表面性能维持时间比其他非选择性功能化后的时间更长。因此，固液界面上的选择性C-H键功能化能够制备出基质功能化方法或传统表面氧化无法获得的材料。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1038/s41586-026-11257-1": {
       "doi": "10.1038/s41586-026-11257-1",
       "journal_slug": "nature",
-      "title": "Atomic-scale spin sensing of a 2D d-wave altermagnet via helical tunneling",
+      "title": "Atomic-scale spin sensing of a 2D d-wave altermagnet via helical tunnelling",
       "acquired_at": "2026-11-10T00:30:03",
-      "source_title_sha256": "29cd44b010a8d691338972d05ccd615226e78b8f37891d8c2446c360581280f1",
+      "source_title_sha256": "02d93e821663ac03b791b0b5f7d4c64141bf912382a5edb22593c9671a054375",
       "source_abstract_sha256": "c4c4b9a964b90d19bd24bda63f1775906107e5f3c352894900c2ebbcc3c19481",
       "source_abstract": "abstract",
-      "title_zh": "原子尺度的螺旋隧道效应探测二维d波反铁磁体",
-      "abstract_zh": "反铁磁体同时具有动量相关的非相对论自旋分裂和零净磁化（1-6）。它们的定义晶体对称性将对偶自旋亚晶格在实空间中连接起来，并对动量空间中对称相关的电子态施加交替的自旋极化（1-3）。因此，识别此类有序态及其关联的自旋响应，需要在实空间和动量空间中进行原子尺度的自旋敏感测量，这是一项尚未实现的实验里程碑。在此，我们展示α-Bi4Br4这种高阶拓扑绝缘体的螺边缘态可作为扫描隧道显微镜的自旋选择性探针，用于探测KV2Se2O表面层中二维d波反铁磁有序态。原子级配准映射揭示了两个V亚晶格之间的空间关系以及密度波晶格调制，以及与棋盘状反铁磁有序态一致的实空间模式。场依赖光谱进一步发现了沿两个正交晶轴延伸的单向准粒子激发能量的反向位移，以及主要的体外磁响应。在动量空间，自旋敏感的准粒子干涉成像揭示了X和Y谷之间的偏置反转的d波各向异性，这些谷是对称配对的。这些结果为KV2Se2O表面的二维d波反铁磁提供了汇聚证据，并展示了螺边缘模式隧道作为量子材料原子尺度自旋探测的途径。",
-      "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "translated_at": "2026-11-10T03:19:17.154541+00:00"
+      "title_zh": "通过螺旋隧道进行原子尺度自旋感应的二维d波交替磁体",
+      "abstract_zh": "交替磁体同时具有动量相关的非相对论自旋分裂和零净磁化（1-6）。其特征晶体对称性在实空间中连接相反自旋子晶格，并在动量空间中的对称相关电子态上强加交替自旋极化（1-3）。因此，识别这种序及其相关的自旋反应需要在实空间和动量空间中进行原子尺度的自旋敏感测量，这是一项尚未实现的实验里程碑。本文表明，高阶拓扑绝缘体α-Bi4Br4的螺旋边缘模式可以作为一种自旋选择性扫描隧道显微镜探针，用于探测KV2Se2O表面层中二维d波交替磁序。原子登记成像揭示了两个V子晶格与密度波晶格调制之间的空间关系，以及与棋盘反铁磁序一致的实空间模式。场依赖光谱进一步发现，沿两个正交晶体轴延展的单向准粒子激发出现相反的能量位移，以及以面外为主的磁响应。在动量空间中，自旋敏感的准粒子干涉成像揭示了对称配对的X和Y谷之间随偏压反转的d波各向异性。这些结果为KV2Se2O表面二维d波交替磁性提供了汇聚证据，并证明螺旋边缘模式隧道是量子材料中原子尺度自旋感应的一种途径。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1038/s41586-026-11263-3": {
       "doi": "10.1038/s41586-026-11263-3",
@@ -47659,6 +47984,19 @@
       "abstract_zh": "前沿大语言模型被训练为逐步解决问题，生成人类可理解的推理文本。然而，这些推理token并非大语言模型内部计算的准确解释，这给可监控性带来了挑战。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/s42256-026-01335-4": {
+      "doi": "10.1038/s42256-026-01335-4",
+      "journal_slug": "nature-machine-intelligence",
+      "title": "Tensegrity continuum robots enable task-adaptive morphologies for cooperative behaviours",
+      "acquired_at": "2026-11-11T23:41:07",
+      "source_title_sha256": "95f2cc63610e23a15916aba76cb1ee91583a97166471e3bde4cb714e6e06ea2d",
+      "source_abstract_sha256": "128a35bc795cd4754234c7605860e0ec171e3f667d35d20b0c59a2192c0bdb80",
+      "source_abstract": "abstract",
+      "title_zh": "张性完整性连续机器人能够实现任务自适应形态以支持协作行为",
+      "abstract_zh": "能够针对不同任务和环境改变形态与行为的机器人，对适应性强、多功能系统具有极大前景。模块化重构机器人可通过单元对接和重新排列实现此类功能，但大多依赖缺乏结构柔顺性的刚性模块，导致能力有限。连续机器人通过柔性主干提供柔顺性，却无法自行重构为适应任务的多机器人配置。本文介绍了一种模块化重构机器人，它将基于张性完整性的柔顺主体与基于爪的连接机制相结合，兼顾了两种架构的优势。每个机器人可独立进行操控和移动，多个机器人还能自行重构为不同形态（例如链状、环状、分支状），以实现协作操控和移动。我们证明这些机器人在多种任务和环境中均具有能力，包括协调的物体操控与搬运、多模态运动，以及现实场景中的运动-操控任务。这些结果为适应性强、多功能的机器人集群奠定了基础，在制造、空间探索和搜索救援行动等领域具有广泛应用潜力。Saikot 等人展示了结合运动与操控的柔性模块化机器人单元，这些单元可物理连接并以适应任务的形式协作，以搬运物体、跨越缺口并在复杂地形中导航。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
     "doi:10.1038/s42256-026-01336-3": {
       "doi": "10.1038/s42256-026-01336-3",
