@@ -17,6 +17,7 @@ from app.services.normalizer import ArticleNormalizer
 from app.services.pubmed import PubMedClientService
 from app.services.rss_parser import RSSParserService
 from app.services.types import FetchResult, NormalizedArticle, SourceSpec
+from app.utils.dates import ensure_utc
 from app.utils.text import payload_checksum, slugify
 from sqlalchemy import select
 from sqlalchemy.exc import SQLAlchemyError
@@ -427,7 +428,7 @@ class PublisherAdapter(ABC):
         state.last_error = None
         state.consecutive_failures = 0
         state.cursor = None
-        timestamps = [article.published_at for article in articles if article.published_at]
+        timestamps = [ensure_utc(article.published_at) for article in articles if article.published_at]
         if timestamps:
             state.latest_seen_published_at = max(timestamps)
         db.commit()
