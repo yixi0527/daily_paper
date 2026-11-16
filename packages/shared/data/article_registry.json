@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T00:08:19.994935+00:00",
+  "updated_at": "2026-11-15T23:59:17.715627+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -3082,6 +3082,19 @@
       "abstract_zh": "人工智能评论 - 铁路基础设施安全依赖于及时检测轨道缺陷，缺陷检测的失败可能导致严重的运营中断和事故。...",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1007/s10462-026-11753-w": {
+      "doi": "10.1007/s10462-026-11753-w",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "AI-powered human action recognition of functional activities in stroke: a systematic review",
+      "acquired_at": "2026-11-15T23:46:33",
+      "source_title_sha256": "ceefe10d1caf1d1b759938cb0fdbfa329a67e1816926a394ce8691e39dfdb38a",
+      "source_abstract_sha256": "c0287032207206cf2a100b2ebd216d60488fb86511e42a3f662e652b4006c96e",
+      "source_abstract": "abstract",
+      "title_zh": "基于人工智能的卒中功能活动人体动作识别：系统综述",
+      "abstract_zh": "摘要 基于人工智能（AI）的人体活动识别（HAR）是检测卒中患者功能活动的一种有前景方法，有可能实现客观且生态学上有效的评估、监测和治疗。我们旨在综合卒中后基于人工智能的人体活动识别的现有证据，重点关注感知技术、目标活动、环境和模型架构。在PubMed、Embase、WOS和Scopus中检索，共有17项研究（涉及224名卒中患者）符合纳入标准。惯性测量单元是主要的感知模态（12/17，70.6%），多项研究表明使用单一设备识别相关功能活动是可行的。单传感器方法也用于家庭和模拟家庭环境，表明在临床环境之外实现可扩展和不干扰的监测具有潜力；然而，大多数研究是在受控临床环境中进行的（11/17，64.7%），迄今为止现实世界验证有限。卷积神经网络是最常用的深度学习架构，而随机森林是最常用的传统机器学习方法。多模态感知可能丰富活动表征，尽管更高的感知复杂性可能降低长期家庭监测的可行性。在解释现有证据时，应考虑到方法学和报告的局限性，包括混杂和可重复性方面的问题。总体而言，基于人工智能的单传感器人体活动识别似乎对低负担、连续且生态学上有效的监测具有前景。未来研究应优先开展日常环境中的纵向验证、透明报告代码和数据可用性，并纳入急性期和重度障碍卒中人群，以促进向客观监测、个性化康复和远程护理的临床转化。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
     "doi:10.1007/s10462-026-11754-9": {
       "doi": "10.1007/s10462-026-11754-9",
@@ -13236,6 +13249,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-15T00:08:19.994935+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.107090": {
+      "doi": "10.1016/j.neubiorev.2026.107090",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Artificial Intelligence for Behavioral Phenotyping: From Behavioral Neuroscience to Depression Research",
+      "acquired_at": "2026-11-15T23:57:44",
+      "source_title_sha256": "d8e13379cf482e4e0b97fb52306953d6e0deb5cc31c4a3a742cf240f5dca0f21",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "人工智能用于行为表型分析：从行为神经科学到抑郁症研究",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
     "doi:10.1016/j.neubiorev.2026.107091": {
       "doi": "10.1016/j.neubiorev.2026.107091",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
@@ -13248,6 +13274,19 @@
       "abstract_zh": "精神分裂症是一种复杂的精神疾病，其特征为显著的认知和知觉功能障碍，包括眼动障碍（如跳跃运动、平滑追踪和注视）。这些眼动异常越来越多地被研究作为精神分裂症的潜在生物标志物。然而，以往的研究结果不一且方法学差异较大。具体而言，现有文献缺乏对主要眼动类型及其相关度量（例如，注视次数）与涉及各类眼动的主要脑功能（例如，注意、记忆）的直接比较。本预注册元分析利用来自211项研究、共539个样本、涉及9675名精神分裂症患者和12086名健康对照的数据，克服了上述局限性。结果表明，反映抑制控制能力的抗冲动眼动错误率在区分精神分裂症患者与对照组方面最为有效且精确，表明该眼动可作为精神分裂症的潜在生物标志物。自由观察任务中的扫视路径长度，反映全局视觉扫描能力，被确定为第二优先候选指标。通过提供全面、定量的评估，本研究促进了对精神分裂症眼动功能障碍的理解，并有助于开发更客观的诊断工具和治疗策略。数据及其他相关材料可在 https://osf.io/jr9qs/ 获取。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107093": {
+      "doi": "10.1016/j.neubiorev.2026.107093",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "The disrupted navigational compass: pathophysiological mechanisms and clinical interventions for spatial navigation deficits",
+      "acquired_at": "2026-11-15T23:57:44",
+      "source_title_sha256": "d3d8c82f83adaa87e8d47beb898a573eac7a65da2019599b4f6b27804fd80e7c",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "受损的导航罗盘：空间导航缺陷的病理生理机制与临床干预",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -17883,12 +17922,12 @@
       "title": "Interdependent conditions for successful human–AI delegation",
       "acquired_at": "2026-11-14T07:34:47",
       "source_title_sha256": "dcd951b1088bf0cf2c0bd0ae8cda38e45124eac0580bd55bfb47ce3233d0c25f",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
+      "source_abstract_sha256": "debf6b69db6604e73564ae54d18338c9b7c857f577597bdaa4775d6870e8166f",
+      "source_abstract": "abstract",
       "title_zh": "成功的人机委托的相互依赖条件",
-      "abstract_zh": null,
+      "abstract_zh": "人们越来越依赖 AI 系统来处理从临床诊断到软件开发等重要任务。收益是真实的，但难以可靠实现。我们确定了四项成功委托的心理与结构条件：人对 AI 能力的准确评估、AI 不确定性的精准沟通、持续的人类监控能力以及兼容的任务结构。每项条件都已得到充分研究，但我们提出，它们构成了一个相互依赖的系统，每一项的有效性都取决于其他条件的状态。由于这些依赖关系是双向的，它们可能随时间形成良性循环或级联恶化，且改进单一条件可能失败或转移瓶颈。随着 AI 从咨询角色转向自主代理，这些动态应会更加剧烈。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-14T08:11:26.352478+00:00"
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
     "doi:10.1016/j.tics.2026.10.009": {
       "doi": "10.1016/j.tics.2026.10.009",
@@ -31215,6 +31254,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-28T23:36:08.853613+00:00"
     },
+    "doi:10.1038/d41586-026-03161-5": {
+      "doi": "10.1038/d41586-026-03161-5",
+      "journal_slug": "nature",
+      "title": "To heal sick cities, scientists and residents must work together",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "03cad9d2329cdd341c5cf4cbe8339fbb8bd234a54d0c575c8716d46822b6d1c2",
+      "source_abstract_sha256": "f52528eb16f353d3673096eb43465fbf1e7e6385ca7f1e57bb33ef6edcb4484f",
+      "source_abstract": "abstract",
+      "title_zh": "要治愈病态城市，科学家与居民必须携手合作",
+      "abstract_zh": "Tolullah Oni 已开发一个平台，将非洲侨民学者的知识资本转移回非洲大陆。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
     "doi:10.1038/d41586-026-03164-2": {
       "doi": "10.1038/d41586-026-03164-2",
       "journal_slug": "nature",
@@ -32307,6 +32359,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/d41586-026-03334-2": {
+      "doi": "10.1038/d41586-026-03334-2",
+      "journal_slug": "nature",
+      "title": "Huge mapping study reveals how your brain tracks what your body is feeling",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "4a106920035aa172c331c1df0e997deb1a62ddab565f4273b6a691fabfe1cac0",
+      "source_abstract_sha256": "358def57ec2c267e4587688f4ef3452f9124f37ed2aefcea2905254c5bc5e080",
+      "source_abstract": "abstract",
+      "title_zh": "大规模映射研究揭示大脑如何追踪身体感受",
+      "abstract_zh": "大脑深部岛叶区域的信号可让人产生发热、刺痛和恶心等感觉。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
     "doi:10.1038/d41586-026-03336-0": {
       "doi": "10.1038/d41586-026-03336-0",
       "journal_slug": "nature",
@@ -32488,6 +32553,19 @@
       "abstract_zh": "考古学家将中国的头骨碎片鉴定为这一群古人类亲属所归属。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1038/d41586-026-03376-6": {
+      "doi": "10.1038/d41586-026-03376-6",
+      "journal_slug": "nature",
+      "title": "Scientists put a salt marsh in a giant wave-machine: here's what they learned",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "ed23fbdc060c68cbed719fc7fea589a3bc170b08634c5fc59857c14d2b083fce",
+      "source_abstract_sha256": "d6e48fea016cb93c88038209d6a84d5bd4cb1ce80b746bd02d53eccc1dbc6339",
+      "source_abstract": "abstract",
+      "title_zh": "科学家将盐沼放入巨型波浪机：他们学到了什么",
+      "abstract_zh": "听取科学世界最重大的故事 | 2026年10月21日",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
     "doi:10.1038/s41380-026-03624-1": {
       "doi": "10.1038/s41380-026-03624-1",
@@ -39886,6 +39964,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1038/s41586-026-10733-y": {
+      "doi": "10.1038/s41586-026-10733-y",
+      "journal_slug": "nature",
+      "title": "GRP75-dependent SIMPA mediates inter-organellar quality control",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "06eee7503f6cf7feccaa0f2cc3d1bf64cb21d1b44aae192dc7bec5dbd01c82c7",
+      "source_abstract_sha256": "743a4a500be83de9b12f686b1ef83e7547419a8ba7638c2aace277b358b9edff",
+      "source_abstract": "abstract",
+      "title_zh": "GRP75依赖性SIMPA介导的跨细胞器质量控制",
+      "abstract_zh": "线粒体由双层膜包裹，是半自主细胞器，因此对全局和内部蛋白稳态应激极为敏感1。为维持线粒体完整性和细胞健康，进化出了多种蛋白稳态和跨细胞器水平的监控机制2–7。然而，蛋白稳态损伤如何跨细胞器传递应激信号以及质量监控机械如何协调这些功能的精确机制仍不清楚。我们在此报道，在蛋白稳态应激下，受损的线粒体蛋白被隔离形成应激诱导的线粒体蛋白聚集体（SIMPA），以空间受限的方式激活特定的质量控制机制而不扰动线粒体网络。定量蛋白组学和相关光-电镜分析揭示，SIMPA通过线粒体-内质网接触位点或线粒体相关膜介导跨细胞器通讯。从机制上看，GRP75协调SIMPA的生成，并通过线粒体-内质网接触位点或线粒体相关膜局部激活内质网未折叠蛋白反应通路，以靶向清除SIMPAs。在功能上，在细胞和肝脏疾病模型中，我们发现GRP75依赖的SIMPA信号级联减轻线粒体应激，并在蛋白毒性应激下维持线粒体完整性。总体而言，我们表明，SIMPAs作为蛋白质凝聚体，作为线粒体质量控制的中心跨隔室通讯枢纽发挥作用，支持细胞和有机体的适应性。蛋白毒性应激驱动GRP75依赖性蛋白聚集体的形成，通过线粒体-内质网接触位点进行信号传递以激活靶向质量控制通路，从而实现受损蛋白的选择性清除并维持线粒体完整性。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
     "doi:10.1038/s41586-026-10734-x": {
       "doi": "10.1038/s41586-026-10734-x",
       "journal_slug": "nature",
@@ -44735,6 +44826,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/s41586-026-11145-8": {
+      "doi": "10.1038/s41586-026-11145-8",
+      "journal_slug": "nature",
+      "title": "The contribution of salt marshes to wave attenuation during extreme storms",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "0ae518dc0ab4636068e5e1e0d6cab7bff5e56d489b08da7bd41ff07a5f1d5673",
+      "source_abstract_sha256": "1ff0706986364c0575bca164b1d9186b1109c81ff2d0788640b3f52ce6f60341",
+      "source_abstract": "abstract",
+      "title_zh": "盐沼在极端风暴期间对波浪衰减的贡献",
+      "abstract_zh": "盐沼通过其升高的沼泽平台和地上植被衰减风浪，从而保护海岸线。要对这种服务在气候变化背景下的持续性建立信心，需要了解极端风暴如何破坏平台和植被；然而，缺乏对极端事件下盐沼—波浪相互作用的综合定量认识。研究人员将完整的盐沼转移到世界上最大的波浪水槽之一，并随后使其暴露于逐渐增高的波浪中，显著波高高达2米。研究表明，盐沼基质在累积波浪作用下几乎不受侵蚀，能够持续存在。相比之下，植被在持续的波浪作用下逐渐受损，从而逐渐降低与植被相关的波浪衰减。结果强调，植被在低能量沼泽海岸（高达1米）上衰减波浪最为有效，衰减超过10%（高达50%），而在高能量沼泽海岸（波高超过1米）上的衰减不超过10%。我们的全球评估支持根据波浪水槽实验区分低能量和高能量条件。研究结果表明，盐沼平台在极端波浪事件中保持稳定，而盐沼植被的显著波浪衰减主要局限于低能量沼泽海岸。盐沼平台在极端波浪下抵抗侵蚀，但植被损伤会降低波浪衰减；植被的显著波浪衰减主要局限于波高低于1米的低能量沼泽海岸。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
     "doi:10.1038/s41586-026-11150-x": {
       "doi": "10.1038/s41586-026-11150-x",
       "journal_slug": "nature",
@@ -44747,6 +44851,19 @@
       "abstract_zh": "IDH突变的星形胶质瘤和少突胶质细胞瘤是常见于50岁以下成年人的II型胶质瘤，对治疗的反应各异1–3。为了阐明疾病进进展的基因驱动因素，我们利用全基因组和全外显子测序对183例IDH突变胶质瘤患者的纵向采集肿瘤样本进行了表征。样本来源于胶质瘤纵向分析（GLASS）联盟4。大多数主要手术样本根据组织学分级为II级（星形胶质瘤73%，少突胶质细胞瘤93%）。我们验证了已知的肿瘤进展基因标记，包括高突变率和CDKN2A或CDKN2B的同源性缺失（以下简称CDKN2A/B）5，并发现了区分星形胶质瘤和少突胶质细胞瘤进化轨迹的基因改变。无论治疗情况如何，复发性少突胶质细胞瘤中新获得的磷脂酰肌醇3-激酶（PI3K）和NOTCH1突变与肿瘤突变负荷增加相关。然而，在复发性星形胶质瘤中，无论治疗情况如何，获得性 focal 癌基因扩增和CDKN2A/B同源性缺失与染色体不平衡增加有关，这与染色体不稳定性的标志如染色体碎片化和全基因组复制标志共同出现。在两种IDH突变胶质瘤中，我们观察到获得性改变、基因组范围广泛的变化和预后恶化趋势，表明正在选择对治疗产生耐受的克隆。与两种肿瘤类型均关联的治疗性替莫唑胺与突变特征SBS11和SBS119有关，而放疗相关的ID8特征则特异性地在星形胶质瘤中增加。我们表明，少突胶质瘤和星形胶质瘤的基因组在肿瘤进展和治疗的选择性压力下以不同方式适应，表明这两种肿瘤对治疗诱导的DNA损伤的反应不同。对星形胶质瘤或少突胶质瘤患者的纵向基因组分析表明，这两种肿瘤在对治疗产生耐受的机制上存在差异：星形胶质瘤积累拷贝数变异和染色体不稳定性标志，而少突胶质瘤则获得新的驱动突变。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/s41586-026-11152-9": {
+      "doi": "10.1038/s41586-026-11152-9",
+      "journal_slug": "nature",
+      "title": "Cold activates a BH2 metabolic network promoting longevity and proteostasis",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "b7f9ac948e6e23a2e3531f1ac0959c25025fa7eda9c447a39ef1e7eafdad70fc",
+      "source_abstract_sha256": "2e50eee91d0cf15ec2ba660fb3174d9001d9a52ee66b62e49aa54ebfaffb169b",
+      "source_abstract": "abstract",
+      "title_zh": "冷激活BH2代谢网络，促进长寿与蛋白稳态",
+      "abstract_zh": "摘要 适度低温可延长多种物种的寿命并促进健康，但其潜在分子机制尚不清楚。本文在秀线隐杆线虫中定义了一种由代谢物驱动的、跨多组织的信号系统，将低温与增强的寿命和蛋白稳态联系起来。低温上调生物合成酶CAT-4（人类中为GCH1）的表达，增加二氢生物蝶呤（BH2）的产生，BH2是生物活性辅因子四氢生物蝶呤（BH4）的可运输储库。BH2在肌肉中产生，并运输至远端组织，包括肠道和神经元，在那里由修复酶DHFR-1转化为BH4。BH4作为苯丙氨酸羟化酶PAH-1的必需辅因子，促进酪氨酸合成并延长寿命。该BH2–BH4轴还可在衰老过程中预防与疾病相关的蛋白聚集及随后的神经元功能障碍。重要的是，专门在肌肉中增加BH2合成足以促进长寿，并在正常或升高温度下抑制远端组织的病理蛋白聚集。在人类细胞中，BH2或酪氨酸补充可减少与亨廷顿病相关的多谷氨酰胺扩增蛋白聚集，以及导致肌萎缩侧索硬化症的TDP-43和FUS的突变体。综上，这些发现将BH2确定为一种冷诱导的代谢物，其合成、组织间转运及转化为生物活性BH4可维持全机体蛋白稳态并延长寿命。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
     "doi:10.1038/s41586-026-11153-8": {
       "doi": "10.1038/s41586-026-11153-8",
@@ -44825,6 +44942,19 @@
       "abstract_zh": "摘要：化学合成仍然是功能性小分子发现与制造中的瓶颈1–3。尽管近年来人工智能（AI）辅助合成规划迅速普及，但对其失效模式的详细理解尚未实现，且模型仍难以预测较少见却具有战略重要性的反应，以及与化学家预期不符的幻觉性、错误预测4–12。在这里，我们分析了当前AI模型的失效模式，并提出了RetroChimera：一种前沿逆合成模型，构建于两个具有互补归纳偏置的新开发组件之上，通过一种新的基于学习的集成策略整合。通过多个数量级数据规模上的实验，我们表明RetroChimera性能优于领先基线，展示了训练数据之外的鲁棒性，以及从每个反应类极少样本中学习的能力。采用成对和逐点两种设置，我们发现有机化学家更偏好RetroChimera的预测结果，而非公开参考反应和其他AI模型。最后，我们在两家制药公司的内部数据集上展示了零样本迁移和微调，显示在分布转移下具有强大的泛化能力。我们的工作证明了深度学习在日益挑战性的场景下进行准确合成预测的可行性。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1038/s41586-026-11161-8": {
+      "doi": "10.1038/s41586-026-11161-8",
+      "journal_slug": "nature",
+      "title": "The anatomy of a personal health agent",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "0a1d1650551a5dde275e280338d5fa82d78c66337b746cdb12d56374b0025858",
+      "source_abstract_sha256": "1841830538b2c30a87839aa663b9382ec2cd708a40e1cdcebee2a4aab4ac1141",
+      "source_abstract": "abstract",
+      "title_zh": "个人健康代理人的解剖学",
+      "abstract_zh": "摘要 大型语言模型正在催生新一代健康代理人，但它们在日常健康环境中应对个人多样化需求的能力尚未得到充分探讨 1,2。这里，我们开发了一个全面的个人健康代理人，它能够基于消费级健康设备和医疗记录中的多模态数据进行推理，以提供个性化健康支持。通过对网络搜索和健康论坛查询的分析，以及与最终用户和健康专家开展的以用户为中心的研究，我们识别出四个关键用户旅程：一般健康知识、个人数据解读、健康建议以及症状评估。这些旅程启发了三个专家子代理：(1)一个数据科学代理人，用于分析纵向可穿戴设备和医疗数据，并结合人口层面统计来为数值洞察提供背景；(2)一个健康领域专家代理人，用于将个人和情境数据与健康知识相结合以生成个性化洞察；以及(3)一个健康教练代理人，用于整合洞察、支持多轮交互和目标设定、应用特定的心理策略并追踪进度。我们将这些能力整合到个人健康代理人中，这是一个用于动态、个性化健康交互的开源多代理框架。我们使用自动评估和人工评估，在11个基准任务上评估了子代理和全系统，涉及超过7000条标注以及来自健康专家和最终用户的1350小时工作。这代表了迄今为止对个人健康代理人最全面的评估，为更广泛地改善高质量个性化健康支持的可及性提供了具体基础。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
     "doi:10.1038/s41586-026-11162-7": {
       "doi": "10.1038/s41586-026-11162-7",
@@ -45008,6 +45138,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
     },
+    "doi:10.1038/s41586-026-11183-2": {
+      "doi": "10.1038/s41586-026-11183-2",
+      "journal_slug": "nature",
+      "title": "Zeolite-catalysed olefin carbonylation based on tuning spatial confinement",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "243147ad077fca6f5385ad904d09e69a46461cc9ae043b612248b2a07eecae9c",
+      "source_abstract_sha256": "407b6f1fa14a52c52b22d80b05cbff1a6d578522e2b9784af0c0ce16f6779cb6",
+      "source_abstract": "abstract",
+      "title_zh": "基于空间限域调控的沸石催化烯烃羰基化反应",
+      "abstract_zh": "羰基化反应是用于生产醛、羧酸和酯的重要过程1–5，通常由配体和碘化物促进剂的均相金属络合物催化6–12。Koch报告称矿物酸中的质子也可催化羰基化反应13。先前研究表明，布伦斯坦酸性沸石可作为异相Koch型催化剂催化醇和烯烃的羰基化反应，但此类反应产物仅限于叔羧酸14–18。本文表明，在沸石中有针对性地利用空间限域并配合较高的CO/烯烃比，可突破此限制。我们发现，采用FER沸石且CO/烯烃比为360时，烯烃羰基化可将一级和二级羧酸作为主要产物；乙烯羰基化至丙酸（PA）在100 h内选择性达到80%，丙烯羰基化至异丁酸（IBA）在750 h内选择性达到95%。当CO/烯烃比分别降至24和90时，丙烯和乙烯的羰基化选择性分别下降至61%和57%。结合理论计算的实验表明，FER沸石八元环（8-MR）空腔中的T2-O5是乙烯羰基化的主要活性位点，而十元环（10-MR）中的T3-O1是丙烯羰基化的主要活性位点。我们的发现为烯烃羰基化开辟了新方向，并为开发新型沸石基羰基化工艺提供了关键见解。结果表明，使用具有合适孔隙结构的沸石并配合较高的CO/烯烃比，可催化烯烃羰基化并产生一级和二级羧酸作为主要产物。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
     "doi:10.1038/s41586-026-11184-1": {
       "doi": "10.1038/s41586-026-11184-1",
       "journal_slug": "nature",
@@ -45072,6 +45215,58 @@
       "abstract_zh": "Nature - 作者更正：通过扭曲屈曲实现手性超材料的大量可回收弹性能量",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-13T23:48:50.721961+00:00"
+    },
+    "doi:10.1038/s41586-026-11192-1": {
+      "doi": "10.1038/s41586-026-11192-1",
+      "journal_slug": "nature",
+      "title": "Enzyme-embedded polyesters for accelerated biodegradation in the deep sea",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "6e4ecf26772797414e9b8ea060fd1eff225e894728321d7d8bb62a087cf564d2",
+      "source_abstract_sha256": "73085f20888689a2df3856e5007c7756bbe671606273ba4137f6263dbdb6e902",
+      "source_abstract": "abstract",
+      "title_zh": "酶嵌入型聚酯：加速深海中生物降解",
+      "abstract_zh": "摘要 持久性塑料在海洋中的积累正在造成广泛的环境问题 1–3 。一些商业可得的可堆肥塑料 4–7 为解决这些问题而开发，可在工业堆肥条件下高效降解；然而，它们在海洋环境（尤其是深海）中的降解仍然有限 8–10 。本研究表明，将酶热嵌入可堆肥聚酯（丁二醇琥珀酸酯（PBS）、丁二醇琥珀酸-己二酸酯（PBSA）、ε-己内酯聚合物（PCL）和丁二醇己二酸-对苯二甲酸酯（PBAT））中，可显著加速其在沿海和深海环境（水深 2–6 m 至 5,503 m）中的降解。酶嵌入型聚酯在深度为 757 m 的深海环境下在 5 个月内实现了近乎完全降解。此外，在深度 5,503 m 的深海海底极端条件下，也观察到酶嵌入型聚酯的中等程度生物降解。在沿海海水中，掺入微量（0.1 wt%）酶的薄膜发生了快速降解。酶嵌入型聚酯的机械性能与无酶聚酯相似。化学分析证实了低分子量降解产物的生成，生化需氧量测量支持酶嵌入型聚酯的矿化。酶嵌入策略可增强可堆肥聚酯在海洋中的降解，并代表了解决海洋塑料污染的潜在方案。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
+    "doi:10.1038/s41586-026-11194-z": {
+      "doi": "10.1038/s41586-026-11194-z",
+      "journal_slug": "nature",
+      "title": "Drought and disease trigger novel interactions among top predators",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "2ea1c587c1698fcdefffdbc63eaf0df45324bfcb3073c8ba25eea062566d2b8f",
+      "source_abstract_sha256": "62e71760ef17261e31c60bbc2ce34e34f4ac48a8c2ab72a1ec41c2300cdf494b",
+      "source_abstract": "abstract",
+      "title_zh": "干旱与疾病诱导顶级捕食者之间的新型相互作用",
+      "abstract_zh": "摘要 物种间相互作用日益被认为是气候变化对生态系统影响的关键决定因素。然而，我们对气候扰动如何影响顶级脊椎动物捕食者之间的相互作用知之甚少。本文表明，当一种新出现的疾病导致共同猎物（野兔）数量下降后，经过数十年中性共存，一种哺乳动物食肉动物（猞猁）开始大量捕食一种顶级猛禽（鸢）。这些捕食事件仅在干旱条件下以及猞猁在猛禽巢穴下发现野兔残骸时发生，符合移除潜在竞争者的特征。由干旱诱发的猞猁捕食降低了猛禽的终身繁殖成功率，并引发了领地放弃和扩散，暗示捕食者之间可能出现新的军备竞赛。猛禽数量的下降与一种食虫鸟类（一种小猫头鹰）数量的增加相关联，表明这种新相互作用有可能影响更低营养级。这些结果强调了饮食灵活性和活动能力作为压力源韧性的重要中介因素的重要性。未来，多种人为压力源的协同效应可能会重塑许多顶级捕食者的相互作用和生态角色，对整个生态系统产生潜在的级联后果。预测全球变化未来影响的关键可能在于理解行为灵活性和相互作用的关键物种如何应对相互作用的冲击。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
+    "doi:10.1038/s41586-026-11205-z": {
+      "doi": "10.1038/s41586-026-11205-z",
+      "journal_slug": "nature",
+      "title": "Programmable design of functional proteins from natural language",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "010f12ed307223eac17bf21141f1b2147538f66afdbe40cc0660c722df280d1b",
+      "source_abstract_sha256": "e31481f19824631b9b358ad66192081942ca18cc72d70ef96b8ba328f2ec40a9",
+      "source_abstract": "abstract",
+      "title_zh": "基于自然语言的功能蛋白可程序化设计",
+      "abstract_zh": "对生物功能进行编程——设计定制蛋白以执行指定的分子任务——是分子工程的基础目标之一。然而，现有设计模型根本上仍受到限制1–3：它们通常需要以天然蛋白作为优化起点，或者需要将功能目标手动重新表述为几何和序列层面的约束，以指导候选物生成。在此，我们引入了 Pinal，这是一种具有160亿个参数的基础模型，能够根据期望功能的自然语言描述设计候选蛋白。Pinal在17亿个合成标注的蛋白-文本对上训练，将功能意图与蛋白质序列和结构相关联。在计算评估中，生成的候选物结合了高预测可折叠性、与功能描述的一致性以及序列多样性，为优先选择可验证的实验设计提供了依据。我们将 Pinal 应用于四个不同的设计任务——一种荧光蛋白、一种对位苯二甲酸乙二醇酯水解酶、一种酒精脱氢酶和一种代谢 H-蛋白——并在每种情况下实验观察到了预期功能，包括两种设计酶的催化活性。在无需迭代实验优化的情况下，由 Pinal 设计的 H-蛋白使多酶 CO2 固定途径中的产物滴定相对于相应的本源大肠杆菌 H-蛋白提高了 1.7 倍。这些发现支持自然语言作为蛋白质设计候选生成的高层接口，使可程序化探索成为可能，并减少了对手动指定的结构或序列约束的依赖。 Pinal 是一种具有 160 亿参数的人工智能模型，能够从自然语言描述中设计功能蛋白，展示了经实验验证的活性和改善的 CO2 固定产物产量，且无需迭代优化。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
+    "doi:10.1038/s41586-026-11207-x": {
+      "doi": "10.1038/s41586-026-11207-x",
+      "journal_slug": "nature",
+      "title": "A single archaeon couples long-chain fatty acid oxidation to methanogenesis",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "9203caf88f9ed9d252db90d1ac8c4ec469e6721354038b0ef9f4dd92d8ae33ee",
+      "source_abstract_sha256": "5ccc2c3b4ff1a4ea8fc0ba02035e22fc3772f9d57f138ac1cac5f31d7e331681",
+      "source_abstract": "abstract",
+      "title_zh": "单一古菌将长链脂肪酸氧化与产甲烷作用耦合",
+      "abstract_zh": "将复杂有机化合物厌氧降解为甲烷和二氧化碳的现象在深部地下生物圈中普遍存在，长期以来被认为需要共生合作，产甲烷菌被局限于使用简单的C1和C2底物进行终末代谢。热力学考量、多组学分析和微域实验表明，古菌谱系能够降解复杂底物进行产甲烷作用1–6。然而，纯培养中的实验验证一直缺乏。在此，我们报道从中国石油储层中分离出一种嗜热古菌Methanoglobus dolicholipophagus AA-75，其隶属于考古球菌。AA-75株不仅将甲醇转化为甲烷、二氧化碳和乙酸盐，还利用C7:0至C18:0的饱和脂肪酸以及包括C16:1、C18:1和C18:2在内的不饱和脂肪酸产生甲烷。我们将后者称为脂类依赖型产甲烷作用，它将脂肪酸β-氧化与Wood–Ljungdahl途径及规范的甲基-四氢甲酰肟：辅酶甲基转移酶和甲基-辅酶甲基还原酶复合物，以及一种细胞内电子转移系统相结合。甲醛-甲醇支路可能在产甲烷过程中作为C1代谢的辅助途径。由硬脂酸产生的甲烷呈中度13C富集（δ13C–CH4 = −40.0‰至−36.3‰），与规范产甲烷途径特征的强13C耗竭明显不同。这些发现表明产甲烷菌能够作为复杂有机物的初级降解者，挑战了经典的共生范式，并呼吁改进当前关于深部地下生物圈碳循环的模型。Methanoglobus dolicholipophagus AA-75是一种从中国石油储层中分离出的嗜热古菌，能将甲醇转化为甲烷、二氧化碳和乙酸盐，并利用饱和和不饱和脂肪酸产生甲烷。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
     "doi:10.1038/s41586-026-11239-3": {
       "doi": "10.1038/s41586-026-11239-3",
@@ -45267,6 +45462,19 @@
       "abstract_zh": "在自由活动的动物中揭示分布式皮层电路如何协调行为，仍然是系统神经科学的核心挑战，受限于有限的视野、低通量以及现有微型显微镜所需的有线连接1-4。在此，我们介绍Airscope，一款无线体内显微镜，实现4微米横向分辨率，覆盖6毫米视野，帧率12.5 Hz，重量仅1.0克。非球面镜设计使总轨道长度比以往任何微型显微镜1,2,5,6短2.84倍，同时匹配基准台一光子显微镜的神经元产出；量身定制的无线链接支持每动物超过8,500个神经元的钙成像（增加25倍）。搭配零-shot行为分析器，Airscope可在丰富的行为条件下实现无线皮层成像，包括室内丰富的环境、游泳实验以及多器官植入，并可同时记录多只动物的活动。利用Airscope，我们展示了无线电皮层成像在多种行为范式中的多样化应用。我们鉴定出多个背外侧皮层活动模式，这些模式与支配行为特征相关，并展示背外侧皮层人群活动可前瞻性解码配对动物之间的竞争结果。我们在迷宫探索期间观察到了与奖励位置相关的皮层活动模式，并通过同时的脑-脊髓记录表征了脊髓向皮层的Granger因果影响，这在恐惧条件作业中得以实现。通过将大规模、细胞分辨率的记录与不受约束的行为相结合，Airscope使自然主义的多动物皮层记录在实验上变得可行，并为系统神经科学提供了一种广泛可及的技术。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/s41586-026-11317-6": {
+      "doi": "10.1038/s41586-026-11317-6",
+      "journal_slug": "nature",
+      "title": "De novo design of enantioselective artificial metalloenzyme photocatalysts",
+      "acquired_at": "2026-11-15T23:41:48",
+      "source_title_sha256": "d721dfc3f09a814fb9ddb652904e168de71e0858e8af365275c27b4643af94ff",
+      "source_abstract_sha256": "e19b9dcbf99672482176e0d870145861220aed3d681fd80fc74fec9d02d8d833",
+      "source_abstract": "abstract",
+      "title_zh": "对映选择性人工金属酶光催化剂的从头设计",
+      "abstract_zh": "创建可使易得金属催化剂具有对映选择性的蛋白质支架的能力，可能重新定义不对称催化的格局。人工金属酶（ArMs）是将合成金属辅因子与蛋白质支架相结合的混合催化剂，为实现这一目标提供了潜在途径，但支架发现一直受限于试错方法以及天然蛋白质的功能局限性。1–5 对于金属多吡啶光催化剂而言，这一挑战尤为迫切，此类催化剂广泛用于可见光化学，但在蛋白质支架内尚未实现高度对映选择性的光催化。本研究表明，生成式蛋白质设计6–8可以创建从头构建的支架，选择性结合这些光催化剂，而定向进化将由此产生的人工金属酶转化为高效、高度对映选择性的光催化剂9。进化后的蛋白质支持多种光驱动反应、高催化剂转化数和催化剂回收，并可与商业上可购的外消旋金属络合物协同工作。光谱研究表明，蛋白质环境延长了光催化剂的激发态寿命，并在辅因子附近组织底物，改变能量转移并控制立体选择性。这些发现确立了从头蛋白质设计作为构建缺乏天然蛋白质伙伴的合成金属络合物的功能支架的途径，并提供了一种结合蛋白质设计与进化以控制非天然催化化学的策略。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
     "doi:10.1038/s41593-026-02264-6": {
       "doi": "10.1038/s41593-026-02264-6",
