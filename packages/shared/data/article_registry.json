@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T23:59:17.715627+00:00",
+  "updated_at": "2026-11-17T00:03:55.246175+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -13070,15 +13070,15 @@
     "doi:10.1016/j.neubiorev.2026.107073": {
       "doi": "10.1016/j.neubiorev.2026.107073",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "The Separation-Distress Network as a Transdiagnostic Mechanism Linking Relational Adversity, Social Pain, and Psychopathology",
+      "title": "The separation-distress network as a transdiagnostic mechanism linking relational adversity, social pain, and psychopathology",
       "acquired_at": "2026-11-10T01:05:54",
-      "source_title_sha256": "4d137d78cb247253135f50a0b83a98dfeff9bdee555c1c010d20e8432432134f",
+      "source_title_sha256": "5f9c43d2ca674a7ed8ed8fb4c1deb19434dda1fca2569d9a1ca9c91c396a6072",
       "source_abstract_sha256": "698c2fc6d23409fa8e456c859d5ae1ecdf92702b6b5b43340905786518e7deb0",
       "source_abstract": "abstract",
-      "title_zh": "分离痛苦网络作为跨诊断机制，连接人际逆境、社交疼痛与精神病理学",
-      "abstract_zh": "人际创伤是心理健康障碍发展的主要因素。这种关联可能反映了人类和其他哺乳动物的社会性，其生存依赖于维持稳定的社会联系。当这些联系受到威胁或中断时，个体会经历社交疼痛，这是由哺乳动物分离痛苦网络介 distress 的反应。在早期发育过程中，该网络对维持与照顾者的接近性敏感，因为独立生存尚未可能。来自动物行为学、精神动力学与依恋理论以及社会与情感神经科学的证据支持该网络的功能。由于哺乳动物大脑天生倾向于形成社会联系，不良的经历会扰乱情绪社会发展并增加精神病理学易感性。分离痛苦的神经亚基包括前扣带皮层、腹侧纹状体、纹状体外侧核、背侧腹旁核、腹外侧丘脑和灰质周围灰质，内源性阿片肽和糖皮质激素作为分离痛苦反应的关键神经化学调节剂。分离痛苦和不良的经历还会改变与精神病理学相关的生理系统，包括轴突-肾上腺皮质激素轴、自主神经系统活动、炎症以及脑结构和连接性。本文论证人际创伤与社交疼痛由跨主要哺乳动物物种保守的进化亚核分离痛苦网络介导。该网络的功能紊乱可能是包括抑郁症、社交焦虑、自杀、物质使用障碍、边缘型人格障碍及其他精神疾病在内的多种精神疾病共同潜在机制之一。了解将不良经历、分离痛苦激活与社交疼痛联系起来的过程，可能为不同障碍的病因和治疗提供见解。",
-      "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "translated_at": "2026-11-10T03:19:17.154541+00:00"
+      "title_zh": "作为跨诊断机制的分离-痛苦网络，联结关系逆境、社会性疼痛与精神病理",
+      "abstract_zh": "关系性创伤是精神健康障碍发展的主要诱因。这一关联很可能反映了人类及其他哺乳动物的社会性，其生存取决于维持稳定的社会纽带。当这些纽带受到威胁或破坏时，个体会体验社会性疼痛，这是由哺乳动物分离-痛苦网络介导的苦恼反应。在早期发育期，该网络对与照护者维持近距离具有敏感性，因为此时独立生存尚不可能。来自动物学、精神分析与依恋理论、以及社会与情感神经科学的汇聚证据支持该网络的功能。由于哺乳动物大脑天生倾向于形成社会纽带，不良的关系经历可能破坏社会情绪发育，并增加精神病理的易感性。分离痛苦的神经底物包括前扣带回皮层、腹侧中隔、丘脑终丘核、背侧前视区、背侧内侧丘脑和导水管周围灰质，内源性阿片类和糖皮质激素作为分离-痛苦反应的关键神经化学调节剂。分离痛苦及不良关系经历也会改变与精神病理相关的生理系统，包括HPA轴、自主神经系统活动、炎症以及脑结构和连接性。本文认为，关系性创伤和社会性疼痛由一种在主要哺乳动物物种间共享的进化保守的皮层下分离-痛苦网络介导。该网络的失调可能是抑郁症、社交焦虑、自杀倾向、物质使用障碍、边缘性人格障碍及其他精神疾病的一个共同机制。理解不良关系经历、分离痛苦激活及社会性疼痛之间的联系过程，可能为各类障碍的病因和治疗提供洞察。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107074": {
       "doi": "10.1016/j.neubiorev.2026.107074",
@@ -13213,15 +13213,15 @@
     "doi:10.1016/j.neubiorev.2026.107087": {
       "doi": "10.1016/j.neubiorev.2026.107087",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "Convergent and Divergent Neural Signatures of Cue-Induced Response in Substance and Behavioral Addictions: A Coordinate-Based Neuroimaging Meta-Analysis",
+      "title": "Convergent and divergent neural signatures of cue-induced response in substance and behavioral addictions: A coordinate-based neuroimaging meta-analysis",
       "acquired_at": "2026-11-12T23:57:03",
-      "source_title_sha256": "64bff5052b12de08425cb407b16158f457afe197dd99627397aad350b0757002",
+      "source_title_sha256": "45a6876c64f6fe22ed1b9bc417e973dd91a60d58d02e61671a298ab8ca32fe7e",
       "source_abstract_sha256": "21fae002659d6243154de03a65be9c47830870877e0206ed4fa3d4a22cc5a603",
       "source_abstract": "abstract",
-      "title_zh": "物质和行为成瘾中线索诱导反应的融合与发散神经标志物：基于坐标的神经影像学元分析",
-      "abstract_zh": "与成瘾相关的线索会引发渴望并诱发复发，但物质使用障碍（SUDs）和行为成瘾（BAs）是否共享一个普遍的线索反应性神经生物学核心仍未解明。我们利用种子映射-主体图像置换（SDM-PSI）进行坐标基础元分析，综合了全脑 fMRI 研究，比较了严格诊断的 SUDs 和 BAs 与健康对照组之间视觉诱发的线索反应性。截至 2026 年 9 月 12 日的更新系统检索筛选出 50 篇合格文章，包含 53 个独立对比和 2578 名参与者。所有成瘾类型的合并分析显示，在前中回、中央前回以及一条中线中脑区域出现收敛的线索诱发激活。然而，正式的 SUD ∩ BA 重合分析未发现经家系误差（FWE）校正的共享聚类。直接比较显示，SUDs 相对于 BAs，左侧海马、前膝前扣带回皮层和楔前叶激活更明显。重要的是，左侧海马和楔前叶的差异经年龄调整后仍然存在；此外，当将分析限制在高度控制的线索对照范式时，海马发现仍然稳健，而楔前叶发现则在图片线索模式中保留。进一步，探索性临床特征分析表明，线索诱发的神经反应与特定临床状态和治疗变量（例如海洛因使用障碍的美沙酮维持治疗）相关，突显了临床症状特征对这些区域性功能标志物的调节作用。总体而言，结果推动了对记忆和自我相关过程，以及控制或动作相关过程的进一步研究。这些发现为开发针对性临床干预措施提供了关键基础，以区分通用跨诊断神经调节靶点与针对特定临床和人口统计特征的疾病特异性治疗。",
+      "title_zh": "物质和行为成瘾中诱发性反应的汇聚与分歧神经特征：坐标基础神经影像元分析",
+      "abstract_zh": "与成瘾相关的线索会引发渴望并诱发复发，但物质使用障碍（SUDs）和行为成瘾（BAs）是否共享通用的神经生物学线索反应核心仍未解明。我们利用种子基础映射受试者图像排列（SDM-PSI）进行坐标基础元分析，综合了严格诊断的SUDs和BAs相对于健康对照的视觉诱发线索反应的全脑fMRI研究。截至2026年9月12日的更新系统检索筛选出50篇合格文章，包含53个独立对比和2,578名参与者。所有成瘾的合并分析显示，在前扣带回、前中央回和中线中脑区存在线索诱发的激活。然而，正式的SUD∩BA交集分析未发现经家庭误差率（FWE）校正的共享簇。直接比较显示，SUDs相对于BAs在左海马、前峰前扣带回皮层和楔前叶的激活更大。重要的是，左海马和楔前叶的差异在年龄调整后仍然存在；此外，海马发现在将分析限制为高度受控的线索与中性范式时仍然稳健，而楔前叶发现则在图片线索模式中得到保留。此外，临床特征的探索性分析表明，线索诱发的神经反应与特定临床状态和治疗变量（例如海洛因使用障碍的美沙酮维持治疗）相关，突显了临床症状特征对这些区域性功能特征的调节作用。总体而言，结果推动了对记忆和自我相关过程，以及控制或动作相关过程的进一步研究。这些发现为开发有针对性的临床干预提供了关键基础，以区分通用跨诊断神经调节靶点和针对特定临床及人口统计学特征定制的障碍特异性疗法。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-14T08:11:26.352478+00:00"
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107088": {
       "doi": "10.1016/j.neubiorev.2026.107088",
@@ -13255,12 +13255,12 @@
       "title": "Artificial Intelligence for Behavioral Phenotyping: From Behavioral Neuroscience to Depression Research",
       "acquired_at": "2026-11-15T23:57:44",
       "source_title_sha256": "d8e13379cf482e4e0b97fb52306953d6e0deb5cc31c4a3a742cf240f5dca0f21",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
+      "source_abstract_sha256": "30d824dcb70f9b5fba92734af6a13b0f60d4650b22f0500028607c9c51d16e3a",
+      "source_abstract": "abstract",
       "title_zh": "人工智能用于行为表型分析：从行为神经科学到抑郁症研究",
-      "abstract_zh": null,
+      "abstract_zh": "行为表型分析仍然是研究大脑功能及神经精神疾病的主要实验读出。然而，传统的行为分析主要依赖人工定义的终点指标，这简化了行为的多维性质，往往会忽略细微的行为动态。人工智能（AI）——尤其是机器学习（ML）、深度学习（DL）和计算机视觉——的最新进展正在根本性地改变这一局面，使得跨物种和实验范式的行为能够实现自动化、高分辨率的定量化。本综述讨论了基于AI的行为表型分析的最新进展及其对转化神经科学的影响，特别强调其在抑郁症研究中日益发展的应用。我们首先描述了无标记姿态估计如何改变了运动量化方法，接着讨论了监督式和非监督式的机器学习方法，这些方法能够从运动数据中对预定义行为进行分类，或直接发现潜在的行为基序。随后，我们讨论了这些方法如何通过能够对行为组织进行越来越详细的描述，并将行为视为一种连续的、多维的过程，从而重塑系统神经科学。最后，我们探讨了这些方法在抑郁症实验模型和临床研究中的应用，考虑其潜力以及将计算行为指标在实验和临床环境间转化所面临的局限。基于AI的行为表型分析代表了一项重要的神经科学方法论进步，它将行为分析从对孤立实验终点的量化转向对综合行为状态的刻画。在抑郁症研究中，这些方法可能改善实验模型中的行为表征，并在人类中提供具有临床相关性的行为改变的定量指标。然而，要将实验性表型与临床表型联系起来，将需要方法学标准化、独立验证，以及对跨物种可比性的谨慎评估。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107091": {
       "doi": "10.1016/j.neubiorev.2026.107091",
@@ -13281,12 +13281,12 @@
       "title": "The disrupted navigational compass: pathophysiological mechanisms and clinical interventions for spatial navigation deficits",
       "acquired_at": "2026-11-15T23:57:44",
       "source_title_sha256": "d3d8c82f83adaa87e8d47beb898a573eac7a65da2019599b4f6b27804fd80e7c",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "受损的导航罗盘：空间导航缺陷的病理生理机制与临床干预",
-      "abstract_zh": null,
+      "source_abstract_sha256": "3bf76de3aae3d87712c2346572524c4f9372dcf014638a3b6d13ef06d39d39e1",
+      "source_abstract": "abstract",
+      "title_zh": "受累的导航指南针：空间导航缺陷的病理生理机制与临床干预",
+      "abstract_zh": "空间导航是一种高阶整合性认知能力，通过整合空间记忆、多感觉线索、注意与执行控制，支持环境定位、目标导向的路线选择及适应性运动。支撑导航的神经系统同样易受衰老与神经退行性疾病影响，因此导航成为连接基础机制与临床可测功能损害的有用领域。本综述从多个层面总结空间导航机制。在认知层面，导航依赖于包括空间表征、路径积分、参照系变换、地标使用及路径规划在内的相互作用过程。在网络层面，海马-内嗅、回扣-顶叶、场景选择性及前额叶系统贡献互补功能。在细胞层面，位置细胞、栅格细胞、头向细胞、速度细胞及边界相关表征对位置、航向、自身运动、环境几何及预期行为进行编码。临床与神经影像学研究表明，导航障碍与结构及功能异常相关，目前最强的诊断证据来自阿尔茨海默病及其前驱期。基于虚拟现实的行为评估与电生理方法提供了刻画导航表型的互补手段：虚拟现实可实现受控、可重复且对过程敏感的任务，而颅内及头皮记录则在不同空间与生理尺度提供神经信息。目前尚无专为导航障碍开发或批准的药物；因此，以导航为重点的干预主要依赖行为与虚拟现实康复、代偿策略及新兴的神经调节方法。未来研究应将过程特异的行为与生理标志物与生物标志物定义的临床队列相结合，并开展大规模、随机、纵向研究，以确立诊断效度、现实世界迁移及基于机制的干预效应。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-15T23:59:17.715627+00:00"
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -16680,6 +16680,19 @@
       "abstract_zh": "中枢神经系统疾病仍然是重大未满足的医学挑战。人脑类器官为在人类细胞背景下研究神经发育性、感染性和神经退行性疾病提供了三维多细胞系统。将这些不同疾病领域放在一起考虑，突显了类器官研究如何超越疾病表型的复刻，定义分子和细胞机制及轨迹：致病性变化何时出现、如何演变、哪些细胞类型和状态驱动或抵抗疾病，以及多细胞相互作用如何塑造病程。将人类遗传学与纵向、单细胞、多组学和功能分析相结合，为难以在动物模型中捕获的人类特异性过程提供了途径，并能够识别根植于人类疾病生物学的机制和治疗靶点。经过良好表征的类器官越来越多地提供人体新方法论（NAMs）用于临床前治疗评估。可重复性、基准测试和适当验证的进展对于确立其预测价值并支持其在药物开发和监管申请中的使用将至关重要。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.015": {
+      "doi": "10.1016/j.neuron.2026.10.015",
+      "journal_slug": "neuron",
+      "title": "Noncoding functions of FMR1 transcript in riboregulation of human neurodevelopment",
+      "acquired_at": "2026-11-16T23:39:36",
+      "source_title_sha256": "7b258b4f9fa6e8aad3a501d70bddede95ce6a9698db349a78691ae51c136451d",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "非编码RNA功能：FMR1转录本在人类神经发育中的核糖调控作用",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1016/j.neuron.2026.10.017": {
       "doi": "10.1016/j.neuron.2026.10.017",
@@ -20723,6 +20736,19 @@
       "abstract_zh": null,
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
+    },
+    "doi:10.1037/rev0000659": {
+      "doi": "10.1037/rev0000659",
+      "journal_slug": "psychological-review",
+      "title": "Uncovering internal sensory evidence reveals the nature of confidence computation in multi-alternative perceptual decision making.",
+      "acquired_at": "2026-11-17T00:00:38",
+      "source_title_sha256": "f50b3b30fd515e25eaf9ec76ca9cb254c5af61b48ff945a7e5484d485073721f",
+      "source_abstract_sha256": "83371e9d0bd4697ebf82816b84756a634d5f69e6b68f3113cd49a53daba7e23b",
+      "source_abstract": "abstract",
+      "title_zh": "揭示内部感觉证据揭示多替代感知决策中置信度计算的本质",
+      "abstract_zh": "感知决策的一个核心目标是确定复杂多替代任务中选择和置信度的底层计算。然而，揭示这些计算需要了解计算所基于的内部感觉证据。不幸的是，与两选任务不同，在多替代任务中尚无既定方法来确定刺激如何转化为内部感觉证据。在此，我们通过开发一种新的建模范式，解决了这一关键缺口，揭示了大脑在数量任务的多替代决策中如何将外部刺激转化为内部感觉证据。在三个包含两选、三选和五选条件的实验中，我们表明，我们的数量任务中的内部感觉证据可以用一个简单的二参数方程来描述，该方程可拟合最多12种条件的数据。关键的是，能够对内部感觉证据进行建模，使我们得以检验六种置信度计算理论。我们的结果支持一种模型，即置信度反映前两种替代方案之间的原始证据差异。这些结果建立了一个新的数量范式，在该范式中，一个二参数方程可用于确定潜在无限数量的多替代条件的内部感觉证据，并揭示多替代任务中的置信度计算。(PsycInfo 数据库记录（c）2026 APA，保留所有权利)。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1037/rev0000659.supp": {
       "doi": "10.1037/rev0000659.supp",
@@ -26379,6 +26405,19 @@
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-18T19:34:53.295339+00:00"
     },
+    "doi:10.1038/d41586-026-02582-6": {
+      "doi": "10.1038/d41586-026-02582-6",
+      "journal_slug": "nature",
+      "title": "I’m expected to work excessive hours in the lab. Should I speak up about my disability?",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "2927cf979afaeed39b26b82c4d309b662d2392daa8d9ef905f3e84093b82f949",
+      "source_abstract_sha256": "715fdf7d83b5105d486878c7736c1b132260763429634a927fc22370c4aa90c2",
+      "source_abstract": "abstract",
+      "title_zh": "实验室要求我长时间过度工作。我是否应就残疾问题发声？",
+      "abstract_zh": "在超负荷工作的实验室中，研究人员如何照顾自己和实验室同事，以及应如何处理医疗信息披露？",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/d41586-026-02584-4": {
       "doi": "10.1038/d41586-026-02584-4",
       "journal_slug": "nature",
@@ -28289,6 +28328,19 @@
       "abstract_zh": "两剂裸盖菇素的完成剂量成功预防了鼠类的严重神经病变。此外，还提出了关于‘时间之箭’的新方向，并获得了今年有趣且发人深省的Ig诺贝尔奖。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-01T04:23:20.028602+00:00"
+    },
+    "doi:10.1038/d41586-026-02814-9": {
+      "doi": "10.1038/d41586-026-02814-9",
+      "journal_slug": "nature",
+      "title": "How to keep tabs on the tools in your lab",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "d4a3c4484813f92f8c18e847a8e6f3c34d02c4798749394f974837ef223e942b",
+      "source_abstract_sha256": "549814e5c05c4a3f69d0c86e24c924285b6ec93116c0981637f2bc9fbc9a103f",
+      "source_abstract": "abstract",
+      "title_zh": "如何掌控实验室中的工具",
+      "abstract_zh": "放错或被借走的实验室设备可能使实验停滞。科学家们解释如何防止关键设备丢失。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1038/d41586-026-02818-5": {
       "doi": "10.1038/d41586-026-02818-5",
@@ -30851,6 +30903,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-25T02:18:33.046128+00:00"
     },
+    "doi:10.1038/d41586-026-03108-w": {
+      "doi": "10.1038/d41586-026-03108-w",
+      "journal_slug": "nature",
+      "title": "Rebody",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "93c588d22ffa64ad4e44d2719c5f1fe1af97d1a176168749a3efb7ba68f39373",
+      "source_abstract_sha256": "010d00ce0802bd1bbde9b25aea0b6ad306b9e4c605f0d59761affb4b8cd1c7e4",
+      "source_abstract": "abstract",
+      "title_zh": "Rebody（重构身体）",
+      "abstract_zh": "体魄健旺。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/d41586-026-03110-2": {
       "doi": "10.1038/d41586-026-03110-2",
       "journal_slug": "nature",
@@ -32034,6 +32099,32 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/d41586-026-03258-x": {
+      "doi": "10.1038/d41586-026-03258-x",
+      "journal_slug": "nature",
+      "title": "Nerve activity initiates autoimmune hair loss",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "1e34de6f22709ffe9257d569e3973a18ea05d166f9a7adf7c6cd7e91bde6efe3",
+      "source_abstract_sha256": "d56af16b87658d1688d97dd02a92df408dcf3b9630e20b5ed87f0b3b0169e196",
+      "source_abstract": "abstract",
+      "title_zh": "神经活动引发自身免疫性脱发",
+      "abstract_zh": "了解自身免疫的诱因可能有助于开发更好的疗法，脱发是那些潜在因素已被揭示的疾病之一。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03259-w": {
+      "doi": "10.1038/d41586-026-03259-w",
+      "journal_slug": "nature",
+      "title": "Glimpsing archaeal microbes on the move",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "674e297a0ea6a5d47b9a592b8673b9d14cf0bb605f4db9e3d98c955736a8d4a6",
+      "source_abstract_sha256": "0d5bee0becc98efde959c2c84013651e064e86e9216aa04396ede751b7c84b3e",
+      "source_abstract": "abstract",
+      "title_zh": "窥视古细菌微生物的运动",
+      "abstract_zh": "细胞如何以及何时获得爬行能力？对早期真核生物近亲细胞的实时成像，填补了细胞进化理解中的一个重大空白。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/d41586-026-03265-y": {
       "doi": "10.1038/d41586-026-03265-y",
       "journal_slug": "nature",
@@ -32072,6 +32163,19 @@
       "abstract_zh": "Nature的一项调查自2024年以来在质疑气候归因科学的运动中，已向美国大学发出了30多份公开记录请求。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/d41586-026-03276-9": {
+      "doi": "10.1038/d41586-026-03276-9",
+      "journal_slug": "nature",
+      "title": "Making ‘mind pictures’ takes mental effort",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "1502951dfe2f4df961e396b172e193f79c22954aebd1a465db234c8a586e0177",
+      "source_abstract_sha256": "550ed1a5828870a29f2c065822d4db04515d5118daf6ccdc8dc84ce7ae048ecd",
+      "source_abstract": "abstract",
+      "title_zh": "制作“心理图片”需要付出精神努力",
+      "abstract_zh": "Nature 过去内容的片段。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1038/d41586-026-03282-x": {
       "doi": "10.1038/d41586-026-03282-x",
@@ -32294,6 +32398,45 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/d41586-026-03318-2": {
+      "doi": "10.1038/d41586-026-03318-2",
+      "journal_slug": "nature",
+      "title": "Sleep declines in rural communities after electricity arrives",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "3e66172c359042476d6c65afce8806c2da5300da45a637b6c4f9961a0f015d12",
+      "source_abstract_sha256": "3bd5717cbabed3a38ef5e4e142766a25022cc7ed69ee43f23030311105c89731",
+      "source_abstract": "abstract",
+      "title_zh": "通电后农村社区睡眠减少",
+      "abstract_zh": "科学家追踪了阿根廷原住民在接入电网电力以及智能手机后睡眠模式的变化。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03319-1": {
+      "doi": "10.1038/d41586-026-03319-1",
+      "journal_slug": "nature",
+      "title": "Surprise! White dwarf stars come in a rainbow of colours",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "f54ac83a3bb430499a359584e14e4d361b75fc9e5e8c662047fcb63f8fb34ed2",
+      "source_abstract_sha256": "48ddb9a556e18402de86e18d93def87ff13de9ab261cd11b0a6d64d2c2ead347",
+      "source_abstract": "abstract",
+      "title_zh": "惊喜！白矮星呈现五彩斑斓的色彩",
+      "abstract_zh": "对一些附近恒星的分析表明，尽管其名为白矮星，但这些天体可以呈现粉色、黄色等多种颜色。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03320-8": {
+      "doi": "10.1038/d41586-026-03320-8",
+      "journal_slug": "nature",
+      "title": "AI doctors’ orders come with a sky-high bill",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "deeeb9b32c355ce627c3ac20776935919b6573d83ef9256f10af29305264dd19",
+      "source_abstract_sha256": "80b6fe52fb0200b6500945236ae9dbde0ba4049fbe79e92c47519b490370b7c0",
+      "source_abstract": "abstract",
+      "title_zh": "AI 医生开出的医嘱付账不菲",
+      "abstract_zh": "大型语言模型建议的检查、转诊和药物多于人类医师，推高了医疗成本。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/d41586-026-03322-6": {
       "doi": "10.1038/d41586-026-03322-6",
       "journal_slug": "nature",
@@ -32424,6 +32567,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/d41586-026-03342-2": {
+      "doi": "10.1038/d41586-026-03342-2",
+      "journal_slug": "nature",
+      "title": "A single antimatter particle in a cage opens door to ‘revolutionary’ physics",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "56f56d7e50cad179627a4e8860ce3d6874c87c98e700ba355a1c72158781e3f7",
+      "source_abstract_sha256": "831423141531cde72d81daf6e2c52f9746c9824e2bca0dee3636be293356d716",
+      "source_abstract": "abstract",
+      "title_zh": "笼中单个反物质粒子为“革命性”物理学打开大门",
+      "abstract_zh": "物理学家将正电子捕获并冷却数月，以异常精确地测量其“磁矩”。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/d41586-026-03345-z": {
       "doi": "10.1038/d41586-026-03345-z",
       "journal_slug": "nature",
@@ -32515,6 +32671,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/d41586-026-03357-9": {
+      "doi": "10.1038/d41586-026-03357-9",
+      "journal_slug": "nature",
+      "title": "Teen depression and anxiety predicted by childhood brain development",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "05e6c634eec15b13120466d9943b1b2b20131dda7c243794b38bf8b4babcfeaa",
+      "source_abstract_sha256": "9601c2d87d8001f1b23cccef9d0adab3d3348e14ab66d1070accac23e306be36",
+      "source_abstract": "abstract",
+      "title_zh": "童年脑发育可预测青少年抑郁与焦虑",
+      "abstract_zh": "对近30,000次脑部扫描的分析揭示了大脑成熟的详细时间线，并提示干扰这一过程可能带来的后果。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/d41586-026-03358-8": {
       "doi": "10.1038/d41586-026-03358-8",
       "journal_slug": "nature",
@@ -32554,6 +32723,45 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
+    "doi:10.1038/d41586-026-03363-x": {
+      "doi": "10.1038/d41586-026-03363-x",
+      "journal_slug": "nature",
+      "title": "Daily briefing: How to rebuild science from ruin",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "097ee770a284bf610de2ecb58e2b40ce769bd5db1f019ffc8accb2abaf9b5921",
+      "source_abstract_sha256": "94f97f9af4de1333c7c1a3ae37ca48174f5d594f8994bfde5d6b4a0fed76d0b9",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：如何从废墟中重建科学",
+      "abstract_zh": "新奥尔良的研究人员分享了飓风卡特里娜过后的经验教训。此外，初学密码学的人正在利用人工智能破解历史密码，并发现了一种能让认知随年龄保持敏锐的酶。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03371-x": {
+      "doi": "10.1038/d41586-026-03371-x",
+      "journal_slug": "nature",
+      "title": "A first for CRISPR: powerful prime editing alters DNA directly in the human body",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "283b7b14bc79047e02b685b3aa26bf3371d6f77dfbcd7f269f2c62fcd91668d9",
+      "source_abstract_sha256": "510cdc852222c15f3bf164703089db93dcc7a079275aed3eab195085a0373657",
+      "source_abstract": "abstract",
+      "title_zh": "CRISPR首次取得突破：强大的prime editing直接在人体内编辑DNA",
+      "abstract_zh": "这种高精度技术的应用是临床试验的一部分，旨在治疗一种可能导致肝脏和神经损伤的遗传病。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03374-8": {
+      "doi": "10.1038/d41586-026-03374-8",
+      "journal_slug": "nature",
+      "title": "Daily Briefing: Tiny doses of LSD seem to boost cognition",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "fd76f207ed3d4f51be0e9ecfae2053fc50f6481716d8b8e7dbd2e9e89e9d617b",
+      "source_abstract_sha256": "53a1db816045eae0f3e43001fadf71e22941a4e183a7b6ab8f9d7b11bc4b5dc8",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：微剂量迷幻药似乎能提升认知能力",
+      "abstract_zh": "该药物提高了专注力，但仅在女性中观察到。此外，美国气候科学家面临大量公共记录请求，以及一种睡眠障碍药物可能成为下一代畅销药的原因。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/d41586-026-03376-6": {
       "doi": "10.1038/d41586-026-03376-6",
       "journal_slug": "nature",
@@ -32566,6 +32774,370 @@
       "abstract_zh": "听取科学世界最重大的故事 | 2026年10月21日",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
+    "doi:10.1038/d41586-026-03383-7": {
+      "doi": "10.1038/d41586-026-03383-7",
+      "journal_slug": "nature",
+      "title": "Elizabeth Holmes film enthrals — but her legacy haunts science",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "d91afe0e60066e94ebfcbcb342c9570f8201ba7c325478ed996b180efc78e88e",
+      "source_abstract_sha256": "0505d7de31804ddc772d2ba7a4be0ed5d066dc8b69cb52ca7a477291c236b541",
+      "source_abstract": "abstract",
+      "title_zh": "伊丽莎白·霍姆斯电影引人入胜——但她的遗产仍然困扰着科学",
+      "abstract_zh": "《你可以看到一切》将血液检测初创公司重新推入公众视野，它们在泰拉诺斯的阴影中继续前行。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03384-6": {
+      "doi": "10.1038/d41586-026-03384-6",
+      "journal_slug": "nature",
+      "title": "Mysterious flickering brain signals could help to unlock secrets of consciousness",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "4c5b1fc7e8333e3959375cee719cf36966848c2d56f7ac68e63d6ae14bd03b77",
+      "source_abstract_sha256": "c17fabfd5ac2fd7c020ddb0b3e9fc0f8eabe50a46570a176f153eb892e9f28c7",
+      "source_abstract": "abstract",
+      "title_zh": "神秘的闪烁脑信号可能有助于解开意识的奥秘",
+      "abstract_zh": "猴子的大脑活动每秒在与知晓对象相关的模式和与不在意识中的对象相关的模式之间切换15次。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03385-5": {
+      "doi": "10.1038/d41586-026-03385-5",
+      "journal_slug": "nature",
+      "title": "Barn owls’ ancestors made a transatlantic flight",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "753d50bfd0abe1320a7f0d3656a7ae206b76ea4e9f793633ea541438fc394109",
+      "source_abstract_sha256": "d307b1c559cf875ec33f7b77c830ecc6719e53e351c9aab0d7bba5e77a598504",
+      "source_abstract": "abstract",
+      "title_zh": "仓鸮的祖先曾跨越大西洋飞行",
+      "abstract_zh": "基因组分析显示，这些猫头鹰从欧亚大陆传播到加勒比地区，然后殖民了西半球的其余地区。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03389-1": {
+      "doi": "10.1038/d41586-026-03389-1",
+      "journal_slug": "nature",
+      "title": "Can maths survive AI? Fields medallist Terence Tao calls for a ‘Maths 2.0’ world",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "632399f5a738574542543485a5482eeb7492f1674e8d5b66ea18ea16be50cd3c",
+      "source_abstract_sha256": "82457a247587eede32c9b2898cf1a2c409ac391938bdb94fa1d29b1835f5cfe4",
+      "source_abstract": "abstract",
+      "title_zh": "数学能幸存于AI时代吗？菲尔兹奖得主特伦斯·陈呼吁建立“数学2.0”世界",
+      "abstract_zh": "随着机器在问题求解方面加速超越人类，数学家必须建立一个新时代，将人类理解置于单纯发布更多解法之上。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03390-8": {
+      "doi": "10.1038/d41586-026-03390-8",
+      "journal_slug": "nature",
+      "title": "Why pharma firms are betting billions on psychedelic drugs despite setbacks",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "dab807d6e0d335b335a03df58e640306092ddac580d4e8839a265156063d5a82",
+      "source_abstract_sha256": "5a1e5fe411e91bfc2e04a3d280bedacedc015164c2f10cb4340fc3d494baa44f",
+      "source_abstract": "abstract",
+      "title_zh": "尽管遭遇挫折，为何制药企业仍对迷幻药物押注数十亿美元",
+      "abstract_zh": "监管阻力一度使该领域停滞不前。但研究人员对改变意识的药物作为抑郁症和情绪障碍的潜在治疗方法持乐观态度。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03392-6": {
+      "doi": "10.1038/d41586-026-03392-6",
+      "journal_slug": "nature",
+      "title": "Women might have invented language — but not alone",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "51aaef98bbf54eb603ea920dfc3775eb3e008e89a1c28813b40f1cd1b1053cf1",
+      "source_abstract_sha256": "582cf39313eafdaec7eaad4b9621d030a91ab665c549c2740def7b76d5a3aacd",
+      "source_abstract": "abstract",
+      "title_zh": "女性可能发明了语言——但并非独自一人",
+      "abstract_zh": "关于人类语言起源的一篇精妙分析表明，推动我们使用语言的是社会凝聚力，而非冲突。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03393-5": {
+      "doi": "10.1038/d41586-026-03393-5",
+      "journal_slug": "nature",
+      "title": "The Selfish Gene, 50 years on — it’s time for an update",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "a7da226d22d4c9b2310e30beadd2b4afdd75e1e38be555449b4ae0d890ca06ed",
+      "source_abstract_sha256": "c7626338427c90c44be3e3cb7c883ce031cc4ef09184a5cc043460e0296a2dd8",
+      "source_abstract": "abstract",
+      "title_zh": "《自私的基因》出版50年后：是时候更新了",
+      "abstract_zh": "单纯关注基因已然过时。那些能够捕捉生命复杂性的著作应当成为焦点。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03394-4": {
+      "doi": "10.1038/d41586-026-03394-4",
+      "journal_slug": "nature",
+      "title": "Can scientists reliably tell if a novel is written using AI?",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "13fba8a6f605ffd64eaa450a831a2b59f61e043e8ff0719b1c94c377a7c28e2b",
+      "source_abstract_sha256": "a6bfb2caa507c4e333a5f03d46dd00fdaf893816e4008756c1ac51259dcda346",
+      "source_abstract": "abstract",
+      "title_zh": "科学家能否可靠地判断一部小说是否由人工智能撰写？",
+      "abstract_zh": "计算机科学家杜欣·查克拉巴蒂谈论了检测人工智能生成散文的方法——以及这为何重要。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03395-3": {
+      "doi": "10.1038/d41586-026-03395-3",
+      "journal_slug": "nature",
+      "title": "Elusive snow leopards and evasive particles: Books in brief",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "e541718c72a1cdfecc753249d9c1e85b2342a9e6dc20dd3de81390f7cf1e462b",
+      "source_abstract_sha256": "5fa44b7ab437e34bf3e2823ba78a2f8ba3cee35aa430cfa28dc112ff840a6deb",
+      "source_abstract": "abstract",
+      "title_zh": "难以捉摸的雪豹与难以捕捉的粒子：图书简介",
+      "abstract_zh": "Andrew Robinson 评论五本最佳科学选书。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03396-2": {
+      "doi": "10.1038/d41586-026-03396-2",
+      "journal_slug": "nature",
+      "title": "Could measuring immune health reshape medical care?",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "671e425de34f8958187dcdacbd1655d4592244eb51cafa22ff7d8e27138ab551",
+      "source_abstract_sha256": "6b1c90fa17634e36f05b4d4910ce5d45ddc7aa44941d5d1df6d5556891510a4f",
+      "source_abstract": "abstract",
+      "title_zh": "测量免疫健康能否重塑医疗护理？",
+      "abstract_zh": "寻找分析个体免疫系统状态的实用方法，可能有助于指导治疗决策并创造疾病预防的机会。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03398-0": {
+      "doi": "10.1038/d41586-026-03398-0",
+      "journal_slug": "nature",
+      "title": "Are salaries getting worse? Many scientists think so",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "8f735d31d87342c7605217a934f36e4941fe32784e65850151ed50bbf5c3eecf",
+      "source_abstract_sha256": "2124fc858a0225afacf80534792f25dab48e2fb4f734da0c76b29a0e1130c116",
+      "source_abstract": "abstract",
+      "title_zh": "薪资待遇是否日益恶劣？许多科学家这么认为",
+      "abstract_zh": "《自然》杂志对近 4,000 名研究人员的调查显示，如果您在入不敷出方面举步维艰，或上一次涨薪已成遥远记忆，那么并非您一个人。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03400-9": {
+      "doi": "10.1038/d41586-026-03400-9",
+      "journal_slug": "nature",
+      "title": "Daily briefing: How tech billionaires are changing science funding",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "2fe4f6be11f746c36b6b70b6197f5abcdde80eb7199683a151345499499e1ec8",
+      "source_abstract_sha256": "b6e9b6b279166f3d9eddbd7258b6cbd4ab641f843d1e462b15a81133dab025c3",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：科技亿万富翁如何改变科学资助",
+      "abstract_zh": "超级富豪慈善家正在颠覆生物医学研究。此外，物理学家如何将一颗反物质粒子禁闭数月，以及人是否可能被鲸鱼吞下并幸存。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03403-6": {
+      "doi": "10.1038/d41586-026-03403-6",
+      "journal_slug": "nature",
+      "title": "Global climate body fights for survival: why the IPCC must be saved",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "cb8cc8cab6a43fdca88a29649baaa58a3898f75db34948b9fdd523cc37be0857",
+      "source_abstract_sha256": "e48061cc092a18fd64aa49a8bf836f067df0d36f9d2d8c868439ba0163139e85",
+      "source_abstract": "abstract",
+      "title_zh": "全球气候机构为生存而战：为何必须拯救政府间气候变化专门委员会",
+      "abstract_zh": "该联合国组织正面临其近40年历史中最为严重的危机之一，但它实在太宝贵，不能失去。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03404-5": {
+      "doi": "10.1038/d41586-026-03404-5",
+      "journal_slug": "nature",
+      "title": "The Nobel prize in economic science has a serious gender problem",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "8c30fb3419c5e21e31e565bc0ebdd49314b17d573b37c860aa98717af45f8abe",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "经济科学诺贝尔奖存在严重的性别问题",
+      "abstract_zh": "致编辑信",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03405-4": {
+      "doi": "10.1038/d41586-026-03405-4",
+      "journal_slug": "nature",
+      "title": "Short-term academic visits to China could sustain ties",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "75856d0cdd8a4b56551fe837d1676da7b8aeb39dd7d3c96a7c7f153c72a7c7c3",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "短期赴华学术访问有助于维系联系",
+      "abstract_zh": "致编辑信",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03406-3": {
+      "doi": "10.1038/d41586-026-03406-3",
+      "journal_slug": "nature",
+      "title": "AI watermarking efforts must encourage independent public scrutiny",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "8ab960d9856ccb215fac370a1931b35fe360672dae344508f488f263727029ed",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "人工智能水印工作必须鼓励独立公众审查",
+      "abstract_zh": "编辑来信",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03407-2": {
+      "doi": "10.1038/d41586-026-03407-2",
+      "journal_slug": "nature",
+      "title": "AI-hallucinated citations should be treated as research misconduct",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "eb1dc683ff491cc10c7c09e1e3d837b573276deaa047fa56d3b0cddd46a3fbc3",
+      "source_abstract_sha256": "826524a54c004d1d72b3830d329424cd687e7c2865d129e95596795c6ab02ba5",
+      "source_abstract": "abstract",
+      "title_zh": "应将AI幻觉引用视为学术不端行为",
+      "abstract_zh": "致编辑信",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03410-7": {
+      "doi": "10.1038/d41586-026-03410-7",
+      "journal_slug": "nature",
+      "title": "Mentoring a lab colleague? Share your ‘CV of failures’ with them",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "430ccd15e70fd7eede7dee83b30cc2a70d1d072d443e28fbf7cd8a228b82fd45",
+      "source_abstract_sha256": "27b4cbbb6ab77bbc40083e9dc785ae5d46b261b7a082ade4c09e857e8178b060",
+      "source_abstract": "abstract",
+      "title_zh": "辅导实验室同事？与他们分享你的“失败简历”",
+      "abstract_zh": "梅拉妮·斯特凡在撰写关于失败的文章后成为“失败的代言人”。现在她敦促资深同事更加坦诚地谈论职业生涯中的挫折。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03414-3": {
+      "doi": "10.1038/d41586-026-03414-3",
+      "journal_slug": "nature",
+      "title": "Can a 'lullaby' save coral reefs from extinction?",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "686e0a5673c22fb6b7e671b8ba1691012768290c8bcc0fa6728efc3f8b5d22ec",
+      "source_abstract_sha256": "45bbb7ef0594916b2618425c751332640975442738c4b62391937fc1b228bfcb",
+      "source_abstract": "abstract",
+      "title_zh": "“摇篮曲”能否拯救珊瑚礁免于灭绝？",
+      "abstract_zh": "从水下扬声器到培育超级珊瑚，科学家们正在全球范围内为拯救珊瑚礁而战。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03416-1": {
+      "doi": "10.1038/d41586-026-03416-1",
+      "journal_slug": "nature",
+      "title": "First person infected with rare Shamonda virus: what we know",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "2908f64e867bb45d8ad38e45f8309988b242248a3020c7b2320042d12dacd78c",
+      "source_abstract_sha256": "4b75327477ffa80827b65819596203ef9a1055bc7696fe4fe54133a64f16d9fc",
+      "source_abstract": "abstract",
+      "title_zh": "首例罕见沙蒙达病毒感染者：我们了解什么",
+      "abstract_zh": "传染病研究人员称，这种牲畜病原体在人与人之间传播的风险较低。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03417-0": {
+      "doi": "10.1038/d41586-026-03417-0",
+      "journal_slug": "nature",
+      "title": "Moderna mRNA vaccine almost halves the risk of skin cancer returning",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "6df3f0b172e86a5b2f976da1ea2901e7430b13f16688448b767a27409517d2bf",
+      "source_abstract_sha256": "9de026bf8f9ae1a5d4fda3d5a2351937ebd445769aa1702637ec3857ebf8dca3",
+      "source_abstract": "abstract",
+      "title_zh": "Moderna mRNA疫苗几乎将皮肤癌复发风险降低一半",
+      "abstract_zh": "期待已久的III期临床试验结果显示，对耐药性黑色素瘤具有巨大的疗效。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03418-z": {
+      "doi": "10.1038/d41586-026-03418-z",
+      "journal_slug": "nature",
+      "title": "Briefing Chat: How physicists successfully trapped the electron's antimatter equivalent",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "bf06d400917f2d2f76fe80bae1a05702631b103d29267beb8cf17d21385f2863",
+      "source_abstract_sha256": "3e53f541c8481c96c4bca7166908decb07cce46d9278de1b5c9299b6d1a7e688",
+      "source_abstract": "abstract",
+      "title_zh": "简报聊天：物理学家如何成功捕获电子的抗物质对应物",
+      "abstract_zh": "聆听科学界的重大新闻 | 2026年10月23日",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03438-9": {
+      "doi": "10.1038/d41586-026-03438-9",
+      "journal_slug": "nature",
+      "title": "Daily briefing: The tell-tale features of a Denisovan",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "ed51a8124e7c16ebd6597bef811abdf615c1057f043306b750bf86acb384e37d",
+      "source_abstract_sha256": "7e033109ef945cc1ce6a487c953c0926aa3c619d4c0423d6de4f50c4abf8f66f",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：丹尼索瓦人的显著特征",
+      "abstract_zh": "了解了丹尼索瓦人独特外观的特征。此外，埃博拉疫苗试验可能于本周在刚果民主共和国启动，以及构成优秀气候图形的要素。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03440-1": {
+      "doi": "10.1038/d41586-026-03440-1",
+      "journal_slug": "nature",
+      "title": "Evolutionary ‘game-changer’: weird armoured amphibian lived in ancient seas",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "b82ad72f7794c7bb7d8e1c41d18bafb59983420ae8fca57e1e6e8b8f8bfa39fe",
+      "source_abstract_sha256": "eae49184003e835c8cfd900277e12e405f560cffcd97046dfa37bc4341c3586c",
+      "source_abstract": "abstract",
+      "title_zh": "进化“游戏规则改变者”：奇特装甲两栖动物曾生活在古代海洋中",
+      "abstract_zh": "该生物的装甲外壳可能使其能够耐受晚三叠世的咸水海洋。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03446-9": {
+      "doi": "10.1038/d41586-026-03446-9",
+      "journal_slug": "nature",
+      "title": "Brazil election: many scientists relieved as Lula wins surprise victory",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "865b2bf6044539726c5837d59862f1b527d09b17eb079f1c97ee5a353cad5b78",
+      "source_abstract_sha256": "fafa4840f5c321c951f0a05d9bb41d9615d95e69e21a725f50ec05e8ec5c9cf9",
+      "source_abstract": "abstract",
+      "title_zh": "巴西选举：许多科学家对卢拉意外获胜感到如释重负",
+      "abstract_zh": "巴西的科学组织曾围绕路易斯·伊纳西奥·卢拉·达席尔瓦团结起来，卢拉在决选中打败对手，出乎意料。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03447-8": {
+      "doi": "10.1038/d41586-026-03447-8",
+      "journal_slug": "nature",
+      "title": "Can science make your dog live longer? Longevity craze comes to pets",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "0ec2db8d66d0756f04b386232d7df489f3403773ae664df2822d9b57c85e6faf",
+      "source_abstract_sha256": "5a096e0bc92fce3020a203936befb830e2be8ff004bcdb64f3089ff6b4e7ead0",
+      "source_abstract": "abstract",
+      "title_zh": "科学能让你的狗活得更久吗？长寿热潮蔓延至宠物",
+      "abstract_zh": "新兴的动物长寿科学与产业正吸引企业和学术界的共同关注。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03461-w": {
+      "doi": "10.1038/d41586-026-03461-w",
+      "journal_slug": "nature",
+      "title": "Revered NASA spacecraft is about to perish in flames — astronomers are mourning",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "f144c04b4489d4a4940886f74493e6b222331daf9541da03909864c836fbc56d",
+      "source_abstract_sha256": "1886f6f1d70d28b50217c57f758133f7b8967df7077fed2a89f7d63ec00649a8",
+      "source_abstract": "abstract",
+      "title_zh": "备受尊崇的 NASA 航天器即将在火焰中毁灭，天文学家正在哀悼",
+      "abstract_zh": "一次失败的救援任务意味着 Swift 观测站将于下周坠入地球大气层，但它为科学家留下了可供探索的大量数据档案。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03463-8": {
+      "doi": "10.1038/d41586-026-03463-8",
+      "journal_slug": "nature",
+      "title": "Daily briefing: The Selfish Gene, 50 years on",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "318f4f120bc33382c966ee3ed6e71626fbfa83601241fb0441240dff17ab9aa8",
+      "source_abstract_sha256": "4e266cc5b1684d658b0c91b65747a1c6cc6f4b131b73397f034bcc59d4e153f5",
+      "source_abstract": "abstract",
+      "title_zh": "每日简报：《自私的基因》出版50年回顾",
+      "abstract_zh": "生物学家对道金斯的核心观点的当前看法。此外，新电影所描绘主题如何萦绕科学界，以及一种能自行制备金属有机框架材料的细菌。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1038/s41380-026-03624-1": {
       "doi": "10.1038/s41380-026-03624-1",
@@ -37936,6 +38508,32 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1038/s41562-026-02625-y": {
+      "doi": "10.1038/s41562-026-02625-y",
+      "journal_slug": "nature-human-behaviour",
+      "title": "Usage frequency predicts lexicalization across languages",
+      "acquired_at": "2026-11-16T23:43:31",
+      "source_title_sha256": "da4c99211684acd3b92ee8f5bd9f469c4aa43d0324ae1f980a66baa38a868dc2",
+      "source_abstract_sha256": "c52d46450b3f77367516e813d33a22dbfbfa97c9863181b56be75d89dd8b4a51",
+      "source_abstract": "abstract",
+      "title_zh": "使用频率预测语言间的词汇化",
+      "abstract_zh": "语言更有可能对某些概念（例如“CHILD”和“SUN”）设有词汇条目，而非其他概念（例如“PARENT”和“WEATHER”）。本文提出了一项大规模定量分析，以研究预测语言间词汇化的因素，并特别检验了使用频率预测词汇化的假设。我们考察了854个概念，并发现，来自语言文献参考语料库（Language Documentation Reference Corpus）中46种语言的平均使用频率，能够较好地预测世界借词数据库（World Loanword Database）中41种语言词汇化的类型学普遍性（β = 0.25；95%置信区间为0.16至0.33），以及大陆词典系列（Intercontinental Dictionary Series）中262种语言词汇化的普遍性（β = 0.30；95%置信区间为0.23至0.38）。这一发现表明，跨语言词汇化的规律性部分可归因于文化间共享的使用模式。为什么几乎所有人类语言都有表示“太阳”的词，而只有少数语言有表示“天气”的词？Khishigsuren 等人发现，概念在交流中的实用性预测了其在各语言词汇中出现的频率。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/s41562-026-02627-w": {
+      "doi": "10.1038/s41562-026-02627-w",
+      "journal_slug": "nature-human-behaviour",
+      "title": "Causal role of human hippocampus in relational structure learning and inference",
+      "acquired_at": "2026-11-16T23:43:31",
+      "source_title_sha256": "30859795ca395f27a35505684354a7a2869de830452f37f9302994240214e3d6",
+      "source_abstract_sha256": "0d984b75a35b64643d4d1ce96048c0da8b1d7915c1fe8e69566eae6c5fee2104",
+      "source_abstract": "abstract",
+      "title_zh": "人类海马体在关系结构学习和推理中的因果作用",
+      "abstract_zh": "摘要 当遇到新的个体或在新环境中遇到已知个体时，我们会直观地绘制他们的关系——而不仅仅通过直接经验，而是基于先前的关系知识推断新的连接。这种关系知识在大脑中如何表征和使用，一直是认知神经科学的长期悬而未决的问题。在此，利用行为任务和计算模型，我们表明参与者（N = 36）利用现有的关系结构知识来推断新的关系，从而促进在变化环境中的适应。全脑神经影像学检测到海马体中关系结构的一致表征。为了研究海马体表征与推理之间的因果联系，我们利用神经网络模拟来预测干扰此类表征的行为效应。与这一预测一致，经颅超声刺激人类海马体（N = 20），暂时调节其活动，干扰了基于结构的推理（P < 0.001，Cohen's d = -0.89，95%置信区间 -1.41 至 -0.36），为海马体在关系结构学习和基于结构的推理中起因果作用提供了经验证据。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/s41562-026-02637-8": {
       "doi": "10.1038/s41562-026-02637-8",
       "journal_slug": "nature-human-behaviour",
@@ -37948,6 +38546,19 @@
       "abstract_zh": "人类快速适应新动力学是与世界交互的关键能力。本研究将感运动适应研究的控制操控与复杂任务长期学习方法相结合，表明习得的运动记忆不断受到精细调节，且长期训练可提高保持能力。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1038/s41562-026-02638-7": {
+      "doi": "10.1038/s41562-026-02638-7",
+      "journal_slug": "nature-human-behaviour",
+      "title": "Equitable funding for inclusive big team science",
+      "acquired_at": "2026-11-16T23:43:31",
+      "source_title_sha256": "13b24740186895908803ff3a6bcae077971c1334f191d85ec014888b64320167",
+      "source_abstract_sha256": "c18d1c94fe1b5fdbe516c5683767dd5402dcb3589af850783b1bccfeebc2a9be",
+      "source_abstract": "abstract",
+      "title_zh": "公平资助与包容性大团队科学",
+      "abstract_zh": "大团队科学旨在使研究更加包容，但招募具有代表性样本的成本在不同国家可能差异显著。这可能会加剧这些合作试图解决的不平等现象。共享资源并要求资助方根据其财务能力进行资助，可能有助于克服这些不平等。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1038/s41562-026-02639-6": {
       "doi": "10.1038/s41562-026-02639-6",
@@ -38638,6 +39249,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/s41582-026-01277-w": {
+      "doi": "10.1038/s41582-026-01277-w",
+      "journal_slug": "nature-reviews-neurology",
+      "title": "Neurodegeneration with brain iron accumulation — from gene discovery to therapeutic strategies",
+      "acquired_at": "2026-11-16T23:43:40",
+      "source_title_sha256": "a753569a8a770f0beed0c9411b8e7a14dc36ba66aca985ef19e99af4477df537",
+      "source_abstract_sha256": "146356fe58cf33806331e8640ad82029a69f26e5dd800c723a6709f19fc9019c",
+      "source_abstract": "abstract",
+      "title_zh": "伴脑铁沉着的神经退行性疾病——从基因发现到治疗策略",
+      "abstract_zh": "各种神经系统疾病正在出现精准治疗，尤其引人注目的是单基因疾病。开发突破性疗法通常需要了解最早期的致病变化，从而在细胞功能出现不可逆损伤之前进行干预。在极端情况下，症前基因治疗可能颠覆整个疾病过程。伴脑铁沉着（NBIA）疾病体现了从单基因疾病基因发现到精准神经治疗时代的进步。这些疾病突显了开发单基因神经疾病精准治疗的机遇与挑战。在本综述中，我们讨论最常见的NBIA疾病，以说明遗传病研究如何为基础神经科学及大脑的区域脆弱性提供洞见。我们详细讨论泛酸激酶相关神经退行性疾病（PKAN）的生物学，这凸显了表面上看似简单的维生素代谢先天性代谢错误背后复杂且仍不明确的生物化学，也为新型干预措施开辟了道路。对PKAN认识及治疗研发的进展，体现了针对遗传性神经疾病的突破性疗法开始崛起。伴脑铁沉着（NBIA）疾病体现了从单基因疾病基因发现到精准神经治疗时代的进步。在本综述中，Hayflick 和 Sibon 讨论最常见的NBIA疾病，以说明遗传病研究如何为基础神经科学及大脑的区域脆弱性提供洞见。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/s41582-026-01278-9": {
       "doi": "10.1038/s41582-026-01278-9",
       "journal_slug": "nature-reviews-neurology",
@@ -38767,6 +39391,19 @@
       "abstract_zh": "在MSToronto2026会议上展示的I期试验数据表明，嵌合抗原受体（CAR）T细胞疗法azercabtagene zapreleucel（azer-cel）安全性良好，并有潜力改善进行性多发性硬化症患者的预后。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/s41582-026-01295-8": {
+      "doi": "10.1038/s41582-026-01295-8",
+      "journal_slug": "nature-reviews-neurology",
+      "title": "Drug development models for ultra-rare disorders",
+      "acquired_at": "2026-11-16T23:43:40",
+      "source_title_sha256": "46a81cbf4a0a7fb6b5344ee774a91cec4f3f8538566a7a7e65d062b9cb2609db",
+      "source_abstract_sha256": "84498d8667ddb820c41111fc6b83e3149bdd64933fff14b376b662ab83bbadc4",
+      "source_abstract": "abstract",
+      "title_zh": "极罕见疾病的药物开发模式",
+      "abstract_zh": "传统的营利性药物开发模式对于罕见和极罕见神经系统疾病不可持续，因此需要替代模式。本文考虑了一些提供可行途径的方案和举措。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1038/s41583-026-01054-0": {
       "doi": "10.1038/s41583-026-01054-0",
@@ -39365,6 +40002,19 @@
       "abstract_zh": "一组在小鼠海马中对乙酰胆碱敏感的GABA能神经元，调节尖波涟漪和睡眠期间的记忆巩固。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/s41583-026-01103-8": {
+      "doi": "10.1038/s41583-026-01103-8",
+      "journal_slug": "nature-reviews-neuroscience",
+      "title": "Extracellular vesicles and their role in neurodegenerative diseases",
+      "acquired_at": "2026-11-16T23:43:42",
+      "source_title_sha256": "5b3e97ed2fbe02080c143433732128f8f51d547d627ac8e0b4bae373dfdac885",
+      "source_abstract_sha256": "96ac88eb64d39de08544cd957132f1bcdc701e7893dbd378a0338825bf2bfcd2",
+      "source_abstract": "abstract",
+      "title_zh": "细胞外囊泡及其在神经退行性疾病中的作用",
+      "abstract_zh": "细胞外囊泡（EVs）是具有膜包被的纳米颗粒，可通过在细胞之间转移蛋白质、脂质和核酸来促进神经系统内的细胞间通讯。在神经退行性疾病（NDDs）中，细胞和动物模型的证据以及新兴的人类数据表明，EVs 涉及多个相互关联的过程：囊泡发生和内体溶酶体转运改变；致病性货物（包括淀粉样 β 斑蛋白、tau 蛋白、α-突触核蛋白、TDP43 和 PrPSc）的选择性加载；以及与朊病毒样播种和扩散一致的错误折叠蛋白传播。EVs 还通过在神经元、胶质细胞和神经血管单位之间传递细胞因子和调节性微小 RNA 来调节神经炎症，并通过参与血脑屏障来塑造中枢神经系统—外周相互作用。这些特性也支撑着不断增长的转化兴趣：血液和其他生物液体中源自脑的 EV 群体为早期病理和疾病轨迹提供了微创窗口，天然或工程化 EVs 正在被开发为递送载体或抑制病理传播的靶点。本综述整合了机制和临床进展，强调了生物学和方法学变异的关键来源，并为实现 NDDs 的 EV 基础诊断和治疗，界定了标准化、细胞来源分配和临床验证所需的优先事项。细胞外囊泡是参与神经系统内细胞间通讯的膜包被颗粒。在本综述中，Spiers、Broatch 和 Hill 考察了这些囊泡在神经退行性疾病生物学、诊断和治疗中的作用。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1038/s41586-025-09573-z": {
       "doi": "10.1038/s41586-025-09573-z",
@@ -45463,6 +46113,45 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/s41586-026-11302-z": {
+      "doi": "10.1038/s41586-026-11302-z",
+      "journal_slug": "nature",
+      "title": "Author Correction: A chemical defence against phage infection",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "832267ebefb8178f62ab420efbb818df3da45d2eff9eac14b1f6d4f33990a472",
+      "source_abstract_sha256": "f76bf181a560d434ceeb911d8535c286b6c1ddafbc4c4a916e063a7c280647c4",
+      "source_abstract": "abstract",
+      "title_zh": "勘误：化学抗噬菌体感染防御",
+      "abstract_zh": "《自然》— 勘误：化学抗噬菌体感染防御",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/s41586-026-11303-y": {
+      "doi": "10.1038/s41586-026-11303-y",
+      "journal_slug": "nature",
+      "title": "Author Correction: DYNLL1 binds to MRE11 to limit DNA end resection in BRCA1-deficient cells",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "5ce97c4dd3fe39bb592d508746508092aa047a9ad4412a9bbb0397abb285dd16",
+      "source_abstract_sha256": "c1a993e89df9137b53672f7db56f3202281596238bc969bfbb8b4e1a51f7e87f",
+      "source_abstract": "abstract",
+      "title_zh": "更正：DYNLL1与MRE11结合以限制BRCA1缺陷细胞中的DNA末端切除",
+      "abstract_zh": "Nature - 更正：DYNLL1与MRE11结合以限制BRCA1缺陷细胞中的DNA末端切除",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/s41586-026-11312-x": {
+      "doi": "10.1038/s41586-026-11312-x",
+      "journal_slug": "nature",
+      "title": "Current-Driven Molecular Machine with Rotation-Enhanced Conductance",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "1b600b2dd3cb009b44834e8f62dca21e3c67d2c111d90658777e745c1f1ba6b9",
+      "source_abstract_sha256": "2120ee29cde51bc30349cd536d2d01484dda4cf0aecbc4b95fe84e05061395c6",
+      "source_abstract": "abstract",
+      "title_zh": "电流驱动的具有旋转增强导电性的分子机器",
+      "abstract_zh": "两千多年来，阿基米德螺旋一直被用于水泵，近年来也被用作水力发电站中的涡轮机[1]。其螺旋叶片结构对其功能至关重要，也存在于手性分子和纳米结构中，已有研究提出注入的电流可产生扭矩介导的旋转[2,3]。在此，我们展示了一种由扭矩驱动的分子机器，其转子由电流驱动，导电率因旋转而增强。通过将螺烯分子悬挂在两个电极尖端之间，我们证明施加电压可诱导具有100%方向偏好的循环分子运动，且该方向可通过电压极性反转。在超过电压阈值后，旋转分子中的电流显著增强，且增强的起始点可通过拉伸或压缩螺旋分子进行调节。此前的螺旋分子结中未观察到此类效应，可能是由于结构和操作上的差异[4–6]。计算表明，由电流诱导的力驱动的分子旋转可同时解释所观察到的循环运动和电流增强。该机制预测在阈值电压处会从阶梯式旋转转变为连续旋转，而旋转可使分子采用静止状态下不可达的高导电构型，从而导致电流增加。本研究为一类新型扭矩驱动分子机器引入了原型，该机器具有完美的转子单向性和显著的电流调制能力。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/s41586-026-11317-6": {
       "doi": "10.1038/s41586-026-11317-6",
       "journal_slug": "nature",
@@ -45475,6 +46164,19 @@
       "abstract_zh": "创建可使易得金属催化剂具有对映选择性的蛋白质支架的能力，可能重新定义不对称催化的格局。人工金属酶（ArMs）是将合成金属辅因子与蛋白质支架相结合的混合催化剂，为实现这一目标提供了潜在途径，但支架发现一直受限于试错方法以及天然蛋白质的功能局限性。1–5 对于金属多吡啶光催化剂而言，这一挑战尤为迫切，此类催化剂广泛用于可见光化学，但在蛋白质支架内尚未实现高度对映选择性的光催化。本研究表明，生成式蛋白质设计6–8可以创建从头构建的支架，选择性结合这些光催化剂，而定向进化将由此产生的人工金属酶转化为高效、高度对映选择性的光催化剂9。进化后的蛋白质支持多种光驱动反应、高催化剂转化数和催化剂回收，并可与商业上可购的外消旋金属络合物协同工作。光谱研究表明，蛋白质环境延长了光催化剂的激发态寿命，并在辅因子附近组织底物，改变能量转移并控制立体选择性。这些发现确立了从头蛋白质设计作为构建缺乏天然蛋白质伙伴的合成金属络合物的功能支架的途径，并提供了一种结合蛋白质设计与进化以控制非天然催化化学的策略。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
+    "doi:10.1038/s41586-026-11328-3": {
+      "doi": "10.1038/s41586-026-11328-3",
+      "journal_slug": "nature",
+      "title": "ctDNA clearance and outcomes for resectable lung cancer from NeoCOAST-2",
+      "acquired_at": "2026-11-16T23:43:27",
+      "source_title_sha256": "993a192e29cf4fb36f0e2b7de708d9b1dd8bf8367bc6f2402497eee2e701ffee",
+      "source_abstract_sha256": "9c4b07aa747e89eb8f1b786aa2cd52e950af92f05c42eddd887013f03dca0756",
+      "source_abstract": "abstract",
+      "title_zh": "ctDNA清除与不可切除肺癌NeoCOAST-2研究的预后",
+      "abstract_zh": "尽管接受围手术期治疗，可切除非小细胞肺癌（NSCLC）患者的复发风险仍然很高1-3。NeoCOAST-2（NCT05061550）是一项2期随机平台试验，针对IIA-期至IIIB-期NSCLC患者评估了新型围手术期治疗。在初次分析中，标准化疗联合度伐利尤单抗（抗PD-L1抗体）并分别添加奥克来单抗（Arm 1，n = 76）、莫那利单抗（Arm 2，n = 72）或道曲妥珠单抗（Dato-DXd；Arm 4，n = 54），其病理完全缓解（pCR）率分别为20.3%、25.7%和35.2%4。在此，我们首次报告预设的次要终点——无事件生存期（EFS）和循环肿瘤DNA（ctDNA）清除情况，以及ctDNA动态与临床结局之间关联的探索性分析。Arm 1、Arm 2和Arm 4的24个月EFS率分别为70.5%、75.7%和77.9%。采用肿瘤非特异性检测，新辅助治疗第3周期第1天ctDNA清除率在Arm 4最高（各研究组分别为54.5%、72.5%和50.9%）。ctDNA清除与无清除相比，可延长EFS（合并危险比HR 0.22，95%置信区间CI 0.11-0.45，P = 0.0000443）。同时具有ctDNA清除和pCR的患者，其EFS优于两者皆无者（EFS HR 0.10，95% CI 0.02-0.42，P = 0.002）。这些发现表明，联合评估ctDNA清除和pCR可能改善风险分层，并且道曲妥珠单抗联合方案具有数值上最高的pCR和EFS率，有待进一步评估。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1038/s41593-026-02264-6": {
       "doi": "10.1038/s41593-026-02264-6",
@@ -47686,6 +48388,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/s41593-026-02498-4": {
+      "doi": "10.1038/s41593-026-02498-4",
+      "journal_slug": "nature-neuroscience",
+      "title": "Distinct prelimbic microcircuits control sensory and affective dimensions of neuropathic pain",
+      "acquired_at": "2026-11-16T23:43:36",
+      "source_title_sha256": "a2d1273169995e269835eb624c3a0fa724cf4e3620ae67e865b3875a65635e64",
+      "source_abstract_sha256": "7c80ecf461735cafa27b54a126c313d712ebcd915f5b4144a31e2d74c9116d7a",
+      "source_abstract": "abstract",
+      "title_zh": "前缘叶不同微环路分别控制神经病理性疼痛的感觉和情感维度",
+      "abstract_zh": "内侧前额叶皮层（mPFC）去激活和输出改变的微环路机制尚不明确，而这是几种慢性疼痛疾病的常见特征。本文利用小鼠前缘叶皮层（PrL）中无偏体内纵向双光子成像，揭示神经损伤导致所有类型GABA能中间神经元敏感化，并出现由单模态到多模态响应的表型转变。通过电路干预，我们确定了尾侧牙质区来源Prox1+中间神经元的功能，并表明PrL中不同类别的抑制性和兴奋性神经元在促进神经病理性疼痛中具有不同的功能。此外，神经病理性疼痛的感觉和情感维度分别依赖PV+-Rbp4+神经元和Prox1+-Cux2+/Ntsr1+神经元两个不同微环路来控制不同的投射输出。这些发现为mPFC如何引导行为以避免或克服疼痛，以及前额叶去激活如何加重神经病理性疼痛提供了机制依据。Gan等人揭示了神经病理性疼痛小鼠中前额叶脑活动失衡的细胞机制，并界定了前额叶对疼痛感觉和情感成分进行自上而下控制的电路。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
     "doi:10.1038/s41593-026-02499-3": {
       "doi": "10.1038/s41593-026-02499-3",
       "journal_slug": "nature-neuroscience",
@@ -48816,6 +49531,19 @@
       "abstract_zh": "加速材料发现需要高效的电子结构计算，这仍然是一个关键挑战，因为密度泛函理论的高计算成本。虽然电荷密度在决定密度泛函理论中电子结构方面起着核心作用，但现有的可泛化机器学习电荷密度模型因计算成本过高而受阻。在此，我们提出了等变密度图神经网络（EdenGNN），一种用于电子结构的机器学习电荷密度模型，以克服这些局限性。它预测电荷密度和增量占用数，从而实现具有投影增广波准确性的电子结构计算。关键的是，通过使用基展开形式配合可训练的径向基函数和Δ-学习策略来捕获电荷转移，它比现有方法快一个数量级。值得注意的是，在材料项目数据库上训练的，我们针对周期表非磁性结构的通用模型EdenGNN-Uni，能够准确预测大多数在未见材料中的带结构，涵盖广阔的化学空间，这比通用机器学习哈密顿方法表现出更强的鲁棒性。这些发现确立了机器学习电荷密度模型作为大规模电子结构计算和高通量筛选的可扩展的第一性原理方法的地位。Li等人介绍了EdenGNN-Uni，这是一个比现有方法快一个数量级的周期表普遍电荷密度模型，有助于高效且准确的材料电子结构计算。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/s42256-026-01327-4": {
+      "doi": "10.1038/s42256-026-01327-4",
+      "journal_slug": "nature-machine-intelligence",
+      "title": "Interpretable distance-resolved graph learning for cancer gene priority screening",
+      "acquired_at": "2026-11-16T23:43:33",
+      "source_title_sha256": "c1c39c17b20fc9bfdff6b2daecd4318ec81829270345b0b9fb4c84cf37a69fa1",
+      "source_abstract_sha256": "41debfea3a6ae1c5a49b90c438ee1d23a4cbf4b53fd5568fa17c04ec81d17a0e",
+      "source_abstract": "abstract",
+      "title_zh": "可解释距离分辨图神经网络用于癌症基因优先级筛选",
+      "abstract_zh": "系统性筛选癌症基因（CGs）仍然是精准肿瘤学的核心目标，但将稀疏且空间分散的致癌信号整合以识别可检验候选基因仍具有挑战性。这里我们提出了CGMap，一种可解释的图学习框架，使用面向宽度的并行架构，从生物分子网络中优先筛选潜在CGs并追踪机制线索。通过构建距离分辨通道，CGMap在多个拓扑尺度上定位空间分散的CG信号，同时避免表征同质化。全局扩散模块量化路径上下文中的基因协同性，并产生可追踪的虚拟相互作用，将预测映射到潜在调节假说，为模型决策提供内在可解释性。在泛癌环境下，针对多个生物分子网络，CGMap分析了12,022个基因，始终优于现有方法，同时保持计算效率，并优先筛选出70个可靠候选基因，包括既有数据库中未注释的基因。重要的是，优先筛选的候选基因与抑制与肿瘤相关的表型相关，包括细胞增殖、迁移和侵袭减少，以及上皮-间质转化（EMT）相关特征向非间质状态转移，这由癌细胞和非恶性细胞系中的平行功能丧失实验所支持。Wang et al. 提出了CGMap，一种距离分辨图学习框架，将分散的致癌信号映射为结构化优先级，缩小癌症基因候选空间，并从假设到实际验证建立了可解释的路径。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
     "doi:10.1038/s42256-026-01328-3": {
       "doi": "10.1038/s42256-026-01328-3",
