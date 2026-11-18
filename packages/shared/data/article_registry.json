@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T00:03:55.246175+00:00",
+  "updated_at": "2026-11-18T00:05:25.785981+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -2939,6 +2939,19 @@
       "abstract_zh": "摘要：建筑、工程与施工（AEC）行业正经历深刻的数字化转型，迫切需要将碎片化、异构的数据整合为可操作的情报。本文系统回顾了76项代表性研究，探讨大型语言模型（LLMs）如何在整个建筑生命周期中实现空间智能。提出了一个分层空间智能框架，涵盖设计、施工、运营以及研究与教育等维度。综述显示，LLMs正从被动文本处理器演变为具备语义解释、空间推理和复杂决策能力的主动认知伙伴。主要发现强调了LLMs在需求翻译、多模态设计生成、法规合规和生命周期建筑信息模型（BIM）集成方面的有效性。尽管取得了这些进展，但在空间推理准确性、缺乏物理具身以及机构数据治理等方面仍面临重大挑战。本文概述了迈向具身智能、AEC专属世界模型和增强人机协作的战略路线图，为专业实践中基于LLM的空间智能发展提供了结构化基础。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-30T01:34:20.667014+00:00"
+    },
+    "doi:10.1007/s10462-026-11738-9": {
+      "doi": "10.1007/s10462-026-11738-9",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Deep learning-based light field occlusion removal: a comparative study",
+      "acquired_at": "2026-11-17T23:47:24",
+      "source_title_sha256": "4b343fe7c93ee4023c2e74a1dd8f0ad6bbd7adb902abae03d2f08cde421435fc",
+      "source_abstract_sha256": "f8cdbcc018eff69c1a8e695c2f1c2bbfbd34aa8d2ff76deec3592116cc89293a",
+      "source_abstract": "abstract",
+      "title_zh": "基于深度学习的光场遮挡去除：比较研究",
+      "abstract_zh": "人工智能评论——光场（LF）遮挡去除旨在利用子孔图像的多视角冗余性，重建被前景物体遮挡的场景内容……",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1007/s10462-026-11739-8": {
       "doi": "10.1007/s10462-026-11739-8",
@@ -8530,6 +8543,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
+    "doi:10.1016/j.cell.2026.10.038": {
+      "doi": "10.1016/j.cell.2026.10.038",
+      "journal_slug": "cell",
+      "title": "Evolutionary repurposing of a pore-forming toxin drives epithelial remodeling during terrestrial adaptation",
+      "acquired_at": "2026-11-17T23:34:30",
+      "source_title_sha256": "98663ad85a5fb7dbb2e4ff5fa2e0ae8ec09ce60ffa65292c50b3f3f1645ab52a",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "孔形成性毒素的进化性再利用驱动陆地适应过程中的上皮重塑",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1016/j.cell.2026.10.039": {
       "doi": "10.1016/j.cell.2026.10.039",
       "journal_slug": "cell",
@@ -8555,6 +8581,19 @@
       "abstract_zh": "青少年社交游戏对神经发育至关重要，但组织瞬时互动的神经机制仍难以捉摸。利用社交行为测序（Social-seq）——一种对遮挡具有鲁棒性的三维姿态估计与无监督聚类流水线——我们发现，伏隔核（NAc）多巴胺与自然互动中的亚秒级社交音节紧密耦合。在野生型青少年中，雄性在主动游戏与被动屈服之间表现出比雌性更明显的多巴胺对比度，符合性别异质的游戏策略。在Shank3缺陷的自闭症模型中，这一过程根本性地被破坏：雄性的主动游戏诱发的多巴胺反应被消除，雌性的反应显著符号反转，且雄性在非社交行为期间出现特异性增强，导致社交游戏缺陷。基于被破坏的与游戏相关的多巴胺强化值参数化的多智能体增强学习模型复现了突变体表型。锁定在主动游戏时间的腹侧被盖区（VTA）-NAc多巴胺投射闭环光遗传刺激恢复了Shank3缺陷大鼠的互惠性游戏。因此，亚秒级多巴胺强化调控自然社交行为，为神经发育障碍提供了基于行为依赖性的干预框架。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
+    },
+    "doi:10.1016/j.cell.2026.10.041": {
+      "doi": "10.1016/j.cell.2026.10.041",
+      "journal_slug": "cell",
+      "title": "Paleogenomics illuminates mobility and changing lifeways in Chalcolithic Anatolia",
+      "acquired_at": "2026-11-17T23:34:30",
+      "source_title_sha256": "6032d7cd9bd542c8fcf110fa7bce3bfc77ab55673ce519aa4b9f56dcca15fb39",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "古基因组学揭示了色尔凯尔时代安纳托利亚的人口流动与生活方式变迁",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106648": {
       "doi": "10.1016/j.neubiorev.2026.106648",
@@ -13028,6 +13067,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.107069": {
+      "doi": "10.1016/j.neubiorev.2026.107069",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Spatial organization of heterogeneities in the striatum",
+      "acquired_at": "2026-11-18T00:03:28",
+      "source_title_sha256": "9bcf2f67e7a35db60b36fc66fd447b807274e2b89d5644a4dee63bd4ceff0cbb",
+      "source_abstract_sha256": "8358a941b3e68771f9570479eac24a136a6e9c5d8cade784173c6975e032e2ef",
+      "source_abstract": "abstract",
+      "title_zh": "纹状体中异质性的空间组织",
+      "abstract_zh": "纹状体通常通过D1/D2多刺突投射神经元的二元分类以及支持动作选择和强化学习的粗粒基底神经节通路来描述。然而，纹状体也是一个具有强大神经调控作用的递归抑制性网络，其细胞和突触特性并非均匀分布。空间转录组学揭示了纹状体领域内基因表达存在连续梯度，叠加于离散的纹状体-基质划分之上。其他研究表明，内在特性（如兴奋性）、抑制性中间神经元丰度以及神经调控场（例如末端分布、清除动力学、受体表达）在空间上存在差异。这些空间结构的异质性似乎与纹状体的地形输入和输出图谱相吻合，表明其计算过程不能是均匀分布的。我们提出，纹状体最好被理解为一个空间动力学场，即相邻的纹状体微电路具有相似但不相同的动力学特性，这些与位置相关的参数以不同方式影响网络动力学，从而影响纹状体组织中的整合、竞争和可塑性。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1016/j.neubiorev.2026.107070": {
       "doi": "10.1016/j.neubiorev.2026.107070",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
@@ -13210,6 +13262,32 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-12T03:14:38.222535+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.107085": {
+      "doi": "10.1016/j.neubiorev.2026.107085",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Systematic review of rodent studies on deep brain stimulation targeting the striatum",
+      "acquired_at": "2026-11-18T00:03:28",
+      "source_title_sha256": "64cb812a37a5099573db1b1f55f45bb732b6ee47dbba8323b19da0912ea08dad",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "啮齿动物纹状体深部脑刺激研究的系统综述",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107086": {
+      "doi": "10.1016/j.neubiorev.2026.107086",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Circadian Gating of Neuroimmune Memory: A Shared Persistence-and-Gating Hypothesis for Chronic Pain, Depression, and Postoperative Cognitive Dysfunction",
+      "acquired_at": "2026-11-18T00:03:28",
+      "source_title_sha256": "817d3d179bfc35355421970aed9ddcd4e2d7cf8b3a2015692f9c7f58b33479a2",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "神经免疫记忆的昼夜调控：慢性疼痛、抑郁与术后认知功能障碍的持久性-调控共享假说",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1016/j.neubiorev.2026.107087": {
       "doi": "10.1016/j.neubiorev.2026.107087",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
@@ -13287,6 +13365,19 @@
       "abstract_zh": "空间导航是一种高阶整合性认知能力，通过整合空间记忆、多感觉线索、注意与执行控制，支持环境定位、目标导向的路线选择及适应性运动。支撑导航的神经系统同样易受衰老与神经退行性疾病影响，因此导航成为连接基础机制与临床可测功能损害的有用领域。本综述从多个层面总结空间导航机制。在认知层面，导航依赖于包括空间表征、路径积分、参照系变换、地标使用及路径规划在内的相互作用过程。在网络层面，海马-内嗅、回扣-顶叶、场景选择性及前额叶系统贡献互补功能。在细胞层面，位置细胞、栅格细胞、头向细胞、速度细胞及边界相关表征对位置、航向、自身运动、环境几何及预期行为进行编码。临床与神经影像学研究表明，导航障碍与结构及功能异常相关，目前最强的诊断证据来自阿尔茨海默病及其前驱期。基于虚拟现实的行为评估与电生理方法提供了刻画导航表型的互补手段：虚拟现实可实现受控、可重复且对过程敏感的任务，而颅内及头皮记录则在不同空间与生理尺度提供神经信息。目前尚无专为导航障碍开发或批准的药物；因此，以导航为重点的干预主要依赖行为与虚拟现实康复、代偿策略及新兴的神经调节方法。未来研究应将过程特异的行为与生理标志物与生物标志物定义的临床队列相结合，并开展大规模、随机、纵向研究，以确立诊断效度、现实世界迁移及基于机制的干预效应。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107096": {
+      "doi": "10.1016/j.neubiorev.2026.107096",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "A Metabolite-Centered Framework for Microbiota-Gut-Brain Communication Linking Constrained Signaling to Behavior and Stress Physiology",
+      "acquired_at": "2026-11-18T00:03:28",
+      "source_title_sha256": "be399e46d1f77f68d1ef39513f2c852c40171cf8d22116c989087e69aeb63e41",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "基于代谢物的微生物群-肠-脑通讯框架：将受限信号传递与行为及应激生理学联系起来",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -16687,12 +16778,12 @@
       "title": "Noncoding functions of FMR1 transcript in riboregulation of human neurodevelopment",
       "acquired_at": "2026-11-16T23:39:36",
       "source_title_sha256": "7b258b4f9fa6e8aad3a501d70bddede95ce6a9698db349a78691ae51c136451d",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "非编码RNA功能：FMR1转录本在人类神经发育中的核糖调控作用",
-      "abstract_zh": null,
+      "source_abstract_sha256": "096876209b8b5da29bdd70b9e0ce919c0b3c292be5d6df2dce4da09c5b831f26",
+      "source_abstract": "abstract",
+      "title_zh": "FMR1 转录本在人类神经发育核糖调节中的非编码功能",
+      "abstract_zh": "蛋白编码信使 RNA(mRNA)的非编码功能在很大程度上被忽视。本文揭示了 FMR1 mRNA 在人类神经发育中出乎意料的非编码作用。FMR1 及其蛋白产物脆 X 信使核糖核蛋白(FMRP)的丢失会导致神经发育障碍脆 X 综合征(FXS)。FXS 患者来源的神经元表现出过度兴奋性和形态不成熟，而保留 FMR1 转录本表达的 FMRP 敲除(FMRP-KO)神经元则没有表现出这些表型。多组学分析揭示了 FXS 神经元与 FMRP-KO 神经元之间的关键代谢差异。虽然 FXS 神经元和 FMRP-KO 神经元均表现出线粒体呼吸减弱，但只有 FXS 神经元表现出糖酵解增强。我们进一步发现，FMR1 转录本通过抑制乳酸脱氢酶 A(LDHA)mRNA 与胰岛素样生长因子 2 mRNA 结合蛋白 2(IGF2BP2)的结合，核糖调节糖酵解酶 LDHA 的水平。最后，FMR1 转录本独立于 FMRP，挽救了 FXS 神经元的糖酵解和细胞缺陷。这些结果共同表明，FMR1 在人类神经发育中是一种双功能 RNA。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1016/j.neuron.2026.10.017": {
       "doi": "10.1016/j.neuron.2026.10.017",
@@ -16706,6 +16797,19 @@
       "abstract_zh": "打喷嚏、咳嗽和疼痛是呼吸道病毒感染的常见症状。这些反应由支配气道的感受性神经元发起，用于检测有害刺激，但 SARS-CoV-2 如何激活这些神经元尚不明确。本文表明，冠状病毒木瓜样蛋白酶（PLpro）能直接激活小鼠和人诱导多能干细胞（iPSC）衍生的感受性神经元。PLpro 引发打喷嚏、咳嗽、急性疼痛以及气道中降钙素相关基因肽（CGRP）的释放。PLpro 的蛋白酶活性和宿主离子通道瞬时受体电位变形蛋白 1（TRPA1）对于神经元激活和打喷嚏均为必需。小鼠适应型 SARS-CoV-2 或小鼠冠状病毒 MHV-A59 感染也会诱发小鼠打喷嚏，且 MHV-A59 诱发的打喷嚏依赖于 TRPA1。SARS-CoV-2 感染三叉神经节改变了与伤害感受相关的转录程序，包括上调由 PLpro 激活的 TRPA1-CGRP 信号通路。这些发现共同揭示了 SARS-CoV-2 触发疼痛和气道反射的直接机制，并确定 PLpro 和 TRPA1 作为 COVID-19 的潜在治疗靶点。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.019": {
+      "doi": "10.1016/j.neuron.2026.10.019",
+      "journal_slug": "neuron",
+      "title": "A cell-type-resolved proteomic atlas reveals intra- and intercellular signaling in Alzheimer’s disease",
+      "acquired_at": "2026-11-17T23:39:05",
+      "source_title_sha256": "df1acdc313d32ed4809273c05d2a53ed340193770015c3008cb7c82001ef2d0d",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "细胞类型分辨蛋白组图谱揭示阿尔茨海默病中的细胞内及细胞间信号传递",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1016/j.neuron.2026.10.020": {
       "doi": "10.1016/j.neuron.2026.10.020",
@@ -18786,6 +18890,19 @@
       "abstract_zh": "认知老化轨迹差异显著。许多老年人在记忆和执行功能方面逐渐下降，而有些人则能保持高水平的认知表现直至高龄。理解这种变异背后的神经机制，对于早期发现不良的老化轨迹以及开发干预措施具有重要意义。本文综述了人类成功认知老化相关的功能性大脑特征，将功能性磁共振成像和脑电图的证据整合在大脑维护与代偿的统一概念框架内。两种模式的证据都越来越表明，成功认知老化与保持年轻人的神经动力学有关，而代偿性神经招募的作用在实证上仍然存在争议，且在方法学上难以确立。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-12T03:14:38.222535+00:00"
+    },
+    "doi:10.1016/j.tins.2026.10.005": {
+      "doi": "10.1016/j.tins.2026.10.005",
+      "journal_slug": "trends-in-neurosciences",
+      "title": "Beyond memory strengthening: noradrenergic control of memory specificity",
+      "acquired_at": "2026-11-17T23:41:56",
+      "source_title_sha256": "6a68b2b4474e2843d4bc0ded0c68db8d83ff99fc8f7ceec89f5e442078d801a7",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "超越记忆增强：去甲肾上腺素对记忆特异性的控制",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1016/j.tins.2026.10.009": {
       "doi": "10.1016/j.tins.2026.10.009",
@@ -30903,6 +31020,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-25T02:18:33.046128+00:00"
     },
+    "doi:10.1038/d41586-026-03107-x": {
+      "doi": "10.1038/d41586-026-03107-x",
+      "journal_slug": "nature",
+      "title": "Where have all the saucers flown?",
+      "acquired_at": "2026-11-17T23:42:28",
+      "source_title_sha256": "5b2142bc8fa715acdcf0d803e76955cab7687855aaa571a023b9786c3f2190ec",
+      "source_abstract_sha256": "0c1dd16ab319e983526a0cc8e5f6a194754d39dbcf235c78c56ba9a69a1e8d8e",
+      "source_abstract": "abstract",
+      "title_zh": "所有飞碟都去哪儿了？",
+      "abstract_zh": "错失的相遇。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1038/d41586-026-03108-w": {
       "doi": "10.1038/d41586-026-03108-w",
       "journal_slug": "nature",
@@ -32034,6 +32164,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/d41586-026-03248-z": {
+      "doi": "10.1038/d41586-026-03248-z",
+      "journal_slug": "nature",
+      "title": "How the pandemic changed trust in science — in four charts",
+      "acquired_at": "2026-11-17T23:42:28",
+      "source_title_sha256": "c727fde26406932ed73c03130c7026a7e6ed2373e0b72e481d94b2f789bff69c",
+      "source_abstract_sha256": "fd9977e0d089d92e2e211f704ca4480439428e42e9bc2382f2820c4fa8c878f5",
+      "source_abstract": "abstract",
+      "title_zh": "大流行病如何改变了对科学的信任——四张图表",
+      "abstract_zh": "此类最大的分析揭示了公众与科学及从事科学研究的人之间关系的变化。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1038/d41586-026-03251-4": {
       "doi": "10.1038/d41586-026-03251-4",
       "journal_slug": "nature",
@@ -32450,6 +32593,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/d41586-026-03325-3": {
+      "doi": "10.1038/d41586-026-03325-3",
+      "journal_slug": "nature",
+      "title": "These three red flags could unmask dodgy journals",
+      "acquired_at": "2026-11-17T23:42:28",
+      "source_title_sha256": "9c8f3ff4520912b44d80f9c8e196c8b16f6f81df4d7cdedd00d77c2fb0ff2e9d",
+      "source_abstract_sha256": "1179ef9b78a5d33095abf8df34fc00591c5bac3cf814b8b1be615f55b9ff5d36",
+      "source_abstract": "abstract",
+      "title_zh": "这三个危险信号可揭露可疑期刊",
+      "abstract_zh": "随着不良出版行为的激增，学术数据库面临着确保所列期刊声誉良好的压力。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1038/d41586-026-03326-2": {
       "doi": "10.1038/d41586-026-03326-2",
       "journal_slug": "nature",
@@ -32814,6 +32970,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
+    "doi:10.1038/d41586-026-03388-2": {
+      "doi": "10.1038/d41586-026-03388-2",
+      "journal_slug": "nature",
+      "title": "Methane emissions remain flat even as biggest US oil region opens the tap",
+      "acquired_at": "2026-11-17T23:42:28",
+      "source_title_sha256": "9f6714d6f7a6737aa36ab466c970955c219cd13125597f0d61dc0eacba5fb9bd",
+      "source_abstract_sha256": "734d73185bda82adc4a46eba4f551c172ac10f4309f14f40979a9deba0b0d66d",
+      "source_abstract": "abstract",
+      "title_zh": "甲烷排放持平，即使美国最大产油区开闸生产",
+      "abstract_zh": "在石油和天然气产量翻三倍的这段期间，得墨西哥产盆地的温室气体排放量一直保持近乎不变。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1038/d41586-026-03389-1": {
       "doi": "10.1038/d41586-026-03389-1",
       "journal_slug": "nature",
@@ -32839,6 +33008,19 @@
       "abstract_zh": "监管阻力一度使该领域停滞不前。但研究人员对改变意识的药物作为抑郁症和情绪障碍的潜在治疗方法持乐观态度。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03391-7": {
+      "doi": "10.1038/d41586-026-03391-7",
+      "journal_slug": "nature",
+      "title": "The grand plan to transform psychiatry — by personalizing mental-health care",
+      "acquired_at": "2026-11-17T23:42:28",
+      "source_title_sha256": "507cea8c7d5fbd50974b4dd171f2f4c2d3c6c5bb2ab43e949bf7c8d202d3690f",
+      "source_abstract_sha256": "eec71c65f9f42ce7394664debb47e4c5856588c50c401720a4106ea96d220d54",
+      "source_abstract": "abstract",
+      "title_zh": "精神病学转型的宏伟计划——通过个性化精神健康护理",
+      "abstract_zh": "一份血样、一次脑部扫描和对手机数据的分析，能否改变精神科医生治疗你的方式？",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1038/d41586-026-03392-6": {
       "doi": "10.1038/d41586-026-03392-6",
@@ -32930,6 +33112,19 @@
       "abstract_zh": "超级富豪慈善家正在颠覆生物医学研究。此外，物理学家如何将一颗反物质粒子禁闭数月，以及人是否可能被鲸鱼吞下并幸存。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03402-7": {
+      "doi": "10.1038/d41586-026-03402-7",
+      "journal_slug": "nature",
+      "title": "How personalization and psychedelics are revitalizing psychiatry",
+      "acquired_at": "2026-11-17T23:42:28",
+      "source_title_sha256": "c9ce424b223330a2fdd238eff1e008d641d38576f2aabfd307187ce131788944",
+      "source_abstract_sha256": "390c12f859e1e8cec25f299b99786337ccded5f96d8b11d8658c9745e9697cb7",
+      "source_abstract": "abstract",
+      "title_zh": "个性化与迷幻药如何重振精神病学",
+      "abstract_zh": "在进步罕见的学科中，新想法受到欢迎，前提是应用严谨。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1038/d41586-026-03403-6": {
       "doi": "10.1038/d41586-026-03403-6",
@@ -33087,6 +33282,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
+    "doi:10.1038/d41586-026-03445-w": {
+      "doi": "10.1038/d41586-026-03445-w",
+      "journal_slug": "nature",
+      "title": "Preprint-centric publishing model gets major boost",
+      "acquired_at": "2026-11-17T23:42:28",
+      "source_title_sha256": "5863a278a9fd96cd47902c2a856be2e3c4e169f37431b8a140ef80c16464d4fe",
+      "source_abstract_sha256": "60844a8b225f09a6722750b53196475225c8452f6276430cd264b5b1314f3bcb",
+      "source_abstract": "abstract",
+      "title_zh": "以预印本为中心的出版模式获得重大推动",
+      "abstract_zh": "欧洲资助方支持新兴的“发布、评审、策展”预印本方法。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1038/d41586-026-03446-9": {
       "doi": "10.1038/d41586-026-03446-9",
       "journal_slug": "nature",
@@ -33113,6 +33321,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
+    "doi:10.1038/d41586-026-03449-6": {
+      "doi": "10.1038/d41586-026-03449-6",
+      "journal_slug": "nature",
+      "title": "Gene therapy that led to boy’s death had limited efficacy",
+      "acquired_at": "2026-11-17T23:42:28",
+      "source_title_sha256": "b5759f72155d6d8b250705845059f6d35a52fc73d9275e2c9f5567333405898a",
+      "source_abstract_sha256": "13a39c17dd56e95d837be61d2bff30b41e11e2b5787a363baa2dca03dcf19a81",
+      "source_abstract": "abstract",
+      "title_zh": "导致男童死亡的基因疗法疗效有限",
+      "abstract_zh": "由中国生物技术公司汇达基因开发的该疗法在动物实验中显示出前景，但在一名儿童身上引发致命反应。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1038/d41586-026-03461-w": {
       "doi": "10.1038/d41586-026-03461-w",
       "journal_slug": "nature",
@@ -33138,6 +33359,19 @@
       "abstract_zh": "生物学家对道金斯的核心观点的当前看法。此外，新电影所描绘主题如何萦绕科学界，以及一种能自行制备金属有机框架材料的细菌。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03476-3": {
+      "doi": "10.1038/d41586-026-03476-3",
+      "journal_slug": "nature",
+      "title": "Is research funding now a lottery? Elite funder ERC swamped by applications",
+      "acquired_at": "2026-11-17T23:42:28",
+      "source_title_sha256": "ff93b52a98193366972258555ad1b3a5a3663e47aea61f56735ba08ea2640225",
+      "source_abstract_sha256": "8c04d2bd44cd087fa3dd58f6a46c74444abbf231942f3c2a5b3fea85b41156b4",
+      "source_abstract": "abstract",
+      "title_zh": "研究资金现在还是靠运气吗？顶尖资助机构ERC申请量激增",
+      "abstract_zh": "欧洲研究理事会拨款申请量显著增加，导致成功率下降。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1038/s41380-026-03624-1": {
       "doi": "10.1038/s41380-026-03624-1",
@@ -39340,6 +39574,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/s41582-026-01285-w": {
+      "doi": "10.1038/s41582-026-01285-w",
+      "journal_slug": "nature-reviews-neurology",
+      "title": "Psychedelic treatment for headache disorders",
+      "acquired_at": "2026-11-17T23:42:42",
+      "source_title_sha256": "d20a149990cf782a88ab10f8afa46f0748f1fb7349931dd104d350ef611f076b",
+      "source_abstract_sha256": "d593657dfa4aa86c2252efcd41e5196bc09f4629fb46e820b7b96666d577dc2f",
+      "source_abstract": "abstract",
+      "title_zh": "迷幻药治疗头痛疾病",
+      "abstract_zh": "头痛疾病是常见的神经系统疾病，根据具体疾病和个体需求有多种治疗选择。迷幻药物（如裸盖菇素、二甲基色胺和麦角酸二乙胺）在头痛医学中具有重要的历史作用，并正重新作为潜在的治疗选择出现，尤其是在丛集性头痛中。对头痛迷幻治疗的新兴兴趣主要归因于患者群体，他们倡导自己偏好的治疗形式，包括迷幻药物。丛集性头痛和偏头痛的临床试验已支持裸盖菇素在这些疾病过渡性治疗中所报道的有效性和安全性，其他化合物和治疗方式的研究正在进行中或即将展开。在本视角综述中，我们概述了迷幻药物在头痛医学中的应用，包括历史背景、与常规头痛药物的关系以及迄今有限的临床和科学证据。我们还讨论了安全、后勤和法律问题，为该领域的未来工作奠定基础。迷幻药物治疗头痛疾病有着悠久的历史，这些药物正重新作为潜在的治疗选择出现，尤其是在丛集性头痛中。本视角综述概述了迷幻药物在头痛医学中的应用，包括其与常规头痛药物的关系以及关于疗效的有限临床和科学证据。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1038/s41582-026-01289-6": {
       "doi": "10.1038/s41582-026-01289-6",
       "journal_slug": "nature-reviews-neurology",
@@ -40015,6 +40262,19 @@
       "abstract_zh": "细胞外囊泡（EVs）是具有膜包被的纳米颗粒，可通过在细胞之间转移蛋白质、脂质和核酸来促进神经系统内的细胞间通讯。在神经退行性疾病（NDDs）中，细胞和动物模型的证据以及新兴的人类数据表明，EVs 涉及多个相互关联的过程：囊泡发生和内体溶酶体转运改变；致病性货物（包括淀粉样 β 斑蛋白、tau 蛋白、α-突触核蛋白、TDP43 和 PrPSc）的选择性加载；以及与朊病毒样播种和扩散一致的错误折叠蛋白传播。EVs 还通过在神经元、胶质细胞和神经血管单位之间传递细胞因子和调节性微小 RNA 来调节神经炎症，并通过参与血脑屏障来塑造中枢神经系统—外周相互作用。这些特性也支撑着不断增长的转化兴趣：血液和其他生物液体中源自脑的 EV 群体为早期病理和疾病轨迹提供了微创窗口，天然或工程化 EVs 正在被开发为递送载体或抑制病理传播的靶点。本综述整合了机制和临床进展，强调了生物学和方法学变异的关键来源，并为实现 NDDs 的 EV 基础诊断和治疗，界定了标准化、细胞来源分配和临床验证所需的优先事项。细胞外囊泡是参与神经系统内细胞间通讯的膜包被颗粒。在本综述中，Spiers、Broatch 和 Hill 考察了这些囊泡在神经退行性疾病生物学、诊断和治疗中的作用。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/s41583-026-01107-4": {
+      "doi": "10.1038/s41583-026-01107-4",
+      "journal_slug": "nature-reviews-neuroscience",
+      "title": "A pathway to toxic extracellular vesicle secretion",
+      "acquired_at": "2026-11-17T23:42:45",
+      "source_title_sha256": "100e2d4417dab6d1d8512cc07afa0d35657b0ac0430defc7a2fa96ca66ae35b8",
+      "source_abstract_sha256": "bb783d8a0a83fe520f038fc1078f637e0b540ae6799f4414a5f32dcadcf5f881",
+      "source_abstract": "abstract",
+      "title_zh": "有毒细胞外囊泡分泌的通路",
+      "abstract_zh": "离子通道 P2RX7 在 Tau 病变小鼠模型中驱动小胶质细胞向炎症状态转变，并促进致病性细胞外囊泡介导的 Tau 传播。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1038/s41586-025-09573-z": {
       "doi": "10.1038/s41586-025-09573-z",
@@ -48466,6 +48726,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
     },
+    "doi:10.1038/s41593-026-02505-8": {
+      "doi": "10.1038/s41593-026-02505-8",
+      "journal_slug": "nature-neuroscience",
+      "title": "Microglia mediate motor memory decay through activity-dependent phagocytosis of myelin sheaths",
+      "acquired_at": "2026-11-17T23:42:39",
+      "source_title_sha256": "eaae010f803f6cfa7a5471bd5fd49491f1bfc9ccd97638eab96a80a6e0468c57",
+      "source_abstract_sha256": "3ca2483942382c4d159fc61621918acc30fc667d2dfe0081c923cd7fb08d0cbd",
+      "source_abstract": "abstract",
+      "title_zh": "小胶质细胞通过活动依赖性的髓鞘吞噬介导运动记忆衰减",
+      "abstract_zh": "经验依赖性的髓鞘化变化对运动学习至关重要，新生成的少突胶质细胞参与新髓鞘的形成。然而，运动记忆会随时间衰减，其潜在机制大多尚未阐明。本研究表明，运动记忆的衰减与小鼠脑中小胶质细胞吞噬导致的记忆相关髓鞘变化相关。从机制上看，运动记忆痕迹细胞活动降低会减少少突胶质细胞中分化簇47（CD47）“别吃我”信号的表达，从而促进小胶质细胞吞噬并驱动髓鞘丢失。运动记忆相关少突胶质细胞中CD47的敲除增加了小胶质细胞对髓鞘的吞噬并加速了运动记忆的衰减，而CD47的过表达则产生相反结果。此外，小胶质细胞独立吞噬髓鞘和突触。我们的研究结果表明，小胶质细胞吞噬运动记忆相关髓鞘会导致运动记忆衰减。由于多种类型的记忆都需要大脑中的髓鞘化，该机制可能有助于其他类型记忆的衰减。Hu等人发现，运动记忆衰减涉及小胶质细胞吞噬记忆相关髓鞘。痕迹细胞活动降低会降低“别吃我”信号CD47，从而促进小胶质细胞介导的髓鞘清除并促进记忆衰减。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1038/s41593-026-02509-4": {
       "doi": "10.1038/s41593-026-02509-4",
       "journal_slug": "nature-neuroscience",
@@ -48569,6 +48842,19 @@
       "abstract_zh": "《自然神经科学》- 作者更正：复杂神经和精神疾病的共享遗传风险架构的基因组全景分析",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/s41593-026-02547-y": {
+      "doi": "10.1038/s41593-026-02547-y",
+      "journal_slug": "nature-neuroscience",
+      "title": "Author Correction: Trans-ancestry genome-wide analyses of bipolar disorder in East Asian and European populations improve genetic discovery",
+      "acquired_at": "2026-11-17T23:42:39",
+      "source_title_sha256": "b0139fb8a8ac5158d8e6210ad2dc91f10db6719e2ded726b5604bc8283f4f573",
+      "source_abstract_sha256": "b974471f6241ef4667e3e281cbe8119951a15b28f28e30daf3162f7274c35b42",
+      "source_abstract": "abstract",
+      "title_zh": "更正：东亚和欧洲人群双相障碍跨祖先全基因组关联分析促进遗传学发现",
+      "abstract_zh": "来源仅提供期刊名称《Nature Neuroscience》，未提供摘要。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1038/s42256-026-01244-6": {
       "doi": "10.1038/s42256-026-01244-6",
@@ -50324,6 +50610,19 @@
       "abstract_zh": "我们感谢Tan等人对这一区域帕金森病（PD）治疗研究的综述，的确富有启发且前景可观。然而，我们注意到该综述中若干引文与现有文献不一致，包括对我们自身GUT-PARFECT试验的误读。",
       "translation_model": "gpt-5.3-codex-spark",
       "translated_at": "2026-08-04T01:59:53.657990+00:00"
+    },
+    "doi:10.1093/brain/awag124": {
+      "doi": "10.1093/brain/awag124",
+      "journal_slug": "brain",
+      "title": "D4Z4 methylation and genetic modifiers influence severity in a facioscapulohumeral muscular dystrophy kindred",
+      "acquired_at": "2026-11-17T23:44:02",
+      "source_title_sha256": "d17b85cd0733f7747c0857cd8c7470de9fe14776132d31be62ed32adc404d892",
+      "source_abstract_sha256": "500cd4c7434027ad47105e5249adb44e6f35ec76ef994f196723eeef8e4b4b4a",
+      "source_abstract": "abstract",
+      "title_zh": "D4Z4甲基化与遗传修饰因子影响面肩肱型肌营养不良家系的病情严重程度",
+      "abstract_zh": "摘要 面肩肱型肌营养不良（FSHD）最早的系统性描述之一涉及一个可追溯至单一祖先的六代家系，该祖先于1775年出生于英国兰开夏郡，后来在19世纪50年代移民至犹他州。该家系（K1462）的成员首次于1950年发表，临床随访已持续数十年，DNA样本自20世纪80年代起存档。尽管共享相同的5个重复单位（5RU）D4Z4收缩，且位于许容性4qA单倍型上，受累个体在发病年龄、临床严重程度和疾病进展方面存在显著差异，甚至包括同胞间的差异。凭借长期随访和共享的奠基者突变，K1462是识别FSHD疾病表达修饰因子的独特资源。我们重新引入K1462，入组涉及第九代，并采用现代方法进行基因组分析。在139名个体中确认了5RU奠基等位基因的遗传，纳氏Cas9靶向测序以碱基对分辨率测定了收缩D4Z4阵列中的CpG甲基化。5RU等位基因表现出完全渗透率；然而，受累个体之间的临床严重程度和进展差异巨大。对血液来源基因组DNA的纵向分析表明，个体内D4Z4 CpG甲基化高度稳定，包括相隔长达38年采集的样本，表明表观遗传状态的长期维持。相比之下，D4Z4甲基化水平在个体间差异显著，并与临床严重程度呈强烈负相关。D4Z4甲基化差异在家族内部和家族间均有观察到，并伴有一个温和但一致的亲本起源效应。全基因组测序分析未发现已知FSHD2基因中的罕见变异可以解释这种变异性。为评估常见遗传变异的贡献，我们对D4Z4甲基化水平进行了基于家系的全基因组关联分析，在15号染色体上确定了一个全基因组显著位点。跨越HDGFL3启动子和5′区域的变异与D4Z4甲基化增加相关（在调整亲本传播后），该基因编码一种含PWWP结构域的染色质相互作用蛋白，支持常见变异对甲基化调节在FSHD中的作用。这些结果支持一种模型，即D4Z4甲基化通过与传播相关的表观遗传重置建立，在个体内稳定维持，并由遗传变异进行定量修饰。这些发现共同表明，D4Z4甲基化是一种个体水平的稳定表观遗传特征，它在多代家系中变异，并与临床严重程度相关，证实了D4Z4甲基化作为定量生物标志物和可遗传修饰的FSHD疾病严重程度贡献因子的地位。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1093/brain/awag126": {
       "doi": "10.1093/brain/awag126",
@@ -52392,6 +52691,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-25T02:18:33.046128+00:00"
     },
+    "doi:10.1093/brain/awag362": {
+      "doi": "10.1093/brain/awag362",
+      "journal_slug": "brain",
+      "title": "Chronic and subacute phenylalanine effects on brain metabolism in adults with phenylketonuria",
+      "acquired_at": "2026-11-17T23:44:02",
+      "source_title_sha256": "3ca802fe6a8d4041762dfdcc3c43784524403991a778de49b33babc763c68fb4",
+      "source_abstract_sha256": "2b009543e4dfb13623bdb3ff748b748ddd2155d4acf4e13861609fd8736513fc",
+      "source_abstract": "abstract",
+      "title_zh": "苯丙氨酸对苯丙酮酸症成人脑代谢的慢性和亚急性影响",
+      "abstract_zh": "摘要 苯丙酮酸症（PKU）会导致大脑长期暴露于升高的苯丙氨酸（Phe），尽管接受终生饮食治疗，但成年期的神经代谢后果尚未完全阐明。我们研究了早期治疗的 PKU 成人是否持续存在脑代谢改变，以及这些代谢物是否对亚急性 Phe 波动产生动态响应。早期治疗的 PKU 成人（n=30）和健康对照（n=59）接受了质子磁共振波谱（1H-MRS）、结构性和功能性脑 MRI 以评估白质病灶负荷（T2 加权图像）和脑血流（动脉自旋标记），以及认知评估。患者还参加了一项随机、安慰剂对照的交叉干预，进行为期四周的口服 Phe 负荷，以评估亚急性代谢反应性。绝对代谢物浓度主要在白质组织中定量，并检查了血 Phe 和脑 Phe、白质病灶负荷、脑血流与认知表现之间的关联。基线时，患者表现出更高的脑 Phe 和 N-乙酰天冬氨酸（NAA）水平，同时相较于对照组，肌肽酸、N-乙酰天冬氨酰谷氨酸（NAAG）和总肌酸/磷酸肌酸减少。伴有白质病变的患者在血液和脑代谢物上与无病变患者无差异。四周口服 Phe 负荷增加了脑 Phe，并导致肌肽酸可逆性下降，而 NAA、NAAG 和肌酸化合物保持不变。血液和脑 Phe 浓度呈强相关（r=0.83, p<0.001），且其比率呈受试者依赖性。多重比较校正后，未观察到代谢物浓度与区域脑血流或认知表现之间存在显著关联。早期治疗的 PKU 成人表现出涉及神经元-胶质代谢、能量缓冲和星形胶质细胞渗透调节的持续性神经代谢改变。研究结果支持特质-状态框架，NAA、NAAG 和肌酸化合物的稳定改变反映长期存在的代谢改变，叠加以肌肽酸为指标的动态 Phe 敏感星形胶质细胞反应。与脑灌注或认知缺乏强关联表明，这些改变代表宏观影像学或行为指标未捕捉的上游生物学过程。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
     "doi:10.1093/brain/awag363": {
       "doi": "10.1093/brain/awag363",
       "journal_slug": "brain",
@@ -52872,6 +53184,45 @@
       "abstract_zh": "摘要 肌萎缩侧索硬化/帕金森症-痴呆综合征（ALS/PDC）是一种致命的神经退行性疾病，曾在关岛（马里亚纳群岛，美国）及太平洋其他一些地区高度流行。尽管对其病因进行了广泛研究，ALS/PDC 的病因仍不明确。ALS/PDC 在病理水平上表现为脑和脊髓中以 tau 为主导的多种蛋白病变。最近有报告称，关岛 ALS/PDC 脑提取物在基于荧光共振能量转移（FRET）的生物传感器细胞中表现出 tau 种子活性。为在此发现基础上进一步探究 ALS/PDC 中 tau 种子的性质，我们采用丙氨酸突变扫描（Ala scan）方法，确定关岛 ALS/PDC 病例神经组织中 tau 的种子特征。首先，我们在 tau 生物传感器细胞中证实了 ALS/PDC 脑样本中 tau 种子活性的检测。值得注意的是，我们还能检测到脊髓中强效的 tau 种子活性。随后的 Ala scan 检测显示，ALS/PDC tau 表现出与慢性创伤性脑病（CTE）型 tau 相似的聚集体掺入模式。这一结果与 tau 的近期冷冻电镜研究一致，后者揭示 ALS/PDC tau 丝主要为 CTE 型。ALS/PDC tau 的结构特征和种子行为，以及尸检时 tau 病变的区域分布，提示 ALS/PDC 是一种 CTE 样 tau 病。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
+    },
+    "doi:10.1093/brain/awag408": {
+      "doi": "10.1093/brain/awag408",
+      "journal_slug": "brain",
+      "title": "Motor system inefficiency as an activity-dependent amplifier of fatigue in multiple sclerosis",
+      "acquired_at": "2026-11-17T23:44:02",
+      "source_title_sha256": "e61dfed80f65eb166b9efdb5505146b05382d3c9f752f11e7a54deafaea453d5",
+      "source_abstract_sha256": "5e0f9ad7c90a3c9f9b904f8c944a4f33928d85272085297937f7ad5d0a4b73f4",
+      "source_abstract": "abstract",
+      "title_zh": "运动系统低效作为多发性硬化症中活动依赖性疲劳放大器",
+      "abstract_zh": "摘要 多发性硬化症（MS）疲劳在临床上显而易见，但在机制上尚不清楚。尽管残疾程度轻微、结构性MRI检查稳定或检查时肌力保存，它仍可能主导日常生活。本综述回顾了证据，表明MS疲劳的重要成分可能源于运动控制成本增加以及活动后恢复不全。自愿肌肉激活研究表明，部分MS患者对可用力量的中枢控制不完整，特别是在运动后。功能成像研究表明，看似保持的运动通常依赖于前运动、小脑、纹状体、前额叶及眶缘-岛叶系统的扩展性招募，这些系统参与运动补偿、努力分配和体态监测。代谢和病理学研究进一步指出，脱髓鞘及慢性损伤网络存在能量脆弱性，为重复信号需求后恢复受损提供了生物学合理性。这些发现支持一种系统框架：扩展的运动控制招募在维持表现并保持灵活和可恢复时是补偿性的，但当日常活动始于未完全恢复的生理储备时，它可能放大MS疲劳。我们概述了可检验的预测，用于识别运动成本疲劳表型，并为MS中活动相关疲劳的重复测量研究设计提供依据。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
+    "doi:10.1093/brain/awag409": {
+      "doi": "10.1093/brain/awag409",
+      "journal_slug": "brain",
+      "title": "Context matters: serum neurofilament light chain, a diagnostic aid in amyotrophic lateral sclerosis",
+      "acquired_at": "2026-11-17T23:44:02",
+      "source_title_sha256": "e02412b8c61f6e8501ec0babdb8f7320f84b60b183ba11fbcdc09659d8ddbc2c",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "情境至关重要：血清神经丝轻链作为肌萎缩侧索硬化症的诊断辅助手段",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
+    "doi:10.1093/brain/awag411": {
+      "doi": "10.1093/brain/awag411",
+      "journal_slug": "brain",
+      "title": "<i>TMEM106B</i>\n                    analysis in diverse cohorts suggests no association with Parkinson’s disease risk",
+      "acquired_at": "2026-11-17T23:44:02",
+      "source_title_sha256": "8e91e60e85b2b7aed1e663e501d3ae67d2df537eaf7ced7693031e5bc0c8e5ce",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "在多种人群中对 <i>TMEM106B</i> 的分析提示其与帕金森病风险无关联",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
     "doi:10.1126/science.adp3564": {
       "doi": "10.1126/science.adp3564",
