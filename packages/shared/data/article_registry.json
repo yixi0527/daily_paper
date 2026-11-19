@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T00:05:25.785981+00:00",
+  "updated_at": "2026-11-19T00:01:45.422822+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -8549,12 +8549,12 @@
       "title": "Evolutionary repurposing of a pore-forming toxin drives epithelial remodeling during terrestrial adaptation",
       "acquired_at": "2026-11-17T23:34:30",
       "source_title_sha256": "98663ad85a5fb7dbb2e4ff5fa2e0ae8ec09ce60ffa65292c50b3f3f1645ab52a",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "孔形成性毒素的进化性再利用驱动陆地适应过程中的上皮重塑",
-      "abstract_zh": null,
+      "source_abstract_sha256": "9374142d5ae52ee72b652e7b148d03b56d280d25ec35106dc529ff2d5f2006c5",
+      "source_abstract": "abstract",
+      "title_zh": "孔形成性毒素的进化性再利用驱动陆生适应过程中的上皮重塑",
+      "abstract_zh": "脊椎动物征服陆地的能力被归因于呼吸和运动方面的创新。然而，陆地适应深刻重塑了黏膜表面，如皮肤，皮肤是宿主与环境之间的主要界面。为了适应陆地，非洲肺鱼每年重塑其皮肤，形成茧。在此，我们报道了在非洲肺鱼中发现一种小型孔形成性毒素Protop-CrTX-A，在其他脊椎动物中没有对应物，足以驱动上皮形态发生转录程序。在自由游动的肺鱼中，杯状细胞将Protop-CrTX-A分泌至黏液中。在休眠期间，这一生态位被黏蛋白低/基底上皮生态位取代，该生态位邻近成为卧泡皮肤中Protop-CrTX-A主要来源的粒细胞免疫生态位。Protop-CrTX-A作为皮肤重塑的可逆开关，足以将非洲肺鱼皮肤在水生与陆生状态之间转换。我们提出，先天免疫通过其重塑组织的能力，是脊椎动物水-陆过渡的关键驱动因素。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1016/j.cell.2026.10.039": {
       "doi": "10.1016/j.cell.2026.10.039",
@@ -8588,12 +8588,12 @@
       "title": "Paleogenomics illuminates mobility and changing lifeways in Chalcolithic Anatolia",
       "acquired_at": "2026-11-17T23:34:30",
       "source_title_sha256": "6032d7cd9bd542c8fcf110fa7bce3bfc77ab55673ce519aa4b9f56dcca15fb39",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "古基因组学揭示了色尔凯尔时代安纳托利亚的人口流动与生活方式变迁",
-      "abstract_zh": null,
+      "source_abstract_sha256": "1bf414768341e25128c64445bb66f9a79aea4e500caccd5394261b29f03fc596",
+      "source_abstract": "abstract",
+      "title_zh": "古基因组学揭示西铜石器时代安纳托利亚的人口迁移与生活方式转变",
+      "abstract_zh": "西铜石器时代（约公元前6000-3000年）曾被称为安纳托利亚史前史的“黑暗时代”，其定居点密度远低于此前的新石器时代和随后的青铜时代，这一现象被解释为人口下降。利用44个新基因组及已发表数据，我们发现人口减少的证据不足。相反，遗传证据表明，西铜石器时代的安纳托利亚人口在接收来自东部地区（如东安纳托利亚和南高加索）的基因流的同时，日益流动和/或规模增长，这一混血过程持续了约3000年。我们假设，存在以考古学难以察觉的分散且流动方式生活的社群，从而可以协调遗传与考古学证据。这些社群的近亲婚配频率在以前时期均未出现。最后，我们在中安纳托利亚发现一名中新石器时代（中纪元5千纪）个体，携带约10%-30%的黑海-里海草原相关血统，揭示了欧亚草原与安纳托利亚之间的人口迁移情况。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106648": {
       "doi": "10.1016/j.neubiorev.2026.106648",
@@ -13249,6 +13249,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.107083": {
+      "doi": "10.1016/j.neubiorev.2026.107083",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "The World Federation of ADHD International Consensus Statement: 2026 Update",
+      "acquired_at": "2026-11-18T23:57:37",
+      "source_title_sha256": "00d72fd2268da8108c5d18295e496f4085e34ae742be321cbf55228074978ecc",
+      "source_abstract_sha256": "b4def37fc887c0edb9a9beea75817c794de90e5225ebc3b2d87899a6ce39adfc",
+      "source_abstract": "abstract",
+      "title_zh": "世界多动症联合会国际共识声明：2026年更新",
+      "abstract_zh": "背景：自原版多动症国际共识声明发表以来的5年间，出现了大量新证据。本次更新版共识反映了当前关于多动症的科学现状，旨在减少围绕该疾病的误解与污名化。方法：纳入的研究需发表于2021年1月1日至2025年7月1日之间，且为以下两类之一：1）纳入2000名或更多参与者的大型队列研究；2）包含至少5项研究或2000名参与者、并考虑发表偏倚的Meta分析。合格研究按主题汇总整合。稿件内容经29个国家、6个大洲的118位作者审阅并批准。结果：基于这些研究生成了252条有实证支持的声明，为读者提供关于多动症最可靠发现的最新认识，涵盖患病率、基因与环境因素如何塑造多动症、精神和身体共病、多动症个体的认知与神经差异、功能结局及该疾病的治疗等领域。结论：原版共识声明的诸多结论得到支持，但本次更新根据更近期的证据为部分发现增添了重要细微差别。此外，它还凸显出过去5年中研究结论均衡发生转变的若干领域，提供了该领域当前科学现状的透明概述。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
     "doi:10.1016/j.neubiorev.2026.107084": {
       "doi": "10.1016/j.neubiorev.2026.107084",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
@@ -13268,12 +13281,12 @@
       "title": "Systematic review of rodent studies on deep brain stimulation targeting the striatum",
       "acquired_at": "2026-11-18T00:03:28",
       "source_title_sha256": "64cb812a37a5099573db1b1f55f45bb732b6ee47dbba8323b19da0912ea08dad",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "啮齿动物纹状体深部脑刺激研究的系统综述",
-      "abstract_zh": null,
+      "source_abstract_sha256": "a65637bb761fbee960469af2d08a652f9d6ba71956c2188cdf961713ab0bc9bc",
+      "source_abstract": "abstract",
+      "title_zh": "啮齿类动物中针对纹状体深部脑刺激的系统评价",
+      "abstract_zh": "深部脑刺激（DBS）已成为难治性精神障碍治疗的一种有前景的策略。其中，纹状体区域是研究最多的靶点之一，在参与动机、情绪和认知的皮质纹状体回路中发挥核心作用。然而，啮齿类动物研究的证据在不同靶点区域、行为领域和刺激方案方面仍分散不一。我们系统地回顾了研究啮齿类动物中纹状体DBS行为影响的临床前研究，重点关注解剖靶点、刺激参数和行为结局。按照PRISMA指南，在PubMed和Scopus中进行检索。纳入评估啮齿类动物中纹状体电学DBS行为结局的实验研究。提取了动物特征、靶向纹状体亚区域、刺激参数、行为评估和主要研究结果的数据。共68篇文章符合纳入标准。大多数研究靶向核accumbens，特别是壳部和核部，而背侧和中部纹状体则相对研究不足。行为评估被分为七个功能类别，其中正价性、负价性系统以及运动和运动活动的研究最为频繁。各研究中报告的行为影响根据刺激的亚区域、行为范式、基线状态、疾病模型和刺激方案而有所不同。质性模式表明，DBS通常能减轻实验性干扰的行为，但方法学上的显著异质性限制了直接比较。总体而言，证据表明，纹状体DBS的行为影响具有情境依赖性，反映了不同纹状体亚区域的功能特异性。未来结合精准靶向、系统性参数比较、自适应刺激方法以及更多考虑生物学性别的研究，将增强啮齿类动物DBS研究的转化价值。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107086": {
       "doi": "10.1016/j.neubiorev.2026.107086",
@@ -13281,12 +13294,12 @@
       "title": "Circadian Gating of Neuroimmune Memory: A Shared Persistence-and-Gating Hypothesis for Chronic Pain, Depression, and Postoperative Cognitive Dysfunction",
       "acquired_at": "2026-11-18T00:03:28",
       "source_title_sha256": "817d3d179bfc35355421970aed9ddcd4e2d7cf8b3a2015692f9c7f58b33479a2",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "神经免疫记忆的昼夜调控：慢性疼痛、抑郁与术后认知功能障碍的持久性-调控共享假说",
-      "abstract_zh": null,
+      "source_abstract_sha256": "614e83cdc960490ff5e3bae0b9026e681edbb1e171c828e5c21751d2c8548dd8",
+      "source_abstract": "abstract",
+      "title_zh": "神经免疫记忆的昼夜节律调控：适用于慢性疼痛、抑郁症和术后认知功能障碍的共同持续性—调控假设",
+      "abstract_zh": "慢性疼痛、抑郁症和术后认知功能障碍提供了不同场景，其中炎症反应与持续性易感性可能相交。特定细胞因子、突触和小胶质细胞机制在各种情况下的证据各不相同，并未确立单一的共病机制。我们考察昼夜背景是否影响神经免疫记忆的形成或后续表达。昼夜节律对炎症反应和先天免疫记忆的调控均有实验支持，而其在与疾病相关的小胶质细胞中的耦合仍不清楚。人类卡介苗接种研究提供了周围定时—训练先例，不能假定其也适用于大脑。我们区分免疫记忆与持续性炎症、神经元染色质调控和持续性症状，并将小胶质细胞细胞自主的定时与有节律的环境输入分开。该框架为印记形成、维持、回忆和逆转生成了不同的检验。令人信服的检验需要初始挑战已解决、对初始炎症暴露和回忆期进行控制，以及与次级反应功能改变相耦合的细胞分辨率分子测量。无法逆转已建立的印记并不排除定时在其形成过程中起作用的可能。围手术期研究提供明确的暴露，但必须区分谵妄与更长期的认知衰退。这项经过证据校准的假设规定，在昼夜干预能够与神经免疫记忆的预防或修饰相关联之前，必须证明什么。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107087": {
       "doi": "10.1016/j.neubiorev.2026.107087",
@@ -13330,15 +13343,15 @@
     "doi:10.1016/j.neubiorev.2026.107090": {
       "doi": "10.1016/j.neubiorev.2026.107090",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
-      "title": "Artificial Intelligence for Behavioral Phenotyping: From Behavioral Neuroscience to Depression Research",
+      "title": "Artificial intelligence for behavioral phenotyping: From behavioral neuroscience to depression research",
       "acquired_at": "2026-11-15T23:57:44",
-      "source_title_sha256": "d8e13379cf482e4e0b97fb52306953d6e0deb5cc31c4a3a742cf240f5dca0f21",
+      "source_title_sha256": "5ea95719bf38d0bbeb4e5ddd5185804a0905f6735f26c44dacba16f7f81ce965",
       "source_abstract_sha256": "30d824dcb70f9b5fba92734af6a13b0f60d4650b22f0500028607c9c51d16e3a",
       "source_abstract": "abstract",
       "title_zh": "人工智能用于行为表型分析：从行为神经科学到抑郁症研究",
-      "abstract_zh": "行为表型分析仍然是研究大脑功能及神经精神疾病的主要实验读出。然而，传统的行为分析主要依赖人工定义的终点指标，这简化了行为的多维性质，往往会忽略细微的行为动态。人工智能（AI）——尤其是机器学习（ML）、深度学习（DL）和计算机视觉——的最新进展正在根本性地改变这一局面，使得跨物种和实验范式的行为能够实现自动化、高分辨率的定量化。本综述讨论了基于AI的行为表型分析的最新进展及其对转化神经科学的影响，特别强调其在抑郁症研究中日益发展的应用。我们首先描述了无标记姿态估计如何改变了运动量化方法，接着讨论了监督式和非监督式的机器学习方法，这些方法能够从运动数据中对预定义行为进行分类，或直接发现潜在的行为基序。随后，我们讨论了这些方法如何通过能够对行为组织进行越来越详细的描述，并将行为视为一种连续的、多维的过程，从而重塑系统神经科学。最后，我们探讨了这些方法在抑郁症实验模型和临床研究中的应用，考虑其潜力以及将计算行为指标在实验和临床环境间转化所面临的局限。基于AI的行为表型分析代表了一项重要的神经科学方法论进步，它将行为分析从对孤立实验终点的量化转向对综合行为状态的刻画。在抑郁症研究中，这些方法可能改善实验模型中的行为表征，并在人类中提供具有临床相关性的行为改变的定量指标。然而，要将实验性表型与临床表型联系起来，将需要方法学标准化、独立验证，以及对跨物种可比性的谨慎评估。",
+      "abstract_zh": "行为表型分析仍然是研究大脑功能和神经精神疾病的主要实验读出指标。然而，传统的行为分析在很大程度上依赖手动定义的终点，这些终点简化了行为的多维性，并且往往忽略了微妙的行为动态。人工智能（AI），特别是机器学习（ML）、深度学习（DL）和计算机视觉的最新进展，正在通过在不同物种和实验范式中实现自动化、高分辨率的行为量化，从根本上改变这一格局。本综述讨论了基于 AI 的行为表型分析的最新进展及其对转化神经科学的影响，特别强调了在抑郁症研究中新兴的应用。我们首先描述了无标记姿态估计如何改变了运动量化，接着讨论了用于分类预定义行为或直接从运动数据中发现潜在行为基序的监督和无监督机器学习方法。然后，我们讨论了这些方法如何通过能够对行为组织提供越来越详细的描述，并促进将行为视为一个连续的多维过程的研究，从而重塑系统神经科学。最后，我们探讨了这些方法在抑郁症实验模型和临床研究中的应用，并考虑了在实验和临床环境之间转化计算行为测量指标的潜力和局限性。基于 AI 的行为表型分析代表了神经科学中一项重要的方法学进展，将行为分析从对孤立实验终点的量化转向对集成行为状态的刻画。在抑郁症研究中，这些方法可能改善实验模型中的行为表征，并在人类中提供与临床相关的行为改变的定量指标。然而，将实验和临床表型联系起来将需要方法标准化、独立验证，并仔细评估跨物种的可比性。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-17T00:03:55.246175+00:00"
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107091": {
       "doi": "10.1016/j.neubiorev.2026.107091",
@@ -13372,12 +13385,38 @@
       "title": "A Metabolite-Centered Framework for Microbiota-Gut-Brain Communication Linking Constrained Signaling to Behavior and Stress Physiology",
       "acquired_at": "2026-11-18T00:03:28",
       "source_title_sha256": "be399e46d1f77f68d1ef39513f2c852c40171cf8d22116c989087e69aeb63e41",
+      "source_abstract_sha256": "d9d69dbf6bc5700484f4f9d3d6358bc1810dcffdfb55654c0dfdfca007a652f4",
+      "source_abstract": "abstract",
+      "title_zh": "以代谢物为中心的微生物-肠-脑通讯框架：将受限信号传导与行为及应激生理学相联系",
+      "abstract_zh": "微生物-肠-脑轴将肠道微生物活动与宿主神经生理学及行为联系起来，但其机制解释在单个代谢物、生物区室及实验系统之间仍然支离破碎。在此，我们提出了一种以代谢物为中心的概念框架，根据决定微生物代谢活动是否转化为宿主效应的约束条件来组织现有证据，这些约束包括代谢物产生与宿主转化、生物利用度与屏障进入、宿主感应、跨系统整合，最终表型。利用短链脂肪酸、色氨酸代谢途径、胆汁酸、神经递质相关化合物以及新兴微生物信号作为代表性示例，我们综合了受体介导、代谢、神经免疫、神经内分泌及依赖屏障的机制证据。我们进一步区分了微生物群层面与代谢物特异性的因果性，以及临床前与人类证据，涵盖应激反应性、情感及应激应对反应、社交互动、学习与记忆、进食以及睡眠/昼夜节律调节。最后，我们评估了以代谢物为靶点的干预和生物标志物的转化潜力，同时指出与来源归属、生物利用度、物种转化及因果推断相关的未解挑战。本综述不仅提供另一份微生物代谢物目录，而是呈现了一种将微生物代谢与神经和行为结局相联系的机制框架，并确定了为推进可重复且具有临床相关性的应用所需的证据。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107097": {
+      "doi": "10.1016/j.neubiorev.2026.107097",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "What we have learned from a decade of meta-analyses on lithium: an umbrella review",
+      "acquired_at": "2026-11-18T23:57:37",
+      "source_title_sha256": "6dff87bb10936c3cb782bbbdd0762cd913e453167444dac392468adf68023b5a",
       "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "source_abstract": null,
-      "title_zh": "基于代谢物的微生物群-肠-脑通讯框架：将受限信号传递与行为及应激生理学联系起来",
+      "title_zh": "锂元素荟萃分析十年：一篇伞式综述告诉我们的知识",
       "abstract_zh": null,
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107098": {
+      "doi": "10.1016/j.neubiorev.2026.107098",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "On the role of intrinsic rewards in cognitive evolution: the RewardING hypothesis",
+      "acquired_at": "2026-11-18T23:57:37",
+      "source_title_sha256": "8559602a2d69bcef71177f6e542d88447560e92339729d8ec86a611061cfa093",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "内在奖励在认知进化中的作用：奖励ING假说",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -16804,12 +16843,12 @@
       "title": "A cell-type-resolved proteomic atlas reveals intra- and intercellular signaling in Alzheimer’s disease",
       "acquired_at": "2026-11-17T23:39:05",
       "source_title_sha256": "df1acdc313d32ed4809273c05d2a53ed340193770015c3008cb7c82001ef2d0d",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "细胞类型分辨蛋白组图谱揭示阿尔茨海默病中的细胞内及细胞间信号传递",
-      "abstract_zh": null,
+      "source_abstract_sha256": "9091d91ad7b459c9427679b99d1d33121f70ffe9928cdcf27c721b2c0fad2a89",
+      "source_abstract": "abstract",
+      "title_zh": "阿尔茨海默病细胞类型分辨蛋白质组图谱揭示细胞内及细胞间信号传导",
+      "abstract_zh": "阿尔茨海默病（AD）源于不同脑细胞类型之间的病理相互作用，但细胞类型特异性的蛋白质组变化尚未得到充分研究。本文报道了基于5xFAD和AppNL-G-F阿尔茨海默病小鼠模型在不同年龄的分选或近邻标记脑细胞进行的深度蛋白质组分析，在小胶质细胞、星形胶质细胞、少突胶质前体细胞和神经元中定量了13,411种蛋白质，并获得了额外的空间信息。我们鉴定出3,028种含量差异蛋白质，其中大多数在批量蛋白质组数据集中未被检出，并构建了细胞类型特异性网络以定义功能模块和枢纽蛋白。与转录组数据比较表明，约30%的蛋白质组变化与RNA不一致。进一步分析发现，保留在人类AD脑中的跨细胞类型信号蛋白，例如多滋养因子（Ptn），其在星形胶质细胞中转录富集，但在小胶质细胞中积累。重要的是，重组PTN可激活人诱导性小胶质细胞（iMG）。因此，这些发现为AD模型提供了全面的细胞类型分辨蛋白质组图谱，揭示了新型细胞内及细胞间信号事件。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1016/j.neuron.2026.10.020": {
       "doi": "10.1016/j.neuron.2026.10.020",
@@ -18897,12 +18936,12 @@
       "title": "Beyond memory strengthening: noradrenergic control of memory specificity",
       "acquired_at": "2026-11-17T23:41:56",
       "source_title_sha256": "6a68b2b4474e2843d4bc0ded0c68db8d83ff99fc8f7ceec89f5e442078d801a7",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
+      "source_abstract_sha256": "b61bac5b453889905df7fa5c111dff504ea9f72ddea7ee04a3cbc8fabe4cfd54",
+      "source_abstract": "abstract",
       "title_zh": "超越记忆增强：去甲肾上腺素对记忆特异性的控制",
-      "abstract_zh": null,
+      "abstract_zh": "情感显著事件通常比平凡的经历被更好、更长时间的记忆。这种情感记忆增强关键依赖于唤醒引发的脑内去甲肾上腺素释放。除记忆增强外，近期研究表明，去甲肾上腺素活动还影响记忆的特异性、详尽性和时间精确性，贯穿早期巩固和系统巩固过程。本综述整合了人体与动物研究中分子、电路、系统和行为机制的最新发现，提出一个整合框架，说明由情感唤醒引发的去甲肾上腺素活动如何调控记忆特异性和系统巩固动力学的神经系统。该框架优化了情感唤醒下的记忆当前模型，并可能对与压力相关的精神病理学具有相关意义。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-18T00:05:25.785981+00:00"
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1016/j.tins.2026.10.009": {
       "doi": "10.1016/j.tins.2026.10.009",
@@ -20242,6 +20281,58 @@
       "abstract_zh": null,
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-17T22:37:26.988197+00:00"
+    },
+    "doi:10.1016/s1935-861x(26)00234-2": {
+      "doi": "10.1016/s1935-861x(26)00234-2",
+      "journal_slug": "brain-stimulation",
+      "title": "Cover 1",
+      "acquired_at": "2026-11-18T23:48:36",
+      "source_title_sha256": "65b6d9c9767956f89a9190948916f1753d55e312e42a5391c6b3f5bced3a9367",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "封面1",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
+    "doi:10.1016/s1935-861x(26)00235-4": {
+      "doi": "10.1016/s1935-861x(26)00235-4",
+      "journal_slug": "brain-stimulation",
+      "title": "Masthead",
+      "acquired_at": "2026-11-18T23:48:36",
+      "source_title_sha256": "30f3d5197e14b5d62f542410589e07546938b5816554f507e84178a7ea609e48",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "期刊头报",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
+    "doi:10.1016/s1935-861x(26)00236-6": {
+      "doi": "10.1016/s1935-861x(26)00236-6",
+      "journal_slug": "brain-stimulation",
+      "title": "Editorial Board",
+      "acquired_at": "2026-11-18T23:48:36",
+      "source_title_sha256": "cd9720c74c33e04169d63c667038067aaa990bbd4081d43630569fed9167581c",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "编辑委员会",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
+    "doi:10.1016/s1935-861x(26)00237-8": {
+      "doi": "10.1016/s1935-861x(26)00237-8",
+      "journal_slug": "brain-stimulation",
+      "title": "Table of Contents",
+      "acquired_at": "2026-11-18T23:48:36",
+      "source_title_sha256": "a9360e0212a4d173581c91da68494d022ee55871188be00acf863d2ed0cf7a6a",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "目录",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1037/rev0000530": {
       "doi": "10.1037/rev0000530",
@@ -23024,6 +23115,19 @@
       "abstract_zh": "一位陪审员评估迟到者是仅仅在高效利用时间，还是在不尊重同事。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-19T23:36:15.664732+00:00"
+    },
+    "doi:10.1038/d41586-026-02202-3": {
+      "doi": "10.1038/d41586-026-02202-3",
+      "journal_slug": "nature",
+      "title": "What students think about my teaching doesn’t matter. Am I wrong?",
+      "acquired_at": "2026-11-18T23:41:47",
+      "source_title_sha256": "add4251e3131a4447f0989245ddf249e24849b5f2d974a76291c15d3f1b6435a",
+      "source_abstract_sha256": "7c88f855f52b917255db53207809b79ac46ef7da5416dc5bc03f191366acf7a2",
+      "source_abstract": "abstract",
+      "title_zh": "学生对我教学的看法无关紧要。我错了吗？",
+      "abstract_zh": "陪审团就教学评估究竟是人气竞赛还是重要工具发表看法。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1038/d41586-026-02204-1": {
       "doi": "10.1038/d41586-026-02204-1",
@@ -27250,6 +27354,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-09-17T22:37:26.988197+00:00"
     },
+    "doi:10.1038/d41586-026-02670-7": {
+      "doi": "10.1038/d41586-026-02670-7",
+      "journal_slug": "nature",
+      "title": "The shifting sands of research independence: why mid-career scientists crave security",
+      "acquired_at": "2026-11-18T23:41:47",
+      "source_title_sha256": "6529b14dd6e2d50fe8f707c17038202ef4e613cc2dde96b20bc86d7b76cc6845",
+      "source_abstract_sha256": "97cefb0549015b3dd86c731dad7c06a7745a61dbe080b4f95f0b1d81d84979f3",
+      "source_abstract": "abstract",
+      "title_zh": "变迁中的科研独立性：为何中年科学家渴望保障",
+      "abstract_zh": "一项旨在改善对学术界中一个常被忽视群体的理解的项目，旨在帮助其成员应对职业不确定性。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
     "doi:10.1038/d41586-026-02671-6": {
       "doi": "10.1038/d41586-026-02671-6",
       "journal_slug": "nature",
@@ -30812,6 +30929,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
     },
+    "doi:10.1038/d41586-026-03067-2": {
+      "doi": "10.1038/d41586-026-03067-2",
+      "journal_slug": "nature",
+      "title": "Genetic variants that alter gene regulation in specific cell types are closely tied to disease",
+      "acquired_at": "2026-11-18T23:41:47",
+      "source_title_sha256": "ff3c50d37f45e270e75f20c7ab7c0f0f32d3a011605729090403f11bdd036b54",
+      "source_abstract_sha256": "8a1c47f53d21a23f1ae715ea352899ff87ff3aba7f7b9dea46d86db8d7c24ca2",
+      "source_abstract": "abstract",
+      "title_zh": "改变特定细胞类型基因调控的遗传变异与疾病密切相关",
+      "abstract_zh": "对近2000人的单细胞分析，使科学家更加接近理解遗传变异、基因表达与健康之间的联系。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
     "doi:10.1038/d41586-026-03069-0": {
       "doi": "10.1038/d41586-026-03069-0",
       "journal_slug": "nature",
@@ -32268,6 +32398,45 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
+    "doi:10.1038/d41586-026-03260-3": {
+      "doi": "10.1038/d41586-026-03260-3",
+      "journal_slug": "nature",
+      "title": "Accounting of Africa’s water reveals a management gap",
+      "acquired_at": "2026-11-18T23:41:47",
+      "source_title_sha256": "560a42b43433ed7912d69409c07152dfd58c9d6e62cc25e92c1cba7fc4930205",
+      "source_abstract_sha256": "6b4a2dceca1380a02547c36fc7d67f6e8deaa0dd3b4f2d36fb9e49031089cf09",
+      "source_abstract": "abstract",
+      "title_zh": "非洲水资源核算揭示管理差距",
+      "abstract_zh": "一幅非洲用水需求图表明，面临的问题不仅在于水资源短缺，管理也是非洲面临的独立挑战。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
+    "doi:10.1038/d41586-026-03261-2": {
+      "doi": "10.1038/d41586-026-03261-2",
+      "journal_slug": "nature",
+      "title": "Lactate takes a shortcut into mitochondria to power the heart",
+      "acquired_at": "2026-11-18T23:41:47",
+      "source_title_sha256": "1dee31d605bfe6ce5f05a22ede22f8dd09eba315d9291b56013cc1d514124837",
+      "source_abstract_sha256": "904231837d3807930bed672d7df41997897e7bbcbb84b4d51b6e2f946c2e6665",
+      "source_abstract": "abstract",
+      "title_zh": "乳酸进入线粒体的捷径为心脏供能",
+      "abstract_zh": "一种名为乳酸的细胞燃料被直接通入心肌的产能细胞器，挑战了关于乳酸转运的主流观点。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
+    "doi:10.1038/d41586-026-03263-0": {
+      "doi": "10.1038/d41586-026-03263-0",
+      "journal_slug": "nature",
+      "title": "Tethered to stone: how rock and water availability shaped early desert occupation",
+      "acquired_at": "2026-11-18T23:41:47",
+      "source_title_sha256": "4e963e636f2d4b042c9ce6caa1d5f1cae8ebedf783ebfd754ad97edc25ef03e5",
+      "source_abstract_sha256": "e16991a91f5f402dd18f186f61602a0459af5c9d7f607292d7832179b6ec388f",
+      "source_abstract": "abstract",
+      "title_zh": "系于石头：岩石与水资源如何塑造早期沙漠占据",
+      "abstract_zh": "沙漠中的淡水常指向存在早期人类和石器遗迹的遗址。然而，在阿拉伯的鲁卜哈利地区，仅有水资源并不能预测人类占据情况。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
     "doi:10.1038/d41586-026-03265-y": {
       "doi": "10.1038/d41586-026-03265-y",
       "journal_slug": "nature",
@@ -32345,6 +32514,32 @@
       "abstract_zh": "南美和亚洲季风在过去的快速变暖期间均减弱。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T18:31:37.270122+00:00"
+    },
+    "doi:10.1038/d41586-026-03288-5": {
+      "doi": "10.1038/d41586-026-03288-5",
+      "journal_slug": "nature",
+      "title": "An unexpected function of a cell-cycle enzyme might explain the toxic effects of its inhibitors",
+      "acquired_at": "2026-11-18T23:41:47",
+      "source_title_sha256": "dc91e8bba43e2c1952bc84b383363cef311bab57545054299b752ee196704d89",
+      "source_abstract_sha256": "6ed571cb65f006ed936d3d7c0f1f27db702649237d731fc682f158e85408aa04",
+      "source_abstract": "abstract",
+      "title_zh": "细胞周期酶的一个意外功能可能解释其抑制剂的毒性效应",
+      "abstract_zh": "研究人员发现了一种此前未知且对细胞开始增殖所必需的机制。结合数学建模和细胞实验表明，酶WEE1通过关闭一种蛋白质降解复合体来允许细胞增殖开始，这对目前正在癌症治疗临床试验中的WEE1抑制剂具有重要意义。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
+    "doi:10.1038/d41586-026-03294-7": {
+      "doi": "10.1038/d41586-026-03294-7",
+      "journal_slug": "nature",
+      "title": "Clues about complex life come from freshly cultivated archaea",
+      "acquired_at": "2026-11-18T23:41:47",
+      "source_title_sha256": "c65ab47a4bf1a982f31cfee045aec5224f8f53e8bafb58ddb4d0354eef2f9c70",
+      "source_abstract_sha256": "f0006d821eb71ebd30f0765db864275f6d375fc0d4f4bebce56e3f685d9bca76",
+      "source_abstract": "abstract",
+      "title_zh": "来自新培养古菌的复杂生命线索",
+      "abstract_zh": "已在培养中检测了两种与真核细胞共享共同祖先的古菌菌株。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1038/d41586-026-03301-x": {
       "doi": "10.1038/d41586-026-03301-x",
@@ -33216,6 +33411,19 @@
       "abstract_zh": "从水下扬声器到培育超级珊瑚，科学家们正在全球范围内为拯救珊瑚礁而战。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
+    },
+    "doi:10.1038/d41586-026-03415-2": {
+      "doi": "10.1038/d41586-026-03415-2",
+      "journal_slug": "nature",
+      "title": "Could a giant sunshade in space ‘solve global warming’? Scientists are taking the idea seriously",
+      "acquired_at": "2026-11-18T23:41:47",
+      "source_title_sha256": "ea81930a4c53a2b50c3a45e6b5e11464bae92fdc8acf27891b9ab3376149334b",
+      "source_abstract_sha256": "fde30e6e982b7cc53599696068e2e1b013ce41d31ce1a069d7cb8126c03fa25d",
+      "source_abstract": "abstract",
+      "title_zh": "太空中的巨型遮阳板能否“解决全球变暖”？科学家开始认真考虑这个想法",
+      "abstract_zh": "有人说这个概念纯属幻想，但详细分析表明，随着火箭发射成本的下降，该设想在未来几十年内可能成为可行方案。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1038/d41586-026-03416-1": {
       "doi": "10.1038/d41586-026-03416-1",
@@ -46236,12 +46444,12 @@
       "title": "Antiviral immunity via telomerase-like reverse transcription in bacteria",
       "acquired_at": "2026-11-10T00:30:03",
       "source_title_sha256": "6c02fce8330884cf9a962c6f4bd58abf851ede5f397e097bd8d6f058594b6b92",
-      "source_abstract_sha256": "37ce2ef75029d01ddd455f90f26566b67ee65a0fe0146b45a103bae812ab463f",
+      "source_abstract_sha256": "527586c82ed4b5f0148de5949297a3f2536260a82490d3684f3a9dcddb8e96df",
       "source_abstract": "abstract",
-      "title_zh": "细菌中的抗病毒免疫：类似端粒酶的逆转录",
-      "abstract_zh": "防御相关的逆转录酶（DRT）利用多样且独特的cDNA合成机制来保护细菌免受病毒感染1。然而，许多DRT的功能和机制仍然未知2。在这里，我们鉴定出一种新的抗病毒防御系统DRT10，它与非编码RNA（ncRNA）结合，催化过程性、蛋白质启动的串联重复DNA合成。逆转录由定义明确的ncRNA区域模板，该区域具有特征序列模板和边界元素，两者均高度保守且对DNA重复添加至关重要。冷冻电镜重构揭示了一个意外的2:1架构，即两个RT单体结合在ncRNA的两侧，形成伪对称结构。生化实验进一步表明，每个RT单体逆转录其ncRNA侧各自编码的模板，但仅有一个产生长重复产物，其模板由两个邻近茎环锚点之间的距离定义。这种迭代、受边界限定的cDNA合成模式与真核生物端粒酶催化端粒重复添加的机制有直接平行之处，逆转录酶在生命域间的系统发育分析将端粒酶置于DRT家族的单系群中，提示两者的DNA聚合活性源于共同的起源。与早期关于DRT2、DRT3以及DRT93–5的研究一起，我们的发现揭示了在不同DRT中尽管架构差异巨大，但RNA模板DNA重复添加的保守机理逻辑，并扩展了细菌抗病毒免疫中基于逆转录的策略范围。",
-      "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "translated_at": "2026-11-10T18:31:37.270122+00:00"
+      "title_zh": "细菌中通过端粒样逆转录实现的抗病毒免疫",
+      "abstract_zh": "摘要 防御相关逆转录酶（DRTs）利用多样且独特的cDNA合成机制保护细菌免受病毒感染1。然而，许多DRTs的功能和机制仍然未知2。在这里，我们鉴定出一种新的抗病毒防御系统DRT10，它与非编码RNA（ncRNA）相关联，以催化进程性的蛋白引导的串联重复DNA合成。逆转录由一个具有特征序列模式和模板边界元件的明确ncRNA区域模板引导，这两者均保守且对于DNA重复添加是必需的。冷冻电镜重建揭示了意想不到的2:1结构，其中两个逆转录酶（RT）单体结合在伪对称ncRNA的两侧。生化实验进一步表明，每个RT单体逆转录其ncRNA各自一侧所编码的模板。然而，只有单体能生成长重复DNA，使用由两个侧翼茎–环锚点界定的模板。这种边界界定的迭代cDNA合成方式与真核端粒酶进行端粒重复添加的机制存在直接的平行关系。跨生命域RT的系发学分析将端粒酶与DRT家族置于一个单系支系中，暗示其DNA聚合酶活性有共同起源。结合对DRT2、DRT3和DRT9的先前研究（参考文献3–5），我们的发现确定了一种保守的机制逻辑，该逻辑尽管存在截然不同的架构方案，却支撑着多种DRTs中RNA模板引导的DNA重复添加。此外，我们的结果扩展了细菌中基于逆转录的抗病毒免疫策略范围。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1038/s41586-026-11252-6": {
       "doi": "10.1038/s41586-026-11252-6",
@@ -48713,6 +48921,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-13T23:48:50.721961+00:00"
     },
+    "doi:10.1038/s41593-026-02503-w": {
+      "doi": "10.1038/s41593-026-02503-w",
+      "journal_slug": "nature-neuroscience",
+      "title": "Neotenic expansion of adult-born dentate granule cells reconfigures GABAergic inhibition to enhance social memory consolidation",
+      "acquired_at": "2026-11-18T23:41:56",
+      "source_title_sha256": "7130266608d95450cd3e0a905a6122df43b2524e378d531ca1e9758aac3462c0",
+      "source_abstract_sha256": "e7a0232485d07918ef4501525cff877237e8e591e3b9fabddf0b8f5711c9fefa",
+      "source_abstract": "abstract",
+      "title_zh": "成年期新生齿状颗粒细胞的幼态持续扩展重塑GABA能抑制以增强社会记忆巩固",
+      "abstract_zh": "成年期新生齿状颗粒细胞（abDGCs）表现出增强的突触和结构可塑性，并优先参与依赖海马的记忆。高等哺乳动物中abDGCs的成熟延迟（幼态持续）被认为通过支持增加的可塑性来抵消成年期海马神经发生的下降。本研究发现，选择性同步扩展4周龄未成熟、而非8周龄成熟的小鼠abDGCs，促进海马CA3和CA2区快速放电伴白蛋白抑制性神经元（INs）的招募，增加前馈抑制，减少社会记忆干扰，并增强社会记忆巩固。背侧CA1和CA2的体内局部场电位记录显示，基线功率、尖锐波-高频振荡的幅度和持续时间增加，以及社会经验导致的速率调制增强。针对抑制性神经元的化学遗传操纵表明，背侧CA3和CA2区INs（包括伴白蛋白抑制性神经元）分别是abDGCs幼态持续扩展后社会记忆巩固所必需且足够的，以及在无abDGCs幼态持续扩展时所必需且足够的。我们的研究结果表明，abDGCs的幼态持续通过增加DG–CA3和DG–CA2中的前馈抑制以及促进支撑记忆巩固的网络振荡来支持认知。本研究描述了一种电路机制，即成年期新生齿状颗粒细胞促进网络振荡以支持记忆巩固。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
     "doi:10.1038/s41593-026-02504-9": {
       "doi": "10.1038/s41593-026-02504-9",
       "journal_slug": "nature-neuroscience",
@@ -48855,6 +49076,19 @@
       "abstract_zh": "来源仅提供期刊名称《Nature Neuroscience》，未提供摘要。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
+    "doi:10.1038/s41593-026-02554-z": {
+      "doi": "10.1038/s41593-026-02554-z",
+      "journal_slug": "nature-neuroscience",
+      "title": "Author Correction: An aging-sensitive secreted phospholipase confers neuroprotection and cognitive resilience",
+      "acquired_at": "2026-11-18T23:41:56",
+      "source_title_sha256": "0022c68d1996dc1664c4b2a5d429cbfee0649096fd5bb0d9f08a9aec66745661",
+      "source_abstract_sha256": "25062bd16afa477d4485e00d52d38dd9e08db9bf51cd8d87bb38f7599956da98",
+      "source_abstract": "abstract",
+      "title_zh": "作者更正：一种与年龄敏感的分泌型磷脂酶可赋予神经保护作用和认知韧性",
+      "abstract_zh": "该摘要来源仅提供期刊名称《Nature Neuroscience》，未提供具体摘要内容。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1038/s42256-026-01244-6": {
       "doi": "10.1038/s42256-026-01244-6",
@@ -49895,6 +50129,19 @@
       "abstract_zh": "摘要 深度学习中可预测性的基本界限是对许多物理和计算系统理解的核心。即使在控制外部随机性的情况下，训练结果往往仍难以预测和重现，但其底层机制尚不明确。本文提出“riddled basin”（被撕裂的盆）几何作为一个统一的动力学系统机制：每一个收敛至某一解的初始化点，都与收敛至不同解的初始化点任意接近，形成了具有任意细度结构的“脂”分形。利用极简神经网络模型，我们解析了经典的被撕裂路径，并推导出接近零的不确定性指数：即使初始化精度大幅提高，结果的可预测性也仅有微小提升。在深度网络中，交织的训练目的地和接近零的参数空间指数是一致的，在测试的各种架构、优化器和训练协议中表现出被撕裂的特征，为各种不同的经验观察提供了统一的动力学解释。此外，我们引入了功能不确定性指数，将从参数空间到学习函数本身的尺度不敏感的不可再现性诊断扩展开来。总之，我们的结果支持分形盆几何作为深度学习中不可再现性的候选组织原理，并对优化和人工智能的可靠部署具有实际意义。",
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
+    },
+    "doi:10.1038/s42256-026-01349-y": {
+      "doi": "10.1038/s42256-026-01349-y",
+      "journal_slug": "nature-machine-intelligence",
+      "title": "When AI-assisted criticism scales, peer review needs an obligation threshold",
+      "acquired_at": "2026-11-18T23:41:51",
+      "source_title_sha256": "e652e924c05371a41e4d32ab790a859d259db36bf3f105c6b42dfe958af4fa26",
+      "source_abstract_sha256": "0842962f0cd36595094f10aaf3caa3ae81a9408a05ddac33f79442b5f972e2a3",
+      "source_abstract": "abstract",
+      "title_zh": "当 AI 辅助批评规模化时，同行评审需要义务阈值",
+      "abstract_zh": "《自然-机器智能》期刊提供了期刊名称，但未提供摘要。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1093/brain/awaf414": {
       "doi": "10.1093/brain/awaf414",
@@ -52274,6 +52521,19 @@
       "abstract_zh": null,
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
+    },
+    "doi:10.1093/brain/awag325": {
+      "doi": "10.1093/brain/awag325",
+      "journal_slug": "brain",
+      "title": "The hippocampus as a latent diffusion engine for memory, perception and cognitive dysfunction",
+      "acquired_at": "2026-11-18T23:43:12",
+      "source_title_sha256": "495936ecb0bdbdeb993dc66a694811d07d0fa73910569636d8c2f07480b01972",
+      "source_abstract_sha256": "09b59eddb87234d1096a36c61d3992fa92134cd6483f068332096a174a74b2aa",
+      "source_abstract": "abstract",
+      "title_zh": "作为记忆、感知和认知功能障碍潜在扩散引擎的海马体",
+      "abstract_zh": "摘要 海马体是一个核心的认知枢纽，其功能障碍与大多数神经退行性痴呆症有关。尽管对其解剖学、生理学和电路有深入了解，但将海马体动力学与认知及临床综合征相关联的统一理论仍然缺乏。借鉴系统神经科学和生成式人工智能的最新进展，我们将海马体概念化为一种潜在扩散引擎，它将感觉、内感受和认知输入压缩为低维表示，并再生感知、情景记忆和想象场景以供皮层整合。与大尺度功能梯度对齐的皮层-海马体振荡传播波调度并结构化这一生成过程，并将分布的神经活动组织成具有语义基础的连贯结构。我们将这一提议形式化为随机潜在振荡扩散（SLOD），这是一个基于生物学的框架，将海马-皮层计算映射到特定的解剖基质和动态过程上。尽管我们并不认为海马体本身实现扩散算法，但我们表明其计算可以分解为压缩、随机探索、条件化和重建等同源操作，其形式结构与潜在扩散模型密切相关。最后，我们展示了如何理解阿尔茨海默病谱系、路易体痴呆和额颞叶痴呆等主要神经退行性痴呆症，将其视为这种生成架构不同组成部分的选择性崩溃。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1093/brain/awag326": {
       "doi": "10.1093/brain/awag326",
@@ -67211,6 +67471,19 @@
       "abstract_zh": "该来源仅提供期刊名称（Translational Neurodegeneration），未给出摘要。",
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-10-16T23:34:06.596097+00:00"
+    },
+    "doi:10.1186/s40035-026-00595-9": {
+      "doi": "10.1186/s40035-026-00595-9",
+      "journal_slug": "translational-neurodegeneration",
+      "title": "Neuron-enriched STAT4 shapes time- and context-dependent neuronal outcomes in Alzheimer’s disease",
+      "acquired_at": "2026-11-18T23:42:00",
+      "source_title_sha256": "984c8c09045e63963ccb14d920f959abe9a3aa417a69375994ed2e431834950c",
+      "source_abstract_sha256": "c274f960fb48149a12407574e976a0159d4681579a823928a8d59bd1ae2388a5",
+      "source_abstract": "abstract",
+      "title_zh": "神经元富集的 STAT4 在阿尔茨海默病中塑造时间与环境依赖的神经元结局",
+      "abstract_zh": "摘要 背景 阿尔茨海默病（AD）中神经元功能障碍日益与细胞内信号传导的动态、环境依赖性改变相关联。然而，这些改变如何驱动进行性神经退化和分歧性神经元结局仍不甚清楚。方法 对独立人类单核 RNA 测序数据集进行整合分析，以鉴定在 AD 中持续改变的神经元因子。使用小鼠单细胞 RNA 测序数据集和实验模型进一步验证了信号转导和转录激活因子 4（STAT4）在不同细胞类型中的分布。在人类 SH-SY5Y 细胞、小鼠 HT22 神经元细胞、小鼠原代神经元和诱导系统中考察了 STAT4 的功能。在 3×Tg-AD 和野生型小鼠中通过腺相关病毒介导的 Stat4 调节和药理 ERK 抑制评估体内效应。采用包括 RNA-seq、Cut&Tag 和 RIP-seq 在内的多组学方法探索下游调控机制。结果 整合分析鉴定出 STAT4 是一种在 AD 神经元中持续降低的神经元富集因子。STAT4 在基础条件下支持神经元完整性和突触稳态。STAT4 表达的诱导性恢复以时间依赖方式产生分歧性效应，早期适应性反应转向随后与氧化应激和凋亡相关的变化。持续的 STAT4 恢复诱导氧化应激、凋亡相关信号和与 tau 蛋白相关的改变，这些可通过 ERK 抑制剂减弱。相反，包括减少 Aβ 负担和改善突触及神经元标志物在内的有益输出在 ERK 抑制下得以保留。野生型小鼠的平行分析显示延迟轨迹，表明存在疾病环境依赖的调节。STAT4 进一步与协调的信号网络和异质核糖核蛋白 K 相关的调控复合体相关。结论 这些发现定义了一个时间与环境依赖的信号框架，其中与 STAT4 相关的输出在 AD 中逐渐转向对 ERK 敏感的不适应性反应。选择性约束晚期信号失衡可能减轻病理结局，同时保留有益效应，为情境特异性治疗干预提供潜在策略。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
     "doi:10.1186/s40035-026-00596-8": {
       "doi": "10.1186/s40035-026-00596-8",
