@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T00:01:00.559858+00:00",
+  "updated_at": "2026-11-21T00:11:17.908145+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -3122,6 +3122,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1007/s10462-026-11755-8": {
+      "doi": "10.1007/s10462-026-11755-8",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Multimodal large language models in remote sensing: a tutorial-oriented review",
+      "acquired_at": "2026-11-20T23:51:38",
+      "source_title_sha256": "e3d39f818b65b988f2d077aba8a20568cfdbad4418071930f2f02cf8bcee764f",
+      "source_abstract_sha256": "737a0dfe0c6f9135d91c8658ee75d79bebb08afc4ca3a0063aa79711b22976ea",
+      "source_abstract": "abstract",
+      "title_zh": "遥感中的多模态大语言模型：教程导向综述",
+      "abstract_zh": "近年来，遥感多模态大语言模型（RS-MLLMs）的研究迅速发展，但现有研究仍分散于不同的模型架构和应用任务中，凸显出需要进行系统性综合，以建立对该领域的清晰整体认知。此外，现有的大多数RS-MLLMs综述狭隘地关注早期视觉-语言模型（VLMs），或仅提供架构和数据集目录。本文基于教程导向的视角，从系统层面和面向任务的层面对RS-MLLMs进行了全面综述。首先，通过考察RS数据的领域差距和内部异质性、纯视觉范式的局限性以及VLMs的过渡作用，讨论了RS-MLLMs的必要性。随后，全面总结了RS-MLLMs的系统层面演进，包括架构组件、训练和微调策略、评估以及RS-Agent范式。同时，采用统一的能力导向分类体系对下游RS-MLLM应用进行了分析，涵盖语言生成、视觉问答、基定与定位、跨模态检索以及时序变化理解。最后，讨论了RS-MLLMs的当前挑战，并展望了面向更可靠、高效且具备地理感知的多模态智能的未来研究方向，包括参数高效适配、时空推理和知识驱动架构。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+    },
     "doi:10.1007/s10462-026-11756-7": {
       "doi": "10.1007/s10462-026-11756-7",
       "journal_slug": "artificial-intelligence-review",
@@ -3134,6 +3147,32 @@
       "abstract_zh": "摘要 心血管疾病造成的全球负担极为沉重，年死亡人数超过1790万，占全球所有死亡的近三分之一。为减少诊断延迟，特别是在资源有限环境中，需要创新、可扩展且成本效益高的解决方案。将人工智能与生理信号（如心电图ECG、光电容积描记图PPG和心音图PCG）相结合，为可扩展、实时的心血管评估提供了有前景的途径。尽管进展迅速，但证据基础仍然分散，阻碍了经验证方法和临床转化路径的识别。遵循PRISMA指南在五个数据库（Scopus、Web of Science、PubMed、Embase、IEEE Xplore）中进行的检索发现了35篇符合条件的同行评议研究。使用改编的QUADAS-2框架评估了质量和偏倚风险。大多数系统采用ECG（71.4%）并结合深度学习架构，包括卷积神经网络和循环神经网络。量化了关键缺口：只有23%的研究进行了外部验证，只有14%实现了临床规模部署，没有研究实现基于原则的多信号融合（ECG + PPG + PCG），且仅有一个系统（1/35，2.9%）实现了面向患者的对话式界面。报告的准确率范围为70.5%至99.9%（n = 21，报告者；非加权平均值93.7%），但指标报告不一致和外部验证有限削弱了转化信心。提出了一个三方向框架，旨在通过多信号（ECG + PPG + PCG）模型提升泛化性，通过基于大语言模型的临床叙述提升可解释性，并通过边缘云部署提升可及性，以指导未来研究走向可临床部署的系统。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-15T00:08:19.994935+00:00"
+    },
+    "doi:10.1007/s10462-026-11758-5": {
+      "doi": "10.1007/s10462-026-11758-5",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Generative AI for high-dimensional biological data under HDLSS constraints: a critical review and comparative study",
+      "acquired_at": "2026-11-20T23:51:38",
+      "source_title_sha256": "3af2a9f89808d9ea4bf9403c4bb4efddd3f87141418ee93c39d873b197ef8f31",
+      "source_abstract_sha256": "6dbda28f101299da0e71ed31271e9cf55e291734f01d34f9036b0cbc74a2af05",
+      "source_abstract": "abstract",
+      "title_zh": "在HDLSS约束下用于高维生物数据的生成式人工智能：关键评述与比较研究",
+      "abstract_zh": "人工智能评论——生成式人工智能（GenAI）模型已成为现代人工智能（AI）系统以及高维数据分析中的核心。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+    },
+    "doi:10.1007/s10462-026-11762-9": {
+      "doi": "10.1007/s10462-026-11762-9",
+      "journal_slug": "artificial-intelligence-review",
+      "title": "Serendipity in recommender systems: a systematic review of definitions, methods, evaluation, and ethics in the era of generative AI",
+      "acquired_at": "2026-11-20T23:51:38",
+      "source_title_sha256": "24e57ddf559890b547256b7022d7822710b28291fee3bcd853fe3c91bb0ef2b5",
+      "source_abstract_sha256": "da8864c3176174c636f7d1f468a1c1af4f0c8f23b5ebaad5b8b5de1304d5834f",
+      "source_abstract": "abstract",
+      "title_zh": "生成式人工智能时代推荐系统中的偶然性：定义、方法、评估与伦理的系统综述",
+      "abstract_zh": "摘要 偶然性，即发现意外而有价值的项目，已成为推荐系统（RS）旨在降低过滤气泡并支持长期用户满意度的重要目标。尽管以准确性为驱动的模型能够有效预测已知偏好，但它们可能限制探索并强化狭窄的消费模式。尽管将偶然性作为超越准确性的目标日益受到关注，但由于定义、评估协议和伦理考量未能保持一致，该领域仍然分散。本系统综述考察了2020年至2025年期间推荐系统中的偶然性，涵盖147项研究和98项算法贡献。我们将多样的定义综合为以相关性、新颖性和意外性为中心的统一概念框架。我们还提出了一种方法学分类法，追溯了该领域从启发式和传统方法到深度学习、知识图谱、生成式及基于大语言模型（LLM）的方法的演变。报告的结果表明，近期的基于LLM的方法在偶然性导向任务上可实现强劲性能，$$\\:NDC{G}_{seren}$$分数最高可达0.398。我们还回顾了评估实践，并突出了计算代理与主观用户体验之间的差距。通过定量伦理分析，我们表明，74.1%的研究承认伦理问题，但只有6.8%包含专门的伦理部分，19.7%将伦理指标可操作化，5.4%涉及内容安全。通过整合概念、方法学、评估和伦理视角，本综述为开发在相关性与有益发现之间取得平衡的偶然性导向推荐系统提供了指导。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.brs.2026.103117": {
       "doi": "10.1016/j.brs.2026.103117",
@@ -6586,12 +6625,12 @@
       "title": "Genome writing reveals SVA retrotransposon consequences in X-linked dystonia-parkinsonism",
       "acquired_at": "2026-11-19T23:34:31",
       "source_title_sha256": "3470fe94aebb7c29e5345ef0e25edde275483f8b84a749aef996f64efb4c9290",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "基因组写入揭示X连锁肌张力障碍-帕金森病中SVA逆转录转座子的后果",
-      "abstract_zh": null,
+      "source_abstract_sha256": "bf553e2ee6b1c88f6928a9b492f4a6c6e12c9d9001e615beff124fcbe0ed95f1",
+      "source_abstract": "abstract",
+      "title_zh": "基因组书写揭示SVA逆转录转座子在X连锁肌张力障碍-帕金森病中的后果",
+      "abstract_zh": "人类逆转录转座子插入常与疾病相关。就神经退行性疾病X连锁肌张力障碍-帕金森病（XDP）而言，人类特有的SINE-VNTR-Alu（SVA）F亚家族逆转录转座子插入TAF1基因第32个内含子中。在此，我们用来自78 kb XDP患者衍生TAF1等位基因的相应片段基因组重写了小鼠Taf1等位基因的一部分。在小鼠胚胎干细胞（mESCs）中，内含子中的SVA（而非杂交基因结构）的存在降低hyTAF1（杂交TAF1 mRNA）水平。这导致启动子富含TATA盒的基因转录下调，并诱导凋亡。染色质和转录组谱分析表明，内含子SVAs处于活跃转录状态，形成可能阻碍转录延伸的屏障。在小鼠中，神经血统TAF1人源化导致雄性后代在2个月内死亡。XDP雄性小鼠出现以纹状体为中心的严重萎缩——即XDP患者受累的同一大脑区域。最后，通过CRISPRa介导的hyTAF1激活恢复了mESC的活性，表明增强TAF1转录可能是一种治疗策略。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.cell.2026.07.058": {
       "doi": "10.1016/j.cell.2026.07.058",
@@ -8614,12 +8653,12 @@
       "title": "CD19 CAR T cell therapy alters disease-associated immune signatures in multiple sclerosis",
       "acquired_at": "2026-11-19T23:34:31",
       "source_title_sha256": "1b0836ae865a6444acbef05d7b192dc274d0e5139c74f5c3427e24ee7a26fe10",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "CD19 CAR T细胞疗法改变多发性硬化症疾病相关免疫特征",
-      "abstract_zh": null,
+      "source_abstract_sha256": "816105f9f470aa169e9b5277ce80205615f9a1ce746783ef9bba543eb4d5e185",
+      "source_abstract": "abstract",
+      "title_zh": "CD19 CAR T细胞疗法改变多发性硬化症的疾病相关免疫特征",
+      "abstract_zh": "多发性硬化症（MS）是一种慢性炎症性中枢神经系统（CNS）疾病。尽管现有免疫疗法可控制复发，但对病程进展的影响有限，这可能反映了对中枢神经系统内合并炎症的进入或调控不完全。嵌合抗原受体（CAR）T细胞可以浸润组织，但其进入并消除中枢神经系统内居住免疫细胞的能力尚不清楚。我们报道了对五名进行性或复发缓解型多发性硬化症患者使用自体CD19 CAR T细胞进行治疗，以评估安全相关方面、中枢神经系统生物利用度以及区室特异性影响。该干预诱导脑脊液（CSF）B细胞池的重塑，并持续降低脑脊液体液生物标志物。值得注意的，脑脊液浸润的CAR T细胞选择性上调磷酸二酯酶7B，而重构的外周B细胞表现出改变的细胞因子和趋向特征。这些发现提示除了外周B细胞耗竭之外的区室特异性免疫调节，并支持开展受控试验以检验安全性、持久性和疗效。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.cell.2026.10.046": {
       "doi": "10.1016/j.cell.2026.10.046",
@@ -8627,12 +8666,12 @@
       "title": "Myelin pathology is a key feature of X-linked dystonia-parkinsonism",
       "acquired_at": "2026-11-19T23:34:31",
       "source_title_sha256": "33d2f2ff2516451cdba7b4f8b4909a2c3f6770af0eb60f50cb79d548fe78394d",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
+      "source_abstract_sha256": "3644952b12789ed549635fcae6fafa693653954e8a5af997b0c77848e0ec7ebe",
+      "source_abstract": "abstract",
       "title_zh": "髓鞘病理是X连锁肌张力障碍-帕金森病的关键特征",
-      "abstract_zh": null,
+      "abstract_zh": "X连锁肌张力障碍-帕金森病（XDP）是一种成人发病的运动障碍，主要影响菲律宾血统的男性。它由TATA盒结合蛋白相关因子1（TAF1）基因中一种SINE-可变数串联重复-亞家族F（SVA_F）逆转录子的插入引起。XDP研究的一个障碍是缺乏动物模型。这里，我们引入了一种携带杂交小鼠-人Taf1/TAF1基因（hyTAF1）的条件性人源化XDP小鼠模型，该基因含有致病性SVA_F。我们在Nestin+细胞中激活了hyTAF1，发现由此产生的XDP雄性小鼠重现了人类XDP的特征，包括严重的运动障碍和纹状体萎缩。转录组学、组织学和电镜分析显示少突胶质细胞谱系细胞减少及髓鞘破坏。与此一致，XDP患者的尸检脑组织显示了类似的髓鞘病理，包括内侧前额叶皮层的髓鞘丢失。这些结果确认少突胶质细胞功能障碍和髓鞘丢失是XDP的主要诱因，为该疾病提供了新的机制性洞见。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.cell.2026.10.047": {
       "doi": "10.1016/j.cell.2026.10.047",
@@ -8640,12 +8679,12 @@
       "title": "RNA folding drives species-dependent host mRNA partitioning in Ebola virus condensates",
       "acquired_at": "2026-11-19T23:34:31",
       "source_title_sha256": "a3af040f244d326929709c3ed4556b3b2d058a20aaac08da7f2068c969b6cbed",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "RNA折叠驱动埃博拉病毒凝聚物中物种依赖的宿主mRNA分配",
-      "abstract_zh": null,
+      "source_abstract_sha256": "f463cc734a804798ee9eeea051764a1fd79a535321a5bfba69160e9382f23f76",
+      "source_abstract": "abstract",
+      "title_zh": "RNA折叠驱动埃博拉病毒凝聚物中物种依赖性宿主mRNA分配",
+      "abstract_zh": "RNA病毒在宿主细胞中形成无膜凝聚物以驱动复制，但这些区室是否调节宿主RNA仍不清楚。利用基于多重误差稳健荧光原位杂交（MERFISH）的亚细胞转录组学，我们在基础状态和干扰素（IFN）刺激状态下，定量测定了细胞mRNA招募到埃博拉病毒凝聚物的情况。我们发现，在基础状态下，编码区折叠程度较低的细胞RNA被选择性招募。然而，在IFN刺激下，具有结构化3' UTR的干扰素刺激基因（ISG）则集中在病毒凝聚物中。我们发现，这两种RNA结构特征在病毒基因组中均保守，并支持其在凝聚物中的保留。与此同时，对于细胞mRNA，我们发现分区进入凝聚物可延长RNA半衰期，并放大而非抑制ISG表达。果蝠对RNA病毒不易发生重症，其ISG的3' UTR折叠程度较低，可能逃避凝聚物囚禁，从而实现平衡的抗病毒反应。这种选择性稳定将凝聚物功能与RNA调节联系起来，作为病毒-宿主共进化及疾病发病机制的分子决定因素。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.cell.2026.10.049": {
       "doi": "10.1016/j.cell.2026.10.049",
@@ -8653,12 +8692,12 @@
       "title": "A natural mutation of timeless enhances mosquito thermal adaptation and malaria parasite transmission",
       "acquired_at": "2026-11-19T23:34:31",
       "source_title_sha256": "b4b68dec5a03d63de160295048d02be9304cef243cbbd043b9550f3f70f5ae7d",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "period基因的自然突变增强蚊子热适应和疟原虫传播",
-      "abstract_zh": null,
+      "source_abstract_sha256": "7b5be55ebc2ecc01fc09a8baaf6b9aa431ee781c758af9756829949f949ce3d7",
+      "source_abstract": "abstract",
+      "title_zh": "timeless 基因的天然突变增强蚊子热适应性与疟原虫传播",
+      "abstract_zh": "Anopheles stephensi 是一种疟疾传播蚊，已入侵非洲并迅速适应城市环境的高温，但其热适应的分子基础尚不清楚。本文在 circadian clock 基因 timeless（tim）中鉴别了一个 5-kb 缺失变异（tim-5kb），该变异在高温实验室饲养 3 年后频率显著升高。tim +/- 5kb 杂合雄性蚊在高温下能够维持 period 基因的稳定表达，通过上调脂肪动员激素基因 AKH1 促进能量动员和飞行活性，从而获得竞争性交配优势，同时上调脂肪酰基-CoA 还原酶基因 FAR3 和 FAR5，以增强庚三烷基信息素的产生。此外，杂合雌性蚊对疟原虫感染的易感性增加，从而提升疟疾传播潜力。这些发现揭示了一种可能支撑 An. stephensi 热适应的基于昼夜节律的遗传机制，对非洲疟疾控制具有重要意义。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.cell.2026.10.051": {
       "doi": "10.1016/j.cell.2026.10.051",
@@ -8666,12 +8705,12 @@
       "title": "Genomic surveillance reveals age-structured SARS-CoV-2 transmission across settings",
       "acquired_at": "2026-11-19T23:34:31",
       "source_title_sha256": "32759afeb68abf809916af7e956887339ce6cb3fe8fa59ba2e2082b773de1cfc",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "基因组监测揭示不同年龄组和不同场景中SARS-CoV-2传播的年龄结构",
-      "abstract_zh": null,
+      "source_abstract_sha256": "317e4585c4064fe9677310e918f601ad4639c5b9b483c4741440cbad8f6089bb",
+      "source_abstract": "abstract",
+      "title_zh": "基因组监测揭示不同场景中年龄结构的 SARS-CoV-2 传播",
+      "abstract_zh": "了解呼吸道病毒传播需要将病原体基因组数据与详细的流行病学背景相结合。我们分析了 2021 年 11 月至 2023 年 1 月在马萨诸塞州收集的关联流行病学数据的 85,000 多个 SARS-CoV-2 基因组。该数据集在 666 个场景中收集，包括学校、大学和熟练护理设施，使得场景内传播与社区范围风险的直接比较成为可能。传播升高集中在特定的年龄界定亚人群中，即学校中的大龄青少年、大学中的本科生以及护理设施中的居民，而其他群体（尤其是工作人员）几乎没有额外风险。年轻成年人，特别是大学生，在传播中发挥了不成比例的作用，新的病毒谱系始终首先在这个群体中扩张。病毒传播遵循可重复的城乡梯度，疫苗接种与降低后续传播相关。我们还估计了及时检测新变异株所需的测序阈值。这些发现共同揭示了 SARS-CoV-2 传播中一致的人口和空间结构，可为呼吸道病毒病原体基因组监测提供参考。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.106648": {
       "doi": "10.1016/j.neubiorev.2026.106648",
@@ -13450,12 +13489,12 @@
       "title": "Where could the brain keep a symbol?",
       "acquired_at": "2026-11-19T23:57:26",
       "source_title_sha256": "d21420cfd161cbd2e90c204820c6559405ca473d7c471d65c6cf6b411f386759",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "大脑可能在哪里存储符号？",
-      "abstract_zh": null,
+      "source_abstract_sha256": "8097768f2abf5e31f136f6929031ae5599094366d1e3d4c89876e7ebc7a2dd94",
+      "source_abstract": "abstract",
+      "title_zh": "大脑可能在哪里存放符号？",
+      "abstract_zh": "神经科学常将记忆描述为储存的神经符号，然而持久的记忆和成功的提取并不能确立一个独立可访问的符号载体。我将保持——即物理变化持续存在并后来影响行为的主张——与符号存储相区分，后者是更强的计算主张，即描述可以独立于其所指定的操作而被访问。该标准是功能性的且相对于系统的，并不排除神经活动作为访问途径。它要求在测试前指定候选载体、其拟议用途、系统边界，以及一条不使用该载体即可到达它的内源路径。DNA符合该标准：复制保留核苷酸序列而不产生编码的基因产物。来自突触和电路的证据确立了持久且功能有用的组织，但对于任何神经记忆载体均未显示这种分离；在这些状态下，被识别的读取操作会修改其所读取的内容。海马重放、神经调节和人工网络检查点表明，结论取决于所比较的载体和操作。我同意加利斯泰尔的观点，即细胞内核酸机制可能提供真正的存储，但不同意仅凭行为精确性就需要一个存储。持续耦合——即记忆通过持续重新校准而非从存储中读取来维持——提供了一种替代方案，其预测取决于误差来源：如果存在参考信号，漂移可以被纠正，但一个独特且从不重访的情节则没有提供任何参考信号。目前证据支持突触和电路中的保持而非符号存储；我提出了可能推翻这一结论的操作性测试。无论如何，保持和使用仍然是记忆。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107093": {
       "doi": "10.1016/j.neubiorev.2026.107093",
@@ -13515,12 +13554,38 @@
       "title": "Mismatch Negativity and General Cognitive Ability - A Meta-Analysis",
       "acquired_at": "2026-11-19T23:57:26",
       "source_title_sha256": "08f62804694ed2237bf1f8658d51de1ee20c76600d03a9c6b60dbeab05216837",
+      "source_abstract_sha256": "f57df460a4184eac4c3e20e78cc2efa3a687b523618d79eaae7fc484ec9c6f36",
+      "source_abstract": "abstract",
+      "title_zh": "失配负性与一般认知能力——一项荟萃分析",
+      "abstract_zh": "智力或一般认知能力（GCA）是人类行为和认知的基础。它影响着重要的人生结局，如教育成功，甚至健康和长寿也与GCA的差异相关。理解此类个体差异的生物学基础是神经科学的重要目标之一。失配负性（MMN）是一种事件相关脑电位，可在一系列高频标准刺激中呈现稀有偏差刺激时测得，并被提示反映大脑的有意识（主动）或无意识（被动）检测过程。重要的是，MMN振幅和潜伏期的差异已与GCA差异相关联。然而，研究结果差异较大。这项预登记荟萃分析全面而系统地概述了当前研究状况。遵循PRISMA指南进行研究筛选，并利用个体差异研究的研究设计与实施评估工具（DIAD-ID）评估研究设计质量，研究了12项纳入研究中645名健康成年人GCA与MMN振幅及潜伏期的关联。估计的MMN与GCA之间的跨样本关联虽小但显著（MMN振幅–GCA：r = -0.09；MMN潜伏期–GCA：r = -0.16；p < 0.01），并识别出调节变量。样本间异质性适中，未发现出版偏倚证据。研究结果表明，较高的认知能力与略强且较快的MMN反应相关联。然而，较低的估计跨样本效应量和纳入研究数量较少也凸显了开展更多研究的必要性。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107100": {
+      "doi": "10.1016/j.neubiorev.2026.107100",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Transdiagnostic effects of medial prefrontal cortex (mPFC) repetitive transcranial magnetic stimulation (rTMS): A systematic review and meta-analysis of sham-controlled trials",
+      "acquired_at": "2026-11-21T00:05:49",
+      "source_title_sha256": "376c4b1e7ae84e705fee166ae532d65f9acd05a99d2d82d90a689070be5ed3f3",
       "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "source_abstract": null,
-      "title_zh": "失配负性与一般认知能力：一项元分析",
+      "title_zh": "内侧前额叶皮层（mPFC）重复经颅磁刺激（rTMS）的跨诊断效应：对假对照试验的系统综述与荟萃分析",
       "abstract_zh": null,
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+    },
+    "doi:10.1016/j.neubiorev.2026.107108": {
+      "doi": "10.1016/j.neubiorev.2026.107108",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Reactive, subjective and executive agents: How survival circuits underlie the expansion of subjective experience and felt motivation in humans and other vertebrates",
+      "acquired_at": "2026-11-21T00:05:49",
+      "source_title_sha256": "73508655722908cc4585c0fed2ebdac053009c7d804b9e3ba94488c310564390",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "反应型、主观型和执行型代理：生存回路如何支撑人类及其他脊椎动物主观体验与动机感受的扩展",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -16928,6 +16993,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
+    "doi:10.1016/j.neuron.2026.10.016": {
+      "doi": "10.1016/j.neuron.2026.10.016",
+      "journal_slug": "neuron",
+      "title": "Spectral envelopes of facial movements predict intention, cortical representations, and neural prosthetic control",
+      "acquired_at": "2026-11-20T23:41:38",
+      "source_title_sha256": "9cfe63fad090378c34c2d52fe2f16526aca97a60f55830006a1d53fc6850523a",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "面部运动的频谱包络可预测意图、皮层表征和神经假肢控制",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+    },
     "doi:10.1016/j.neuron.2026.10.017": {
       "doi": "10.1016/j.neuron.2026.10.017",
       "journal_slug": "neuron",
@@ -16986,12 +17064,12 @@
       "title": "The neural mechanisms of fast versus slow decision-making",
       "acquired_at": "2026-11-19T23:38:55",
       "source_title_sha256": "49c7ad2b2d5de2b6d490f8545b22c21a4625e0fb36bc8a10b6c5f02e9c6d3532",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
+      "source_abstract_sha256": "17198de7e6d376a10afcdfabe7dcdf497c3ed63e34868a7f5e3f5b5fee43f4db",
+      "source_abstract": "abstract",
       "title_zh": "快速与缓慢决策的神经机制",
-      "abstract_zh": null,
+      "abstract_zh": "智能行为的一个显著特征是能够优化投入决策的时间量。然而，支配决策时机的原则仍不清楚。在此，我们开发了一种新范式，用于直接比较小鼠与人类的决策。该方法使我们能够结合小鼠额叶皮层的宽场成像和双光子成像以及光遗传抑制，以探究其潜在机制。我们发现，内侧额叶皮层（MFC）中依赖历史序列的精细化，与外侧额叶皮层（LFC）中的阈值机制，共同构成了试次一致性的决策策略统一逻辑。值得注意的是，与抑制LFC相比，对MFC的光遗传抑制会严重干扰行为表现和策略，揭示了MFC在决策选择与时机中的主导认知作用。这些动态反映了强化学习更新，其解释时机变异性优于感觉证据。我们的研究结果为跨物种的自主决策提供了一个计算框架。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.tics.2025.09.013": {
       "doi": "10.1016/j.tics.2025.09.013",
@@ -19066,12 +19144,12 @@
       "title": "The dark and light sides of dynorphin and enkephalin: from reward to aversion",
       "acquired_at": "2026-11-19T23:41:28",
       "source_title_sha256": "0388982873e085ecc87836337705497deeaa5b69718c2a57dc9919be1c3b8b21",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "产内啡肽和脑内啡的光明与黑暗：从奖赏到厌恶",
-      "abstract_zh": null,
+      "source_abstract_sha256": "2340b37f2ed6ba6fad5eaeaae3535015be7038dc1c47020cff5bc14ac177d6ee",
+      "source_abstract": "abstract",
+      "title_zh": "内啡肽原肽和脑啡肽的光明与黑暗面：从奖赏到厌恶",
+      "abstract_zh": "内源性阿片系统通过遍布大脑的多种肽类和受体亚型调节奖赏与厌恶。在本综述中，我们关注两种阿片类物质：经典与奖赏相关的脑啡肽和经典与厌恶相关的内啡肽原肽。我们认为，这种二元对立过度简化了由回路特异性和语境依赖性所定义的系统。方法学进步使得在行为学相关时间尺度上直接测量和操纵内源性阿片信号成为可能，证据表明内源性阿片信号具有时间动态性、回路特异性及功能异质性，挑战了简单的奖赏与厌恶模型。我们讨论这些进展如何重塑我们对内啡肽原肽和脑啡肽功能的认识，以核 accumbens-ventral pallidum-ventral tegmental area 回路为框架，鉴于其密集的相互作用阿片系统及其在奖赏和厌恶行为中的核心作用。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-20T00:01:00.559858+00:00"
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1016/j.tins.2026.10.009": {
       "doi": "10.1016/j.tins.2026.10.009",
@@ -40068,6 +40146,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-18T00:05:25.785981+00:00"
     },
+    "doi:10.1038/s41582-026-01287-8": {
+      "doi": "10.1038/s41582-026-01287-8",
+      "journal_slug": "nature-reviews-neurology",
+      "title": "Potential and pitfalls of artificial intelligence to address disparities in epilepsy",
+      "acquired_at": "2026-11-20T23:45:49",
+      "source_title_sha256": "60f7373ac2b2caa7d72ddbe96ee8b85173f98c96139105d0b3741398ff9514bf",
+      "source_abstract_sha256": "594501f64b9ae459be0726922bdcc60a328f3bb025823dd90f558e3527396cb0",
+      "source_abstract": "abstract",
+      "title_zh": "人工智能应对癫痫差距的潜力与陷阱",
+      "abstract_zh": "全球比例很高的癫痫患者缺乏有效诊断和治疗所需的专业知识和资源。本综述中，Otte 等人探讨了人工智能工具如何帮助缩小差距并改善全球癫痫医疗。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+    },
     "doi:10.1038/s41582-026-01289-6": {
       "doi": "10.1038/s41582-026-01289-6",
       "journal_slug": "nature-reviews-neurology",
@@ -50429,6 +50520,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1038/s42256-026-01339-0": {
+      "doi": "10.1038/s42256-026-01339-0",
+      "journal_slug": "nature-machine-intelligence",
+      "title": "Enabling lab autonomy with reward functions and executable workflows",
+      "acquired_at": "2026-11-20T23:45:43",
+      "source_title_sha256": "1c1bef87b71c0b1c7c64b40f82b1800b34b5264563b05a093e991b6f66c14a06",
+      "source_abstract_sha256": "826ca36559bd9b3f3b36f698cf9534101997fb0c59109dee5f676736b9ec138e",
+      "source_abstract": "abstract",
+      "title_zh": "利用奖励函数和可执行工作流实现实验室自主性",
+      "abstract_zh": "Kalinin 等人认为，自主实验室要想在物理世界中实现自主运行，大语言模型的假设生成需要辅以自下而上的优化，将假设转化为可执行的工作流。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+    },
     "doi:10.1038/s42256-026-01349-y": {
       "doi": "10.1038/s42256-026-01349-y",
       "journal_slug": "nature-machine-intelligence",
@@ -53795,6 +53899,19 @@
       "abstract_zh": null,
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
+    "doi:10.1093/brain/awag413": {
+      "doi": "10.1093/brain/awag413",
+      "journal_slug": "brain",
+      "title": "Cortical and meningeal neuroimmune interactions contribute to the generation of migraine headaches",
+      "acquired_at": "2026-11-20T23:47:21",
+      "source_title_sha256": "de7a8115b877a4bdf1c18d19ca15d7a9815ab8e12c0342297b53751bc4c44bdd",
+      "source_abstract_sha256": "364a33b5566d8f298c22934bdddd4c393caca6b141a5f01c1dedf3ab883839f6",
+      "source_abstract": "abstract",
+      "title_zh": "皮层和脑膜神经免疫相互作用对偏头痛头痛发生的贡献",
+      "abstract_zh": "摘要 偏头痛是一种普遍的疾病，在所有疾病中按致残原因排列第二位。近年来的进展显著增强了我们对其潜在病理生理学的认识。越来越多的证据突出了复杂的神经免疫信号网络，特别是脑膜伤害感受器与驻留免疫细胞之间的相互作用，作为头痛发生的关键贡献因素。抗降钙素基因相关肽（CGRP）抗体的临床成功凸显了硬膜伤害感受性神经与相邻驻留免疫细胞（如巨噬细胞）之间的细胞间通讯在偏头痛中的重要性。值得注意的是，这种细胞间炎症相互作用并不局限于脑膜。脑实质内的紊乱可能充当诱发因素，如先兆和前驱症状在头痛前出现所提示的那样。最近的实验发现表明，神经元应激会引发炎症信号级联反应，通过与星形胶质细胞和小胶质细胞的相互作用传播至脑膜，最终诱发脑膜神经源性炎症和头痛。该模型得到汇聚实验证据和采用PET及定量MRI的人类成像研究的支持，这些研究记录了偏头痛伴先兆患者脑实质及其覆盖脑膜中与炎症活动相容的改变。确定多个炎症相关基因和通路作为偏头痛风险因素的遗传研究进一步证实了这一概念。此外，小鼠大脑的细胞特异性转录组分析揭示了皮质扩散性去极化（偏头痛先兆的神经生理学相关物）后星形胶质细胞选择性激活核因子κB调控的炎症转录通路。由于星形胶质细胞与脑脊液具有广泛的界面，它能独特地释放炎症介质以激活脑膜伤害感受器和免疫细胞。疼痛研究的洞见提示，神经免疫相互作用可能导致偏头痛伴先兆患者中广泛的脑实质18 kDa转位蛋白（TSPO）PET信号增加。这一发现还确定TSPO作为偏头痛病理生理学的潜在参与者和新的药物靶点。在本综述中，通过整合外周疼痛和炎症研究的细胞与分子发现，我们考察了在偏头痛背景下神经元与胶质细胞、以及脑膜伤害感受器与免疫细胞之间的动态相互作用。这一视角为理解伤害感受器和胶质细胞如何协调发出非稳态脑状态的信号提供了概念框架——发起受保护、受严格调控的反应而不发展为显性神经炎症性疾病，并对涉及TSPO的PET研究结果提供了新的洞察。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-21T00:11:17.908145+00:00"
     },
     "doi:10.1126/science.adp3564": {
       "doi": "10.1126/science.adp3564",
