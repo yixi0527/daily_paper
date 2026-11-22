@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-21T00:11:17.908145+00:00",
+  "updated_at": "2026-11-22T00:00:12.129656+00:00",
   "articles": {
     "doi:10.1007/s00401-026-03024-3": {
       "doi": "10.1007/s00401-026-03024-3",
@@ -4139,15 +4139,15 @@
     "doi:10.1016/j.brs.2026.103248": {
       "doi": "10.1016/j.brs.2026.103248",
       "journal_slug": "brain-stimulation",
-      "title": "Influence of Stimulation Parameters on the Analgesic Effect of High-Frequency Transcranial Magnetic Stimulation on Neuropathic Pain: A Systematic Review and Meta-Analysis",
+      "title": "Influence of stimulation parameters on the analgesic effect of high-frequency transcranial magnetic stimulation on neuropathic pain: A systematic review and meta-analysis",
       "acquired_at": "2026-11-12T23:48:43",
-      "source_title_sha256": "c4c09c60fd80d71bfeaa37431d8078a5959c66b788d51f0dc90254d68ee57c1b",
+      "source_title_sha256": "4dc5a63d48dbd783672b23c4f4669d75263daeeca13d95efca2490cdefd12177",
       "source_abstract_sha256": "3a06490847ce27f528496b5925054d86f5efeebb46f658da72e7cebc374988fc",
       "source_abstract": "abstract",
-      "title_zh": "高频经颅磁刺激治疗神经病理性疼痛的刺激参数影响：系统综述与荟萃分析",
-      "abstract_zh": "背景：慢性神经病理性疼痛患者需要新的镇痛治疗方法。高频重复经颅磁刺激（HF-rTMS）可能具有临床显著的镇痛效果。本研究旨在评估HF-rTMS对慢性神经病理性疼痛的治疗效果，并探讨不同刺激参数的影响。方法：在PubMed、Embase、Scopus、Web of Science中进行了系统检索。共纳入31项研究。结果：使用焦点F8线圈对预中央皮层（PreCC）进行的HF-rTMS显示出显著镇痛效果（3-5次治疗数据集：SMD = -0.86，95% CI [-1.34, -0.37]；>5次治疗数据集：SMD = -0.80，95% CI [-1.39, -0.20]）。使用较大H线圈对PreCC进行的HF-rTMS也显示出显著效果（SMD = -0.36，95% CI [-0.65, -0.08]），而对左侧背外侧前额叶皮层进行的HF-rTMS未显示显著效果（SMD = -0.29，95% CI [-0.93, 0.34]）。探索性亚组分析显示，刺激频率、强度、每次治疗脉冲数或治疗次数的不同水平之间没有统计学显著差异，唯一的例外是>5次治疗数据集中的刺激强度，最大效应观察于静息运动阈值的80%。关于PreCC受HF-rTMS影响的效应，个体水平上某些参数达到了统计学显著性：刺激频率（两个数据集中均为10 Hz；仅3-5次治疗数据集中为20 Hz）、刺激强度（静息运动阈值的80%）以及每次治疗脉冲数（>5次治疗数据集中为1200-1600；3-5次治疗数据集中为2000-2500）。然而，这些个体水平的显著性并未正式确立亚组之间的差异，因为相应的比较检验未达到统计学显著性。结论：本荟萃分析支持HF-rTMS对PreCC进行治疗以缓解慢性神经病理性疼痛的总体有效性。然而，鉴于显著的研究异质性、统计学局限性、某些参数水平依赖于少数或有影响力的研究以及跨研究之间参数的相关性，参数特异性的发现应被视为生成假设的依据，而非确立参数-反应关系的证据。这些结果强调需要进行统计效力充足、系统设计合理的试验，直接比较刺激方案，才能确定最佳策略。",
+      "title_zh": "刺激参数对高频经颅磁刺激治疗神经病理性疼痛镇痛效果的影响：系统综述与荟萃分析",
+      "abstract_zh": "背景：慢性神经病理性疼痛患者需要新型镇痛治疗。高频重复经颅磁刺激（HF-rTMS）可能具有显著的临床镇痛效果。本研究旨在评估HF-rTMS对慢性神经病理性疼痛的治疗效果，并探究不同刺激参数的影响。方法：在PubMed、Embase、Scopus、Web of Science中进行系统检索，纳入31项研究。结果：以聚焦F8线圈对预中央皮层（PreCC）进行HF-rTMS显示出显著的镇痛效果（3~5次疗程数据组SMD = -0.86，95% CI [-1.34, -0.37]；超过5次疗程数据组SMD = -0.80，95% CI [-1.39, -0.20]）。使用较大H线圈对PreCC进行HF-rTMS也显示出显著效果（SMD = -0.36，95% CI [-0.65, -0.08]），而对左侧背外侧前额叶皮层进行HF-rTMS则未显示显著效果（SMD = -0.29，95% CI [-0.93, 0.34]）。探索性亚组分析显示，刺激频率、强度、每次治疗脉冲数或治疗次数的不同水平之间无统计学显著差异，除刺激强度外，在超过5次疗程的数据组中，最大效应观察于静息运动阈值的80%。关于对PreCC进行HF-rTMS的效应，某些参数在个体水平上达到统计学显著性：刺激频率（两个数据组均为10 Hz；仅在3~5次疗程数据组中为20 Hz）、刺激强度（静息运动阈值的80%）和每次治疗脉冲数（超过5次疗程数据组为1200~1600；3~5次疗程数据组为2000~2500）。然而，这些个体水平上的显著性并未正式确立亚组间差异，因为相应的比较检验未达到统计学显著性。结论：本荟萃分析支持对PreCC进行HF-rTMS缓解慢性神经病理性疼痛的总体疗效。然而，鉴于研究间显著异质性、统计局限性、多个参数水平依赖少数或有影响力的研究，以及跨研究的参数间相关性，参数特异性发现应被视为假设生成性而非确立参数-反应关系的证据。这些结果强调，在确立最佳策略之前，需要进行功效充足、系统设计并直接对比刺激方案的临床试验。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-14T08:11:26.352478+00:00"
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1016/j.brs.2026.103249": {
       "doi": "10.1016/j.brs.2026.103249",
@@ -13509,6 +13509,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-17T00:03:55.246175+00:00"
     },
+    "doi:10.1016/j.neubiorev.2026.107095": {
+      "doi": "10.1016/j.neubiorev.2026.107095",
+      "journal_slug": "neuroscience-and-biobehavioral-reviews",
+      "title": "Brain–Computer Interfaces for Traumatic Brain Injury and Spinal Cord Injury: Lesion-Pattern Matching, Functional Restoration, and Clinical Translation",
+      "acquired_at": "2026-11-21T23:58:22",
+      "source_title_sha256": "f384eaef5714412cb5f232cc52717e5bd6bdc55f299eca5626f8c4e979649555",
+      "source_abstract_sha256": "8f908d5d97e6b151edfbdda5f80c5edeb65d4c069a34beccba642d59684d9417",
+      "source_abstract": "abstract",
+      "title_zh": "脑机接口用于创伤性脑损伤和脊髓损伤：病灶模式匹配、功能恢复与临床转化",
+      "abstract_zh": "背景：脑机接口（BCI）正越来越多地被开发用于中枢神经系统损伤后具有临床相关性的评估、沟通、康复和功能恢复。然而，其临床角色在不同损伤类型间差异显著。本叙述性综述采用损伤模式指导框架，探讨了创伤性脑损伤（TBI）和脊髓损伤（SCI）中的 BCI 应用，该框架将残留神经架构与临床任务、界面选择和结果评估相关联。主要正文：在 SCI 中，尽管下行通路受损，运动意图和皮层活动仍可能可及，支持运动意图解码、脑控功能电刺激、神经假肢控制以及脊柱脑接口。在 TBI 中，弥漫且异质的网络功能障碍将临床重点转移到隐匿意识检测、辅助沟通、神经反馈和多模态康复。我们比较了非侵入性、血管内、硬膜下皮层图谱和皮质内记录方法；总结了诱发反应、运动想象和连续解码范式；并区分了功能替代与个体自身运动的闭环恢复。最近的侵入性系统支持了部分 SCI 患者握持、站立和行走的恢复，而 TBI 的证据仍集中于脑状态评估和低带宽沟通。结论：临床转化将需要仔细的受试者筛选、稳定的长期记录、有效的双向反馈、具有临床意义的现实世界结果、伦理监督和持续的技术支持。疾病特异性转化路径，而非通用 BCI 模型，很可能是中枢神经系统损伤后常规临床应用最实际的途径。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
+    },
     "doi:10.1016/j.neubiorev.2026.107096": {
       "doi": "10.1016/j.neubiorev.2026.107096",
       "journal_slug": "neuroscience-and-biobehavioral-reviews",
@@ -13567,12 +13580,12 @@
       "title": "Transdiagnostic effects of medial prefrontal cortex (mPFC) repetitive transcranial magnetic stimulation (rTMS): A systematic review and meta-analysis of sham-controlled trials",
       "acquired_at": "2026-11-21T00:05:49",
       "source_title_sha256": "376c4b1e7ae84e705fee166ae532d65f9acd05a99d2d82d90a689070be5ed3f3",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "内侧前额叶皮层（mPFC）重复经颅磁刺激（rTMS）的跨诊断效应：对假对照试验的系统综述与荟萃分析",
-      "abstract_zh": null,
+      "source_abstract_sha256": "ff0940ebb3a81651c26673f325e7885a8043c19ba43ea76da15a1f72c448e71a",
+      "source_abstract": "abstract",
+      "title_zh": "内侧前额叶皮层（mPFC）重复经颅磁刺激（rTMS）的超诊断效应：一项假刺激对照试验的系统评价与荟萃分析",
+      "abstract_zh": "背景：越来越多证据支持内侧前额叶皮层（mPFC）在多种精神障碍中发挥核心作用。近期多项假刺激对照试验已对 mPFC 应用重复经颅磁刺激（rTMS）进行研究。然而，尚未针对精神障碍中的跨诊断症状开展荟萃分析。目标：本系统评价与荟萃分析（CRD42022354346）考察了 rTMS 对 mPFC 在多种精神诊断中的跨诊断症状效应。方法：纳入精神障碍中针对 mPFC 的随机、假刺激控制 rTMS 试验。主要结局为治疗前后临床症状、生活质量和认知测量的变化，涵盖抑郁、焦虑、强迫症状、阴性症状、渴求和消费等症状领域。结果：共检索到 3,901 条记录，176 条全文纳入筛选，30 条被纳入。分析涉及 17 个症状领域和 1,083 名参与者。mPFC rTMS 对强迫症状产生中等至较大效应，对阴性症状和渴求产生中等效应，对抑郁症状产生小效应。焦虑、认知、消费和冲动性方面的效应无统计学意义。解释受到总体研究数量较少、结果异质性较高以及部分偏倚风险顾虑的限制。结论：本系统评价与荟萃分析提示，mPFC rTMS 可能对强迫症状、阴性症状和渴求具有治疗潜力，对抑郁症状的影响较小。需要更多高质量、样本量充足的试验来验证效应并明确最佳刺激方案。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1016/j.neubiorev.2026.107108": {
       "doi": "10.1016/j.neubiorev.2026.107108",
@@ -13580,12 +13593,12 @@
       "title": "Reactive, subjective and executive agents: How survival circuits underlie the expansion of subjective experience and felt motivation in humans and other vertebrates",
       "acquired_at": "2026-11-21T00:05:49",
       "source_title_sha256": "73508655722908cc4585c0fed2ebdac053009c7d804b9e3ba94488c310564390",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
-      "title_zh": "反应型、主观型和执行型代理：生存回路如何支撑人类及其他脊椎动物主观体验与动机感受的扩展",
-      "abstract_zh": null,
+      "source_abstract_sha256": "384427d7e5cc03ae9684161ac519d5448c2cd48c5630567b25fe3f442fdd1d86",
+      "source_abstract": "abstract",
+      "title_zh": "反应型、主观型和执行型代理：生存回路如何支撑人类及其他脊椎动物主观体验与感受性动机的扩展",
+      "abstract_zh": "我们回顾了从寒武纪大爆发到人类脊椎动物代理的进化。活跃的运动触发了节肢动物、脊椎动物及后来的头足动物中高效决策的进化。孤立的神经通路——适合性有效行为的古老控制架构——相互连接形成了生存回路：进化保守的、功能整合的神经通路，对特定刺激类别作出反应并竞争控制权，拥有各自特定的反应集。通过限制输入、处理和输出降低了计算复杂性。我们假设三个进化过渡通过延长生存回路深化了主观体验：（i）联想学习和社会学习意味着非遗传信息获取；（ii）一个模拟现实，其中情节类似记忆和内部模拟导致基于预测的行动选择；（iii）基于未来预期设定和执行自身的福祉目标，产生了对短期个人目标的感受性体验。脊椎动物以及一些节肢动物和头足动物的这种主观代理从反应性代理演化而来。关键在于强大的四重主观体验：社会学习、基于模拟的预测和感受性目标——为非语言理性和意识铺平了道路，二者相互加强。文化的出现、社会纽带和友谊的开始起源于早期脊椎动物。在人类及部分其他谱系中，强大的四重体与基于语言的文化在适应社会游戏的过程中共同进化，形成执行型代理，增强了友谊和社会性的能力，以及生存回路中个性化和有意识的规范、价值与目的的影响，进一步强化了自由意志的感觉。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1016/j.neuron.2026.01.014": {
       "doi": "10.1016/j.neuron.2026.01.014",
@@ -16999,12 +17012,12 @@
       "title": "Spectral envelopes of facial movements predict intention, cortical representations, and neural prosthetic control",
       "acquired_at": "2026-11-20T23:41:38",
       "source_title_sha256": "9cfe63fad090378c34c2d52fe2f16526aca97a60f55830006a1d53fc6850523a",
-      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "source_abstract": null,
+      "source_abstract_sha256": "36aad56c9dc86585e6f8148337f41f676d4dcfe69065e0cce55f4c28cc0694e5",
+      "source_abstract": "abstract",
       "title_zh": "面部运动的频谱包络可预测意图、皮层表征和神经假肢控制",
-      "abstract_zh": null,
+      "abstract_zh": "动物利用协调的面部运动来采样环境、摄取营养并进行交流。啮齿动物在自发行为和认知任务中会产生有节律的面部运动。精确测量这些运动并将其与神经活动关联起来仍然具有挑战性。我们引入了 face-rhythm，这是一种无监督流程，结合了无标记点跟踪、频谱分析和非负张量分解，将面部视频减少为一小组可解释的组分。应用于接受巴甫洛夫条件反射、脑机接口任务和自由行为的小鼠的视频中，face-rhythm 恢复了触须运动、嗅觉、舔舐和更细微的模式。所得组分在动物间具有一致性，可解码任务变量和内部状态，并以低秩表示解释皮层活动。面部运动皮层神经元对高于约 0.5 Hz 的运动的相位不变频谱变换预测良好，而较慢的运动则保留相位变异表征。与深度学习跟踪和嵌入方法相比，face-rhythm 表现优异，同时提供可解释的面部行为描述。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
-      "translated_at": "2026-11-21T00:11:17.908145+00:00"
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1016/j.neuron.2026.10.017": {
       "doi": "10.1016/j.neuron.2026.10.017",
@@ -17057,6 +17070,19 @@
       "abstract_zh": "动机状态的兴起与消退可能在多天时间尺度上发生。我们以小鼠交配行为模拟大脑如何协调此类缓慢的动机变化。成功交配后，雄性小鼠会出现性饱足，其交配动机需一周才能恢复。通过在内侧前视区（MPOA）进行深层大脑荧光寿命成像，我们发现，调节交配驱动的强张性多巴胺传递在交配后下降，并在数天内逐渐恢复。两种机制调控多巴胺传递：第一，成功交配短暂降低了下丘脑多巴胺能释放神经元的强张性放电，从而抑制多巴胺释放和交配行为1至2天；第二，这些神经元合成和释放多巴胺的能力在交配后下降，并在随后的一周内恢复，与交配驱动的恢复同步。因此，神经元放电率与神经递质组成的变化分别协作控制动机动力学的早期和晚期阶段。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
+    },
+    "doi:10.1016/j.neuron.2026.10.023": {
+      "doi": "10.1016/j.neuron.2026.10.023",
+      "journal_slug": "neuron",
+      "title": "Disrupting a cargo receptor entrapment complex is a therapeutic node for distinct proteinopathies",
+      "acquired_at": "2026-11-21T23:39:05",
+      "source_title_sha256": "f9b3301b21bcb29a207449d90bc9c2556d51b015f011a70a1ea2996ffc3a099d",
+      "source_abstract_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_abstract": null,
+      "title_zh": "破坏货物受体俘获复合物是不同蛋白质病的治疗靶点",
+      "abstract_zh": null,
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1016/j.neuron.2026.10.024": {
       "doi": "10.1016/j.neuron.2026.10.024",
@@ -32749,6 +32775,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-19T00:01:45.422822+00:00"
     },
+    "doi:10.1038/d41586-026-03262-1": {
+      "doi": "10.1038/d41586-026-03262-1",
+      "journal_slug": "nature",
+      "title": "Meta-study sparks questions about what it means to be good at regulating emotions",
+      "acquired_at": "2026-11-21T23:42:03",
+      "source_title_sha256": "e30c8e367d3baedc5b88e069725d20376800a9eab430385f53de05f4040cb07d",
+      "source_abstract_sha256": "73d47ad63b93c7b09bf9a4d2718d99d67aa434fcccfb238cce2b3432ee004485",
+      "source_abstract": "abstract",
+      "title_zh": "元研究引发关于情绪调节能力含义的疑问",
+      "abstract_zh": "首个此类联盟揭示，行为与神经测量之间在个体情绪调节方面缺乏相关性。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
+    },
     "doi:10.1038/d41586-026-03263-0": {
       "doi": "10.1038/d41586-026-03263-0",
       "journal_slug": "nature",
@@ -32865,6 +32904,19 @@
       "abstract_zh": "已在培养中检测了两种与真核细胞共享共同祖先的古菌菌株。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-19T00:01:45.422822+00:00"
+    },
+    "doi:10.1038/d41586-026-03298-3": {
+      "doi": "10.1038/d41586-026-03298-3",
+      "journal_slug": "nature",
+      "title": "Ribbon made of carbon pentagons and heptagons has metallic properties",
+      "acquired_at": "2026-11-21T23:42:03",
+      "source_title_sha256": "307923161d2fc28cbc0f6908e68bf4b99afcb94cd32cda0e140a8ca9243939e9",
+      "source_abstract_sha256": "f82faab49ceb06857a7db29f0e9f2bb90f1676515c46fc371cd4ca2cbf81d681",
+      "source_abstract": "abstract",
+      "title_zh": "由五边形和七边形碳组成的纳米带具有金属性质",
+      "abstract_zh": "五边形-七边形碳纳米带可通过将并排连接的成对五元环链条制备而成。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1038/d41586-026-03301-x": {
       "doi": "10.1038/d41586-026-03301-x",
@@ -33905,6 +33957,19 @@
       "abstract_zh": "欧洲研究理事会拨款申请量显著增加，导致成功率下降。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-18T00:05:25.785981+00:00"
+    },
+    "doi:10.1038/d41586-026-03484-3": {
+      "doi": "10.1038/d41586-026-03484-3",
+      "journal_slug": "nature",
+      "title": "This Arabian desert was once a lush paradise. Why did ancient humans avoid it?",
+      "acquired_at": "2026-11-21T23:42:03",
+      "source_title_sha256": "e906c96cff49018baf1a95913c0c54ead4342d9a4df4765a9bb7085c6d62bfe5",
+      "source_abstract_sha256": "ebdc5460ecfc0aa6e9d07a7099be4aba93b218d6c9a989624b02a786a8e84ea0",
+      "source_abstract": "abstract",
+      "title_zh": "这片阿拉伯沙漠曾是一片葱郁天堂，为何古代人类却避之不及？",
+      "abstract_zh": "科学领域的重大新闻 | 2026年10月28日",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1038/s41380-026-03624-1": {
       "doi": "10.1038/s41380-026-03624-1",
@@ -40913,6 +40978,19 @@
       "translation_model": "openai/gpt-oss-20b",
       "translated_at": "2026-08-29T17:38:52.2266672Z"
     },
+    "doi:10.1038/s41586-026-10438-2": {
+      "doi": "10.1038/s41586-026-10438-2",
+      "journal_slug": "nature",
+      "title": "Tandem repeat variation shapes immune cell type-specific gene expression",
+      "acquired_at": "2026-11-21T23:42:03",
+      "source_title_sha256": "08d87951b8589aa70d1d3c9f97d2762acdc73c93e62591979910dbdb9aee7595",
+      "source_abstract_sha256": "bd3e0603ade545658140edf81bc533e2026773d3c9e9f67440ced7c3623d6082",
+      "source_abstract": "abstract",
+      "title_zh": "串联重复变异塑造免疫细胞类型特异性基因表达",
+      "abstract_zh": "串联重复（TRs）是人类全基因组中高度多态的重复序列，是重要的基因表达调控因子，但因基因分型与分析准确性方面的挑战而未得到充分探究1。在此，我们对两个队列2中1,925名个体的540万余个血液衍生细胞进行了全基因组测序和单细胞RNA测序，并开展元分析，以表征超过170万个TR位点的变异对免疫细胞类型特异性基因表达的影响。我们鉴定到超过69,000个单细胞表达定量性状位点，其中30.7%特异于28种免疫细胞类型中的1种，并利用细胞状态推断揭示了动态调控效应。来自922名个体中340万余个细胞核的转座酶可接近染色质高通量测序配对数据3，为近三分之一的表达关联TRs发现了染色质可及性定量性状位点，支持其对顺式调控结构的协调影响。精细定位将1,490个TRs确定为6.1%经检验基因的基因表达候选致病驱动因子，同位点分析显示，超过200个基因的TRs可能介导其与免疫和血液学性状的遗传关联。这些结果共同提供了人类免疫系统中TR介导调控的全基因组、多组学视图，确立了TRs作为细胞类型特异性调控变异和复杂性状结构的关键贡献者。全基因组测序和细胞水平基因表达测定表明，人类基因组中串联重复的长度变异有助于基因调控和表达的细胞类型特异性差异，以及复杂性状的结构。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
+    },
     "doi:10.1038/s41586-026-10468-w": {
       "doi": "10.1038/s41586-026-10468-w",
       "journal_slug": "nature",
@@ -46633,6 +46711,19 @@
       "translation_model": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "translated_at": "2026-11-10T03:19:17.154541+00:00"
     },
+    "doi:10.1038/s41586-026-11178-z": {
+      "doi": "10.1038/s41586-026-11178-z",
+      "journal_slug": "nature",
+      "title": "Pharmacological inhibition of METTL1 as a therapy against solid and blood cancers",
+      "acquired_at": "2026-11-21T23:42:03",
+      "source_title_sha256": "3be867fba3eb6e0d264c9f1fcf83b4f4f88c4ee65bf84599b89f04239f4f9b01",
+      "source_abstract_sha256": "126ceb76dbfcfd5b420e6813f56693ec7a05b9b112cf041c20ce60ffb5a6176e",
+      "source_abstract": "abstract",
+      "title_zh": "METTL1 药理抑制作为治疗实体瘤和血液癌症的治疗方法",
+      "abstract_zh": "摘要 N7-甲基鸟苷（m7G）修饰是最普遍的 tRNA 修饰之一，主要由 METTL1–WDR4 蛋白复合物催化1–4。与致癌转化及多种侵袭性恶性肿瘤维持相关的 m7G 甲基转移酶 METTL1，然而，治疗性靶向 tRNA 修饰酶的临床意义尚未确立。在此，我们介绍了 STM9005 的开发及表征，STM9005 是一种高度选择性、强效且属于第一个同类的 METTL1 tRNA 甲基转移酶抑制剂。对众多癌症细胞模型（包括白血病、黑色素瘤、胰腺癌、食管癌和小细胞肺癌）进行 STM9005 处理可阻断细胞生长、引起分化改变并失调细胞周期进程。这些细胞效应伴随着 tRNA 子集上 m7G 的选择性下降及其表达水平降低，从而影响致癌 mRNA 的翻译。我们表明，在体内药理抑制 METTL1 会损害多种不同组织来源的小鼠癌症模型中的肿瘤生长，并显著延长生存期。总体而言，我们的结果提供了强有力的概念证明，表明靶向 tRNA 甲基化是一种有前途的抗癌治疗途径，并说明 METTL1 的催化抑制代表了针对多种侵袭性恶性肿瘤的治疗策略。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
+    },
     "doi:10.1038/s41586-026-11179-y": {
       "doi": "10.1038/s41586-026-11179-y",
       "journal_slug": "nature",
@@ -46645,6 +46736,19 @@
       "abstract_zh": "植物发育具有高度可塑性，生长和架构持续受环境条件塑造。例如，根会根据局部水分、养分和土壤条件调整其发育。尽管存在这种可塑性，单个根细胞类型通常被视为大体同质的群体，沿单一发育轨迹进展1。然而，我们发现，大多数拟南芥根细胞谱系轨迹呈现典型的分叉拓扑结构，而非沿单一发育轨迹进展，这通过单细胞RNA测序和空间转录组描绘得以揭示。其中一分支由跨多种细胞类型共享的转录程序所表征，该程序富集与环境反应相关的基因，包括脱落酸（ABA）信号传导。这种状态在多种细胞类型的细胞子集中可重复出现，与发育谱系无关，从而揭示了根细胞身份的额外层面。它在拟南芥不同生态型中保守，并在发育身份受到重大干扰后仍然持续。此外，该状态在ABA缺乏和ABA不应性突变体中降低，在胁迫水分条件下更为普遍。这些发现共同揭示了一种叠加于发育谱系之上的额外根细胞身份层面，其普遍性受环境条件调控。这些结果发现了一个先前未被认识的跨根细胞类型共享的与环境相关的转录异质性来源。一种受环境调控的状态在根尖多种细胞类型中被鉴定，揭示了具有该状态与不具有该状态的细胞之间的共享分歧。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
+    },
+    "doi:10.1038/s41586-026-11182-3": {
+      "doi": "10.1038/s41586-026-11182-3",
+      "journal_slug": "nature",
+      "title": "MCT1-dependent mitochondrial lactate import sustains cardiac metabolism",
+      "acquired_at": "2026-11-21T23:42:03",
+      "source_title_sha256": "45bd2f782126cce0122e820eea5abcecc6d011d2b2d2833c2b6ebc6111e9d420",
+      "source_abstract_sha256": "bdf6c8d217f3d9aef15ed6734f78ccdbc235aad7e08a94889b3b4a58b6c56297",
+      "source_abstract": "abstract",
+      "title_zh": "MCT1依赖的线粒体乳酸摄入维持心脏代谢",
+      "abstract_zh": "摘要 心脏具有动态能力，可氧化包括葡萄糖和乳酸在内的多种燃料，以满足其在多种饮食、运动和损伤应激下的能量需求 1 。碳水化合物底物的氧化被认为趋同于细胞质丝酸的产生，丝酸经线粒体丝酸转运体（MPC）转运以进入三羧酸循环 2 。在这里我们发现，即使在 MPC 基因敲除的情况下，小鼠心肌中葡萄糖衍生的碳仍被氧化。利用遗传和药理工具，我们证明乳酸单羧酸转运体 1（MCT1，由 Slc16a1 编码）是 MPC 缺失心肌氧化葡萄糖碳所必需的。我们进一步观察到，MCT1 传统上定位于质膜，同时也存在于小鼠和人类心肌细胞的线粒体内膜中。连同基质定位的 LDHB，MCT1 使线粒体乳酸转化为丝酸和 NADH，直接为电子传递链提供燃料。MCT1 丢失会损害乳酸氧化，破坏代谢灵活性，并在神经激素轴高激活或缺血-再灌注损伤后加速心力衰竭的发展并增加死亡率。因此，碳水化合物氧化的平行乳酸依赖途径的存在可以在多种应激条件下维持心脏能量学并维持心肌结构和功能。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1038/s41586-026-11183-2": {
       "doi": "10.1038/s41586-026-11183-2",
@@ -46750,6 +46854,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
+    "doi:10.1038/s41586-026-11199-8": {
+      "doi": "10.1038/s41586-026-11199-8",
+      "journal_slug": "nature",
+      "title": "Spatial and sectoral water demand assessment for the African continent",
+      "acquired_at": "2026-11-21T23:42:03",
+      "source_title_sha256": "3a1d6fce626fea5fd3c2dde4d8c688762cb2520f776112e2f8dcfb7b19be64a6",
+      "source_abstract_sha256": "c87d5dfe88f0e422d917ff1bad2c35ceada4adae5186ecd6cb5b94fc790c0a33",
+      "source_abstract": "abstract",
+      "title_zh": "非洲大陆空间与部门水需求评估",
+      "abstract_zh": "摘要 水需求是某个部门为满足其需求所需的水量 1,2 。在非洲，这些需求往往无法得到满足 3 ，但其空间和部门分布尚未得到充分表征，限制了明智的水资源管理决策 4 。在此，我们对2020年非洲范围内六个部门及其多个子部门的水需求进行了高空间分辨率的大陆范围估计。由于该分析整合了异质数据集和建模假设，所得值应被解释为协调估计，而非已实现用水的直接观测。我们估计年度总水需求为347立方千米，其中包括市政用水60立方千米（17%，57-64立方千米，关键参数变化±20%），灌溉用水225立方千米（65%，214-233立方千米，95%置信区间，灌溉效率变化±20%），畜牧业用水11立方千米（3%），制造业用水15立方千米（4%），包括水力发电在内的电力用水33立方千米（10%），采矿业用水3立方千米（1%，3-4立方千米，年产量变化）。2010年至2020年间，估计需求增加了26%。主导水需求部门在不同地区和河流流域中有所不同，大致反映了既定的地理和社会经济模式。在非洲北部和南部地区的部分区域，估计需求超过水资源可用性，尽管结果取决于关于环境流量保护的假设 5 。在其他地区，水资源可用性超过总体需求，尽管管道饮用水获取受限，表明仅凭物理可用性并不决定水安全。因此，我们的分析为识别水需求压力和获取约束提供了在空间和部门上得到分辨的基线，而非建立水安全不安全的新因果机制。由于底层数据集的不确定性，地方估计应谨慎解读。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
+    },
     "doi:10.1038/s41586-026-11205-z": {
       "doi": "10.1038/s41586-026-11205-z",
       "journal_slug": "nature",
@@ -46763,6 +46880,19 @@
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-15T23:59:17.715627+00:00"
     },
+    "doi:10.1038/s41586-026-11206-y": {
+      "doi": "10.1038/s41586-026-11206-y",
+      "journal_slug": "nature",
+      "title": "Alzheimer’s disease genetics converges on microglial and neuronal dysregulation",
+      "acquired_at": "2026-11-21T23:42:03",
+      "source_title_sha256": "2a7a9b95e67f86467f315c08b25e9ed0d6b883b53949a68f122959e03e3f79bd",
+      "source_abstract_sha256": "a10199b2c489baafd69c4eb1bfefecb38eb2143a049807a14904ae14e0bc79d8",
+      "source_abstract": "abstract",
+      "title_zh": "阿尔茨海默病遗传学汇聚于小胶质细胞和神经元失调",
+      "abstract_zh": "阿尔茨海默病（AD）是最常见的痴呆症，全球病例数预计到2050年将达到1.53亿例1。AD具有高度遗传性，双胞胎研究估计遗传率为60%–80%2。尽管预计AD存在1200个致病位点3，但最近的两项研究仅发现约80个与AD相关的位点4,5。基于单核苷酸多态性（SNP）的低遗传率估计曾提示，剩余可发现的常见变异风险已不多6。在此，我们分析了来自不同血统的109,479例患者、74,141例代理病例、2,131,799例对照和499,708例代理对照的数据，在多血统分析中鉴定出118个位点，在血统特异性分析中鉴定出9个额外位点，其中48个为新发现。我们鉴定出新的AD风险基因，优先筛选了潜在药物靶点，并发现与对照组相比，患者中小胶质细胞上调以及神经元下调的基因富集于AD相关的遗传风险。此外，我们改进了多基因评分预测，并将SNP遗传率估计为16%，几乎是先前估计值的三倍。我们的研究结果表明，常见变异对AD的贡献已被严重低估，并揭示了新的分子和细胞机制以及未来药物开发研究的具体靶点。一项AD的多血统研究鉴定出新的风险位点和潜在药物靶点，提示小胶质细胞和神经元的参与，并揭示比先前估计更大的常见变异贡献。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
+    },
     "doi:10.1038/s41586-026-11207-x": {
       "doi": "10.1038/s41586-026-11207-x",
       "journal_slug": "nature",
@@ -46775,6 +46905,19 @@
       "abstract_zh": "将复杂有机化合物厌氧降解为甲烷和二氧化碳的现象在深部地下生物圈中普遍存在，长期以来被认为需要共生合作，产甲烷菌被局限于使用简单的C1和C2底物进行终末代谢。热力学考量、多组学分析和微域实验表明，古菌谱系能够降解复杂底物进行产甲烷作用1–6。然而，纯培养中的实验验证一直缺乏。在此，我们报道从中国石油储层中分离出一种嗜热古菌Methanoglobus dolicholipophagus AA-75，其隶属于考古球菌。AA-75株不仅将甲醇转化为甲烷、二氧化碳和乙酸盐，还利用C7:0至C18:0的饱和脂肪酸以及包括C16:1、C18:1和C18:2在内的不饱和脂肪酸产生甲烷。我们将后者称为脂类依赖型产甲烷作用，它将脂肪酸β-氧化与Wood–Ljungdahl途径及规范的甲基-四氢甲酰肟：辅酶甲基转移酶和甲基-辅酶甲基还原酶复合物，以及一种细胞内电子转移系统相结合。甲醛-甲醇支路可能在产甲烷过程中作为C1代谢的辅助途径。由硬脂酸产生的甲烷呈中度13C富集（δ13C–CH4 = −40.0‰至−36.3‰），与规范产甲烷途径特征的强13C耗竭明显不同。这些发现表明产甲烷菌能够作为复杂有机物的初级降解者，挑战了经典的共生范式，并呼吁改进当前关于深部地下生物圈碳循环的模型。Methanoglobus dolicholipophagus AA-75是一种从中国石油储层中分离出的嗜热古菌，能将甲醇转化为甲烷、二氧化碳和乙酸盐，并利用饱和和不饱和脂肪酸产生甲烷。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-15T23:59:17.715627+00:00"
+    },
+    "doi:10.1038/s41586-026-11211-1": {
+      "doi": "10.1038/s41586-026-11211-1",
+      "journal_slug": "nature",
+      "title": "Clostridium perfringens Delta toxin targets CD9 to drive NEC and brain injury",
+      "acquired_at": "2026-11-21T23:42:03",
+      "source_title_sha256": "e2c132693fd4a9085e47844b01b978e535c54ef26fd1dbe0df809977c7681ac8",
+      "source_abstract_sha256": "d4d365efcc3ef7bd84fa15db0699b37b21df1c93f5f681212843aa96fe58ecb1",
+      "source_abstract": "abstract",
+      "title_zh": "梭状芽孢杆菌Δ毒素靶向CD9以驱动NEC和脑损伤",
+      "abstract_zh": "坏死性小肠结肠炎（NEC）是早产儿最为严重的胃肠道急症，常导致死亡和长期神经发育障碍1,2。虽然肠道微生物组已被牵涉于NEC的发病机制3–5，但驱动NEC及随后脑病变的微生物因素仍不明确。在此，我们在严重及致死性NEC患者的肠道微生物组中鉴别出含有Δ毒素的产气荚膜梭菌病原共生体。临床上，感染婴儿预后更差，包括异常的全身炎症、严重神经损伤和凝血病。我们建立了一种小鼠模型，其中Δ毒素阳性产气荚膜梭菌感染，或单独的Δ毒素暴露，均可复现NEC的临床特征，包括肠道坏死和急性脑损伤。从机制上看，Δ毒素优先靶向巨噬细胞，强力激活炎性小体信号和凋亡凋亡，触发快速的炎症级联反应，破坏血脑屏障完整性并驱动神经炎症。通过全基因组CRISPR筛选，我们鉴别出四跨膜蛋白CD9为Δ毒素的宿主受体。利用全身、髓系特异性和肠上皮特异性Cd9敲除小鼠，我们证明全身和髓系Cd9敲除可保护小鼠免受毒素诱导的死亡、血脑屏障功能障碍和多器官损伤，而上皮Cd9缺失可部分保护，提示巨噬细胞靶向是产气荚膜梭菌CD9依赖性发病机制的主要驱动因素。此外，一种中和Δ毒素的单克隆抗体可防止疾病进展。这些发现提示，NEC的一个子集是一种特定毒素介导的疾病，并验证了Δ毒素–CD9轴作为该子集的治疗靶点。婴儿坏死性小肠结肠炎的一个子群特异性地由梭状芽孢杆菌Δ毒素介导。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1038/s41586-026-11239-3": {
       "doi": "10.1038/s41586-026-11239-3",
@@ -53782,6 +53925,19 @@
       "abstract_zh": "摘要 载脂蛋白E（APOE）对人群中阿尔茨海默病负担的全部贡献可能被忽视了。这很大程度上是因为缺乏对以下事实的认识：APOE基因最常见的等位基因ε3相对于ε2等位基因会增加阿尔茨海默病的风险。当同时考虑APOE的ε3和ε4等位基因的影响时，大多数晚-onset阿尔茨海默病似乎可归因于欧洲血统及其他有可靠数据的民族群体中APOE功能或表达的差异。此外，大多数散发性早-onset阿尔茨海默病若没有APOE ε3和ε4的贡献可能不会发生，而且这两个等位基因可能是源自高渗透率遗传突变和21体三倍体的大多数阿尔茨海默病形式的组成部分病因。综合起来，这些流行病学证据表明，APOE是阿尔茨海默病的主要病因，涵盖了许多形式疾病的病因学。因此，几乎所有阿尔茨海默病的潜在病例都可能从开发调节APOE在疾病病理生理学中作用的疗法中受益。",
       "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
       "translated_at": "2026-11-14T08:11:26.352478+00:00"
+    },
+    "doi:10.1093/brain/awag396": {
+      "doi": "10.1093/brain/awag396",
+      "journal_slug": "brain",
+      "title": "Cerebellar optogenetic stimulation restores motor cortex activity and behaviour after stroke",
+      "acquired_at": "2026-11-21T23:43:27",
+      "source_title_sha256": "15b33cdde1af6226bfee6e7b08dcc0fb1288d092b854f9aaaa7667097a31d350",
+      "source_abstract_sha256": "0e8583753bb5e9f0b71df94edbe61267ca36fc8826b4d0c243621b160110620c",
+      "source_abstract": "abstract",
+      "title_zh": "小脑光遗传刺激在中风后恢复运动皮层活动和行为",
+      "abstract_zh": "摘要 中风会导致严重的运动缺陷，但功能恢复可通过梗死周围及远端区域的神经环路重组实现。光遗传刺激可以调节神经元活动并在实验模型中改善恢复，但其背后的人群水平皮层动力学尚不清楚。小脑侧核经齿状丘脑皮质通路投射到皮层，是中风后远程神经调节的有望靶点。我们在短暂性中大脑动脉栓塞后，对清醒活动小鼠（n = 13）侧病侧初级运动皮层第V层神经元进行了纵向单光子钙成像。小鼠在中风后第5至14天接受使用CaMKII驱动的Channelrhodopsin-2对悖病侧小脑侧核进行光遗传刺激。接受刺激与未受刺激的中风小鼠在中风后长达28天的行为和神经活动指标上进行比较。中风显著降低了亚急性期侧病侧运动皮层群体活动，钙峰频率降低（p < 0.001），幅度降低（p = 0.004）。频率降低与中风后第6天梗死体积强相关（r² = 0.88，p < 0.001），幅度降低同样与中风后第9天梗死体积相关（r² = 0.39，p = 0.022）。小脑刺激抵消了这些缺陷，显著增加频率（p = 0.017）和幅度（p < 0.001），并改善旋转梁任务的行为恢复（p = 0.027）。关键的是，在受刺激动物中，运动皮层活动不再与梗死体积耦合，表明刺激使皮层动力学与损伤严重程度解耦。中风后早期运动皮层神经元之间的功能连接密度预测了未受刺激动物的长期行为结局（r² = 0.50，p = 0.033），但该关系被刺激消除，提示小脑刺激独立于初始网络破坏而重塑恢复轨迹。中风还使神经元群体转向低活跃状态，刺激保留了更高比例的中度活跃神经元（p = 0.029）。这些发现以细胞分辨率界定了中风后病灶周围运动皮层的人群水平变化，并证明小脑光遗传刺激可抵消中风引起的皮层功能障碍，使恢复与梗死负担解耦，并促进功能恢复。",
+      "translation_model": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "translated_at": "2026-11-22T00:00:12.129656+00:00"
     },
     "doi:10.1093/brain/awag400": {
       "doi": "10.1093/brain/awag400",
